@@ -68,6 +68,9 @@ importers:
       projen:
         specifier: ^0.78.2
         version: 0.78.2(constructs@10.3.0)
+      standard-version:
+        specifier: ^9
+        version: 9.5.0
       syncpack:
         specifier: ^11.2.1
         version: 11.2.1
