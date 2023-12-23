@@ -48,6 +48,8 @@ const rootProject = new monorepo.MonorepoTsProject({
     ...COMMON_PROJECT_OPTIONS,
     devDeps: ["@aws/pdk", "@types/jest"],
     name: "projen-constructs",
+    defaultReleaseBranch: "main",
+    release: true,
     projenrcTs: true,
     github: true,
 });
