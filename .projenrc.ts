@@ -27,7 +27,9 @@ const COMMON_PROJECT_OPTIONS: Omit<
     minNodeVersion: "18.12.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
+
     packageManager: javascript.NodePackageManager.PNPM,
+    pnpmVersion: "8",
 
     eslint: true,
 
