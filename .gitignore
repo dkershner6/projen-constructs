@@ -40,8 +40,8 @@ jspm_packages/
 !/.prettierrc.json
 !/.npmrc
 !/test/
+!/tsconfig.publish.json
 !/tsconfig.json
-!/tsconfig.dev.json
 !/src/
 /lib
 /dist/
@@ -51,4 +51,5 @@ jspm_packages/
 !/.nxignore
 !/.syncpackrc.json
 !/.vscode/Projen Constructs Monorepo.code-workspace
+!/.nvmrc
 !/pnpm-workspace.yaml

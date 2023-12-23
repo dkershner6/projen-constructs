@@ -33,6 +33,7 @@ jspm_packages/
 !/.projenrc.js
 /test-reports/
 junit.xml
+!/jest.config.json
 /coverage/
 /dist/changelog.md
 /dist/version.txt
@@ -43,8 +44,8 @@ junit.xml
 !/.prettierrc.json
 !/.npmrc
 !/test/
+!/tsconfig.publish.json
 !/tsconfig.json
-!/tsconfig.dev.json
 !/src/
 /lib
 /dist/

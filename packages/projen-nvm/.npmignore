@@ -2,11 +2,12 @@
 /.projen/
 /test-reports/
 junit.xml
+/jest.config.json
 /coverage/
 /dist/changelog.md
 /dist/version.txt
 /test/
-/tsconfig.dev.json
+/tsconfig.publish.json
 /src/
 !/lib/
 !/lib/**/*.js

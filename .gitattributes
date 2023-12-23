@@ -11,6 +11,7 @@
 /.mergify.yml linguist-generated
 /.npmignore linguist-generated
 /.npmrc linguist-generated
+/.nvmrc linguist-generated
 /.nxignore linguist-generated
 /.prettierignore linguist-generated
 /.prettierrc.json linguist-generated
@@ -25,5 +26,5 @@
 /package.json linguist-generated
 /pnpm-lock.yaml linguist-generated
 /pnpm-workspace.yaml linguist-generated
-/tsconfig.dev.json linguist-generated
 /tsconfig.json linguist-generated
+/tsconfig.publish.json linguist-generated
