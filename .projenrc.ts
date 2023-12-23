@@ -30,7 +30,6 @@ const COMMON_PROJECT_OPTIONS: Omit<
     packageManager: javascript.NodePackageManager.PNPM,
 
     eslint: true,
-    github: true,
 
     prettier: true,
     prettierOptions: {
@@ -48,6 +47,7 @@ const rootProject = new monorepo.MonorepoTsProject({
     devDeps: ["@aws/pdk", "@types/jest"],
     name: "projen-constructs",
     projenrcTs: true,
+    github: true,
 });
 
 const workspacesProject = new TypeScriptProject({
