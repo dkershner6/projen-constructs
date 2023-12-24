@@ -34,6 +34,8 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
         working-directory: .
+      - name: Build
+        run: npm run build
       - name: Release
         run: npm run release
       - name: Check for new commits
