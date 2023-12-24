@@ -2,6 +2,7 @@
   "files": [
     ".eslintrc.json",
     ".gitattributes",
+    ".github/pull_request_template.md",
     ".gitignore",
     ".npmignore",
     ".prettierignore",
