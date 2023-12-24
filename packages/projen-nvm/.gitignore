@@ -34,8 +34,6 @@ jspm_packages/
 junit.xml
 !/jest.config.json
 /coverage/
-/dist/changelog.md
-/dist/version.txt
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc

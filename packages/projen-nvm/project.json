@@ -58,27 +58,6 @@
         "cwd": "packages/projen-nvm"
       }
     },
-    "bump": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen bump",
-        "cwd": "packages/projen-nvm"
-      }
-    },
-    "unbump": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen unbump",
-        "cwd": "packages/projen-nvm"
-      }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen release",
-        "cwd": "packages/projen-nvm"
-      }
-    },
     "post-upgrade": {
       "executor": "nx:run-commands",
       "options": {

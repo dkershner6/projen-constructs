@@ -58,27 +58,6 @@
         "cwd": "packages/projen-vscode-workspaces"
       }
     },
-    "bump": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen bump",
-        "cwd": "packages/projen-vscode-workspaces"
-      }
-    },
-    "unbump": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen unbump",
-        "cwd": "packages/projen-vscode-workspaces"
-      }
-    },
-    "release": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen release",
-        "cwd": "packages/projen-vscode-workspaces"
-      }
-    },
     "post-upgrade": {
       "executor": "nx:run-commands",
       "options": {

@@ -48,8 +48,7 @@ const rootProject = new monorepo.MonorepoTsProject({
     ...COMMON_PROJECT_OPTIONS,
     devDeps: ["@aws/pdk", "@types/jest"],
     name: "projen-constructs",
-    defaultReleaseBranch: "main",
-    release: true,
+
     projenrcTs: true,
     github: true,
 });
@@ -60,8 +59,6 @@ const workspacesProject = new TypeScriptProject({
     name: "projen-vscode-workspaces",
     defaultReleaseBranch: "main",
     outdir: "packages/projen-vscode-workspaces",
-    release: true,
-    releaseToNpm: true,
 
     peerDeps: ["constructs", "projen"],
     devDeps: ["constructs", "projen"],
@@ -79,8 +76,6 @@ const nvmProject = new TypeScriptProject({
     name: "projen-nvm",
     defaultReleaseBranch: "main",
     outdir: "packages/projen-nvm",
-    release: true,
-    releaseToNpm: true,
 
     peerDeps: ["constructs", "projen"],
     devDeps: ["constructs", "projen"],

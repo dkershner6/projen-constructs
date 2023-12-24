@@ -4,8 +4,6 @@
 junit.xml
 /jest.config.json
 /coverage/
-/dist/changelog.md
-/dist/version.txt
 /test/
 /tsconfig.publish.json
 /src/
