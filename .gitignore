@@ -33,11 +33,8 @@ jspm_packages/
 .tmp
 !/.projenrc.js
 !/.github/workflows/build.yml
-/dist/changelog.md
-/dist/version.txt
-!/.github/workflows/release.yml
 !/.mergify.yml
-!/.github/workflows/upgrade-main.yml
+!/.github/workflows/upgrade.yml
 !/.github/pull_request_template.md
 !/.prettierignore
 !/.prettierrc.json
@@ -53,6 +50,8 @@ jspm_packages/
 !/nx.json
 !/.nxignore
 !/.syncpackrc.json
+!/.github/workflows/release projen-vscode-workspaces.yml
+!/.github/workflows/release projen-nvm.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
 !/pnpm-workspace.yaml

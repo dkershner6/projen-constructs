@@ -2,7 +2,6 @@
   "name": "projen-constructs",
   "scripts": {
     "build": "pnpm exec projen build",
-    "bump": "pnpm exec projen bump",
     "clobber": "pnpm exec projen clobber",
     "compile": "pnpm exec projen compile",
     "default": "pnpm exec projen default",
@@ -13,10 +12,8 @@
     "post-compile": "pnpm exec projen post-compile",
     "post-upgrade": "pnpm exec projen post-upgrade",
     "pre-compile": "pnpm exec projen pre-compile",
-    "release": "pnpm exec projen release",
     "run-many": "pnpm exec projen run-many",
     "test": "pnpm exec projen test",
-    "unbump": "pnpm exec projen unbump",
     "upgrade": "pnpm exec projen upgrade",
     "upgrade-deps": "pnpm exec projen upgrade-deps",
     "watch": "pnpm exec projen watch",
@@ -39,7 +36,6 @@
     "nx": "16.0.0",
     "prettier": "^3.1.1",
     "projen": "^0.78.2",
-    "standard-version": "^9",
     "syncpack": "^11.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
