@@ -9,6 +9,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     permissions: {}
+    outputs:
+      latest_commit: ${{ steps.git_remote.outputs.latest_commit }}
     env:
       CI: "true"
     defaults:
@@ -50,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: projen-nvm_build-artifact
-          path: dist
+          path: packages/projen-nvm/dist
   release_github:
     name: Publish to GitHub Releases
     needs: release
