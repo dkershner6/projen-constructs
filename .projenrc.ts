@@ -44,6 +44,7 @@ const COMMON_PROJECT_OPTIONS: Omit<
         configFilePath: "jest.config.json",
     },
 };
+
 const rootProject = new monorepo.MonorepoTsProject({
     ...COMMON_PROJECT_OPTIONS,
     devDeps: ["@aws/pdk", "@types/jest"],
