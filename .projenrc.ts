@@ -69,6 +69,10 @@ const workspacesProject = new TypeScriptProject({
 
 workspacesProject.tsconfig?.addExclude("src/**/*.test.ts");
 
+workspacesProject.tasks
+    .tryFind("compile")
+    ?.reset(`tsc --build ${workspacesProject.tsconfig?.fileName}`);
+
 const nvmProject = new TypeScriptProject({
     ...COMMON_PROJECT_OPTIONS,
     parent: rootProject,
@@ -83,6 +87,9 @@ const nvmProject = new TypeScriptProject({
 });
 
 nvmProject.tsconfig?.addExclude("src/**/*.test.ts");
+nvmProject.tasks
+    .tryFind("compile")
+    ?.reset(`tsc --build ${nvmProject.tsconfig?.fileName}`);
 
 // Using the packages inside this repo, for this repo
 
