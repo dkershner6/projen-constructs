@@ -101,6 +101,12 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     workingDirectory: `./${combinedOptions.outdir}`,
                 },
             },
+            outputs: {
+                [LATEST_COMMIT_OUTPUT]: {
+                    stepId: GIT_REMOTE_STEPID,
+                    outputName: LATEST_COMMIT_OUTPUT,
+                },
+            },
             permissions: {},
             env: {
                 CI: "true",
@@ -155,7 +161,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     if: noNewCommits,
                     with: {
                         name: `${this.name}_${BUILD_ARTIFACT_NAME}`,
-                        path: this.artifactsDirectory,
+                        path: `${combinedOptions.outdir}/${this.artifactsDirectory}`,
                     },
                 },
             ].filter(Boolean) as JobStep[],
