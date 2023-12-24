@@ -131,6 +131,10 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     workingDirectory: `.`,
                 },
                 {
+                    name: "Build",
+                    run: "npm run build",
+                },
+                {
                     name: "Release",
                     run: "npm run release",
                 },
