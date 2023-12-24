@@ -137,10 +137,6 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     workingDirectory: `.`,
                 },
                 {
-                    name: "Build",
-                    run: "npm run build",
-                },
-                {
                     name: "Release",
                     run: "npm run release",
                 },
@@ -168,6 +164,9 @@ export class ProjenConstructTsLib extends TypeScriptProject {
         });
 
         if (this.github) {
+            const publishToGithubTask = this.tasks.tryFind("publish:github");
+            publishToGithubTask?.steps;
+
             releaseWorkflow.addJob("release_github", {
                 name: "Publish to GitHub Releases",
                 needs: ["release"],
@@ -193,20 +192,21 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                             `cd ${this.artifactsDirectory} && setfacl --restore=${PERMISSION_BACKUP_FILE}`,
                         ].join("\n"),
                     },
-                    {
-                        name: "Publish to GitHub Releases",
-                        run: "npm run publish:github",
+                    ...(publishToGithubTask?.steps?.map((step) => ({
+                        run: step.exec,
                         env: {
                             GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
                             GITHUB_REPOSITORY: "${{ github.repository }}",
                             GITHUB_REF: "${{ github.ref }}",
                         },
-                    },
+                    })) ?? []),
                 ],
             });
         }
 
         if (combinedOptions.releaseToNpm) {
+            const publishToNpmTask = this.tasks.tryFind("publish:npm");
+
             releaseWorkflow.addJob("release_npm", {
                 name: "Publish to NPM",
                 needs: ["release"],
@@ -232,13 +232,12 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                             `cd ${this.artifactsDirectory} && setfacl --restore=${PERMISSION_BACKUP_FILE}`,
                         ].join("\n"),
                     },
-                    {
-                        name: "Publish to NPM",
-                        run: "npm run publish:npm",
+                    ...(publishToNpmTask?.steps?.map((step) => ({
+                        run: step.exec,
                         env: {
                             NPM_TOKEN: "${{ secrets.NPM_TOKEN }}",
                         },
-                    },
+                    })) ?? []),
                 ],
             });
         }

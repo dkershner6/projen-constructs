@@ -36,8 +36,6 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
         working-directory: .
-      - name: Build
-        run: npm run build
       - name: Release
         run: npm run release
       - name: Check for new commits
@@ -73,12 +71,6 @@ jobs:
       - name: Restore build artifact permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
-      - name: Publish to GitHub Releases
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_REF: ${{ github.ref }}
-        run: npm run publish:github
   release_npm:
     name: Publish to NPM
     needs: release
@@ -99,7 +91,3 @@ jobs:
       - name: Restore build artifact permissions
         run: cd dist && setfacl --restore=permissions-backup.acl
         continue-on-error: true
-      - name: Publish to NPM
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm run publish:npm
