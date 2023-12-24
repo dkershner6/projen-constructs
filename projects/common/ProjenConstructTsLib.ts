@@ -127,7 +127,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                 setupNodeStep,
                 {
                     name: "Install dependencies",
-                    run: "npm run install:ci",
+                    run: this.package.installCommand,
                     workingDirectory: `.`,
                 },
                 {
