@@ -128,6 +128,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                 {
                     name: "Install dependencies",
                     run: "npm run install:ci",
+                    workingDirectory: `../..`,
                 },
                 {
                     name: "Release",
