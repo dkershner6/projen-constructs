@@ -59,6 +59,17 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             .tryFind("compile")
             ?.reset(`tsc --build ${this.tsconfig?.fileName}`);
 
+        const lintTask = this.tasks.tryFind("eslint");
+        if (lintTask) {
+            const currentLintCommand = lintTask.steps[0].exec;
+            lintTask.reset(
+                currentLintCommand?.replace(
+                    "--no-error-on-unmatched-pattern",
+                    "--no-error-on-unmatched-pattern --max-warnings 0", // Strict linting
+                ),
+            );
+        }
+
         new TextFile(this, "README.md", {
             lines: [
                 `# ${this.name}`,
