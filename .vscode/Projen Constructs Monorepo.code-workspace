@@ -10,6 +10,10 @@
       "path": ".."
     },
     {
+      "name": "(Lib) github-workflows",
+      "path": "../packages/projen-github-workflows"
+    },
+    {
       "name": "(Lib) nvm",
       "path": "../packages/projen-nvm"
     },
@@ -20,6 +24,7 @@
   ],
   "settings": {
     "eslint.workingDirectories": [
+      "./packages/projen-github-workflows",
       "./packages/projen-nvm",
       "./packages/projen-vscode-workspaces"
     ],

@@ -6,6 +6,12 @@ import { RootMonorepo } from "./projects/rootMonorepo";
 
 const rootProject = new RootMonorepo();
 
+const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
+    name: "projen-github-workflows",
+    keywords: ["projen", "github", "workflows", "workflow"],
+    description: "Helpers for Projen projects that use GitHub Workflows.",
+});
+
 const nvmProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-nvm",
     keywords: ["projen", "nvm", "node", "version", "manager"],
@@ -17,7 +23,12 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
     keywords: ["projen", "monorepo", "vscode", "workspaces", "workspace"],
     description: "Helpers for Projen projects that use VSCode workspaces.",
 });
-const ALL_SUBPROJECTS = [vsCodeWorkspacesProject, nvmProject];
+
+const ALL_SUBPROJECTS = [
+    gitHubWorkflowsProject,
+    nvmProject,
+    vsCodeWorkspacesProject,
+];
 
 // Using the packages inside this repo, for this repo
 

@@ -50,6 +50,7 @@ jspm_packages/
 !/nx.json
 !/.nxignore
 !/.syncpackrc.json
+!/.github/workflows/release projen-github-workflows.yml
 !/.github/workflows/release projen-nvm.yml
 !/.github/workflows/release projen-vscode-workspaces.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
