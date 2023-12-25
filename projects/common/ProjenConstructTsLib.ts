@@ -142,7 +142,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     email: "github-actions@github.com",
                 }),
 
-                ...this.workflowBootstrapSteps,
+                ...setupNodeSteps,
                 {
                     name: "Install dependencies",
                     run: this.package.installCommand,
