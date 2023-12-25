@@ -12,6 +12,7 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
 
             projenrcTs: true,
             github: true,
+
             eslintOptions: {
                 dirs: [],
                 devdirs: ADDITIONAL_DEV_DIRS,
@@ -20,6 +21,11 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
 
         for (const devDir of ADDITIONAL_DEV_DIRS) {
             this.tsconfigDev?.addInclude(`${devDir}/**/*.ts`);
+        }
+
+        const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
+        if (upgradeDepsTask) {
+            this.tasks.tryFind("post-upgrade")?.spawn(upgradeDepsTask);
         }
     }
 }
