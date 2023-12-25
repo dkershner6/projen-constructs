@@ -6,22 +6,27 @@
   },
   "folders": [
     {
-      "name": "(ROOT) projen-constructs",
+      "name": "ROOT",
       "path": ".."
     },
     {
-      "name": "projen-vscode-workspaces",
-      "path": "../packages/projen-vscode-workspaces"
+      "name": "(Lib) github-workflows",
+      "path": "../packages/projen-github-workflows"
     },
     {
-      "name": "projen-nvm",
+      "name": "(Lib) nvm",
       "path": "../packages/projen-nvm"
+    },
+    {
+      "name": "(Lib) vscode-workspaces",
+      "path": "../packages/projen-vscode-workspaces"
     }
   ],
   "settings": {
     "eslint.workingDirectories": [
-      "./packages/projen-vscode-workspaces",
-      "./packages/projen-nvm"
+      "./packages/projen-github-workflows",
+      "./packages/projen-nvm",
+      "./packages/projen-vscode-workspaces"
     ],
     "jest.disabledWorkspaceFolders": []
   },

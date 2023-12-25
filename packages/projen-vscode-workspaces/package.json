@@ -1,5 +1,6 @@
 {
   "name": "projen-vscode-workspaces",
+  "description": "Helpers for Projen projects that use VSCode workspaces.",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
