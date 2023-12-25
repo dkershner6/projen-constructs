@@ -3,7 +3,7 @@ import merge from "lodash.merge";
 import {
     BASE_PROJECT_OPTIONS_NODE_20,
     enactBaseProjectConfig,
-} from "../packages/@dkershner6/projen/src/base";
+} from "../packages/dkershner6-projen/src/base";
 
 const ADDITIONAL_DEV_DIRS = ["projects"];
 

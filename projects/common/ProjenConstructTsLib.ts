@@ -8,7 +8,7 @@ import {
 import {
     BASE_PROJECT_OPTIONS_NODE_20,
     enactBaseProjectConfig,
-} from "../../packages/@dkershner6/projen/src/base";
+} from "../../packages/dkershner6-projen/src/base";
 import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 
