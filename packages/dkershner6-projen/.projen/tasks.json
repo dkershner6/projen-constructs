@@ -29,7 +29,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
+        "RELEASE_TAG_PREFIX": "dkershner6-projen@"
       },
       "steps": [
         {
@@ -53,10 +53,10 @@
     },
     "docgen": {
       "name": "docgen",
-      "description": "Generate TypeScript API reference ../../docs/@dkershner6/projen",
+      "description": "Generate TypeScript API reference ../../docs/dkershner6-projen",
       "steps": [
         {
-          "exec": "typedoc src --disableSources --out ../../docs/@dkershner6/projen"
+          "exec": "typedoc src --disableSources --out ../../docs/dkershner6-projen"
         }
       ]
     },
@@ -130,7 +130,7 @@
       "description": "Prepare a release from \"main\" branch",
       "env": {
         "RELEASE": "true",
-        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
+        "RELEASE_TAG_PREFIX": "dkershner6-projen@"
       },
       "steps": [
         {
@@ -180,7 +180,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
+        "RELEASE_TAG_PREFIX": "dkershner6-projen@"
       },
       "steps": [
         {

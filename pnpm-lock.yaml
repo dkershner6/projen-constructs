@@ -99,7 +99,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/@dkershner6/projen:
+  packages/dkershner6-projen:
     devDependencies:
       '@types/jest':
         specifier: ^29.5.11
@@ -7156,7 +7156,7 @@ packages:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
     dependencies:
-      glob: 7.1.4
+      glob: 7.2.3
     dev: true
 
   /rimraf@5.0.5:

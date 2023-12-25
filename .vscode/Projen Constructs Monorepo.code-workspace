@@ -22,8 +22,8 @@
       "path": "../packages/projen-vscode-workspaces"
     },
     {
-      "name": "(Lib) @dkershner6/projen",
-      "path": "../packages/@dkershner6/projen"
+      "name": "(Lib) dkershner6-projen",
+      "path": "../packages/dkershner6-projen"
     }
   ],
   "settings": {
@@ -31,7 +31,7 @@
       "./packages/projen-github-workflows",
       "./packages/projen-nvm",
       "./packages/projen-vscode-workspaces",
-      "./packages/@dkershner6/projen"
+      "./packages/dkershner6-projen"
     ],
     "jest.disabledWorkspaceFolders": [
       "projen-constructs"

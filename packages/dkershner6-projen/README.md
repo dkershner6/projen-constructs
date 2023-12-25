@@ -1,23 +1,23 @@
-# @dkershner6/projen
+# dkershner6-projen
 
 DKershner's preferred configs for Projen projects.
 
 ## Docs
 
-See [@dkershner6/projen API Docs](https://dkershner6.github.io/projen-constructs/@dkershner6/projen)
+See [dkershner6-projen API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen)
 
 ## Usage
 
 Install the module:
 
 ```typescript
-devDeps: ["@dkershner6/projen"]
+devDeps: ["dkershner6-projen"]
 ```
 
 Import into your code:
 
 ```typescript
-import { WhateverConstruct } from "@dkershner6/projen";
+import { WhateverConstruct } from "dkershner6-projen";
 ```
 
 # Contributing
