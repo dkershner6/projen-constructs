@@ -58,8 +58,6 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             authorUrl: "https://dkershner.com",
             docgen: true,
             docsDirectory: `../../docs/${options.name}`,
-
-            workflowPackageCache: true,
         };
 
         super(combinedOptions);
