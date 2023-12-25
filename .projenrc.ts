@@ -7,10 +7,12 @@ const rootProject = new RootMonorepo();
 
 new ProjenConstructTsLib(rootProject, {
     name: "projen-vscode-workspaces",
+    keywords: ["projen", "monorepo", "vscode", "workspaces", "workspace"],
 });
 
 new ProjenConstructTsLib(rootProject, {
     name: "projen-nvm",
+    keywords: ["projen", "nvm", "node", "version", "manager"],
 });
 
 // Using the packages inside this repo, for this repo

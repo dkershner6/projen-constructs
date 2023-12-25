@@ -5,6 +5,7 @@
     "bump": "npx projen bump",
     "compile": "npx projen compile",
     "default": "npx projen default",
+    "docgen": "npx projen docgen",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
@@ -16,6 +17,11 @@
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch"
+  },
+  "author": {
+    "name": "Derek Kershner",
+    "url": "https://dkershner.com",
+    "organization": false
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
@@ -34,12 +40,20 @@
     "projen": "^0.78.2",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
+    "typedoc": "^0.25.4",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "constructs": "^10.3.0",
     "projen": "^0.78.2"
   },
+  "keywords": [
+    "monorepo",
+    "projen",
+    "vscode",
+    "workspace",
+    "workspaces"
+  ],
   "engines": {
     "node": ">= 18.12.0 <= 20.10.0"
   },
