@@ -29,7 +29,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-nvm@v"
+        "RELEASE_TAG_PREFIX": "projen-nvm@"
       },
       "steps": [
         {
@@ -107,7 +107,7 @@
       "description": "Prepare a release from \"main\" branch",
       "env": {
         "RELEASE": "true",
-        "RELEASE_TAG_PREFIX": "projen-nvm@v"
+        "RELEASE_TAG_PREFIX": "projen-nvm@"
       },
       "steps": [
         {
@@ -157,7 +157,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-nvm@v"
+        "RELEASE_TAG_PREFIX": "projen-nvm@"
       },
       "steps": [
         {

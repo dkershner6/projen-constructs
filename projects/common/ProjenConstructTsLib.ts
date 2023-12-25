@@ -47,7 +47,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
 
             defaultReleaseBranch: "main",
             outdir: `packages/${options.name}`,
-            releaseTagPrefix: `${options.name}@v`,
+            releaseTagPrefix: `${options.name}@`,
             release: true,
             releaseToNpm: true,
 
