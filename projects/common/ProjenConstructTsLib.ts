@@ -54,8 +54,12 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
             devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
 
+            authorName: "Derek Kershner",
+            authorUrl: "https://dkershner.com",
             docgen: true,
             docsDirectory: `../../docs/${options.name}`,
+
+            workflowPackageCache: true,
         };
 
         super(combinedOptions);

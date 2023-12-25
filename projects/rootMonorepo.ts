@@ -17,6 +17,8 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
                 dirs: [],
                 devdirs: ADDITIONAL_DEV_DIRS,
             },
+
+            workflowPackageCache: true,
         });
 
         for (const devDir of ADDITIONAL_DEV_DIRS) {
