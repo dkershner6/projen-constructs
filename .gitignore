@@ -54,4 +54,5 @@ jspm_packages/
 !/.github/workflows/release projen-nvm.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
+!/docs/index.html
 !/pnpm-workspace.yaml

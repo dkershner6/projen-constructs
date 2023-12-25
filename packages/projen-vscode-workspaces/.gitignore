@@ -46,4 +46,5 @@ junit.xml
 /lib
 /dist/
 !/.eslintrc.json
+!/README.md
 !/project.json

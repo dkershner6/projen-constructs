@@ -1,5 +1,6 @@
 {
   "name": "projen-nvm",
+  "description": "Helpers for Projen projects that use NVM.",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

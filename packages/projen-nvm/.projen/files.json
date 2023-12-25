@@ -12,6 +12,7 @@
     "jest.config.json",
     "LICENSE",
     "project.json",
+    "README.md",
     "tsconfig.json",
     "tsconfig.publish.json"
   ],

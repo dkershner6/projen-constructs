@@ -1,6 +1,6 @@
+import { TextFile } from "projen";
 import { GithubWorkflow, WorkflowActions } from "projen/lib/github";
 import { JobPermission, JobStep } from "projen/lib/github/workflows-model";
-import { NodePackageManager } from "projen/lib/javascript";
 
 import {
     TypeScriptProject,
@@ -69,6 +69,36 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             .tryFind("compile")
             ?.reset(`tsc --build ${this.tsconfig?.fileName}`);
 
+        new TextFile(this, "README.md", {
+            lines: [
+                `# ${this.name}`,
+                "",
+                `${this.combinedOptions.description}`,
+                "",
+                "## Docs",
+                "",
+                `See [${this.name} API Docs](https://dkershner6.github.io/projen-constructs/${this.name})`,
+                "",
+                "## Usage",
+                "",
+                "Install the module:",
+                "",
+                "```typescript",
+                `devDeps: ["${this.name}"]`,
+                "```",
+                "",
+                "Import into your code:",
+                "",
+                "```typescript",
+                `import { WhateverConstruct } from "${this.name}";`,
+                "```",
+                "",
+                "## License",
+                "",
+                "This project is licensed under the terms of the [MIT License](LICENSE.md).",
+            ],
+        });
+
         this.addGithubPublishWorkflows();
     }
 
@@ -84,31 +114,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             },
         });
 
-        const setupNodeSteps = [
-            this.package.packageManager === NodePackageManager.PNPM
-                ? {
-                      name: "Setup pnpm",
-                      uses: "pnpm/action-setup@v2.2.4",
-                      with: { version: this.package.pnpmVersion },
-                  }
-                : null,
-            {
-                name: "Setup Node.js",
-                uses: "actions/setup-node@v3",
-                with: {
-                    ...(this.nodeVersion && {
-                        "node-version": this.nodeVersion,
-                    }),
-                    ...(this.workflowPackageCache && {
-                        cache:
-                            this.package.packageManager ===
-                            NodePackageManager.PNPM
-                                ? "pnpm"
-                                : "npm",
-                    }),
-                },
-            },
-        ].filter(Boolean) as JobStep[];
+        const setupNodeSteps = this.renderWorkflowSetup().slice(0, 2);
 
         releaseWorkflow.addJob("release", {
             runsOn: ["ubuntu-latest"],
