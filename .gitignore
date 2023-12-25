@@ -4,7 +4,6 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
-!/.github/workflows/auto-approve.yml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -62,4 +61,5 @@ junit.xml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
 !/docs/index.html
+!/.github/CODEOWNERS
 !/pnpm-workspace.yaml

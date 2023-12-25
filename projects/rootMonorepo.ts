@@ -25,7 +25,6 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
 
                     projenrcTs: true,
                     github: true,
-                    autoApproveOptions: { allowedUsernames: ["dkershner6"] },
 
                     eslintOptions: {
                         dirs: [],

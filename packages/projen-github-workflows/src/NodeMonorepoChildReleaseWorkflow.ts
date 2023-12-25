@@ -48,16 +48,20 @@ export class NodeMonorepoChildReleaseWorkflow {
     private readonly setupNodeSteps: JobStep[];
     private readonly releaseWorkflow: GithubWorkflow;
 
+    private readonly filenameSafeName: string;
+
     constructor(
         private readonly rootMonorepoProject: NodeProject,
         private readonly childProject: NodeProject,
         private readonly options: NodeMonorepoChildReleaseWorkflowOptions = {},
     ) {
+        this.filenameSafeName = this.childProject.name
+            .replaceAll("@", "")
+            .replaceAll("/", "-");
+
         this.releaseWorkflow = new GithubWorkflow(
             this.rootMonorepoProject.github!,
-            `Release ${this.childProject.name
-                .replaceAll("@", "")
-                .replaceAll("/", "-")}`,
+            `Release ${this.filenameSafeName}`,
         );
 
         this.releaseWorkflow.on({
@@ -141,7 +145,7 @@ export class NodeMonorepoChildReleaseWorkflow {
                     uses: "actions/upload-artifact@v3",
                     if: noNewCommits,
                     with: {
-                        name: `${this.childProject.name}_${BUILD_ARTIFACT_NAME}`,
+                        name: `${this.filenameSafeName}_${BUILD_ARTIFACT_NAME}`,
                         path: `${childRelativeOutDir}/${this.childProject.artifactsDirectory}`,
                     },
                 },
@@ -164,7 +168,7 @@ export class NodeMonorepoChildReleaseWorkflow {
                     name: "Download artifact",
                     uses: "actions/download-artifact@v3",
                     with: {
-                        name: `${this.childProject.name}_${BUILD_ARTIFACT_NAME}`,
+                        name: `${this.filenameSafeName}_${BUILD_ARTIFACT_NAME}`,
                         path: this.childProject.artifactsDirectory,
                     },
                 },
