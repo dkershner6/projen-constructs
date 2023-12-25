@@ -191,9 +191,6 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                         ].join("\n"),
                     },
                     {
-                        run: 'test "$(git branch --show-current)" = "main"',
-                    },
-                    {
                         run: 'errout=$(mktemp); gh release create $(cat dist/releasetag.txt) -R $GITHUB_REPOSITORY -F dist/changelog.md -t $(cat dist/releasetag.txt) --target $GITHUB_REF 2> $errout && true; exitcode=$?; if [ $exitcode -ne 0 ] && ! grep -q "Release.tag_name already exists" $errout; then cat $errout; exit $exitcode; fi',
                         env: {
                             GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
@@ -230,9 +227,6 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                         run: [
                             `cd ${this.artifactsDirectory} && setfacl --restore=${PERMISSION_BACKUP_FILE}`,
                         ].join("\n"),
-                    },
-                    {
-                        run: 'test "$(git branch --show-current)" = "main"',
                     },
                     {
                         run: "npx -p publib@latest publib-npm",
