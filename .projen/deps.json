@@ -9,6 +9,10 @@
       "type": "build"
     },
     {
+      "name": "@types/lodash.merge",
+      "type": "build"
+    },
+    {
       "name": "@types/node",
       "version": "^18",
       "type": "build"
@@ -47,6 +51,10 @@
     {
       "name": "eslint",
       "version": "^8",
+      "type": "build"
+    },
+    {
+      "name": "lodash.merge",
       "type": "build"
     },
     {

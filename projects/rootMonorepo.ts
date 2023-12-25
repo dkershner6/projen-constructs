@@ -1,25 +1,39 @@
 import { monorepo } from "@aws/pdk";
+import merge from "lodash.merge";
 import { COMMON_PROJECT_OPTIONS } from "./common/options";
 
 const ADDITIONAL_DEV_DIRS = ["projects"];
 
 export class RootMonorepo extends monorepo.MonorepoTsProject {
     constructor() {
-        super({
-            ...COMMON_PROJECT_OPTIONS,
-            devDeps: ["@aws/pdk", "@types/jest"],
-            name: "projen-constructs",
+        super(
+            merge<
+                monorepo.MonorepoTsProjectOptions,
+                Partial<monorepo.MonorepoTsProjectOptions>
+            >(
+                {
+                    devDeps: [
+                        "@aws/pdk",
+                        "@types/jest",
+                        "@types/lodash.merge",
+                        "lodash.merge",
+                    ],
+                    name: "projen-constructs",
 
-            projenrcTs: true,
-            github: true,
+                    projenrcTs: true,
+                    github: true,
+                    autoApproveOptions: { allowedUsernames: ["dkershner6"] },
 
-            eslintOptions: {
-                dirs: [],
-                devdirs: ADDITIONAL_DEV_DIRS,
-            },
+                    eslintOptions: {
+                        dirs: [],
+                        devdirs: ADDITIONAL_DEV_DIRS,
+                    },
 
-            workflowPackageCache: true,
-        });
+                    workflowPackageCache: true,
+                },
+                COMMON_PROJECT_OPTIONS,
+            ),
+        );
 
         for (const devDir of ADDITIONAL_DEV_DIRS) {
             this.tsconfigDev?.addInclude(`${devDir}/**/*.ts`);

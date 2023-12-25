@@ -30,7 +30,8 @@ const ALL_SUBPROJECTS = [
     vsCodeWorkspacesProject,
 ];
 
-// Using the packages inside this repo, for this repo
+// Using the packages inside this repo, for this repo.
+// Do not advise directly importing in a monorepo, but it is critical here for testing the packages.
 
 new VsCodeWorkspaces(rootProject, {
     filename: "Projen Constructs Monorepo.code-workspace",

@@ -23,6 +23,7 @@
   "devDependencies": {
     "@aws/pdk": "^0.22.47",
     "@types/jest": "^29.5.11",
+    "@types/lodash.merge": "^4.6.9",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
@@ -32,6 +33,7 @@
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.2",
+    "lodash.merge": "^4.6.2",
     "npm-check-updates": "^16.14.12",
     "nx": "16.0.0",
     "prettier": "^3.1.1",
