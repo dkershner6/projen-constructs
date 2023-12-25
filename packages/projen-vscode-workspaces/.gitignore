@@ -36,7 +36,6 @@ junit.xml
 /coverage/
 /dist/changelog.md
 /dist/version.txt
-!/.github/pull_request_template.md
 !/.prettierignore
 !/.prettierrc.json
 !/.npmrc

@@ -1,6 +1,7 @@
 import { GithubWorkflow, WorkflowActions } from "projen/lib/github";
 import { JobPermission, JobStep } from "projen/lib/github/workflows-model";
 import { NodePackageManager } from "projen/lib/javascript";
+
 import {
     TypeScriptProject,
     TypeScriptProjectOptions,
@@ -30,8 +31,10 @@ export const PERMISSION_BACKUP_FILE = "permissions-backup.acl";
 export const BUILD_ARTIFACT_NAME = "build-artifact";
 
 export class ProjenConstructTsLib extends TypeScriptProject {
+    private readonly combinedOptions: TypeScriptProjectOptions;
+
     constructor(
-        rootMonorepoProject: RootMonorepo,
+        private readonly rootMonorepoProject: RootMonorepo,
         options: Omit<
             TypeScriptProjectOptions,
             "defaultReleaseBranch" | "outDir"
@@ -46,14 +49,6 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             outdir: `packages/${options.name}`,
             releaseTagPrefix: `${options.name}@v`,
             release: true,
-            github: true,
-            githubOptions: {
-                workflows: false,
-                ...COMMON_PROJECT_OPTIONS.githubOptions,
-                ...options.githubOptions,
-            },
-            publishTasks: true,
-
             releaseToNpm: true,
 
             peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
@@ -62,13 +57,19 @@ export class ProjenConstructTsLib extends TypeScriptProject {
 
         super(combinedOptions);
 
+        this.combinedOptions = combinedOptions;
+
         this.tsconfig?.addExclude("src/**/*.test.ts");
         this.tasks
             .tryFind("compile")
             ?.reset(`tsc --build ${this.tsconfig?.fileName}`);
 
+        this.addGithubPublishWorkflows();
+    }
+
+    private addGithubPublishWorkflows() {
         const releaseWorkflow = new GithubWorkflow(
-            rootMonorepoProject.github!,
+            this.rootMonorepoProject.github!,
             `Release ${this.name}`,
         );
 
@@ -98,7 +99,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             runsOn: ["ubuntu-latest"],
             defaults: {
                 run: {
-                    workingDirectory: `./${combinedOptions.outdir}`,
+                    workingDirectory: `./${this.combinedOptions.outdir}`,
                 },
             },
             outputs: {
@@ -157,16 +158,13 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     if: noNewCommits,
                     with: {
                         name: `${this.name}_${BUILD_ARTIFACT_NAME}`,
-                        path: `${combinedOptions.outdir}/${this.artifactsDirectory}`,
+                        path: `${this.combinedOptions.outdir}/${this.artifactsDirectory}`,
                     },
                 },
             ].filter(Boolean) as JobStep[],
         });
 
-        if (this.github) {
-            const publishToGithubTask = this.tasks.tryFind("publish:github");
-            publishToGithubTask?.steps;
-
+        if (this.rootMonorepoProject.github) {
             releaseWorkflow.addJob("release_github", {
                 name: "Publish to GitHub Releases",
                 needs: ["release"],
@@ -192,21 +190,22 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                             `cd ${this.artifactsDirectory} && setfacl --restore=${PERMISSION_BACKUP_FILE}`,
                         ].join("\n"),
                     },
-                    ...(publishToGithubTask?.steps?.map((step) => ({
-                        run: step.exec,
+                    {
+                        run: 'test "$(git branch --show-current)" = "main"',
+                    },
+                    {
+                        run: 'errout=$(mktemp); gh release create $(cat dist/releasetag.txt) -R $GITHUB_REPOSITORY -F dist/changelog.md -t $(cat dist/releasetag.txt) --target $GITHUB_REF 2> $errout && true; exitcode=$?; if [ $exitcode -ne 0 ] && ! grep -q "Release.tag_name already exists" $errout; then cat $errout; exit $exitcode; fi',
                         env: {
                             GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}",
                             GITHUB_REPOSITORY: "${{ github.repository }}",
                             GITHUB_REF: "${{ github.ref }}",
                         },
-                    })) ?? []),
+                    },
                 ],
             });
         }
 
-        if (combinedOptions.releaseToNpm) {
-            const publishToNpmTask = this.tasks.tryFind("publish:npm");
-
+        if (this.combinedOptions.releaseToNpm) {
             releaseWorkflow.addJob("release_npm", {
                 name: "Publish to NPM",
                 needs: ["release"],
@@ -232,12 +231,15 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                             `cd ${this.artifactsDirectory} && setfacl --restore=${PERMISSION_BACKUP_FILE}`,
                         ].join("\n"),
                     },
-                    ...(publishToNpmTask?.steps?.map((step) => ({
-                        run: step.exec,
+                    {
+                        run: 'test "$(git branch --show-current)" = "main"',
+                    },
+                    {
+                        run: "npx -p publib@latest publib-npm",
                         env: {
                             NPM_TOKEN: "${{ secrets.NPM_TOKEN }}",
                         },
-                    })) ?? []),
+                    },
                 ],
             });
         }
