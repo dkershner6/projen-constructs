@@ -33,6 +33,10 @@ jspm_packages/
 .cache
 .tmp
 !/.projenrc.js
+/test-reports/
+junit.xml
+!/jest.config.json
+/coverage/
 !/.github/workflows/build.yml
 !/.mergify.yml
 !/.github/workflows/upgrade.yml
@@ -54,6 +58,7 @@ jspm_packages/
 !/.github/workflows/release projen-github-workflows.yml
 !/.github/workflows/release projen-nvm.yml
 !/.github/workflows/release projen-vscode-workspaces.yml
+!/.github/workflows/release dkershner6-projen.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
 !/docs/index.html

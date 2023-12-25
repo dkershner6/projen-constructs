@@ -37,7 +37,15 @@
       "type": "build"
     },
     {
+      "name": "eslint-plugin-jest",
+      "type": "build"
+    },
+    {
       "name": "eslint-plugin-prettier",
+      "type": "build"
+    },
+    {
+      "name": "eslint-plugin-sonarjs",
       "type": "build"
     },
     {

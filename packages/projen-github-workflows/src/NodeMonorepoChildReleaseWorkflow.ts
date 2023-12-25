@@ -18,6 +18,7 @@ export interface NodeMonorepoChildReleaseWorkflowOptions {
     readonly releaseToNpm?: boolean;
 }
 
+const UBUNTU_LATEST = "ubuntu-latest";
 const GIT_REMOTE_STEPID = "git_remote";
 const LATEST_COMMIT_OUTPUT = "latest_commit";
 // to avoid race conditions between two commits trying to release the same
@@ -54,7 +55,9 @@ export class NodeMonorepoChildReleaseWorkflow {
     ) {
         this.releaseWorkflow = new GithubWorkflow(
             this.rootMonorepoProject.github!,
-            `Release ${this.childProject.name}`,
+            `Release ${this.childProject.name
+                .replaceAll("@", "")
+                .replaceAll("/", "-")}`,
         );
 
         this.releaseWorkflow.on({
@@ -83,7 +86,7 @@ export class NodeMonorepoChildReleaseWorkflow {
         );
 
         this.releaseWorkflow.addJob("release", {
-            runsOn: ["ubuntu-latest"],
+            runsOn: [UBUNTU_LATEST],
             defaults: {
                 run: {
                     workingDirectory: `./${childRelativeOutDir}`,
@@ -150,7 +153,7 @@ export class NodeMonorepoChildReleaseWorkflow {
         this.releaseWorkflow.addJob("release_github", {
             name: "Publish to GitHub Releases",
             needs: ["release"],
-            runsOn: ["ubuntu-latest"],
+            runsOn: [UBUNTU_LATEST],
             permissions: {
                 contents: JobPermission.WRITE,
             },
@@ -188,7 +191,7 @@ export class NodeMonorepoChildReleaseWorkflow {
         this.releaseWorkflow.addJob("release_npm", {
             name: "Publish to NPM",
             needs: ["release"],
-            runsOn: ["ubuntu-latest"],
+            runsOn: [UBUNTU_LATEST],
             permissions: {
                 contents: JobPermission.WRITE,
             },
