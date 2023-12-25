@@ -70,10 +70,12 @@ new TextFile(rootProject, "docs/index.html", {
         "<html>",
         "<body>",
         "<h1>Projen Constructs Docs</h1>",
+        "<ul>",
         ...ALL_SUBPROJECTS.map(
             (subProject) =>
-                `<a href="https://dkershner6.github.io/projen-constructs/${subProject.name}">${subProject.name}</a>`,
+                `<li><a href="https://dkershner6.github.io/projen-constructs/${subProject.name}">${subProject.name}</a></li>`,
         ),
+        "</ul>",
         "</body>",
         "</html>",
     ],
