@@ -28,6 +28,13 @@ export interface VsCodeWorkspacesOptions {
      */
     filename: string;
     /**
+     * @default (project) => project.name
+     *
+     * @param project The project definition to use for naming
+     * @returns The name of the project in the context of VSCode Workspaces
+     */
+    projectNamer?: (project: Project) => string;
+    /**
      * @default ".vscode"
      */
     path?: string;
@@ -50,6 +57,8 @@ export class VsCodeWorkspaces extends JsonFile {
             (rootProject?.subprojects?.length ?? 0) > 0
         ) {
             const workspacesFilePath = options?.path ?? DEFAULT_PATH;
+            const projectNamer =
+                options?.projectNamer ?? ((project) => project.name);
 
             const workspacesJson: VsCodeWorkspacesJson = {
                 ...(options?.additionalWorkspacesJsonSettings ?? {}),
@@ -66,14 +75,14 @@ export class VsCodeWorkspaces extends JsonFile {
                 },
                 folders: [
                     {
-                        name: `(ROOT) ${rootProject.name}`,
+                        name: projectNamer(rootProject),
                         path: path.relative(
                             path.join(rootProject.outdir, workspacesFilePath),
                             rootProject.outdir,
                         ),
                     },
                     ...rootProject.subprojects.map((subProject) => ({
-                        name: subProject.name,
+                        name: projectNamer(subProject),
                         path: path.relative(
                             path.join(rootProject.outdir, workspacesFilePath),
                             subProject.outdir,
