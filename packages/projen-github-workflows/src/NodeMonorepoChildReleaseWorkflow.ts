@@ -31,14 +31,18 @@ const noNewCommits = `\${{ steps.${GIT_REMOTE_STEPID}.outputs.${LATEST_COMMIT_OU
  *
  * See {@link https://github.com/actions/upload-artifact/issues/38}
  */
-export const PERMISSION_BACKUP_FILE = "permissions-backup.acl";
+const PERMISSION_BACKUP_FILE = "permissions-backup.acl";
 
 /**
  * Name of the artifact produced by the build job. Its contains the entire
  * working directory.
  */
-export const BUILD_ARTIFACT_NAME = "build-artifact";
+const BUILD_ARTIFACT_NAME = "build-artifact";
 
+/**
+ * A GitHub workflow that builds and releases a Node child project in a monorepo.
+ * This should be identical to the normal Projen release workflow, except for working-directories.
+ */
 export class NodeMonorepoChildReleaseWorkflow {
     private readonly setupNodeSteps: JobStep[];
     private readonly releaseWorkflow: GithubWorkflow;
