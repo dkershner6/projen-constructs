@@ -79,4 +79,8 @@ new TextFile(rootProject, "docs/index.html", {
     ],
 });
 
+new TextFile(rootProject, ".github/CODEOWNERS", {
+    lines: ["* @dkershner6"],
+});
+
 rootProject.synth();

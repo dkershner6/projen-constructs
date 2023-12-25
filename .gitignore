@@ -62,4 +62,5 @@ junit.xml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
 !/docs/index.html
+!/.github/CODEOWNERS
 !/pnpm-workspace.yaml
