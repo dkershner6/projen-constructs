@@ -25,6 +25,11 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
             this.tsconfigDev?.addInclude(`${devDir}/**/*.ts`);
         }
 
+        const defaultTask = this.tasks.tryFind("default");
+        if (defaultTask) {
+            this.tasks.tryFind("build")?.prependSpawn(defaultTask);
+        }
+
         const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
         if (upgradeDepsTask) {
             this.tasks.tryFind("post-upgrade")?.spawn(upgradeDepsTask);

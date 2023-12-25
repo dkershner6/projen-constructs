@@ -5,6 +5,9 @@
       "description": "Full release build for all affected projects",
       "steps": [
         {
+          "spawn": "default"
+        },
+        {
           "exec": "pnpm exec nx run-many --target=build --output-style=stream --nx-bail",
           "receiveArgs": true
         }
