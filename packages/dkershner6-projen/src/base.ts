@@ -12,6 +12,9 @@ export const BASE_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
         compilerOptions: {
             lib: ["es2023"],
             target: "es2022",
+            // Let lint handle these
+            noUnusedLocals: false,
+            noUnusedParameters: false,
         },
     },
     tsconfigDev: {
@@ -88,6 +91,27 @@ export const enactBaseProjectConfig = (project: TypeScriptProject): void => {
         "plugin:jest/recommended",
         "plugin:sonarjs/recommended",
     );
+    project.eslint?.addRules({
+        "no-console": ["warn", { allow: ["debug", "info", "warn", "error"] }],
+        "sonarjs/no-redundant-jump": "off",
+        "sonarjs/no-small-switch": "warn",
+        "@typescript-eslint/explicit-function-return-type": [
+            "warn",
+            {
+                allowExpressions: true,
+                allowTypedFunctionExpressions: true,
+                allowHigherOrderFunctions: true,
+                allowDirectConstAssertionInArrowFunctions: true,
+                allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+            },
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "warn",
+            {
+                ignoreRestSiblings: true,
+            },
+        ],
+    });
 
     // TypeScript
     project.tsconfig?.addExclude("src/**/*.test.ts");
