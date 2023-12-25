@@ -86,21 +86,31 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             },
         });
 
-        const setupNodeStep = {
-            name: "Setup Node.js",
-            uses: "actions/setup-node@v3",
-            with: {
-                ...(this.nodeVersion && {
-                    "node-version": this.nodeVersion,
-                }),
-                ...(this.workflowPackageCache && {
-                    cache:
-                        this.package.packageManager === NodePackageManager.PNPM
-                            ? "pnpm"
-                            : "npm",
-                }),
+        const setupNodeSteps = [
+            this.package.packageManager === NodePackageManager.PNPM
+                ? {
+                      name: "Setup pnpm",
+                      uses: "pnpm/action-setup@v2.2.4",
+                      with: { version: this.package.pnpmVersion },
+                  }
+                : null,
+            {
+                name: "Setup Node.js",
+                uses: "actions/setup-node@v3",
+                with: {
+                    ...(this.nodeVersion && {
+                        "node-version": this.nodeVersion,
+                    }),
+                    ...(this.workflowPackageCache && {
+                        cache:
+                            this.package.packageManager ===
+                            NodePackageManager.PNPM
+                                ? "pnpm"
+                                : "npm",
+                    }),
+                },
             },
-        };
+        ].filter(Boolean) as JobStep[];
 
         releaseWorkflow.addJob("release", {
             runsOn: ["ubuntu-latest"],
@@ -131,14 +141,8 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                     name: "GitHub Actions",
                     email: "github-actions@github.com",
                 }),
-                this.package.packageManager === NodePackageManager.PNPM
-                    ? {
-                          name: "Setup pnpm",
-                          uses: "pnpm/action-setup@v2.2.4",
-                          with: { version: this.package.pnpmVersion },
-                      }
-                    : null,
-                setupNodeStep,
+
+                ...this.workflowBootstrapSteps,
                 {
                     name: "Install dependencies",
                     run: this.package.installCommand,
@@ -181,7 +185,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                 },
                 if: "needs.release.outputs.latest_commit == github.sha",
                 steps: [
-                    setupNodeStep,
+                    ...setupNodeSteps,
                     {
                         name: "Download artifact",
                         uses: "actions/download-artifact@v3",
@@ -219,7 +223,7 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                 },
                 if: "needs.release.outputs.latest_commit == github.sha",
                 steps: [
-                    setupNodeStep,
+                    ...setupNodeSteps,
                     {
                         name: "Download artifact",
                         uses: "actions/download-artifact@v3",
