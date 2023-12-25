@@ -15,7 +15,7 @@ jobs:
       CI: "true"
     defaults:
       run:
-        working-directory: ./packages/@dkershner6/projen
+        working-directory: ./packages/dkershner6-projen
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dkershner6-projen_build-artifact
-          path: packages/@dkershner6/projen/dist
+          path: packages/dkershner6-projen/dist
   release_github:
     name: Publish to GitHub Releases
     needs: release

@@ -26,7 +26,7 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
 });
 
 const dkershnerConfigsProject = new ProjenConstructTsLib(rootProject, {
-    name: "@dkershner6/projen",
+    name: "dkershner6-projen",
     npmAccess: NpmAccess.PUBLIC,
     keywords: ["projen", "configs", "config"],
     description: "DKershner's preferred configs for Projen projects.",
