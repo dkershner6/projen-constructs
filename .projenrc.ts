@@ -1,4 +1,5 @@
 import { TextFile } from "projen";
+import { NpmAccess } from "projen/lib/javascript";
 import { Nvmrc } from "./packages/projen-nvm/src";
 import { VsCodeWorkspaces } from "./packages/projen-vscode-workspaces/src";
 import { ProjenConstructTsLib } from "./projects/common/ProjenConstructTsLib";
@@ -24,14 +25,28 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
     description: "Helpers for Projen projects that use VSCode workspaces.",
 });
 
+const dkershnerConfigsProject = new ProjenConstructTsLib(rootProject, {
+    name: "@dkershner6/projen",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: ["projen", "configs", "config"],
+    description: "DKershner's preferred configs for Projen projects.",
+    devDeps: ["@types/lodash.merge", "lodash.merge"],
+    peerDeps: ["lodash.merge"],
+    eslintOptions: {
+        dirs: [],
+        devdirs: ["src"],
+    },
+});
+
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
     nvmProject,
     vsCodeWorkspacesProject,
+    dkershnerConfigsProject,
 ];
-
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.
+// Not directly importing creates a circular dependency.
 
 new VsCodeWorkspaces(rootProject, {
     filename: "Projen Constructs Monorepo.code-workspace",

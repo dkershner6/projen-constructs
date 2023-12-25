@@ -5,7 +5,10 @@ import {
     TypeScriptProject,
     TypeScriptProjectOptions,
 } from "projen/lib/typescript";
-import { COMMON_PROJECT_OPTIONS } from "./options";
+import {
+    BASE_PROJECT_OPTIONS_NODE_20,
+    enactBaseProjectConfig,
+} from "../../packages/@dkershner6/projen/src/base";
 import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 
@@ -37,38 +40,15 @@ export class ProjenConstructTsLib extends TypeScriptProject {
                 authorUrl: "https://dkershner.com",
                 docgen: true,
                 docsDirectory: `../../docs/${options.name}`,
-
-                jest: true,
-                jestOptions: {
-                    jestConfig: {
-                        globals: {
-                            "ts-jest": null,
-                        },
-                    },
-                },
             },
-            COMMON_PROJECT_OPTIONS,
+            BASE_PROJECT_OPTIONS_NODE_20,
         );
 
         super(combinedOptions);
 
         this.combinedOptions = combinedOptions;
 
-        this.tsconfig?.addExclude("src/**/*.test.ts");
-        this.tasks
-            .tryFind("compile")
-            ?.reset(`tsc --build ${this.tsconfig?.fileName}`);
-
-        const lintTask = this.tasks.tryFind("eslint");
-        if (lintTask) {
-            const currentLintCommand = lintTask.steps[0].exec;
-            lintTask.reset(
-                currentLintCommand?.replace(
-                    "--no-error-on-unmatched-pattern",
-                    "--no-error-on-unmatched-pattern --max-warnings 0", // Strict linting
-                ),
-            );
-        }
+        enactBaseProjectConfig(this);
 
         new TextFile(this, "README.md", {
             lines: [

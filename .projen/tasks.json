@@ -50,8 +50,7 @@
       "description": "Only compile for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "exec": "tsc --build tsconfig.publish.json"
         }
       ]
     },
@@ -114,6 +113,15 @@
         }
       ]
     },
+    "lint": {
+      "name": "lint",
+      "description": "Alternate lint command",
+      "steps": [
+        {
+          "spawn": "eslint"
+        }
+      ]
+    },
     "package": {
       "name": "package",
       "description": "Creates the distribution package for all affected projects",
@@ -173,6 +181,15 @@
         }
       ]
     },
+    "test:watch": {
+      "name": "test:watch",
+      "description": "Run jest in watch mode",
+      "steps": [
+        {
+          "exec": "jest --watch"
+        }
+      ]
+    },
     "upgrade": {
       "name": "upgrade",
       "description": "upgrade dependencies",
@@ -181,13 +198,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,lodash.merge,npm-check-updates,nx,prettier,projen,syncpack,ts-node,typescript,aws-cdk-lib,cdk-nag"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,lodash.merge,npm-check-updates,nx,prettier,projen,syncpack,ts-jest,ts-node,typescript,aws-cdk-lib,cdk-nag"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint lodash.merge npm-check-updates nx prettier projen syncpack ts-node typescript aws-cdk-lib cdk-nag"
+          "exec": "pnpm update @aws/pdk @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx prettier projen syncpack ts-jest ts-node typescript aws-cdk-lib cdk-nag"
         },
         {
           "exec": "pnpm exec projen"

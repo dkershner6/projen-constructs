@@ -29,7 +29,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-nvm@"
+        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
       },
       "steps": [
         {
@@ -53,10 +53,10 @@
     },
     "docgen": {
       "name": "docgen",
-      "description": "Generate TypeScript API reference ../../docs/projen-nvm",
+      "description": "Generate TypeScript API reference ../../docs/@dkershner6/projen",
       "steps": [
         {
-          "exec": "typedoc src --disableSources --out ../../docs/projen-nvm"
+          "exec": "typedoc src --disableSources --out ../../docs/@dkershner6/projen"
         }
       ]
     },
@@ -65,7 +65,7 @@
       "description": "Runs eslint against the codebase",
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings 0 src test build-tools"
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings 0 src"
         }
       ]
     },
@@ -130,7 +130,7 @@
       "description": "Prepare a release from \"main\" branch",
       "env": {
         "RELEASE": "true",
-        "RELEASE_TAG_PREFIX": "projen-nvm@"
+        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
       },
       "steps": [
         {
@@ -180,7 +180,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-nvm@"
+        "RELEASE_TAG_PREFIX": "@dkershner6/projen@"
       },
       "steps": [
         {
@@ -196,13 +196,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,prettier,projen,standard-version,ts-jest,typedoc,typescript"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,lodash.merge,prettier,projen,standard-version,ts-jest,typedoc,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit prettier projen standard-version ts-jest typedoc typescript"
+          "exec": "pnpm update @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge prettier projen standard-version ts-jest typedoc typescript"
         },
         {
           "exec": "npx projen"
