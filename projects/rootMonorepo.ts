@@ -7,7 +7,10 @@ const ADDITIONAL_DEV_DIRS = ["projects"];
 export class RootMonorepo extends monorepo.MonorepoTsProject {
     constructor() {
         super(
-            merge(
+            merge<
+                monorepo.MonorepoTsProjectOptions,
+                Partial<monorepo.MonorepoTsProjectOptions>
+            >(
                 {
                     devDeps: [
                         "@aws/pdk",
@@ -19,6 +22,7 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
 
                     projenrcTs: true,
                     github: true,
+                    autoApproveOptions: { allowedUsernames: ["dkershner6"] },
 
                     eslintOptions: {
                         dirs: [],
