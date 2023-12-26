@@ -27,7 +27,6 @@
 /.syncpackrc.json linguist-generated
 /.vscode/Projen Constructs Monorepo.code-workspace linguist-generated
 /docs/index.html linguist-generated
-/jest.config.json linguist-generated
 /LICENSE linguist-generated
 /nx.json linguist-generated
 /package.json linguist-generated

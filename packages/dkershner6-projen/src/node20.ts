@@ -40,11 +40,56 @@ export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
 };
 
+const ESM_MODULES_TO_TRANSFORM = [
+    "@babel/runtime",
+    "@buildresonance/global-lib-storefront-shared-components",
+    "@buildresonance/global-lib-storefront-next-markdown",
+    "@mui*",
+    ".*separated-tokens",
+    ".*util-gfm.*",
+    "bail",
+    "ccount",
+    "character-entities.*",
+    "decode-named-character-reference",
+    "direction",
+    "escape-string-regexp",
+    "github-slugger",
+    "hast.*",
+    "html-void-elements",
+    "is-plain-obj",
+    "longest-streak",
+    "markdown.*",
+    "mdast.*",
+    "micromark.*",
+    "property-information",
+    "rehype.*",
+    "remark.*",
+    "stringify-entities",
+    "strip-markdown",
+    "trim-lines",
+    "trough",
+    "unified",
+    "unist.*",
+    "vfile.*",
+    "web-namespaces",
+    "zwitch",
+    "@panva/hkdf",
+    "jose",
+    "swiper",
+    "swiper/react",
+    "ssr-window",
+    "dom7",
+    "uuid",
+];
+
 export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     jest: true,
     jestOptions: {
-        configFilePath: "jest.config.json",
         jestConfig: {
+            transformIgnorePatterns: [
+                `node_modules/(?!(${ESM_MODULES_TO_TRANSFORM.join("|")})/)`,
+                "\\.pnp\\.[^\\/]+$",
+            ],
             globals: {
                 "ts-jest": null, // Works with TSConfig switch
             },

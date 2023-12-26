@@ -9,7 +9,6 @@
     ".projen/deps.json",
     ".projen/files.json",
     ".projen/tasks.json",
-    "jest.config.json",
     "LICENSE",
     "project.json",
     "README.md",
