@@ -82,7 +82,7 @@ const ESM_MODULES_TO_TRANSFORM = [
     "uuid",
 ];
 
-export const RECOMMENDED_JSII_JEST_CONFIG = {
+export const RECOMMENDED_JEST_CONFIG = {
     jest: true,
     jestOptions: {
         jestConfig: {
@@ -94,15 +94,16 @@ export const RECOMMENDED_JSII_JEST_CONFIG = {
     },
 };
 
-export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = merge({
-    jestOptions: {
-        jestConfig: {
-            globals: {
-                "ts-jest": null, // Works with TSConfig switch
+export const RECOMMENDED_JEST_TSCONFIG_SWITCH_CONFIG: Partial<NodeProjectOptions> =
+    merge({
+        jestOptions: {
+            jestConfig: {
+                globals: {
+                    "ts-jest": null, // Works with TSConfig switch
+                },
             },
         },
-    },
-});
+    });
 
 export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     prettier: true,
@@ -127,6 +128,7 @@ export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     "defaultReleaseBranch" | "name"
 > = merge(
     RECOMMENDED_TSCONFIG_NODE_20,
+    RECOMMENDED_JEST_TSCONFIG_SWITCH_CONFIG,
     RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
 );
 
