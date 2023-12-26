@@ -202,7 +202,7 @@ export class Node20TypeScriptProject extends TypeScriptProject {
 
 export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
     constructor(options: AwsCdkConstructLibraryOptions) {
-        super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+        super(merge(options, RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS));
 
         enactNode20ProjectConfig(this);
     }
