@@ -137,7 +137,7 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     project.tasks.addTask("type-check").exec("tsc --noEmit");
 };
 
-export class Node20TypescriptProject extends TypeScriptProject {
+export class Node20TypeScriptProject extends TypeScriptProject {
     constructor(options: TypeScriptProjectOptions) {
         super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
         enactNode20ProjectConfig(this);

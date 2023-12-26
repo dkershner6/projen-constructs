@@ -2,11 +2,11 @@ import merge from "lodash.merge";
 import { TextFile } from "projen";
 
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
-import { Node20TypescriptProject } from "../../packages/dkershner6-projen/src/node20";
+import { Node20TypeScriptProject } from "../../packages/dkershner6-projen/src/node20";
 import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 
-export class ProjenConstructTsLib extends Node20TypescriptProject {
+export class ProjenConstructTsLib extends Node20TypeScriptProject {
     private readonly combinedOptions: TypeScriptProjectOptions;
 
     constructor(
