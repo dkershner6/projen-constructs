@@ -190,6 +190,14 @@
         }
       ]
     },
+    "type-check": {
+      "name": "type-check",
+      "steps": [
+        {
+          "exec": "tsc --noEmit"
+        }
+      ]
+    },
     "upgrade": {
       "name": "upgrade",
       "description": "upgrade dependencies",
