@@ -1,9 +1,9 @@
 import { monorepo } from "@aws/pdk";
 import merge from "lodash.merge";
 import {
-    BASE_PROJECT_OPTIONS_NODE_20,
-    enactBaseProjectConfig,
-} from "../packages/dkershner6-projen/src/base";
+    RECOMMENDED_NODE_20_PROJECT_OPTIONS,
+    enactNode20ProjectConfig,
+} from "../packages/dkershner6-projen/src/node20";
 
 const ADDITIONAL_DEV_DIRS = ["projects"];
 
@@ -33,7 +33,7 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
 
                     workflowPackageCache: true,
                 },
-                BASE_PROJECT_OPTIONS_NODE_20,
+                RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),
         );
 
@@ -51,6 +51,6 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
             this.tasks.tryFind("post-upgrade")?.spawn(upgradeDepsTask);
         }
 
-        enactBaseProjectConfig(this);
+        enactNode20ProjectConfig(this);
     }
 }

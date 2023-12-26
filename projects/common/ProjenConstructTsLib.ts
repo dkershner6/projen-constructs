@@ -1,18 +1,12 @@
 import merge from "lodash.merge";
 import { TextFile } from "projen";
 
-import {
-    TypeScriptProject,
-    TypeScriptProjectOptions,
-} from "projen/lib/typescript";
-import {
-    BASE_PROJECT_OPTIONS_NODE_20,
-    enactBaseProjectConfig,
-} from "../../packages/dkershner6-projen/src/base";
+import { TypeScriptProjectOptions } from "projen/lib/typescript";
+import { Node20TypescriptProject } from "../../packages/dkershner6-projen/src/node20";
 import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 
-export class ProjenConstructTsLib extends TypeScriptProject {
+export class ProjenConstructTsLib extends Node20TypescriptProject {
     private readonly combinedOptions: TypeScriptProjectOptions;
 
     constructor(
@@ -22,33 +16,27 @@ export class ProjenConstructTsLib extends TypeScriptProject {
             "defaultReleaseBranch" | "outDir"
         >,
     ) {
-        const combinedOptions: TypeScriptProjectOptions = merge(
-            options,
-            {
-                parent: rootMonorepoProject,
+        const combinedOptions: TypeScriptProjectOptions = merge(options, {
+            parent: rootMonorepoProject,
 
-                defaultReleaseBranch: "main",
-                outdir: `packages/${options.name}`,
-                releaseTagPrefix: `${options.name}@`,
-                release: true,
-                releaseToNpm: true,
+            defaultReleaseBranch: "main",
+            outdir: `packages/${options.name}`,
+            releaseTagPrefix: `${options.name}@`,
+            release: true,
+            releaseToNpm: true,
 
-                peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
-                devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
+            peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
+            devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
 
-                authorName: "Derek Kershner",
-                authorUrl: "https://dkershner.com",
-                docgen: true,
-                docsDirectory: `../../docs/${options.name}`,
-            },
-            BASE_PROJECT_OPTIONS_NODE_20,
-        );
+            authorName: "Derek Kershner",
+            authorUrl: "https://dkershner.com",
+            docgen: true,
+            docsDirectory: `../../docs/${options.name}`,
+        });
 
         super(combinedOptions);
 
         this.combinedOptions = combinedOptions;
-
-        enactBaseProjectConfig(this);
 
         new TextFile(this, "README.md", {
             lines: [
