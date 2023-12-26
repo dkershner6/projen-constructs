@@ -60,9 +60,7 @@
         "peerDependencies": true
       }
     ],
-    "import/no-unresolved": [
-      "error"
-    ],
+    "import/no-unresolved": "off",
     "import/order": [
       "warn",
       {
@@ -136,6 +134,7 @@
         ]
       }
     ],
+    "import/namespace": "off",
     "sonarjs/no-redundant-jump": "off",
     "sonarjs/no-small-switch": "warn",
     "@typescript-eslint/explicit-function-return-type": [
@@ -155,5 +154,18 @@
       }
     ]
   },
-  "overrides": []
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {
+        "import/no-unresolved": "error",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 }
