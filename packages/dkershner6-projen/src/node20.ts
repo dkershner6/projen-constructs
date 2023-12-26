@@ -1,12 +1,16 @@
 import merge from "lodash.merge";
 import { ProjectOptions, javascript } from "projen";
+import {
+    AwsCdkConstructLibrary,
+    AwsCdkConstructLibraryOptions,
+} from "projen/lib/awscdk";
 import { NodeProjectOptions } from "projen/lib/javascript";
 import {
     TypeScriptProject,
     TypeScriptProjectOptions,
 } from "projen/lib/typescript";
 
-export const BASE_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
+export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     tsconfig: {
         fileName: "tsconfig.publish.json",
         compilerOptions: {
@@ -23,7 +27,7 @@ export const BASE_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
-export const BASE_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
     minNodeVersion: "18.12.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
@@ -32,11 +36,11 @@ export const BASE_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
     pnpmVersion: "8",
 };
 
-export const BASE_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
+export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
 };
 
-export const BASE_JEST_CONFIG: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     jest: true,
     jestOptions: {
         configFilePath: "jest.config.json",
@@ -48,7 +52,7 @@ export const BASE_JEST_CONFIG: Partial<NodeProjectOptions> = {
     },
 };
 
-export const BASE_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     prettier: true,
     prettierOptions: {
         settings: {
@@ -57,17 +61,17 @@ export const BASE_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     },
 };
 
-export const BASE_PROJECT_OPTIONS_NODE_20: Omit<
+export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
 > = merge(
-    BASE_TSCONFIG_NODE_20,
-    BASE_NODE_20_PNPM_8,
-    BASE_JEST_CONFIG,
-    BASE_PRETTIER_CONFIG,
+    RECOMMENDED_TSCONFIG_NODE_20,
+    RECOMMENDED_NODE_20_PNPM_8,
+    RECOMMENDED_JEST_CONFIG,
+    RECOMMENDED_PRETTIER_CONFIG,
 );
 
-export const enactBaseProjectConfig = (project: TypeScriptProject): void => {
+export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     // Eslint
     const lintTask = project.tasks.tryFind("eslint");
     if (lintTask) {
@@ -119,3 +123,17 @@ export const enactBaseProjectConfig = (project: TypeScriptProject): void => {
         .tryFind("compile")
         ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
 };
+
+export class Node20TypescriptProject extends TypeScriptProject {
+    constructor(options: TypeScriptProjectOptions) {
+        super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+        enactNode20ProjectConfig(this);
+    }
+}
+
+export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
+    constructor(options: AwsCdkConstructLibraryOptions) {
+        super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+        enactNode20ProjectConfig(this);
+    }
+}
