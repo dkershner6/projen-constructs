@@ -134,6 +134,7 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     project.tasks
         .tryFind("compile")
         ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
+    project.tasks.addTask("type-check").exec("tsc --noEmit");
 };
 
 export class Node20TypescriptProject extends TypeScriptProject {
