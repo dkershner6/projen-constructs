@@ -25,7 +25,6 @@
     ".syncpackrc.json",
     ".vscode/Projen Constructs Monorepo.code-workspace",
     "docs/index.html",
-    "jest.config.json",
     "LICENSE",
     "nx.json",
     "pnpm-workspace.yaml",

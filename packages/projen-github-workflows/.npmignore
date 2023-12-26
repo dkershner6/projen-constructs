@@ -2,7 +2,6 @@
 /.projen/
 /test-reports/
 junit.xml
-/jest.config.json
 /coverage/
 /dist/changelog.md
 /dist/version.txt

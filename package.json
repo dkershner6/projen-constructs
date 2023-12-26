@@ -72,6 +72,48 @@
   "main": "lib/index.js",
   "license": "Apache-2.0",
   "version": "0.0.0",
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@babel/runtime|@buildresonance/global-lib-storefront-shared-components|@buildresonance/global-lib-storefront-next-markdown|@mui*|.*separated-tokens|.*util-gfm.*|bail|ccount|character-entities.*|decode-named-character-reference|direction|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|stringify-entities|strip-markdown|trim-lines|trough|unified|unist.*|vfile.*|web-namespaces|zwitch|@panva/hkdf|jose|swiper|swiper/react|ssr-window|dom7|uuid)/)",
+      "\\.pnp\\.[^\\/]+$"
+    ],
+    "globals": {
+      "ts-jest": null
+    },
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+    ],
+    "clearMocks": true,
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "clover",
+      "cobertura",
+      "text"
+    ],
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "watchPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "test-reports"
+        }
+      ]
+    ],
+    "preset": "ts-jest"
+  },
   "types": "lib/index.d.ts",
   "private": true,
   "workspaces": {
