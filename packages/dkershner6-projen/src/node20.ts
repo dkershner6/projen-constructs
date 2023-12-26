@@ -97,6 +97,8 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     );
     project.eslint?.addRules({
         "no-console": ["warn", { allow: ["debug", "info", "warn", "error"] }],
+        "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
+        "import/namespace": "off",
         "sonarjs/no-redundant-jump": "off",
         "sonarjs/no-small-switch": "warn",
         "@typescript-eslint/explicit-function-return-type": [
@@ -117,11 +119,22 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
         ],
     });
 
+    project.eslint?.addOverride({
+        files: ["*.js", "*.jsx"],
+        rules: {
+            "import/no-unresolved": "error",
+            "@typescript-eslint/explicit-function-return-type": "off",
+            "@typescript-eslint/explicit-module-boundary-types": "off",
+            "@typescript-eslint/no-var-requires": "off",
+        },
+    });
+
     // TypeScript
     project.tsconfig?.addExclude("src/**/*.test.ts");
     project.tasks
         .tryFind("compile")
         ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
+    project.tasks.addTask("type-check").exec("tsc --noEmit");
 };
 
 export class Node20TypescriptProject extends TypeScriptProject {

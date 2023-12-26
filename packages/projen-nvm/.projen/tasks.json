@@ -172,6 +172,14 @@
         }
       ]
     },
+    "type-check": {
+      "name": "type-check",
+      "steps": [
+        {
+          "exec": "tsc --noEmit"
+        }
+      ]
+    },
     "unbump": {
       "name": "unbump",
       "description": "Restores version to 0.0.0",

@@ -16,6 +16,7 @@
     "release": "npx projen release",
     "test": "npx projen test",
     "test:watch": "npx projen test:watch",
+    "type-check": "npx projen type-check",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch"
