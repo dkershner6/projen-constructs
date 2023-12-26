@@ -106,14 +106,21 @@ export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     },
 };
 
+export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
+    ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
+    "defaultReleaseBranch" | "name"
+> = merge(
+    RECOMMENDED_NODE_20_PNPM_8,
+    RECOMMENDED_JEST_CONFIG,
+    RECOMMENDED_PRETTIER_CONFIG,
+);
+
 export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
 > = merge(
     RECOMMENDED_TSCONFIG_NODE_20,
-    RECOMMENDED_NODE_20_PNPM_8,
-    RECOMMENDED_JEST_CONFIG,
-    RECOMMENDED_PRETTIER_CONFIG,
+    RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
 );
 
 export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
@@ -175,12 +182,14 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     });
 
     // TypeScript
-    project.tsconfig?.addExclude("src/**/*.test.ts");
-    if (project?.tsconfig?.fileName) {
+    if (!(project instanceof AwsCdkConstructLibrary)) {
+        project.tsconfig?.addExclude("src/**/*.test.ts");
+
         project.tasks
             .tryFind("compile")
             ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
     }
+
     project.tasks.addTask("type-check").exec("tsc --noEmit");
 };
 
@@ -194,6 +203,7 @@ export class Node20TypeScriptProject extends TypeScriptProject {
 export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
     constructor(options: AwsCdkConstructLibraryOptions) {
         super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+
         enactNode20ProjectConfig(this);
     }
 }
