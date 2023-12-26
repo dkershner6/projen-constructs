@@ -131,9 +131,11 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
 
     // TypeScript
     project.tsconfig?.addExclude("src/**/*.test.ts");
-    project.tasks
-        .tryFind("compile")
-        ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
+    if (project?.tsconfig?.fileName) {
+        project.tasks
+            .tryFind("compile")
+            ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
+    }
     project.tasks.addTask("type-check").exec("tsc --noEmit");
 };
 
