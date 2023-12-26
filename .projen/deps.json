@@ -62,15 +62,6 @@
       "type": "build"
     },
     {
-      "name": "jest",
-      "type": "build"
-    },
-    {
-      "name": "jest-junit",
-      "version": "^15",
-      "type": "build"
-    },
-    {
       "name": "lodash.merge",
       "type": "build"
     },
@@ -93,10 +84,6 @@
     },
     {
       "name": "syncpack",
-      "type": "build"
-    },
-    {
-      "name": "ts-jest",
       "type": "build"
     },
     {
