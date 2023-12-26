@@ -82,7 +82,7 @@ const ESM_MODULES_TO_TRANSFORM = [
     "uuid",
 ];
 
-export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_JSII_JEST_CONFIG = {
     jest: true,
     jestOptions: {
         jestConfig: {
@@ -90,12 +90,19 @@ export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
                 `node_modules/(?!(${ESM_MODULES_TO_TRANSFORM.join("|")})/)`,
                 "\\.pnp\\.[^\\/]+$",
             ],
+        },
+    },
+};
+
+export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = merge({
+    jestOptions: {
+        jestConfig: {
             globals: {
                 "ts-jest": null, // Works with TSConfig switch
             },
         },
     },
-};
+});
 
 export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     prettier: true,
@@ -196,6 +203,7 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
 export class Node20TypeScriptProject extends TypeScriptProject {
     constructor(options: TypeScriptProjectOptions) {
         super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+
         enactNode20ProjectConfig(this);
     }
 }
