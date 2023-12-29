@@ -298,6 +298,20 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             this.eslint?.allowDevDeps(pattern);
         }
 
+        this.addDevDeps(
+            "eslint-plugin-react",
+            "eslint-plugin-react-hooks",
+            "eslint-plugin-jest-dom",
+            "eslint-plugin-jsx-a11y",
+        );
+        this.eslint?.addPlugins("react", "react-hooks", "jest-dom", "jsx-a11y");
+        this.eslint?.addExtends(
+            "plugin:react/recommended",
+            "plugin:react-hooks/recommended",
+            "plugin:jest-dom/recommended",
+            "plugin:jsx-a11y/recommended",
+        );
+
         new TextFile(this, JSDOM_FILE_PATH, {
             lines: ['import "@testing-library/jest-dom";'],
         });
