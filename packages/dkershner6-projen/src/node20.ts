@@ -15,6 +15,11 @@ import {
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
 
+export const RECOMMENDED_TSCONFIG_INCLUDE: string[] = [
+    "src/**/*.ts",
+    "src/**/*.test.ts",
+];
+
 export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
     {
         lib: ["es2023"],
@@ -35,6 +40,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     tsconfigDev: {
         fileName: "tsconfig.json", // Shim for VSCode, dev file must be named this
         compilerOptions: {},
+        include: RECOMMENDED_TSCONFIG_INCLUDE,
     },
 };
 
@@ -49,6 +55,14 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
                     jsx: TypeScriptJsxMode.REACT,
                     types: ["jest", "node", "@testing-library/jest-dom"],
                 },
+                include: ["src/**/*.ts", "src/**/*.tsx"],
+            },
+            tsconfigDev: {
+                include: [
+                    ...RECOMMENDED_TSCONFIG_INCLUDE,
+                    "src/**/*.tsx",
+                    "src/**/*.test.tsx",
+                ],
             },
         },
     ]);
