@@ -1,24 +1,34 @@
-import merge from "lodash.merge";
+import deepClone from "clone-deep";
 import { ProjectOptions, javascript } from "projen";
 import {
     AwsCdkConstructLibrary,
     AwsCdkConstructLibraryOptions,
 } from "projen/lib/awscdk";
-import { NodeProjectOptions } from "projen/lib/javascript";
+import {
+    NodeProjectOptions,
+    TypeScriptCompilerOptions,
+} from "projen/lib/javascript";
 import {
     TypeScriptProject,
     TypeScriptProjectOptions,
 } from "projen/lib/typescript";
+import { deepMerge } from "projen/lib/util";
+
+export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
+    {
+        lib: ["es2023"],
+        target: "es2022",
+        // Let lint handle these
+        noUnusedLocals: false,
+        noUnusedParameters: false,
+        types: ["jest", "node"],
+    };
 
 export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     tsconfig: {
         fileName: "tsconfig.publish.json",
         compilerOptions: {
-            lib: ["es2023"],
-            target: "es2022",
-            // Let lint handle these
-            noUnusedLocals: false,
-            noUnusedParameters: false,
+            ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
         },
     },
     tsconfigDev: {
@@ -26,6 +36,20 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
         compilerOptions: {},
     },
 };
+
+export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOptions> =
+    deepMerge([
+        deepClone(RECOMMENDED_TSCONFIG_NODE_20),
+        {
+            tsconfig: {
+                compilerOptions: {
+                    ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+                    lib: ["es2023", "dom"],
+                    types: ["jest", "node", "@testing-library/jest-dom"],
+                },
+            },
+        },
+    ]);
 
 export const RECOMMENDED_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
     minNodeVersion: "18.12.0",
@@ -82,10 +106,11 @@ const ESM_MODULES_TO_TRANSFORM = [
     "uuid",
 ];
 
-export const RECOMMENDED_JEST_CONFIG = {
+export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     jest: true,
     jestOptions: {
         jestConfig: {
+            testEnvironment: "node",
             transformIgnorePatterns: [
                 `node_modules/(?!(${ESM_MODULES_TO_TRANSFORM.join("|")})/)`,
                 "\\.pnp\\.[^\\/]+$",
@@ -94,16 +119,15 @@ export const RECOMMENDED_JEST_CONFIG = {
     },
 };
 
-export const RECOMMENDED_JEST_TSCONFIG_SWITCH_CONFIG: Partial<NodeProjectOptions> =
-    merge({
-        jestOptions: {
-            jestConfig: {
-                globals: {
-                    "ts-jest": null, // Works with TSConfig switch
-                },
-            },
+export const RECOMMENDED_JEST_CONFIG_REACT: Partial<NodeProjectOptions> = {
+    ...RECOMMENDED_JEST_CONFIG,
+    jestOptions: {
+        jestConfig: {
+            ...RECOMMENDED_JEST_CONFIG.jestOptions?.jestConfig,
+            testEnvironment: "jsdom",
         },
-    });
+    },
+};
 
 export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     prettier: true,
@@ -117,20 +141,29 @@ export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
 export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
-> = merge(
-    RECOMMENDED_NODE_20_PNPM_8,
+> = deepMerge([
+    deepClone(RECOMMENDED_NODE_20_PNPM_8),
     RECOMMENDED_JEST_CONFIG,
     RECOMMENDED_PRETTIER_CONFIG,
-);
+]);
 
 export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
-> = merge(
-    RECOMMENDED_TSCONFIG_NODE_20,
-    RECOMMENDED_JEST_TSCONFIG_SWITCH_CONFIG,
+> = deepMerge([
+    deepClone(RECOMMENDED_TSCONFIG_NODE_20),
     RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
-);
+]);
+
+export const RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS: Omit<
+    ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
+    "defaultReleaseBranch" | "name"
+> = deepMerge([
+    deepClone(RECOMMENDED_TSCONFIG_NODE_20_REACT),
+    RECOMMENDED_NODE_20_PNPM_8,
+    RECOMMENDED_JEST_CONFIG_REACT,
+    RECOMMENDED_PRETTIER_CONFIG,
+]);
 
 export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     // Eslint
@@ -204,7 +237,25 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
 
 export class Node20TypeScriptProject extends TypeScriptProject {
     constructor(options: TypeScriptProjectOptions) {
-        super(merge(options, RECOMMENDED_NODE_20_PROJECT_OPTIONS));
+        super(
+            deepMerge([
+                deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
+                options,
+            ]) as TypeScriptProjectOptions,
+        );
+
+        enactNode20ProjectConfig(this);
+    }
+}
+
+export class Node20ReactTypeScriptProject extends TypeScriptProject {
+    constructor(options: TypeScriptProjectOptions) {
+        super(
+            deepMerge([
+                deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
+                options,
+            ]) as TypeScriptProjectOptions,
+        );
 
         enactNode20ProjectConfig(this);
     }
@@ -212,7 +263,12 @@ export class Node20TypeScriptProject extends TypeScriptProject {
 
 export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
     constructor(options: AwsCdkConstructLibraryOptions) {
-        super(merge(options, RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS));
+        super(
+            deepMerge([
+                deepClone(RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS),
+                options,
+            ]) as AwsCdkConstructLibraryOptions,
+        );
 
         enactNode20ProjectConfig(this);
     }
