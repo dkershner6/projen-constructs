@@ -316,7 +316,7 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         this.eslint?.addRules({
             "react/prop-types": 0, // Disabled to prefer use of Typescript<Props>
         });
-        if (this?.eslint?.config?.env) {
+        if (this.eslint?.config?.env) {
             this.eslint.config.env.browser = true;
             this.eslint.config.env.es6 = true;
         }
