@@ -7,6 +7,7 @@ import {
 import {
     NodeProjectOptions,
     TypeScriptCompilerOptions,
+    TypeScriptJsxMode,
 } from "projen/lib/javascript";
 import {
     TypeScriptProject,
@@ -45,6 +46,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
                 compilerOptions: {
                     ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
                     lib: ["es2023", "dom"],
+                    jsx: TypeScriptJsxMode.REACT,
                     types: ["jest", "node", "@testing-library/jest-dom"],
                 },
             },
