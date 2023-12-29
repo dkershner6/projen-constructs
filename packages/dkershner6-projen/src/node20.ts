@@ -15,10 +15,13 @@ import {
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
 
-export const RECOMMENDED_TSCONFIG_INCLUDE: string[] = [
-    "src/**/*.ts",
-    "src/**/*.test.ts",
-];
+export const RECOMMENDED_TSCONFIG_INCLUDE: string[] = ["src/**/*.ts"];
+
+export const RECOMMENDED_TSCONFIG_DEV_INCLUDE = ["src/**/*.test.ts"];
+
+const changeAllTsToTsx = (strings: string[]): string[] => {
+    return strings.map((s) => s.replace(".ts", ".tsx"));
+};
 
 export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
     {
@@ -40,7 +43,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     tsconfigDev: {
         fileName: "tsconfig.json", // Shim for VSCode, dev file must be named this
         compilerOptions: {},
-        include: RECOMMENDED_TSCONFIG_INCLUDE,
+        include: RECOMMENDED_TSCONFIG_DEV_INCLUDE,
     },
 };
 
@@ -55,13 +58,12 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
                     jsx: TypeScriptJsxMode.REACT,
                     types: ["jest", "node", "@testing-library/jest-dom"],
                 },
-                include: ["src/**/*.ts", "src/**/*.tsx"],
+                include: [changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE)],
             },
             tsconfigDev: {
                 include: [
-                    ...RECOMMENDED_TSCONFIG_INCLUDE,
-                    "src/**/*.tsx",
-                    "src/**/*.test.tsx",
+                    ...RECOMMENDED_TSCONFIG_DEV_INCLUDE,
+                    changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
                 ],
             },
         },
@@ -80,7 +82,7 @@ export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
     eslintOptions: {
         dirs: [],
-        devdirs: ["src/**/*.test.ts"],
+        devdirs: RECOMMENDED_TSCONFIG_DEV_INCLUDE,
     },
 };
 
@@ -89,10 +91,10 @@ export const RECOMMENDED_ESLINT_CONFIG_REACT: Partial<TypeScriptProjectOptions> 
         ...RECOMMENDED_ESLINT_CONFIG,
         eslintOptions: {
             ...RECOMMENDED_ESLINT_CONFIG.eslintOptions,
-            dirs: ["src/**/*.tsx"],
+            dirs: changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE),
             devdirs: [
                 ...(RECOMMENDED_ESLINT_CONFIG.eslintOptions?.devdirs ?? []),
-                "src/**/*.test.tsx",
+                ...changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
             ],
         },
     };
