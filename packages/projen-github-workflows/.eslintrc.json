@@ -55,7 +55,10 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
-          "src/**/*.test.ts"
+          "src/**/__test__/**/*",
+          "src/**/__mocks__/**/*",
+          "src/**/*.test.ts",
+          "src/**/*.spec.ts"
         ],
         "optionalDependencies": false,
         "peerDependencies": true

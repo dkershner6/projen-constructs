@@ -15,9 +15,15 @@ import {
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
 
-export const RECOMMENDED_TSCONFIG_INCLUDE: string[] = ["src/**/*.ts"];
+export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
-export const RECOMMENDED_TSCONFIG_DEV_INCLUDE = ["src/**/*.test.ts"];
+const TEST_FILE_SUFFIXES = ["test", "spec"];
+
+export const DEV_FILE_PATTERNS = [
+    "src/**/__test__/**/*",
+    "src/**/__mocks__/**/*",
+    ...TEST_FILE_SUFFIXES.map((suffix) => `src/**/*.${suffix}.ts`),
+];
 
 const changeAllTsToTsx = (strings: string[]): string[] => {
     return strings.map((s) => s.replace(".ts", ".tsx"));
@@ -30,6 +36,7 @@ export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
         // Let lint handle these
         noUnusedLocals: false,
         noUnusedParameters: false,
+
         types: ["jest", "node"],
     };
 
@@ -43,7 +50,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     tsconfigDev: {
         fileName: "tsconfig.json", // Shim for VSCode, dev file must be named this
         compilerOptions: {},
-        include: RECOMMENDED_TSCONFIG_DEV_INCLUDE,
+        include: DEV_FILE_PATTERNS,
     },
 };
 
@@ -58,24 +65,25 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
                     jsx: TypeScriptJsxMode.REACT,
                     types: ["jest", "node", "@testing-library/jest-dom"],
                 },
-                include: [...changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE)],
+                include: [...changeAllTsToTsx(PUBLISH_FILE_PATTERNS)],
             },
             tsconfigDev: {
                 include: [
-                    ...RECOMMENDED_TSCONFIG_DEV_INCLUDE,
-                    ...changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
+                    ...DEV_FILE_PATTERNS,
+                    ...changeAllTsToTsx(DEV_FILE_PATTERNS),
                 ],
             },
         },
     ]);
 
-export const RECOMMENDED_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_NODE_20_PNPM_8: Partial<TypeScriptProjectOptions> = {
     minNodeVersion: "18.12.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
 
     packageManager: javascript.NodePackageManager.PNPM,
     pnpmVersion: "8",
+    projenrcTs: true,
 };
 
 export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
@@ -243,7 +251,7 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
         },
     });
 
-    for (const pattern of RECOMMENDED_TSCONFIG_DEV_INCLUDE) {
+    for (const pattern of DEV_FILE_PATTERNS) {
         project.eslint?.allowDevDeps(pattern);
     }
 
@@ -283,9 +291,7 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
 
         enactNode20ProjectConfig(this);
 
-        for (const pattern of changeAllTsToTsx(
-            RECOMMENDED_TSCONFIG_DEV_INCLUDE,
-        )) {
+        for (const pattern of changeAllTsToTsx(DEV_FILE_PATTERNS)) {
             this.eslint?.allowDevDeps(pattern);
         }
     }

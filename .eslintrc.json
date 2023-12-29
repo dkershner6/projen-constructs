@@ -56,7 +56,10 @@
       {
         "devDependencies": [
           "**/projects/**",
+          "src/**/__test__/**/*",
+          "src/**/__mocks__/**/*",
           "src/**/*.test.ts",
+          "src/**/*.spec.ts",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],

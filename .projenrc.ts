@@ -32,11 +32,9 @@ const dkershnerConfigsProject = new ProjenConstructTsLib(rootProject, {
     description: "DKershner's preferred configs for Projen projects.",
     devDeps: ["@types/clone-deep", "clone-deep"],
     peerDeps: ["clone-deep"],
-    eslintOptions: {
-        dirs: [],
-        devdirs: ["src"],
-    },
 });
+
+dkershnerConfigsProject.eslint?.allowDevDeps("**/src/**");
 
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
