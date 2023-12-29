@@ -30,8 +30,8 @@ const dkershnerConfigsProject = new ProjenConstructTsLib(rootProject, {
     npmAccess: NpmAccess.PUBLIC,
     keywords: ["projen", "configs", "config"],
     description: "DKershner's preferred configs for Projen projects.",
-    devDeps: ["@types/lodash.merge", "lodash.merge"],
-    peerDeps: ["lodash.merge"],
+    devDeps: ["@types/clone-deep", "clone-deep"],
+    peerDeps: ["clone-deep"],
     eslintOptions: {
         dirs: [],
         devdirs: ["src"],

@@ -24,7 +24,7 @@
     "synth-workspace": "pnpm exec projen"
   },
   "devDependencies": {
-    "@aws/pdk": "^0.22.47",
+    "@aws/pdk": "^0.22.48",
     "@types/jest": "^29.5.11",
     "@types/lodash.merge": "^4.6.9",
     "@types/node": "^18",
@@ -44,7 +44,7 @@
     "npm-check-updates": "^16.14.12",
     "nx": "16.0.0",
     "prettier": "^3.1.1",
-    "projen": "^0.78.2",
+    "projen": "^0.78.4",
     "syncpack": "^11.2.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
@@ -55,8 +55,8 @@
   },
   "dependencies": {
     "@aws-cdk/aws-cognito-identitypool-alpha": "latest",
-    "aws-cdk-lib": "^2.116.1",
-    "cdk-nag": "^2.27.222"
+    "aws-cdk-lib": "^2.117.0",
+    "cdk-nag": "^2.27.224"
   },
   "pnpm": {
     "overrides": {
@@ -73,9 +73,7 @@
   "license": "Apache-2.0",
   "version": "0.0.0",
   "jest": {
-    "globals": {
-      "ts-jest": null
-    },
+    "testEnvironment": "node",
     "transformIgnorePatterns": [
       "node_modules/(?!(@babel/runtime|@buildresonance/global-lib-storefront-shared-components|@buildresonance/global-lib-storefront-next-markdown|@mui*|.*separated-tokens|.*util-gfm.*|bail|ccount|character-entities.*|decode-named-character-reference|direction|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|stringify-entities|strip-markdown|trim-lines|trough|unified|unist.*|vfile.*|web-namespaces|zwitch|@panva/hkdf|jose|swiper|swiper/react|ssr-window|dom7|uuid)/)",
       "\\.pnp\\.[^\\/]+$"
@@ -112,7 +110,14 @@
         }
       ]
     ],
-    "preset": "ts-jest"
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.json"
+        }
+      ]
+    }
   },
   "types": "lib/index.d.ts",
   "private": true,
