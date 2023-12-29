@@ -78,7 +78,24 @@ export const RECOMMENDED_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
 
 export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
+    eslintOptions: {
+        dirs: [],
+        devdirs: ["src/**/*.test.ts"],
+    },
 };
+
+export const RECOMMENDED_ESLINT_CONFIG_REACT: Partial<TypeScriptProjectOptions> =
+    {
+        ...RECOMMENDED_ESLINT_CONFIG,
+        eslintOptions: {
+            ...RECOMMENDED_ESLINT_CONFIG.eslintOptions,
+            dirs: ["src/**/*.tsx"],
+            devdirs: [
+                ...(RECOMMENDED_ESLINT_CONFIG.eslintOptions?.devdirs ?? []),
+                "src/**/*.test.tsx",
+            ],
+        },
+    };
 
 const ESM_MODULES_TO_TRANSFORM = [
     "@babel/runtime",
@@ -159,6 +176,7 @@ export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
     "defaultReleaseBranch" | "name"
 > = deepMerge([
     deepClone(RECOMMENDED_NODE_20_PNPM_8),
+    RECOMMENDED_ESLINT_CONFIG,
     RECOMMENDED_JEST_CONFIG,
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
@@ -177,6 +195,7 @@ export const RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS: Omit<
 > = deepMerge([
     deepClone(RECOMMENDED_TSCONFIG_NODE_20_REACT),
     RECOMMENDED_NODE_20_PNPM_8,
+    RECOMMENDED_ESLINT_CONFIG_REACT,
     RECOMMENDED_JEST_CONFIG_REACT,
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
