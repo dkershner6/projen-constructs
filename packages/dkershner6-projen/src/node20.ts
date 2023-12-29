@@ -1,5 +1,5 @@
 import deepClone from "clone-deep";
-import { ProjectOptions, javascript } from "projen";
+import { ProjectOptions, TextFile, javascript } from "projen";
 import {
     AwsCdkConstructLibrary,
     AwsCdkConstructLibraryOptions,
@@ -145,12 +145,15 @@ export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     },
 };
 
+const JSDOM_FILE_PATH = ".jest/setup-jsdom.ts";
+
 export const RECOMMENDED_JEST_CONFIG_REACT: Partial<NodeProjectOptions> = {
     ...RECOMMENDED_JEST_CONFIG,
     jestOptions: {
         jestConfig: {
             ...RECOMMENDED_JEST_CONFIG.jestOptions?.jestConfig,
             testEnvironment: "jsdom",
+            setupFilesAfterEnv: [`<rootdir>/${JSDOM_FILE_PATH}`],
         },
     },
 };
@@ -294,6 +297,10 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         for (const pattern of changeAllTsToTsx(DEV_FILE_PATTERNS)) {
             this.eslint?.allowDevDeps(pattern);
         }
+
+        new TextFile(this, JSDOM_FILE_PATH, {
+            lines: ['import "@testing-library/jest-dom";'],
+        });
     }
 }
 
