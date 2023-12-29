@@ -53,8 +53,7 @@
       "error",
       {
         "devDependencies": [
-          "**/test/**",
-          "**/build-tools/**"
+          "**/src/**/*.test.ts/**"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
