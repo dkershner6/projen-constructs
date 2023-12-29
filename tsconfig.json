@@ -34,7 +34,7 @@
     "src/**/*.ts",
     "test/**/*.ts",
     "src/**/*.test.ts",
-    "src/**/*.test.ts/**/*.ts",
+    "projects/**/*.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],

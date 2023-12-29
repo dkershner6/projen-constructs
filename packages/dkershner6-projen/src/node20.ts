@@ -80,24 +80,7 @@ export const RECOMMENDED_NODE_20_PNPM_8: Partial<NodeProjectOptions> = {
 
 export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
-    eslintOptions: {
-        dirs: [],
-        devdirs: RECOMMENDED_TSCONFIG_DEV_INCLUDE,
-    },
 };
-
-export const RECOMMENDED_ESLINT_CONFIG_REACT: Partial<TypeScriptProjectOptions> =
-    {
-        ...RECOMMENDED_ESLINT_CONFIG,
-        eslintOptions: {
-            ...RECOMMENDED_ESLINT_CONFIG.eslintOptions,
-            dirs: changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE),
-            devdirs: [
-                ...(RECOMMENDED_ESLINT_CONFIG.eslintOptions?.devdirs ?? []),
-                ...changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
-            ],
-        },
-    };
 
 const ESM_MODULES_TO_TRANSFORM = [
     "@babel/runtime",
@@ -197,7 +180,7 @@ export const RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS: Omit<
 > = deepMerge([
     deepClone(RECOMMENDED_TSCONFIG_NODE_20_REACT),
     RECOMMENDED_NODE_20_PNPM_8,
-    RECOMMENDED_ESLINT_CONFIG_REACT,
+    RECOMMENDED_ESLINT_CONFIG,
     RECOMMENDED_JEST_CONFIG_REACT,
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
@@ -260,6 +243,10 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
         },
     });
 
+    for (const pattern of RECOMMENDED_TSCONFIG_DEV_INCLUDE) {
+        project.eslint?.allowDevDeps(pattern);
+    }
+
     // TypeScript
     if (!(project instanceof AwsCdkConstructLibrary)) {
         project.tsconfig?.addExclude("src/**/*.test.ts");
@@ -295,6 +282,12 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         );
 
         enactNode20ProjectConfig(this);
+
+        for (const pattern of changeAllTsToTsx(
+            RECOMMENDED_TSCONFIG_DEV_INCLUDE,
+        )) {
+            this.eslint?.allowDevDeps(pattern);
+        }
     }
 }
 
