@@ -311,6 +311,20 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             "plugin:jest-dom/recommended",
             "plugin:jsx-a11y/recommended",
         );
+        this.eslint?.addRules({
+            "react/prop-types": 0, // Disabled to prefer use of Typescript<Props>
+        });
+        if (this?.eslint?.config?.env) {
+            this.eslint.config.env.browser = true;
+            this.eslint.config.env.es6 = true;
+        }
+
+        if (this.eslint?.config?.settings) {
+            this.eslint.config.settings.react = {
+                pragma: "React",
+                version: "detect",
+            };
+        }
 
         new TextFile(this, JSDOM_FILE_PATH, {
             lines: ['import "@testing-library/jest-dom";'],
