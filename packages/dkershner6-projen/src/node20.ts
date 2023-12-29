@@ -132,6 +132,8 @@ const ESM_MODULES_TO_TRANSFORM = [
     "uuid",
 ];
 
+const JEST_ROOTDIR = "<rootDir>";
+
 export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     jest: true,
     jestOptions: {
@@ -153,7 +155,7 @@ export const RECOMMENDED_JEST_CONFIG_REACT: Partial<NodeProjectOptions> = {
         jestConfig: {
             ...RECOMMENDED_JEST_CONFIG.jestOptions?.jestConfig,
             testEnvironment: "jsdom",
-            setupFilesAfterEnv: [`<rootdir>/${JSDOM_FILE_PATH}`],
+            setupFilesAfterEnv: [`${JEST_ROOTDIR}/${JSDOM_FILE_PATH}`],
         },
     },
 };
