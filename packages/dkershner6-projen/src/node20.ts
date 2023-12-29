@@ -58,12 +58,12 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
                     jsx: TypeScriptJsxMode.REACT,
                     types: ["jest", "node", "@testing-library/jest-dom"],
                 },
-                include: [changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE)],
+                include: [...changeAllTsToTsx(RECOMMENDED_TSCONFIG_INCLUDE)],
             },
             tsconfigDev: {
                 include: [
                     ...RECOMMENDED_TSCONFIG_DEV_INCLUDE,
-                    changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
+                    ...changeAllTsToTsx(RECOMMENDED_TSCONFIG_DEV_INCLUDE),
                 ],
             },
         },
