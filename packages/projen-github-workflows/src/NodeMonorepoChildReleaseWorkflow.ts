@@ -128,6 +128,13 @@ export class NodeMonorepoChildReleaseWorkflow {
                     workingDirectory: `.`, // Important to run in the root project
                 },
                 {
+                    name: "Install dependencies",
+                    run: this.rootMonorepoProject.runTaskCommand(
+                        this.rootMonorepoProject.buildTask,
+                    ),
+                    workingDirectory: `.`, // Important to run in the root project
+                },
+                {
                     name: "Release",
                     run: "npm run release",
                 },
