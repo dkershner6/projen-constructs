@@ -86,6 +86,7 @@ export const RECOMMENDED_NODE_20_PNPM_8: Partial<TypeScriptProjectOptions> = {
     packageManager: javascript.NodePackageManager.PNPM,
     pnpmVersion: "8",
     projenrcTs: true,
+    sampleCode: false,
 };
 
 export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
