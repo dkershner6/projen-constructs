@@ -36,6 +36,8 @@ export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
         // Let lint handle these
         noUnusedLocals: false,
         noUnusedParameters: false,
+        // We don't want to be responsible for external libs errors, change this if TS ever allows checking OUR declaration files but not node_modules
+        skipLibCheck: true,
 
         types: ["jest", "node"],
     };
