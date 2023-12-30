@@ -2,8 +2,8 @@ import { TextFile } from "projen";
 import { NpmAccess } from "projen/lib/javascript";
 import { Nvmrc } from "./packages/projen-nvm/src";
 import { VsCodeWorkspaces } from "./packages/projen-vscode-workspaces/src";
-import { ProjenConstructTsLib } from "./projects/common/ProjenConstructTsLib";
-import { RootMonorepo } from "./projects/rootMonorepo";
+import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";
+import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
 

@@ -5,8 +5,6 @@ import {
     enactNode20ProjectConfig,
 } from "../packages/dkershner6-projen/src/node20";
 
-const ADDITIONAL_DEV_DIRS = ["projects"];
-
 export class RootMonorepo extends monorepo.MonorepoTsProject {
     constructor() {
         super(
@@ -26,20 +24,11 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
                     projenrcTs: true,
                     github: true,
 
-                    eslintOptions: {
-                        dirs: [],
-                        devdirs: ADDITIONAL_DEV_DIRS,
-                    },
-
                     workflowPackageCache: true,
                 },
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),
         );
-
-        for (const devDir of ADDITIONAL_DEV_DIRS) {
-            this.tsconfigDev?.addInclude(`${devDir}/**/*.ts`);
-        }
 
         const defaultTask = this.tasks.tryFind("default");
         if (defaultTask) {
