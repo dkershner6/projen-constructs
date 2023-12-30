@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
         working-directory: .
-      - name: Install dependencies
+      - name: Build all Packages
         run: pnpm exec projen build
         working-directory: .
       - name: Release
