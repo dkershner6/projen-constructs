@@ -39,11 +39,7 @@
     }
   },
   "ignorePatterns": [
-    "*.js",
-    "*.d.ts",
-    "node_modules/",
-    "*.generated.ts",
-    "coverage",
+    "packages/**/*.*",
     "!.projenrc.ts",
     "!projenrc/**/*.ts"
   ],
@@ -55,7 +51,8 @@
       "error",
       {
         "devDependencies": [
-          "**/projects/**",
+          "**/test/**",
+          "**/build-tools/**",
           "src/**/__test__/**/*",
           "src/**/__mocks__/**/*",
           "src/**/*.test.ts",
