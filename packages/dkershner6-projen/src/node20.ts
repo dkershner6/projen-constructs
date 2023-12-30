@@ -345,8 +345,12 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         );
         this.eslint?.addOverride({
             files: [
-                "**/__tests__/**/*.[jt]sx?",
-                "**/?(*.)+(spec|test).[jt]sx?",
+                "**/__test__/**/*.[jt]s",
+                "**/__test__/**/*.[jt]sx",
+                "*.spec.[jt]s",
+                "*.test.[jt]s",
+                "*.spec.[jt]sx",
+                "*.test.[jt]sx",
             ],
             plugins: ["jest-dom", "testing-library"],
             extends: [
