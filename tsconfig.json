@@ -37,7 +37,6 @@
     "src/**/__mocks__/**/*",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
-    "projects/**/*.ts",
     ".projenrc.ts",
     "projenrc/**/*.ts"
   ],
