@@ -2,7 +2,7 @@ import merge from "lodash.merge";
 import { TextFile } from "projen";
 
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
-import { Node20TypeScriptProject } from "../../packages/dkershner6-projen/src/node20";
+import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
 import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 

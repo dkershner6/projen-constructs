@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { TextFile } from "projen";
 import { NpmAccess } from "projen/lib/javascript";
 import { Nvmrc } from "./packages/projen-nvm/src";
@@ -25,22 +26,60 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
     description: "Helpers for Projen projects that use VSCode workspaces.",
 });
 
-const dkershnerConfigsProject = new ProjenConstructTsLib(rootProject, {
-    name: "dkershner6-projen",
+const dkershnerTypescriptConfigsProject = new ProjenConstructTsLib(
+    rootProject,
+    {
+        name: "dkershner6-projen-typescript",
+        release: false,
+        github: false,
+        keywords: ["projen", "typescript", "ts", "config", "configs"],
+        description:
+            "DKershner's preferred configs for Projen TypeScript projects.",
+        devDeps: ["@types/clone-deep", "clone-deep"],
+        peerDeps: ["clone-deep"],
+    },
+);
+
+const dkershnerConstructsProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-react",
     npmAccess: NpmAccess.PUBLIC,
-    keywords: ["projen", "configs", "config"],
-    description: "DKershner's preferred configs for Projen projects.",
-    devDeps: ["@types/clone-deep", "clone-deep"],
-    peerDeps: ["clone-deep"],
+    keywords: ["projen", "configs", "config", "constructs", "construct"],
+    description: "DKershner's preferred constructs for Projen projects.",
+    devDeps: [
+        "@types/clone-deep",
+        "clone-deep",
+        "dkershner6-projen-typescript@0.0.0",
+    ],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript"],
 });
 
-dkershnerConfigsProject.eslint?.allowDevDeps("**/src/**");
+const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-github-actions",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: ["projen", "github", "actions", "action"],
+    description: "DKershner's preferred GitHub Actions for Projen projects.",
+    devDeps: [
+        "@types/clone-deep",
+        "clone-deep",
+        "dkershner6-projen-typescript@0.0.0",
+        "projen-github-action-typescript",
+    ],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript",
+        "projen-github-action-typescript",
+    ],
+});
+
+dkershnerConstructsProject.eslint?.allowDevDeps("**/src/**");
 
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
     nvmProject,
     vsCodeWorkspacesProject,
-    dkershnerConfigsProject,
+    dkershnerTypescriptConfigsProject,
+    dkershnerConstructsProject,
+    dkershnerGithubActionProject,
 ];
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.

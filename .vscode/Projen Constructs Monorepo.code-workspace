@@ -22,8 +22,16 @@
       "path": "../packages/projen-vscode-workspaces"
     },
     {
-      "name": "(Lib) dkershner6-projen",
-      "path": "../packages/dkershner6-projen"
+      "name": "(Lib) dkershner6-typescript",
+      "path": "../packages/dkershner6-projen-typescript"
+    },
+    {
+      "name": "(Lib) dkershner6-react",
+      "path": "../packages/dkershner6-projen-react"
+    },
+    {
+      "name": "(Lib) dkershner6-github-actions",
+      "path": "../packages/dkershner6-projen-github-actions"
     }
   ],
   "settings": {
@@ -31,7 +39,9 @@
       "./packages/projen-github-workflows",
       "./packages/projen-nvm",
       "./packages/projen-vscode-workspaces",
-      "./packages/dkershner6-projen"
+      "./packages/dkershner6-projen-typescript",
+      "./packages/dkershner6-projen-react",
+      "./packages/dkershner6-projen-github-actions"
     ],
     "jest.disabledWorkspaceFolders": [
       "projen-constructs"
