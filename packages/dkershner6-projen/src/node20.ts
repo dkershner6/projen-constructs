@@ -224,6 +224,9 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     project.addDevDeps("eslint-plugin-jest", "eslint-plugin-sonarjs");
     project.eslint?.addPlugins("jest", "sonarjs");
     project.eslint?.addExtends(
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:jest/recommended",
         "plugin:sonarjs/recommended",
     );

@@ -20,6 +20,9 @@
   "extends": [
     "plugin:import/typescript",
     "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "plugin:sonarjs/recommended"
   ],
