@@ -69,7 +69,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
             },
             tsconfigDev: {
                 include: [
-                    new Set([
+                    ...new Set([
                         ...DEV_FILE_PATTERNS,
                         ...changeAllTsToTsx(DEV_FILE_PATTERNS),
                     ]),
@@ -315,17 +315,9 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         this.addDevDeps(
             "eslint-plugin-react",
             "eslint-plugin-react-hooks",
-            "eslint-plugin-jest-dom",
             "eslint-plugin-jsx-a11y",
-            "eslint-plugin-testing-library",
         );
-        this.eslint?.addPlugins(
-            "react",
-            "react-hooks",
-            "jest-dom",
-            "jsx-a11y",
-            "testing-library",
-        );
+        this.eslint?.addPlugins("react", "react-hooks", "jsx-a11y");
         this.eslint?.addExtends(
             "plugin:react/recommended",
             "plugin:react-hooks/recommended",
