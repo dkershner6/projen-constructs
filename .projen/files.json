@@ -10,7 +10,6 @@
     ".github/workflows/release projen-github-workflows.yml",
     ".github/workflows/release projen-nvm.yml",
     ".github/workflows/release projen-vscode-workspaces.yml",
-    ".github/workflows/upgrade.yml",
     ".gitignore",
     ".mergify.yml",
     ".npmignore",

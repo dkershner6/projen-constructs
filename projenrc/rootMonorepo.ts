@@ -25,6 +25,9 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
                     github: true,
 
                     workflowPackageCache: true,
+                    depsUpgradeOptions: {
+                        workflow: false,
+                    },
                 },
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),
@@ -33,11 +36,6 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
         const defaultTask = this.tasks.tryFind("default");
         if (defaultTask) {
             this.tasks.tryFind("build")?.prependSpawn(defaultTask);
-        }
-
-        const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
-        if (upgradeDepsTask) {
-            this.tasks.tryFind("post-upgrade")?.spawn(upgradeDepsTask);
         }
 
         enactNode20ProjectConfig(this);
