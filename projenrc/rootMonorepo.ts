@@ -3,7 +3,7 @@ import merge from "lodash.merge";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     enactNode20ProjectConfig,
-} from "../packages/dkershner6-projen/src/node20";
+} from "../packages/dkershner6-projen-typescript/src";
 
 export class RootMonorepo extends monorepo.MonorepoTsProject {
     constructor() {
