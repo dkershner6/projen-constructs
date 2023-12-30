@@ -54,7 +54,7 @@ new VsCodeWorkspaces(rootProject, {
         }
 
         if (project instanceof ProjenConstructTsLib) {
-            return `(Lib) ${project.name.replace("projen-", "")}`;
+            return `(Lib) ${project?.name.replace("projen-", "")}`;
         }
 
         throw new Error("Unknown project type");

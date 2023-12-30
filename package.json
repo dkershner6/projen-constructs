@@ -44,7 +44,7 @@
     "npm-check-updates": "^16.14.12",
     "nx": "16.0.0",
     "prettier": "^3.1.1",
-    "projen": "^0.78.4",
+    "projen": "^0.78.5",
     "syncpack": "^11.2.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
@@ -56,7 +56,7 @@
   "dependencies": {
     "@aws-cdk/aws-cognito-identitypool-alpha": "latest",
     "aws-cdk-lib": "^2.117.0",
-    "cdk-nag": "^2.27.224"
+    "cdk-nag": "^2.27.226"
   },
   "pnpm": {
     "overrides": {

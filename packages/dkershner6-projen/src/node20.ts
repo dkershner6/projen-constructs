@@ -265,6 +265,8 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     // TypeScript
     if (!(project instanceof AwsCdkConstructLibrary)) {
         project.tsconfig?.addExclude("src/**/*.test.ts");
+        project.tsconfig?.addExclude("src/**/*.spec.ts");
+        project.tsconfig?.addExclude("src/**/__test__/**/*");
 
         project.tasks
             .tryFind("compile")
@@ -374,6 +376,9 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
                 'import "jest-axe/extend-expect";',
             ],
         });
+
+        this.tsconfig?.addExclude("src/**/*.test.tsx");
+        this.tsconfig?.addExclude("src/**/*.spec.tsx");
     }
 }
 
