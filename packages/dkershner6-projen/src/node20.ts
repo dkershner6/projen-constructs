@@ -69,8 +69,10 @@ export const RECOMMENDED_TSCONFIG_NODE_20_REACT: Partial<TypeScriptProjectOption
             },
             tsconfigDev: {
                 include: [
-                    ...DEV_FILE_PATTERNS,
-                    ...changeAllTsToTsx(DEV_FILE_PATTERNS),
+                    new Set([
+                        ...DEV_FILE_PATTERNS,
+                        ...changeAllTsToTsx(DEV_FILE_PATTERNS),
+                    ]),
                 ],
             },
         },
@@ -147,7 +149,7 @@ export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     },
 };
 
-const JSDOM_FILE_PATH = ".jest/setup-jsdom.ts";
+const EXTEND_EXPECT_FILE_PATH = ".jest/setup-extend-expect.ts";
 
 export const RECOMMENDED_JEST_CONFIG_REACT: Partial<NodeProjectOptions> = {
     ...RECOMMENDED_JEST_CONFIG,
@@ -155,7 +157,7 @@ export const RECOMMENDED_JEST_CONFIG_REACT: Partial<NodeProjectOptions> = {
         jestConfig: {
             ...RECOMMENDED_JEST_CONFIG.jestOptions?.jestConfig,
             testEnvironment: "jsdom",
-            setupFilesAfterEnv: [`${JEST_ROOTDIR}/${JSDOM_FILE_PATH}`],
+            setupFilesAfterEnv: [`${JEST_ROOTDIR}/${EXTEND_EXPECT_FILE_PATH}`],
         },
     },
 };
@@ -296,6 +298,16 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
 
         enactNode20ProjectConfig(this);
 
+        // React
+        this.addDevDeps(
+            "@types/react",
+            "@types/react-dom",
+            "react",
+            "react-dom",
+        );
+        this.addPeerDeps("react", "react-dom");
+
+        // Eslint
         for (const pattern of changeAllTsToTsx(DEV_FILE_PATTERNS)) {
             this.eslint?.allowDevDeps(pattern);
         }
@@ -305,12 +317,18 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             "eslint-plugin-react-hooks",
             "eslint-plugin-jest-dom",
             "eslint-plugin-jsx-a11y",
+            "eslint-plugin-testing-library",
         );
-        this.eslint?.addPlugins("react", "react-hooks", "jest-dom", "jsx-a11y");
+        this.eslint?.addPlugins(
+            "react",
+            "react-hooks",
+            "jest-dom",
+            "jsx-a11y",
+            "testing-library",
+        );
         this.eslint?.addExtends(
             "plugin:react/recommended",
             "plugin:react-hooks/recommended",
-            "plugin:jest-dom/recommended",
             "plugin:jsx-a11y/recommended",
         );
         this.eslint?.addRules({
@@ -328,8 +346,33 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             };
         }
 
-        new TextFile(this, JSDOM_FILE_PATH, {
-            lines: ['import "@testing-library/jest-dom";'],
+        // Test files
+        this.eslint?.addOverride({
+            files: [
+                "**/__tests__/**/*.[jt]sx?",
+                "**/?(*.)+(spec|test).[jt]sx?",
+            ],
+            plugins: ["jest-dom", "testing-library"],
+            extends: [
+                "plugin:testing-library/react",
+                "plugin:jest-dom/recommended",
+            ],
+        });
+
+        // Jest
+        this.addDevDeps(
+            "@testing-library/jest-dom",
+            "@testing-library/react",
+            "@testing-library/user-event",
+            "jest-axe",
+        );
+
+        new TextFile(this, EXTEND_EXPECT_FILE_PATH, {
+            lines: [
+                "// Global extensions of expect",
+                'import "@testing-library/jest-dom";',
+                'import "jest-axe/extend-expect";',
+            ],
         });
     }
 }
