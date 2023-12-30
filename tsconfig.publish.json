@@ -37,6 +37,7 @@
   "exclude": [
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
-    "src/**/__test__/**/*"
+    "**/__tests__/**/*",
+    "**/__mocks__/**/*"
   ]
 }

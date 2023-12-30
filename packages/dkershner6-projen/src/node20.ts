@@ -18,10 +18,10 @@ import { deepMerge } from "projen/lib/util";
 export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
 const TEST_FILE_SUFFIXES = ["test", "spec"];
+const TEST_FOLDERS = ["__tests__", "__mocks__"];
 
 export const DEV_FILE_PATTERNS = [
-    "src/**/__test__/**/*",
-    "src/**/__mocks__/**/*",
+    ...TEST_FOLDERS.map((folder) => `src/**/${folder}/**/*`),
     ...TEST_FILE_SUFFIXES.map((suffix) => `src/**/*.${suffix}.ts`),
 ];
 
@@ -264,9 +264,12 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
 
     // TypeScript
     if (!(project instanceof AwsCdkConstructLibrary)) {
-        project.tsconfig?.addExclude("src/**/*.test.ts");
-        project.tsconfig?.addExclude("src/**/*.spec.ts");
-        project.tsconfig?.addExclude("src/**/__test__/**/*");
+        for (const suffix of TEST_FILE_SUFFIXES) {
+            project.tsconfig?.addExclude(`src/**/*.${suffix}.ts`);
+        }
+        for (const folder of TEST_FOLDERS) {
+            project.tsconfig?.addExclude(`**/${folder}/**/*`);
+        }
 
         project.tasks
             .tryFind("compile")
@@ -345,14 +348,16 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             "eslint-plugin-jest-dom",
             "eslint-plugin-testing-library",
         );
+        const jtsFiles = [
+            ...TEST_FOLDERS.map((folder) => `**/${folder}/**/*.[jt]s`),
+            ...TEST_FILE_SUFFIXES.map((suffix) => `*.${suffix}.[jt]s`),
+        ];
         this.eslint?.addOverride({
             files: [
-                "**/__test__/**/*.[jt]s",
-                "**/__test__/**/*.[jt]sx",
-                "*.spec.[jt]s",
-                "*.test.[jt]s",
-                "*.spec.[jt]sx",
-                "*.test.[jt]sx",
+                ...jtsFiles,
+                ...jtsFiles.map((pattern) =>
+                    pattern.replace(".[jt]s", ".[jt]sx"),
+                ),
             ],
             plugins: ["jest-dom", "testing-library"],
             extends: [
@@ -367,6 +372,7 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             "@testing-library/react",
             "@testing-library/user-event",
             "jest-axe",
+            "jest-environment-jsdom",
         );
 
         new TextFile(this, EXTEND_EXPECT_FILE_PATH, {
@@ -377,8 +383,9 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             ],
         });
 
-        this.tsconfig?.addExclude("src/**/*.test.tsx");
-        this.tsconfig?.addExclude("src/**/*.spec.tsx");
+        for (const suffix of TEST_FILE_SUFFIXES) {
+            this.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
+        }
     }
 }
 
