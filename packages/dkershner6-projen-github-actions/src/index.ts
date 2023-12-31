@@ -11,16 +11,23 @@ import {
     RunsUsing,
 } from "projen-github-action-typescript";
 
+export const RECOMMENDED_GITHUB_ACTION_OPTIONS: Omit<
+    GitHubActionTypeScriptOptions,
+    "defaultReleaseBranch" | "name"
+> = {
+    actionMetadata: {
+        runs: {
+            using: RunsUsing.NODE_20,
+            main: "dist/index.js",
+        },
+    },
+};
+
 export class Node20GitHubActionTypescriptProject extends GitHubActionTypeScriptProject {
     constructor(options: GitHubActionTypeScriptOptions) {
         const combinedOptions = deepMerge([
             deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
-            {
-                runs: {
-                    using: RunsUsing.NODE_20,
-                    main: "dist/index.js",
-                },
-            },
+            RECOMMENDED_GITHUB_ACTION_OPTIONS,
             options,
         ]) as GitHubActionTypeScriptOptions;
 
