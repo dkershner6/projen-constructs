@@ -114,6 +114,20 @@
         "cwd": "packages/projen-vscode-workspaces"
       }
     },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen ci",
+        "cwd": "packages/projen-vscode-workspaces"
+      }
+    },
+    "i": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen i",
+        "cwd": "packages/projen-vscode-workspaces"
+      }
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {

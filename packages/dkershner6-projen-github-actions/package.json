@@ -4,10 +4,12 @@
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
+    "ci": "npx projen ci",
     "compile": "npx projen compile",
     "default": "npx projen default",
     "docgen": "npx projen docgen",
     "eslint": "npx projen eslint",
+    "i": "npx projen i",
     "lint": "npx projen lint",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",

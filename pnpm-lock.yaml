@@ -24,8 +24,11 @@ importers:
         version: 2.27.226(aws-cdk-lib@2.117.0)(constructs@10.3.0)
     devDependencies:
       '@aws/pdk':
-        specifier: ^0.22.48
+        specifier: ^0
         version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.117.0)(cdk-nag@2.27.226)(constructs@10.3.0)(projen@0.78.5)(typescript@5.3.3)
+      '@types/clone-deep':
+        specifier: ^4.0.4
+        version: 4.0.4
       '@types/jest':
         specifier: ^29.5.11
         version: 29.5.11
@@ -41,6 +44,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^6
         version: 6.16.0(eslint@8.56.0)(typescript@5.3.3)
+      clone-deep:
+        specifier: ^4.0.1
+        version: 4.0.1
       constructs:
         specifier: ^10.0.0
         version: 10.3.0

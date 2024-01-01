@@ -13,6 +13,14 @@
         }
       ]
     },
+    "ci": {
+      "name": "ci",
+      "steps": [
+        {
+          "spawn": "install:ci"
+        }
+      ]
+    },
     "clobber": {
       "name": "clobber",
       "description": "hard resets to HEAD of origin and cleans the local repo",
@@ -81,7 +89,10 @@
       "steps": [
         {
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "receiveArgs": true,
+          "args": [
+            "--max-warnings 0"
+          ]
         }
       ]
     },
@@ -92,6 +103,14 @@
         {
           "exec": "pnpm exec nx graph",
           "receiveArgs": true
+        }
+      ]
+    },
+    "i": {
+      "name": "i",
+      "steps": [
+        {
+          "spawn": "install"
         }
       ]
     },
@@ -201,13 +220,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,lodash.merge,npm-check-updates,nx,prettier,projen,syncpack,ts-jest,ts-node,typescript,aws-cdk-lib,cdk-nag"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@types/clone-deep,@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,lodash.merge,npm-check-updates,nx,prettier,projen,syncpack,ts-jest,ts-node,typescript,aws-cdk-lib,cdk-nag"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx prettier projen syncpack ts-jest ts-node typescript aws-cdk-lib cdk-nag"
+          "exec": "pnpm update @aws/pdk @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx prettier projen syncpack ts-jest ts-node typescript aws-cdk-lib cdk-nag"
         },
         {
           "exec": "pnpm exec projen"

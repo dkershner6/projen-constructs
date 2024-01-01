@@ -38,6 +38,14 @@
       ],
       "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
     },
+    "ci": {
+      "name": "ci",
+      "steps": [
+        {
+          "spawn": "install:ci"
+        }
+      ]
+    },
     "compile": {
       "name": "compile",
       "description": "Only compile",
@@ -65,7 +73,18 @@
       "description": "Runs eslint against the codebase",
       "steps": [
         {
-          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings 0 src test build-tools"
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern src test build-tools",
+          "args": [
+            "--max-warnings 0"
+          ]
+        }
+      ]
+    },
+    "i": {
+      "name": "i",
+      "steps": [
+        {
+          "spawn": "install"
         }
       ]
     },

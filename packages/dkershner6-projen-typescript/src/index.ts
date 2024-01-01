@@ -50,15 +50,20 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
-export const RECOMMENDED_NODE_20_PNPM_8: Partial<TypeScriptProjectOptions> = {
+export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
     minNodeVersion: "18.12.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
 
-    packageManager: javascript.NodePackageManager.PNPM,
-    pnpmVersion: "8",
     projenrcTs: true,
     sampleCode: false,
+
+    devDeps: ["@types/clone-deep", "clone-deep"],
+};
+
+export const RECOMMENDED_PNPM_8: Partial<TypeScriptProjectOptions> = {
+    packageManager: javascript.NodePackageManager.PNPM,
+    pnpmVersion: "8",
 };
 
 export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
@@ -132,7 +137,7 @@ export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
 > = deepMerge([
-    deepClone(RECOMMENDED_NODE_20_PNPM_8),
+    deepClone(RECOMMENDED_NODE_20),
     RECOMMENDED_ESLINT_CONFIG,
     RECOMMENDED_JEST_CONFIG,
     RECOMMENDED_PRETTIER_CONFIG,
@@ -143,20 +148,25 @@ export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     "defaultReleaseBranch" | "name"
 > = deepMerge([
     deepClone(RECOMMENDED_TSCONFIG_NODE_20),
+    RECOMMENDED_PNPM_8,
     RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
 ]);
 
 export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
+    // Install
+    project.addTask("ci").spawn(project.package.installCiTask);
+    project.addTask("i").spawn(project.package.installTask);
+
     // Eslint
-    const lintTask = project.tasks.tryFind("eslint");
+    const lintTask = project.eslint?.eslintTask;
     if (lintTask) {
-        const currentLintCommand = lintTask.steps[0].exec;
-        lintTask.reset(
-            currentLintCommand?.replace(
-                "--no-error-on-unmatched-pattern",
-                "--no-error-on-unmatched-pattern --max-warnings 0", // Strict linting
-            ),
-        );
+        const currentLintCommand = lintTask.steps[0];
+        if (currentLintCommand?.args) {
+            currentLintCommand.args?.push("--max-warnings 0"); // Strict linting
+        } else {
+            // @ts-expect-error - Violating read-only
+            currentLintCommand.args = ["--max-warnings 0"]; // Strict linting
+        }
 
         const altLintTask = project.addTask("lint", {
             description: "Alternate lint command",
