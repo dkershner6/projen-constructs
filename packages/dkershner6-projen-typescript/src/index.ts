@@ -1,5 +1,5 @@
 import deepClone from "clone-deep";
-import { javascript, ProjectOptions } from "projen";
+import { javascript, ProjectOptions, Task } from "projen";
 import {
     AwsCdkConstructLibrary,
     AwsCdkConstructLibraryOptions,
@@ -158,20 +158,20 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
     project.addTask("i").spawn(project.package.installTask);
 
     // Eslint
+    const maxWarningsZeroArg = "--max-warnings=0";
     const lintTask = project.eslint?.eslintTask;
+    let strictLintTask: Task | undefined;
     if (lintTask) {
-        const currentLintCommand = lintTask.steps[0];
-        if (currentLintCommand?.args) {
-            currentLintCommand.args?.push("--max-warnings 0"); // Strict linting
-        } else {
-            // @ts-expect-error - Violating read-only
-            currentLintCommand.args = ["--max-warnings 0"]; // Strict linting
-        }
-
-        const altLintTask = project.addTask("lint", {
-            description: "Alternate lint command",
+        strictLintTask = project.addTask("eslint-strict", {
+            description: "Stricter Lint Command",
         });
-        altLintTask.spawn(lintTask);
+        strictLintTask.spawn(lintTask, { args: [maxWarningsZeroArg] });
+
+        project
+            .addTask("lint", {
+                description: "Alternate strict lint command",
+            })
+            .spawn(strictLintTask);
     }
 
     project.addDevDeps("eslint-plugin-jest", "eslint-plugin-sonarjs");
@@ -187,6 +187,25 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
         "no-console": ["warn", { allow: ["debug", "info", "warn", "error"] }],
         "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
         "import/namespace": "off",
+        "import/order": [
+            "error",
+            {
+                groups: ["builtin", "external", "parent", "sibling", "index"],
+                "newlines-between": "always",
+                pathGroups: [
+                    {
+                        pattern: "react",
+                        group: "external",
+                        position: "before",
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ["react"],
+                alphabetize: {
+                    order: "asc",
+                    caseInsensitive: true,
+                },
+            },
+        ],
         "sonarjs/no-redundant-jump": "off",
         "sonarjs/no-small-switch": "warn",
         "@typescript-eslint/explicit-function-return-type": [
@@ -235,7 +254,19 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
             ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
     }
 
-    project.tasks.addTask("type-check").exec("tsc --noEmit");
+    const typeCheckTask = project.tasks.addTask("type-check");
+    typeCheckTask.exec("tsc --noEmit");
+
+    const originalTestTaskStep = project.testTask.steps[0];
+    const { exec, ...restOfTestTaskStep } = originalTestTaskStep;
+    if (strictLintTask) {
+        const unitTestTask = project.addTask("test-unit");
+        unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
+
+        project.testTask.reset();
+        project.testTask.spawn(strictLintTask);
+        project.testTask.spawn(unitTestTask);
+    }
 };
 
 export class Node20TypeScriptProject extends TypeScriptProject {
