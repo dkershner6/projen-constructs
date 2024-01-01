@@ -89,9 +89,18 @@
       "steps": [
         {
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
-          "receiveArgs": true,
+          "receiveArgs": true
+        }
+      ]
+    },
+    "eslint-strict": {
+      "name": "eslint-strict",
+      "description": "Stricter Lint Command",
+      "steps": [
+        {
+          "spawn": "eslint",
           "args": [
-            "--max-warnings 0"
+            "--max-warnings=0"
           ]
         }
       ]
@@ -134,10 +143,10 @@
     },
     "lint": {
       "name": "lint",
-      "description": "Alternate lint command",
+      "description": "Alternate strict lint command",
       "steps": [
         {
-          "spawn": "eslint"
+          "spawn": "eslint-strict"
         }
       ]
     },
@@ -188,6 +197,17 @@
     "test": {
       "name": "test",
       "description": "Run tests for all affected projects",
+      "steps": [
+        {
+          "spawn": "eslint-strict"
+        },
+        {
+          "spawn": "test-unit"
+        }
+      ]
+    },
+    "test-unit": {
+      "name": "test-unit",
       "steps": [
         {
           "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",

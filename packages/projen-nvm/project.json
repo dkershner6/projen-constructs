@@ -128,6 +128,13 @@
         "cwd": "packages/projen-nvm"
       }
     },
+    "eslint-strict": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen eslint-strict",
+        "cwd": "packages/projen-nvm"
+      }
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
@@ -139,6 +146,13 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm exec projen type-check",
+        "cwd": "packages/projen-nvm"
+      }
+    },
+    "test-unit": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen test-unit",
         "cwd": "packages/projen-nvm"
       }
     }

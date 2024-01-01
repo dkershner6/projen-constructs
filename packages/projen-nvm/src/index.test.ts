@@ -1,4 +1,5 @@
 import { NodeProject } from "projen/lib/javascript";
+
 import { Nvmrc } from ".";
 
 describe("Nvmrc", () => {
