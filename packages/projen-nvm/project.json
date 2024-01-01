@@ -114,6 +114,20 @@
         "cwd": "packages/projen-nvm"
       }
     },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen ci",
+        "cwd": "packages/projen-nvm"
+      }
+    },
+    "i": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen i",
+        "cwd": "packages/projen-nvm"
+      }
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {

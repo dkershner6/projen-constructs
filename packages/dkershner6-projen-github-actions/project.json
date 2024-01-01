@@ -114,6 +114,20 @@
         "cwd": "packages/dkershner6-projen-github-actions"
       }
     },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen ci",
+        "cwd": "packages/dkershner6-projen-github-actions"
+      }
+    },
+    "i": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen i",
+        "cwd": "packages/dkershner6-projen-github-actions"
+      }
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {

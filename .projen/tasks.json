@@ -13,6 +13,14 @@
         }
       ]
     },
+    "ci": {
+      "name": "ci",
+      "steps": [
+        {
+          "spawn": "install:ci"
+        }
+      ]
+    },
     "clobber": {
       "name": "clobber",
       "description": "hard resets to HEAD of origin and cleans the local repo",
@@ -81,7 +89,10 @@
       "steps": [
         {
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "receiveArgs": true,
+          "args": [
+            "--max-warnings 0"
+          ]
         }
       ]
     },
@@ -92,6 +103,14 @@
         {
           "exec": "pnpm exec nx graph",
           "receiveArgs": true
+        }
+      ]
+    },
+    "i": {
+      "name": "i",
+      "steps": [
+        {
+          "spawn": "install"
         }
       ]
     },

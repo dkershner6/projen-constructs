@@ -114,6 +114,20 @@
         "cwd": "packages/dkershner6-projen-react"
       }
     },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen ci",
+        "cwd": "packages/dkershner6-projen-react"
+      }
+    },
+    "i": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen i",
+        "cwd": "packages/dkershner6-projen-react"
+      }
+    },
     "lint": {
       "executor": "nx:run-commands",
       "options": {
