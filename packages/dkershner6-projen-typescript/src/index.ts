@@ -1,5 +1,5 @@
 import deepClone from "clone-deep";
-import { javascript, ProjectOptions, Task } from "projen";
+import { Component, javascript, ProjectOptions } from "projen";
 import {
     AwsCdkConstructLibrary,
     AwsCdkConstructLibraryOptions,
@@ -150,129 +150,162 @@ export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
 ]);
 
-export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
-    // DevDeps (doesnt work in config)
-    project.addDevDeps("@types/clone-deep", "clone-deep");
+export class DKBugFixes extends Component {
+    constructor(project: TypeScriptProject) {
+        super(project);
 
-    // Install
-    project.addTask("ci").spawn(project.package.installCiTask);
-    project.addTask("i").spawn(project.package.installTask);
+        // DevDeps (doesnt work in config)
+        project.addDevDeps("@types/clone-deep", "clone-deep");
 
-    // Eslint
-    const maxWarningsZeroArg = "--max-warnings=0";
-    const lintTask = project.eslint?.eslintTask;
-    let strictLintTask: Task | undefined;
-    if (lintTask) {
-        strictLintTask = project.addTask("eslint-strict", {
-            description: "Stricter Lint Command",
-        });
-        strictLintTask.spawn(lintTask, { args: [maxWarningsZeroArg] });
+        // TypeScript
+        if (!(project instanceof AwsCdkConstructLibrary)) {
+            for (const suffix of TEST_FILE_SUFFIXES) {
+                project.tsconfig?.addExclude(`src/**/*.${suffix}.ts`);
+            }
+            for (const folder of TEST_FOLDERS) {
+                project.tsconfig?.addExclude(`**/${folder}/**/*`);
+            }
 
-        project
-            .addTask("lint", {
-                description: "Alternate strict lint command",
-            })
-            .spawn(strictLintTask);
+            project.tasks
+                .tryFind("compile")
+                ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
+        }
+
+        // Package bugs
+        project.addPackageIgnore(".prettier*");
+        project.addPackageIgnore(".projenrc.*");
     }
+}
 
-    project.addDevDeps("eslint-plugin-jest", "eslint-plugin-sonarjs");
-    project.eslint?.addPlugins("jest", "sonarjs");
-    project.eslint?.addExtends(
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jest/recommended",
-        "plugin:sonarjs/recommended",
-    );
-    project.eslint?.addRules({
-        "no-console": ["warn", { allow: ["debug", "info", "warn", "error"] }],
-        "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
-        "import/namespace": "off",
-        "import/order": [
-            "error",
-            {
-                groups: ["builtin", "external", "parent", "sibling", "index"],
-                "newlines-between": "always",
-                pathGroups: [
-                    {
-                        pattern: "react",
-                        group: "external",
-                        position: "before",
+export class EslintConfig extends Component {
+    constructor(project: TypeScriptProject) {
+        super(project);
+
+        project.addDevDeps("eslint-plugin-jest", "eslint-plugin-sonarjs");
+        project.eslint?.addPlugins("jest", "sonarjs");
+        project.eslint?.addExtends(
+            "eslint:recommended",
+            "plugin:@typescript-eslint/eslint-recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:jest/recommended",
+            "plugin:sonarjs/recommended",
+        );
+        project.eslint?.addRules({
+            "no-console": [
+                "warn",
+                { allow: ["debug", "info", "warn", "error"] },
+            ],
+            "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
+            "import/namespace": "off",
+            "import/order": [
+                "error",
+                {
+                    groups: [
+                        "builtin",
+                        "external",
+                        "parent",
+                        "sibling",
+                        "index",
+                    ],
+                    "newlines-between": "always",
+                    pathGroups: [
+                        {
+                            pattern: "react",
+                            group: "external",
+                            position: "before",
+                        },
+                    ],
+                    pathGroupsExcludedImportTypes: ["react"],
+                    alphabetize: {
+                        order: "asc",
+                        caseInsensitive: true,
                     },
-                ],
-                pathGroupsExcludedImportTypes: ["react"],
-                alphabetize: {
-                    order: "asc",
-                    caseInsensitive: true,
                 },
-            },
-        ],
-        "sonarjs/no-redundant-jump": "off",
-        "sonarjs/no-small-switch": "warn",
-        "@typescript-eslint/explicit-function-return-type": [
-            "warn",
-            {
-                allowExpressions: true,
-                allowTypedFunctionExpressions: true,
-                allowHigherOrderFunctions: true,
-                allowDirectConstAssertionInArrowFunctions: true,
-                allowConciseArrowFunctionExpressionsStartingWithVoid: true,
-            },
-        ],
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            {
-                ignoreRestSiblings: true,
-            },
-        ],
-    });
+            ],
+            "sonarjs/no-redundant-jump": "off",
+            "sonarjs/no-small-switch": "warn",
+            "@typescript-eslint/explicit-function-return-type": [
+                "warn",
+                {
+                    allowExpressions: true,
+                    allowTypedFunctionExpressions: true,
+                    allowHigherOrderFunctions: true,
+                    allowDirectConstAssertionInArrowFunctions: true,
+                    allowConciseArrowFunctionExpressionsStartingWithVoid: true,
+                },
+            ],
+            "@typescript-eslint/no-unused-vars": [
+                "warn",
+                {
+                    ignoreRestSiblings: true,
+                },
+            ],
+        });
 
-    project.eslint?.addOverride({
-        files: ["*.js", "*.jsx"],
-        rules: {
-            "import/no-unresolved": "error",
-            "@typescript-eslint/explicit-function-return-type": "off",
-            "@typescript-eslint/explicit-module-boundary-types": "off",
-            "@typescript-eslint/no-var-requires": "off",
-        },
-    });
+        project.eslint?.addOverride({
+            files: ["*.js", "*.jsx"],
+            rules: {
+                "import/no-unresolved": "error",
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "@typescript-eslint/no-var-requires": "off",
+            },
+        });
 
-    for (const pattern of DEV_FILE_PATTERNS) {
-        project.eslint?.allowDevDeps(pattern);
-    }
-
-    // TypeScript
-    if (!(project instanceof AwsCdkConstructLibrary)) {
-        for (const suffix of TEST_FILE_SUFFIXES) {
-            project.tsconfig?.addExclude(`src/**/*.${suffix}.ts`);
+        for (const pattern of DEV_FILE_PATTERNS) {
+            project.eslint?.allowDevDeps(pattern);
         }
-        for (const folder of TEST_FOLDERS) {
-            project.tsconfig?.addExclude(`**/${folder}/**/*`);
+    }
+}
+
+export enum DKTaskName {
+    CI = "ci",
+    ESLINT_STRICT = "eslint-strict",
+    I = "i",
+    LINT = "lint",
+    TEST_UNIT = "test-unit",
+    TYPE_CHECK = "type-check",
+}
+
+export class DKTasks extends Component {
+    constructor(project: TypeScriptProject) {
+        super(project);
+
+        // Install
+        project.addTask(DKTaskName.CI).spawn(project.package.installCiTask);
+        project.addTask(DKTaskName.I).spawn(project.package.installTask);
+
+        const typeCheckTask = project.tasks.addTask(DKTaskName.TYPE_CHECK);
+        typeCheckTask.exec("tsc --noEmit");
+
+        // Eslint
+        const maxWarningsZeroArg = "--max-warnings=0";
+        const lintTask = project.eslint?.eslintTask;
+
+        if (lintTask) {
+            const strictLintTask = project.addTask(DKTaskName.ESLINT_STRICT, {
+                description: "Stricter Lint Command",
+            });
+            strictLintTask.spawn(lintTask, { args: [maxWarningsZeroArg] });
+
+            project
+                .addTask(DKTaskName.LINT, {
+                    description: "Alternate strict lint command",
+                })
+                .spawn(strictLintTask);
+
+            const originalTestTaskStep = project.testTask.steps[0];
+            const { exec, ...restOfTestTaskStep } = originalTestTaskStep;
+
+            const unitTestTask = project.addTask(DKTaskName.TEST_UNIT);
+            unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
+
+            project.testTask.reset();
+            project.testTask.spawn(strictLintTask);
+            project.testTask.spawn(unitTestTask);
         }
-
-        project.tasks
-            .tryFind("compile")
-            ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
     }
-
-    const typeCheckTask = project.tasks.addTask("type-check");
-    typeCheckTask.exec("tsc --noEmit");
-
-    const originalTestTaskStep = project.testTask.steps[0];
-    const { exec, ...restOfTestTaskStep } = originalTestTaskStep;
-    if (strictLintTask) {
-        const unitTestTask = project.addTask("test-unit");
-        unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
-
-        project.testTask.reset();
-        project.testTask.spawn(strictLintTask);
-        project.testTask.spawn(unitTestTask);
-    }
-
-    // Package bugs
-    project.addPackageIgnore(".prettier*");
-    project.addPackageIgnore(".projenrc.*");
-};
+}
 
 export class Node20TypeScriptProject extends TypeScriptProject {
     constructor(options: TypeScriptProjectOptions) {
@@ -283,7 +316,9 @@ export class Node20TypeScriptProject extends TypeScriptProject {
             ]) as TypeScriptProjectOptions,
         );
 
-        enactNode20ProjectConfig(this);
+        new DKBugFixes(this);
+        new EslintConfig(this);
+        new DKTasks(this);
     }
 }
 
@@ -296,6 +331,8 @@ export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
             ]) as AwsCdkConstructLibraryOptions,
         );
 
-        enactNode20ProjectConfig(this);
+        new DKBugFixes(this);
+        new EslintConfig(this);
+        new DKTasks(this);
     }
 }
