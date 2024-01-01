@@ -1,6 +1,5 @@
 import { GithubWorkflow, WorkflowActions } from "projen/lib/github";
 import { JobStep, JobPermission } from "projen/lib/github/workflows-model";
-
 import { NodeProject } from "projen/lib/javascript";
 
 export interface NodeMonorepoChildReleaseWorkflowOptions {

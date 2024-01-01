@@ -1,4 +1,5 @@
 import { JsonFile, Project } from "projen";
+
 import { NON_MONOREPO_ERROR_MESSAGE, VsCodeWorkspaces } from ".";
 
 describe("VsCodeWorkspaces", () => {
