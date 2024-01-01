@@ -286,7 +286,9 @@ export class DKTasks extends Component {
             const strictLintTask = project.addTask(DKTaskName.ESLINT_STRICT, {
                 description: "Stricter Lint Command",
             });
-            strictLintTask.spawn(lintTask, { args: [maxWarningsZeroArg] });
+            strictLintTask.exec(lintTask.steps[0].exec as string, {
+                args: [maxWarningsZeroArg],
+            });
 
             project
                 .addTask(DKTaskName.LINT, {
