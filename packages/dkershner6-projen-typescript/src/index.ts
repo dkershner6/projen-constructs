@@ -57,8 +57,6 @@ export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
 
     projenrcTs: true,
     sampleCode: false,
-
-    devDeps: ["@types/clone-deep", "clone-deep"],
 };
 
 export const RECOMMENDED_PNPM_8: Partial<TypeScriptProjectOptions> = {
@@ -153,6 +151,9 @@ export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
 ]);
 
 export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
+    // DevDeps (doesnt work in config)
+    project.addDevDeps("@types/clone-deep", "clone-deep");
+
     // Install
     project.addTask("ci").spawn(project.package.installCiTask);
     project.addTask("i").spawn(project.package.installTask);
