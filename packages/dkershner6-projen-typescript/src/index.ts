@@ -267,6 +267,10 @@ export const enactNode20ProjectConfig = (project: TypeScriptProject): void => {
         project.testTask.spawn(strictLintTask);
         project.testTask.spawn(unitTestTask);
     }
+
+    // Package bugs
+    project.addPackageIgnore(".prettier*");
+    project.addPackageIgnore(".projenrc.*");
 };
 
 export class Node20TypeScriptProject extends TypeScriptProject {
