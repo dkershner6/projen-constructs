@@ -1,8 +1,11 @@
 import { monorepo } from "@aws/pdk";
 import merge from "lodash.merge";
+
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
-    enactNode20ProjectConfig,
+    EslintConfig,
+    DKBugFixes,
+    DKTaskName,
 } from "../packages/dkershner6-projen-typescript/src";
 
 export class RootMonorepo extends monorepo.MonorepoTsProject {
@@ -38,6 +41,13 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
             this.tasks.tryFind("build")?.prependSpawn(defaultTask);
         }
 
-        enactNode20ProjectConfig(this);
+        new DKBugFixes(this);
+        new EslintConfig(this);
+
+        for (const taskName of Object.values(DKTaskName)) {
+            this.addNxRunManyTask(taskName, {
+                target: taskName,
+            });
+        }
     }
 }

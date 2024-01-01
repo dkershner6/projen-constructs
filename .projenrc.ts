@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { TextFile } from "projen";
 import { NpmAccess } from "projen/lib/javascript";
+
 import { Nvmrc } from "./packages/projen-nvm/src";
 import { VsCodeWorkspaces } from "./packages/projen-vscode-workspaces/src";
 import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";

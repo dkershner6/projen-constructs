@@ -17,7 +17,8 @@
       "name": "ci",
       "steps": [
         {
-          "spawn": "install:ci"
+          "exec": "pnpm exec nx run-many --target=ci --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -95,13 +96,10 @@
     },
     "eslint-strict": {
       "name": "eslint-strict",
-      "description": "Stricter Lint Command",
       "steps": [
         {
-          "spawn": "eslint",
-          "args": [
-            "--max-warnings=0"
-          ]
+          "exec": "pnpm exec nx run-many --target=eslint-strict --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -119,7 +117,8 @@
       "name": "i",
       "steps": [
         {
-          "spawn": "install"
+          "exec": "pnpm exec nx run-many --target=i --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -143,10 +142,10 @@
     },
     "lint": {
       "name": "lint",
-      "description": "Alternate strict lint command",
       "steps": [
         {
-          "spawn": "eslint-strict"
+          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -199,10 +198,8 @@
       "description": "Run tests for all affected projects",
       "steps": [
         {
-          "spawn": "eslint-strict"
-        },
-        {
-          "spawn": "test-unit"
+          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -210,7 +207,7 @@
       "name": "test-unit",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail",
           "receiveArgs": true
         }
       ]
@@ -228,7 +225,8 @@
       "name": "type-check",
       "steps": [
         {
-          "exec": "tsc --noEmit"
+          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },

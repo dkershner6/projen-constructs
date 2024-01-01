@@ -1,6 +1,9 @@
 import deepClone from "clone-deep";
 import {
     DEV_FILE_PATTERNS,
+    DKBugFixes,
+    DKTasks,
+    EslintConfig,
     PUBLISH_FILE_PATTERNS,
     RECOMMENDED_ESLINT_CONFIG,
     RECOMMENDED_JEST_CONFIG,
@@ -11,7 +14,6 @@ import {
     RECOMMENDED_TSCONFIG_NODE_20,
     TEST_FILE_SUFFIXES,
     TEST_FOLDERS,
-    enactNode20ProjectConfig,
 } from "dkershner6-projen-typescript";
 import { ProjectOptions, TextFile } from "projen";
 import { NodeProjectOptions, TypeScriptJsxMode } from "projen/lib/javascript";
@@ -85,7 +87,9 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             ]) as TypeScriptProjectOptions,
         );
 
-        enactNode20ProjectConfig(this);
+        new DKBugFixes(this);
+        new EslintConfig(this);
+        new DKTasks(this);
 
         // React
         this.addDevDeps(
