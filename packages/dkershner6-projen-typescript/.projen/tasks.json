@@ -74,16 +74,6 @@
       "steps": [
         {
           "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern $@ src test build-tools",
-          "receiveArgs": true
-        }
-      ]
-    },
-    "eslint-strict": {
-      "name": "eslint-strict",
-      "description": "Stricter Lint Command",
-      "steps": [
-        {
-          "spawn": "eslint",
           "args": [
             "--max-warnings=0"
           ]
@@ -121,7 +111,7 @@
       "description": "Alternate strict lint command",
       "steps": [
         {
-          "spawn": "eslint-strict"
+          "spawn": "eslint"
         }
       ]
     },
@@ -183,9 +173,6 @@
       "name": "test",
       "description": "Run tests",
       "steps": [
-        {
-          "spawn": "eslint-strict"
-        },
         {
           "spawn": "test-unit"
         }

@@ -94,15 +94,6 @@
         }
       ]
     },
-    "eslint-strict": {
-      "name": "eslint-strict",
-      "steps": [
-        {
-          "exec": "pnpm exec nx run-many --target=eslint-strict --output-style=stream --nx-bail",
-          "receiveArgs": true
-        }
-      ]
-    },
     "graph": {
       "name": "graph",
       "description": "Generate dependency graph for monorepo",

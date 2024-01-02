@@ -9,7 +9,6 @@
     "default": "npx projen default",
     "docgen": "npx projen docgen",
     "eslint": "npx projen eslint",
-    "eslint-strict": "npx projen eslint-strict",
     "i": "npx projen i",
     "lint": "npx projen lint",
     "package": "npx projen package",
