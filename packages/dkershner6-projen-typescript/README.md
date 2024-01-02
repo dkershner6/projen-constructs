@@ -1,6 +1,6 @@
 # dkershner6-projen-typescript
 
-DKershner's preferred configs for Projen TypeScript projects.
+DKershner's preferred constructs for Projen TypeScript projects.
 
 ## Docs
 

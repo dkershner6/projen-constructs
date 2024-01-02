@@ -33,11 +33,6 @@
       "type": "build"
     },
     {
-      "name": "dkershner6-projen-typescript",
-      "version": "0.0.0",
-      "type": "build"
-    },
-    {
       "name": "eslint-config-prettier",
       "type": "build"
     },
@@ -84,10 +79,6 @@
       "type": "build"
     },
     {
-      "name": "projen-github-action-typescript",
-      "type": "build"
-    },
-    {
       "name": "standard-version",
       "version": "^9",
       "type": "build"
@@ -114,6 +105,7 @@
     },
     {
       "name": "dkershner6-projen-typescript",
+      "version": "^0.x",
       "type": "peer"
     },
     {
@@ -122,6 +114,11 @@
     },
     {
       "name": "projen-github-action-typescript",
+      "type": "peer"
+    },
+    {
+      "name": "projen-nvm",
+      "version": "^0.x",
       "type": "peer"
     }
   ],

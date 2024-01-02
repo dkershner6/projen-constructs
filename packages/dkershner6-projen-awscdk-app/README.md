@@ -1,23 +1,23 @@
-# dkershner6-projen-github-actions
+# dkershner6-projen-awscdk-app
 
-DKershner's preferred constructs for Projen GitHub Action projects.
+DKershner's preferred constructs for Projen AWS CDK Apps.
 
 ## Docs
 
-See [dkershner6-projen-github-actions API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-github-actions)
+See [dkershner6-projen-awscdk-app API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-awscdk-app)
 
 ## Usage
 
 Install the module:
 
 ```typescript
-devDeps: ["dkershner6-projen-github-actions"]
+devDeps: ["dkershner6-projen-awscdk-app"]
 ```
 
 Import into your code:
 
 ```typescript
-import { WhateverConstruct } from "dkershner6-projen-github-actions";
+import { WhateverConstruct } from "dkershner6-projen-awscdk-app";
 ```
 
 # Contributing

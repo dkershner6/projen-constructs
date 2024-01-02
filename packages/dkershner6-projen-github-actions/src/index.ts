@@ -12,6 +12,7 @@ import {
     GitHubActionTypeScriptOptions,
     RunsUsing,
 } from "projen-github-action-typescript";
+import { Nvmrc } from "projen-nvm";
 
 export const RECOMMENDED_GITHUB_ACTION_OPTIONS: Omit<
     GitHubActionTypeScriptOptions,
@@ -72,6 +73,10 @@ export class Node20GitHubActionTypescriptProject extends GitHubActionTypeScriptP
                     },
                 ],
             });
+        }
+
+        if (!this.parent) {
+            new Nvmrc(this);
         }
     }
 }

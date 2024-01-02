@@ -27,60 +27,82 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
     description: "Helpers for Projen projects that use VSCode workspaces.",
 });
 
-const dkershnerTypescriptConfigsProject = new ProjenConstructTsLib(
-    rootProject,
-    {
-        name: "dkershner6-projen-typescript",
-        release: false,
-        github: false,
-        keywords: ["projen", "typescript", "ts", "config", "configs"],
-        description:
-            "DKershner's preferred configs for Projen TypeScript projects.",
-        devDeps: ["@types/clone-deep", "clone-deep"],
-        peerDeps: ["clone-deep"],
-    },
-);
+const dkershnerTypescriptProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-typescript",
+    release: false,
+    github: false,
+    keywords: ["projen", "typescript", "ts", "config", "configs"],
+    description:
+        "DKershner's preferred constructs for Projen TypeScript projects.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: ["clone-deep", "projen-nvm@^0.x"],
+});
 
-const dkershnerConstructsProject = new ProjenConstructTsLib(rootProject, {
+const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-react",
     npmAccess: NpmAccess.PUBLIC,
-    keywords: ["projen", "configs", "config", "constructs", "construct"],
-    description: "DKershner's preferred constructs for Projen projects.",
-    devDeps: [
-        "@types/clone-deep",
-        "clone-deep",
-        "dkershner6-projen-typescript@0.0.0",
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "react",
     ],
-    peerDeps: ["clone-deep", "dkershner6-projen-typescript"],
+    description: "DKershner's preferred constructs for Projen React projects.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "projen-nvm@^0.x",
+    ],
 });
 
 const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-github-actions",
     npmAccess: NpmAccess.PUBLIC,
     keywords: ["projen", "github", "actions", "action"],
-    description: "DKershner's preferred GitHub Actions for Projen projects.",
-    devDeps: [
-        "@types/clone-deep",
-        "clone-deep",
-        "dkershner6-projen-typescript@0.0.0",
-        "projen-github-action-typescript",
-    ],
+    description:
+        "DKershner's preferred constructs for Projen GitHub Action projects.",
+    devDeps: ["@types/clone-deep"],
     peerDeps: [
         "clone-deep",
-        "dkershner6-projen-typescript",
+        "dkershner6-projen-typescript@^0.x",
+        "projen-nvm@^0.x",
         "projen-github-action-typescript",
     ],
 });
 
-dkershnerConstructsProject.eslint?.allowDevDeps("**/src/**");
+const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-awscdk-app",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "awscdk",
+        "cdk",
+        "awscdk-app",
+    ],
+    description: "DKershner's preferred constructs for Projen AWS CDK Apps.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "projen-nvm@^0.x",
+    ],
+});
 
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
     nvmProject,
     vsCodeWorkspacesProject,
-    dkershnerTypescriptConfigsProject,
-    dkershnerConstructsProject,
+    dkershnerTypescriptProject,
+    dkershnerReactProject,
     dkershnerGithubActionProject,
+    dkershnerCdkAppProject,
 ];
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.

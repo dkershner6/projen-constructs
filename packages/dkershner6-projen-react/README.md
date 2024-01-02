@@ -1,6 +1,6 @@
 # dkershner6-projen-react
 
-DKershner's preferred constructs for Projen projects.
+DKershner's preferred constructs for Projen React projects.
 
 ## Docs
 

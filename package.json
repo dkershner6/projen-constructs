@@ -128,6 +128,7 @@
   "private": true,
   "workspaces": {
     "packages": [
+      "packages/dkershner6-projen-awscdk-app",
       "packages/dkershner6-projen-github-actions",
       "packages/dkershner6-projen-react",
       "packages/dkershner6-projen-typescript",

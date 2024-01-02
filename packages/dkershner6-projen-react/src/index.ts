@@ -22,6 +22,7 @@ import {
     TypeScriptProjectOptions,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
+import { Nvmrc } from "projen-nvm";
 
 const JEST_ROOTDIR = "<rootDir>";
 
@@ -173,6 +174,10 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
 
         for (const suffix of TEST_FILE_SUFFIXES) {
             this.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
+        }
+
+        if (!this.parent) {
+            new Nvmrc(this);
         }
     }
 }
