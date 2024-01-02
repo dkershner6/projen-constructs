@@ -32,6 +32,10 @@ export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
         noUnusedParameters: false,
         // We don't want to be responsible for external libs errors, change this if TS ever allows checking OUR declaration files but not node_modules
         skipLibCheck: true,
+        // Opinions
+        noImplicitOverride: true,
+        forceConsistentCasingInFileNames: true,
+        esModuleInterop: true,
 
         types: ["jest", "node"],
     };
