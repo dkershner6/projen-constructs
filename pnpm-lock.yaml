@@ -164,9 +164,6 @@ importers:
       projen:
         specifier: 0.78.8
         version: 0.78.8(constructs@10.3.0)
-      projen-nvm:
-        specifier: 0.0.0
-        version: link:../projen-nvm
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -242,9 +239,6 @@ importers:
       projen-github-action-typescript:
         specifier: 0.0.395
         version: 0.0.395(projen@0.78.8)
-      projen-nvm:
-        specifier: 0.0.0
-        version: link:../projen-nvm
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -317,9 +311,6 @@ importers:
       projen:
         specifier: 0.78.8
         version: 0.78.8(constructs@10.3.0)
-      projen-nvm:
-        specifier: 0.0.0
-        version: link:../projen-nvm
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -389,9 +380,6 @@ importers:
       projen:
         specifier: 0.78.8
         version: 0.78.8(constructs@10.3.0)
-      projen-nvm:
-        specifier: 0.0.0
-        version: link:../projen-nvm
       standard-version:
         specifier: ^9
         version: 9.5.0

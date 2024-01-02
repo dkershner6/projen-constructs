@@ -35,7 +35,7 @@ const dkershnerTypescriptProject = new ProjenConstructTsLib(rootProject, {
     description:
         "DKershner's preferred constructs for Projen TypeScript projects.",
     devDeps: ["@types/clone-deep"],
-    peerDeps: ["clone-deep", "projen-nvm@^0.x"],
+    peerDeps: ["clone-deep"],
 });
 
 const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
@@ -51,11 +51,7 @@ const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
     ],
     description: "DKershner's preferred constructs for Projen React projects.",
     devDeps: ["@types/clone-deep"],
-    peerDeps: [
-        "clone-deep",
-        "dkershner6-projen-typescript@^0.x",
-        "projen-nvm@^0.x",
-    ],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
 const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
@@ -68,7 +64,6 @@ const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: [
         "clone-deep",
         "dkershner6-projen-typescript@^0.x",
-        "projen-nvm@^0.x",
         "projen-github-action-typescript",
     ],
 });
@@ -88,11 +83,7 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
     ],
     description: "DKershner's preferred constructs for Projen AWS CDK Apps.",
     devDeps: ["@types/clone-deep"],
-    peerDeps: [
-        "clone-deep",
-        "dkershner6-projen-typescript@^0.x",
-        "projen-nvm@^0.x",
-    ],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
 const ALL_SUBPROJECTS = [

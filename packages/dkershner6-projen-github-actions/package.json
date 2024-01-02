@@ -50,7 +50,6 @@
     "prettier": "^3.1.1",
     "projen": "0.78.8",
     "projen-github-action-typescript": "0.0.395",
-    "projen-nvm": "0.0.0",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
     "typedoc": "^0.25.6",
@@ -61,8 +60,7 @@
     "constructs": "^10.3.0",
     "dkershner6-projen-typescript": "^0.x",
     "projen": "^0.78.8",
-    "projen-github-action-typescript": "^0.0.395",
-    "projen-nvm": "^0.x"
+    "projen-github-action-typescript": "^0.0.395"
   },
   "keywords": [
     "action",

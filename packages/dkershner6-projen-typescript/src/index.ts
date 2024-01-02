@@ -13,7 +13,6 @@ import {
     TypeScriptProject,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
-import { Nvmrc } from "projen-nvm";
 
 export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
@@ -322,10 +321,6 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
-
-        if (!this.parent) {
-            new Nvmrc(this);
-        }
     }
 }
 
@@ -341,9 +336,5 @@ export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
-
-        if (!this.parent) {
-            new Nvmrc(this);
-        }
     }
 }
