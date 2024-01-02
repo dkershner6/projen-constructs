@@ -32,6 +32,10 @@ export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
         noUnusedParameters: false,
         // We don't want to be responsible for external libs errors, change this if TS ever allows checking OUR declaration files but not node_modules
         skipLibCheck: true,
+        // Opinions
+        noImplicitOverride: true,
+        forceConsistentCasingInFileNames: true,
+        esModuleInterop: true,
 
         types: ["jest", "node"],
     };
@@ -260,7 +264,6 @@ export class EslintConfig extends Component {
 
 export enum DKTaskName {
     CI = "ci",
-    ESLINT_STRICT = "eslint-strict",
     I = "i",
     LINT = "lint",
     TEST_UNIT = "test-unit",
@@ -283,18 +286,16 @@ export class DKTasks extends Component {
         const lintTask = project.eslint?.eslintTask;
 
         if (lintTask) {
-            const strictLintTask = project.addTask(DKTaskName.ESLINT_STRICT, {
-                description: "Stricter Lint Command",
-            });
-            strictLintTask.spawn(lintTask, {
-                args: [maxWarningsZeroArg],
+            const lintTaskStep = lintTask.steps[0];
+            lintTask.reset(lintTaskStep.exec, {
+                args: [...(lintTaskStep.args ?? []), maxWarningsZeroArg],
             });
 
             project
                 .addTask(DKTaskName.LINT, {
                     description: "Alternate strict lint command",
                 })
-                .spawn(strictLintTask);
+                .spawn(lintTask);
 
             const originalTestTaskStep = project.testTask.steps[0];
             const { exec, ...restOfTestTaskStep } = originalTestTaskStep;
@@ -303,7 +304,6 @@ export class DKTasks extends Component {
             unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
 
             project.testTask.reset();
-            project.testTask.spawn(strictLintTask);
             project.testTask.spawn(unitTestTask);
         }
     }

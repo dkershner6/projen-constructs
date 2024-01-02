@@ -9,7 +9,6 @@
     "default": "npx projen default",
     "docgen": "npx projen docgen",
     "eslint": "npx projen eslint",
-    "eslint-strict": "npx projen eslint-strict",
     "i": "npx projen i",
     "lint": "npx projen lint",
     "package": "npx projen package",
@@ -43,23 +42,23 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jest": "^27.6.1",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-sonarjs": "^0.23.0",
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "prettier": "^3.1.1",
-    "projen": "0.78.5",
+    "projen": "0.78.8",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
-    "typedoc": "^0.25.4",
+    "typedoc": "^0.25.6",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
     "constructs": "^10.3.0",
-    "dkershner6-projen-typescript": "^0.0.0",
-    "projen": "^0.78.5"
+    "dkershner6-projen-typescript": "^0.0.8",
+    "projen": "^0.78.8"
   },
   "keywords": [
     "config",
