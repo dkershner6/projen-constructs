@@ -14,7 +14,6 @@
     ".github/workflows/release projen-nvm.yml",
     ".github/workflows/release projen-vscode-workspaces.yml",
     ".gitignore",
-    ".mergify.yml",
     ".npmignore",
     ".npmrc",
     ".nvmrc",

@@ -61,6 +61,7 @@ export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
 
     projenrcTs: true,
     sampleCode: false,
+    autoMerge: false,
 };
 
 export const RECOMMENDED_PNPM_8: Partial<TypeScriptProjectOptions> = {
