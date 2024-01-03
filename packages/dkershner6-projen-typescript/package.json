@@ -1,6 +1,6 @@
 {
   "name": "dkershner6-projen-typescript",
-  "description": "DKershner's preferred configs for Projen TypeScript projects.",
+  "description": "DKershner's preferred constructs for Projen TypeScript projects.",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

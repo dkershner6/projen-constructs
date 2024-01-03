@@ -293,7 +293,7 @@ export class DKTasks extends Component {
 
             project
                 .addTask(DKTaskName.LINT, {
-                    description: "Alternate strict lint command",
+                    description: "Alternate lint command",
                 })
                 .spawn(lintTask);
 

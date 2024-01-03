@@ -108,7 +108,7 @@
     },
     "lint": {
       "name": "lint",
-      "description": "Alternate strict lint command",
+      "description": "Alternate lint command",
       "steps": [
         {
           "spawn": "eslint"
