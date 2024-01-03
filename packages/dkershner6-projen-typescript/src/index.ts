@@ -305,6 +305,8 @@ export class DKTasks extends Component {
             unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
 
             project.testTask.reset();
+            project.testTask.spawn(lintTask);
+            project.testTask.spawn(typeCheckTask);
             project.testTask.spawn(unitTestTask);
         }
     }
