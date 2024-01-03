@@ -19,5 +19,22 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
         new DKBugFixes(this);
         new DKTasks(this);
         new EslintConfig(this);
+
+        const deployTask = this.tasks.tryFind("deploy");
+        if (deployTask) {
+            const { exec, ...restOfTaskStep } = deployTask.steps[0];
+            deployTask.reset(exec, {
+                ...restOfTaskStep,
+                args: ["--all", "--require-approval never"],
+            });
+        }
+        const synthTask = this.tasks.tryFind("synth");
+        if (synthTask) {
+            const { exec, ...restOfTaskStep } = synthTask.steps[0];
+            synthTask.reset(exec, {
+                ...restOfTaskStep,
+                args: ["--all", "--require-approval never"],
+            });
+        }
     }
 }
