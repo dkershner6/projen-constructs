@@ -7,5 +7,6 @@ packages:
   - packages/dkershner6-projen-react
   - packages/dkershner6-projen-typescript
   - packages/projen-github-workflows
+  - packages/projen-node
   - packages/projen-nvm
   - packages/projen-vscode-workspaces

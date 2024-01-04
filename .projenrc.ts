@@ -8,11 +8,16 @@ import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";
 import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
-
 const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
     description: "Helpers for Projen projects that use GitHub Workflows.",
+});
+
+const nodeProject = new ProjenConstructTsLib(rootProject, {
+    name: "projen-node",
+    keywords: ["projen", "node", "config", "configs"],
+    description: "Helpers for Projen Node projects.",
 });
 
 const nvmProject = new ProjenConstructTsLib(rootProject, {
@@ -107,6 +112,7 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
 
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
+    nodeProject,
     nvmProject,
     vsCodeWorkspacesProject,
     dkershnerTypescriptProject,

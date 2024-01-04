@@ -52,6 +52,7 @@ junit.xml
 !/.nxignore
 !/.syncpackrc.json
 !/.github/workflows/release projen-github-workflows.yml
+!/.github/workflows/release projen-node.yml
 !/.github/workflows/release projen-nvm.yml
 !/.github/workflows/release projen-vscode-workspaces.yml
 !/.github/workflows/release dkershner6-projen-typescript.yml

@@ -14,6 +14,10 @@
       "path": "../packages/projen-github-workflows"
     },
     {
+      "name": "(Lib) node",
+      "path": "../packages/projen-node"
+    },
+    {
       "name": "(Lib) nvm",
       "path": "../packages/projen-nvm"
     },
@@ -45,6 +49,7 @@
   "settings": {
     "eslint.workingDirectories": [
       "./packages/projen-github-workflows",
+      "./packages/projen-node",
       "./packages/projen-nvm",
       "./packages/projen-vscode-workspaces",
       "./packages/dkershner6-projen-typescript",
