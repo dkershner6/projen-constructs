@@ -8,11 +8,16 @@ import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";
 import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
-
 const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
     description: "Helpers for Projen projects that use GitHub Workflows.",
+});
+
+const nodeProject = new ProjenConstructTsLib(rootProject, {
+    name: "projen-node",
+    keywords: ["projen", "node", "config", "configs"],
+    description: "Helpers for Projen Node projects.",
 });
 
 const nvmProject = new ProjenConstructTsLib(rootProject, {
@@ -54,6 +59,25 @@ const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
+const dkershnerAwsCdkLibraryProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-awscdk-construct-library",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "awscdk",
+        "cdk",
+        "awscdk-library",
+    ],
+    description:
+        "DKershner's preferred constructs for Projen AWS CDK Construct Libraries.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
+});
+
 const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-github-actions",
     npmAccess: NpmAccess.PUBLIC,
@@ -88,10 +112,12 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
 
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
+    nodeProject,
     nvmProject,
     vsCodeWorkspacesProject,
     dkershnerTypescriptProject,
     dkershnerReactProject,
+    dkershnerAwsCdkLibraryProject,
     dkershnerGithubActionProject,
     dkershnerCdkAppProject,
 ];

@@ -4,8 +4,10 @@ import {
     DKBugFixes,
     DKTasks,
     EslintConfig,
+    RenderWorkflowSetupOptions,
 } from "dkershner6-projen-typescript";
 import { awscdk } from "projen";
+import { JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 
 export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
@@ -36,5 +38,28 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                 args: ["--all", "--require-approval never"],
             });
         }
+
+        this.eslint?.allowDevDeps("src/main.ts");
+        this.eslint?.allowDevDeps("src/stacks/**/*Stack.ts");
+        this.eslint?.allowDevDeps("src/stacks/**/*Stack/index.ts");
+    }
+
+    public override renderWorkflowSetup(
+        options?: RenderWorkflowSetupOptions | undefined,
+    ): JobStep[] {
+        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
+
+        const originalSteps = super.renderWorkflowSetup(restOfOptions);
+
+        return originalSteps.map((step) => {
+            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
+                return {
+                    workingDirectory: this.parent ? "." : undefined,
+                    ...step,
+                    ...(installJobStepOverrides ?? {}),
+                };
+            }
+            return step;
+        });
     }
 }
