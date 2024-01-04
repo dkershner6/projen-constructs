@@ -56,6 +56,7 @@ junit.xml
 !/.github/workflows/release projen-vscode-workspaces.yml
 !/.github/workflows/release dkershner6-projen-typescript.yml
 !/.github/workflows/release dkershner6-projen-react.yml
+!/.github/workflows/release dkershner6-projen-awscdk-construct-library.yml
 !/.github/workflows/release dkershner6-projen-github-actions.yml
 !/.github/workflows/release dkershner6-projen-awscdk-app.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace

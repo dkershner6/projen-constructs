@@ -12,10 +12,12 @@ import {
     RECOMMENDED_PRETTIER_CONFIG,
     RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
     RECOMMENDED_TSCONFIG_NODE_20,
+    RenderWorkflowSetupOptions,
     TEST_FILE_SUFFIXES,
     TEST_FOLDERS,
 } from "dkershner6-projen-typescript";
 import { ProjectOptions, TextFile } from "projen";
+import { JobStep } from "projen/lib/github/workflows-model";
 import { NodeProjectOptions, TypeScriptJsxMode } from "projen/lib/javascript";
 import {
     TypeScriptProject,
@@ -174,5 +176,24 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         for (const suffix of TEST_FILE_SUFFIXES) {
             this.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
         }
+    }
+
+    public override renderWorkflowSetup(
+        options?: RenderWorkflowSetupOptions | undefined,
+    ): JobStep[] {
+        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
+
+        const originalSteps = super.renderWorkflowSetup(restOfOptions);
+
+        return originalSteps.map((step) => {
+            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
+                return {
+                    workingDirectory: this.parent ? "." : undefined,
+                    ...step,
+                    ...(installJobStepOverrides ?? {}),
+                };
+            }
+            return step;
+        });
     }
 }

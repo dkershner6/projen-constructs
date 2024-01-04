@@ -54,6 +54,25 @@ const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
+const dkershnerAwsCdkLibraryProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-awscdk-construct-library",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "awscdk",
+        "cdk",
+        "awscdk-library",
+    ],
+    description:
+        "DKershner's preferred constructs for Projen AWS CDK Construct Libraries.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
+});
+
 const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-github-actions",
     npmAccess: NpmAccess.PUBLIC,
@@ -92,6 +111,7 @@ const ALL_SUBPROJECTS = [
     vsCodeWorkspacesProject,
     dkershnerTypescriptProject,
     dkershnerReactProject,
+    dkershnerAwsCdkLibraryProject,
     dkershnerGithubActionProject,
     dkershnerCdkAppProject,
 ];

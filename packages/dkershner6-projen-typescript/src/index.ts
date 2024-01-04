@@ -1,9 +1,7 @@
 import deepClone from "clone-deep";
 import { Component, javascript, ProjectOptions } from "projen";
-import {
-    AwsCdkConstructLibrary,
-    AwsCdkConstructLibraryOptions,
-} from "projen/lib/awscdk";
+import { AwsCdkConstructLibrary } from "projen/lib/awscdk";
+import { JobStep } from "projen/lib/github/workflows-model";
 import {
     TypeScriptCompilerOptions,
     NodeProjectOptions,
@@ -13,6 +11,22 @@ import {
     TypeScriptProject,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
+
+/**
+ * Options for `renderWorkflowSetup()`.
+ */
+export interface RenderWorkflowSetupOptions
+    extends javascript.RenderWorkflowSetupOptions {
+    /**
+     * Overrides for the install step in the workflow setup.
+     *
+     * @default - No overrides of the install step
+     *
+     * @example - { workingDirectory: "rootproject-dir" } for subprojects installing from root.
+     * @example - { env: { NPM_TOKEN: "token" }} for installing from private npm registry.
+     */
+    readonly installJobStepOverrides?: JobStep;
+}
 
 export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
@@ -135,24 +149,16 @@ export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
         },
     },
 };
-
-export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
-    ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
-    "defaultReleaseBranch" | "name"
-> = deepMerge([
-    deepClone(RECOMMENDED_NODE_20),
-    RECOMMENDED_ESLINT_CONFIG,
-    RECOMMENDED_JEST_CONFIG,
-    RECOMMENDED_PRETTIER_CONFIG,
-]);
-
 export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
     ProjectOptions & NodeProjectOptions & TypeScriptProjectOptions,
     "defaultReleaseBranch" | "name"
 > = deepMerge([
     deepClone(RECOMMENDED_TSCONFIG_NODE_20),
     RECOMMENDED_PNPM_8,
-    RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS,
+    RECOMMENDED_NODE_20,
+    RECOMMENDED_ESLINT_CONFIG,
+    RECOMMENDED_JEST_CONFIG,
+    RECOMMENDED_PRETTIER_CONFIG,
 ]);
 
 export class DKBugFixes extends Component {
@@ -325,19 +331,23 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         new EslintConfig(this);
         new DKTasks(this);
     }
-}
 
-export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
-    constructor(options: AwsCdkConstructLibraryOptions) {
-        super(
-            deepMerge([
-                deepClone(RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS),
-                options,
-            ]) as AwsCdkConstructLibraryOptions,
-        );
+    public override renderWorkflowSetup(
+        options?: RenderWorkflowSetupOptions | undefined,
+    ): JobStep[] {
+        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
 
-        new DKBugFixes(this);
-        new EslintConfig(this);
-        new DKTasks(this);
+        const originalSteps = super.renderWorkflowSetup(restOfOptions);
+
+        return originalSteps.map((step) => {
+            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
+                return {
+                    workingDirectory: this.parent ? "." : undefined,
+                    ...step,
+                    ...(installJobStepOverrides ?? {}),
+                };
+            }
+            return step;
+        });
     }
 }

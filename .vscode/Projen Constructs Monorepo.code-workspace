@@ -30,6 +30,10 @@
       "path": "../packages/dkershner6-projen-react"
     },
     {
+      "name": "(Lib) dkershner6-awscdk-construct-library",
+      "path": "../packages/dkershner6-projen-awscdk-construct-library"
+    },
+    {
       "name": "(Lib) dkershner6-github-actions",
       "path": "../packages/dkershner6-projen-github-actions"
     },
@@ -45,6 +49,7 @@
       "./packages/projen-vscode-workspaces",
       "./packages/dkershner6-projen-typescript",
       "./packages/dkershner6-projen-react",
+      "./packages/dkershner6-projen-awscdk-construct-library",
       "./packages/dkershner6-projen-github-actions",
       "./packages/dkershner6-projen-awscdk-app"
     ],

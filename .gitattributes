@@ -8,6 +8,7 @@
 /.github/workflows/build.yml linguist-generated
 /.github/workflows/pull-request-lint.yml linguist-generated
 /.github/workflows/release dkershner6-projen-awscdk-app.yml linguist-generated
+/.github/workflows/release dkershner6-projen-awscdk-construct-library.yml linguist-generated
 /.github/workflows/release dkershner6-projen-github-actions.yml linguist-generated
 /.github/workflows/release dkershner6-projen-react.yml linguist-generated
 /.github/workflows/release dkershner6-projen-typescript.yml linguist-generated

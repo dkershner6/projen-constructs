@@ -7,6 +7,7 @@
     ".github/workflows/build.yml",
     ".github/workflows/pull-request-lint.yml",
     ".github/workflows/release dkershner6-projen-awscdk-app.yml",
+    ".github/workflows/release dkershner6-projen-awscdk-construct-library.yml",
     ".github/workflows/release dkershner6-projen-github-actions.yml",
     ".github/workflows/release dkershner6-projen-react.yml",
     ".github/workflows/release dkershner6-projen-typescript.yml",
