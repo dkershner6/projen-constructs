@@ -132,7 +132,7 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                                     `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
                                 ].join("\n"),
                             },
-                            options.publishToAwsOptions
+                            ...options.publishToAwsOptions
                                 .configureAwsCredentialsJobSteps,
                             {
                                 name: "Deploy to AWS",
