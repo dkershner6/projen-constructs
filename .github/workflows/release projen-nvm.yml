@@ -17,7 +17,8 @@ jobs:
       run:
         working-directory: ./packages/projen-nvm
     steps:
-      - run: echo "Lets go!
+      - run: echo 'Go!'
+        working-directory: .
       - name: Checkout
         uses: actions/checkout@v3
         with:
@@ -63,7 +64,8 @@ jobs:
       contents: write
     if: needs.release.outputs.latest_commit == github.sha
     steps:
-      - run: echo "Lets go!
+      - run: echo 'Go!'
+        working-directory: .
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
         with:
@@ -93,7 +95,8 @@ jobs:
       contents: write
     if: needs.release.outputs.latest_commit == github.sha
     steps:
-      - run: echo "Lets go!
+      - run: echo 'Go!'
+        working-directory: .
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
         with:

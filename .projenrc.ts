@@ -167,7 +167,8 @@ if (rootProject.github) {
     new UniversalWorkflowJobSteps(rootProject.github, {
         prependSteps: [
             {
-                run: 'echo "Lets go!',
+                run: "echo 'Go!'",
+                workingDirectory: ".",
             },
         ],
     });

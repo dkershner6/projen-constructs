@@ -56,7 +56,8 @@ jobs:
       contents: write
     if: always() && needs.build.outputs.self_mutation_happened && !(github.event.pull_request.head.repo.full_name != github.repository)
     steps:
-      - run: echo "Lets go!
+      - run: echo 'Go!'
+        working-directory: .
       - name: Checkout
         uses: actions/checkout@v3
         with:
