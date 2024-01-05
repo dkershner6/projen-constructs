@@ -6,7 +6,7 @@ import {
     EslintConfig,
     RenderWorkflowSetupOptions,
 } from "dkershner6-projen-typescript";
-import { awscdk, filteredRunsOnOptions, github, release } from "projen";
+import { awscdk, filteredRunsOnOptions, github } from "projen";
 import { JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 
