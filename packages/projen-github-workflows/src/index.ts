@@ -1,2 +1,2 @@
 export * from "./NodeMonorepoChildReleaseWorkflow";
-export * from "./UniversalWorkflowJobSteps";
+export * from "./WorkflowJobMerger";
