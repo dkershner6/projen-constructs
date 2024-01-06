@@ -23,6 +23,13 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             releaseTagPrefix: `${options.name}@`,
             release: true,
             releaseToNpm: true,
+            releaseWorkflowSetupSteps: [
+                {
+                    name: "Compile all libs",
+                    run: `npx projen compile`,
+                    workingDirectory: ".",
+                },
+            ],
 
             peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
             devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],

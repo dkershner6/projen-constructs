@@ -50,4 +50,14 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
             });
         }
     }
+
+    override preSynthesize(): void {
+        super.preSynthesize();
+
+        this.tasks.tryFind("compile")?.reset(
+            this.execNxRunManyCommand({
+                target: "compile",
+            }),
+        );
+    }
 }
