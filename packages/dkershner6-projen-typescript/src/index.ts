@@ -177,9 +177,6 @@ export class DKBugFixes extends Component {
                 project.tsconfig?.addExclude(`**/${folder}/**/*`);
             }
         }
-
-        // Package bugs
-        project.addPackageIgnore(".projenrc.*");
     }
 }
 
