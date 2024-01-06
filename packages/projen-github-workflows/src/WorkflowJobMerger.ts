@@ -21,7 +21,7 @@ export interface WorkflowJobMerge {
      * What fields to merge into the job.
      *
      */
-    readonly job?: github.workflows.Job;
+    readonly job?: Omit<github.workflows.Job, "steps">;
 
     /**
      * Filter the workflow jobs to override by workflow name prefix (starts with) and job name.
