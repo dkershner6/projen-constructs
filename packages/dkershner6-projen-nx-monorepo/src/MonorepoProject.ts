@@ -4,6 +4,8 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
     constructor(options: monorepo.MonorepoTsProjectOptions) {
         super(options);
 
+        this.addDevDeps("syncpack@^8");
+
         this.addAndEditTasks();
     }
 
