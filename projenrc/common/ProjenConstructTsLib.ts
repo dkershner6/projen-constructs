@@ -3,14 +3,13 @@ import { TextFile } from "projen";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
 
 import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
-import { NodeMonorepoChildReleaseWorkflow } from "../../packages/projen-github-workflows/src/NodeMonorepoChildReleaseWorkflow";
 import { RootMonorepo } from "../rootMonorepo";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
     private readonly combinedOptions: TypeScriptProjectOptions;
 
     constructor(
-        private readonly rootMonorepoProject: RootMonorepo,
+        rootMonorepoProject: RootMonorepo,
         options: Omit<
             TypeScriptProjectOptions,
             "defaultReleaseBranch" | "outDir"
@@ -73,11 +72,6 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                 "",
                 "This project is licensed under the terms of the [MIT License](LICENSE.md).",
             ],
-        });
-
-        new NodeMonorepoChildReleaseWorkflow(this.rootMonorepoProject, this, {
-            branches: ["main"],
-            releaseToNpm: combinedOptions.releaseToNpm,
         });
     }
 }

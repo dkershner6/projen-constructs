@@ -4,6 +4,8 @@
 junit.xml
 /coverage/
 permissions-backup.acl
+/.prettierignore
+/.prettierrc.json
 /test/
 /tsconfig.publish.json
 /src/
@@ -20,3 +22,4 @@ tsconfig.tsbuildinfo
 /.eslintrc.json
 .prettier*
 .projenrc.*
+/.gitattributes
