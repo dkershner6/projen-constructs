@@ -48,7 +48,7 @@
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "prettier": "^3.1.1",
-    "projen": "0.78.10",
+    "projen": "0.78.11",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
     "typedoc": "^0.25.6",
@@ -58,7 +58,7 @@
     "clone-deep": "^4.0.1",
     "constructs": "^10.3.0",
     "dkershner6-projen-typescript": "^0.x",
-    "projen": "^0.78.10"
+    "projen": "^0.78.11"
   },
   "keywords": [
     "config",
