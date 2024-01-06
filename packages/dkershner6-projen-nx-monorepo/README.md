@@ -1,23 +1,23 @@
-# dkershner6-projen-awscdk-construct-library
+# dkershner6-projen-nx-monorepo
 
-DKershner's preferred constructs for Projen AWS CDK Construct Libraries.
+DKershner's preferred constructs for Projen NX Monorepos.
 
 ## Docs
 
-See [dkershner6-projen-awscdk-construct-library API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-awscdk-construct-library)
+See [dkershner6-projen-nx-monorepo API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-nx-monorepo)
 
 ## Usage
 
 Install the module:
 
 ```typescript
-devDeps: ["dkershner6-projen-awscdk-construct-library"]
+devDeps: ["dkershner6-projen-nx-monorepo"]
 ```
 
 Import into your code:
 
 ```typescript
-import { WhateverConstruct } from "dkershner6-projen-awscdk-construct-library";
+import { WhateverConstruct } from "dkershner6-projen-nx-monorepo";
 ```
 
 # Contributing

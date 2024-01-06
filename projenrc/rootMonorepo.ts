@@ -1,6 +1,7 @@
 import { monorepo } from "@aws/pdk";
 import merge from "lodash.merge";
 
+import { MonorepoProject } from "../packages/dkershner6-projen-nx-monorepo/src/MonorepoProject";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     EslintConfig,
@@ -8,7 +9,7 @@ import {
     DKTaskName,
 } from "../packages/dkershner6-projen-typescript/src";
 
-export class RootMonorepo extends monorepo.MonorepoTsProject {
+export class RootMonorepo extends MonorepoProject {
     constructor() {
         super(
             merge<
@@ -36,20 +37,6 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
             ),
         );
 
-        const defaultTask = this.tasks.tryFind("default");
-        if (defaultTask) {
-            this.tasks.tryFind("build")?.prependSpawn(defaultTask);
-        }
-        this.addTask("clean-modules", {
-            exec: "find . -type d -name 'node_modules' -exec rm -r {} \\;",
-        });
-
-        const nxBuild = this.nx.targetDefaults.build;
-        this.nx.setTargetDefault("compile", {
-            ...nxBuild,
-            dependsOn: ["^compile"],
-        });
-
         new DKBugFixes(this);
         new EslintConfig(this);
 
@@ -58,15 +45,5 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
                 target: taskName,
             });
         }
-    }
-
-    override preSynthesize(): void {
-        super.preSynthesize();
-
-        this.tasks.tryFind("compile")?.reset(
-            this.execNxRunManyCommand({
-                target: "compile",
-            }),
-        );
     }
 }

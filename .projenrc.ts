@@ -111,6 +111,23 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
+const dkershnerMonorepoProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-nx-monorepo",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "nx",
+        "monorepo",
+    ],
+    description: "DKershner's preferred constructs for Projen NX Monorepos.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: ["@aws/pdk", "clone-deep", "dkershner6-projen-typescript@^0.x"],
+});
+
 const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
     nodeProject,
@@ -121,6 +138,7 @@ const ALL_SUBPROJECTS = [
     dkershnerAwsCdkLibraryProject,
     dkershnerGithubActionProject,
     dkershnerCdkAppProject,
+    dkershnerMonorepoProject,
 ];
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.

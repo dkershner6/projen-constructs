@@ -24,9 +24,10 @@
     },
     "clean-modules": {
       "name": "clean-modules",
+      "description": "Delete all node_modules folders",
       "steps": [
         {
-          "exec": "find . -type d -name 'node_modules' -exec rm -r {} \\;"
+          "exec": "find . -type d -name 'node_modules' -exec rm -r {} \\; || echo 'All done!'"
         }
       ]
     },
@@ -64,10 +65,11 @@
     },
     "compile": {
       "name": "compile",
-      "description": "Only compile for all affected projects",
+      "description": "Compile all projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
