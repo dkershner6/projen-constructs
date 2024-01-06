@@ -29,6 +29,26 @@
       "dependsOn": [
         "^build"
       ]
+    },
+    "compile": {
+      "inputs": [
+        "default",
+        "^default"
+      ],
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/lib",
+        "{projectRoot}/build",
+        "{projectRoot}/coverage",
+        "{projectRoot}/test-reports",
+        "{projectRoot}/target",
+        "{projectRoot}/cdk.out",
+        "{projectRoot}/LICENSE_THIRD_PARTY",
+        "{projectRoot}/.jsii"
+      ],
+      "dependsOn": [
+        "^compile"
+      ]
     }
   },
   "tasksRunnerOptions": {

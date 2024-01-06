@@ -40,6 +40,15 @@ export class RootMonorepo extends monorepo.MonorepoTsProject {
         if (defaultTask) {
             this.tasks.tryFind("build")?.prependSpawn(defaultTask);
         }
+        this.addTask("clean-modules", {
+            exec: "find . -type d -name 'node_modules' -exec rm -r {} \\;",
+        });
+
+        const nxBuild = this.nx.targetDefaults.build;
+        this.nx.setTargetDefault("compile", {
+            ...nxBuild,
+            dependsOn: ["^compile"],
+        });
 
         new DKBugFixes(this);
         new EslintConfig(this);
