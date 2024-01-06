@@ -324,6 +324,81 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  packages/dkershner6-projen-nx-monorepo:
+    devDependencies:
+      '@aws/pdk':
+        specifier: 0.22.48
+        version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.0)(constructs@10.3.0)(projen@0.78.10)
+      '@types/clone-deep':
+        specifier: ^4.0.4
+        version: 4.0.4
+      '@types/jest':
+        specifier: ^29.5.11
+        version: 29.5.11
+      '@types/node':
+        specifier: ^18
+        version: 18.19.4
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6
+        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/parser':
+        specifier: ^6
+        version: 6.17.0(eslint@8.56.0)(typescript@5.3.3)
+      clone-deep:
+        specifier: 4.0.1
+        version: 4.0.1
+      constructs:
+        specifier: 10.3.0
+        version: 10.3.0
+      dkershner6-projen-typescript:
+        specifier: 0.0.0
+        version: link:../dkershner6-projen-typescript
+      eslint:
+        specifier: ^8
+        version: 8.56.0
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@8.56.0)
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+      eslint-plugin-import:
+        specifier: ^2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-plugin-jest:
+        specifier: ^27.6.1
+        version: 27.6.1(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.3.3)
+      eslint-plugin-prettier:
+        specifier: ^5.1.2
+        version: 5.1.2(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.1.1)
+      eslint-plugin-sonarjs:
+        specifier: ^0.23.0
+        version: 0.23.0(eslint@8.56.0)
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@18.19.4)(ts-node@10.9.2)
+      jest-junit:
+        specifier: ^15
+        version: 15.0.0
+      prettier:
+        specifier: ^3.1.1
+        version: 3.1.1
+      projen:
+        specifier: 0.78.10
+        version: 0.78.10(constructs@10.3.0)
+      standard-version:
+        specifier: ^9
+        version: 9.5.0
+      ts-jest:
+        specifier: ^29.1.1
+        version: 29.1.1(@babel/core@7.23.7)(jest@29.7.0)(typescript@5.3.3)
+      typedoc:
+        specifier: ^0.25.6
+        version: 0.25.6(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+
   packages/dkershner6-projen-react:
     devDependencies:
       '@types/clone-deep':
@@ -765,6 +840,17 @@ packages:
   /@aws-cdk/asset-node-proxy-agent-v6@2.0.1:
     resolution: {integrity: sha512-DDt4SLdLOwWCjGtltH4VCST7hpOI5DzieuhGZsBpZ+AgJdSI2GCjklCXm0GCTwJG/SolkL5dtQXyUKgg9luBDg==}
 
+  /@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0(aws-cdk-lib@2.118.0)(constructs@10.3.0):
+    resolution: {integrity: sha512-a1SdwZE1vdzkWjmULD9kt16nUHgg6Iz2WtHD8XZYw8nW4IKweIX0IgvO+Ie8JvGOfKrdZjTBpcwWgNTkA1aG9Q==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      aws-cdk-lib: ^2.104.0
+      constructs: ^10.0.0
+    dependencies:
+      aws-cdk-lib: 2.118.0(constructs@10.3.0)
+      constructs: 10.3.0
+    dev: true
+
   /@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0(aws-cdk-lib@2.118.0)(constructs@10.3.0):
     resolution: {integrity: sha512-6G/595+om2gowEV19eY6gbGzVYAvShGZJODQNXMglySn9v/1JW98Zs9ao1bpmok9SufxEOwOoCTGPuclDQHyhQ==}
     engines: {node: '>= 14.15.0'}
@@ -774,6 +860,55 @@ packages:
     dependencies:
       aws-cdk-lib: 2.118.0(constructs@10.3.0)
       constructs: 10.3.0
+
+  /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.0)(constructs@10.3.0)(projen@0.78.10):
+    resolution: {integrity: sha512-I1cqWrZgtt9N4XR2dv7IVpE0mv1ETi83OX99pd8Pt0CendwUfRlEf9JNsGB1Sdbsod3i4fpj3FyfkpBgBq2xhQ==}
+    hasBin: true
+    peerDependencies:
+      '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0
+      aws-cdk-lib: ^2.104.0
+      cdk-nag: ^2.27.184
+      constructs: ^10.3.0
+      projen: ^0.76.25
+    dependencies:
+      '@aws-cdk/aws-cognito-identitypool-alpha': 2.104.0-alpha.0(aws-cdk-lib@2.118.0)(constructs@10.3.0)
+      aws-cdk-lib: 2.118.0(constructs@10.3.0)
+      cdk-nag: 2.28.0(aws-cdk-lib@2.118.0)(constructs@10.3.0)
+      constructs: 10.3.0
+      projen: 0.78.10(constructs@10.3.0)
+    dev: true
+    bundledDependencies:
+      - '@hpcc-js/wasm'
+      - '@pnpm/reviewing.dependencies-hierarchy'
+      - chalk
+      - execa
+      - find-up
+      - findup
+      - fs-extra
+      - he
+      - lodash
+      - lodash.clonedeep
+      - lodash.isempty
+      - lodash.memoize
+      - lodash.merge
+      - lodash.omit
+      - lodash.startcase
+      - lodash.uniq
+      - lodash.uniqby
+      - lodash.words
+      - log4js
+      - mustache
+      - openapi-types
+      - read-pkg-up
+      - semver
+      - sharp
+      - shorthash2
+      - svgson
+      - to-px
+      - traverse
+      - ts-graphviz
+      - ts-node
+      - word-wrap
 
   /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.0)(constructs@10.3.0)(projen@0.78.10)(typescript@5.3.3):
     resolution: {integrity: sha512-I1cqWrZgtt9N4XR2dv7IVpE0mv1ETi83OX99pd8Pt0CendwUfRlEf9JNsGB1Sdbsod3i4fpj3FyfkpBgBq2xhQ==}

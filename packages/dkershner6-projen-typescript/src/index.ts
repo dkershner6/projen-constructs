@@ -176,14 +176,9 @@ export class DKBugFixes extends Component {
             for (const folder of TEST_FOLDERS) {
                 project.tsconfig?.addExclude(`**/${folder}/**/*`);
             }
-
-            project.tasks
-                .tryFind("compile")
-                ?.reset(`tsc --build ${project.tsconfig?.fileName}`);
         }
 
         // Package bugs
-        project.addPackageIgnore(".prettier*");
         project.addPackageIgnore(".projenrc.*");
     }
 }
