@@ -2,7 +2,7 @@
 import { TextFile } from "projen";
 import { NpmAccess } from "projen/lib/javascript";
 
-import { UniversalWorkflowJobSteps } from "./packages/projen-github-workflows/src";
+import { WorkflowJobMerger } from "./packages/projen-github-workflows/src";
 import { Nvmrc } from "./packages/projen-nvm/src";
 import { VsCodeWorkspaces } from "./packages/projen-vscode-workspaces/src";
 import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";
@@ -164,11 +164,15 @@ new TextFile(rootProject, ".github/CODEOWNERS", {
 });
 
 if (rootProject.github) {
-    new UniversalWorkflowJobSteps(rootProject.github, {
-        prependSteps: [
+    new WorkflowJobMerger(rootProject.github, {
+        merges: [
             {
-                run: "echo 'Go!'",
-                workingDirectory: ".",
+                prependSteps: [
+                    {
+                        run: "echo 'Go!'",
+                        workingDirectory: ".",
+                    },
+                ],
             },
         ],
     });
