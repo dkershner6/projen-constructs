@@ -56,6 +56,7 @@ export class WorkflowJobMerger extends Component {
                 (workflow.jobs ?? {}) as Record<string, github.workflows.Job>;
 
             for (const [jobName, job] of Object.entries(jobs)) {
+                let workingJob = job;
                 for (const merge of this.options.merges) {
                     if (
                         !merge.workflowNamePrefixJobNameEntries ||
@@ -65,7 +66,12 @@ export class WorkflowJobMerger extends Component {
                                 jobNameLookup === jobNameLookup,
                         )
                     ) {
-                        this.mergeJob(workflow, jobName, job, merge);
+                        workingJob = this.mergeJob(
+                            workflow,
+                            jobName,
+                            workingJob,
+                            merge,
+                        );
                     }
                 }
             }
@@ -77,8 +83,8 @@ export class WorkflowJobMerger extends Component {
         jobName: string,
         job: github.workflows.Job,
         merge: WorkflowJobMerge,
-    ): void {
-        workflow.updateJob(jobName, {
+    ): github.workflows.Job {
+        const newJob = {
             ...job,
             ...merge.job,
             defaults: this.mergeObjects(job?.defaults, merge?.job?.defaults),
@@ -105,7 +111,9 @@ export class WorkflowJobMerger extends Component {
                       ),
                   ]
                 : job.steps,
-        });
+        };
+        workflow.updateJob(jobName, newJob);
+        return newJob;
     }
 
     private mergeObjects<TObj>(
