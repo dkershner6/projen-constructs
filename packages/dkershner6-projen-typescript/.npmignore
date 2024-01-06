@@ -5,6 +5,8 @@ junit.xml
 /coverage/
 /dist/changelog.md
 /dist/version.txt
+/.prettierignore
+/.prettierrc.json
 /test/
 /tsconfig.publish.json
 /src/
@@ -21,3 +23,4 @@ tsconfig.tsbuildinfo
 /.eslintrc.json
 .prettier*
 .projenrc.*
+/.gitattributes
