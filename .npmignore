@@ -20,6 +20,5 @@ dist
 /.projenrc.js
 tsconfig.tsbuildinfo
 /.eslintrc.json
-.prettier*
 .projenrc.*
 /.gitattributes
