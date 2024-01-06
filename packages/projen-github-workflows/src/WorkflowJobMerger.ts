@@ -24,11 +24,11 @@ export interface WorkflowJobMerge {
     readonly job?: github.workflows.Job;
 
     /**
-     * Filter the workflow jobs to override by workflow name and job name (prefix, or starts with).
+     * Filter the workflow jobs to override by workflow name prefix (starts with) and job name.
      *
      * @default - If not provided, all jobs in all workflows will be overridden.
      */
-    readonly workflowNameJobNamePrefixEntries?: [string, string][];
+    readonly workflowNamePrefixJobNameEntries?: [string, string][];
 }
 
 export interface WorkflowJobMergerOptions {
@@ -58,11 +58,11 @@ export class WorkflowJobMerger extends Component {
             for (const [jobName, job] of Object.entries(jobs)) {
                 for (const merge of this.options.merges) {
                     if (
-                        !merge.workflowNameJobNamePrefixEntries ||
-                        merge.workflowNameJobNamePrefixEntries?.some(
-                            ([workflowName, jobNamePrefix]) =>
-                                workflow.name === workflowName &&
-                                jobName.startsWith(jobNamePrefix),
+                        !merge.workflowNamePrefixJobNameEntries ||
+                        merge.workflowNamePrefixJobNameEntries?.some(
+                            ([workflowNamePrefix, jobNameLookup]) =>
+                                workflow.name.startsWith(workflowNamePrefix) &&
+                                jobNameLookup === jobNameLookup,
                         )
                     ) {
                         this.mergeJob(workflow, jobName, job, merge);
