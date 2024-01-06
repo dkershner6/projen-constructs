@@ -59,7 +59,7 @@
       "description": "Only compile for all affected projects",
       "steps": [
         {
-          "exec": "tsc --build tsconfig.publish.json"
+          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail"
         }
       ]
     },

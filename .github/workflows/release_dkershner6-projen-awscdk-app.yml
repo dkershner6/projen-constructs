@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
         working-directory: ./
+      - name: Compile all libs
+        run: npx projen compile
+        working-directory: .
       - name: release
         run: npx projen release
       - name: Check for new commits
