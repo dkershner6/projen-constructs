@@ -22,6 +22,10 @@
       "path": "../packages/projen-nvm"
     },
     {
+      "name": "(Lib) sst",
+      "path": "../packages/projen-sst"
+    },
+    {
       "name": "(Lib) vscode-workspaces",
       "path": "../packages/projen-vscode-workspaces"
     },
@@ -55,6 +59,7 @@
       "./packages/projen-github-workflows",
       "./packages/projen-node",
       "./packages/projen-nvm",
+      "./packages/projen-sst",
       "./packages/projen-vscode-workspaces",
       "./packages/dkershner6-projen-typescript",
       "./packages/dkershner6-projen-react",

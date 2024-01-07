@@ -10,4 +10,5 @@ packages:
   - packages/projen-github-workflows
   - packages/projen-node
   - packages/projen-nvm
+  - packages/projen-sst
   - packages/projen-vscode-workspaces
