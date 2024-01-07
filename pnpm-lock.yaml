@@ -25,7 +25,7 @@ importers:
     devDependencies:
       '@aws/pdk':
         specifier: ^0.22.48
-        version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.11)(typescript@5.3.3)
+        version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.12)(typescript@5.3.3)
       '@types/clone-deep':
         specifier: ^4.0.4
         version: 4.0.4
@@ -90,8 +90,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       syncpack:
         specifier: ^8
         version: 8.5.14
@@ -162,8 +162,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -234,8 +234,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -306,11 +306,11 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       projen-github-action-typescript:
         specifier: ^0.0.395
-        version: 0.0.395(projen@0.78.11)
+        version: 0.0.395(projen@0.78.12)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -328,7 +328,7 @@ importers:
     devDependencies:
       '@aws/pdk':
         specifier: ^0.22.48
-        version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.11)(typescript@5.3.3)
+        version: 0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.12)(typescript@5.3.3)
       '@types/clone-deep':
         specifier: ^4.0.4
         version: 4.0.4
@@ -384,8 +384,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -456,8 +456,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -525,8 +525,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -594,8 +594,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -663,8 +663,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -732,8 +732,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -801,8 +801,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1
       projen:
-        specifier: ^0.78.11
-        version: 0.78.11(constructs@10.3.0)
+        specifier: ^0.78.12
+        version: 0.78.12(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -861,7 +861,7 @@ packages:
       aws-cdk-lib: 2.118.0(constructs@10.3.0)
       constructs: 10.3.0
 
-  /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.11)(typescript@5.3.3):
+  /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.12)(typescript@5.3.3):
     resolution: {integrity: sha512-I1cqWrZgtt9N4XR2dv7IVpE0mv1ETi83OX99pd8Pt0CendwUfRlEf9JNsGB1Sdbsod3i4fpj3FyfkpBgBq2xhQ==}
     hasBin: true
     peerDependencies:
@@ -896,7 +896,7 @@ packages:
       log4js: 6.9.1
       mustache: 4.2.0
       openapi-types: 12.1.3
-      projen: 0.78.11(constructs@10.3.0)
+      projen: 0.78.12(constructs@10.3.0)
       read-pkg-up: 7.0.1
       semver: 7.5.4
       sharp: 0.32.6
@@ -948,7 +948,7 @@ packages:
       - ts-node
       - word-wrap
 
-  /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.11)(typescript@5.3.3):
+  /@aws/pdk@0.22.48(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(@pnpm/logger@5.0.0)(@types/node@18.19.4)(aws-cdk-lib@2.118.0)(cdk-nag@2.28.1)(constructs@10.3.0)(projen@0.78.12)(typescript@5.3.3):
     resolution: {integrity: sha512-I1cqWrZgtt9N4XR2dv7IVpE0mv1ETi83OX99pd8Pt0CendwUfRlEf9JNsGB1Sdbsod3i4fpj3FyfkpBgBq2xhQ==}
     hasBin: true
     peerDependencies:
@@ -983,7 +983,7 @@ packages:
       log4js: 6.9.1
       mustache: 4.2.0
       openapi-types: 12.1.3
-      projen: 0.78.11(constructs@10.3.0)
+      projen: 0.78.12(constructs@10.3.0)
       read-pkg-up: 7.0.1
       semver: 7.5.4
       sharp: 0.32.6
@@ -8191,15 +8191,15 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /projen-github-action-typescript@0.0.395(projen@0.78.11):
+  /projen-github-action-typescript@0.0.395(projen@0.78.12):
     resolution: {integrity: sha512-6wYEbV3MVt1ikzt1WKfFCFGi2QW94vZF6UU/UkIPY9al9YxfYkS9H3jJ2sz2gtRAXSX9JBk8g3IvmphRpqGsDg==}
     peerDependencies:
       projen: ^0.76.15
     dependencies:
-      projen: 0.78.11(constructs@10.3.0)
+      projen: 0.78.12(constructs@10.3.0)
     dev: true
 
-  /projen@0.78.11(constructs@10.3.0):
+  /projen@0.78.12(constructs@10.3.0):
     resolution: {integrity: sha512-SfAMFJcXNWwFbt/HYS/bnYiBQK2nS33bp0tWV3j3Eb6mTiiwyEAjMF5l1rp9Fi+zZ1rV6ai2el2kaVQmcl3K3A==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
