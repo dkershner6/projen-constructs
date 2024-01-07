@@ -9,6 +9,7 @@ import { ProjenConstructTsLib } from "./projenrc/common/ProjenConstructTsLib";
 import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
+
 const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
@@ -25,6 +26,20 @@ const nvmProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-nvm",
     keywords: ["projen", "nvm", "node", "version", "manager"],
     description: "Helpers for Projen projects that use NVM.",
+});
+
+const sstProject = new ProjenConstructTsLib(rootProject, {
+    name: "projen-sst",
+    keywords: [
+        "projen",
+        "sst",
+        "serverless",
+        "stack",
+        "framework",
+        "aws",
+        "cdk",
+    ],
+    description: "Helpers for Projen projects that use SST.",
 });
 
 const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
@@ -130,6 +145,7 @@ const ALL_SUBPROJECTS = [
     gitHubWorkflowsProject,
     nodeProject,
     nvmProject,
+    sstProject,
     vsCodeWorkspacesProject,
     dkershnerTypescriptProject,
     dkershnerReactProject,
