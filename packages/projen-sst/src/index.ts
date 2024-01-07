@@ -78,27 +78,29 @@ export default {
 } satisfies SSTConfig;
 `,
             ],
+            readonly: false,
         });
     }
 
     private createStackFile(): void {
-        new TextFile(this.project, "stacks/MyStack.ts", {
+        new TextFile(this.project, "src/MyStack.ts", {
             lines: [
-                `import { Api,App, Stack, StackProps } from "sst/constructs";
+                `import { Api, App, Stack, StackProps } from "sst/constructs";
 
 export class MyStack extends Stack {
-  constructor(scope: App, id: string, props?: StackProps) {
-    super(scope, id, props);
+    constructor(scope: App, id: string, props?: StackProps) {
+        super(scope, id, props);
 
-    const api = new Api(this, "MyApi");
+        const api = new Api(this, "MyApi");
 
-    this.addOutputs({
-      ApiEndpoint: api.url,
-    })
-  }
+        this.addOutputs({
+            ApiEndpoint: api.url,
+        });
+    }
 }
 `,
             ],
+            readonly: false,
         });
     }
 }
