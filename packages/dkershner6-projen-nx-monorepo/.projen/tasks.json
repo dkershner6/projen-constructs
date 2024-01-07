@@ -30,7 +30,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "dkershner6-projen-nx-monorepo@",
-        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/dkershner6-projen-nx-monorepo"
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
         {
@@ -220,7 +220,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "dkershner6-projen-nx-monorepo@",
-        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/dkershner6-projen-nx-monorepo"
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
         {
