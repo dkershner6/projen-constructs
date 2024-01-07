@@ -134,7 +134,7 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                 `release${workflowNameSuffix}`,
             );
             if (releaseWorkflow) {
-                releaseWorkflow.addJob("publish-aws", {
+                releaseWorkflow.addJob("release_aws", {
                     name: "Publish to AWS",
                     needs: ["release"],
                     ...filteredRunsOnOptions(
