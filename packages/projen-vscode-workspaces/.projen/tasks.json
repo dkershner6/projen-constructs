@@ -30,7 +30,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "projen-vscode-workspaces@",
-        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/projen-vscode-workspaces"
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
         {
@@ -220,7 +220,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "projen-vscode-workspaces@",
-        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/projen-vscode-workspaces"
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
         {
