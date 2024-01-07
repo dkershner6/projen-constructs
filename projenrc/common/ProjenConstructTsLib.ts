@@ -28,9 +28,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                     workingDirectory: ".",
                 },
             ],
-            releasableCommits: ReleasableCommits.everyCommit(
-                `./packages/${options.name}`,
-            ),
+            releasableCommits: ReleasableCommits.everyCommit("."),
 
             peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
             devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
