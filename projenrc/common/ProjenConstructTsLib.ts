@@ -6,8 +6,6 @@ import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typesc
 import { RootMonorepo } from "../rootMonorepo";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
-    private readonly combinedOptions: TypeScriptProjectOptions;
-
     constructor(
         rootMonorepoProject: RootMonorepo,
         options: Omit<
@@ -49,13 +47,13 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
 
         super(combinedOptions);
 
-        this.combinedOptions = combinedOptions;
+        this.eslint?.allowDevDeps(`**/${this.srcdir}/**`);
 
         new TextFile(this, "README.md", {
             lines: [
                 `# ${this.name}`,
                 "",
-                `${this.combinedOptions.description}`,
+                `${combinedOptions.description}`,
                 "",
                 "## Docs",
                 "",
