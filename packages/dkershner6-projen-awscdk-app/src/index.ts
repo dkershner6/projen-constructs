@@ -75,11 +75,14 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                     options.workflowRunsOnGroup,
             };
 
-            this.addDeployToAwsJob(publishToAwsOptions);
+            this.addPublishToAwsJob(publishToAwsOptions);
 
             if (this.release.branches) {
-                for (const branch of this.release.branches) {
-                    this.addDeployToAwsJob(publishToAwsOptions, branch);
+                const otherBranches = this.release.branches.filter(
+                    (branch) => branch !== options.defaultReleaseBranch,
+                );
+                for (const branch of otherBranches) {
+                    this.addPublishToAwsJob(publishToAwsOptions, branch);
                 }
             }
         }
@@ -111,14 +114,14 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
         );
     }
 
-    protected addDeployToAwsJob(
+    protected addPublishToAwsJob(
         options: PublishToAwsOptions,
         branchName?: string,
     ): void {
         const taskSuffix = branchName ? `:${branchName}` : "";
         const workflowNameSuffix = branchName ? `-${branchName}` : "";
 
-        const deployTask = this.tasks.tryFind(`deploy${taskSuffix}`);
+        const deployTask = this.tasks.tryFind(`deploy`);
         if (deployTask) {
             const publishToAwsTask = this.addTask(`publish:aws${taskSuffix}`);
             publishToAwsTask.spawn(deployTask, {
@@ -131,8 +134,8 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                 `release${workflowNameSuffix}`,
             );
             if (releaseWorkflow) {
-                releaseWorkflow.addJob("deploy-aws", {
-                    name: "Deploy to AWS",
+                releaseWorkflow.addJob("publish-aws", {
+                    name: "Publish to AWS",
                     needs: ["release"],
                     ...filteredRunsOnOptions(
                         options.runsOn,

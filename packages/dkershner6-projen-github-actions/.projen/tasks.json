@@ -29,7 +29,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "dkershner6-projen-github-actions@"
+        "RELEASE_TAG_PREFIX": "dkershner6-projen-github-actions@",
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/dkershner6-projen-github-actions"
       },
       "steps": [
         {
@@ -218,7 +219,8 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "dkershner6-projen-github-actions@"
+        "RELEASE_TAG_PREFIX": "dkershner6-projen-github-actions@",
+        "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ./packages/dkershner6-projen-github-actions"
       },
       "steps": [
         {

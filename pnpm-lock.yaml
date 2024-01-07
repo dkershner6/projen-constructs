@@ -126,7 +126,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
@@ -198,7 +198,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
@@ -270,7 +270,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
@@ -348,7 +348,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
@@ -420,7 +420,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
@@ -492,7 +492,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: ^10.0.0
         version: 10.3.0
       eslint:
         specifier: ^8

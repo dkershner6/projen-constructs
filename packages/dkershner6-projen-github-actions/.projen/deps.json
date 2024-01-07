@@ -100,16 +100,8 @@
       "type": "peer"
     },
     {
-      "name": "constructs",
-      "type": "peer"
-    },
-    {
       "name": "dkershner6-projen-typescript",
       "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "projen",
       "type": "peer"
     },
     {
