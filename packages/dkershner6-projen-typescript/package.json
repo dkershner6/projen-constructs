@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
+    "constructs": "^10.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -54,9 +54,7 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
-    "projen": "^0.78.11"
+    "clone-deep": "^4.0.1"
   },
   "keywords": [
     "config",

@@ -1,6 +1,6 @@
-import merge from "lodash.merge";
-import { TextFile } from "projen";
+import { ReleasableCommits, TextFile } from "projen";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
+import { deepMerge } from "projen/lib/util";
 
 import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
 import { RootMonorepo } from "../rootMonorepo";
@@ -15,7 +15,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             "defaultReleaseBranch" | "outDir"
         >,
     ) {
-        const combinedOptions: TypeScriptProjectOptions = merge(options, {
+        const defaultOptions: Omit<TypeScriptProjectOptions, "name"> = {
             parent: rootMonorepoProject,
 
             defaultReleaseBranch: "main",
@@ -30,6 +30,9 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                     workingDirectory: ".",
                 },
             ],
+            releasableCommits: ReleasableCommits.everyCommit(
+                `./packages/${options.name}`,
+            ),
 
             peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
             devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
@@ -38,7 +41,11 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             authorUrl: "https://dkershner.com",
             docgen: true,
             docsDirectory: `../../docs/${options.name}`,
-        });
+        };
+        const combinedOptions: TypeScriptProjectOptions = deepMerge([
+            defaultOptions,
+            options,
+        ]) as TypeScriptProjectOptions;
 
         super(combinedOptions);
 

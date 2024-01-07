@@ -37,7 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
+    "constructs": "^10.0.0",
     "dkershner6-projen-typescript": "0.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
@@ -58,9 +58,7 @@
   "peerDependencies": {
     "@aws/pdk": "^0.22.48",
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
-    "dkershner6-projen-typescript": "^0.x",
-    "projen": "^0.78.11"
+    "dkershner6-projen-typescript": "^0.x"
   },
   "keywords": [
     "config",

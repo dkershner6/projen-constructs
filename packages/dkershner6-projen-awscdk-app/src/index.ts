@@ -78,7 +78,10 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
             this.addDeployToAwsJob(publishToAwsOptions);
 
             if (this.release.branches) {
-                for (const branch of this.release.branches) {
+                const otherBranches = this.release.branches.filter(
+                    (branch) => branch !== options.defaultReleaseBranch,
+                );
+                for (const branch of otherBranches) {
                     this.addDeployToAwsJob(publishToAwsOptions, branch);
                 }
             }

@@ -35,8 +35,6 @@ const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
 
 const dkershnerTypescriptProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-typescript",
-    release: false,
-    github: false,
     keywords: ["projen", "typescript", "ts", "config", "configs"],
     description:
         "DKershner's preferred constructs for Projen TypeScript projects.",
