@@ -1,4 +1,25 @@
+/* eslint-disable @cspell/spellchecker */
+// Cannot run cspell in here because flagWords are definite hits.
+
 import { Component, JsonFile, Project } from "projen";
+import { Eslint, NodeProject } from "projen/lib/javascript";
+
+export interface CSpellDictionaryDefinition {
+    /**
+     * Some editor extensions will use `addWords` for adding words to your personal dictionary.
+     */
+    readonly addWords: boolean;
+
+    /**
+     * The name of the dictionary.
+     */
+    readonly name: string;
+
+    /**
+     * The path to the dictionary file.
+     */
+    readonly path: string;
+}
 
 export interface CSpellConfig {
     /**
@@ -62,26 +83,86 @@ export interface CSpellConfig {
      * This is useful for offensive words and common spelling errors. (e.g. "hte" and "thier")
      */
     readonly flagWords?: string[];
+
+    /**
+     * Define custom dictionaries.
+     */
+    readonly dictionaryDefinitions?: CSpellDictionaryDefinition[];
+
+    /**
+     * Custom dictionaries to use.
+     */
+    readonly dictionaries?: string[];
 }
 
-interface CSpellConfigFileOptions {
+export interface CSpellConfigFileOptions {
     readonly config?: CSpellConfig;
 }
+
+const PROJEN_WORDS = [
+    "projen",
+    "projenrc",
+    "rootproject",
+    "subproject",
+    "subprojects",
+    "awscdk",
+    "cdkout",
+    "setfacl",
+    "dkershner",
+    "kershner",
+    "jsii",
+    "syncpack",
+    "outdir",
+    "rootdir",
+];
 
 export class CSpellConfigFile extends Component {
     public readonly config: CSpellConfig;
 
-    constructor(project: Project, options: CSpellConfigFileOptions) {
+    constructor(project: Project, options?: CSpellConfigFileOptions) {
         super(project);
 
-        this.config = options.config ?? {};
+        this.config = {
+            ...(options?.config ?? {}),
+            version: options?.config?.version ?? "0.2",
+            language: options?.config?.language ?? "en",
+            words: [...(options?.config?.words ?? []), ...PROJEN_WORDS],
+            flagWords: [...(options?.config?.flagWords ?? []), "hte", "thier"],
+        };
 
-        this.synthesizeContent();
-    }
-
-    public synthesizeContent(): void {
         new JsonFile(this.project, "cspell.json", {
             obj: this.config,
+        });
+    }
+}
+
+export interface CSpellOptions extends CSpellConfigFileOptions {
+    /**
+     * Whether or not to enable cSpell in eslint.
+     *
+     * @default true
+     */
+    readonly eslint?: boolean;
+}
+
+export class CSpell extends Component {
+    constructor(project: Project, options?: CSpellOptions) {
+        super(project);
+
+        if (options?.eslint ?? true) {
+            const eslint = Eslint.of(project);
+            if (eslint) {
+                (project as NodeProject).addDevDeps("@cspell/eslint-plugin");
+
+                eslint.addOverride({
+                    files: ["*.ts", "*.tsx"],
+                    extends: ["plugin:@cspell/recommended"],
+                });
+            }
+        }
+
+        new CSpellConfigFile(project, {
+            config: { ...(options?.config ?? {}) },
         });
     }
 }

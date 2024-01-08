@@ -30,6 +30,7 @@
     "organization": false
   },
   "devDependencies": {
+    "@cspell/eslint-plugin": "^8.3.2",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.11",
     "@types/node": "^18",
@@ -71,7 +72,7 @@
   "jest": {
     "testEnvironment": "node",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@babel/runtime|@buildresonance/global-lib-storefront-shared-components|@buildresonance/global-lib-storefront-next-markdown|@mui*|.*separated-tokens|.*util-gfm.*|bail|ccount|character-entities.*|decode-named-character-reference|direction|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|stringify-entities|strip-markdown|trim-lines|trough|unified|unist.*|vfile.*|web-namespaces|zwitch|@panva/hkdf|jose|swiper|swiper/react|ssr-window|dom7|uuid)/)",
+      "node_modules/(?!(@babel/runtime|@mui*|.*separated-tokens|.*util-gfm.*|bail|ccount|character-entities.*|decode-named-character-reference|direction|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|stringify-entities|strip-markdown|trim-lines|trough|unified|unist.*|vfile.*|web-namespaces|zwitch|@panva/hkdf|jose|swiper|swiper/react|ssr-window|dom7|uuid)/)",
       "\\.pnp\\.[^\\/]+$"
     ],
     "testMatch": [

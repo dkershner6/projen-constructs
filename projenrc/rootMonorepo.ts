@@ -8,6 +8,7 @@ import {
     DKBugFixes,
     DKTaskName,
 } from "../packages/dkershner6-projen-typescript/src";
+import { CSpell } from "../packages/projen-cspell/src";
 
 export class RootMonorepo extends MonorepoProject {
     constructor() {
@@ -48,5 +49,7 @@ export class RootMonorepo extends MonorepoProject {
                 target: taskName,
             });
         }
+
+        new CSpell(this);
     }
 }

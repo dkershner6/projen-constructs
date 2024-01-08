@@ -3,6 +3,7 @@ import { TypeScriptProjectOptions } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
 
 import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
+import { CSpell } from "../../packages/projen-cspell/src";
 import { RootMonorepo } from "../rootMonorepo";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
@@ -83,6 +84,12 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                 "",
                 "This project is licensed under the terms of the [MIT License](LICENSE.md).",
             ],
+        });
+
+        new CSpell(this, {
+            config: {
+                words: ["ccount", "mdast", "micromark", "ncipollo", "panva",  "rehype", "rickstaa", "sonarjs", "vfile", "zwitch"]
+            }
         });
     }
 }

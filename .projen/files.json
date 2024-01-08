@@ -32,6 +32,7 @@
     ".projen/tasks.json",
     ".syncpackrc.json",
     ".vscode/Projen Constructs Monorepo.code-workspace",
+    "cspell.json",
     "docs/index.html",
     "LICENSE",
     "nx.json",

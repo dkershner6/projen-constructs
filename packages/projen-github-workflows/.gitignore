@@ -45,4 +45,5 @@ junit.xml
 /dist/
 !/.eslintrc.json
 !/README.md
+!/cspell.json
 !/project.json

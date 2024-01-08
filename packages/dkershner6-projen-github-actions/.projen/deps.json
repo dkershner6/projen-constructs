@@ -1,6 +1,10 @@
 {
   "dependencies": [
     {
+      "name": "@cspell/eslint-plugin",
+      "type": "build"
+    },
+    {
       "name": "@types/clone-deep",
       "type": "build"
     },
