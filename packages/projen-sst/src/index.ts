@@ -1,4 +1,4 @@
-import { Component, TextFile, awscdk } from "projen";
+import { Component, SampleDir, SampleFile, awscdk } from "projen";
 
 export interface SstTypescriptAppOptions
     extends awscdk.AwsCdkTypeScriptAppOptions {}
@@ -60,9 +60,8 @@ export class SstSampleCode extends Component {
     }
 
     private createSstConfigFile(): void {
-        new TextFile(this.project, SST_CONFIG_FILE_NAME, {
-            lines: [
-                `import { SSTConfig } from "sst";
+        new SampleFile(this.project, SST_CONFIG_FILE_NAME, {
+            contents: `import { SSTConfig } from "sst";
 import { MyStack } from "./stacks/MyStack";
 
 export default {
@@ -77,15 +76,13 @@ export default {
   }
 } satisfies SSTConfig;
 `,
-            ],
-            readonly: false,
         });
     }
 
     private createStackFile(): void {
-        new TextFile(this.project, "src/MyStack.ts", {
-            lines: [
-                `import { Api, App, Stack, StackProps } from "sst/constructs";
+        new SampleDir(this.project, "src", {
+            files: {
+                "MyStack.ts": `import { Api, App, Stack, StackProps } from "sst/constructs";
 
 export class MyStack extends Stack {
     constructor(scope: App, id: string, props?: StackProps) {
@@ -99,8 +96,7 @@ export class MyStack extends Stack {
     }
 }
 `,
-            ],
-            readonly: false,
+            },
         });
     }
 }
