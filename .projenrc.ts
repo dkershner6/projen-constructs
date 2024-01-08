@@ -106,6 +106,21 @@ const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     ],
 });
 
+const dkershnerCdkAppCoreProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-awscdk-core",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "awscdk",
+        "cdk",
+    ],
+    description: "DKershner's common constructs for Projen AWS CDK Apps.",
+});
+
 const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-awscdk-app",
     npmAccess: NpmAccess.PUBLIC,
@@ -121,7 +136,35 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
     ],
     description: "DKershner's preferred constructs for Projen AWS CDK Apps.",
     devDeps: ["@types/clone-deep"],
-    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "dkershner6-projen-awscdk-core@^0.x",
+    ],
+});
+
+const dkershnerSstAppProject = new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-sst-app",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "sst",
+        "awscdk",
+        "cdk",
+        "awscdk-app",
+    ],
+    description: "DKershner's preferred constructs for Projen SST Apps.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "dkershner6-projen-awscdk-core@^0.x",
+        "projen-sst@^0.x",
+    ],
 });
 
 const dkershnerMonorepoProject = new ProjenConstructTsLib(rootProject, {
@@ -151,7 +194,9 @@ const ALL_SUBPROJECTS = [
     dkershnerReactProject,
     dkershnerAwsCdkLibraryProject,
     dkershnerGithubActionProject,
+    dkershnerCdkAppCoreProject,
     dkershnerCdkAppProject,
+    dkershnerSstAppProject,
     dkershnerMonorepoProject,
 ];
 // Using the packages inside this repo, for this repo.

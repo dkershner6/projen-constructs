@@ -1,47 +1,42 @@
 import deepClone from "clone-deep";
 import {
+    AwsAppPublisher,
+    AwsAppPublisherOptions,
+} from "dkershner6-projen-awscdk-core";
+import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     DKBugFixes,
     DKTasks,
     EslintConfig,
 } from "dkershner6-projen-typescript";
-import {
-    GroupRunnerOptions,
-    Task,
-    awscdk,
-    filteredRunsOnOptions,
-    github,
-} from "projen";
+import { Task, awscdk } from "projen";
 import { JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 
-export interface PublishToAwsOptions {
-    /**
-     * Typically a single step involved in configuring AWS credentials.
-     * AKA aws-actions/configure-aws-credentials
-     */
-    readonly configureAwsCredentialsJobSteps: JobStep[];
-
-    readonly runsOn?: string[];
-
-    readonly runsOnGroup?: GroupRunnerOptions;
-}
-
-export interface Node20AwsCdkAppProjectOptions
+export interface Node20AwsCdkAppOptions
     extends awscdk.AwsCdkTypeScriptAppOptions {
     /**
      * Whether or not to pin the version of constructs to the version specified in the
      * `constructsVersion` property.
      */
     constructsVersionPinning?: boolean;
+
+    /**
+     * Whether to publish this App to AWS.
+     */
+    readonly publishToAws?: boolean;
+
     /**
      * Populate in order to add a deploy to AWS job to the release workflow.
      */
-    readonly publishToAwsOptions?: PublishToAwsOptions;
+    readonly publishToAwsOptions?: Omit<
+        AwsAppPublisherOptions,
+        "deployJobStepBuilder"
+    >;
 }
 
-export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
-    constructor(options: Node20AwsCdkAppProjectOptions) {
+export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
+    constructor(options: Node20AwsCdkAppOptions) {
         const combinedOptions = deepMerge([
             deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
             options,
@@ -61,12 +56,20 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
         }
 
         this.makeDeployAndSynthTasksNotRequireApproval();
+
         if (this.package) {
             this.overridePackageTask();
         }
-        if (this.release && options.publishToAwsOptions) {
-            const publishToAwsOptions: PublishToAwsOptions = {
+
+        if (
+            this.release &&
+            options.publishToAws &&
+            options.publishToAwsOptions
+        ) {
+            const publishToAwsOptions: AwsAppPublisherOptions = {
                 ...options.publishToAwsOptions,
+                deployJobStepBuilder: (builderParams) =>
+                    this.buildDeployToAwsJobStep(builderParams.deployTask),
                 runsOn:
                     options.publishToAwsOptions.runsOn ??
                     options.workflowRunsOn,
@@ -75,16 +78,7 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
                     options.workflowRunsOnGroup,
             };
 
-            this.addPublishToAwsJob(publishToAwsOptions);
-
-            if (this.release.branches) {
-                const otherBranches = this.release.branches.filter(
-                    (branch) => branch !== options.defaultReleaseBranch,
-                );
-                for (const branch of otherBranches) {
-                    this.addPublishToAwsJob(publishToAwsOptions, branch);
-                }
-            }
+            new AwsAppPublisher(this, publishToAwsOptions);
         }
     }
 
@@ -112,71 +106,6 @@ export class Node20AwsCdkAppProject extends awscdk.AwsCdkTypeScriptApp {
         this.packageTask.exec(
             `cp -r ${this.cdkConfig.cdkout} ${this.artifactsDirectory}`,
         );
-    }
-
-    protected addPublishToAwsJob(
-        options: PublishToAwsOptions,
-        branchName?: string,
-    ): void {
-        const taskSuffix = branchName ? `:${branchName}` : "";
-        const workflowNameSuffix = branchName ? `-${branchName}` : "";
-
-        const deployTask = this.tasks.tryFind(`deploy`);
-        if (deployTask) {
-            const publishToAwsTask = this.addTask(`publish:aws${taskSuffix}`);
-            publishToAwsTask.spawn(deployTask, {
-                args: [
-                    `--app ${this.artifactsDirectory}/${this.cdkConfig.cdkout}`,
-                ],
-            });
-
-            const releaseWorkflow = this.github?.tryFindWorkflow(
-                `release${workflowNameSuffix}`,
-            );
-            if (releaseWorkflow) {
-                releaseWorkflow.addJob("release_aws", {
-                    name: "Publish to AWS",
-                    needs: ["release"],
-                    ...filteredRunsOnOptions(
-                        options.runsOn,
-                        options.runsOnGroup,
-                    ),
-                    permissions: {
-                        contents: github.workflows.JobPermission.WRITE,
-                        packages: github.workflows.JobPermission.WRITE,
-                    },
-                    steps: [
-                        ...this.workflowBootstrapSteps,
-                        {
-                            name: "Setup Node.js",
-                            uses: "actions/setup-node@v3",
-                            with: {
-                                ...(this.nodeVersion && {
-                                    "node-version": this.nodeVersion,
-                                }),
-                            },
-                        },
-                        {
-                            name: "Download build artifacts",
-                            uses: "actions/download-artifact@v3",
-                            with: {
-                                name: "build-artifact",
-                                path: this.artifactsDirectory,
-                            },
-                        },
-                        {
-                            name: "Restore build artifact permissions",
-                            continueOnError: true,
-                            run: [
-                                `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
-                            ].join("\n"),
-                        },
-                        ...options.configureAwsCredentialsJobSteps,
-                        this.buildDeployToAwsJobStep(deployTask),
-                    ],
-                });
-            }
-        }
     }
 
     protected buildDeployToAwsJobStep(deployTask: Task): JobStep {
