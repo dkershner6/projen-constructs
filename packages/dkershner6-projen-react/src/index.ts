@@ -12,12 +12,10 @@ import {
     RECOMMENDED_PRETTIER_CONFIG,
     RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
     RECOMMENDED_TSCONFIG_NODE_20,
-    RenderWorkflowSetupOptions,
     TEST_FILE_SUFFIXES,
     TEST_FOLDERS,
 } from "dkershner6-projen-typescript";
-import { ProjectOptions, TextFile } from "projen";
-import { JobStep } from "projen/lib/github/workflows-model";
+import { Component, ProjectOptions, TextFile } from "projen";
 import { NodeProjectOptions, TypeScriptJsxMode } from "projen/lib/javascript";
 import {
     TypeScriptProject,
@@ -80,61 +78,80 @@ export const RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS: Omit<
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
 
-export class Node20ReactTypeScriptProject extends TypeScriptProject {
-    constructor(options: TypeScriptProjectOptions) {
-        super(
-            deepMerge([
-                deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
-                options,
-            ]) as TypeScriptProjectOptions,
-        );
+export interface Node20ReactTypescriptConfigurerOptions {
+    /**
+     * The type of project to configure.
+     * Determines how React is installed.
+     *
+     * @default "library"
+     */
+    readonly projectType?: "library" | "app";
+}
 
-        new DKBugFixes(this);
-        new EslintConfig(this);
-        new DKTasks(this);
+export class Node20ReactTypescriptConfigurer extends Component {
+    declare readonly project: TypeScriptProject;
 
-        // React
-        this.addDevDeps(
-            "@types/react",
-            "@types/react-dom",
-            "react",
-            "react-dom",
-        );
-        this.addPeerDeps("react", "react-dom");
+    constructor(
+        project: TypeScriptProject,
+        options: Node20ReactTypescriptConfigurerOptions = {},
+    ) {
+        super(project);
 
-        // Eslint
-        for (const pattern of changeAllTsToTsx(DEV_FILE_PATTERNS)) {
-            this.eslint?.allowDevDeps(pattern);
+        this.installDeps(options.projectType);
+
+        if (this.project.eslint) {
+            this.configureEslint();
+        }
+        if (this.project.jest) {
+            this.configureJest();
+        }
+    }
+
+    private installDeps(projectType: "library" | "app" | undefined): void {
+        this.project.addDevDeps("@types/react", "@types/react-dom");
+
+        if (projectType === "app") {
+            this.project.addDeps("react", "react-dom");
+            return;
         }
 
-        this.addDevDeps(
+        this.project.addDevDeps("react", "react-dom");
+        this.project.addPeerDeps("react", "react-dom");
+    }
+
+    private configureEslint(): void {
+        for (const pattern of changeAllTsToTsx(DEV_FILE_PATTERNS)) {
+            this.project.eslint?.allowDevDeps(pattern);
+        }
+
+        this.project.addDevDeps(
             "eslint-plugin-react",
             "eslint-plugin-react-hooks",
             "eslint-plugin-jsx-a11y",
         );
-        this.eslint?.addPlugins("react", "react-hooks", "jsx-a11y");
-        this.eslint?.addExtends(
+        this.project.eslint?.addPlugins("react", "react-hooks", "jsx-a11y");
+        this.project.eslint?.addExtends(
             "plugin:react/recommended",
             "plugin:react-hooks/recommended",
             "plugin:jsx-a11y/recommended",
         );
-        this.eslint?.addRules({
+        this.project.eslint?.addRules({
             "react/prop-types": 0, // Disabled to prefer use of Typescript<Props>
         });
-        if (this.eslint?.config?.env) {
-            this.eslint.config.env.browser = true;
-            this.eslint.config.env.es6 = true;
+        if (this.project.eslint?.config?.env) {
+            this.project.eslint.config.env.browser = true;
+            this.project.eslint.config.env.es6 = true;
         }
 
-        if (this.eslint?.config?.settings) {
-            this.eslint.config.settings.react = {
+        if (this.project.eslint?.config?.settings) {
+            this.project.eslint.config.settings.react = {
                 pragma: "React",
                 version: "detect",
             };
         }
 
         // Test files
-        this.addDevDeps(
+        this.project.addDevDeps(
             "eslint-plugin-jest-dom",
             "eslint-plugin-testing-library",
         );
@@ -142,7 +159,7 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
             ...TEST_FOLDERS.map((folder) => `**/${folder}/**/*.[jt]s`),
             ...TEST_FILE_SUFFIXES.map((suffix) => `*.${suffix}.[jt]s`),
         ];
-        this.eslint?.addOverride({
+        this.project.eslint?.addOverride({
             files: [
                 ...jtsFiles,
                 ...jtsFiles.map((pattern) =>
@@ -155,9 +172,10 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
                 "plugin:jest-dom/recommended",
             ],
         });
+    }
 
-        // Jest
-        this.addDevDeps(
+    private configureJest(): void {
+        this.project.addDevDeps(
             "@testing-library/jest-dom",
             "@testing-library/react",
             "@testing-library/user-event",
@@ -174,26 +192,24 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         });
 
         for (const suffix of TEST_FILE_SUFFIXES) {
-            this.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
+            this.project.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
         }
     }
+}
 
-    public override renderWorkflowSetup(
-        options?: RenderWorkflowSetupOptions | undefined,
-    ): JobStep[] {
-        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
+export class Node20ReactTypeScriptProject extends TypeScriptProject {
+    constructor(options: TypeScriptProjectOptions) {
+        super(
+            deepMerge([
+                deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
+                options,
+            ]) as TypeScriptProjectOptions,
+        );
 
-        const originalSteps = super.renderWorkflowSetup(restOfOptions);
+        new DKBugFixes(this);
+        new EslintConfig(this);
+        new DKTasks(this);
 
-        return originalSteps.map((step) => {
-            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
-                return {
-                    workingDirectory: this.parent ? "." : undefined,
-                    ...step,
-                    ...(installJobStepOverrides ?? {}),
-                };
-            }
-            return step;
-        });
+        new Node20ReactTypescriptConfigurer(this);
     }
 }
