@@ -127,8 +127,19 @@ export class CSpellConfigFile extends Component {
             ...(options?.config ?? {}),
             version: options?.config?.version ?? "0.2",
             language: options?.config?.language ?? "en",
-            words: [...(options?.config?.words ?? []), ...PROJEN_WORDS],
-            flagWords: [...(options?.config?.flagWords ?? []), "hte", "thier"],
+            words: [
+                ...new Set([
+                    ...(options?.config?.words ?? []),
+                    ...PROJEN_WORDS,
+                ]),
+            ],
+            flagWords: [
+                ...new Set([
+                    ...(options?.config?.flagWords ?? []),
+                    "hte",
+                    "thier",
+                ]),
+            ],
         };
 
         new JsonFile(this.project, "cspell.json", {
