@@ -100,6 +100,11 @@
       "type": "peer"
     },
     {
+      "name": "dkershner6-projen-awscdk-core",
+      "version": "^0.x",
+      "type": "peer"
+    },
+    {
       "name": "dkershner6-projen-typescript",
       "version": "^0.x",
       "type": "peer"

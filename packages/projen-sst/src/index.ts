@@ -1,13 +1,49 @@
 import { Component, SampleDir, SampleFile, awscdk } from "projen";
 
+export interface SstConfigurationOptions {
+    /**
+     * Where to build .sst code to.
+     *
+     * @default ".sst/dist/"
+     */
+    sstOut?: string;
+
+    /**
+     * The version of SST to use.
+     *
+     * @default "2.39.2"
+     */
+    sstVersion?: string;
+}
+
+export interface SstConfiguration {
+    /**
+     * Where to build .sst code to.
+     *
+     * @default ".sst/dist/"
+     */
+    sstOut: string;
+}
+
 export interface SstTypescriptAppOptions
-    extends awscdk.AwsCdkTypeScriptAppOptions {}
+    extends awscdk.AwsCdkTypeScriptAppOptions,
+        SstConfigurationOptions {}
 
 const SST_CONFIG_FILE_NAME = "sst.config.ts";
 
 export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
+    public readonly sstConfig: SstConfiguration;
+    public readonly sstVersion: string;
+
     constructor(options: SstTypescriptAppOptions) {
         super({ ...options, sampleCode: false });
+
+        this.sstConfig = {
+            sstOut: options.sstOut ?? ".sst/dist/",
+        };
+        this.sstVersion = options.sstVersion ?? "2.39.2";
+
+        this.addDevDeps(`sst@${this.sstVersion}`);
 
         this.addIgnores();
         this.overrideTasks();
@@ -34,7 +70,10 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
         const synthTask = this.tasks.tryFind("synth");
         if (synthTask) {
             const { exec: _, ...restOfStep } = synthTask.steps[0];
-            synthTask.reset("sst build", restOfStep);
+            synthTask.reset(
+                `sst build --to ${this.sstConfig.sstOut}`,
+                restOfStep,
+            );
         }
 
         const synthSilentTask = this.tasks.tryFind("synth:silent");
