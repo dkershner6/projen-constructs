@@ -89,8 +89,6 @@ export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
 
 const ESM_MODULES_TO_TRANSFORM = [
     "@babel/runtime",
-    "@buildresonance/global-lib-storefront-shared-components",
-    "@buildresonance/global-lib-storefront-next-markdown",
     "@mui*",
     ".*separated-tokens",
     ".*util-gfm.*",
@@ -165,8 +163,11 @@ export class DKBugFixes extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
-        // DevDeps (doesnt work in config)
+        // DevDeps (doesn't work in config)
         project.addDevDeps("@types/clone-deep", "clone-deep");
+
+        project.addGitIgnore(".DS_Store");
+        project.npmignore?.exclude(".DS_Store");
 
         // TypeScript
         if (!(project instanceof AwsCdkConstructLibrary)) {

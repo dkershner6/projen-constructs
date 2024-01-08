@@ -9,6 +9,7 @@
     ".projen/deps.json",
     ".projen/files.json",
     ".projen/tasks.json",
+    "cspell.json",
     "LICENSE",
     "project.json",
     "README.md",

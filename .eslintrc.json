@@ -190,6 +190,15 @@
     },
     {
       "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "extends": [
+        "plugin:@cspell/recommended"
+      ]
+    },
+    {
+      "files": [
         ".projenrc.ts"
       ],
       "rules": {
