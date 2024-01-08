@@ -114,6 +114,7 @@ const PROJEN_WORDS = [
     "syncpack",
     "outdir",
     "rootdir",
+    "npmignore",
 ];
 
 export class CSpellConfigFile extends Component {

@@ -166,6 +166,9 @@ export class DKBugFixes extends Component {
         // DevDeps (doesn't work in config)
         project.addDevDeps("@types/clone-deep", "clone-deep");
 
+        project.addGitIgnore(".DS_Store");
+        project.npmignore?.exclude(".DS_Store");
+
         // TypeScript
         if (!(project instanceof AwsCdkConstructLibrary)) {
             for (const suffix of TEST_FILE_SUFFIXES) {

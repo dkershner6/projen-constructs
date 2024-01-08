@@ -15,7 +15,8 @@
     "jsii",
     "syncpack",
     "outdir",
-    "rootdir"
+    "rootdir",
+    "npmignore"
   ],
   "flagWords": [
     "hte",

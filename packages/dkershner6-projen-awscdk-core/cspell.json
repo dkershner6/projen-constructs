@@ -23,7 +23,8 @@
     "jsii",
     "syncpack",
     "outdir",
-    "rootdir"
+    "rootdir",
+    "npmignore"
   ],
   "version": "0.2",
   "language": "en",
