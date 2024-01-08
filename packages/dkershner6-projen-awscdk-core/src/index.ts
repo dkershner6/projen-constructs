@@ -99,6 +99,7 @@ export class AwsAppPublisher extends Component {
             if (releaseWorkflow) {
                 releaseWorkflow.addJob("release_aws", {
                     name: "Publish to AWS",
+                    if: this.project.release?.publisher.condition,
                     needs: ["release"],
                     ...filteredRunsOnOptions(
                         options.runsOn,
