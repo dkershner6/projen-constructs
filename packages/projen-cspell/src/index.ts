@@ -1,4 +1,4 @@
-import { Component, JsonFile } from "projen";
+import { Component, JsonFile, Project } from "projen";
 
 export interface CSpellConfig {
     /**
@@ -71,10 +71,12 @@ interface CSpellConfigFileOptions {
 export class CSpellConfigFile extends Component {
     public readonly config: CSpellConfig;
 
-    constructor(project: Component, options: CSpellConfigFileOptions) {
+    constructor(project: Project, options: CSpellConfigFileOptions) {
         super(project);
 
         this.config = options.config ?? {};
+
+        this.synthesizeContent();
     }
 
     public synthesizeContent(): void {
