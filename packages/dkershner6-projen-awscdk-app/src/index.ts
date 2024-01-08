@@ -31,7 +31,13 @@ export interface Node20AwsCdkAppOptions
      */
     readonly publishToAwsOptions?: Omit<
         AwsAppPublisherOptions,
-        "deployJobStepBuilder"
+        | "deployJobStepBuilder"
+        | "defaultReleaseBranch"
+        | "publishTasks"
+        | "runsOn"
+        | "runsOnGroup"
+        | "workflowBootstrapSteps"
+        | "workflowNodeVersion"
     >;
 }
 
@@ -70,12 +76,12 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
                 ...options.publishToAwsOptions,
                 deployJobStepBuilder: (builderParams) =>
                     this.buildDeployToAwsJobStep(builderParams.deployTask),
-                runsOn:
-                    options.publishToAwsOptions.runsOn ??
-                    options.workflowRunsOn,
-                runsOnGroup:
-                    options.publishToAwsOptions.runsOnGroup ??
-                    options.workflowRunsOnGroup,
+                defaultReleaseBranch: options.defaultReleaseBranch,
+                publishTasks: options.publishTasks,
+                runsOn: options.workflowRunsOn,
+                runsOnGroup: options.workflowRunsOnGroup,
+                workflowBootstrapSteps: options.workflowBootstrapSteps,
+                workflowNodeVersion: options.workflowNodeVersion,
             };
 
             new AwsAppPublisher(this, publishToAwsOptions);
