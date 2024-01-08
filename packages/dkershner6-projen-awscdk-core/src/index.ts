@@ -6,6 +6,7 @@ import {
     filteredRunsOnOptions,
     github,
 } from "projen";
+import { GitHubProject } from "projen/lib/github";
 import { JobStep } from "projen/lib/github/workflows-model";
 
 export interface DeployJobStepBuilderParams {
@@ -38,9 +39,17 @@ export interface AwsAppPublisherOptions {
         builderParams: DeployJobStepBuilderParams,
     ) => JobStep;
 
+    readonly defaultReleaseBranch?: string;
+
+    readonly publishTasks?: boolean;
+
     readonly runsOn?: string[];
 
     readonly runsOnGroup?: GroupRunnerOptions;
+
+    readonly workflowBootstrapSteps?: JobStep[];
+
+    readonly workflowNodeVersion?: string;
 }
 
 export class AwsAppPublisher extends Component {
@@ -55,8 +64,7 @@ export class AwsAppPublisher extends Component {
 
             if (this.project.release.branches) {
                 const otherBranches = this.project.release.branches.filter(
-                    // @ts-expect-error - Violate access
-                    (branch) => branch !== this.project.release?.defaultBranch,
+                    (branch) => branch !== options?.defaultReleaseBranch,
                 );
                 for (const branch of otherBranches) {
                     this.addPublishToAwsJob(options, branch);
@@ -74,8 +82,7 @@ export class AwsAppPublisher extends Component {
 
         const deployTask = this.project.tasks.tryFind(`deploy`);
         if (deployTask) {
-            // @ts-expect-error - Violate access
-            if (this.project.release?.publisher?.publishTasks) {
+            if (options.publishTasks) {
                 const publishToAwsTask = this.project.addTask(
                     `publish:aws${taskSuffix}`,
                 );
@@ -86,9 +93,9 @@ export class AwsAppPublisher extends Component {
                 });
             }
 
-            const releaseWorkflow = this.project.github?.tryFindWorkflow(
-                `release${workflowNameSuffix}`,
-            );
+            const releaseWorkflow = (
+                this.project.root as GitHubProject
+            ).github?.tryFindWorkflow(`release${workflowNameSuffix}`);
             if (releaseWorkflow) {
                 releaseWorkflow.addJob("release_aws", {
                     name: "Publish to AWS",
@@ -102,16 +109,13 @@ export class AwsAppPublisher extends Component {
                         packages: github.workflows.JobPermission.WRITE,
                     },
                     steps: [
-                        // @ts-expect-error - Violate access
-                        ...this.project.workflowBootstrapSteps,
+                        ...(options.workflowBootstrapSteps ?? []),
                         {
                             name: "Setup Node.js",
                             uses: "actions/setup-node@v3",
                             with: {
-                                // @ts-expect-error - Violate access
-                                ...(this.nodeVersion && {
-                                    // @ts-expect-error - Violate access
-                                    "node-version": this.nodeVersion,
+                                ...(options.workflowNodeVersion && {
+                                    "node-version": options.workflowNodeVersion,
                                 }),
                             },
                         },
