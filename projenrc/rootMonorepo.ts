@@ -37,6 +37,9 @@ export class RootMonorepo extends MonorepoProject {
             ),
         );
 
+        this.gitignore.exclude(".DS_Store");
+        this.npmignore?.exclude(".DS_Store");
+
         new DKBugFixes(this);
         new EslintConfig(this);
 
