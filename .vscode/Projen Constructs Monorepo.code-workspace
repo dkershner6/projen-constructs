@@ -10,6 +10,10 @@
       "path": ".."
     },
     {
+      "name": "(Lib) cspell",
+      "path": "../packages/projen-cspell"
+    },
+    {
       "name": "(Lib) github-workflows",
       "path": "../packages/projen-github-workflows"
     },
@@ -64,6 +68,7 @@
   ],
   "settings": {
     "eslint.workingDirectories": [
+      "./packages/projen-cspell",
       "./packages/projen-github-workflows",
       "./packages/projen-node",
       "./packages/projen-nvm",

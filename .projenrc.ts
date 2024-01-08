@@ -10,6 +10,12 @@ import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
 
+const cSpellProject = new ProjenConstructTsLib(rootProject, {
+    name: "projen-cspell",
+    keywords: ["cspell", "projen", "spellchecker"],
+    description: "Helpers for Projen projects that use cSpell.",
+});
+
 const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
@@ -185,19 +191,20 @@ const dkershnerMonorepoProject = new ProjenConstructTsLib(rootProject, {
 });
 
 const ALL_SUBPROJECTS = [
+    cSpellProject,
+    dkershnerAwsCdkLibraryProject,
+    dkershnerCdkAppCoreProject,
+    dkershnerCdkAppProject,
+    dkershnerGithubActionProject,
+    dkershnerMonorepoProject,
+    dkershnerReactProject,
+    dkershnerSstAppProject,
+    dkershnerTypescriptProject,
     gitHubWorkflowsProject,
     nodeProject,
     nvmProject,
     sstProject,
     vsCodeWorkspacesProject,
-    dkershnerTypescriptProject,
-    dkershnerReactProject,
-    dkershnerAwsCdkLibraryProject,
-    dkershnerGithubActionProject,
-    dkershnerCdkAppCoreProject,
-    dkershnerCdkAppProject,
-    dkershnerSstAppProject,
-    dkershnerMonorepoProject,
 ];
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.
