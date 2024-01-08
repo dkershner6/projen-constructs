@@ -9,6 +9,7 @@ packages:
   - packages/dkershner6-projen-react
   - packages/dkershner6-projen-sst-app
   - packages/dkershner6-projen-typescript
+  - packages/projen-cspell
   - packages/projen-github-workflows
   - packages/projen-node
   - packages/projen-nvm
