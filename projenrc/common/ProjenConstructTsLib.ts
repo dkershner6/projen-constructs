@@ -88,8 +88,20 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
 
         new CSpell(this, {
             config: {
-                words: ["ccount", "mdast", "micromark", "ncipollo", "panva",  "rehype", "rickstaa", "sonarjs", "vfile", "zwitch"]
-            }
+                words: [
+                    "ccount",
+                    "configurer",
+                    "mdast",
+                    "micromark",
+                    "ncipollo",
+                    "panva",
+                    "rehype",
+                    "rickstaa",
+                    "sonarjs",
+                    "vfile",
+                    "zwitch",
+                ],
+            },
         });
     }
 }
