@@ -47,6 +47,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
 
         super(combinedOptions);
 
+        this.gitattributes.addAttributes("/docs/", "linguist-generated");
         this.eslint?.allowDevDeps(`**/${this.srcdir}/**`);
 
         new TextFile(this, "README.md", {

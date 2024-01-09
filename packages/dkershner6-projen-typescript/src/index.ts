@@ -161,6 +161,13 @@ export class DKBugFixes extends Component {
         project.addPackageIgnore("/README.md");
         project.addPackageIgnore("/LICENSE");
 
+        if (project.docgen) {
+            project.gitattributes.addAttributes(
+                `/${project.docsDirectory}`,
+                "linguist-generated",
+            );
+        }
+
         // TypeScript
         if (!(project instanceof AwsCdkConstructLibrary)) {
             for (const suffix of TEST_FILE_SUFFIXES) {
