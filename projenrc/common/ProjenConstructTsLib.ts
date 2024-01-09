@@ -56,7 +56,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                 "",
                 "## Docs",
                 "",
-                `See [${this.name} API Docs](docs)`,
+                `See [${this.name} API Docs](docs/modules.md)`,
                 "",
                 "## Usage",
                 "",

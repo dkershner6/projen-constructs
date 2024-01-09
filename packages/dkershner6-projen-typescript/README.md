@@ -4,7 +4,7 @@ DKershner's preferred constructs for Projen TypeScript projects.
 
 ## Docs
 
-See [dkershner6-projen-typescript API Docs](docs)
+See [dkershner6-projen-typescript API Docs](docs/modules.md)
 
 ## Usage
 

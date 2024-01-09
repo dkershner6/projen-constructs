@@ -6,7 +6,7 @@ Helpers for Projen projects that use SST.
 
 ## Docs
 
-See [projen-sst API Docs](docs)
+See [projen-sst API Docs](docs/modules.md)
 
 ## Usage
 

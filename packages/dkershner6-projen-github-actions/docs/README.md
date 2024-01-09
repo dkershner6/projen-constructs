@@ -6,7 +6,7 @@ DKershner's preferred constructs for Projen GitHub Action projects.
 
 ## Docs
 
-See [dkershner6-projen-github-actions API Docs](docs)
+See [dkershner6-projen-github-actions API Docs](docs/modules.md)
 
 ## Usage
 

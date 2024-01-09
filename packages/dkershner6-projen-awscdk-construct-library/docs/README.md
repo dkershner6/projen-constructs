@@ -6,7 +6,7 @@ DKershner's preferred constructs for Projen AWS CDK Construct Libraries.
 
 ## Docs
 
-See [dkershner6-projen-awscdk-construct-library API Docs](docs)
+See [dkershner6-projen-awscdk-construct-library API Docs](docs/modules.md)
 
 ## Usage
 

@@ -6,7 +6,7 @@ Helpers for Projen projects that use cSpell.
 
 ## Docs
 
-See [projen-cspell API Docs](docs)
+See [projen-cspell API Docs](docs/modules.md)
 
 ## Usage
 

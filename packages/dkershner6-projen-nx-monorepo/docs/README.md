@@ -6,7 +6,7 @@ DKershner's preferred constructs for Projen NX Monorepos.
 
 ## Docs
 
-See [dkershner6-projen-nx-monorepo API Docs](docs)
+See [dkershner6-projen-nx-monorepo API Docs](docs/modules.md)
 
 ## Usage
 

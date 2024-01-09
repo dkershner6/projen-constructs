@@ -4,7 +4,7 @@ DKershner's preferred constructs for Projen SST Apps.
 
 ## Docs
 
-See [dkershner6-projen-sst-app API Docs](docs)
+See [dkershner6-projen-sst-app API Docs](docs/modules.md)
 
 ## Usage
 
