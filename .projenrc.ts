@@ -10,31 +10,37 @@ import { RootMonorepo } from "./projenrc/rootMonorepo";
 
 const rootProject = new RootMonorepo();
 
-const cSpellProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "projen-cspell",
     keywords: ["cspell", "projen", "spellchecker"],
     description: "Helpers for Projen projects that use cSpell.",
 });
 
-const gitHubWorkflowsProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
     description: "Helpers for Projen projects that use GitHub Workflows.",
 });
 
-const nodeProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "projen-node",
     keywords: ["projen", "node", "config", "configs"],
     description: "Helpers for Projen Node projects.",
 });
 
-const nvmProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "projen-nvm",
     keywords: ["projen", "nvm", "node", "version", "manager"],
     description: "Helpers for Projen projects that use NVM.",
 });
 
-const sstProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
+    name: "projen-typedoc",
+    keywords: ["projen", "typedoc", "docs", "documentation"],
+    description: "Helpers for Projen projects that use Typedoc (docgen).",
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "projen-sst",
     keywords: [
         "projen",
@@ -48,13 +54,13 @@ const sstProject = new ProjenConstructTsLib(rootProject, {
     description: "Helpers for Projen projects that use SST.",
 });
 
-const vsCodeWorkspacesProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "projen-vscode-workspaces",
     keywords: ["projen", "monorepo", "vscode", "workspaces", "workspace"],
     description: "Helpers for Projen projects that use VSCode workspaces.",
 });
 
-const dkershnerTypescriptProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-typescript",
     keywords: ["projen", "typescript", "ts", "config", "configs"],
     description:
@@ -63,7 +69,7 @@ const dkershnerTypescriptProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep"],
 });
 
-const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-react",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -79,7 +85,7 @@ const dkershnerReactProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
-const dkershnerAwsCdkLibraryProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-awscdk-construct-library",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -98,7 +104,7 @@ const dkershnerAwsCdkLibraryProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
-const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-github-actions",
     npmAccess: NpmAccess.PUBLIC,
     keywords: ["projen", "github", "actions", "action"],
@@ -112,7 +118,7 @@ const dkershnerGithubActionProject = new ProjenConstructTsLib(rootProject, {
     ],
 });
 
-const dkershnerCdkAppCoreProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-awscdk-core",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -127,7 +133,7 @@ const dkershnerCdkAppCoreProject = new ProjenConstructTsLib(rootProject, {
     description: "DKershner's common constructs for Projen AWS CDK Apps.",
 });
 
-const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-awscdk-app",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -149,7 +155,7 @@ const dkershnerCdkAppProject = new ProjenConstructTsLib(rootProject, {
     ],
 });
 
-const dkershnerSstAppProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-sst-app",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -173,7 +179,7 @@ const dkershnerSstAppProject = new ProjenConstructTsLib(rootProject, {
     ],
 });
 
-const dkershnerMonorepoProject = new ProjenConstructTsLib(rootProject, {
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-nx-monorepo",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [
@@ -190,22 +196,6 @@ const dkershnerMonorepoProject = new ProjenConstructTsLib(rootProject, {
     peerDeps: ["@aws/pdk", "clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
-const ALL_SUBPROJECTS = [
-    cSpellProject,
-    dkershnerAwsCdkLibraryProject,
-    dkershnerCdkAppCoreProject,
-    dkershnerCdkAppProject,
-    dkershnerGithubActionProject,
-    dkershnerMonorepoProject,
-    dkershnerReactProject,
-    dkershnerSstAppProject,
-    dkershnerTypescriptProject,
-    gitHubWorkflowsProject,
-    nodeProject,
-    nvmProject,
-    sstProject,
-    vsCodeWorkspacesProject,
-];
 // Using the packages inside this repo, for this repo.
 // Do not advise directly importing in a monorepo, but it is critical here for testing the packages.
 // Not directly importing creates a circular dependency.
@@ -226,22 +216,6 @@ new VsCodeWorkspaces(rootProject, {
 });
 
 new Nvmrc(rootProject);
-
-new TextFile(rootProject, "docs/index.html", {
-    lines: [
-        "<html>",
-        "<body>",
-        "<h1>Projen Constructs Docs</h1>",
-        "<ul>",
-        ...ALL_SUBPROJECTS.map(
-            (subProject) =>
-                `<li><a href="https://dkershner6.github.io/projen-constructs/${subProject.name}">${subProject.name}</a></li>`,
-        ),
-        "</ul>",
-        "</body>",
-        "</html>",
-    ],
-});
 
 new TextFile(rootProject, ".github/CODEOWNERS", {
     lines: ["* @dkershner6"],

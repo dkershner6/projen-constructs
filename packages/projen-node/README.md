@@ -4,7 +4,7 @@ Helpers for Projen Node projects.
 
 ## Docs
 
-See [projen-node API Docs](https://dkershner6.github.io/projen-constructs/projen-node)
+See [projen-node API Docs](docs)
 
 ## Usage
 

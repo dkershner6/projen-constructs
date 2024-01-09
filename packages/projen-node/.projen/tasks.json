@@ -62,10 +62,14 @@
     },
     "docgen": {
       "name": "docgen",
-      "description": "Generate TypeScript API reference ../../docs/projen-node",
+      "description": "Generate TypeScript API reference docs/",
       "steps": [
         {
-          "exec": "typedoc src --disableSources --out ../../docs/projen-node"
+          "exec": "typedoc src --disableSources --out docs/",
+          "args": [
+            "--plugin typedoc-plugin-markdown"
+          ],
+          "receiveArgs": true
         }
       ]
     },
@@ -236,13 +240,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,prettier,projen,standard-version,ts-jest,typedoc,typescript"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit prettier projen standard-version ts-jest typedoc typescript"
+          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit prettier projen standard-version ts-jest typedoc typedoc-plugin-markdown typescript"
         },
         {
           "exec": "npx projen"

@@ -56,6 +56,7 @@ junit.xml
 !/.github/workflows/release_projen-github-workflows.yml
 !/.github/workflows/release_projen-node.yml
 !/.github/workflows/release_projen-nvm.yml
+!/.github/workflows/release_projen-typedoc.yml
 !/.github/workflows/release_projen-sst.yml
 !/.github/workflows/release_projen-vscode-workspaces.yml
 !/.github/workflows/release_dkershner6-projen-typescript.yml
@@ -68,7 +69,6 @@ junit.xml
 !/.github/workflows/release_dkershner6-projen-nx-monorepo.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
-!/docs/index.html
 !/.github/CODEOWNERS
 !/pnpm-workspace.yaml
 !/.projenrc.ts

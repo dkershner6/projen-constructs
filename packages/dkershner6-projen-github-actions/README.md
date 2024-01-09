@@ -4,7 +4,7 @@ DKershner's preferred constructs for Projen GitHub Action projects.
 
 ## Docs
 
-See [dkershner6-projen-github-actions API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-github-actions)
+See [dkershner6-projen-github-actions API Docs](docs)
 
 ## Usage
 

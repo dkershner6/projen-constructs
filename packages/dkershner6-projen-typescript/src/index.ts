@@ -12,22 +12,6 @@ import {
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
 
-/**
- * Options for `renderWorkflowSetup()`.
- */
-export interface RenderWorkflowSetupOptions
-    extends javascript.RenderWorkflowSetupOptions {
-    /**
-     * Overrides for the install step in the workflow setup.
-     *
-     * @default - No overrides of the install step
-     *
-     * @example - { workingDirectory: "rootproject-dir" } for subprojects installing from root.
-     * @example - { env: { NPM_TOKEN: "token" }} for installing from private npm registry.
-     */
-    readonly installJobStepOverrides?: JobStep;
-}
-
 export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
 export const TEST_FILE_SUFFIXES = ["test", "spec"];

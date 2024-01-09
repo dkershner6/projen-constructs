@@ -4,7 +4,7 @@ DKershner's preferred constructs for Projen React projects.
 
 ## Docs
 
-See [dkershner6-projen-react API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-react)
+See [dkershner6-projen-react API Docs](docs)
 
 ## Usage
 

@@ -26,6 +26,10 @@
       "path": "../packages/projen-nvm"
     },
     {
+      "name": "(Lib) typedoc",
+      "path": "../packages/projen-typedoc"
+    },
+    {
       "name": "(Lib) sst",
       "path": "../packages/projen-sst"
     },
@@ -72,6 +76,7 @@
       "./packages/projen-github-workflows",
       "./packages/projen-node",
       "./packages/projen-nvm",
+      "./packages/projen-typedoc",
       "./packages/projen-sst",
       "./packages/projen-vscode-workspaces",
       "./packages/dkershner6-projen-typescript",
