@@ -39,6 +39,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             authorUrl: "https://dkershner.com",
             docgen: true,
         };
+
         const combinedOptions: TypeScriptProjectOptions = deepMerge([
             defaultOptions,
             options,
