@@ -22,4 +22,12 @@ dist
 tsconfig.tsbuildinfo
 /.eslintrc.json
 .DS_Store
+/project.json
+/docs/
+**/*.md
+/.jest/
+/CONTRIBUTING.md
+/README.md
+/LICENSE
+/cspell.json
 /.gitattributes

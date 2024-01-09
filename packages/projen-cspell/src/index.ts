@@ -147,6 +147,8 @@ export class CSpellConfigFile extends Component {
         new JsonFile(this.project, "cspell.json", {
             obj: this.config,
         });
+
+        this.project.addPackageIgnore("/cspell.json");
     }
 }
 
