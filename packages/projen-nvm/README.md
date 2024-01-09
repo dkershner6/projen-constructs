@@ -4,7 +4,7 @@ Helpers for Projen projects that use NVM.
 
 ## Docs
 
-See [projen-nvm API Docs](https://dkershner6.github.io/projen-constructs/projen-nvm)
+See [projen-nvm API Docs](docs)
 
 ## Usage
 

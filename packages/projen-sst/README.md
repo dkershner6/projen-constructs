@@ -4,7 +4,7 @@ Helpers for Projen projects that use SST.
 
 ## Docs
 
-See [projen-sst API Docs](https://dkershner6.github.io/projen-constructs/projen-sst)
+See [projen-sst API Docs](docs)
 
 ## Usage
 

@@ -4,7 +4,7 @@ DKershner's preferred constructs for Projen NX Monorepos.
 
 ## Docs
 
-See [dkershner6-projen-nx-monorepo API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-nx-monorepo)
+See [dkershner6-projen-nx-monorepo API Docs](docs)
 
 ## Usage
 

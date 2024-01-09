@@ -4,7 +4,7 @@ DKershner's common constructs for Projen AWS CDK Apps.
 
 ## Docs
 
-See [dkershner6-projen-awscdk-core API Docs](https://dkershner6.github.io/projen-constructs/dkershner6-projen-awscdk-core)
+See [dkershner6-projen-awscdk-core API Docs](docs)
 
 ## Usage
 

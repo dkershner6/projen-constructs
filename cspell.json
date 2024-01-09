@@ -16,7 +16,9 @@
     "syncpack",
     "outdir",
     "rootdir",
-    "npmignore"
+    "srcdir",
+    "npmignore",
+    "sonarjs"
   ],
   "flagWords": [
     "hte",

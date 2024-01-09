@@ -25,6 +25,7 @@
     "syncpack",
     "outdir",
     "rootdir",
+    "srcdir",
     "npmignore"
   ],
   "version": "0.2",

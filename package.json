@@ -143,6 +143,7 @@
       "packages/projen-node",
       "packages/projen-nvm",
       "packages/projen-sst",
+      "packages/projen-typedoc",
       "packages/projen-vscode-workspaces"
     ]
   },

@@ -4,7 +4,7 @@ Helpers for Projen projects that use cSpell.
 
 ## Docs
 
-See [projen-cspell API Docs](https://dkershner6.github.io/projen-constructs/projen-cspell)
+See [projen-cspell API Docs](docs)
 
 ## Usage
 

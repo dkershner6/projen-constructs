@@ -1,7 +1,6 @@
 import deepClone from "clone-deep";
 import { Component, javascript, ProjectOptions } from "projen";
 import { AwsCdkConstructLibrary } from "projen/lib/awscdk";
-import { JobStep } from "projen/lib/github/workflows-model";
 import {
     TypeScriptCompilerOptions,
     NodeProjectOptions,
@@ -11,22 +10,6 @@ import {
     TypeScriptProject,
 } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
-
-/**
- * Options for `renderWorkflowSetup()`.
- */
-export interface RenderWorkflowSetupOptions
-    extends javascript.RenderWorkflowSetupOptions {
-    /**
-     * Overrides for the install step in the workflow setup.
-     *
-     * @default - No overrides of the install step
-     *
-     * @example - { workingDirectory: "rootproject-dir" } for subprojects installing from root.
-     * @example - { env: { NPM_TOKEN: "token" }} for installing from private npm registry.
-     */
-    readonly installJobStepOverrides?: JobStep;
-}
 
 export const PUBLISH_FILE_PATTERNS: string[] = ["src/**/*.ts"];
 
@@ -323,24 +306,5 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
-    }
-
-    public override renderWorkflowSetup(
-        options?: RenderWorkflowSetupOptions | undefined,
-    ): JobStep[] {
-        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
-
-        const originalSteps = super.renderWorkflowSetup(restOfOptions);
-
-        return originalSteps.map((step) => {
-            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
-                return {
-                    workingDirectory: this.parent ? "." : undefined,
-                    ...step,
-                    ...(installJobStepOverrides ?? {}),
-                };
-            }
-            return step;
-        });
     }
 }

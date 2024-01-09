@@ -4,6 +4,7 @@ import { deepMerge } from "projen/lib/util";
 
 import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../../packages/projen-cspell/src";
+import { TypedocMarkdown } from "../../packages/projen-typedoc/src";
 import { RootMonorepo } from "../rootMonorepo";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
@@ -37,7 +38,6 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             authorName: "Derek Kershner",
             authorUrl: "https://dkershner.com",
             docgen: true,
-            docsDirectory: `../../docs/${options.name}`,
         };
         const combinedOptions: TypeScriptProjectOptions = deepMerge([
             defaultOptions,
@@ -56,7 +56,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                 "",
                 "## Docs",
                 "",
-                `See [${this.name} API Docs](https://dkershner6.github.io/projen-constructs/${this.name})`,
+                `See [${this.name} API Docs](docs)`,
                 "",
                 "## Usage",
                 "",
@@ -103,5 +103,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                 ],
             },
         });
+
+        new TypedocMarkdown(this);
     }
 }
