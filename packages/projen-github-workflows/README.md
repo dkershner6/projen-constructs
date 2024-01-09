@@ -4,7 +4,7 @@ Helpers for Projen projects that use GitHub Workflows.
 
 ## Docs
 
-See [projen-github-workflows API Docs](docs)
+See [projen-github-workflows API Docs](docs/modules.md)
 
 ## Usage
 

@@ -4,7 +4,7 @@ Helpers for Projen projects that use VSCode workspaces.
 
 ## Docs
 
-See [projen-vscode-workspaces API Docs](docs)
+See [projen-vscode-workspaces API Docs](docs/modules.md)
 
 ## Usage
 

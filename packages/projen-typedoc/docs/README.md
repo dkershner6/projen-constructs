@@ -6,7 +6,7 @@ Helpers for Projen projects that use Typedoc (docgen).
 
 ## Docs
 
-See [projen-typedoc API Docs](docs)
+See [projen-typedoc API Docs](docs/modules.md)
 
 ## Usage
 

@@ -4,7 +4,7 @@ Helpers for Projen Node projects.
 
 ## Docs
 
-See [projen-node API Docs](docs)
+See [projen-node API Docs](docs/modules.md)
 
 ## Usage
 
