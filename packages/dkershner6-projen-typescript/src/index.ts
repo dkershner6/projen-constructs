@@ -1,7 +1,6 @@
 import deepClone from "clone-deep";
 import { Component, javascript, ProjectOptions } from "projen";
 import { AwsCdkConstructLibrary } from "projen/lib/awscdk";
-import { JobStep } from "projen/lib/github/workflows-model";
 import {
     TypeScriptCompilerOptions,
     NodeProjectOptions,
@@ -307,24 +306,5 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
-    }
-
-    public override renderWorkflowSetup(
-        options?: RenderWorkflowSetupOptions | undefined,
-    ): JobStep[] {
-        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
-
-        const originalSteps = super.renderWorkflowSetup(restOfOptions);
-
-        return originalSteps.map((step) => {
-            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
-                return {
-                    workingDirectory: this.parent ? "." : undefined,
-                    ...step,
-                    ...(installJobStepOverrides ?? {}),
-                };
-            }
-            return step;
-        });
     }
 }

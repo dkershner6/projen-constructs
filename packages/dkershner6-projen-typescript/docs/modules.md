@@ -15,10 +15,6 @@
 - [EslintConfig](classes/EslintConfig.md)
 - [Node20TypeScriptProject](classes/Node20TypeScriptProject.md)
 
-### Interfaces
-
-- [RenderWorkflowSetupOptions](interfaces/RenderWorkflowSetupOptions.md)
-
 ### Variables
 
 - [DEV\_FILE\_PATTERNS](modules.md#dev_file_patterns)

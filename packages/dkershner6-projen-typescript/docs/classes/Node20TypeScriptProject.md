@@ -1508,17 +1508,22 @@ ___
 
 ▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
 
+Returns the set of workflow steps which should be executed to bootstrap a
+workflow.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`RenderWorkflowSetupOptions`](../interfaces/RenderWorkflowSetupOptions.md) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | `RenderWorkflowSetupOptions` | Options. |
 
 #### Returns
 
 `JobStep`[]
 
-#### Overrides
+Job steps
+
+#### Inherited from
 
 TypeScriptProject.renderWorkflowSetup
 

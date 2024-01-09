@@ -7,14 +7,12 @@ import {
     DKBugFixes,
     EslintConfig,
     DKTasks,
-    RenderWorkflowSetupOptions,
 } from "dkershner6-projen-typescript";
 import { ProjectOptions } from "projen";
 import {
     AwsCdkConstructLibrary,
     AwsCdkConstructLibraryOptions,
 } from "projen/lib/awscdk";
-import { JobStep } from "projen/lib/github/workflows-model";
 import { NodeProjectOptions } from "projen/lib/javascript";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
@@ -41,24 +39,5 @@ export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
-    }
-
-    public override renderWorkflowSetup(
-        options?: RenderWorkflowSetupOptions | undefined,
-    ): JobStep[] {
-        const { installJobStepOverrides, ...restOfOptions } = options ?? {};
-
-        const originalSteps = super.renderWorkflowSetup(restOfOptions);
-
-        return originalSteps.map((step) => {
-            if (step.name?.toLowerCase?.()?.startsWith?.("install")) {
-                return {
-                    workingDirectory: this.parent ? "." : undefined,
-                    ...step,
-                    ...(installJobStepOverrides ?? {}),
-                };
-            }
-            return step;
-        });
     }
 }
