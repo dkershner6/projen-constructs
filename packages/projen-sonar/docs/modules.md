@@ -7,3 +7,23 @@
 ### Classes
 
 - [SonarPropertiesFile](classes/SonarPropertiesFile.md)
+
+### Functions
+
+- [buildSonarQualityScanJobStep](modules.md#buildsonarqualityscanjobstep)
+
+## Functions
+
+### buildSonarQualityScanJobStep
+
+▸ **buildSonarQualityScanJobStep**(`jobStepConfig?`): `JobStep`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `jobStepConfig?` | `JobStepConfiguration` |
+
+#### Returns
+
+`JobStep`

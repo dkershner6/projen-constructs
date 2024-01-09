@@ -1,4 +1,22 @@
 import { Component, IniFile, IniFileOptions, Project } from "projen";
+import {
+    JobStep,
+    JobStepConfiguration,
+} from "projen/lib/github/workflows-model";
+
+export const buildSonarQualityScanJobStep = (
+    jobStepConfig?: JobStepConfiguration,
+): JobStep => ({
+    ...(jobStepConfig ?? {}),
+    name: jobStepConfig?.name ?? "Sonar Quality Scan",
+    continueOnError: jobStepConfig?.continueOnError ?? true,
+    env: {
+        SONAR_TOKEN: "${{ secrets.SONAR_TOKEN }}",
+        SONAR_HOST_URL: "${{ secrets.SONAR_HOST_URL }}",
+        ...(jobStepConfig?.env ?? {}),
+    },
+    uses: "sonarsource/sonarqube-scan-action@master",
+});
 
 export class SonarPropertiesFile extends Component {
     public static readonly PROJECT_KEY_FIELD_NAME = "sonar.projectKey";

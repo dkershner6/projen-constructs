@@ -99,24 +99,26 @@ export interface CSpellConfigFileOptions {
     readonly config?: CSpellConfig;
 }
 
-const PROJEN_WORDS = [
-    "projen",
-    "projenrc",
-    "rootproject",
-    "subproject",
-    "subprojects",
+const PROJEN_AND_THIS_MONOREPO_WORDS = [
     "awscdk",
     "cdkout",
-    "setfacl",
     "dkershner",
-    "kershner",
     "jsii",
-    "syncpack",
-    "outdir",
-    "rootdir",
-    "srcdir",
+    "kershner",
     "npmignore",
+    "outdir",
+    "projen",
+    "projenrc",
+    "rootdir",
+    "rootproject",
+    "setfacl",
     "sonarjs",
+    "sonarqube",
+    "sonarsource",
+    "srcdir",
+    "subproject",
+    "subprojects",
+    "syncpack",
 ];
 
 export class CSpellConfigFile extends Component {
@@ -132,7 +134,7 @@ export class CSpellConfigFile extends Component {
             words: [
                 ...new Set([
                     ...(options?.config?.words ?? []),
-                    ...PROJEN_WORDS,
+                    ...PROJEN_AND_THIS_MONOREPO_WORDS,
                 ]),
             ],
             flagWords: [
