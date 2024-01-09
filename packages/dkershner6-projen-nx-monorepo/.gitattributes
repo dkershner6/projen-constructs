@@ -12,6 +12,7 @@
 /.projen/files.json linguist-generated
 /.projen/tasks.json linguist-generated
 /cspell.json linguist-generated
+/docs/ linguist-generated
 /LICENSE linguist-generated
 /package.json linguist-generated
 /pnpm-lock.yaml linguist-generated
