@@ -19,6 +19,7 @@
 /.github/workflows/release_projen-github-workflows.yml linguist-generated
 /.github/workflows/release_projen-node.yml linguist-generated
 /.github/workflows/release_projen-nvm.yml linguist-generated
+/.github/workflows/release_projen-sonar.yml linguist-generated
 /.github/workflows/release_projen-sst.yml linguist-generated
 /.github/workflows/release_projen-typedoc.yml linguist-generated
 /.github/workflows/release_projen-vscode-workspaces.yml linguist-generated

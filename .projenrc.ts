@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 /* eslint-disable sonarjs/no-duplicate-string */
 import { TextFile } from "projen";
 import { NpmAccess } from "projen/lib/javascript";
@@ -35,9 +36,17 @@ new ProjenConstructTsLib(rootProject, {
 });
 
 new ProjenConstructTsLib(rootProject, {
-    name: "projen-typedoc",
-    keywords: ["projen", "typedoc", "docs", "documentation"],
-    description: "Helpers for Projen projects that use Typedoc (docgen).",
+    name: "projen-sonar",
+    keywords: [
+        "projen",
+        "sonar",
+        "sonarcloud",
+        "sonarqube",
+        "quality",
+        "qualitygate",
+        "sonarjs",
+    ],
+    description: "Helpers for Projen projects that use SST.",
 });
 
 new ProjenConstructTsLib(rootProject, {
@@ -52,6 +61,12 @@ new ProjenConstructTsLib(rootProject, {
         "cdk",
     ],
     description: "Helpers for Projen projects that use SST.",
+});
+
+new ProjenConstructTsLib(rootProject, {
+    name: "projen-typedoc",
+    keywords: ["projen", "typedoc", "docs", "documentation"],
+    description: "Helpers for Projen projects that use Typedoc (docgen).",
 });
 
 new ProjenConstructTsLib(rootProject, {
