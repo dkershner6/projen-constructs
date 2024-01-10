@@ -48,9 +48,6 @@ const DEFAULT_WORKSPACES_MONOREPO_EXTENSION_RECOMMENDATIONS = [
 
 const DEFAULT_PATH = ".vscode";
 
-export const NON_MONOREPO_ERROR_MESSAGE =
-    "VsCodeWorkspaces can only be used in a Project with subprojects";
-
 export class VsCodeWorkspaces extends Component {
     constructor(rootProject: Construct, options: VsCodeWorkspacesOptions) {
         super(rootProject);
