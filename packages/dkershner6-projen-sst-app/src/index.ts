@@ -66,6 +66,8 @@ export class Node20SstApp extends SstTypescriptApp {
         new EslintConfig(this);
 
         this.eslint?.allowDevDeps("src/main.ts");
+        this.eslint?.allowDevDeps("src/*Stack.ts");
+        this.eslint?.allowDevDeps("src/*Stack/index.ts");
         this.eslint?.allowDevDeps("src/stacks/**/*Stack.ts");
         this.eslint?.allowDevDeps("src/stacks/**/*Stack/index.ts");
 
