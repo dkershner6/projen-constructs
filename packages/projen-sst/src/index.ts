@@ -2,6 +2,13 @@ import { Component, SampleDir, SampleFile, awscdk } from "projen";
 
 export interface SstConfigurationOptions {
     /**
+     * Maps branchNames to SST Stages.
+     *
+     * @default - The branchName will be used as the stage name.
+     */
+    readonly branchNameToSstStageMap?: Record<string, string>;
+
+    /**
      * Where to build .sst code to.
      *
      * @default ".sst/dist/"
@@ -32,12 +39,14 @@ export interface SstTypescriptAppOptions
 const SST_CONFIG_FILE_NAME = "sst.config.ts";
 
 export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
+    public readonly branchNameToSstStageMap?: Record<string, string>;
     public readonly sstConfig: SstConfiguration;
     public readonly sstVersion: string;
 
-    constructor(options: SstTypescriptAppOptions) {
+    constructor(private readonly options: SstTypescriptAppOptions) {
         super({ ...options, sampleCode: false });
 
+        this.branchNameToSstStageMap = options.branchNameToSstStageMap;
         this.sstConfig = {
             sstOut: options.sstOut ?? ".sst/dist/",
         };
@@ -61,32 +70,97 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
     }
 
     private overrideTasks(): void {
+        this.overrideTasksForDefaultStage();
+
+        const otherBranches = this.release?.branches?.filter(
+            (branch) => branch !== this.options.defaultReleaseBranch,
+        );
+
+        if (otherBranches && otherBranches.length > 0) {
+            for (const branch of otherBranches) {
+                this.createTasksForBranch(branch);
+            }
+        }
+    }
+
+    private overrideTasksForDefaultStage(): void {
+        const defaultStageName =
+            this.branchNameToSstStageMap?.[this.options.defaultReleaseBranch] ??
+            this.options.defaultReleaseBranch;
+
         const deployTask = this.tasks.tryFind("deploy");
         if (deployTask) {
             const { exec: _, ...restOfStep } = deployTask.steps[0];
-            deployTask.reset("sst deploy", restOfStep);
+            deployTask.reset(`sst deploy --stage ${defaultStageName}`, {
+                ...restOfStep,
+                receiveArgs: true,
+            });
         }
 
         const synthTask = this.tasks.tryFind("synth");
         if (synthTask) {
             const { exec: _, ...restOfStep } = synthTask.steps[0];
             synthTask.reset(
-                `sst build --to ${this.sstConfig.sstOut}`,
-                restOfStep,
+                `sst build --stage ${defaultStageName} --to ${this.sstConfig.sstOut}`,
+                {
+                    ...restOfStep,
+                    receiveArgs: true,
+                },
             );
         }
 
         const synthSilentTask = this.tasks.tryFind("synth:silent");
         if (synthSilentTask) {
             const { exec: _, ...restOfStep } = synthSilentTask.steps[0];
-            synthSilentTask.reset("sst build", restOfStep);
+            synthSilentTask.reset(
+                `sst build --stage ${defaultStageName} --to ${this.sstConfig.sstOut}`,
+                {
+                    ...restOfStep,
+                    receiveArgs: true,
+                },
+            );
         }
 
         const destroyTask = this.tasks.tryFind("destroy");
         if (destroyTask) {
             const { exec: _, ...restOfStep } = destroyTask.steps[0];
-            destroyTask.reset("sst remove", restOfStep);
+            destroyTask.reset(
+                `sst remove sst build --stage ${defaultStageName}`,
+                {
+                    ...restOfStep,
+                    receiveArgs: true,
+                },
+            );
         }
+    }
+
+    private createTasksForBranch(branchName: string): void {
+        const stageName =
+            this.branchNameToSstStageMap?.[branchName] ?? branchName;
+
+        this.addTask(`deploy:${stageName}`, {
+            description: `Deploy ${stageName} stage`,
+            exec: `sst deploy --stage ${stageName}`,
+            receiveArgs: true,
+        });
+
+        this.addTask(`synth:${stageName}`, {
+            description: `Synth ${stageName} stage`,
+            exec: `sst build --stage ${stageName} --to ${this.sstConfig.sstOut}`,
+            receiveArgs: true,
+        });
+
+        this.addTask(`synth:silent:${stageName}`, {
+            description: `Synth ${stageName} stage`,
+            exec: `sst build --stage ${stageName} --to ${this.sstConfig.sstOut}`,
+            receiveArgs: true,
+        });
+
+        this.addTask(`destroy:${stageName}`, {
+            description: `Destroy ${stageName} stage`,
+            exec: `sst remove sst build --stage ${stageName}`,
+            receiveArgs: true,
+        });
     }
 }
 

@@ -10,6 +10,7 @@ import {
     EslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
+import { Task } from "projen";
 import { JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 import { SstTypescriptApp, SstTypescriptAppOptions } from "projen-sst";
@@ -39,13 +40,6 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
         | "workflowBootstrapSteps"
         | "workflowNodeVersion"
     >;
-
-    /**
-     * Maps branchNames to SST Stages.
-     *
-     * @default - The branchName will be used as the stage name.
-     */
-    readonly branchNameToSstStageMap?: Record<string, string>;
 }
 
 export class Node20SstApp extends SstTypescriptApp {
@@ -58,8 +52,6 @@ export class Node20SstApp extends SstTypescriptApp {
         ]) as Node20SstAppOptions;
 
         super(combinedOptions);
-
-        this.branchNameToSstStageMap = options.branchNameToSstStageMap;
 
         new DKBugFixes(this);
         new DKTasks(this);
@@ -107,26 +99,43 @@ export class Node20SstApp extends SstTypescriptApp {
         deployTask,
         branchName,
     }: DeployJobStepBuilderParams): JobStep {
-        const exec = deployTask.steps[0].exec;
-        const args = deployTask.steps[0].args;
-
-        const branchNameToUse =
-            // @ts-expect-error - Violate access
-            (branchName ?? this.release?.defaultBranch) as string;
+        const deployTaskToUse = this.determineDeployTaskToUseForAwsJobStep({
+            deployTask,
+            branchName,
+        });
+        const exec = deployTaskToUse.steps[0].exec;
+        const args = deployTaskToUse.steps[0].args;
 
         return {
             name: "Deploy to AWS",
             run: [
                 exec?.replace("sst", `npx sst@${this.sstVersion}`),
                 ...(args ?? []),
-                `--stage ${
-                    this.branchNameToSstStageMap?.[branchNameToUse] ??
-                    branchNameToUse
-                }`,
                 `--from ${this.artifactsDirectory}/${this.sstConfig.sstOut}`,
             ]
                 .filter(Boolean)
                 .join(" "),
         };
+    }
+
+    private determineDeployTaskToUseForAwsJobStep({
+        deployTask,
+        branchName,
+    }: DeployJobStepBuilderParams): Task {
+        if (!branchName) {
+            return deployTask;
+        }
+
+        const stageName =
+            this.branchNameToSstStageMap?.[branchName] ?? branchName;
+
+        const stageDeployTask = this.tasks.tryFind(`deploy:${stageName}`);
+        if (stageDeployTask) {
+            return stageDeployTask;
+        }
+
+        throw new Error(
+            `AWSPublisher: Cannot find deploy task for stage ${stageName}`,
+        );
     }
 }
