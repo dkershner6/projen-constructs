@@ -1,7 +1,7 @@
 import path from "path";
 
 import { Construct } from "constructs";
-import { JsonFile, Project } from "projen";
+import { Component, JsonFile, Project } from "projen";
 import { NodeProject } from "projen/lib/javascript";
 
 export type VsCodeWorkspacesJson = {
@@ -51,12 +51,11 @@ const DEFAULT_PATH = ".vscode";
 export const NON_MONOREPO_ERROR_MESSAGE =
     "VsCodeWorkspaces can only be used in a Project with subprojects";
 
-export class VsCodeWorkspaces extends JsonFile {
+export class VsCodeWorkspaces extends Component {
     constructor(rootProject: Construct, options: VsCodeWorkspacesOptions) {
-        if (
-            rootProject instanceof Project &&
-            (rootProject?.subprojects?.length ?? 0) > 0
-        ) {
+        super(rootProject);
+
+        if (rootProject instanceof Project) {
             const workspacesFilePath = options?.path ?? DEFAULT_PATH;
             const projectNamer =
                 options?.projectNamer ?? ((project) => project.name);
@@ -82,33 +81,34 @@ export class VsCodeWorkspaces extends JsonFile {
                             rootProject.outdir,
                         ),
                     },
-                    ...rootProject.subprojects.map((subProject) => ({
+                    ...(rootProject.subprojects?.map((subProject) => ({
                         name: projectNamer(subProject),
                         path: path.relative(
                             path.join(rootProject.outdir, workspacesFilePath),
                             subProject.outdir,
                         ),
-                    })),
+                    })) ?? []),
                 ],
                 settings: {
-                    ["eslint.workingDirectories"]: rootProject.subprojects.map(
-                        (subProject) =>
-                            `./${path.relative(
-                                rootProject.outdir,
-                                subProject.outdir,
-                            )}`,
-                    ),
+                    ["eslint.workingDirectories"]:
+                        rootProject.subprojects?.map(
+                            (subProject) =>
+                                `./${path.relative(
+                                    rootProject.outdir,
+                                    subProject.outdir,
+                                )}`,
+                        ) ?? [],
                     ["jest.disabledWorkspaceFolders"]: [
                         (rootProject as NodeProject).jest
                             ? rootProject.name
                             : null,
-                        ...rootProject.subprojects
-                            .filter(
+                        ...(rootProject.subprojects
+                            ?.filter(
                                 (subProject) =>
                                     subProject instanceof NodeProject &&
                                     !subProject.jest,
                             )
-                            .map((subProject) => subProject.name),
+                            ?.map((subProject) => subProject.name) ?? []),
                     ].filter(Boolean),
 
                     ...(options?.additionalWorkspacesJsonSettings?.settings ??
@@ -116,13 +116,13 @@ export class VsCodeWorkspaces extends JsonFile {
                 },
             };
 
-            super(rootProject, `${workspacesFilePath}/${options.filename}`, {
-                obj: workspacesJson,
-            });
-
-            return;
+            new JsonFile(
+                rootProject,
+                `${workspacesFilePath}/${options.filename}`,
+                {
+                    obj: workspacesJson,
+                },
+            );
         }
-
-        throw new Error(NON_MONOREPO_ERROR_MESSAGE);
     }
 }
