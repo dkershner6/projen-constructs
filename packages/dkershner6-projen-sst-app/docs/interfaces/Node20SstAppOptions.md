@@ -413,6 +413,10 @@ Maps branchNames to SST Stages.
 - The branchName will be used as the stage name.
 ```
 
+#### Inherited from
+
+SstTypescriptAppOptions.branchNameToSstStageMap
+
 ___
 
 ### bugsEmail

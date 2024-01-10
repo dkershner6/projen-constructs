@@ -43,8 +43,6 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
 }
 
 export class Node20SstApp extends SstTypescriptApp {
-    public branchNameToSstStageMap?: Record<string, string>;
-
     constructor(options: Node20SstAppOptions) {
         const combinedOptions: Node20SstAppOptions = deepMerge([
             deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
