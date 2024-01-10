@@ -60,7 +60,7 @@ ___
 
 ### projectNamer
 
-• `Optional` **projectNamer**: (`rootProject`: `Project`, `project`: `Project`) => `string`
+• `Optional` **projectNamer**: (`project`: `Project`, `rootProject`: `Project`) => `string`
 
 **`Default`**
 
@@ -78,14 +78,14 @@ The project definition to use for naming
 
 #### Type declaration
 
-▸ (`rootProject`, `project`): `string`
+▸ (`project`, `rootProject`): `string`
 
 ##### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `rootProject` | `Project` | The root project definition to use for naming |
 | `project` | `Project` | The project definition to use for naming |
+| `rootProject` | `Project` | The root project definition to use for naming |
 
 ##### Returns
 

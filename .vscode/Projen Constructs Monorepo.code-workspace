@@ -10,67 +10,67 @@
       "path": ".."
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) cspell",
       "path": "../packages/projen-cspell"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) github-workflows",
       "path": "../packages/projen-github-workflows"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) node",
       "path": "../packages/projen-node"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) nvm",
       "path": "../packages/projen-nvm"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) sonar",
       "path": "../packages/projen-sonar"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) sst",
       "path": "../packages/projen-sst"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) typedoc",
       "path": "../packages/projen-typedoc"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) vscode-workspaces",
       "path": "../packages/projen-vscode-workspaces"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-typescript",
       "path": "../packages/dkershner6-projen-typescript"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-react",
       "path": "../packages/dkershner6-projen-react"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-awscdk-construct-library",
       "path": "../packages/dkershner6-projen-awscdk-construct-library"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-github-actions",
       "path": "../packages/dkershner6-projen-github-actions"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-awscdk-core",
       "path": "../packages/dkershner6-projen-awscdk-core"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-awscdk-app",
       "path": "../packages/dkershner6-projen-awscdk-app"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-sst-app",
       "path": "../packages/dkershner6-projen-sst-app"
     },
     {
-      "name": "ROOT",
+      "name": "(Lib) dkershner6-nx-monorepo",
       "path": "../packages/dkershner6-projen-nx-monorepo"
     }
   ],
