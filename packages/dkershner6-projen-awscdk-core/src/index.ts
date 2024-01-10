@@ -1,6 +1,7 @@
 import {
     Component,
     GroupRunnerOptions,
+    Project,
     Task,
     awscdk,
     filteredRunsOnOptions,
@@ -95,7 +96,12 @@ export class AwsAppPublisher extends Component {
 
             const releaseWorkflow = (
                 this.project.root as GitHubProject
-            ).github?.tryFindWorkflow(`release${workflowNameSuffix}`);
+            ).github?.tryFindWorkflow(
+                `${workflowNameForProject(
+                    "release",
+                    this.project,
+                )}${workflowNameSuffix}`,
+            );
             if (releaseWorkflow) {
                 releaseWorkflow.addJob("release_aws", {
                     name: "Publish to AWS",
@@ -145,4 +151,19 @@ export class AwsAppPublisher extends Component {
             }
         }
     }
+}
+
+// release.ts in projen, not exported
+function workflowNameForProject(base: string, project: Project): string {
+    // Subprojects
+    if (project.parent) {
+        return `${base}_${fileSafeName(project.name)}`;
+    }
+
+    // root project doesn't get a suffix
+    return base;
+}
+
+function fileSafeName(name: string): string {
+    return name.replace("@", "").replace(/\//g, "-");
 }
