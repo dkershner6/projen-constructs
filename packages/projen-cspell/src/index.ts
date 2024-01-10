@@ -76,7 +76,7 @@ export interface CSpellConfig {
      * While you can create your own patterns, you can also leverage several patterns that are
      * [built-in to CSpell](https://cspell.org/types/cspell-types/types/PredefinedPatterns.html).
      */
-    readonly ignoreRegExpList?: string;
+    readonly ignoreRegExpList?: string[];
 
     /**
      * flagWords - list of words to be always considered incorrect
