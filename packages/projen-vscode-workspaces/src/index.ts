@@ -35,7 +35,7 @@ export interface VsCodeWorkspacesOptions {
      * @param project The project definition to use for naming
      * @returns The name of the project in the context of VSCode Workspaces
      */
-    projectNamer?: (rootProject: Project, project: Project) => string;
+    projectNamer?: (project: Project, rootProject: Project) => string;
     /**
      * @default ".vscode"
      */
@@ -80,7 +80,7 @@ export class VsCodeWorkspaces extends Component {
                         ),
                     },
                     ...(rootProject.subprojects?.map((subProject) => ({
-                        name: projectNamer(rootProject, subProject),
+                        name: projectNamer(subProject, rootProject),
                         path: path.relative(
                             path.join(rootProject.outdir, workspacesFilePath),
                             subProject.outdir,
