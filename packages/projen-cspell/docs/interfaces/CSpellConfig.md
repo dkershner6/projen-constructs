@@ -43,7 +43,7 @@ ___
 
 ### ignoreRegExpList
 
-• `Optional` `Readonly` **ignoreRegExpList**: `string`
+• `Optional` `Readonly` **ignoreRegExpList**: `string`[]
 
 List of regular expression patterns or pattern names to exclude from spell checking.
 
