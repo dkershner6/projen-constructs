@@ -27,6 +27,7 @@
 - [autoMerge](SstTypescriptAppOptions.md#automerge)
 - [autoMergeOptions](SstTypescriptAppOptions.md#automergeoptions)
 - [bin](SstTypescriptAppOptions.md#bin)
+- [branchNameToSstStageMap](SstTypescriptAppOptions.md#branchnametosststagemap)
 - [bugsEmail](SstTypescriptAppOptions.md#bugsemail)
 - [bugsUrl](SstTypescriptAppOptions.md#bugsurl)
 - [buildCommand](SstTypescriptAppOptions.md#buildcommand)
@@ -396,6 +397,24 @@ executable file under `bin` will automatically be added to this section.
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptAppOptions.bin
+
+___
+
+### branchNameToSstStageMap
+
+• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+
+Maps branchNames to SST Stages.
+
+**`Default`**
+
+```ts
+- The branchName will be used as the stage name.
+```
+
+#### Inherited from
+
+[SstConfigurationOptions](SstConfigurationOptions.md).[branchNameToSstStageMap](SstConfigurationOptions.md#branchnametosststagemap)
 
 ___
 

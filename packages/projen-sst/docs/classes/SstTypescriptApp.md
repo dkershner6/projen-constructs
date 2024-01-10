@@ -21,6 +21,7 @@
 - [artifactsJavascriptDirectory](SstTypescriptApp.md#artifactsjavascriptdirectory)
 - [autoApprove](SstTypescriptApp.md#autoapprove)
 - [autoMerge](SstTypescriptApp.md#automerge)
+- [branchNameToSstStageMap](SstTypescriptApp.md#branchnametosststagemap)
 - [buildWorkflow](SstTypescriptApp.md#buildworkflow)
 - [bundler](SstTypescriptApp.md#bundler)
 - [cdkConfig](SstTypescriptApp.md#cdkconfig)
@@ -45,6 +46,7 @@
 - [node](SstTypescriptApp.md#node)
 - [nodeVersion](SstTypescriptApp.md#nodeversion)
 - [npmignore](SstTypescriptApp.md#npmignore)
+- [options](SstTypescriptApp.md#options)
 - [outdir](SstTypescriptApp.md#outdir)
 - [package](SstTypescriptApp.md#package)
 - [parent](SstTypescriptApp.md#parent)
@@ -114,8 +116,10 @@
 - [addTestCommand](SstTypescriptApp.md#addtestcommand)
 - [addTip](SstTypescriptApp.md#addtip)
 - [annotateGenerated](SstTypescriptApp.md#annotategenerated)
+- [createTasksForBranch](SstTypescriptApp.md#createtasksforbranch)
 - [hasScript](SstTypescriptApp.md#hasscript)
 - [overrideTasks](SstTypescriptApp.md#overridetasks)
+- [overrideTasksForDefaultStage](SstTypescriptApp.md#overridetasksfordefaultstage)
 - [postSynthesize](SstTypescriptApp.md#postsynthesize)
 - [preSynthesize](SstTypescriptApp.md#presynthesize)
 - [removeScript](SstTypescriptApp.md#removescript)
@@ -214,6 +218,12 @@ Component that sets up mergify for merging approved pull requests.
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptApp.autoMerge
+
+___
+
+### branchNameToSstStageMap
+
+• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
 ___
 
@@ -499,6 +509,12 @@ The .npmignore file.
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptApp.npmignore
+
+___
+
+### options
+
+• `Private` `Readonly` **options**: [`SstTypescriptAppOptions`](../interfaces/SstTypescriptAppOptions.md)
 
 ___
 
@@ -1516,6 +1532,22 @@ awscdk.AwsCdkTypeScriptApp.annotateGenerated
 
 ___
 
+### createTasksForBranch
+
+▸ **createTasksForBranch**(`branchName`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `branchName` | `string` |
+
+#### Returns
+
+`void`
+
+___
+
 ### hasScript
 
 ▸ **hasScript**(`name`): `boolean`
@@ -1545,6 +1577,16 @@ ___
 ### overrideTasks
 
 ▸ **overrideTasks**(): `void`
+
+#### Returns
+
+`void`
+
+___
+
+### overrideTasksForDefaultStage
+
+▸ **overrideTasksForDefaultStage**(): `void`
 
 #### Returns
 

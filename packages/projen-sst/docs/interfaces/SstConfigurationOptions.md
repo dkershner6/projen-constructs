@@ -12,10 +12,25 @@
 
 ### Properties
 
+- [branchNameToSstStageMap](SstConfigurationOptions.md#branchnametosststagemap)
 - [sstOut](SstConfigurationOptions.md#sstout)
 - [sstVersion](SstConfigurationOptions.md#sstversion)
 
 ## Properties
+
+### branchNameToSstStageMap
+
+• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+
+Maps branchNames to SST Stages.
+
+**`Default`**
+
+```ts
+- The branchName will be used as the stage name.
+```
+
+___
 
 ### sstOut
 

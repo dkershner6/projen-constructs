@@ -115,6 +115,7 @@
 - [addTip](Node20SstApp.md#addtip)
 - [annotateGenerated](Node20SstApp.md#annotategenerated)
 - [buildDeployToAwsJobStep](Node20SstApp.md#builddeploytoawsjobstep)
+- [determineDeployTaskToUseForAwsJobStep](Node20SstApp.md#determinedeploytasktouseforawsjobstep)
 - [hasScript](Node20SstApp.md#hasscript)
 - [overridePackageTask](Node20SstApp.md#overridepackagetask)
 - [postSynthesize](Node20SstApp.md#postsynthesize)
@@ -220,7 +221,11 @@ ___
 
 ### branchNameToSstStageMap
 
-• `Optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+
+#### Inherited from
+
+SstTypescriptApp.branchNameToSstStageMap
 
 ___
 
@@ -1534,6 +1539,22 @@ ___
 #### Returns
 
 `JobStep`
+
+___
+
+### determineDeployTaskToUseForAwsJobStep
+
+▸ **determineDeployTaskToUseForAwsJobStep**(`«destructured»`): `Task`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `DeployJobStepBuilderParams` |
+
+#### Returns
+
+`Task`
 
 ___
 
