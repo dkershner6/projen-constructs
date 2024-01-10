@@ -16,10 +16,6 @@
 
 - [VsCodeWorkspacesJson](modules.md#vscodeworkspacesjson)
 
-### Variables
-
-- [NON\_MONOREPO\_ERROR\_MESSAGE](modules.md#non_monorepo_error_message)
-
 ## Type Aliases
 
 ### VsCodeWorkspacesJson
@@ -34,9 +30,3 @@
 | `extensions.recommendations?` | `string`[] |
 | `folders` | \{ `name`: `string` ; `path`: `string`  }[] |
 | `settings?` | \{ `[key: string]`: `unknown`;  } |
-
-## Variables
-
-### NON\_MONOREPO\_ERROR\_MESSAGE
-
-• `Const` **NON\_MONOREPO\_ERROR\_MESSAGE**: ``"VsCodeWorkspaces can only be used in a Project with subprojects"``
