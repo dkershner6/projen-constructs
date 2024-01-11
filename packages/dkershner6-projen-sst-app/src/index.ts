@@ -1,3 +1,5 @@
+import path from "path";
+
 import deepClone from "clone-deep";
 import {
     AwsAppPublisher,
@@ -14,6 +16,7 @@ import { Task, filteredRunsOnOptions, github } from "projen";
 import { GitHubProject, WorkflowSteps } from "projen/lib/github";
 import { Job, JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
+import { ensureRelativePathStartsWithDot } from "projen/lib/util/path";
 import { SstTypescriptApp, SstTypescriptAppOptions } from "projen-sst";
 
 export interface Node20SstAppOptions extends SstTypescriptAppOptions {
@@ -146,11 +149,21 @@ export class Node20SstApp extends SstTypescriptApp {
 
     public buildPublishToAwsJob(
         { deployTask, branchName }: DeployJobStepBuilderParams,
-        options: AwsAppPublisherOptions,
+        options: Pick<
+            AwsAppPublisherOptions,
+            | "configureAwsCredentialsJobSteps"
+            | "deployJobStepBuilder"
+            | "runsOn"
+            | "runsOnGroup"
+        >,
     ): Job {
-        // We are basically ignoring the artifact since SST needs too many things to use it
+        const projectPathRelativeToRoot = path.relative(
+            this.root.outdir,
+            this.outdir,
+        );
+
+        // We are basically ignoring the artifact since SST needs too many things to use it anyway
         return {
-            ...(options ?? {}),
             name: "Publish to AWS",
             if: this.release?.publisher.condition,
             needs: ["release"],
@@ -159,10 +172,24 @@ export class Node20SstApp extends SstTypescriptApp {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,
             },
+            defaults:
+                projectPathRelativeToRoot.length > 0 // is subproject
+                    ? {
+                          run: {
+                              workingDirectory: ensureRelativePathStartsWithDot(
+                                  projectPathRelativeToRoot,
+                              ),
+                          },
+                      }
+                    : undefined,
             steps: [
                 WorkflowSteps.checkout(),
                 ...this.workflowBootstrapSteps,
-                ...this.renderWorkflowSetup(),
+                ...this.renderWorkflowSetup({
+                    installStepConfiguration: {
+                        workingDirectory: ".",
+                    },
+                }),
                 ...(options.configureAwsCredentialsJobSteps ?? []),
                 options.deployJobStepBuilder({
                     deployTask,
