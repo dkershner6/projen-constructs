@@ -14,7 +14,7 @@ export interface DeployJobStepBuilderParams {
     /**
      * The branch name being published. Undefined for the default branch.
      */
-    readonly branchName: string | undefined;
+    readonly branchName?: string;
 
     /**
      * The deploy task of the project.

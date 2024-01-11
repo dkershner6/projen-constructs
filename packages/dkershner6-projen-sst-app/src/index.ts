@@ -90,16 +90,16 @@ export class Node20SstApp extends SstTypescriptApp {
                         "release_aws",
                         this.buildPublishToAwsJob(
                             {
-                                branchName: undefined,
                                 deployTask,
                             },
-                            options.publishToAwsOptions
-                                ?.configureAwsCredentialsJobSteps,
                             {
-                                ...filteredRunsOnOptions(
-                                    options.workflowRunsOn,
-                                    options.workflowRunsOnGroup,
-                                ),
+                                configureAwsCredentialsJobSteps:
+                                    options.publishToAwsOptions
+                                        ?.configureAwsCredentialsJobSteps,
+                                deployJobStepBuilder: (builderParams) =>
+                                    this.buildDeployToAwsJobStep(builderParams),
+                                runsOn: options.workflowRunsOn,
+                                runsOnGroup: options.workflowRunsOnGroup,
                             },
                         ),
                     );
@@ -112,16 +112,30 @@ export class Node20SstApp extends SstTypescriptApp {
                         for (const branch of otherBranches) {
                             releaseWorkflow?.addJob(
                                 `release_aws-${branch}`,
-                                this.buildPublishToAwsJob({
-                                    branchName: branch,
-                                    deployTask:
-                                        this.determineDeployTaskToUseForAwsJobStep(
-                                            {
-                                                deployTask,
-                                                branchName: branch,
-                                            },
-                                        ),
-                                }),
+                                this.buildPublishToAwsJob(
+                                    {
+                                        branchName: branch,
+                                        deployTask:
+                                            this.determineDeployTaskToUseForAwsJobStep(
+                                                {
+                                                    deployTask,
+                                                    branchName: branch,
+                                                },
+                                            ),
+                                    },
+                                    {
+                                        configureAwsCredentialsJobSteps:
+                                            options.publishToAwsOptions
+                                                ?.configureAwsCredentialsJobSteps,
+                                        deployJobStepBuilder: (builderParams) =>
+                                            this.buildDeployToAwsJobStep(
+                                                builderParams,
+                                            ),
+                                        runsOn: options.workflowRunsOn,
+                                        runsOnGroup:
+                                            options.workflowRunsOnGroup,
+                                    },
+                                ),
                             );
                         }
                     }
@@ -132,8 +146,7 @@ export class Node20SstApp extends SstTypescriptApp {
 
     public buildPublishToAwsJob(
         { deployTask, branchName }: DeployJobStepBuilderParams,
-        configureAwsCredentialsJobSteps?: JobStep[],
-        options?: Partial<Job>,
+        options: AwsAppPublisherOptions,
     ): Job {
         // We are basically ignoring the artifact since SST needs too many things to use it
         return {
@@ -141,6 +154,7 @@ export class Node20SstApp extends SstTypescriptApp {
             name: "Publish to AWS",
             if: this.release?.publisher.condition,
             needs: ["release"],
+            ...filteredRunsOnOptions(options.runsOn, options.runsOnGroup),
             permissions: {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,
@@ -149,8 +163,11 @@ export class Node20SstApp extends SstTypescriptApp {
                 WorkflowSteps.checkout(),
                 ...this.workflowBootstrapSteps,
                 ...this.renderWorkflowSetup(),
-                ...(configureAwsCredentialsJobSteps ?? []),
-                this.buildDeployToAwsJobStep({ deployTask, branchName }),
+                ...(options.configureAwsCredentialsJobSteps ?? []),
+                options.deployJobStepBuilder({
+                    deployTask,
+                    branchName,
+                }),
             ],
         };
     }

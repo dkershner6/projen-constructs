@@ -1544,15 +1544,14 @@ ___
 
 ### buildPublishToAwsJob
 
-▸ **buildPublishToAwsJob**(`«destructured»`, `configureAwsCredentialsJobSteps?`, `options?`): `Job`
+▸ **buildPublishToAwsJob**(`«destructured»`, `options`): `Job`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `DeployJobStepBuilderParams` |
-| `configureAwsCredentialsJobSteps?` | `JobStep`[] |
-| `options?` | `Partial`\<`Job`\> |
+| `options` | `AwsAppPublisherOptions` |
 
 #### Returns
 
