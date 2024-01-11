@@ -8,7 +8,31 @@ import {
     github,
 } from "projen";
 import { GitHubProject } from "projen/lib/github";
-import { Job, JobStep } from "projen/lib/github/workflows-model";
+import {
+    Job,
+    JobStep,
+    JobStepConfiguration,
+} from "projen/lib/github/workflows-model";
+
+export interface PublishToAwsOptions {
+    /**
+     * Whether or not to automatically add the job to the release workflow.
+     *
+     * @default true
+     */
+    readonly autoAddJob?: boolean;
+
+    /**
+     * Typically a single step involved in configuring AWS credentials.
+     * AKA aws-actions/configure-aws-credentials
+     */
+    readonly configureAwsCredentialsJobSteps: JobStep[];
+
+    /**
+     * Additional configuration for the deploy job step.
+     */
+    readonly deployJobStepConfiguration?: JobStepConfiguration;
+}
 
 export interface DeployJobStepBuilderParams {
     /**

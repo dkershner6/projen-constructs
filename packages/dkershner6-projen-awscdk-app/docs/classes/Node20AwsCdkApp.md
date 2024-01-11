@@ -52,6 +52,7 @@
 - [projectBuild](Node20AwsCdkApp.md#projectbuild)
 - [projectType](Node20AwsCdkApp.md#projecttype)
 - [projenCommand](Node20AwsCdkApp.md#projencommand)
+- [publishToAwsOptions](Node20AwsCdkApp.md#publishtoawsoptions)
 - [publisher](Node20AwsCdkApp.md#publisher)
 - [release](Node20AwsCdkApp.md#release)
 - [runScriptCommand](Node20AwsCdkApp.md#runscriptcommand)
@@ -578,6 +579,12 @@ The command to use in order to run the projen CLI.
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptApp.projenCommand
+
+___
+
+### publishToAwsOptions
+
+• `Private` `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
 
 ___
 

@@ -12,3 +12,4 @@
 
 - [AwsAppPublisherOptions](interfaces/AwsAppPublisherOptions.md)
 - [DeployJobStepBuilderParams](interfaces/DeployJobStepBuilderParams.md)
+- [PublishToAwsOptions](interfaces/PublishToAwsOptions.md)
