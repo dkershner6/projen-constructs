@@ -53,7 +53,6 @@
 - [projectBuild](Node20SstApp.md#projectbuild)
 - [projectType](Node20SstApp.md#projecttype)
 - [projenCommand](Node20SstApp.md#projencommand)
-- [publishToAwsOptions](Node20SstApp.md#publishtoawsoptions)
 - [publisher](Node20SstApp.md#publisher)
 - [release](Node20SstApp.md#release)
 - [runScriptCommand](Node20SstApp.md#runscriptcommand)
@@ -592,12 +591,6 @@ The command to use in order to run the projen CLI.
 #### Inherited from
 
 SstTypescriptApp.projenCommand
-
-___
-
-### publishToAwsOptions
-
-• `Private` `Optional` `Readonly` **publishToAwsOptions**: `Omit`\<`AwsAppPublisherOptions`, ``"deployJobStepBuilder"`` \| ``"defaultReleaseBranch"`` \| ``"publishTasks"`` \| ``"runsOn"`` \| ``"runsOnGroup"`` \| ``"workflowBootstrapSteps"`` \| ``"workflowNodeVersion"``\>
 
 ___
 
@@ -1551,13 +1544,14 @@ ___
 
 ### buildPublishToAwsJob
 
-▸ **buildPublishToAwsJob**(`«destructured»`, `options?`): `Job`
+▸ **buildPublishToAwsJob**(`«destructured»`, `configureAwsCredentialsJobSteps?`, `options?`): `Job`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `DeployJobStepBuilderParams` |
+| `configureAwsCredentialsJobSteps?` | `JobStep`[] |
 | `options?` | `Partial`\<`Job`\> |
 
 #### Returns

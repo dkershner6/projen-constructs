@@ -44,17 +44,6 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
 }
 
 export class Node20SstApp extends SstTypescriptApp {
-    private readonly publishToAwsOptions?: Omit<
-        AwsAppPublisherOptions,
-        | "deployJobStepBuilder"
-        | "defaultReleaseBranch"
-        | "publishTasks"
-        | "runsOn"
-        | "runsOnGroup"
-        | "workflowBootstrapSteps"
-        | "workflowNodeVersion"
-    >;
-
     // eslint-disable-next-line sonarjs/cognitive-complexity
     constructor(options: Node20SstAppOptions) {
         const combinedOptions: Node20SstAppOptions = deepMerge([
@@ -63,8 +52,6 @@ export class Node20SstApp extends SstTypescriptApp {
         ]) as Node20SstAppOptions;
 
         super(combinedOptions);
-
-        this.publishToAwsOptions = options.publishToAwsOptions;
 
         new DKBugFixes(this);
         new DKTasks(this);
@@ -106,6 +93,8 @@ export class Node20SstApp extends SstTypescriptApp {
                                 branchName: undefined,
                                 deployTask,
                             },
+                            options.publishToAwsOptions
+                                ?.configureAwsCredentialsJobSteps,
                             {
                                 ...filteredRunsOnOptions(
                                     options.workflowRunsOn,
@@ -143,6 +132,7 @@ export class Node20SstApp extends SstTypescriptApp {
 
     public buildPublishToAwsJob(
         { deployTask, branchName }: DeployJobStepBuilderParams,
+        configureAwsCredentialsJobSteps?: JobStep[],
         options?: Partial<Job>,
     ): Job {
         // We are basically ignoring the artifact since SST needs too many things to use it
@@ -159,8 +149,7 @@ export class Node20SstApp extends SstTypescriptApp {
                 WorkflowSteps.checkout(),
                 ...this.workflowBootstrapSteps,
                 ...this.renderWorkflowSetup(),
-                ...(this.publishToAwsOptions?.configureAwsCredentialsJobSteps ??
-                    []),
+                ...(configureAwsCredentialsJobSteps ?? []),
                 this.buildDeployToAwsJobStep({ deployTask, branchName }),
             ],
         };
