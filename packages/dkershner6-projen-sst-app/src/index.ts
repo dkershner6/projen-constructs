@@ -10,7 +10,7 @@ import {
     EslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
-import { Task, github } from "projen";
+import { Task, filteredRunsOnOptions, github } from "projen";
 import { GitHubProject, WorkflowSteps } from "projen/lib/github";
 import { Job, JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
@@ -101,10 +101,18 @@ export class Node20SstApp extends SstTypescriptApp {
                 if (deployTask) {
                     releaseWorkflow?.addJob(
                         "release_aws",
-                        this.buildPublishToAwsJob({
-                            branchName: undefined,
-                            deployTask,
-                        }),
+                        this.buildPublishToAwsJob(
+                            {
+                                branchName: undefined,
+                                deployTask,
+                            },
+                            {
+                                ...filteredRunsOnOptions(
+                                    options.workflowRunsOn,
+                                    options.workflowRunsOnGroup,
+                                ),
+                            },
+                        ),
                     );
 
                     if (this.release.branches) {
