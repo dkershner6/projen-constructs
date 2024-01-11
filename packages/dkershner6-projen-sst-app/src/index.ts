@@ -95,6 +95,9 @@ export class Node20SstApp extends SstTypescriptApp {
         this.packageTask.exec(
             `cp -r ${this.sstConfig.sstOut} ${this.artifactsDirectory}`,
         );
+        this.packageTask.exec(
+            `cp sst.config.ts ${this.artifactsDirectory}/sst.config.ts`,
+        );
     }
 
     protected buildDeployToAwsJobStep({
