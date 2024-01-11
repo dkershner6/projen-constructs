@@ -99,9 +99,12 @@ export class Node20SstApp extends SstTypescriptApp {
         this.packageTask.exec(
             `cp -r ${this.sstConfig.sstOut} ${this.artifactsDirectory}`,
         );
-        this.packageTask.exec(
-            `cp sst.config.ts ${this.artifactsDirectory}/sst.config.ts`,
-        );
+        for (const filename of ["package.json", "sst.config.ts"]) {
+            // These are required by SST CLI, for reasons I cannot discern
+            this.packageTask.exec(
+                `cp ${filename} ${this.artifactsDirectory}/${filename}`,
+            );
+        }
     }
 
     protected buildDeployToAwsJobStep({
