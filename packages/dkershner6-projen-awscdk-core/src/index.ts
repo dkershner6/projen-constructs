@@ -61,6 +61,20 @@ export interface AwsAppPublisherOptions {
 }
 
 export class AwsAppPublisher extends Component {
+    /** release.ts in projen, not exported */
+    public static workflowNameForProject(
+        base: string,
+        project: Project,
+    ): string {
+        // Subprojects
+        if (project.parent) {
+            return `${base}_${fileSafeName(project.name)}`;
+        }
+
+        // root project doesn't get a suffix
+        return base;
+    }
+
     constructor(
         public override readonly project: awscdk.AwsCdkTypeScriptApp,
         private readonly options: AwsAppPublisherOptions,
@@ -104,14 +118,14 @@ export class AwsAppPublisher extends Component {
             const releaseWorkflow = (
                 this.project.root as GitHubProject
             ).github?.tryFindWorkflow(
-                `${workflowNameForProject(
+                `${AwsAppPublisher.workflowNameForProject(
                     "release",
                     this.project,
                 )}${workflowNameSuffix}`,
             );
             if (releaseWorkflow) {
                 releaseWorkflow.addJob(
-                    "release_aws",
+                    `release_aws${workflowNameSuffix}`,
                     this.buildPublishToAwsJob(deployTask, branchName),
                 );
             }
@@ -172,17 +186,6 @@ export class AwsAppPublisher extends Component {
             ],
         };
     }
-}
-
-// release.ts in projen, not exported
-function workflowNameForProject(base: string, project: Project): string {
-    // Subprojects
-    if (project.parent) {
-        return `${base}_${fileSafeName(project.name)}`;
-    }
-
-    // root project doesn't get a suffix
-    return base;
 }
 
 function fileSafeName(name: string): string {

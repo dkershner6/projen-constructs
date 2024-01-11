@@ -30,6 +30,7 @@
 - [toString](AwsAppPublisher.md#tostring)
 - [isComponent](AwsAppPublisher.md#iscomponent)
 - [isConstruct](AwsAppPublisher.md#isconstruct)
+- [workflowNameForProject](AwsAppPublisher.md#workflownameforproject)
 
 ## Constructors
 
@@ -240,3 +241,22 @@ true if `x` is an object created from a class which extends `Construct`.
 #### Inherited from
 
 Component.isConstruct
+
+___
+
+### workflowNameForProject
+
+▸ **workflowNameForProject**(`base`, `project`): `string`
+
+release.ts in projen, not exported
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `base` | `string` |
+| `project` | `Project` |
+
+#### Returns
+
+`string`

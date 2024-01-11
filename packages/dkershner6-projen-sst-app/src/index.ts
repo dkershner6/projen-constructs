@@ -10,8 +10,9 @@ import {
     EslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
-import { Task } from "projen";
-import { JobStep } from "projen/lib/github/workflows-model";
+import { Task, github } from "projen";
+import { GitHubProject, WorkflowSteps } from "projen/lib/github";
+import { Job, JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 import { SstTypescriptApp, SstTypescriptAppOptions } from "projen-sst";
 
@@ -43,6 +44,18 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
 }
 
 export class Node20SstApp extends SstTypescriptApp {
+    private readonly publishToAwsOptions?: Omit<
+        AwsAppPublisherOptions,
+        | "deployJobStepBuilder"
+        | "defaultReleaseBranch"
+        | "publishTasks"
+        | "runsOn"
+        | "runsOnGroup"
+        | "workflowBootstrapSteps"
+        | "workflowNodeVersion"
+    >;
+
+    // eslint-disable-next-line sonarjs/cognitive-complexity
     constructor(options: Node20SstAppOptions) {
         const combinedOptions: Node20SstAppOptions = deepMerge([
             deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
@@ -50,6 +63,8 @@ export class Node20SstApp extends SstTypescriptApp {
         ]) as Node20SstAppOptions;
 
         super(combinedOptions);
+
+        this.publishToAwsOptions = options.publishToAwsOptions;
 
         new DKBugFixes(this);
         new DKTasks(this);
@@ -65,46 +80,82 @@ export class Node20SstApp extends SstTypescriptApp {
             this.addDeps(`constructs@${options.constructsVersion}`);
         }
 
-        if (this.package) {
-            this.overridePackageTask();
-        }
+        // No overriding package, since SST cant use an artifact
 
         if (
             this.release &&
             options.publishToAws &&
             options.publishToAwsOptions
         ) {
-            const publishToAwsOptions: AwsAppPublisherOptions = {
-                ...options.publishToAwsOptions,
-                deployJobStepBuilder: (builderParams) =>
-                    this.buildDeployToAwsJobStep(builderParams),
-                defaultReleaseBranch: options.defaultReleaseBranch,
-                publishTasks: options.publishTasks,
-                runsOn: options.workflowRunsOn,
-                runsOnGroup: options.workflowRunsOnGroup,
-                workflowBootstrapSteps: options.workflowBootstrapSteps,
-                workflowNodeVersion:
-                    options.workflowNodeVersion ??
-                    options.maxNodeVersion ??
-                    options.minNodeVersion ??
-                    "20.10.0",
-            };
+            const releaseWorkflow = (
+                this.root as GitHubProject
+            )?.github?.tryFindWorkflow(
+                AwsAppPublisher.workflowNameForProject("release", this),
+            );
+            if (
+                (releaseWorkflow && options.publishToAwsOptions?.autoAddJob) ||
+                options.publishToAwsOptions?.autoAddJob === undefined
+            ) {
+                const deployTask = this.tasks.tryFind("deploy");
 
-            new AwsAppPublisher(this, publishToAwsOptions);
+                if (deployTask) {
+                    releaseWorkflow?.addJob(
+                        "release_aws",
+                        this.buildPublishToAwsJob({
+                            branchName: undefined,
+                            deployTask,
+                        }),
+                    );
+
+                    if (this.release.branches) {
+                        const otherBranches = this.release.branches.filter(
+                            (branch) =>
+                                branch !== options?.defaultReleaseBranch,
+                        );
+                        for (const branch of otherBranches) {
+                            releaseWorkflow?.addJob(
+                                `release_aws-${branch}`,
+                                this.buildPublishToAwsJob({
+                                    branchName: branch,
+                                    deployTask:
+                                        this.determineDeployTaskToUseForAwsJobStep(
+                                            {
+                                                deployTask,
+                                                branchName: branch,
+                                            },
+                                        ),
+                                }),
+                            );
+                        }
+                    }
+                }
+            }
         }
     }
 
-    protected overridePackageTask(): void {
-        this.packageTask.reset(`mkdir -p ${this.artifactsDirectory}`);
-        this.packageTask.exec(
-            `cp -r ${this.sstConfig.sstOut} ${this.artifactsDirectory}`,
-        );
-        for (const filename of ["package.json", "sst.config.ts"]) {
-            // These are required by SST CLI, for reasons I cannot discern
-            this.packageTask.exec(
-                `cp ${filename} ${this.artifactsDirectory}/${filename}`,
-            );
-        }
+    public buildPublishToAwsJob(
+        { deployTask, branchName }: DeployJobStepBuilderParams,
+        options?: Partial<Job>,
+    ): Job {
+        // We are basically ignoring the artifact since SST needs too many things to use it
+        return {
+            ...(options ?? {}),
+            name: "Publish to AWS",
+            if: this.release?.publisher.condition,
+            needs: ["release"],
+            permissions: {
+                contents: github.workflows.JobPermission.WRITE,
+                packages: github.workflows.JobPermission.WRITE,
+            },
+            steps: [
+                WorkflowSteps.checkout(),
+                ...this.workflowBootstrapSteps,
+                ...this.renderWorkflowSetup(),
+                ...(this.publishToAwsOptions?.configureAwsCredentialsJobSteps ??
+                    []),
+                this.buildDeployToAwsJobStep({ deployTask, branchName }),
+            ],
+        };
     }
 
     protected buildDeployToAwsJobStep({
@@ -120,14 +171,7 @@ export class Node20SstApp extends SstTypescriptApp {
 
         return {
             name: "Deploy to AWS",
-            run: [
-                exec?.replace("sst", `npx sst@${this.sstVersion}`),
-                ...(args ?? []),
-                `--from ${this.sstConfig.sstOut}`, // We are inside the artifacts directory, so no drill
-            ]
-                .filter(Boolean)
-                .join(" "),
-            workingDirectory: this.artifactsDirectory, // We drill into the artifacts directory because SST needs the config file at the root
+            run: [exec, ...(args ?? [])].filter(Boolean).join(" "),
         };
     }
 
