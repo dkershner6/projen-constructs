@@ -6,6 +6,7 @@
 
 ### Properties
 
+- [autoAddJob](AwsAppPublisherOptions.md#autoaddjob)
 - [configureAwsCredentialsJobSteps](AwsAppPublisherOptions.md#configureawscredentialsjobsteps)
 - [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
@@ -16,6 +17,20 @@
 - [workflowNodeVersion](AwsAppPublisherOptions.md#workflownodeversion)
 
 ## Properties
+
+### autoAddJob
+
+• `Optional` `Readonly` **autoAddJob**: `boolean`
+
+Whether or not to automatically add the job to the release workflow.
+
+**`Default`**
+
+```ts
+true
+```
+
+___
 
 ### configureAwsCredentialsJobSteps
 

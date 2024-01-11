@@ -17,11 +17,13 @@
 ### Properties
 
 - [node](AwsAppPublisher.md#node)
+- [options](AwsAppPublisher.md#options)
 - [project](AwsAppPublisher.md#project)
 
 ### Methods
 
 - [addPublishToAwsJob](AwsAppPublisher.md#addpublishtoawsjob)
+- [buildPublishToAwsJob](AwsAppPublisher.md#buildpublishtoawsjob)
 - [postSynthesize](AwsAppPublisher.md#postsynthesize)
 - [preSynthesize](AwsAppPublisher.md#presynthesize)
 - [synthesize](AwsAppPublisher.md#synthesize)
@@ -64,6 +66,12 @@ Component.node
 
 ___
 
+### options
+
+• `Private` `Readonly` **options**: [`AwsAppPublisherOptions`](../interfaces/AwsAppPublisherOptions.md)
+
+___
+
 ### project
 
 • `Readonly` **project**: `AwsCdkTypeScriptApp`
@@ -76,18 +84,38 @@ Component.project
 
 ### addPublishToAwsJob
 
-▸ **addPublishToAwsJob**(`options`, `branchName?`): `void`
+▸ **addPublishToAwsJob**(`branchName?`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`AwsAppPublisherOptions`](../interfaces/AwsAppPublisherOptions.md) |
 | `branchName?` | `string` |
 
 #### Returns
 
 `void`
+
+___
+
+### buildPublishToAwsJob
+
+▸ **buildPublishToAwsJob**(`deployTask`, `branchName?`): `Job`
+
+Allows for manual creation of the publish to AWS Job.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `deployTask` | `Task` | The deploy task to use in the deploy JobStep |
+| `branchName?` | `string` | Optional branchName |
+
+#### Returns
+
+`Job`
+
+The job to add
 
 ___
 

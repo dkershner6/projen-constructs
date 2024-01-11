@@ -8,7 +8,7 @@ import {
     github,
 } from "projen";
 import { GitHubProject } from "projen/lib/github";
-import { JobStep } from "projen/lib/github/workflows-model";
+import { Job, JobStep } from "projen/lib/github/workflows-model";
 
 export interface DeployJobStepBuilderParams {
     /**
@@ -23,6 +23,13 @@ export interface DeployJobStepBuilderParams {
 }
 
 export interface AwsAppPublisherOptions {
+    /**
+     * Whether or not to automatically add the job to the release workflow.
+     *
+     * @default true
+     */
+    readonly autoAddJob?: boolean;
+
     /**
      * Typically a single step involved in configuring AWS credentials.
      * AKA aws-actions/configure-aws-credentials
@@ -56,34 +63,34 @@ export interface AwsAppPublisherOptions {
 export class AwsAppPublisher extends Component {
     constructor(
         public override readonly project: awscdk.AwsCdkTypeScriptApp,
-        options: AwsAppPublisherOptions,
+        private readonly options: AwsAppPublisherOptions,
     ) {
         super(project);
 
-        if (this.project.release && options.configureAwsCredentialsJobSteps) {
-            this.addPublishToAwsJob(options);
+        if (
+            (options.autoAddJob || options.autoAddJob === undefined) &&
+            this.project.release &&
+            options.configureAwsCredentialsJobSteps
+        ) {
+            this.addPublishToAwsJob();
 
             if (this.project.release.branches) {
                 const otherBranches = this.project.release.branches.filter(
                     (branch) => branch !== options?.defaultReleaseBranch,
                 );
                 for (const branch of otherBranches) {
-                    this.addPublishToAwsJob(options, branch);
+                    this.addPublishToAwsJob(branch);
                 }
             }
         }
     }
-
-    protected addPublishToAwsJob(
-        options: AwsAppPublisherOptions,
-        branchName?: string,
-    ): void {
+    protected addPublishToAwsJob(branchName?: string): void {
         const taskSuffix = branchName ? `:${branchName}` : "";
         const workflowNameSuffix = branchName ? `-${branchName}` : "";
 
         const deployTask = this.project.tasks.tryFind(`deploy`);
         if (deployTask) {
-            if (options.publishTasks) {
+            if (this.options.publishTasks) {
                 const publishToAwsTask = this.project.addTask(
                     `publish:aws${taskSuffix}`,
                 );
@@ -103,53 +110,67 @@ export class AwsAppPublisher extends Component {
                 )}${workflowNameSuffix}`,
             );
             if (releaseWorkflow) {
-                releaseWorkflow.addJob("release_aws", {
-                    name: "Publish to AWS",
-                    if: this.project.release?.publisher.condition,
-                    needs: ["release"],
-                    ...filteredRunsOnOptions(
-                        options.runsOn,
-                        options.runsOnGroup,
-                    ),
-                    permissions: {
-                        contents: github.workflows.JobPermission.WRITE,
-                        packages: github.workflows.JobPermission.WRITE,
-                    },
-                    steps: [
-                        ...(options.workflowBootstrapSteps ?? []),
-                        {
-                            name: "Setup Node.js",
-                            uses: "actions/setup-node@v3",
-                            with: {
-                                ...(options.workflowNodeVersion && {
-                                    "node-version": options.workflowNodeVersion,
-                                }),
-                            },
-                        },
-                        {
-                            name: "Download build artifacts",
-                            uses: "actions/download-artifact@v3",
-                            with: {
-                                name: "build-artifact",
-                                path: this.project.artifactsDirectory,
-                            },
-                        },
-                        {
-                            name: "Restore build artifact permissions",
-                            continueOnError: true,
-                            run: [
-                                `cd ${this.project.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
-                            ].join("\n"),
-                        },
-                        ...options.configureAwsCredentialsJobSteps,
-                        options.deployJobStepBuilder({
-                            deployTask,
-                            branchName,
-                        }),
-                    ],
-                });
+                releaseWorkflow.addJob(
+                    "release_aws",
+                    this.buildPublishToAwsJob(deployTask, branchName),
+                );
             }
         }
+    }
+
+    /**
+     * Allows for manual creation of the publish to AWS Job.
+     *
+     * @param deployTask The deploy task to use in the deploy JobStep
+     * @param branchName Optional branchName
+     * @returns The job to add
+     */
+    public buildPublishToAwsJob(deployTask: Task, branchName?: string): Job {
+        return {
+            name: "Publish to AWS",
+            if: this.project.release?.publisher.condition,
+            needs: ["release"],
+            ...filteredRunsOnOptions(
+                this.options.runsOn,
+                this.options.runsOnGroup,
+            ),
+            permissions: {
+                contents: github.workflows.JobPermission.WRITE,
+                packages: github.workflows.JobPermission.WRITE,
+            },
+            steps: [
+                ...(this.options.workflowBootstrapSteps ?? []),
+                {
+                    name: "Setup Node.js",
+                    uses: "actions/setup-node@v3",
+                    with: {
+                        ...(this.options.workflowNodeVersion && {
+                            "node-version": this.options.workflowNodeVersion,
+                        }),
+                    },
+                },
+                {
+                    name: "Download build artifacts",
+                    uses: "actions/download-artifact@v3",
+                    with: {
+                        name: "build-artifact",
+                        path: this.project.artifactsDirectory,
+                    },
+                },
+                {
+                    name: "Restore build artifact permissions",
+                    continueOnError: true,
+                    run: [
+                        `cd ${this.project.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
+                    ].join("\n"),
+                },
+                ...this.options.configureAwsCredentialsJobSteps,
+                this.options.deployJobStepBuilder({
+                    deployTask,
+                    branchName,
+                }),
+            ],
+        };
     }
 }
 
