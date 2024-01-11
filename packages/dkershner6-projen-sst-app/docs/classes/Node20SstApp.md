@@ -53,6 +53,7 @@
 - [projectBuild](Node20SstApp.md#projectbuild)
 - [projectType](Node20SstApp.md#projecttype)
 - [projenCommand](Node20SstApp.md#projencommand)
+- [publishToAwsOptions](Node20SstApp.md#publishtoawsoptions)
 - [publisher](Node20SstApp.md#publisher)
 - [release](Node20SstApp.md#release)
 - [runScriptCommand](Node20SstApp.md#runscriptcommand)
@@ -115,9 +116,9 @@
 - [addTip](Node20SstApp.md#addtip)
 - [annotateGenerated](Node20SstApp.md#annotategenerated)
 - [buildDeployToAwsJobStep](Node20SstApp.md#builddeploytoawsjobstep)
+- [buildPublishToAwsJob](Node20SstApp.md#buildpublishtoawsjob)
 - [determineDeployTaskToUseForAwsJobStep](Node20SstApp.md#determinedeploytasktouseforawsjobstep)
 - [hasScript](Node20SstApp.md#hasscript)
-- [overridePackageTask](Node20SstApp.md#overridepackagetask)
 - [postSynthesize](Node20SstApp.md#postsynthesize)
 - [preSynthesize](Node20SstApp.md#presynthesize)
 - [removeScript](Node20SstApp.md#removescript)
@@ -591,6 +592,12 @@ The command to use in order to run the projen CLI.
 #### Inherited from
 
 SstTypescriptApp.projenCommand
+
+___
+
+### publishToAwsOptions
+
+• `Private` `Optional` `Readonly` **publishToAwsOptions**: `Omit`\<`AwsAppPublisherOptions`, ``"deployJobStepBuilder"`` \| ``"defaultReleaseBranch"`` \| ``"publishTasks"`` \| ``"runsOn"`` \| ``"runsOnGroup"`` \| ``"workflowBootstrapSteps"`` \| ``"workflowNodeVersion"``\>
 
 ___
 
@@ -1542,6 +1549,23 @@ ___
 
 ___
 
+### buildPublishToAwsJob
+
+▸ **buildPublishToAwsJob**(`«destructured»`, `options?`): `Job`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `DeployJobStepBuilderParams` |
+| `options?` | `Partial`\<`Job`\> |
+
+#### Returns
+
+`Job`
+
+___
+
 ### determineDeployTaskToUseForAwsJobStep
 
 ▸ **determineDeployTaskToUseForAwsJobStep**(`«destructured»`): `Task`
@@ -1581,16 +1605,6 @@ Use `project.tasks.tryFind(name)`
 #### Inherited from
 
 SstTypescriptApp.hasScript
-
-___
-
-### overridePackageTask
-
-▸ **overridePackageTask**(): `void`
-
-#### Returns
-
-`void`
 
 ___
 
