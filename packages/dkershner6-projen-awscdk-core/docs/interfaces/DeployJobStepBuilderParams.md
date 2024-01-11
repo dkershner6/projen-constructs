@@ -13,7 +13,7 @@
 
 ### branchName
 
-• `Readonly` **branchName**: `undefined` \| `string`
+• `Optional` `Readonly` **branchName**: `string`
 
 The branch name being published. Undefined for the default branch.
 
