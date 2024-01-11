@@ -212,7 +212,12 @@ export class Node20SstApp extends SstTypescriptApp {
 
         return {
             name: "Deploy to AWS",
-            run: [exec, ...(args ?? [])].filter(Boolean).join(" "),
+            run: [
+                exec?.replace("sst", `npx sst@${this.sstVersion}`),
+                ...(args ?? []),
+            ]
+                .filter(Boolean)
+                .join(" "),
         };
     }
 
