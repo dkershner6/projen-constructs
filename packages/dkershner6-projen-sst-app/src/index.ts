@@ -65,6 +65,10 @@ export class Node20SstApp extends SstTypescriptApp {
             this.addDeps(`constructs@${options.constructsVersion}`);
         }
 
+        if (this.package) {
+            this.overridePackageTask();
+        }
+
         if (
             this.release &&
             options.publishToAws &&
