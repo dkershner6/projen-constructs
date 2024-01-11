@@ -120,10 +120,11 @@ export class Node20SstApp extends SstTypescriptApp {
             run: [
                 exec?.replace("sst", `npx sst@${this.sstVersion}`),
                 ...(args ?? []),
-                `--from ${this.artifactsDirectory}/${this.sstConfig.sstOut}`,
+                `--from ${this.sstConfig.sstOut}`, // We are inside the artifacts directory, so no drill
             ]
                 .filter(Boolean)
                 .join(" "),
+            workingDirectory: this.artifactsDirectory, // We drill into the artifacts directory because SST needs the config file at the root
         };
     }
 
