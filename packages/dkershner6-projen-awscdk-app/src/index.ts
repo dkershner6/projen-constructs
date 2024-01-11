@@ -2,6 +2,7 @@ import deepClone from "clone-deep";
 import {
     AwsAppPublisher,
     AwsAppPublisherOptions,
+    PublishToAwsOptions,
 } from "dkershner6-projen-awscdk-core";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
@@ -29,25 +30,20 @@ export interface Node20AwsCdkAppOptions
     /**
      * Populate in order to add a deploy to AWS job to the release workflow.
      */
-    readonly publishToAwsOptions?: Omit<
-        AwsAppPublisherOptions,
-        | "deployJobStepBuilder"
-        | "defaultReleaseBranch"
-        | "publishTasks"
-        | "runsOn"
-        | "runsOnGroup"
-        | "workflowBootstrapSteps"
-        | "workflowNodeVersion"
-    >;
+    readonly publishToAwsOptions?: PublishToAwsOptions;
 }
 
 export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
+    private readonly publishToAwsOptions?: PublishToAwsOptions;
+
     constructor(options: Node20AwsCdkAppOptions) {
         const combinedOptions = deepMerge([
             deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
             options,
         ]) as awscdk.AwsCdkTypeScriptAppOptions;
         super(combinedOptions);
+
+        this.publishToAwsOptions = options.publishToAwsOptions;
 
         new DKBugFixes(this);
         new DKTasks(this);
@@ -124,7 +120,10 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
         const exec = deployTask.steps[0].exec;
         const args = deployTask.steps[0].args;
         return {
-            name: "Deploy to AWS",
+            ...(this.publishToAwsOptions?.deployJobStepConfiguration ?? {}),
+            name:
+                this.publishToAwsOptions?.deployJobStepConfiguration?.name ??
+                "Deploy to AWS",
             run: [
                 exec?.replace("cdk", `npx cdk@${this.cdkVersion}`),
                 ...(args ?? []),

@@ -2416,7 +2416,7 @@ ___
 
 ### publishToAwsOptions
 
-• `Optional` `Readonly` **publishToAwsOptions**: `Omit`\<`AwsAppPublisherOptions`, ``"deployJobStepBuilder"`` \| ``"defaultReleaseBranch"`` \| ``"publishTasks"`` \| ``"runsOn"`` \| ``"runsOnGroup"`` \| ``"workflowBootstrapSteps"`` \| ``"workflowNodeVersion"``\>
+• `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
 
 Populate in order to add a deploy to AWS job to the release workflow.
 

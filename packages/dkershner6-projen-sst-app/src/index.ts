@@ -5,6 +5,7 @@ import {
     AwsAppPublisher,
     AwsAppPublisherOptions,
     DeployJobStepBuilderParams,
+    PublishToAwsOptions,
 } from "dkershner6-projen-awscdk-core";
 import {
     DKBugFixes,
@@ -34,19 +35,12 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
     /**
      * Populate in order to add a deploy to AWS job to the release workflow.
      */
-    readonly publishToAwsOptions?: Omit<
-        AwsAppPublisherOptions,
-        | "deployJobStepBuilder"
-        | "defaultReleaseBranch"
-        | "publishTasks"
-        | "runsOn"
-        | "runsOnGroup"
-        | "workflowBootstrapSteps"
-        | "workflowNodeVersion"
-    >;
+    readonly publishToAwsOptions?: PublishToAwsOptions;
 }
 
 export class Node20SstApp extends SstTypescriptApp {
+    private readonly publishToAwsOptions?: PublishToAwsOptions;
+
     // eslint-disable-next-line sonarjs/cognitive-complexity
     constructor(options: Node20SstAppOptions) {
         const combinedOptions: Node20SstAppOptions = deepMerge([
@@ -55,6 +49,8 @@ export class Node20SstApp extends SstTypescriptApp {
         ]) as Node20SstAppOptions;
 
         super(combinedOptions);
+
+        this.publishToAwsOptions = options.publishToAwsOptions;
 
         new DKBugFixes(this);
         new DKTasks(this);
@@ -199,7 +195,7 @@ export class Node20SstApp extends SstTypescriptApp {
         };
     }
 
-    protected buildDeployToAwsJobStep({
+    public buildDeployToAwsJobStep({
         deployTask,
         branchName,
     }: DeployJobStepBuilderParams): JobStep {
@@ -211,7 +207,10 @@ export class Node20SstApp extends SstTypescriptApp {
         const args = deployTaskToUse.steps[0].args;
 
         return {
-            name: "Deploy to AWS",
+            ...(this.publishToAwsOptions?.deployJobStepConfiguration ?? {}),
+            name:
+                this.publishToAwsOptions?.deployJobStepConfiguration?.name ??
+                "Deploy to AWS",
             run: [
                 exec?.replace("sst", `npx sst@${this.sstVersion}`),
                 ...(args ?? []),
