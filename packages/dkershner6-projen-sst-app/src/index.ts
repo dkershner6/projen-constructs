@@ -79,7 +79,11 @@ export class Node20SstApp extends SstTypescriptApp {
                 runsOn: options.workflowRunsOn,
                 runsOnGroup: options.workflowRunsOnGroup,
                 workflowBootstrapSteps: options.workflowBootstrapSteps,
-                workflowNodeVersion: options.workflowNodeVersion,
+                workflowNodeVersion:
+                    options.workflowNodeVersion ??
+                    options.maxNodeVersion ??
+                    options.minNodeVersion ??
+                    "20.10.0",
             };
 
             new AwsAppPublisher(this, publishToAwsOptions);
