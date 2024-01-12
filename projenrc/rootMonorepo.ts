@@ -31,9 +31,6 @@ export class RootMonorepo extends MonorepoProject {
                     github: true,
 
                     workflowPackageCache: true,
-                    depsUpgradeOptions: {
-                        workflow: false,
-                    },
                 },
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),

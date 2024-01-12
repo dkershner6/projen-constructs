@@ -120,6 +120,7 @@
 - [execNxRunManyCommand](MonorepoProject.md#execnxrunmanycommand)
 - [hasScript](MonorepoProject.md#hasscript)
 - [linkLocalWorkspaceBins](MonorepoProject.md#linklocalworkspacebins)
+- [overwriteUpgradeWorkflow](MonorepoProject.md#overwriteupgradeworkflow)
 - [postSynthesize](MonorepoProject.md#postsynthesize)
 - [preSynthesize](MonorepoProject.md#presynthesize)
 - [removeScript](MonorepoProject.md#removescript)
@@ -1664,6 +1665,16 @@ way as consumers of the packages have when installing from the registry.
 #### Inherited from
 
 monorepo.MonorepoTsProject.linkLocalWorkspaceBins
+
+___
+
+### overwriteUpgradeWorkflow
+
+▸ **overwriteUpgradeWorkflow**(): `void`
+
+#### Returns
+
+`void`
 
 ___
 

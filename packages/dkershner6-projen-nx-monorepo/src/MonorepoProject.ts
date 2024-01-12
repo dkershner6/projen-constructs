@@ -7,6 +7,7 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         this.addDevDeps("syncpack@^8");
 
         this.addAndEditTasks();
+        this.overwriteUpgradeWorkflow();
     }
 
     private addAndEditTasks(): void {
@@ -34,6 +35,31 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
             ...nxBuild,
             dependsOn: ["^compile"],
         });
+    }
+
+    private overwriteUpgradeWorkflow(): void {
+        const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
+        const upgradeWorkflow = this.github?.tryFindWorkflow("upgrade");
+
+        if (upgradeWorkflow && upgradeDepsTask) {
+            const job = upgradeWorkflow?.getJob("upgrade");
+            if (job) {
+                // @ts-expect-error - Violating private access
+                const newSteps = job.steps.map((step) => {
+                    if (step.run?.includes("upgrade")) {
+                        return {
+                            ...step,
+                            run: step.run.replace("upgrade", "upgrade-deps"),
+                        };
+                    }
+                    return step;
+                });
+                upgradeWorkflow.updateJob("upgrade", {
+                    ...job,
+                    steps: newSteps,
+                });
+            }
+        }
     }
 
     override preSynthesize(): void {
