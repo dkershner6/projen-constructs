@@ -1,7 +1,7 @@
 /* eslint-disable @cspell/spellchecker */
 // Cannot run cspell in here because flagWords are definite hits.
 
-import { Component, JsonFile, Project } from "projen";
+import { Component, JsonFile, Project, SampleFile } from "projen";
 import { Eslint, NodeProject } from "projen/lib/javascript";
 
 export interface CSpellDictionaryDefinition {
@@ -121,13 +121,15 @@ const PROJEN_AND_THIS_MONOREPO_WORDS = [
     "syncpack",
 ];
 
+const SHARED_CSPELL_CONFIG_FILENAME = "cspell-readonly.json";
+
 export class CSpellConfigFile extends Component {
-    public readonly config: CSpellConfig;
+    public readonly confg: CSpellConfig;
 
     constructor(project: Project, options?: CSpellConfigFileOptions) {
         super(project);
 
-        this.config = {
+        this.confg = {
             ...(options?.config ?? {}),
             version: options?.config?.version ?? "0.2",
             language: options?.config?.language ?? "en",
@@ -146,8 +148,22 @@ export class CSpellConfigFile extends Component {
             ],
         };
 
-        new JsonFile(this.project, "cspell.json", {
-            obj: this.config,
+        new JsonFile(this.project, SHARED_CSPELL_CONFIG_FILENAME, {
+            obj: this.confg,
+        });
+
+        this.project.addPackageIgnore(SHARED_CSPELL_CONFIG_FILENAME);
+
+        new SampleFile(this.project, "cspell.json", {
+            contents: JSON.stringify(
+                {
+                    "//": "This file can be edited, and will not be overwritten by projen.",
+                    import: [SHARED_CSPELL_CONFIG_FILENAME],
+                    words: [],
+                },
+                null,
+                2,
+            ),
         });
 
         this.project.addPackageIgnore("/cspell.json");

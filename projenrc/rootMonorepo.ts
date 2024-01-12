@@ -7,6 +7,7 @@ import {
     EslintConfig,
     DKBugFixes,
     DKTaskName,
+    DKTasks,
 } from "../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../packages/projen-cspell/src";
 
@@ -43,11 +44,17 @@ export class RootMonorepo extends MonorepoProject {
 
         new DKBugFixes(this);
         new EslintConfig(this);
+        new DKTasks(this);
 
         for (const taskName of Object.values(DKTaskName)) {
-            this.addNxRunManyTask(taskName, {
-                target: taskName,
-            });
+            const task = this.tasks.tryFind(taskName);
+            if (task) {
+                task.exec(
+                    this.execNxRunManyCommand({
+                        target: taskName,
+                    }),
+                );
+            }
         }
 
         new CSpell(this);

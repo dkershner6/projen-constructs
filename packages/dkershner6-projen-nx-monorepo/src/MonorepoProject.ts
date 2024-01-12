@@ -15,6 +15,15 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
             this.tasks.tryFind("build")?.prependSpawn(defaultTask);
         }
 
+        const eslintTask = this.tasks.tryFind("eslint");
+        if (eslintTask) {
+            // Lint the monorepo too
+            eslintTask.prependExec(
+                `eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings=0 .projenrc.* projenrc`,
+                { receiveArgs: true },
+            );
+        }
+
         this.addTask("clean-modules", {
             exec: "find . -type d -name 'node_modules' -exec rm -r {} \\; || echo 'All done!'",
             description: "Delete all node_modules folders",

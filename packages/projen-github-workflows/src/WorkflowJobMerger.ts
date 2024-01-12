@@ -42,6 +42,8 @@ export interface WorkflowJobMergerOptions {
  * Add steps or settings to every workflow job in a project.
  */
 export class WorkflowJobMerger extends Component {
+    private readonly jobsCompleted = new Set<string>();
+
     constructor(
         private readonly projectGithub: github.GitHub,
         private readonly options: WorkflowJobMergerOptions,
@@ -84,6 +86,11 @@ export class WorkflowJobMerger extends Component {
         job: github.workflows.Job,
         merge: WorkflowJobMerge,
     ): github.workflows.Job {
+        const jobCompletedKey = `${workflow.name}::${jobName}`;
+        if (this.jobsCompleted.has(jobCompletedKey)) {
+            return job;
+        }
+
         const newJob = {
             ...job,
             ...merge.job,
@@ -113,6 +120,7 @@ export class WorkflowJobMerger extends Component {
                 : job.steps,
         };
         workflow.updateJob(jobName, newJob);
+        this.jobsCompleted.add(jobCompletedKey);
         return newJob;
     }
 
@@ -131,7 +139,13 @@ export class WorkflowJobMerger extends Component {
     public override preSynthesize(): void {
         super.preSynthesize();
 
+        this.mergeWorkflowJobs();
+    }
+
+    override synthesize(): void {
         // Do here to ensure we get every job in every workflow.
         this.mergeWorkflowJobs();
+
+        super.synthesize();
     }
 }

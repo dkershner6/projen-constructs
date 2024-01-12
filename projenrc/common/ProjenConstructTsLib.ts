@@ -1,3 +1,4 @@
+/* eslint-disable @cspell/spellchecker */
 import { ReleasableCommits, TextFile } from "projen";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
 import { deepMerge } from "projen/lib/util";
