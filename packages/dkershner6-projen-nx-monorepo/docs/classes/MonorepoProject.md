@@ -148,7 +148,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `MonorepoTsProjectOptions` |
+| `options` | [`MonorepoProjectOptions`](../interfaces/MonorepoProjectOptions.md) |
 
 #### Returns
 
@@ -1670,7 +1670,13 @@ ___
 
 ### overwriteUpgradeWorkflow
 
-▸ **overwriteUpgradeWorkflow**(): `void`
+▸ **overwriteUpgradeWorkflow**(`preUpgradeSteps`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `preUpgradeSteps` | `undefined` \| `JobStep`[] |
 
 #### Returns
 
