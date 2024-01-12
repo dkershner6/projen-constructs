@@ -22,6 +22,7 @@
     ".github/workflows/release_projen-sst.yml",
     ".github/workflows/release_projen-typedoc.yml",
     ".github/workflows/release_projen-vscode-workspaces.yml",
+    ".github/workflows/upgrade.yml",
     ".gitignore",
     ".npmignore",
     ".npmrc",
