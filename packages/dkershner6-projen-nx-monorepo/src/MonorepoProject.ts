@@ -24,9 +24,7 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         this.addDevDeps("syncpack@^8");
 
         this.addAndEditTasks();
-        this.overwriteUpgradeWorkflow(
-            options.depsUpgradeOptions?.workflowOptions?.preUpgradeSteps,
-        );
+        this.overwriteUpgradeWorkflow(options.depsUpgradeOptions);
     }
 
     private addAndEditTasks(): void {
@@ -57,31 +55,34 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
     }
 
     private overwriteUpgradeWorkflow(
-        preUpgradeSteps: github.workflows.JobStep[] | undefined,
+        upgradeDependenciesOptions: UpgradeDependenciesOptions | undefined,
     ): void {
+        const upgradeName = upgradeDependenciesOptions?.taskName ?? "upgrade";
+        this.tasks.removeTask(upgradeName);
+
         const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
-        const upgradeWorkflow = this.github?.tryFindWorkflow("upgrade");
+        const upgradeWorkflow = this.github?.tryFindWorkflow(upgradeName);
 
         if (upgradeWorkflow && upgradeDepsTask) {
+            const upgradeTask = this.tasks.addTask(upgradeName);
+            upgradeTask.spawn(upgradeDepsTask);
+
             const job = upgradeWorkflow?.getJob("upgrade");
             if (job) {
                 // @ts-expect-error - Violating private access
                 const newSteps = job.steps.flatMap((step) => {
                     if (step.run?.includes("upgrade")) {
                         return [
-                            ...(preUpgradeSteps ?? []),
+                            ...(upgradeDependenciesOptions?.workflowOptions
+                                ?.preUpgradeSteps ?? []),
                             {
                                 ...step,
-                                run: step.run.replace(
-                                    "upgrade",
-                                    "upgrade-deps",
-                                ),
                             },
                         ];
                     }
                     return [step];
                 });
-                upgradeWorkflow.updateJob("upgrade", {
+                upgradeWorkflow.updateJob(upgradeName, {
                     ...job,
                     steps: newSteps,
                 });

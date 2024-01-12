@@ -31,7 +31,7 @@ jobs:
         run: pnpm i --frozen-lockfile
       - run: echo 'preUpgradeSteps'
       - name: Upgrade dependencies
-        run: pnpm exec projen upgrade-deps
+        run: pnpm exec projen upgrade
       - name: Find mutations
         id: create_patch
         run: |-
