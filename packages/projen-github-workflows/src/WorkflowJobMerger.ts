@@ -58,15 +58,14 @@ export class WorkflowJobMerger extends Component {
                 (workflow.jobs ?? {}) as Record<string, github.workflows.Job>;
 
             for (const [jobName, job] of Object.entries(jobs)) {
+                const jobCompletedKey = `${workflow.name}::${jobName}`;
+                if (this.jobsCompleted.has(jobCompletedKey)) {
+                    continue;
+                }
                 let workingJob = job;
                 for (const merge of this.options.merges) {
                     if (
-                        !merge.workflowNamePrefixJobNameEntries ||
-                        merge.workflowNamePrefixJobNameEntries?.some(
-                            ([workflowNamePrefix, jobNameLookup]) =>
-                                workflow.name.startsWith(workflowNamePrefix) &&
-                                jobNameLookup === jobNameLookup,
-                        )
+                        this.determineShouldMergeJob(workflow, jobName, merge)
                     ) {
                         workingJob = this.mergeJob(
                             workflow,
@@ -76,8 +75,25 @@ export class WorkflowJobMerger extends Component {
                         );
                     }
                 }
+
+                this.jobsCompleted.add(jobCompletedKey);
             }
         }
+    }
+
+    private determineShouldMergeJob(
+        workflow: github.GithubWorkflow,
+        jobName: string,
+        merge: WorkflowJobMerge,
+    ): boolean {
+        return (
+            !merge.workflowNamePrefixJobNameEntries ||
+            merge.workflowNamePrefixJobNameEntries?.some(
+                ([workflowNamePrefix, jobNameLookup]) =>
+                    workflow.name.startsWith(workflowNamePrefix) &&
+                    jobName === jobNameLookup,
+            )
+        );
     }
 
     private mergeJob(
@@ -86,11 +102,6 @@ export class WorkflowJobMerger extends Component {
         job: github.workflows.Job,
         merge: WorkflowJobMerge,
     ): github.workflows.Job {
-        const jobCompletedKey = `${workflow.name}::${jobName}`;
-        if (this.jobsCompleted.has(jobCompletedKey)) {
-            return job;
-        }
-
         const newJob = {
             ...job,
             ...merge.job,
@@ -120,7 +131,6 @@ export class WorkflowJobMerger extends Component {
                 : job.steps,
         };
         workflow.updateJob(jobName, newJob);
-        this.jobsCompleted.add(jobCompletedKey);
         return newJob;
     }
 
