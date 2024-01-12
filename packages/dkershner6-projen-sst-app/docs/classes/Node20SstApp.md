@@ -1558,7 +1558,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `«destructured»` | `DeployJobStepBuilderParams` |
-| `options` | `Pick`\<`AwsAppPublisherOptions`, ``"configureAwsCredentialsJobSteps"`` \| ``"deployJobStepBuilder"`` \| ``"runsOn"`` \| ``"runsOnGroup"``\> |
+| `options` | `Pick`\<`AwsAppPublisherOptions`, ``"configureAwsCredentialsJobSteps"`` \| ``"deployJobStepBuilder"`` \| ``"env"`` \| ``"runsOn"`` \| ``"runsOnGroup"``\> |
 
 #### Returns
 
