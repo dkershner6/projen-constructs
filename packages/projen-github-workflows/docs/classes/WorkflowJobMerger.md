@@ -18,6 +18,7 @@ Add steps or settings to every workflow job in a project.
 
 ### Properties
 
+- [jobsCompleted](WorkflowJobMerger.md#jobscompleted)
 - [node](WorkflowJobMerger.md#node)
 - [options](WorkflowJobMerger.md#options)
 - [project](WorkflowJobMerger.md#project)
@@ -57,6 +58,12 @@ Add steps or settings to every workflow job in a project.
 Component.constructor
 
 ## Properties
+
+### jobsCompleted
+
+• `Private` `Readonly` **jobsCompleted**: `Set`\<`string`\>
+
+___
 
 ### node
 
@@ -178,13 +185,11 @@ ___
 
 ▸ **synthesize**(): `void`
 
-Synthesizes files to the project output directory.
-
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 Component.synthesize
 
