@@ -126,10 +126,12 @@ export class Node20SstApp extends SstTypescriptApp {
                                         configureAwsCredentialsJobSteps:
                                             options.publishToAwsOptions
                                                 ?.configureAwsCredentialsJobSteps,
+
                                         deployJobStepBuilder: (builderParams) =>
                                             this.buildDeployToAwsJobStep(
                                                 builderParams,
                                             ),
+                                        env: options.publishToAwsOptions?.env,
                                         runsOn: options.workflowRunsOn,
                                         runsOnGroup:
                                             options.workflowRunsOnGroup,
@@ -149,6 +151,7 @@ export class Node20SstApp extends SstTypescriptApp {
             AwsAppPublisherOptions,
             | "configureAwsCredentialsJobSteps"
             | "deployJobStepBuilder"
+            | "env"
             | "runsOn"
             | "runsOnGroup"
         >,
@@ -164,6 +167,7 @@ export class Node20SstApp extends SstTypescriptApp {
             if: this.release?.publisher.condition,
             needs: ["release"],
             ...filteredRunsOnOptions(options.runsOn, options.runsOnGroup),
+            env: options.env,
             permissions: {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,

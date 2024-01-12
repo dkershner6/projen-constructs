@@ -9,6 +9,7 @@
 - [autoAddJob](PublishToAwsOptions.md#autoaddjob)
 - [configureAwsCredentialsJobSteps](PublishToAwsOptions.md#configureawscredentialsjobsteps)
 - [deployJobStepConfiguration](PublishToAwsOptions.md#deployjobstepconfiguration)
+- [env](PublishToAwsOptions.md#env)
 
 ## Properties
 
@@ -40,3 +41,13 @@ ___
 • `Optional` `Readonly` **deployJobStepConfiguration**: `JobStepConfiguration`
 
 Additional configuration for the deploy job step.
+
+___
+
+### env
+
+• `Optional` `Readonly` **env**: `Record`\<`string`, `string`\>
+
+A map of environment variables that are available to all steps in the
+job. You can also set environment variables for the entire workflow or an
+individual step.

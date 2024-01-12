@@ -32,6 +32,13 @@ export interface PublishToAwsOptions {
      * Additional configuration for the deploy job step.
      */
     readonly deployJobStepConfiguration?: JobStepConfiguration;
+
+    /**
+     * A map of environment variables that are available to all steps in the
+     * job. You can also set environment variables for the entire workflow or an
+     * individual step.
+     */
+    readonly env?: Record<string, string>;
 }
 
 export interface DeployJobStepBuilderParams {
@@ -72,6 +79,13 @@ export interface AwsAppPublisherOptions {
     ) => JobStep;
 
     readonly defaultReleaseBranch?: string;
+
+    /**
+     * A map of environment variables that are available to all steps in the
+     * job. You can also set environment variables for the entire workflow or an
+     * individual step.
+     */
+    readonly env?: Record<string, string>;
 
     readonly publishTasks?: boolean;
 
@@ -172,6 +186,7 @@ export class AwsAppPublisher extends Component {
                 this.options.runsOn,
                 this.options.runsOnGroup,
             ),
+            env: this.options.env,
             permissions: {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,

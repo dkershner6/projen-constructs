@@ -10,6 +10,7 @@
 - [configureAwsCredentialsJobSteps](AwsAppPublisherOptions.md#configureawscredentialsjobsteps)
 - [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
+- [env](AwsAppPublisherOptions.md#env)
 - [publishTasks](AwsAppPublisherOptions.md#publishtasks)
 - [runsOn](AwsAppPublisherOptions.md#runson)
 - [runsOnGroup](AwsAppPublisherOptions.md#runsongroup)
@@ -78,6 +79,16 @@ A function that builds the JobStep to deploy the App.
 `JobStep`
 
 JobStep to deploy the App
+
+___
+
+### env
+
+• `Optional` `Readonly` **env**: `Record`\<`string`, `string`\>
+
+A map of environment variables that are available to all steps in the
+job. You can also set environment variables for the entire workflow or an
+individual step.
 
 ___
 
