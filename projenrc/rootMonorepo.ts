@@ -1,7 +1,9 @@
-import { monorepo } from "@aws/pdk";
 import merge from "lodash.merge";
 
-import { MonorepoProject } from "../packages/dkershner6-projen-nx-monorepo/src/MonorepoProject";
+import {
+    MonorepoProject,
+    MonorepoProjectOptions,
+} from "../packages/dkershner6-projen-nx-monorepo/src/MonorepoProject";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     EslintConfig,
@@ -14,10 +16,7 @@ import { CSpell } from "../packages/projen-cspell/src";
 export class RootMonorepo extends MonorepoProject {
     constructor() {
         super(
-            merge<
-                monorepo.MonorepoTsProjectOptions,
-                Partial<monorepo.MonorepoTsProjectOptions>
-            >(
+            merge<MonorepoProjectOptions, Partial<MonorepoProjectOptions>>(
                 {
                     devDeps: [
                         "@aws/pdk",
@@ -31,6 +30,13 @@ export class RootMonorepo extends MonorepoProject {
                     github: true,
 
                     workflowPackageCache: true,
+                    depsUpgradeOptions: {
+                        workflowOptions: {
+                            preUpgradeSteps: [
+                                { run: "echo 'preUpgradeSteps'" },
+                            ],
+                        },
+                    },
                 },
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),

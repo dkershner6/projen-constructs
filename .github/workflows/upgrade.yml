@@ -29,6 +29,7 @@ jobs:
           cache: pnpm
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
+      - run: echo 'preUpgradeSteps'
       - name: Upgrade dependencies
         run: pnpm exec projen upgrade-deps
       - name: Find mutations

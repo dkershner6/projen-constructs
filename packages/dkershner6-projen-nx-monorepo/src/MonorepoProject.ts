@@ -1,13 +1,32 @@
 import { monorepo } from "@aws/pdk";
+import { github, javascript } from "projen";
+
+export interface UpgradeDependenciesWorkflowOptions
+    extends javascript.UpgradeDependenciesWorkflowOptions {
+    /** Steps that will be placed just in front of the upgrade step in the upgrade Workflow */
+    readonly preUpgradeSteps?: github.workflows.JobStep[];
+}
+
+export interface UpgradeDependenciesOptions
+    extends javascript.UpgradeDependenciesOptions {
+    readonly workflowOptions?: UpgradeDependenciesWorkflowOptions;
+}
+
+export interface MonorepoProjectOptions
+    extends monorepo.MonorepoTsProjectOptions {
+    readonly depsUpgradeOptions?: UpgradeDependenciesOptions;
+}
 
 export class MonorepoProject extends monorepo.MonorepoTsProject {
-    constructor(options: monorepo.MonorepoTsProjectOptions) {
+    constructor(options: MonorepoProjectOptions) {
         super(options);
 
         this.addDevDeps("syncpack@^8");
 
         this.addAndEditTasks();
-        this.overwriteUpgradeWorkflow();
+        this.overwriteUpgradeWorkflow(
+            options.depsUpgradeOptions?.workflowOptions?.preUpgradeSteps,
+        );
     }
 
     private addAndEditTasks(): void {
@@ -37,7 +56,9 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         });
     }
 
-    private overwriteUpgradeWorkflow(): void {
+    private overwriteUpgradeWorkflow(
+        preUpgradeSteps: github.workflows.JobStep[] | undefined,
+    ): void {
         const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
         const upgradeWorkflow = this.github?.tryFindWorkflow("upgrade");
 
@@ -45,14 +66,20 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
             const job = upgradeWorkflow?.getJob("upgrade");
             if (job) {
                 // @ts-expect-error - Violating private access
-                const newSteps = job.steps.map((step) => {
+                const newSteps = job.steps.flatMap((step) => {
                     if (step.run?.includes("upgrade")) {
-                        return {
-                            ...step,
-                            run: step.run.replace("upgrade", "upgrade-deps"),
-                        };
+                        return [
+                            ...(preUpgradeSteps ?? []),
+                            {
+                                ...step,
+                                run: step.run.replace(
+                                    "upgrade",
+                                    "upgrade-deps",
+                                ),
+                            },
+                        ];
                     }
-                    return step;
+                    return [step];
                 });
                 upgradeWorkflow.updateJob("upgrade", {
                     ...job,
