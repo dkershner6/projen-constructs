@@ -1670,13 +1670,13 @@ ___
 
 ### overwriteUpgradeWorkflow
 
-▸ **overwriteUpgradeWorkflow**(`preUpgradeSteps`): `void`
+▸ **overwriteUpgradeWorkflow**(`upgradeDependenciesOptions`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `preUpgradeSteps` | `undefined` \| `JobStep`[] |
+| `upgradeDependenciesOptions` | `undefined` \| [`UpgradeDependenciesOptions`](../interfaces/UpgradeDependenciesOptions.md) |
 
 #### Returns
 

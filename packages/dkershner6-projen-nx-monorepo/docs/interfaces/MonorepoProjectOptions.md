@@ -1612,7 +1612,7 @@ ___
 
 ### npmAccess
 
-• `Optional` `Readonly` **npmAccess**: `PUBLIC` \| `RESTRICTED`
+• `Optional` `Readonly` **npmAccess**: `NpmAccess`
 
 Access level of the npm package.
 
@@ -1831,7 +1831,7 @@ ___
 
 ### packageManager
 
-• `Optional` `Readonly` **packageManager**: `YARN` \| `YARN2` \| `YARN_CLASSIC` \| `YARN_BERRY` \| `NPM` \| `PNPM` \| `BUN`
+• `Optional` `Readonly` **packageManager**: `NodePackageManager`
 
 The Node Package Manager used to execute scripts.
 
@@ -2056,7 +2056,7 @@ ___
 
 ### projectType
 
-• `Optional` `Readonly` **projectType**: `UNKNOWN` \| `LIB` \| `APP`
+• `Optional` `Readonly` **projectType**: `ProjectType`
 
 Which type of project this is (library/app).
 
