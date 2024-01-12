@@ -1754,7 +1754,7 @@ ___
 
 ### npmAccess
 
-• `Optional` `Readonly` **npmAccess**: `NpmAccess`
+• `Optional` `Readonly` **npmAccess**: `PUBLIC` \| `RESTRICTED`
 
 Access level of the npm package.
 
@@ -1937,7 +1937,7 @@ ___
 
 ### packageManager
 
-• `Optional` `Readonly` **packageManager**: `NodePackageManager`
+• `Optional` `Readonly` **packageManager**: `YARN` \| `YARN2` \| `YARN_CLASSIC` \| `YARN_BERRY` \| `NPM` \| `PNPM` \| `BUN`
 
 The Node Package Manager used to execute scripts
 
@@ -2120,7 +2120,7 @@ ___
 
 ### projectType
 
-• `Optional` `Readonly` **projectType**: `ProjectType`
+• `Optional` `Readonly` **projectType**: `UNKNOWN` \| `LIB` \| `APP`
 
 Which type of project this is (library/app).
 
@@ -2781,7 +2781,7 @@ ___
 
 ### requireApproval
 
-• `Optional` `Readonly` **requireApproval**: `ApprovalLevel`
+• `Optional` `Readonly` **requireApproval**: `NEVER` \| `ANY_CHANGE` \| `BROADENING`
 
 To protect you against unintended changes that affect your security posture,
 the AWS CDK Toolkit prompts you to approve security-related changes before deploying them.
