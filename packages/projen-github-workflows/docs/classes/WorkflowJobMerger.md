@@ -26,6 +26,7 @@ Add steps or settings to every workflow job in a project.
 
 ### Methods
 
+- [determineShouldMergeJob](WorkflowJobMerger.md#determineshouldmergejob)
 - [mergeJob](WorkflowJobMerger.md#mergejob)
 - [mergeObjects](WorkflowJobMerger.md#mergeobjects)
 - [mergeWorkflowJobs](WorkflowJobMerger.md#mergeworkflowjobs)
@@ -98,6 +99,24 @@ ___
 • `Private` `Readonly` **projectGithub**: `GitHub`
 
 ## Methods
+
+### determineShouldMergeJob
+
+▸ **determineShouldMergeJob**(`workflow`, `jobName`, `merge`): `boolean`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `workflow` | `GithubWorkflow` |
+| `jobName` | `string` |
+| `merge` | [`WorkflowJobMerge`](../interfaces/WorkflowJobMerge.md) |
+
+#### Returns
+
+`boolean`
+
+___
 
 ### mergeJob
 
