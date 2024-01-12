@@ -3,6 +3,7 @@ import deepClone from "clone-deep";
 import {
     DKBugFixes,
     DKTaskName,
+    DKTasks,
     EslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
@@ -29,11 +30,17 @@ export class Node20MonorepoProject extends MonorepoProject {
 
         new DKBugFixes(this);
         new EslintConfig(this);
+        new DKTasks(this);
 
         for (const taskName of Object.values(DKTaskName)) {
-            this.addNxRunManyTask(taskName, {
-                target: taskName,
-            });
+            const task = this.tasks.tryFind(taskName);
+            if (task) {
+                task.exec(
+                    this.execNxRunManyCommand({
+                        target: taskName,
+                    }),
+                );
+            }
         }
     }
 }

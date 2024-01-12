@@ -46,5 +46,5 @@ junit.xml
 !/.eslintrc.json
 .DS_Store
 !/README.md
-!/cspell.json
+!/cspell-readonly.json
 !/project.json

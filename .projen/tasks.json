@@ -17,8 +17,10 @@
       "name": "ci",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=ci --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "spawn": "install:ci"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=ci --output-style=stream --nx-bail"
         }
       ]
     },
@@ -99,6 +101,10 @@
       "description": "Runs eslint against the codebase for all affected projects",
       "steps": [
         {
+          "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings=0 .projenrc.* projenrc",
+          "receiveArgs": true
+        },
+        {
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
           "receiveArgs": true
         }
@@ -118,8 +124,10 @@
       "name": "i",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=i --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "spawn": "install"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=i --output-style=stream --nx-bail"
         }
       ]
     },
@@ -143,10 +151,13 @@
     },
     "lint": {
       "name": "lint",
+      "description": "Alternate lint command",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "spawn": "eslint"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
         }
       ]
     },
@@ -199,8 +210,13 @@
       "description": "Run tests for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "spawn": "eslint"
+        },
+        {
+          "spawn": "type-check"
+        },
+        {
+          "spawn": "test-unit"
         }
       ]
     },
@@ -208,8 +224,11 @@
       "name": "test-unit",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
           "receiveArgs": true
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
         }
       ]
     },
@@ -226,8 +245,10 @@
       "name": "type-check",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "exec": "tsc --noEmit"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail"
         }
       ]
     },

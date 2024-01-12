@@ -28,6 +28,7 @@ tsconfig.tsbuildinfo
 /CONTRIBUTING.md
 /README.md
 /LICENSE
+cspell-readonly.json
 /cspell.json
 /.gitattributes
 /.projenrc.ts
