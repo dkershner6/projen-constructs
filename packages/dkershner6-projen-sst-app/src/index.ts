@@ -97,6 +97,7 @@ export class Node20SstApp extends SstTypescriptApp {
                                         ?.configureAwsCredentialsJobSteps,
                                 deployJobStepBuilder: (builderParams) =>
                                     this.buildDeployToAwsJobStep(builderParams),
+                                env: options.publishToAwsOptions?.env,
                                 runsOn: options.workflowRunsOn,
                                 runsOnGroup: options.workflowRunsOnGroup,
                             },
