@@ -69,6 +69,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
+      - run: echo 'Go!'
+        working-directory: .
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
@@ -94,6 +96,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.10.0
+      - run: echo 'Go!'
+        working-directory: .
       - name: Download build artifacts
         uses: actions/download-artifact@v3
         with:
