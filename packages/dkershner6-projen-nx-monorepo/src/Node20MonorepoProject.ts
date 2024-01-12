@@ -9,10 +9,10 @@ import {
 } from "dkershner6-projen-typescript";
 import { deepMerge } from "projen/lib/util";
 
-import { MonorepoProject } from "./MonorepoProject";
+import { MonorepoProject, MonorepoProjectOptions } from "./MonorepoProject";
 
 export class Node20MonorepoProject extends MonorepoProject {
-    constructor(options: monorepo.MonorepoTsProjectOptions) {
+    constructor(options: MonorepoProjectOptions) {
         super(
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),

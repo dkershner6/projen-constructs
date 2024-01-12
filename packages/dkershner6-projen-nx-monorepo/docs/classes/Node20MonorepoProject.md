@@ -144,7 +144,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `MonorepoTsProjectOptions` |
+| `options` | [`MonorepoProjectOptions`](../interfaces/MonorepoProjectOptions.md) |
 
 #### Returns
 
