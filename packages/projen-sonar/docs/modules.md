@@ -6,6 +6,7 @@
 
 ### Classes
 
+- [SonarBuildWorkflowPatch](classes/SonarBuildWorkflowPatch.md)
 - [SonarFullQualityScanWorkflow](classes/SonarFullQualityScanWorkflow.md)
 - [SonarPropertiesFile](classes/SonarPropertiesFile.md)
 
