@@ -228,6 +228,9 @@ new VsCodeWorkspaces(rootProject, {
 
         throw new Error("Unknown project type");
     },
+    additionalWorkspacesJsonSettings: {
+        settings: { "cSpell.import": ["cspell-readonly.json"] },
+    },
 });
 
 new Nvmrc(rootProject);

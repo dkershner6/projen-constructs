@@ -105,13 +105,16 @@ const PROJEN_AND_THIS_MONOREPO_WORDS = [
     "dkershner",
     "jsii",
     "kershner",
+    "lcov",
     "npmignore",
     "outdir",
     "projen",
     "projenrc",
+    "qualitygate",
     "rootdir",
     "rootproject",
     "setfacl",
+    "sonarcloud",
     "sonarjs",
     "sonarqube",
     "sonarsource",
@@ -124,12 +127,12 @@ const PROJEN_AND_THIS_MONOREPO_WORDS = [
 const SHARED_CSPELL_CONFIG_FILENAME = "cspell-readonly.json";
 
 export class CSpellConfigFile extends Component {
-    public readonly confg: CSpellConfig;
+    public readonly config: CSpellConfig;
 
     constructor(project: Project, options?: CSpellConfigFileOptions) {
         super(project);
 
-        this.confg = {
+        this.config = {
             ...(options?.config ?? {}),
             version: options?.config?.version ?? "0.2",
             language: options?.config?.language ?? "en",
@@ -149,7 +152,7 @@ export class CSpellConfigFile extends Component {
         };
 
         new JsonFile(this.project, SHARED_CSPELL_CONFIG_FILENAME, {
-            obj: this.confg,
+            obj: this.config,
         });
 
         this.project.addPackageIgnore(SHARED_CSPELL_CONFIG_FILENAME);
