@@ -1,4 +1,11 @@
-import { Component, IniFile, IniFileOptions, Project } from "projen";
+import {
+    Component,
+    IniFile,
+    IniFileOptions,
+    JsonPatch,
+    Project,
+    YamlFile,
+} from "projen";
 import {
     GithubWorkflow,
     GithubWorkflowOptions,
@@ -108,6 +115,8 @@ export interface SonarFullQualityScanWorkflowOptions {
 
     /**
      * The job configuration for the Sonar Quality Scan job.
+     *
+     * @default Same as the build job
      */
     jobConfig?: Partial<Job>;
 
@@ -178,6 +187,34 @@ export class SonarFullQualityScanWorkflow extends Component {
                     buildSonarQualityScanJobStep(),
                 ],
                 ...(options?.jobConfig ?? {}),
+            });
+        }
+    }
+}
+
+export class SonarBuildWorkflowPatch extends Component {
+    constructor(project: Project) {
+        super(project);
+
+        const buildWorkflowFile = project.tryFindObjectFile(
+            ".github/workflows/build.yml",
+        ) as YamlFile | undefined;
+        if (buildWorkflowFile) {
+            buildWorkflowFile.patch(
+                JsonPatch.add("/jobs/build/steps/0/with", {
+                    "fetch-depth": 0,
+                    // Add should make below un-needed, but it replaces for some reason
+                    ref: "${{ github.event.pull_request.head.ref }}",
+                    repository:
+                        "${{ github.event.pull_request.head.repo.full_name }}",
+                }),
+            );
+
+            const { continueOnError, ...restOfStep } =
+                buildSonarQualityScanJobStep();
+            buildWorkflowFile.addToArray("jobs.build.steps", {
+                ...restOfStep,
+                "continue-on-error": continueOnError,
             });
         }
     }
