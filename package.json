@@ -9,6 +9,7 @@
     "default": "pnpm exec projen default",
     "eject": "pnpm exec projen eject",
     "eslint": "pnpm exec projen eslint",
+    "eslint:monorepo": "pnpm exec projen eslint:monorepo",
     "graph": "pnpm exec projen graph",
     "i": "pnpm exec projen i",
     "lint": "pnpm exec projen lint",

@@ -29,18 +29,29 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
     }
 
     private addAndEditTasks(): void {
-        const defaultTask = this.tasks.tryFind("default");
-        if (defaultTask) {
-            this.tasks.tryFind("build")?.prependSpawn(defaultTask);
-        }
+        const eslintMonorepoTask = this.tasks.addTask("eslint:monorepo", {
+            exec: "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings=0 .projenrc.* projenrc",
+            description: "Lint the monorepo",
+            receiveArgs: true,
+        });
 
+        const buildTask = this.tasks.tryFind("build");
         const eslintTask = this.tasks.tryFind("eslint");
         if (eslintTask) {
             // Lint the monorepo too
-            eslintTask.prependExec(
-                `eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings=0 .projenrc.* projenrc`,
-                { receiveArgs: true },
-            );
+            eslintTask.prependSpawn(eslintMonorepoTask, { receiveArgs: true });
+
+            if (buildTask) {
+                // Second
+                buildTask.prependSpawn(eslintMonorepoTask, {
+                    receiveArgs: true,
+                });
+            }
+        }
+
+        const defaultTask = this.tasks.tryFind("default");
+        if (defaultTask && buildTask) {
+            buildTask.prependSpawn(defaultTask); // First
         }
 
         this.addTask("clean-modules", {
