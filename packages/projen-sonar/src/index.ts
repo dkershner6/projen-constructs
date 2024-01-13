@@ -106,6 +106,11 @@ export interface SonarFullQualityScanWorkflowOptions {
      */
     branches?: string[];
 
+    /**
+     * The job configuration for the Sonar Quality Scan job.
+     */
+    jobConfig?: Partial<Job>;
+
     workflowOptions?: GithubWorkflowOptions;
 }
 
@@ -172,6 +177,7 @@ export class SonarFullQualityScanWorkflow extends Component {
                     },
                     buildSonarQualityScanJobStep(),
                 ],
+                ...(options?.jobConfig ?? {}),
             });
         }
     }
