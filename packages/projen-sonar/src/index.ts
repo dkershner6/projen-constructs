@@ -1,8 +1,11 @@
 import { Component, IniFile, IniFileOptions, Project } from "projen";
+import { GithubWorkflow, GithubWorkflowOptions } from "projen/lib/github";
 import {
+    Job,
     JobStep,
     JobStepConfiguration,
 } from "projen/lib/github/workflows-model";
+import { NodeProject } from "projen/lib/javascript";
 
 export const buildSonarQualityScanJobStep = (
     jobStepConfig?: JobStepConfiguration,
@@ -90,5 +93,76 @@ export class SonarPropertiesFile extends Component {
      */
     public set projectKey(projectKey: string) {
         this.obj[SonarPropertiesFile.PROJECT_KEY_FIELD_NAME] = projectKey;
+    }
+}
+
+export interface SonarFullQualityScanWorkflowOptions {
+    /**
+     * The branches to run the workflow on (push).
+     */
+    branches?: string[];
+
+    workflowOptions?: GithubWorkflowOptions;
+}
+
+/**
+ * Run a full quality scan on your project after pushing to your default branch(es).
+ */
+export class SonarFullQualityScanWorkflow extends Component {
+    declare project: NodeProject;
+
+    public readonly workflow: GithubWorkflow | undefined;
+
+    constructor(
+        project: NodeProject,
+        name?: string,
+        options?: SonarFullQualityScanWorkflowOptions,
+    ) {
+        super(project);
+
+        if (!project.github) {
+            return;
+        }
+
+        this.workflow = new GithubWorkflow(
+            project.github,
+            name ?? "sonar-full-scan",
+            options?.workflowOptions,
+        );
+
+        if (options?.branches) {
+            this.workflow.on({
+                push: {
+                    branches: options.branches,
+                },
+            });
+        }
+
+        const buildWorkflowJob = project.github
+            .tryFindWorkflow("build")
+            ?.getJob("build") as Job | undefined;
+        if (buildWorkflowJob) {
+            this.workflow.addJob("sonar-quality-scan", {
+                concurrency: buildWorkflowJob.concurrency,
+                container: buildWorkflowJob.container,
+                continueOnError: buildWorkflowJob.continueOnError,
+                defaults: buildWorkflowJob.defaults,
+                env: buildWorkflowJob.env,
+                environment: buildWorkflowJob.environment,
+                permissions: buildWorkflowJob.permissions,
+                runsOn: buildWorkflowJob.runsOn,
+                runsOnGroup: buildWorkflowJob.runsOnGroup,
+                services: buildWorkflowJob.services,
+                strategy: buildWorkflowJob.strategy,
+                steps: [
+                    ...project.renderWorkflowSetup(),
+                    {
+                        name: "Build",
+                        run: project.runTaskCommand(project.buildTask),
+                    },
+                    buildSonarQualityScanJobStep(),
+                ],
+            });
+        }
     }
 }
