@@ -139,6 +139,7 @@ export class SonarFullQualityScanWorkflow extends Component {
                 push: {
                     branches: options.branches,
                 },
+                workflowDispatch: {},
             });
         }
 
