@@ -16,7 +16,7 @@
 
 ### Properties
 
-- [confg](CSpellConfigFile.md#confg)
+- [config](CSpellConfigFile.md#config)
 - [node](CSpellConfigFile.md#node)
 - [project](CSpellConfigFile.md#project)
 
@@ -52,9 +52,9 @@ Component.constructor
 
 ## Properties
 
-### confg
+### config
 
-• `Readonly` **confg**: [`CSpellConfig`](../interfaces/CSpellConfig.md)
+• `Readonly` **config**: [`CSpellConfig`](../interfaces/CSpellConfig.md)
 
 ___
 
