@@ -7,6 +7,7 @@
 ### Properties
 
 - [branches](SonarFullQualityScanWorkflowOptions.md#branches)
+- [jobConfig](SonarFullQualityScanWorkflowOptions.md#jobconfig)
 - [workflowOptions](SonarFullQualityScanWorkflowOptions.md#workflowoptions)
 
 ## Properties
@@ -16,6 +17,20 @@
 • `Optional` **branches**: `string`[]
 
 The branches to run the workflow on (push).
+
+___
+
+### jobConfig
+
+• `Optional` **jobConfig**: `Partial`\<`Job`\>
+
+The job configuration for the Sonar Quality Scan job.
+
+**`Default`**
+
+```ts
+Same as the build job
+```
 
 ___
 
