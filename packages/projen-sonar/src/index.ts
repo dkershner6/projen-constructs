@@ -1,5 +1,9 @@
 import { Component, IniFile, IniFileOptions, Project } from "projen";
-import { GithubWorkflow, GithubWorkflowOptions } from "projen/lib/github";
+import {
+    GithubWorkflow,
+    GithubWorkflowOptions,
+    WorkflowSteps,
+} from "projen/lib/github";
 import {
     Job,
     JobStep,
@@ -155,6 +159,11 @@ export class SonarFullQualityScanWorkflow extends Component {
                 services: buildWorkflowJob.services,
                 strategy: buildWorkflowJob.strategy,
                 steps: [
+                    WorkflowSteps.checkout({
+                        with: {
+                            fetchDepth: 0, // Sonar likes to have history
+                        },
+                    }),
                     ...project.renderWorkflowSetup(),
                     {
                         name: "Build",
