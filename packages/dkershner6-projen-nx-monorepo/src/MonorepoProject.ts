@@ -1,5 +1,6 @@
 import { monorepo } from "@aws/pdk";
 import { github, javascript } from "projen";
+import { Job } from "projen/lib/github/workflows-model";
 
 export interface UpgradeDependenciesWorkflowOptions
     extends javascript.UpgradeDependenciesWorkflowOptions {
@@ -73,8 +74,7 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
 
                 const job = upgradeWorkflow?.getJob("upgrade");
                 if (job) {
-                    // @ts-expect-error - Violating private access
-                    const newSteps = job.steps.flatMap((step) => {
+                    const newSteps = (job as Job).steps.flatMap((step) => {
                         if (step.run?.includes("upgrade")) {
                             return [
                                 ...(upgradeDependenciesOptions?.workflowOptions
