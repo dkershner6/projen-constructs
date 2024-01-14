@@ -52,7 +52,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
 };
 
 export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
-    minNodeVersion: "18.12.0",
+    minNodeVersion: "20.10.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
 

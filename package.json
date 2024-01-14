@@ -34,7 +34,7 @@
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.11",
     "@types/lodash.merge": "^4.6.9",
-    "@types/node": "^18",
+    "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "clone-deep": "^4.0.1",
