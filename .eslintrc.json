@@ -117,7 +117,8 @@
       "off"
     ],
     "@typescript-eslint/return-await": [
-      "error"
+      "error",
+      "always"
     ],
     "no-trailing-spaces": [
       "error"
