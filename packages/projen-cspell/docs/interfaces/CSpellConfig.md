@@ -9,6 +9,7 @@
 - [dictionaries](CSpellConfig.md#dictionaries)
 - [dictionaryDefinitions](CSpellConfig.md#dictionarydefinitions)
 - [flagWords](CSpellConfig.md#flagwords)
+- [ignorePaths](CSpellConfig.md#ignorepaths)
 - [ignoreRegExpList](CSpellConfig.md#ignoreregexplist)
 - [language](CSpellConfig.md#language)
 - [version](CSpellConfig.md#version)
@@ -38,6 +39,14 @@ ___
 
 flagWords - list of words to be always considered incorrect
 This is useful for offensive words and common spelling errors. (e.g. "hte" and "thier")
+
+___
+
+### ignorePaths
+
+• `Optional` `Readonly` **ignorePaths**: `string`[]
+
+Globs of files to ignore.
 
 ___
 
