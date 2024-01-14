@@ -194,6 +194,14 @@
         "*.ts",
         "*.tsx"
       ],
+      "excludedFiles": [
+        "__mocks__/**/*",
+        "__tests__/**/*",
+        "*.spec.ts",
+        "*.spec.tsx",
+        "*.test.ts",
+        "*.test.tsx"
+      ],
       "extends": [
         "plugin:@cspell/recommended"
       ]

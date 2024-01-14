@@ -93,6 +93,11 @@ export interface CSpellConfig {
      * Custom dictionaries to use.
      */
     readonly dictionaries?: string[];
+
+    /**
+     * Globs of files to ignore.
+     */
+    readonly ignorePaths?: string[];
 }
 
 export interface CSpellConfigFileOptions {
@@ -149,6 +154,14 @@ export class CSpellConfigFile extends Component {
                     "thier",
                 ]),
             ],
+            ignorePaths: [
+                "**/__mocks__/**/*",
+                "**/__tests__/**/*",
+                "**/*.spec.ts",
+                "**/*.spec.tsx",
+                "**/*.test.ts",
+                "**/*.test.tsx",
+            ],
         };
 
         new JsonFile(this.project, SHARED_CSPELL_CONFIG_FILENAME, {
@@ -193,6 +206,14 @@ export class CSpell extends Component {
 
                 eslint.addOverride({
                     files: ["*.ts", "*.tsx"],
+                    excludedFiles: [
+                        "__mocks__/**/*",
+                        "__tests__/**/*",
+                        "*.spec.ts",
+                        "*.spec.tsx",
+                        "*.test.ts",
+                        "*.test.tsx",
+                    ],
                     extends: ["plugin:@cspell/recommended"],
                 });
             }
