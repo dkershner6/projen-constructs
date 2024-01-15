@@ -101,10 +101,6 @@ export class Node20ReactTypescriptConfigurer extends Component {
 
         this.installDeps(options.projectType);
 
-        this.project.tsconfig?.addExclude(
-            `${this.project.srcdir}/**/*.stories.tsx`,
-        );
-
         if (this.project.eslint) {
             this.configureEslint();
         }
