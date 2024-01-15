@@ -9,8 +9,10 @@ import {
 } from "dkershner6-projen-awscdk-core";
 import {
     DKBugFixes,
+    DKJest,
     DKTasks,
     EslintConfig,
+    Node20TypeScriptProjectJestOptions,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
 import { Task, filteredRunsOnOptions, github } from "projen";
@@ -26,6 +28,8 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
      * `constructsVersion` property.
      */
     constructsVersionPinning?: boolean;
+
+    jestOptions?: Node20TypeScriptProjectJestOptions;
 
     /**
      * Whether to publish this App to AWS.
@@ -55,6 +59,7 @@ export class Node20SstApp extends SstTypescriptApp {
         new DKBugFixes(this);
         new DKTasks(this);
         new EslintConfig(this);
+        new DKJest(this, options.jestOptions);
 
         this.eslint?.allowDevDeps(`${this.srcdir}/main.ts`);
         this.eslint?.allowDevDeps(`${this.srcdir}/*Stack.ts`);

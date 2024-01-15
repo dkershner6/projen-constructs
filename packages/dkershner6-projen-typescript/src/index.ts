@@ -4,6 +4,7 @@ import { AwsCdkConstructLibrary } from "projen/lib/awscdk";
 import {
     TypeScriptCompilerOptions,
     NodeProjectOptions,
+    JestOptions,
 } from "projen/lib/javascript";
 import {
     TypeScriptProjectOptions,
@@ -110,18 +111,25 @@ const ESM_MODULES_TO_TRANSFORM = [
     "uuid",
 ];
 
+export const buildJestTransformIgnorePatterns = (
+    nodeModulesToTransform?: string[],
+): string[] => {
+    return [
+        `node_modules/(?!(${[...new Set([...ESM_MODULES_TO_TRANSFORM, ...(nodeModulesToTransform ?? [])])].join("|")})/)`, // default is just `node_modules`
+        "\\.pnp\\.[^\\/]+$", // default
+    ];
+};
+
 export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
     jest: true,
     jestOptions: {
         jestConfig: {
             testEnvironment: "node",
-            transformIgnorePatterns: [
-                `node_modules/(?!(${ESM_MODULES_TO_TRANSFORM.join("|")})/)`,
-                "\\.pnp\\.[^\\/]+$",
-            ],
+            transformIgnorePatterns: buildJestTransformIgnorePatterns(),
         },
     },
 };
+
 export const RECOMMENDED_PRETTIER_CONFIG: Partial<NodeProjectOptions> = {
     prettier: true,
     prettierOptions: {
@@ -313,8 +321,43 @@ export class DKTasks extends Component {
     }
 }
 
+export interface Node20TypeScriptExtraJestOptions {
+    /**
+     * Additional modules for jest to transform, typically ESM modules.
+     *
+     * @default - A list of known ESM modules commonly used in projects
+     */
+    readonly modulesToTransform?: string[];
+}
+
+export interface Node20TypeScriptProjectJestOptions
+    extends JestOptions,
+        Node20TypeScriptExtraJestOptions {}
+
+export class DKJest extends Component {
+    constructor(
+        project: TypeScriptProject,
+        options?: Node20TypeScriptProjectJestOptions,
+    ) {
+        super(project);
+
+        if (project.jest && options?.modulesToTransform) {
+            project.jest.config.transformIgnorePatterns =
+                buildJestTransformIgnorePatterns([
+                    ...ESM_MODULES_TO_TRANSFORM,
+                    ...options.modulesToTransform,
+                ]);
+        }
+    }
+}
+
+export interface Node20TypeScriptProjectOptions
+    extends TypeScriptProjectOptions {
+    jestOptions?: Node20TypeScriptProjectJestOptions;
+}
+
 export class Node20TypeScriptProject extends TypeScriptProject {
-    constructor(options: TypeScriptProjectOptions) {
+    constructor(options: Node20TypeScriptProjectOptions) {
         super(
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
@@ -325,5 +368,6 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
+        new DKJest(this, options.jestOptions);
     }
 }

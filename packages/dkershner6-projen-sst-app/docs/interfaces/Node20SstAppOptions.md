@@ -1429,17 +1429,9 @@ ___
 
 ### jestOptions
 
-• `Optional` `Readonly` **jestOptions**: `JestOptions`
+• `Optional` **jestOptions**: `Node20TypeScriptProjectJestOptions`
 
-Jest options
-
-**`Default`**
-
-```ts
-- default options
-```
-
-#### Inherited from
+#### Overrides
 
 SstTypescriptAppOptions.jestOptions
 

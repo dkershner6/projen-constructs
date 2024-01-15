@@ -2,8 +2,10 @@ import deepClone from "clone-deep";
 import {
     DEV_FILE_PATTERNS,
     DKBugFixes,
+    DKJest,
     DKTasks,
     EslintConfig,
+    Node20TypeScriptProjectOptions,
     PUBLISH_FILE_PATTERNS,
     RECOMMENDED_ESLINT_CONFIG,
     RECOMMENDED_JEST_CONFIG,
@@ -204,7 +206,7 @@ export class Node20ReactTypescriptConfigurer extends Component {
 }
 
 export class Node20ReactTypeScriptProject extends TypeScriptProject {
-    constructor(options: TypeScriptProjectOptions) {
+    constructor(options: Node20TypeScriptProjectOptions) {
         super(
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
@@ -215,6 +217,7 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
+        new DKJest(this, options.jestOptions);
 
         new Node20ReactTypescriptConfigurer(this);
     }
