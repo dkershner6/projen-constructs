@@ -2,6 +2,7 @@
   "name": "projen-constructs",
   "scripts": {
     "build": "pnpm exec projen build",
+    "build:skip-cache": "pnpm exec projen build:skip-cache",
     "ci": "pnpm exec projen ci",
     "clean-modules": "pnpm exec projen clean-modules",
     "clobber": "pnpm exec projen clobber",
