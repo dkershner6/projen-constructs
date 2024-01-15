@@ -34,13 +34,14 @@
 
 ### constructor
 
-• **new Storybook**(`project`): [`Storybook`](Storybook.md)
+• **new Storybook**(`project`, `options?`): [`Storybook`](Storybook.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `NodeProject` |
+| `options` | [`StorybookOptions`](../interfaces/StorybookOptions.md) |
 
 #### Returns
 

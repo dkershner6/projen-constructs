@@ -8,3 +8,7 @@
 
 - [Storybook](classes/Storybook.md)
 - [StorybookNextjs](classes/StorybookNextjs.md)
+
+### Interfaces
+
+- [StorybookOptions](interfaces/StorybookOptions.md)
