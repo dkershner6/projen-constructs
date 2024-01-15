@@ -1,4 +1,4 @@
-import { Component, SampleFile, javascript } from "projen";
+import { Component, SampleFile, javascript, typescript } from "projen";
 
 export interface StorybookOptions {
     /**
@@ -32,6 +32,7 @@ export class Storybook extends Component {
             "@storybook/addon-onboarding",
             "@storybook/blocks",
             "@storybook/test",
+            "storybook",
         );
 
         const eslint = javascript.Eslint.of(this.project);
@@ -42,6 +43,13 @@ export class Storybook extends Component {
                 files: ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
                 extends: ["plugin:storybook/recommended"],
             });
+        }
+
+        if (this.project instanceof typescript.TypeScriptProject) {
+            const storyTsxPattern = "**/*.stories.tsx";
+            this.project.tsconfig?.addExclude(storyTsxPattern);
+
+            this.project.tsconfigDev?.addInclude(storyTsxPattern);
         }
 
         this.project.addTask("build-storybook", {
