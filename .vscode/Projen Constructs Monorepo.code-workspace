@@ -7,6 +7,7 @@
       "./packages/projen-nvm",
       "./packages/projen-sonar",
       "./packages/projen-sst",
+      "./packages/projen-storybook",
       "./packages/projen-typedoc",
       "./packages/projen-vscode-workspaces",
       "./packages/dkershner6-projen-typescript",
@@ -58,6 +59,10 @@
     {
       "name": "(Lib) sst",
       "path": "../packages/projen-sst"
+    },
+    {
+      "name": "(Lib) storybook",
+      "path": "../packages/projen-storybook"
     },
     {
       "name": "(Lib) typedoc",
