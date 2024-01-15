@@ -20,6 +20,7 @@
     ".github/workflows/release_projen-nvm.yml",
     ".github/workflows/release_projen-sonar.yml",
     ".github/workflows/release_projen-sst.yml",
+    ".github/workflows/release_projen-storybook.yml",
     ".github/workflows/release_projen-typedoc.yml",
     ".github/workflows/release_projen-vscode-workspaces.yml",
     ".github/workflows/upgrade.yml",

@@ -32,10 +32,10 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         const eslintMonorepoTask = this.tasks.addTask("eslint:monorepo", {
             exec: "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern --max-warnings=0 .projenrc.* projenrc",
             description: "Lint the monorepo",
-            receiveArgs: true,
         });
 
         const buildTask = this.tasks.tryFind("build");
+
         const eslintTask = this.tasks.tryFind("eslint");
         if (eslintTask) {
             // Lint the monorepo too
@@ -52,6 +52,13 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         const defaultTask = this.tasks.tryFind("default");
         if (defaultTask && buildTask) {
             buildTask.prependSpawn(defaultTask); // First
+        }
+
+        if (buildTask) {
+            const buildSkipCacheTask = this.tasks.addTask("build:skip-cache");
+            buildSkipCacheTask.spawn(buildTask, {
+                args: ["--skip-nx-cache"],
+            });
         }
 
         this.addTask("clean-modules", {

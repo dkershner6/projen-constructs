@@ -15,5 +15,6 @@ packages:
   - packages/projen-nvm
   - packages/projen-sonar
   - packages/projen-sst
+  - packages/projen-storybook
   - packages/projen-typedoc
   - packages/projen-vscode-workspaces

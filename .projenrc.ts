@@ -64,6 +64,12 @@ new ProjenConstructTsLib(rootProject, {
 });
 
 new ProjenConstructTsLib(rootProject, {
+    name: "projen-storybook",
+    keywords: ["projen", "storybook", "docs", "documentation"],
+    description: "Helpers for Projen projects that use Storybook.",
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "projen-typedoc",
     keywords: ["projen", "typedoc", "docs", "documentation"],
     description: "Helpers for Projen projects that use Typedoc (docgen).",
