@@ -1,9 +1,28 @@
 import { Component, SampleFile, javascript } from "projen";
 
+export interface StorybookOptions {
+    /**
+     * The directory where static files will be written to.
+     *
+     * @default "storybook-static"
+     */
+    readonly staticOutDir?: string;
+
+    /**
+     * The port that Storybook will run on.
+     *
+     * @default 6006
+     */
+    readonly port?: number;
+}
+
 export class Storybook extends Component {
     declare readonly project: javascript.NodeProject;
 
-    constructor(project: javascript.NodeProject) {
+    constructor(
+        project: javascript.NodeProject,
+        options: StorybookOptions = {},
+    ) {
         super(project);
 
         this.project.addDevDeps(
@@ -24,12 +43,24 @@ export class Storybook extends Component {
                 extends: ["plugin:storybook/recommended"],
             });
         }
+
+        this.project.addTask("build-storybook", {
+            exec: `storybook build -o ${options.staticOutDir ?? "storybook-static"}`,
+            receiveArgs: true,
+        });
+        this.project.addTask("storybook", {
+            exec: `storybook dev -p ${options.port ?? 6006}`,
+            receiveArgs: true,
+        });
     }
 }
 
 export class StorybookNextjs extends Storybook {
-    constructor(project: javascript.NodeProject) {
-        super(project);
+    constructor(
+        project: javascript.NodeProject,
+        options: StorybookOptions = {},
+    ) {
+        super(project, options);
 
         this.project.addDevDeps("@storybook/nextjs", "@storybook/react");
 

@@ -32,13 +32,14 @@
 
 ### constructor
 
-• **new StorybookNextjs**(`project`): [`StorybookNextjs`](StorybookNextjs.md)
+• **new StorybookNextjs**(`project`, `options?`): [`StorybookNextjs`](StorybookNextjs.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `NodeProject` |
+| `options` | [`StorybookOptions`](../interfaces/StorybookOptions.md) |
 
 #### Returns
 
