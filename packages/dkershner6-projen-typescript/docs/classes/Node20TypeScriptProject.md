@@ -133,7 +133,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `TypeScriptProjectOptions` |
+| `options` | [`Node20TypeScriptProjectOptions`](../interfaces/Node20TypeScriptProjectOptions.md) |
 
 #### Returns
 

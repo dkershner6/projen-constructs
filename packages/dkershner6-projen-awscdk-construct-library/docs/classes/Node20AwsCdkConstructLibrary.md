@@ -138,7 +138,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `AwsCdkConstructLibraryOptions` |
+| `options` | [`Node20AwsCdkConstructLibraryOptions`](../interfaces/Node20AwsCdkConstructLibraryOptions.md) |
 
 #### Returns
 

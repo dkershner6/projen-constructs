@@ -9,6 +9,8 @@ import {
     DKBugFixes,
     DKTasks,
     EslintConfig,
+    Node20TypeScriptProjectJestOptions,
+    DKJest,
 } from "dkershner6-projen-typescript";
 import { Task, awscdk } from "projen";
 import { JobStep } from "projen/lib/github/workflows-model";
@@ -21,6 +23,8 @@ export interface Node20AwsCdkAppOptions
      * `constructsVersion` property.
      */
     constructsVersionPinning?: boolean;
+
+    jestOptions?: Node20TypeScriptProjectJestOptions;
 
     /**
      * Whether to publish this App to AWS.
@@ -48,6 +52,7 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
         new DKBugFixes(this);
         new DKTasks(this);
         new EslintConfig(this);
+        new DKJest(this, options.jestOptions);
 
         this.eslint?.allowDevDeps(`${this.srcdir}/main.ts`);
         this.eslint?.allowDevDeps(`${this.srcdir}/*Stack.ts`);
