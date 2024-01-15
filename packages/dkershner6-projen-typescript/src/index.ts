@@ -171,7 +171,9 @@ export class DKBugFixes extends Component {
         // TypeScript
         if (!(project instanceof AwsCdkConstructLibrary)) {
             for (const suffix of TEST_FILE_SUFFIXES) {
-                project.tsconfig?.addExclude(`src/**/*.${suffix}.ts`);
+                project.tsconfig?.addExclude(
+                    `${project.srcdir}/**/*.${suffix}.ts`,
+                );
             }
             for (const folder of TEST_FOLDERS) {
                 project.tsconfig?.addExclude(`**/${folder}/**/*`);
