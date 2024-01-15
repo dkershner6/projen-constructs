@@ -7,6 +7,8 @@ import {
     DKBugFixes,
     EslintConfig,
     DKTasks,
+    Node20TypeScriptProjectJestOptions,
+    DKJest,
 } from "dkershner6-projen-typescript";
 import { ProjectOptions } from "projen";
 import {
@@ -27,8 +29,13 @@ export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
 
+export interface Node20AwsCdkConstructLibraryOptions
+    extends AwsCdkConstructLibraryOptions {
+    jestOptions?: Node20TypeScriptProjectJestOptions;
+}
+
 export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
-    constructor(options: AwsCdkConstructLibraryOptions) {
+    constructor(options: Node20AwsCdkConstructLibraryOptions) {
         super(
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS),
@@ -39,5 +46,6 @@ export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
         new DKBugFixes(this);
         new EslintConfig(this);
         new DKTasks(this);
+        new DKJest(this, options.jestOptions);
     }
 }

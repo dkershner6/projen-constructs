@@ -1,185 +1,160 @@
-[dkershner6-projen-awscdk-app](../README.md) / [Exports](../modules.md) / Node20AwsCdkAppOptions
+[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / Node20TypeScriptProjectOptions
 
-# Interface: Node20AwsCdkAppOptions
+# Interface: Node20TypeScriptProjectOptions
 
 ## Hierarchy
 
-- `AwsCdkTypeScriptAppOptions`
+- `TypeScriptProjectOptions`
 
-  ↳ **`Node20AwsCdkAppOptions`**
+  ↳ **`Node20TypeScriptProjectOptions`**
 
 ## Table of contents
 
 ### Properties
 
-- [allowLibraryDependencies](Node20AwsCdkAppOptions.md#allowlibrarydependencies)
-- [appEntrypoint](Node20AwsCdkAppOptions.md#appentrypoint)
-- [artifactsDirectory](Node20AwsCdkAppOptions.md#artifactsdirectory)
-- [authorEmail](Node20AwsCdkAppOptions.md#authoremail)
-- [authorName](Node20AwsCdkAppOptions.md#authorname)
-- [authorOrganization](Node20AwsCdkAppOptions.md#authororganization)
-- [authorUrl](Node20AwsCdkAppOptions.md#authorurl)
-- [autoApproveOptions](Node20AwsCdkAppOptions.md#autoapproveoptions)
-- [autoApproveUpgrades](Node20AwsCdkAppOptions.md#autoapproveupgrades)
-- [autoDetectBin](Node20AwsCdkAppOptions.md#autodetectbin)
-- [autoMerge](Node20AwsCdkAppOptions.md#automerge)
-- [autoMergeOptions](Node20AwsCdkAppOptions.md#automergeoptions)
-- [bin](Node20AwsCdkAppOptions.md#bin)
-- [bugsEmail](Node20AwsCdkAppOptions.md#bugsemail)
-- [bugsUrl](Node20AwsCdkAppOptions.md#bugsurl)
-- [buildCommand](Node20AwsCdkAppOptions.md#buildcommand)
-- [buildWorkflow](Node20AwsCdkAppOptions.md#buildworkflow)
-- [buildWorkflowTriggers](Node20AwsCdkAppOptions.md#buildworkflowtriggers)
-- [bundledDeps](Node20AwsCdkAppOptions.md#bundleddeps)
-- [bundlerOptions](Node20AwsCdkAppOptions.md#bundleroptions)
-- [cdkAssert](Node20AwsCdkAppOptions.md#cdkassert)
-- [cdkAssertions](Node20AwsCdkAppOptions.md#cdkassertions)
-- [cdkDependencies](Node20AwsCdkAppOptions.md#cdkdependencies)
-- [cdkDependenciesAsDeps](Node20AwsCdkAppOptions.md#cdkdependenciesasdeps)
-- [cdkTestDependencies](Node20AwsCdkAppOptions.md#cdktestdependencies)
-- [cdkVersion](Node20AwsCdkAppOptions.md#cdkversion)
-- [cdkVersionPinning](Node20AwsCdkAppOptions.md#cdkversionpinning)
-- [cdkout](Node20AwsCdkAppOptions.md#cdkout)
-- [checkLicenses](Node20AwsCdkAppOptions.md#checklicenses)
-- [clobber](Node20AwsCdkAppOptions.md#clobber)
-- [codeArtifactOptions](Node20AwsCdkAppOptions.md#codeartifactoptions)
-- [codeCov](Node20AwsCdkAppOptions.md#codecov)
-- [codeCovTokenSecret](Node20AwsCdkAppOptions.md#codecovtokensecret)
-- [commitGenerated](Node20AwsCdkAppOptions.md#commitgenerated)
-- [constructsVersion](Node20AwsCdkAppOptions.md#constructsversion)
-- [constructsVersionPinning](Node20AwsCdkAppOptions.md#constructsversionpinning)
-- [context](Node20AwsCdkAppOptions.md#context)
-- [copyrightOwner](Node20AwsCdkAppOptions.md#copyrightowner)
-- [copyrightPeriod](Node20AwsCdkAppOptions.md#copyrightperiod)
-- [defaultReleaseBranch](Node20AwsCdkAppOptions.md#defaultreleasebranch)
-- [dependabot](Node20AwsCdkAppOptions.md#dependabot)
-- [dependabotOptions](Node20AwsCdkAppOptions.md#dependabotoptions)
-- [deps](Node20AwsCdkAppOptions.md#deps)
-- [depsUpgrade](Node20AwsCdkAppOptions.md#depsupgrade)
-- [depsUpgradeOptions](Node20AwsCdkAppOptions.md#depsupgradeoptions)
-- [description](Node20AwsCdkAppOptions.md#description)
-- [devContainer](Node20AwsCdkAppOptions.md#devcontainer)
-- [devDeps](Node20AwsCdkAppOptions.md#devdeps)
-- [disableTsconfig](Node20AwsCdkAppOptions.md#disabletsconfig)
-- [disableTsconfigDev](Node20AwsCdkAppOptions.md#disabletsconfigdev)
-- [docgen](Node20AwsCdkAppOptions.md#docgen)
-- [docsDirectory](Node20AwsCdkAppOptions.md#docsdirectory)
-- [edgeLambdaAutoDiscover](Node20AwsCdkAppOptions.md#edgelambdaautodiscover)
-- [entrypoint](Node20AwsCdkAppOptions.md#entrypoint)
-- [entrypointTypes](Node20AwsCdkAppOptions.md#entrypointtypes)
-- [eslint](Node20AwsCdkAppOptions.md#eslint)
-- [eslintOptions](Node20AwsCdkAppOptions.md#eslintoptions)
-- [experimentalIntegRunner](Node20AwsCdkAppOptions.md#experimentalintegrunner)
-- [featureFlags](Node20AwsCdkAppOptions.md#featureflags)
-- [gitIgnoreOptions](Node20AwsCdkAppOptions.md#gitignoreoptions)
-- [gitOptions](Node20AwsCdkAppOptions.md#gitoptions)
-- [github](Node20AwsCdkAppOptions.md#github)
-- [githubOptions](Node20AwsCdkAppOptions.md#githuboptions)
-- [gitignore](Node20AwsCdkAppOptions.md#gitignore)
-- [gitpod](Node20AwsCdkAppOptions.md#gitpod)
-- [homepage](Node20AwsCdkAppOptions.md#homepage)
-- [integrationTestAutoDiscover](Node20AwsCdkAppOptions.md#integrationtestautodiscover)
-- [jest](Node20AwsCdkAppOptions.md#jest)
-- [jestOptions](Node20AwsCdkAppOptions.md#jestoptions)
-- [jsiiReleaseVersion](Node20AwsCdkAppOptions.md#jsiireleaseversion)
-- [keywords](Node20AwsCdkAppOptions.md#keywords)
-- [lambdaAutoDiscover](Node20AwsCdkAppOptions.md#lambdaautodiscover)
-- [lambdaExtensionAutoDiscover](Node20AwsCdkAppOptions.md#lambdaextensionautodiscover)
-- [lambdaOptions](Node20AwsCdkAppOptions.md#lambdaoptions)
-- [libdir](Node20AwsCdkAppOptions.md#libdir)
-- [license](Node20AwsCdkAppOptions.md#license)
-- [licensed](Node20AwsCdkAppOptions.md#licensed)
-- [logging](Node20AwsCdkAppOptions.md#logging)
-- [majorVersion](Node20AwsCdkAppOptions.md#majorversion)
-- [maxNodeVersion](Node20AwsCdkAppOptions.md#maxnodeversion)
-- [mergify](Node20AwsCdkAppOptions.md#mergify)
-- [mergifyOptions](Node20AwsCdkAppOptions.md#mergifyoptions)
-- [minMajorVersion](Node20AwsCdkAppOptions.md#minmajorversion)
-- [minNodeVersion](Node20AwsCdkAppOptions.md#minnodeversion)
-- [mutableBuild](Node20AwsCdkAppOptions.md#mutablebuild)
-- [name](Node20AwsCdkAppOptions.md#name)
-- [npmAccess](Node20AwsCdkAppOptions.md#npmaccess)
-- [npmDistTag](Node20AwsCdkAppOptions.md#npmdisttag)
-- [npmIgnoreOptions](Node20AwsCdkAppOptions.md#npmignoreoptions)
-- [npmRegistry](Node20AwsCdkAppOptions.md#npmregistry)
-- [npmRegistryUrl](Node20AwsCdkAppOptions.md#npmregistryurl)
-- [npmTokenSecret](Node20AwsCdkAppOptions.md#npmtokensecret)
-- [npmignore](Node20AwsCdkAppOptions.md#npmignore)
-- [npmignoreEnabled](Node20AwsCdkAppOptions.md#npmignoreenabled)
-- [outdir](Node20AwsCdkAppOptions.md#outdir)
-- [package](Node20AwsCdkAppOptions.md#package)
-- [packageManager](Node20AwsCdkAppOptions.md#packagemanager)
-- [packageName](Node20AwsCdkAppOptions.md#packagename)
-- [parent](Node20AwsCdkAppOptions.md#parent)
-- [peerDependencyOptions](Node20AwsCdkAppOptions.md#peerdependencyoptions)
-- [peerDeps](Node20AwsCdkAppOptions.md#peerdeps)
-- [pnpmVersion](Node20AwsCdkAppOptions.md#pnpmversion)
-- [postBuildSteps](Node20AwsCdkAppOptions.md#postbuildsteps)
-- [prerelease](Node20AwsCdkAppOptions.md#prerelease)
-- [prettier](Node20AwsCdkAppOptions.md#prettier)
-- [prettierOptions](Node20AwsCdkAppOptions.md#prettieroptions)
-- [projectType](Node20AwsCdkAppOptions.md#projecttype)
-- [projenCommand](Node20AwsCdkAppOptions.md#projencommand)
-- [projenCredentials](Node20AwsCdkAppOptions.md#projencredentials)
-- [projenDevDependency](Node20AwsCdkAppOptions.md#projendevdependency)
-- [projenTokenSecret](Node20AwsCdkAppOptions.md#projentokensecret)
-- [projenVersion](Node20AwsCdkAppOptions.md#projenversion)
-- [projenrcJs](Node20AwsCdkAppOptions.md#projenrcjs)
-- [projenrcJsOptions](Node20AwsCdkAppOptions.md#projenrcjsoptions)
-- [projenrcJson](Node20AwsCdkAppOptions.md#projenrcjson)
-- [projenrcJsonOptions](Node20AwsCdkAppOptions.md#projenrcjsonoptions)
-- [projenrcTs](Node20AwsCdkAppOptions.md#projenrcts)
-- [projenrcTsOptions](Node20AwsCdkAppOptions.md#projenrctsoptions)
-- [publishDryRun](Node20AwsCdkAppOptions.md#publishdryrun)
-- [publishTasks](Node20AwsCdkAppOptions.md#publishtasks)
-- [publishToAws](Node20AwsCdkAppOptions.md#publishtoaws)
-- [publishToAwsOptions](Node20AwsCdkAppOptions.md#publishtoawsoptions)
-- [pullRequestTemplate](Node20AwsCdkAppOptions.md#pullrequesttemplate)
-- [pullRequestTemplateContents](Node20AwsCdkAppOptions.md#pullrequesttemplatecontents)
-- [readme](Node20AwsCdkAppOptions.md#readme)
-- [releasableCommits](Node20AwsCdkAppOptions.md#releasablecommits)
-- [release](Node20AwsCdkAppOptions.md#release)
-- [releaseBranches](Node20AwsCdkAppOptions.md#releasebranches)
-- [releaseEveryCommit](Node20AwsCdkAppOptions.md#releaseeverycommit)
-- [releaseFailureIssue](Node20AwsCdkAppOptions.md#releasefailureissue)
-- [releaseFailureIssueLabel](Node20AwsCdkAppOptions.md#releasefailureissuelabel)
-- [releaseSchedule](Node20AwsCdkAppOptions.md#releaseschedule)
-- [releaseTagPrefix](Node20AwsCdkAppOptions.md#releasetagprefix)
-- [releaseToNpm](Node20AwsCdkAppOptions.md#releasetonpm)
-- [releaseTrigger](Node20AwsCdkAppOptions.md#releasetrigger)
-- [releaseWorkflow](Node20AwsCdkAppOptions.md#releaseworkflow)
-- [releaseWorkflowName](Node20AwsCdkAppOptions.md#releaseworkflowname)
-- [releaseWorkflowSetupSteps](Node20AwsCdkAppOptions.md#releaseworkflowsetupsteps)
-- [renovatebot](Node20AwsCdkAppOptions.md#renovatebot)
-- [renovatebotOptions](Node20AwsCdkAppOptions.md#renovatebotoptions)
-- [repository](Node20AwsCdkAppOptions.md#repository)
-- [repositoryDirectory](Node20AwsCdkAppOptions.md#repositorydirectory)
-- [requireApproval](Node20AwsCdkAppOptions.md#requireapproval)
-- [sampleCode](Node20AwsCdkAppOptions.md#samplecode)
-- [scopedPackagesOptions](Node20AwsCdkAppOptions.md#scopedpackagesoptions)
-- [scripts](Node20AwsCdkAppOptions.md#scripts)
-- [srcdir](Node20AwsCdkAppOptions.md#srcdir)
-- [stability](Node20AwsCdkAppOptions.md#stability)
-- [stale](Node20AwsCdkAppOptions.md#stale)
-- [staleOptions](Node20AwsCdkAppOptions.md#staleoptions)
-- [testdir](Node20AwsCdkAppOptions.md#testdir)
-- [tsJestOptions](Node20AwsCdkAppOptions.md#tsjestoptions)
-- [tsconfig](Node20AwsCdkAppOptions.md#tsconfig)
-- [tsconfigDev](Node20AwsCdkAppOptions.md#tsconfigdev)
-- [tsconfigDevFile](Node20AwsCdkAppOptions.md#tsconfigdevfile)
-- [typescriptVersion](Node20AwsCdkAppOptions.md#typescriptversion)
-- [versionrcOptions](Node20AwsCdkAppOptions.md#versionrcoptions)
-- [vscode](Node20AwsCdkAppOptions.md#vscode)
-- [watchExcludes](Node20AwsCdkAppOptions.md#watchexcludes)
-- [watchIncludes](Node20AwsCdkAppOptions.md#watchincludes)
-- [workflowBootstrapSteps](Node20AwsCdkAppOptions.md#workflowbootstrapsteps)
-- [workflowContainerImage](Node20AwsCdkAppOptions.md#workflowcontainerimage)
-- [workflowGitIdentity](Node20AwsCdkAppOptions.md#workflowgitidentity)
-- [workflowNodeVersion](Node20AwsCdkAppOptions.md#workflownodeversion)
-- [workflowPackageCache](Node20AwsCdkAppOptions.md#workflowpackagecache)
-- [workflowRunsOn](Node20AwsCdkAppOptions.md#workflowrunson)
-- [workflowRunsOnGroup](Node20AwsCdkAppOptions.md#workflowrunsongroup)
-- [yarnBerryOptions](Node20AwsCdkAppOptions.md#yarnberryoptions)
+- [allowLibraryDependencies](Node20TypeScriptProjectOptions.md#allowlibrarydependencies)
+- [artifactsDirectory](Node20TypeScriptProjectOptions.md#artifactsdirectory)
+- [authorEmail](Node20TypeScriptProjectOptions.md#authoremail)
+- [authorName](Node20TypeScriptProjectOptions.md#authorname)
+- [authorOrganization](Node20TypeScriptProjectOptions.md#authororganization)
+- [authorUrl](Node20TypeScriptProjectOptions.md#authorurl)
+- [autoApproveOptions](Node20TypeScriptProjectOptions.md#autoapproveoptions)
+- [autoApproveUpgrades](Node20TypeScriptProjectOptions.md#autoapproveupgrades)
+- [autoDetectBin](Node20TypeScriptProjectOptions.md#autodetectbin)
+- [autoMerge](Node20TypeScriptProjectOptions.md#automerge)
+- [autoMergeOptions](Node20TypeScriptProjectOptions.md#automergeoptions)
+- [bin](Node20TypeScriptProjectOptions.md#bin)
+- [bugsEmail](Node20TypeScriptProjectOptions.md#bugsemail)
+- [bugsUrl](Node20TypeScriptProjectOptions.md#bugsurl)
+- [buildWorkflow](Node20TypeScriptProjectOptions.md#buildworkflow)
+- [buildWorkflowTriggers](Node20TypeScriptProjectOptions.md#buildworkflowtriggers)
+- [bundledDeps](Node20TypeScriptProjectOptions.md#bundleddeps)
+- [bundlerOptions](Node20TypeScriptProjectOptions.md#bundleroptions)
+- [checkLicenses](Node20TypeScriptProjectOptions.md#checklicenses)
+- [clobber](Node20TypeScriptProjectOptions.md#clobber)
+- [codeArtifactOptions](Node20TypeScriptProjectOptions.md#codeartifactoptions)
+- [codeCov](Node20TypeScriptProjectOptions.md#codecov)
+- [codeCovTokenSecret](Node20TypeScriptProjectOptions.md#codecovtokensecret)
+- [commitGenerated](Node20TypeScriptProjectOptions.md#commitgenerated)
+- [copyrightOwner](Node20TypeScriptProjectOptions.md#copyrightowner)
+- [copyrightPeriod](Node20TypeScriptProjectOptions.md#copyrightperiod)
+- [defaultReleaseBranch](Node20TypeScriptProjectOptions.md#defaultreleasebranch)
+- [dependabot](Node20TypeScriptProjectOptions.md#dependabot)
+- [dependabotOptions](Node20TypeScriptProjectOptions.md#dependabotoptions)
+- [deps](Node20TypeScriptProjectOptions.md#deps)
+- [depsUpgrade](Node20TypeScriptProjectOptions.md#depsupgrade)
+- [depsUpgradeOptions](Node20TypeScriptProjectOptions.md#depsupgradeoptions)
+- [description](Node20TypeScriptProjectOptions.md#description)
+- [devContainer](Node20TypeScriptProjectOptions.md#devcontainer)
+- [devDeps](Node20TypeScriptProjectOptions.md#devdeps)
+- [disableTsconfig](Node20TypeScriptProjectOptions.md#disabletsconfig)
+- [disableTsconfigDev](Node20TypeScriptProjectOptions.md#disabletsconfigdev)
+- [docgen](Node20TypeScriptProjectOptions.md#docgen)
+- [docsDirectory](Node20TypeScriptProjectOptions.md#docsdirectory)
+- [entrypoint](Node20TypeScriptProjectOptions.md#entrypoint)
+- [entrypointTypes](Node20TypeScriptProjectOptions.md#entrypointtypes)
+- [eslint](Node20TypeScriptProjectOptions.md#eslint)
+- [eslintOptions](Node20TypeScriptProjectOptions.md#eslintoptions)
+- [gitIgnoreOptions](Node20TypeScriptProjectOptions.md#gitignoreoptions)
+- [gitOptions](Node20TypeScriptProjectOptions.md#gitoptions)
+- [github](Node20TypeScriptProjectOptions.md#github)
+- [githubOptions](Node20TypeScriptProjectOptions.md#githuboptions)
+- [gitignore](Node20TypeScriptProjectOptions.md#gitignore)
+- [gitpod](Node20TypeScriptProjectOptions.md#gitpod)
+- [homepage](Node20TypeScriptProjectOptions.md#homepage)
+- [jest](Node20TypeScriptProjectOptions.md#jest)
+- [jestOptions](Node20TypeScriptProjectOptions.md#jestoptions)
+- [jsiiReleaseVersion](Node20TypeScriptProjectOptions.md#jsiireleaseversion)
+- [keywords](Node20TypeScriptProjectOptions.md#keywords)
+- [libdir](Node20TypeScriptProjectOptions.md#libdir)
+- [license](Node20TypeScriptProjectOptions.md#license)
+- [licensed](Node20TypeScriptProjectOptions.md#licensed)
+- [logging](Node20TypeScriptProjectOptions.md#logging)
+- [majorVersion](Node20TypeScriptProjectOptions.md#majorversion)
+- [maxNodeVersion](Node20TypeScriptProjectOptions.md#maxnodeversion)
+- [mergify](Node20TypeScriptProjectOptions.md#mergify)
+- [mergifyOptions](Node20TypeScriptProjectOptions.md#mergifyoptions)
+- [minMajorVersion](Node20TypeScriptProjectOptions.md#minmajorversion)
+- [minNodeVersion](Node20TypeScriptProjectOptions.md#minnodeversion)
+- [mutableBuild](Node20TypeScriptProjectOptions.md#mutablebuild)
+- [name](Node20TypeScriptProjectOptions.md#name)
+- [npmAccess](Node20TypeScriptProjectOptions.md#npmaccess)
+- [npmDistTag](Node20TypeScriptProjectOptions.md#npmdisttag)
+- [npmIgnoreOptions](Node20TypeScriptProjectOptions.md#npmignoreoptions)
+- [npmRegistry](Node20TypeScriptProjectOptions.md#npmregistry)
+- [npmRegistryUrl](Node20TypeScriptProjectOptions.md#npmregistryurl)
+- [npmTokenSecret](Node20TypeScriptProjectOptions.md#npmtokensecret)
+- [npmignore](Node20TypeScriptProjectOptions.md#npmignore)
+- [npmignoreEnabled](Node20TypeScriptProjectOptions.md#npmignoreenabled)
+- [outdir](Node20TypeScriptProjectOptions.md#outdir)
+- [package](Node20TypeScriptProjectOptions.md#package)
+- [packageManager](Node20TypeScriptProjectOptions.md#packagemanager)
+- [packageName](Node20TypeScriptProjectOptions.md#packagename)
+- [parent](Node20TypeScriptProjectOptions.md#parent)
+- [peerDependencyOptions](Node20TypeScriptProjectOptions.md#peerdependencyoptions)
+- [peerDeps](Node20TypeScriptProjectOptions.md#peerdeps)
+- [pnpmVersion](Node20TypeScriptProjectOptions.md#pnpmversion)
+- [postBuildSteps](Node20TypeScriptProjectOptions.md#postbuildsteps)
+- [prerelease](Node20TypeScriptProjectOptions.md#prerelease)
+- [prettier](Node20TypeScriptProjectOptions.md#prettier)
+- [prettierOptions](Node20TypeScriptProjectOptions.md#prettieroptions)
+- [projectType](Node20TypeScriptProjectOptions.md#projecttype)
+- [projenCommand](Node20TypeScriptProjectOptions.md#projencommand)
+- [projenCredentials](Node20TypeScriptProjectOptions.md#projencredentials)
+- [projenDevDependency](Node20TypeScriptProjectOptions.md#projendevdependency)
+- [projenTokenSecret](Node20TypeScriptProjectOptions.md#projentokensecret)
+- [projenVersion](Node20TypeScriptProjectOptions.md#projenversion)
+- [projenrcJs](Node20TypeScriptProjectOptions.md#projenrcjs)
+- [projenrcJsOptions](Node20TypeScriptProjectOptions.md#projenrcjsoptions)
+- [projenrcJson](Node20TypeScriptProjectOptions.md#projenrcjson)
+- [projenrcJsonOptions](Node20TypeScriptProjectOptions.md#projenrcjsonoptions)
+- [projenrcTs](Node20TypeScriptProjectOptions.md#projenrcts)
+- [projenrcTsOptions](Node20TypeScriptProjectOptions.md#projenrctsoptions)
+- [publishDryRun](Node20TypeScriptProjectOptions.md#publishdryrun)
+- [publishTasks](Node20TypeScriptProjectOptions.md#publishtasks)
+- [pullRequestTemplate](Node20TypeScriptProjectOptions.md#pullrequesttemplate)
+- [pullRequestTemplateContents](Node20TypeScriptProjectOptions.md#pullrequesttemplatecontents)
+- [readme](Node20TypeScriptProjectOptions.md#readme)
+- [releasableCommits](Node20TypeScriptProjectOptions.md#releasablecommits)
+- [release](Node20TypeScriptProjectOptions.md#release)
+- [releaseBranches](Node20TypeScriptProjectOptions.md#releasebranches)
+- [releaseEveryCommit](Node20TypeScriptProjectOptions.md#releaseeverycommit)
+- [releaseFailureIssue](Node20TypeScriptProjectOptions.md#releasefailureissue)
+- [releaseFailureIssueLabel](Node20TypeScriptProjectOptions.md#releasefailureissuelabel)
+- [releaseSchedule](Node20TypeScriptProjectOptions.md#releaseschedule)
+- [releaseTagPrefix](Node20TypeScriptProjectOptions.md#releasetagprefix)
+- [releaseToNpm](Node20TypeScriptProjectOptions.md#releasetonpm)
+- [releaseTrigger](Node20TypeScriptProjectOptions.md#releasetrigger)
+- [releaseWorkflow](Node20TypeScriptProjectOptions.md#releaseworkflow)
+- [releaseWorkflowName](Node20TypeScriptProjectOptions.md#releaseworkflowname)
+- [releaseWorkflowSetupSteps](Node20TypeScriptProjectOptions.md#releaseworkflowsetupsteps)
+- [renovatebot](Node20TypeScriptProjectOptions.md#renovatebot)
+- [renovatebotOptions](Node20TypeScriptProjectOptions.md#renovatebotoptions)
+- [repository](Node20TypeScriptProjectOptions.md#repository)
+- [repositoryDirectory](Node20TypeScriptProjectOptions.md#repositorydirectory)
+- [sampleCode](Node20TypeScriptProjectOptions.md#samplecode)
+- [scopedPackagesOptions](Node20TypeScriptProjectOptions.md#scopedpackagesoptions)
+- [scripts](Node20TypeScriptProjectOptions.md#scripts)
+- [srcdir](Node20TypeScriptProjectOptions.md#srcdir)
+- [stability](Node20TypeScriptProjectOptions.md#stability)
+- [stale](Node20TypeScriptProjectOptions.md#stale)
+- [staleOptions](Node20TypeScriptProjectOptions.md#staleoptions)
+- [testdir](Node20TypeScriptProjectOptions.md#testdir)
+- [tsJestOptions](Node20TypeScriptProjectOptions.md#tsjestoptions)
+- [tsconfig](Node20TypeScriptProjectOptions.md#tsconfig)
+- [tsconfigDev](Node20TypeScriptProjectOptions.md#tsconfigdev)
+- [tsconfigDevFile](Node20TypeScriptProjectOptions.md#tsconfigdevfile)
+- [typescriptVersion](Node20TypeScriptProjectOptions.md#typescriptversion)
+- [versionrcOptions](Node20TypeScriptProjectOptions.md#versionrcoptions)
+- [vscode](Node20TypeScriptProjectOptions.md#vscode)
+- [workflowBootstrapSteps](Node20TypeScriptProjectOptions.md#workflowbootstrapsteps)
+- [workflowContainerImage](Node20TypeScriptProjectOptions.md#workflowcontainerimage)
+- [workflowGitIdentity](Node20TypeScriptProjectOptions.md#workflowgitidentity)
+- [workflowNodeVersion](Node20TypeScriptProjectOptions.md#workflownodeversion)
+- [workflowPackageCache](Node20TypeScriptProjectOptions.md#workflowpackagecache)
+- [workflowRunsOn](Node20TypeScriptProjectOptions.md#workflowrunson)
+- [workflowRunsOnGroup](Node20TypeScriptProjectOptions.md#workflowrunsongroup)
+- [yarnBerryOptions](Node20TypeScriptProjectOptions.md#yarnberryoptions)
 
 ## Properties
 
@@ -199,26 +174,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.allowLibraryDependencies
-
-___
-
-### appEntrypoint
-
-• `Optional` `Readonly` **appEntrypoint**: `string`
-
-The CDK app's entrypoint (relative to the source directory, which is
-"src" by default).
-
-**`Default`**
-
-```ts
-"main.ts"
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.appEntrypoint
+TypeScriptProjectOptions.allowLibraryDependencies
 
 ___
 
@@ -236,7 +192,7 @@ A directory which will contain build artifacts.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.artifactsDirectory
+TypeScriptProjectOptions.artifactsDirectory
 
 ___
 
@@ -248,7 +204,7 @@ Author's e-mail
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.authorEmail
+TypeScriptProjectOptions.authorEmail
 
 ___
 
@@ -260,7 +216,7 @@ Author's name
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.authorName
+TypeScriptProjectOptions.authorName
 
 ___
 
@@ -272,7 +228,7 @@ Is the author an organization
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.authorOrganization
+TypeScriptProjectOptions.authorOrganization
 
 ___
 
@@ -284,7 +240,7 @@ Author's URL / Website
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.authorUrl
+TypeScriptProjectOptions.authorUrl
 
 ___
 
@@ -302,7 +258,7 @@ Enable and configure the 'auto approve' workflow.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.autoApproveOptions
+TypeScriptProjectOptions.autoApproveOptions
 
 ___
 
@@ -323,7 +279,7 @@ Throw if set to true but `autoApproveOptions` are not defined.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.autoApproveUpgrades
+TypeScriptProjectOptions.autoApproveUpgrades
 
 ___
 
@@ -342,7 +298,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.autoDetectBin
+TypeScriptProjectOptions.autoDetectBin
 
 ___
 
@@ -361,7 +317,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.autoMerge
+TypeScriptProjectOptions.autoMerge
 
 ___
 
@@ -378,7 +334,7 @@ Configure options for automatic merging on GitHub. Has no effect if
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.autoMergeOptions
+TypeScriptProjectOptions.autoMergeOptions
 
 ___
 
@@ -394,7 +350,7 @@ executable file under `bin` will automatically be added to this section.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.bin
+TypeScriptProjectOptions.bin
 
 ___
 
@@ -406,7 +362,7 @@ The email address to which issues should be reported.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.bugsEmail
+TypeScriptProjectOptions.bugsEmail
 
 ___
 
@@ -418,27 +374,7 @@ The url to your project's issue tracker.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.bugsUrl
-
-___
-
-### buildCommand
-
-• `Optional` `Readonly` **buildCommand**: `string`
-
-A command to execute before synthesis. This command will be called when
-running `cdk synth` or when `cdk watch` identifies a change in your source
-code before redeployment.
-
-**`Default`**
-
-```ts
-- no build command
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.buildCommand
+TypeScriptProjectOptions.bugsUrl
 
 ___
 
@@ -456,7 +392,7 @@ Define a GitHub workflow for building PRs.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.buildWorkflow
+TypeScriptProjectOptions.buildWorkflow
 
 ___
 
@@ -474,7 +410,7 @@ Build workflow triggers
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.buildWorkflowTriggers
+TypeScriptProjectOptions.buildWorkflowTriggers
 
 ___
 
@@ -495,7 +431,7 @@ this will be what you `package.json` will eventually include.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.bundledDeps
+TypeScriptProjectOptions.bundledDeps
 
 ___
 
@@ -507,165 +443,7 @@ Options for `Bundler`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.bundlerOptions
-
-___
-
-### cdkAssert
-
-• `Optional` `Readonly` **cdkAssert**: `boolean`
-
-Warning: NodeJS only.
-Install the @aws-cdk/assert library?
-
-**`Default`**
-
-```ts
-- will be included by default for AWS CDK >= 1.0.0 < 2.0.0
-```
-
-**`Deprecated`**
-
-The @aws-cdk/assert library is deprecated in favor of
-@aws-cdk/assertions (in V1) and included in `aws-cdk-lib` for V2.
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkAssert
-
-___
-
-### cdkAssertions
-
-• `Optional` `Readonly` **cdkAssertions**: `boolean`
-
-Install the assertions library?
-
-Only needed for CDK 1.x. If using CDK 2.x then
-assertions is already included in 'aws-cdk-lib'
-
-**`Default`**
-
-```ts
-- will be included by default for AWS CDK >= 1.111.0 < 2.0.0
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkAssertions
-
-___
-
-### cdkDependencies
-
-• `Optional` `Readonly` **cdkDependencies**: `string`[]
-
-Which AWS CDKv1 modules this project requires
-
-**`Deprecated`**
-
-For CDK 2.x use "deps" instead. (or "peerDeps" if you're building a library)
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkDependencies
-
-___
-
-### cdkDependenciesAsDeps
-
-• `Optional` `Readonly` **cdkDependenciesAsDeps**: `boolean`
-
-If this is enabled (default), all modules declared in `cdkDependencies` will be also added as
-normal `dependencies` (as well as `peerDependencies`).
-
-This is to ensure that downstream consumers actually have your CDK dependencies installed
-when using npm < 7 or yarn, where peer dependencies are not automatically installed.
-If this is disabled, `cdkDependencies` will be added to `devDependencies` to ensure
-they are present during development.
-
-Note: this setting only applies to construct library projects
-
-**`Default`**
-
-```ts
-true
-```
-
-**`Deprecated`**
-
-Not supported in CDK v2.
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkDependenciesAsDeps
-
-___
-
-### cdkTestDependencies
-
-• `Optional` `Readonly` **cdkTestDependencies**: `string`[]
-
-AWS CDK modules required for testing.
-
-**`Deprecated`**
-
-For CDK 2.x use 'devDeps' (in node.js projects) or 'testDeps' (in java projects) instead
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkTestDependencies
-
-___
-
-### cdkVersion
-
-• `Readonly` **cdkVersion**: `string`
-
-Minimum version of the AWS CDK to depend on.
-
-**`Default`**
-
-```ts
-"2.1.0"
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkVersion
-
-___
-
-### cdkVersionPinning
-
-• `Optional` `Readonly` **cdkVersionPinning**: `boolean`
-
-Use pinned version instead of caret version for CDK.
-
-You can use this to prevent mixed versions for your CDK dependencies and to prevent auto-updates.
-If you use experimental features this will let you define the moment you include breaking changes.
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkVersionPinning
-
-___
-
-### cdkout
-
-• `Optional` `Readonly` **cdkout**: `string`
-
-cdk.out directory.
-
-**`Default`**
-
-```ts
-"cdk.out"
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.cdkout
+TypeScriptProjectOptions.bundlerOptions
 
 ___
 
@@ -685,7 +463,7 @@ This setting will cause the build to fail, if any prohibited or not allowed lice
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.checkLicenses
+TypeScriptProjectOptions.checkLicenses
 
 ___
 
@@ -703,7 +481,7 @@ Add a `clobber` task which resets the repo to origin.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.clobber
+TypeScriptProjectOptions.clobber
 
 ___
 
@@ -722,7 +500,7 @@ This is required if publishing packages to, or installing scoped packages from A
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.codeArtifactOptions
+TypeScriptProjectOptions.codeArtifactOptions
 
 ___
 
@@ -742,7 +520,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.codeCov
+TypeScriptProjectOptions.codeCov
 
 ___
 
@@ -761,7 +539,7 @@ A secret is required to send coverage for private repositories
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.codeCovTokenSecret
+TypeScriptProjectOptions.codeCovTokenSecret
 
 ___
 
@@ -779,57 +557,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.commitGenerated
-
-___
-
-### constructsVersion
-
-• `Optional` `Readonly` **constructsVersion**: `string`
-
-Minimum version of the `constructs` library to depend on.
-
-**`Default`**
-
-```ts
-- for CDK 1.x the default is "3.2.27", for CDK 2.x the default is
-"10.0.5".
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.constructsVersion
-
-___
-
-### constructsVersionPinning
-
-• `Optional` **constructsVersionPinning**: `boolean`
-
-Whether or not to pin the version of constructs to the version specified in the
-`constructsVersion` property.
-
-___
-
-### context
-
-• `Optional` `Readonly` **context**: `Object`
-
-Additional context to include in `cdk.json`.
-
-**`Default`**
-
-```ts
-- no additional context
-```
-
-#### Index signature
-
-▪ [key: `string`]: `any`
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.context
+TypeScriptProjectOptions.commitGenerated
 
 ___
 
@@ -845,7 +573,7 @@ License copyright owner.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.copyrightOwner
+TypeScriptProjectOptions.copyrightOwner
 
 ___
 
@@ -863,7 +591,7 @@ The copyright years to put in the LICENSE file.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.copyrightPeriod
+TypeScriptProjectOptions.copyrightPeriod
 
 ___
 
@@ -881,7 +609,7 @@ The name of the main release branch.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.defaultReleaseBranch
+TypeScriptProjectOptions.defaultReleaseBranch
 
 ___
 
@@ -900,7 +628,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.dependabot
+TypeScriptProjectOptions.dependabot
 
 ___
 
@@ -918,7 +646,7 @@ Options for dependabot.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.dependabotOptions
+TypeScriptProjectOptions.dependabotOptions
 
 ___
 
@@ -951,7 +679,7 @@ this will be what you `package.json` will eventually include.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.deps
+TypeScriptProjectOptions.deps
 
 ___
 
@@ -970,7 +698,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.depsUpgrade
+TypeScriptProjectOptions.depsUpgrade
 
 ___
 
@@ -988,7 +716,7 @@ Options for `UpgradeDependencies`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.depsUpgradeOptions
+TypeScriptProjectOptions.depsUpgradeOptions
 
 ___
 
@@ -1004,7 +732,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-description
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.description
+TypeScriptProjectOptions.description
 
 ___
 
@@ -1022,7 +750,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.devContainer
+TypeScriptProjectOptions.devContainer
 
 ___
 
@@ -1057,7 +785,7 @@ this will be what you `package.json` will eventually include.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.devDeps
+TypeScriptProjectOptions.devDeps
 
 ___
 
@@ -1076,7 +804,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.disableTsconfig
+TypeScriptProjectOptions.disableTsconfig
 
 ___
 
@@ -1094,7 +822,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.disableTsconfigDev
+TypeScriptProjectOptions.disableTsconfigDev
 
 ___
 
@@ -1112,7 +840,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.docgen
+TypeScriptProjectOptions.docgen
 
 ___
 
@@ -1130,27 +858,7 @@ Docs directory
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.docsDirectory
-
-___
-
-### edgeLambdaAutoDiscover
-
-• `Optional` `Readonly` **edgeLambdaAutoDiscover**: `boolean`
-
-Automatically adds an `cloudfront.experimental.EdgeFunction` for each
-`.edge-lambda.ts` handler in your source tree. If this is disabled, you can
-manually add an `awscdk.AutoDiscover` component to your project.
-
-**`Default`**
-
-```ts
-true
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.edgeLambdaAutoDiscover
+TypeScriptProjectOptions.docsDirectory
 
 ___
 
@@ -1170,7 +878,7 @@ Set to an empty string to not include `main` in your package.json
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.entrypoint
+TypeScriptProjectOptions.entrypoint
 
 ___
 
@@ -1188,7 +896,7 @@ The .d.ts file that includes the type declarations for this module.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.entrypointTypes
+TypeScriptProjectOptions.entrypointTypes
 
 ___
 
@@ -1206,7 +914,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.eslint
+TypeScriptProjectOptions.eslint
 
 ___
 
@@ -1224,44 +932,7 @@ Eslint options
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.eslintOptions
-
-___
-
-### experimentalIntegRunner
-
-• `Optional` `Readonly` **experimentalIntegRunner**: `boolean`
-
-Enable experimental support for the AWS CDK integ-runner.
-
-**`Default`**
-
-```ts
-false
-@experimental
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.experimentalIntegRunner
-
-___
-
-### featureFlags
-
-• `Optional` `Readonly` **featureFlags**: `boolean`
-
-Include all feature flags in cdk.json
-
-**`Default`**
-
-```ts
-true
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.featureFlags
+TypeScriptProjectOptions.eslintOptions
 
 ___
 
@@ -1273,7 +944,7 @@ Configuration options for .gitignore file
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.gitIgnoreOptions
+TypeScriptProjectOptions.gitIgnoreOptions
 
 ___
 
@@ -1285,7 +956,7 @@ Configuration options for git
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.gitOptions
+TypeScriptProjectOptions.gitOptions
 
 ___
 
@@ -1305,7 +976,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.github
+TypeScriptProjectOptions.github
 
 ___
 
@@ -1323,7 +994,7 @@ Options for GitHub integration
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.githubOptions
+TypeScriptProjectOptions.githubOptions
 
 ___
 
@@ -1335,7 +1006,7 @@ Additional entries to .gitignore
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.gitignore
+TypeScriptProjectOptions.gitignore
 
 ___
 
@@ -1353,7 +1024,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.gitpod
+TypeScriptProjectOptions.gitpod
 
 ___
 
@@ -1365,26 +1036,7 @@ Package's Homepage / Website
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.homepage
-
-___
-
-### integrationTestAutoDiscover
-
-• `Optional` `Readonly` **integrationTestAutoDiscover**: `boolean`
-
-Automatically discovers and creates integration tests for each `.integ.ts`
-file in under your test directory.
-
-**`Default`**
-
-```ts
-true
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.integrationTestAutoDiscover
+TypeScriptProjectOptions.homepage
 
 ___
 
@@ -1402,17 +1054,17 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.jest
+TypeScriptProjectOptions.jest
 
 ___
 
 ### jestOptions
 
-• `Optional` **jestOptions**: `Node20TypeScriptProjectJestOptions`
+• `Optional` **jestOptions**: [`Node20TypeScriptProjectJestOptions`](Node20TypeScriptProjectJestOptions.md)
 
 #### Overrides
 
-awscdk.AwsCdkTypeScriptAppOptions.jestOptions
+TypeScriptProjectOptions.jestOptions
 
 ___
 
@@ -1430,7 +1082,7 @@ Version requirement of `publib` which is used to publish modules to npm.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.jsiiReleaseVersion
+TypeScriptProjectOptions.jsiiReleaseVersion
 
 ___
 
@@ -1442,65 +1094,7 @@ Keywords to include in `package.json`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.keywords
-
-___
-
-### lambdaAutoDiscover
-
-• `Optional` `Readonly` **lambdaAutoDiscover**: `boolean`
-
-Automatically adds an `awscdk.LambdaFunction` for each `.lambda.ts` handler
-in your source tree. If this is disabled, you can manually add an
-`awscdk.AutoDiscover` component to your project.
-
-**`Default`**
-
-```ts
-true
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.lambdaAutoDiscover
-
-___
-
-### lambdaExtensionAutoDiscover
-
-• `Optional` `Readonly` **lambdaExtensionAutoDiscover**: `boolean`
-
-Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts`
-entrypoint in your source tree. If this is disabled, you can manually add an
-`awscdk.AutoDiscover` component to your project
-
-**`Default`**
-
-```ts
-true
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.lambdaExtensionAutoDiscover
-
-___
-
-### lambdaOptions
-
-• `Optional` `Readonly` **lambdaOptions**: `LambdaFunctionCommonOptions`
-
-Common options for all AWS Lambda functions.
-
-**`Default`**
-
-```ts
-- default options
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.lambdaOptions
+TypeScriptProjectOptions.keywords
 
 ___
 
@@ -1518,7 +1112,7 @@ Typescript  artifacts output directory
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.libdir
+TypeScriptProjectOptions.libdir
 
 ___
 
@@ -1538,7 +1132,7 @@ Use the `licensed` option if you want to no license to be specified.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.license
+TypeScriptProjectOptions.license
 
 ___
 
@@ -1556,7 +1150,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.licensed
+TypeScriptProjectOptions.licensed
 
 ___
 
@@ -1574,7 +1168,7 @@ Configure logging options such as verbosity.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.logging
+TypeScriptProjectOptions.logging
 
 ___
 
@@ -1595,7 +1189,7 @@ If not specified, we bump the global latest version.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.majorVersion
+TypeScriptProjectOptions.majorVersion
 
 ___
 
@@ -1613,7 +1207,7 @@ Minimum node.js version to require via `engines` (inclusive).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.maxNodeVersion
+TypeScriptProjectOptions.maxNodeVersion
 
 ___
 
@@ -1635,7 +1229,7 @@ use `githubOptions.mergify` instead
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.mergify
+TypeScriptProjectOptions.mergify
 
 ___
 
@@ -1657,7 +1251,7 @@ use `githubOptions.mergifyOptions` instead
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.mergifyOptions
+TypeScriptProjectOptions.mergifyOptions
 
 ___
 
@@ -1680,7 +1274,7 @@ Can not be set together with `majorVersion`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.minMajorVersion
+TypeScriptProjectOptions.minMajorVersion
 
 ___
 
@@ -1698,7 +1292,7 @@ Minimum Node.js version to require via package.json `engines` (inclusive).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.minNodeVersion
+TypeScriptProjectOptions.minNodeVersion
 
 ___
 
@@ -1720,7 +1314,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.mutableBuild
+TypeScriptProjectOptions.mutableBuild
 
 ___
 
@@ -1740,7 +1334,7 @@ $BASEDIR
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.name
+TypeScriptProjectOptions.name
 
 ___
 
@@ -1758,7 +1352,7 @@ Access level of the npm package.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmAccess
+TypeScriptProjectOptions.npmAccess
 
 ___
 
@@ -1779,7 +1373,7 @@ for each branch.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmDistTag
+TypeScriptProjectOptions.npmDistTag
 
 ___
 
@@ -1791,7 +1385,7 @@ Configuration options for .npmignore file
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmIgnoreOptions
+TypeScriptProjectOptions.npmIgnoreOptions
 
 ___
 
@@ -1807,7 +1401,7 @@ use `npmRegistryUrl` instead
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmRegistry
+TypeScriptProjectOptions.npmRegistry
 
 ___
 
@@ -1827,7 +1421,7 @@ Must be a URL (e.g. start with "https://" or "http://")
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmRegistryUrl
+TypeScriptProjectOptions.npmRegistryUrl
 
 ___
 
@@ -1845,7 +1439,7 @@ GitHub secret which contains the NPM token to use when publishing packages.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmTokenSecret
+TypeScriptProjectOptions.npmTokenSecret
 
 ___
 
@@ -1861,7 +1455,7 @@ Additional entries to .npmignore.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmignore
+TypeScriptProjectOptions.npmignore
 
 ___
 
@@ -1880,7 +1474,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.npmignoreEnabled
+TypeScriptProjectOptions.npmignoreEnabled
 
 ___
 
@@ -1904,7 +1498,7 @@ subprojects.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.outdir
+TypeScriptProjectOptions.outdir
 
 ___
 
@@ -1923,7 +1517,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.package
+TypeScriptProjectOptions.package
 
 ___
 
@@ -1941,7 +1535,7 @@ NodePackageManager.YARN_CLASSIC
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.packageManager
+TypeScriptProjectOptions.packageManager
 
 ___
 
@@ -1961,7 +1555,7 @@ The "name" in package.json
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.packageName
+TypeScriptProjectOptions.packageName
 
 ___
 
@@ -1973,7 +1567,7 @@ The parent project, if this project is part of a bigger project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.parent
+TypeScriptProjectOptions.parent
 
 ___
 
@@ -1985,7 +1579,7 @@ Options for `peerDeps`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.peerDependencyOptions
+TypeScriptProjectOptions.peerDependencyOptions
 
 ___
 
@@ -2015,7 +1609,7 @@ test your module against the lowest peer version required.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.peerDeps
+TypeScriptProjectOptions.peerDeps
 
 ___
 
@@ -2033,7 +1627,7 @@ The version of PNPM to use if using PNPM as a package manager.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.pnpmVersion
+TypeScriptProjectOptions.pnpmVersion
 
 ___
 
@@ -2051,7 +1645,7 @@ Steps to execute after build as part of the release workflow.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.postBuildSteps
+TypeScriptProjectOptions.postBuildSteps
 
 ___
 
@@ -2070,7 +1664,7 @@ Bump versions from the default branch as pre-releases (e.g. "beta",
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.prerelease
+TypeScriptProjectOptions.prerelease
 
 ___
 
@@ -2088,7 +1682,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.prettier
+TypeScriptProjectOptions.prettier
 
 ___
 
@@ -2106,7 +1700,7 @@ Prettier options
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.prettierOptions
+TypeScriptProjectOptions.prettierOptions
 
 ___
 
@@ -2128,7 +1722,7 @@ no longer supported at the base project level
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projectType
+TypeScriptProjectOptions.projectType
 
 ___
 
@@ -2148,7 +1742,7 @@ Can be used to customize in special environments.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenCommand
+TypeScriptProjectOptions.projenCommand
 
 ___
 
@@ -2166,7 +1760,7 @@ Choose a method of providing GitHub API access for projen workflows.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenCredentials
+TypeScriptProjectOptions.projenCredentials
 
 ___
 
@@ -2184,7 +1778,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenDevDependency
+TypeScriptProjectOptions.projenDevDependency
 
 ___
 
@@ -2208,7 +1802,7 @@ use `projenCredentials`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenTokenSecret
+TypeScriptProjectOptions.projenTokenSecret
 
 ___
 
@@ -2226,7 +1820,7 @@ Version of projen to install.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenVersion
+TypeScriptProjectOptions.projenVersion
 
 ___
 
@@ -2245,7 +1839,7 @@ Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcJs
+TypeScriptProjectOptions.projenrcJs
 
 ___
 
@@ -2263,7 +1857,7 @@ Options for .projenrc.js
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcJsOptions
+TypeScriptProjectOptions.projenrcJsOptions
 
 ___
 
@@ -2282,7 +1876,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcJson
+TypeScriptProjectOptions.projenrcJson
 
 ___
 
@@ -2300,7 +1894,7 @@ Options for .projenrc.json
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcJsonOptions
+TypeScriptProjectOptions.projenrcJsonOptions
 
 ___
 
@@ -2322,7 +1916,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcTs
+TypeScriptProjectOptions.projenrcTs
 
 ___
 
@@ -2334,7 +1928,7 @@ Options for .projenrc.ts
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.projenrcTsOptions
+TypeScriptProjectOptions.projenrcTsOptions
 
 ___
 
@@ -2352,7 +1946,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.publishDryRun
+TypeScriptProjectOptions.publishDryRun
 
 ___
 
@@ -2373,23 +1967,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.publishTasks
-
-___
-
-### publishToAws
-
-• `Optional` `Readonly` **publishToAws**: `boolean`
-
-Whether to publish this App to AWS.
-
-___
-
-### publishToAwsOptions
-
-• `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
-
-Populate in order to add a deploy to AWS job to the release workflow.
+TypeScriptProjectOptions.publishTasks
 
 ___
 
@@ -2407,7 +1985,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.pullRequestTemplate
+TypeScriptProjectOptions.pullRequestTemplate
 
 ___
 
@@ -2425,7 +2003,7 @@ The contents of the pull request template.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.pullRequestTemplateContents
+TypeScriptProjectOptions.pullRequestTemplateContents
 
 ___
 
@@ -2449,7 +2027,7 @@ The README setup.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.readme
+TypeScriptProjectOptions.readme
 
 ___
 
@@ -2468,7 +2046,7 @@ ReleasableCommits.everyCommit()
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releasableCommits
+TypeScriptProjectOptions.releasableCommits
 
 ___
 
@@ -2486,7 +2064,7 @@ Add release management to this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.release
+TypeScriptProjectOptions.release
 
 ___
 
@@ -2512,7 +2090,7 @@ be provided for the default branch.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseBranches
+TypeScriptProjectOptions.releaseBranches
 
 ___
 
@@ -2534,7 +2112,7 @@ Use `releaseTrigger: ReleaseTrigger.continuous()` instead
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseEveryCommit
+TypeScriptProjectOptions.releaseEveryCommit
 
 ___
 
@@ -2552,7 +2130,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseFailureIssue
+TypeScriptProjectOptions.releaseFailureIssue
 
 ___
 
@@ -2571,7 +2149,7 @@ Only applies if `releaseFailureIssue` is true.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseFailureIssueLabel
+TypeScriptProjectOptions.releaseFailureIssueLabel
 
 ___
 
@@ -2593,7 +2171,7 @@ Use `releaseTrigger: ReleaseTrigger.scheduled()` instead
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseSchedule
+TypeScriptProjectOptions.releaseSchedule
 
 ___
 
@@ -2618,7 +2196,7 @@ with the new prefix.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseTagPrefix
+TypeScriptProjectOptions.releaseTagPrefix
 
 ___
 
@@ -2636,7 +2214,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseToNpm
+TypeScriptProjectOptions.releaseToNpm
 
 ___
 
@@ -2652,7 +2230,7 @@ The release trigger to use.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseTrigger
+TypeScriptProjectOptions.releaseTrigger
 
 ___
 
@@ -2674,7 +2252,7 @@ see `release`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseWorkflow
+TypeScriptProjectOptions.releaseWorkflow
 
 ___
 
@@ -2692,7 +2270,7 @@ The name of the default release workflow.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseWorkflowName
+TypeScriptProjectOptions.releaseWorkflowName
 
 ___
 
@@ -2705,7 +2283,7 @@ container.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.releaseWorkflowSetupSteps
+TypeScriptProjectOptions.releaseWorkflowSetupSteps
 
 ___
 
@@ -2723,7 +2301,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.renovatebot
+TypeScriptProjectOptions.renovatebot
 
 ___
 
@@ -2741,7 +2319,7 @@ Options for renovatebot.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.renovatebotOptions
+TypeScriptProjectOptions.renovatebotOptions
 
 ___
 
@@ -2754,7 +2332,7 @@ See https://classic.yarnpkg.com/en/docs/package-json/#toc-repository
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.repository
+TypeScriptProjectOptions.repository
 
 ___
 
@@ -2767,26 +2345,7 @@ you can specify the directory in which it lives.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.repositoryDirectory
-
-___
-
-### requireApproval
-
-• `Optional` `Readonly` **requireApproval**: `ApprovalLevel`
-
-To protect you against unintended changes that affect your security posture,
-the AWS CDK Toolkit prompts you to approve security-related changes before deploying them.
-
-**`Default`**
-
-```ts
-ApprovalLevel.BROADENING
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.requireApproval
+TypeScriptProjectOptions.repositoryDirectory
 
 ___
 
@@ -2804,7 +2363,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.sampleCode
+TypeScriptProjectOptions.sampleCode
 
 ___
 
@@ -2822,7 +2381,7 @@ Options for privately hosted scoped packages
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.scopedPackagesOptions
+TypeScriptProjectOptions.scopedPackagesOptions
 
 ___
 
@@ -2850,7 +2409,7 @@ use `project.addTask()` or `package.setScript()`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.scripts
+TypeScriptProjectOptions.scripts
 
 ___
 
@@ -2868,7 +2427,7 @@ Typescript sources directory.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.srcdir
+TypeScriptProjectOptions.srcdir
 
 ___
 
@@ -2880,7 +2439,7 @@ Package's Stability
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.stability
+TypeScriptProjectOptions.stability
 
 ___
 
@@ -2898,7 +2457,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.stale
+TypeScriptProjectOptions.stale
 
 ___
 
@@ -2914,7 +2473,7 @@ Auto-close stale issues and pull requests. To disable set `stale` to `false`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.staleOptions
+TypeScriptProjectOptions.staleOptions
 
 ___
 
@@ -2937,7 +2496,7 @@ compile the code in-memory.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.testdir
+TypeScriptProjectOptions.testdir
 
 ___
 
@@ -2949,7 +2508,7 @@ Options for ts-jest
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.tsJestOptions
+TypeScriptProjectOptions.tsJestOptions
 
 ___
 
@@ -2967,7 +2526,7 @@ Custom TSConfig
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.tsconfig
+TypeScriptProjectOptions.tsconfig
 
 ___
 
@@ -2985,7 +2544,7 @@ Custom tsconfig options for the development tsconfig.json file (used for testing
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.tsconfigDev
+TypeScriptProjectOptions.tsconfigDev
 
 ___
 
@@ -3003,7 +2562,7 @@ The name of the development tsconfig.json file.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.tsconfigDevFile
+TypeScriptProjectOptions.tsconfigDevFile
 
 ___
 
@@ -3024,7 +2583,7 @@ same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.typescriptVersion
+TypeScriptProjectOptions.typescriptVersion
 
 ___
 
@@ -3043,7 +2602,7 @@ Given values either append to default configuration or overwrite values in it.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.versionrcOptions
+TypeScriptProjectOptions.versionrcOptions
 
 ___
 
@@ -3063,43 +2622,7 @@ true
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.vscode
-
-___
-
-### watchExcludes
-
-• `Optional` `Readonly` **watchExcludes**: `string`[]
-
-Glob patterns to exclude from `cdk watch`.
-
-**`Default`**
-
-```ts
-[]
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.watchExcludes
-
-___
-
-### watchIncludes
-
-• `Optional` `Readonly` **watchIncludes**: `string`[]
-
-Glob patterns to include in `cdk watch`.
-
-**`Default`**
-
-```ts
-[]
-```
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptAppOptions.watchIncludes
+TypeScriptProjectOptions.vscode
 
 ___
 
@@ -3117,7 +2640,7 @@ Workflow steps to use in order to bootstrap this repo.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowBootstrapSteps
+TypeScriptProjectOptions.workflowBootstrapSteps
 
 ___
 
@@ -3135,7 +2658,7 @@ Container image to use for GitHub workflows.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowContainerImage
+TypeScriptProjectOptions.workflowContainerImage
 
 ___
 
@@ -3153,7 +2676,7 @@ The git identity to use in workflows.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowGitIdentity
+TypeScriptProjectOptions.workflowGitIdentity
 
 ___
 
@@ -3169,7 +2692,7 @@ The node version to use in GitHub workflows.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowNodeVersion
+TypeScriptProjectOptions.workflowNodeVersion
 
 ___
 
@@ -3187,7 +2710,7 @@ false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowPackageCache
+TypeScriptProjectOptions.workflowPackageCache
 
 ___
 
@@ -3213,7 +2736,7 @@ if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowRunsOn
+TypeScriptProjectOptions.workflowRunsOn
 
 ___
 
@@ -3233,7 +2756,7 @@ if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.workflowRunsOnGroup
+TypeScriptProjectOptions.workflowRunsOnGroup
 
 ___
 
@@ -3251,4 +2774,4 @@ Options for Yarn Berry
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptAppOptions.yarnBerryOptions
+TypeScriptProjectOptions.yarnBerryOptions
