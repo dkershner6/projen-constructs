@@ -99,6 +99,10 @@ export class Node20ReactTypescriptConfigurer extends Component {
 
         this.installDeps(options.projectType);
 
+        this.project.tsconfig?.addExclude(
+            `${this.project.srcdir}/**/*.stories.tsx`,
+        );
+
         if (this.project.eslint) {
             this.configureEslint();
         }
@@ -192,7 +196,9 @@ export class Node20ReactTypescriptConfigurer extends Component {
         });
 
         for (const suffix of TEST_FILE_SUFFIXES) {
-            this.project.tsconfig?.addExclude(`src/**/*.${suffix}.tsx`);
+            this.project.tsconfig?.addExclude(
+                `${this.project.srcdir}/**/*.${suffix}.tsx`,
+            );
         }
     }
 }
