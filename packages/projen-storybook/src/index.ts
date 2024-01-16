@@ -1,4 +1,5 @@
 import { Component, SampleFile, javascript, typescript } from "projen";
+import { TypeScriptProject } from "projen/lib/typescript";
 
 export interface StorybookOptions {
     /**
@@ -43,6 +44,10 @@ export class Storybook extends Component {
                 files: ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
                 extends: ["plugin:storybook/recommended"],
             });
+
+            eslint.allowDevDeps(
+                `${(this.project as TypeScriptProject)?.srcdir ?? "src"}/**/*.stories.tsx`,
+            );
         }
 
         if (this.project instanceof typescript.TypeScriptProject) {
