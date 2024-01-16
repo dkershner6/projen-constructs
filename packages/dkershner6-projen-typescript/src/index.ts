@@ -35,6 +35,8 @@ export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
         forceConsistentCasingInFileNames: true,
         esModuleInterop: true,
 
+        declaration: true, // Just to state it is different than tsconfigDev
+
         types: ["jest", "node"],
     };
 
@@ -47,7 +49,9 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
     tsconfigDev: {
         fileName: "tsconfig.json", // Shim for VSCode, dev file must be named this
-        compilerOptions: {},
+        compilerOptions: {
+            declaration: false, // This helps with certain type inference issues that more often come up in test and other non-published code
+        },
         include: DEV_FILE_PATTERNS,
     },
 };
