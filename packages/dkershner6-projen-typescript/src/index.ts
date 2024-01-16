@@ -341,12 +341,15 @@ export class DKJest extends Component {
     ) {
         super(project);
 
-        if (project.jest && options?.modulesToTransform) {
-            project.jest.config.transformIgnorePatterns =
-                buildJestTransformIgnorePatterns([
-                    ...ESM_MODULES_TO_TRANSFORM,
-                    ...options.modulesToTransform,
-                ]);
+        if (project.jest) {
+            project.addDevDeps("jest-mock");
+            if (options?.modulesToTransform) {
+                project.jest.config.transformIgnorePatterns =
+                    buildJestTransformIgnorePatterns([
+                        ...ESM_MODULES_TO_TRANSFORM,
+                        ...options.modulesToTransform,
+                    ]);
+            }
         }
     }
 }
