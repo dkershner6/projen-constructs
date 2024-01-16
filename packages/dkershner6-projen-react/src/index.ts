@@ -181,6 +181,7 @@ export class Node20ReactTypescriptConfigurer extends Component {
             "@testing-library/jest-dom",
             "@testing-library/react",
             "@testing-library/user-event",
+            "@types/jest-axe",
             "jest-axe",
             "jest-environment-jsdom",
         );
