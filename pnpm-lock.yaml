@@ -167,6 +167,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -245,6 +248,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -320,6 +326,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -398,6 +407,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -482,6 +494,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -560,6 +575,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -641,6 +659,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -719,6 +740,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -794,6 +818,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -869,6 +896,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -944,6 +974,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1019,6 +1052,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1094,6 +1130,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1169,6 +1208,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1244,6 +1286,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1319,6 +1364,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1
@@ -1394,6 +1442,9 @@ importers:
       jest-junit:
         specifier: ^15
         version: 15.0.0
+      jest-mock:
+        specifier: ^29.7.0
+        version: 29.7.0
       prettier:
         specifier: ^3.2.1
         version: 3.2.1

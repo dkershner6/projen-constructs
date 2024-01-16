@@ -75,6 +75,10 @@
       "type": "build"
     },
     {
+      "name": "jest-mock",
+      "type": "build"
+    },
+    {
       "name": "prettier",
       "type": "build"
     },
