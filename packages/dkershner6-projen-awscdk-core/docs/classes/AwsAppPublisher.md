@@ -246,7 +246,7 @@ ___
 
 ### workflowNameForProject
 
-▸ **workflowNameForProject**(`base`, `project`): `string`
+▸ **workflowNameForProject**(`base`, `project`, `branchName?`): `string`
 
 release.ts in projen, not exported
 
@@ -256,6 +256,7 @@ release.ts in projen, not exported
 | :------ | :------ |
 | `base` | `string` |
 | `project` | `Project` |
+| `branchName?` | `string` |
 
 #### Returns
 

@@ -103,10 +103,12 @@ export class AwsAppPublisher extends Component {
     public static workflowNameForProject(
         base: string,
         project: Project,
+        branchName?: string,
     ): string {
         // Subprojects
         if (project.parent) {
-            return `${base}_${fileSafeName(project.name)}`;
+            const branchNameToUse = branchName ? `-${branchName}` : "";
+            return `${base}${branchNameToUse}_${fileSafeName(project.name)}`;
         }
 
         // root project doesn't get a suffix
@@ -159,6 +161,7 @@ export class AwsAppPublisher extends Component {
                 `${AwsAppPublisher.workflowNameForProject(
                     "release",
                     this.project,
+                    branchName,
                 )}${workflowNameSuffix}`,
             );
             if (releaseWorkflow) {

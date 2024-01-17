@@ -78,19 +78,20 @@ export class Node20SstApp extends SstTypescriptApp {
             options.publishToAws &&
             options.publishToAwsOptions
         ) {
-            const releaseWorkflow = (
+            const defaultReleaseWorkflow = (
                 this.root as GitHubProject
             )?.github?.tryFindWorkflow(
                 AwsAppPublisher.workflowNameForProject("release", this),
             );
             if (
-                (releaseWorkflow && options.publishToAwsOptions?.autoAddJob) ||
+                (defaultReleaseWorkflow &&
+                    options.publishToAwsOptions?.autoAddJob) ||
                 options.publishToAwsOptions?.autoAddJob === undefined
             ) {
                 const deployTask = this.tasks.tryFind("deploy");
 
                 if (deployTask) {
-                    releaseWorkflow?.addJob(
+                    defaultReleaseWorkflow?.addJob(
                         "release_aws",
                         this.buildPublishToAwsJob(
                             {
@@ -115,7 +116,16 @@ export class Node20SstApp extends SstTypescriptApp {
                                 branch !== options?.defaultReleaseBranch,
                         );
                         for (const branch of otherBranches) {
-                            releaseWorkflow?.addJob(
+                            const branchReleaseWorkflow = (
+                                this.root as GitHubProject
+                            )?.github?.tryFindWorkflow(
+                                AwsAppPublisher.workflowNameForProject(
+                                    "release",
+                                    this,
+                                    branch,
+                                ),
+                            );
+                            branchReleaseWorkflow?.addJob(
                                 `release_aws-${branch}`,
                                 this.buildPublishToAwsJob(
                                     {
