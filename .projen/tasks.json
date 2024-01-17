@@ -14,6 +14,9 @@
         {
           "exec": "pnpm exec nx run-many --target=build --output-style=stream --nx-bail",
           "receiveArgs": true
+        },
+        {
+          "spawn": "post-build"
         }
       ]
     },
@@ -194,6 +197,10 @@
           "receiveArgs": true
         }
       ]
+    },
+    "post-build": {
+      "name": "post-build",
+      "description": "Build gets locked, so this can be used to add tasks after everything is built, such as centralized docs that don't need building on release."
     },
     "post-compile": {
       "name": "post-compile",

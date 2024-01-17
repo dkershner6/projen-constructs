@@ -15,6 +15,7 @@
     "i": "pnpm exec projen i",
     "lint": "pnpm exec projen lint",
     "package": "pnpm exec projen package",
+    "post-build": "pnpm exec projen post-build",
     "post-compile": "pnpm exec projen post-compile",
     "post-upgrade": "pnpm exec projen post-upgrade",
     "pre-compile": "pnpm exec projen pre-compile",
