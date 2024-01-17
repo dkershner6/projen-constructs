@@ -49,6 +49,12 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
             }
         }
 
+        const postBuildTask = this.tasks.addTask("post-build", {
+            description:
+                "Build gets locked, so this can be used to add tasks after everything is built, such as centralized docs that don't need building on release.",
+        });
+        buildTask?.spawn(postBuildTask);
+
         const defaultTask = this.tasks.tryFind("default");
         if (defaultTask && buildTask) {
             buildTask.prependSpawn(defaultTask); // First
