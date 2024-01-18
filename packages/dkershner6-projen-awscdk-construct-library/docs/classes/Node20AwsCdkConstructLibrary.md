@@ -85,6 +85,7 @@
 - [packageTask](Node20AwsCdkConstructLibrary.md#packagetask)
 - [postCompileTask](Node20AwsCdkConstructLibrary.md#postcompiletask)
 - [preCompileTask](Node20AwsCdkConstructLibrary.md#precompiletask)
+- [releaseTagFilePath](Node20AwsCdkConstructLibrary.md#releasetagfilepath)
 - [root](Node20AwsCdkConstructLibrary.md#root)
 - [subprojects](Node20AwsCdkConstructLibrary.md#subprojects)
 - [testTask](Node20AwsCdkConstructLibrary.md#testtask)
@@ -1000,6 +1001,20 @@ ___
 #### Inherited from
 
 AwsCdkConstructLibrary.preCompileTask
+
+___
+
+### releaseTagFilePath
+
+• `get` **releaseTagFilePath**(): `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+AwsCdkConstructLibrary.releaseTagFilePath
 
 ___
 
