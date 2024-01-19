@@ -84,6 +84,7 @@ const ESM_MODULES_TO_TRANSFORM = [
     "ccount",
     "character-entities.*",
     "decode-named-character-reference",
+    "devlop",
     "direction",
     "escape-string-regexp",
     "github-slugger",
