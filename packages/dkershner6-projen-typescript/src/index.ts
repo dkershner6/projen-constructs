@@ -78,12 +78,13 @@ export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
 const ESM_MODULES_TO_TRANSFORM = [
     "@babel/runtime",
     "@mui*",
-    ".*separated-tokens",
-    ".*util-gfm.*",
+    "separated-tokens",
+    "util-gfm.*",
     "bail",
     "ccount",
     "character-entities.*",
     "decode-named-character-reference",
+    "devlop",
     "direction",
     "escape-string-regexp",
     "github-slugger",
@@ -118,8 +119,16 @@ const ESM_MODULES_TO_TRANSFORM = [
 export const buildJestTransformIgnorePatterns = (
     nodeModulesToTransform?: string[],
 ): string[] => {
+    const modulesRegex = [
+        ...new Set([
+            ...ESM_MODULES_TO_TRANSFORM,
+            ...(nodeModulesToTransform ?? []),
+        ]),
+    ]
+        .map((module) => `.*${module}`) // .* is needed on front for pnpm nesting
+        .join("|");
     return [
-        `node_modules/(?!(${[...new Set([...ESM_MODULES_TO_TRANSFORM, ...(nodeModulesToTransform ?? [])])].join("|")})/)`, // default is just `node_modules`
+        `node_modules/(?!(${modulesRegex})/)`, // default is just `node_modules`
         "\\.pnp\\.[^\\/]+$", // default
     ];
 };
