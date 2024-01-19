@@ -80,7 +80,7 @@
   "jest": {
     "testEnvironment": "node",
     "transformIgnorePatterns": [
-      "node_modules/(?!(@babel/runtime|@mui*|.*separated-tokens|.*util-gfm.*|bail|ccount|character-entities.*|decode-named-character-reference|direction|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|stringify-entities|strip-markdown|trim-lines|trough|unified|unist.*|vfile.*|web-namespaces|zwitch|@panva/hkdf|jose|swiper|swiper/react|ssr-window|dom7|uuid)/)",
+      "node_modules/(?!(.*@babel/runtime|.*@mui*|.*separated-tokens|.*util-gfm.*|.*bail|.*ccount|.*character-entities.*|.*decode-named-character-reference|.*direction|.*escape-string-regexp|.*github-slugger|.*hast.*|.*html-void-elements|.*is-plain-obj|.*longest-streak|.*markdown.*|.*mdast.*|.*micromark.*|.*property-information|.*rehype.*|.*remark.*|.*stringify-entities|.*strip-markdown|.*trim-lines|.*trough|.*unified|.*unist.*|.*vfile.*|.*web-namespaces|.*zwitch|.*@panva/hkdf|.*jose|.*swiper|.*swiper/react|.*ssr-window|.*dom7|.*uuid)/)",
       "\\.pnp\\.[^\\/]+$"
     ],
     "testMatch": [
