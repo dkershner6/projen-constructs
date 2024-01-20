@@ -7,6 +7,8 @@ export interface GraphQLConfigOptions extends Omit<JsonFileOptions, "obj"> {
 
 /**
  * Create a graphql.config.json file.
+ *
+ * @see https://the-guild.dev/graphql/config/docs
  */
 export class GraphQLConfig extends Component {
     public config: IGraphQLConfig;
