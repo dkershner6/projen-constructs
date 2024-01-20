@@ -16,6 +16,7 @@
     ".github/workflows/release_dkershner6-projen-typescript.yml",
     ".github/workflows/release_projen-cspell.yml",
     ".github/workflows/release_projen-github-workflows.yml",
+    ".github/workflows/release_projen-graphql.yml",
     ".github/workflows/release_projen-node.yml",
     ".github/workflows/release_projen-nvm.yml",
     ".github/workflows/release_projen-sonar.yml",

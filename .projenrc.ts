@@ -24,6 +24,14 @@ new ProjenConstructTsLib(rootProject, {
 });
 
 new ProjenConstructTsLib(rootProject, {
+    name: "projen-graphql",
+    keywords: ["projen", "graphql", "config", "configs"],
+    description: "Helpers for Projen GraphQL projects.",
+
+    devDeps: ["graphql-config"],
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "projen-node",
     keywords: ["projen", "node", "config", "configs"],
     description: "Helpers for Projen Node projects.",
