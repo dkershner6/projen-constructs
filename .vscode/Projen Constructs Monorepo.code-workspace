@@ -3,6 +3,7 @@
     "eslint.workingDirectories": [
       "./packages/projen-cspell",
       "./packages/projen-github-workflows",
+      "./packages/projen-graphql",
       "./packages/projen-node",
       "./packages/projen-nvm",
       "./packages/projen-sonar",
@@ -43,6 +44,10 @@
     {
       "name": "(Lib) github-workflows",
       "path": "../packages/projen-github-workflows"
+    },
+    {
+      "name": "(Lib) graphql",
+      "path": "../packages/projen-graphql"
     },
     {
       "name": "(Lib) node",

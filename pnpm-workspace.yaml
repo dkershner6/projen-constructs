@@ -11,6 +11,7 @@ packages:
   - packages/dkershner6-projen-typescript
   - packages/projen-cspell
   - packages/projen-github-workflows
+  - packages/projen-graphql
   - packages/projen-node
   - packages/projen-nvm
   - packages/projen-sonar
