@@ -47,9 +47,8 @@ export class GraphQLEslint extends Component {
             if (options?.operationsRules ?? true) {
                 project.eslint.addOverride({
                     files: ["*.ts", "*.tsx"],
-                    parser: ESLINT_PLUGIN,
-                    plugins: ["@graphql-eslint"],
-                    rules: GRAPHQL_ESLINT_OPERATIONS_RULES,
+                    // @ts-expect-error - this is a rarely used field
+                    processor: "@graphql-eslint/graphql",
                 });
                 project.eslint.addOverride({
                     files: ["*.graphql"],
