@@ -20,12 +20,12 @@ importers:
         specifier: ^2.122.0
         version: 2.122.0(constructs@10.3.0)
       cdk-nag:
-        specifier: ^2.28.13
-        version: 2.28.13(aws-cdk-lib@2.122.0)(constructs@10.3.0)
+        specifier: ^2.28.16
+        version: 2.28.16(aws-cdk-lib@2.122.0)(constructs@10.3.0)
     devDependencies:
       '@aws/pdk':
         specifier: ^0.22.50
-        version: 0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.13)(constructs@10.3.0)(projen@0.79.2)
+        version: 0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.16)(constructs@10.3.0)(projen@0.79.3)
       '@cspell/eslint-plugin':
         specifier: ^8.3.2
         version: 8.3.2
@@ -93,8 +93,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       syncpack:
         specifier: ^8
         version: 8.5.14
@@ -174,8 +174,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -255,8 +255,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -333,8 +333,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -414,11 +414,11 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       projen-github-action-typescript:
         specifier: ^0.0.395
-        version: 0.0.395(projen@0.79.2)
+        version: 0.0.395(projen@0.79.3)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -439,7 +439,7 @@ importers:
     devDependencies:
       '@aws/pdk':
         specifier: ^0.22.50
-        version: 0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.13)(constructs@10.3.0)(projen@0.79.2)
+        version: 0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.16)(constructs@10.3.0)(projen@0.79.3)
       '@cspell/eslint-plugin':
         specifier: ^8.3.2
         version: 8.3.2
@@ -501,8 +501,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -582,8 +582,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -666,8 +666,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       projen-sst:
         specifier: 0.0.0
         version: link:../projen-sst
@@ -747,8 +747,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -825,8 +825,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -903,8 +903,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -945,7 +945,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       constructs:
-        specifier: 10.3.0
+        specifier: ^10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
@@ -984,8 +984,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: 0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1062,8 +1062,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1140,8 +1140,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1218,8 +1218,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1296,8 +1296,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1374,8 +1374,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1452,8 +1452,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1530,8 +1530,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4
       projen:
-        specifier: ^0.79.2
-        version: 0.79.2(constructs@10.3.0)
+        specifier: ^0.79.3
+        version: 0.79.3(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
@@ -1602,7 +1602,7 @@ packages:
       aws-cdk-lib: 2.122.0(constructs@10.3.0)
       constructs: 10.3.0
 
-  /@aws/pdk@0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.13)(constructs@10.3.0)(projen@0.79.2):
+  /@aws/pdk@0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.16)(constructs@10.3.0)(projen@0.79.3):
     resolution: {integrity: sha512-+Uem47SlMiZiERlQrrm3oURMYVW5e8sZrLBD0V/HO8Ifv/StocobztC61srimuC8oD5rBhSbuUCjNDA8+8/Jcg==}
     hasBin: true
     peerDependencies:
@@ -1614,9 +1614,9 @@ packages:
     dependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': 2.104.0-alpha.0(aws-cdk-lib@2.122.0)(constructs@10.3.0)
       aws-cdk-lib: 2.122.0(constructs@10.3.0)
-      cdk-nag: 2.28.13(aws-cdk-lib@2.122.0)(constructs@10.3.0)
+      cdk-nag: 2.28.16(aws-cdk-lib@2.122.0)(constructs@10.3.0)
       constructs: 10.3.0
-      projen: 0.79.2(constructs@10.3.0)
+      projen: 0.79.3(constructs@10.3.0)
     dev: true
     bundledDependencies:
       - '@hpcc-js/wasm'
@@ -1651,7 +1651,7 @@ packages:
       - ts-node
       - word-wrap
 
-  /@aws/pdk@0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.13)(constructs@10.3.0)(projen@0.79.2):
+  /@aws/pdk@0.22.50(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.122.0)(cdk-nag@2.28.16)(constructs@10.3.0)(projen@0.79.3):
     resolution: {integrity: sha512-+Uem47SlMiZiERlQrrm3oURMYVW5e8sZrLBD0V/HO8Ifv/StocobztC61srimuC8oD5rBhSbuUCjNDA8+8/Jcg==}
     hasBin: true
     peerDependencies:
@@ -1663,9 +1663,9 @@ packages:
     dependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': 2.116.1-alpha.0(aws-cdk-lib@2.122.0)(constructs@10.3.0)
       aws-cdk-lib: 2.122.0(constructs@10.3.0)
-      cdk-nag: 2.28.13(aws-cdk-lib@2.122.0)(constructs@10.3.0)
+      cdk-nag: 2.28.16(aws-cdk-lib@2.122.0)(constructs@10.3.0)
       constructs: 10.3.0
-      projen: 0.79.2(constructs@10.3.0)
+      projen: 0.79.3(constructs@10.3.0)
     dev: true
     bundledDependencies:
       - '@hpcc-js/wasm'
@@ -4618,8 +4618,8 @@ packages:
     resolution: {integrity: sha512-tYq/6MoXhdezDLFZuCO/TKboTzuQ/xR5cFdgXPfDtM7/kchBO3b4VWghE/OAi/DV7tTdhmLjZiZBZi1fA/GheQ==}
     dev: true
 
-  /cdk-nag@2.28.13(aws-cdk-lib@2.122.0)(constructs@10.3.0):
-    resolution: {integrity: sha512-f+fteEq09+N7H2heqls0NcTC+MFcXl6fztEjjpKK0qTo5eFAKmDekEHLRGY5LX8v/JlueoVyhttsjaULNwnoSg==}
+  /cdk-nag@2.28.16(aws-cdk-lib@2.122.0)(constructs@10.3.0):
+    resolution: {integrity: sha512-LwfrcYSFZOFtggF2Z7ix5KMmNGxN20FUosFzqUgH8efwOXVAr7KbEzbDxpR1G+rY6Gl1KAbBvOL7bnJK18/LjA==}
     peerDependencies:
       aws-cdk-lib: ^2.116.0
       constructs: ^10.0.5
@@ -8882,16 +8882,16 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /projen-github-action-typescript@0.0.395(projen@0.79.2):
+  /projen-github-action-typescript@0.0.395(projen@0.79.3):
     resolution: {integrity: sha512-6wYEbV3MVt1ikzt1WKfFCFGi2QW94vZF6UU/UkIPY9al9YxfYkS9H3jJ2sz2gtRAXSX9JBk8g3IvmphRpqGsDg==}
     peerDependencies:
       projen: ^0.76.15
     dependencies:
-      projen: 0.79.2(constructs@10.3.0)
+      projen: 0.79.3(constructs@10.3.0)
     dev: true
 
-  /projen@0.79.2(constructs@10.3.0):
-    resolution: {integrity: sha512-ZKO2GDsJyU+MfsQAcvpMKPrWcuS2rPPCpqf2biZ7rcBVdYnDiOn03G1Gm9G/wRereMdDTciL6DYqsxTF4UvfqA==}
+  /projen@0.79.3(constructs@10.3.0):
+    resolution: {integrity: sha512-nmYW1YXFNdZNNDlfHsT4sMfE5vMgMbpG061RT+gtuvGkhm+6nYd8+kWo6xk+2J/egoNvXyS5kEbh4fFc41I5hA==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     peerDependencies:
