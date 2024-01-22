@@ -1,13 +1,26 @@
-import { Component } from "projen";
+import { Component, JsonFile } from "projen";
+import { EslintOverride } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
 export interface GraphQLEslintOptions {
+    /**
+     * The file extensions to lint with graphql-eslint.
+     *
+     * @default - [".ts", ".tsx", ".graphql"]
+     */
+    fileExtensions?: string[];
+
     /**
      * Whether or not to enable graphql-eslint operations rules in eslint.
      *
      * @default true
      */
     operationsRules?: boolean;
+
+    /**
+     * Override some settings for the ts file graphql-eslint processor.
+     */
+    tsOverrideConfig?: EslintOverride;
 }
 
 const ESLINT_PLUGIN = "@graphql-eslint/eslint-plugin";
@@ -37,25 +50,61 @@ const GRAPHQL_ESLINT_OPERATIONS_RULES = {
     "@graphql-eslint/variables-in-allowed-position": "error",
 };
 
+export const GRAPHQL_ESLINT_TS_OVERRIDE: EslintOverride = {
+    files: ["*.ts", "*.tsx"],
+    // @ts-expect-error - this is a rarely used field
+    processor: "@graphql-eslint/graphql",
+};
+
+export const GRAPHQL_ESLINT_GRAPHQL_OVERRIDE: EslintOverride = {
+    files: ["*.graphql"],
+    parser: ESLINT_PLUGIN,
+    plugins: ["@graphql-eslint"],
+    rules: GRAPHQL_ESLINT_OPERATIONS_RULES,
+};
+
+/**
+ * Add graphql-eslint to your project.
+ *
+ * Currently only supports this as a separate config file and command, as there are issues with typescript-eslint and graphql-eslint.
+ */
 export class GraphQLEslint extends Component {
-    constructor(project: TypeScriptProject, options?: GraphQLEslintOptions) {
+    constructor(
+        project: TypeScriptProject,
+        eslintConfigFilename: string,
+        options?: GraphQLEslintOptions,
+    ) {
         super(project);
 
-        if (project.eslint) {
-            project.addDevDeps(ESLINT_PLUGIN);
+        project.addDevDeps(ESLINT_PLUGIN);
 
-            if (options?.operationsRules ?? true) {
-                project.eslint.addOverride({
-                    files: ["*.ts", "*.tsx"],
-                    // @ts-expect-error - this is a rarely used field
-                    processor: "@graphql-eslint/graphql",
-                });
-                project.eslint.addOverride({
-                    files: ["*.graphql"],
-                    parser: ESLINT_PLUGIN,
-                    plugins: ["@graphql-eslint"],
-                    rules: GRAPHQL_ESLINT_OPERATIONS_RULES,
-                });
+        if (options?.operationsRules ?? true) {
+            new JsonFile(project, eslintConfigFilename, {
+                obj: {
+                    overrides: [
+                        {
+                            ...GRAPHQL_ESLINT_TS_OVERRIDE,
+                            ...(options?.tsOverrideConfig ?? {}),
+                        },
+                        GRAPHQL_ESLINT_GRAPHQL_OVERRIDE,
+                    ],
+                },
+            });
+
+            const eslintTask = project.tasks.tryFind("eslint");
+            if (eslintTask) {
+                const graphqlEslintTask = project.tasks.addTask(
+                    "eslint:graphql",
+                    {
+                        exec: eslintTask.steps[0].exec?.replace(
+                            /--ext ([.a-z,]*) /,
+                            `--ext ${options?.fileExtensions?.join(",") ?? ".ts,.tsx,.graphql"} `,
+                        ),
+                        receiveArgs: true,
+                    },
+                );
+
+                eslintTask.spawn(graphqlEslintTask);
             }
         }
     }
