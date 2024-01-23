@@ -7,7 +7,10 @@ import {
     RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS,
     Node20ReactTypescriptConfigurer,
 } from "dkershner6-projen-react";
-import { TypescriptConfig } from "projen/lib/javascript";
+import {
+    TypescriptConfig,
+    TypescriptConfigOptions,
+} from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
@@ -15,9 +18,18 @@ import {
     NextjsJest,
 } from "projen-nextjs";
 
-export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {}
+export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
+    /**
+     * Configure the tsconfig file for Next.js.
+     *
+     * @default - Recommended config by Next.js
+     */
+    nextjsTsconfig?: TypescriptConfigOptions;
+}
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
+    public readonly nextJsTypescriptConfig: TypescriptConfig;
+
     constructor(options: Node20AwsCdkNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
             Node20AwsCdkNextjsAppOptions,
@@ -42,8 +54,9 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
         super(combinedOptions);
 
         // Separate tsconfig for nextjs, too different from projen to coalesce
-        new TypescriptConfig(this, {
+        this.nextJsTypescriptConfig = new TypescriptConfig(this, {
             ...NEXTJS_TSCONFIG_OPTIONS,
+            ...(options.nextjsTsconfig ?? {}),
         });
 
         new Node20ReactTypescriptConfigurer(this, {
