@@ -19,20 +19,27 @@ export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {}
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
     constructor(options: Node20AwsCdkNextjsAppOptions) {
-        super(
-            deepMerge([
-                deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
-                {
-                    tsconfig: {
-                        filename: "tsconfig.publish.json",
-                    },
-                    tsconfigDev: {
-                        filename: "tsconfig.dev.json",
-                    },
-                },
-                options,
-            ]) as Node20AwsCdkNextjsAppOptions,
-        );
+        const defaultNextjsOptions: Omit<
+            Node20AwsCdkNextjsAppOptions,
+            "defaultReleaseBranch" | "cdkVersion" | "name"
+        > = {
+            tsconfig: {
+                fileName: "tsconfig.publish.json",
+                compilerOptions: {},
+            },
+            tsconfigDev: {
+                fileName: "tsconfig.dev.json",
+                compilerOptions: {},
+            },
+        };
+
+        const combinedOptions = deepMerge([
+            deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
+            defaultNextjsOptions,
+            options,
+        ]) as Node20AwsCdkNextjsAppOptions;
+
+        super(combinedOptions);
 
         // Separate tsconfig for nextjs, too different from projen to coalesce
         new TypescriptConfig(this, {
