@@ -36,7 +36,7 @@
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "clone-deep": "4.0.1",
+    "clone-deep": "^4.0.1",
     "constructs": "^10.0.0",
     "dkershner6-projen-awscdk-app": "0.0.0",
     "dkershner6-projen-awscdk-core": "0.0.0",
@@ -56,7 +56,7 @@
     "projen": "^0.79.3",
     "projen-nextjs": "0.0.0",
     "standard-version": "^9",
-    "ts-jest": "^29.1.1",
+    "ts-jest": "^29.1.2",
     "typedoc": "^0.25.7",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.3.3"
