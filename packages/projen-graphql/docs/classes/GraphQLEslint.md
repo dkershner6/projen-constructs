@@ -2,6 +2,10 @@
 
 # Class: GraphQLEslint
 
+Add graphql-eslint to your project.
+
+Currently only supports this as a separate config file and command, as there are issues with typescript-eslint and graphql-eslint.
+
 ## Hierarchy
 
 - `Component`
@@ -32,13 +36,14 @@
 
 ### constructor
 
-• **new GraphQLEslint**(`project`, `options?`): [`GraphQLEslint`](GraphQLEslint.md)
+• **new GraphQLEslint**(`project`, `eslintConfigFilename`, `options?`): [`GraphQLEslint`](GraphQLEslint.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
+| `eslintConfigFilename` | `string` |
 | `options?` | [`GraphQLEslintOptions`](../interfaces/GraphQLEslintOptions.md) |
 
 #### Returns
