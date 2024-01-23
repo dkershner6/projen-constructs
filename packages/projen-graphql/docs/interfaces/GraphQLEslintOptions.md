@@ -51,6 +51,6 @@ ___
 
 ### tsOverrideConfig
 
-• `Optional` **tsOverrideConfig**: `EslintOverride`
+• `Optional` **tsOverrideConfig**: `Partial`\<`EslintOverride`\>
 
 Override some settings for the ts file graphql-eslint processor.
