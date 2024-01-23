@@ -1,8 +1,9 @@
 /* eslint-disable @cspell/spellchecker */
 // Cannot run cspell in here because flagWords are definite hits.
 
-import { Component, JsonFile, Project, SampleFile } from "projen";
+import { Component, JsonFile, SampleFile } from "projen";
 import { Eslint, NodeProject } from "projen/lib/javascript";
+import { TypeScriptProject } from "projen/lib/typescript";
 
 export interface CSpellDictionaryDefinition {
     /**
@@ -128,6 +129,7 @@ const PROJEN_AND_THIS_MONOREPO_WORDS = [
     "subproject",
     "subprojects",
     "syncpack",
+    "testdir",
 ];
 
 const SHARED_CSPELL_CONFIG_FILENAME = "cspell-readonly.json";
@@ -135,7 +137,7 @@ const SHARED_CSPELL_CONFIG_FILENAME = "cspell-readonly.json";
 export class CSpellConfigFile extends Component {
     public readonly config: CSpellConfig;
 
-    constructor(project: Project, options?: CSpellConfigFileOptions) {
+    constructor(project: NodeProject, options?: CSpellConfigFileOptions) {
         super(project);
 
         this.config = {
@@ -162,7 +164,8 @@ export class CSpellConfigFile extends Component {
                 "**/*.spec.tsx",
                 "**/*.test.ts",
                 "**/*.test.tsx",
-            ],
+                (project as TypeScriptProject).testdir,
+            ].filter(Boolean),
         };
 
         new JsonFile(this.project, SHARED_CSPELL_CONFIG_FILENAME, {
@@ -197,7 +200,7 @@ export interface CSpellOptions extends CSpellConfigFileOptions {
 }
 
 export class CSpell extends Component {
-    constructor(project: Project, options?: CSpellOptions) {
+    constructor(project: NodeProject, options?: CSpellOptions) {
         super(project);
 
         if (options?.eslint ?? true) {

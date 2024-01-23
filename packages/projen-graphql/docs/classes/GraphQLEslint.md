@@ -25,6 +25,7 @@ Currently only supports this as a separate config file and command, as there are
 
 ### Methods
 
+- [moveProjectNeedingRulesToOverride](GraphQLEslint.md#moveprojectneedingrulestooverride)
 - [postSynthesize](GraphQLEslint.md#postsynthesize)
 - [preSynthesize](GraphQLEslint.md#presynthesize)
 - [synthesize](GraphQLEslint.md#synthesize)
@@ -36,14 +37,13 @@ Currently only supports this as a separate config file and command, as there are
 
 ### constructor
 
-• **new GraphQLEslint**(`project`, `eslintConfigFilename`, `options?`): [`GraphQLEslint`](GraphQLEslint.md)
+• **new GraphQLEslint**(`project`, `options?`): [`GraphQLEslint`](GraphQLEslint.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
-| `eslintConfigFilename` | `string` |
 | `options?` | [`GraphQLEslintOptions`](../interfaces/GraphQLEslintOptions.md) |
 
 #### Returns
@@ -70,13 +70,26 @@ ___
 
 ### project
 
-• `Readonly` **project**: `Project`
+• **project**: `TypeScriptProject`
 
-#### Inherited from
+#### Overrides
 
 Component.project
 
 ## Methods
+
+### moveProjectNeedingRulesToOverride
+
+▸ **moveProjectNeedingRulesToOverride**(): `void`
+
+Certain TS parser eslint rules require the project setting for the TS parser.
+This moves those rules to an override to make the TS parser ignore .graphql files.
+
+#### Returns
+
+`void`
+
+___
 
 ### postSynthesize
 

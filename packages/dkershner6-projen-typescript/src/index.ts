@@ -133,12 +133,18 @@ export const buildJestTransformIgnorePatterns = (
     ];
 };
 
-export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_JEST_CONFIG: Partial<TypeScriptProjectOptions> = {
     jest: true,
     jestOptions: {
         jestConfig: {
             testEnvironment: "node",
+            testTimeout: 15000,
             transformIgnorePatterns: buildJestTransformIgnorePatterns(),
+        },
+    },
+    tsJestOptions: {
+        transformOptions: {
+            isolatedModules: true,
         },
     },
 };
@@ -309,16 +315,17 @@ export class DKTasks extends Component {
         const lintTask = project.eslint?.eslintTask;
 
         if (lintTask) {
-            const lintTaskStep = lintTask.steps[0];
-            lintTask.reset(lintTaskStep.exec, {
-                args: [...(lintTaskStep.args ?? []), maxWarningsZeroArg],
-            });
-
-            project
-                .addTask(DKTaskName.LINT, {
-                    description: "Alternate lint command",
-                })
-                .spawn(lintTask);
+            const lintTaskStepArgs = lintTask.steps[0].args;
+            // @ts-expect-error - Violating readonly
+            (lintTask.steps[0].args = [
+                ...(lintTaskStepArgs ?? []),
+                maxWarningsZeroArg,
+            ]),
+                project
+                    .addTask(DKTaskName.LINT, {
+                        description: "Alternate lint command",
+                    })
+                    .spawn(lintTask);
 
             const originalTestTaskStep = project.testTask.steps[0];
             const { exec, ...restOfTestTaskStep } = originalTestTaskStep;

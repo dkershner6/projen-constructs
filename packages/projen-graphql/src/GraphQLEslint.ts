@@ -1,15 +1,8 @@
-import { Component, JsonFile } from "projen";
+import { Component } from "projen";
 import { EslintOverride } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
 export interface GraphQLEslintOptions {
-    /**
-     * The file extensions to lint with graphql-eslint.
-     *
-     * @default - [".ts", ".tsx", ".graphql"]
-     */
-    fileExtensions?: string[];
-
     /**
      * Whether or not to enable graphql-eslint operations rules in eslint.
      *
@@ -18,14 +11,9 @@ export interface GraphQLEslintOptions {
     operationsRules?: boolean;
 
     /**
-     * Extra args to add to the ESLint task command
+     * Set the override settings for the TS Eslint Override.
      */
-    taskArgs?: string[];
-
-    /**
-     * Override some settings for the ts file graphql-eslint processor.
-     */
-    tsOverrideConfig?: Partial<EslintOverride>;
+    tsEslintOverride?: Partial<EslintOverride>;
 }
 
 const ESLINT_PLUGIN = "@graphql-eslint/eslint-plugin";
@@ -74,47 +62,71 @@ export const GRAPHQL_ESLINT_GRAPHQL_OVERRIDE: EslintOverride = {
  * Currently only supports this as a separate config file and command, as there are issues with typescript-eslint and graphql-eslint.
  */
 export class GraphQLEslint extends Component {
-    constructor(
-        project: TypeScriptProject,
-        eslintConfigFilename: string,
-        options?: GraphQLEslintOptions,
-    ) {
+    declare project: TypeScriptProject;
+
+    constructor(project: TypeScriptProject, options?: GraphQLEslintOptions) {
         super(project);
 
-        project.addDevDeps(ESLINT_PLUGIN);
+        if (project.eslint) {
+            project.addDevDeps(ESLINT_PLUGIN);
 
-        if (options?.operationsRules ?? true) {
-            new JsonFile(project, eslintConfigFilename, {
-                obj: {
-                    overrides: [
-                        {
-                            ...GRAPHQL_ESLINT_TS_OVERRIDE,
-                            ...(options?.tsOverrideConfig ?? {}),
-                        },
+            this.moveProjectNeedingRulesToOverride();
+
+            if (options?.operationsRules ?? true) {
+                const eslintTask = project.tasks.tryFind("eslint");
+                if (eslintTask) {
+                    const eslintArgs = eslintTask.steps[0].args;
+                    // @ts-expect-error - Violating readonly
+                    eslintTask.steps[0].args = [
+                        ...(eslintArgs ?? []),
+                        "--ext .graphql",
+                    ];
+
+                    project.eslint?.addOverride({
+                        ...GRAPHQL_ESLINT_TS_OVERRIDE,
+                        ...(options?.tsEslintOverride ?? {}),
+                    });
+                    project.eslint?.addOverride(
                         GRAPHQL_ESLINT_GRAPHQL_OVERRIDE,
-                    ],
-                },
-            });
-
-            const eslintTask = project.tasks.tryFind("eslint");
-            if (eslintTask) {
-                const graphqlEslintTask = project.tasks.addTask(
-                    "eslint:graphql",
-                    {
-                        args: [
-                            `--config ${eslintConfigFilename}`,
-                            ...(options?.taskArgs ?? []),
-                        ],
-                        exec: eslintTask.steps[0].exec?.replace(
-                            /--ext ([.a-z,]*) /,
-                            `--ext ${options?.fileExtensions?.join(",") ?? ".ts,.tsx,.graphql"} `,
-                        ),
-                        receiveArgs: true,
-                    },
-                );
-
-                eslintTask.spawn(graphqlEslintTask);
+                    );
+                }
             }
         }
+    }
+
+    /**
+     * Certain TS parser eslint rules require the project setting for the TS parser.
+     * This moves those rules to an override to make the TS parser ignore .graphql files.
+     */
+    private moveProjectNeedingRulesToOverride(): void {
+        const TS_ESLINT_PROJECT_NEEDING_RULES = [
+            "@typescript-eslint/no-floating-promises",
+            "@typescript-eslint/return-await",
+        ];
+
+        const ruleConfigs = TS_ESLINT_PROJECT_NEEDING_RULES.map(
+            (ruleName) => this.project.eslint?.rules?.[ruleName] ?? "off",
+        );
+
+        // Turn off rules in normal config
+        this.project.eslint?.addRules(
+            Object.fromEntries(
+                TS_ESLINT_PROJECT_NEEDING_RULES.map((ruleName) => [
+                    ruleName,
+                    "off",
+                ]),
+            ),
+        );
+
+        // Add back as overrides
+        this.project.eslint?.addOverride({
+            files: ["*.ts", "*.tsx"],
+            rules: Object.fromEntries(
+                TS_ESLINT_PROJECT_NEEDING_RULES.map((ruleName, index) => [
+                    ruleName,
+                    ruleConfigs[index],
+                ]),
+            ),
+        });
     }
 }
