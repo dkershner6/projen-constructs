@@ -42,6 +42,7 @@
 - [libdir](Node20AwsCdkNextjsApp.md#libdir)
 - [logger](Node20AwsCdkNextjsApp.md#logger)
 - [name](Node20AwsCdkNextjsApp.md#name)
+- [nextJsTypescriptConfig](Node20AwsCdkNextjsApp.md#nextjstypescriptconfig)
 - [node](Node20AwsCdkNextjsApp.md#node)
 - [nodeVersion](Node20AwsCdkNextjsApp.md#nodeversion)
 - [npmignore](Node20AwsCdkNextjsApp.md#npmignore)
@@ -463,6 +464,12 @@ Project name.
 #### Inherited from
 
 Node20AwsCdkApp.name
+
+___
+
+### nextJsTypescriptConfig
+
+• `Readonly` **nextJsTypescriptConfig**: `TypescriptConfig`
 
 ___
 
