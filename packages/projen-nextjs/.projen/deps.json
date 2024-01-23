@@ -108,11 +108,8 @@
       "type": "build"
     },
     {
-      "name": "constructs",
-      "type": "peer"
-    },
-    {
-      "name": "projen",
+      "name": "next",
+      "version": ">=13.5.6",
       "type": "peer"
     }
   ],

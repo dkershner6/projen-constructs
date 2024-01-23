@@ -56,6 +56,7 @@ junit.xml
 !/.github/workflows/release_projen-cspell.yml
 !/.github/workflows/release_projen-github-workflows.yml
 !/.github/workflows/release_projen-graphql.yml
+!/.github/workflows/release_projen-nextjs.yml
 !/.github/workflows/release_projen-node.yml
 !/.github/workflows/release_projen-nvm.yml
 !/.github/workflows/release_projen-sonar.yml
@@ -70,7 +71,6 @@ junit.xml
 !/.github/workflows/release_dkershner6-projen-awscdk-core.yml
 !/.github/workflows/release_dkershner6-projen-awscdk-app.yml
 !/.github/workflows/release_dkershner6-projen-sst-app.yml
-!/.github/workflows/release_dkershner6-projen-nextjs-core.yml
 !/.github/workflows/release_dkershner6-projen-awscdk-nextjs-app.yml
 !/.github/workflows/release_dkershner6-projen-sst-nextjs-app.yml
 !/.github/workflows/release_dkershner6-projen-nx-monorepo.yml

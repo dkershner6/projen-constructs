@@ -29,7 +29,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "dkershner6-projen-nextjs-core@",
+        "RELEASE_TAG_PREFIX": "projen-nextjs@",
         "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
@@ -154,7 +154,7 @@
       "description": "Prepare a release from \"main\" branch",
       "env": {
         "RELEASE": "true",
-        "RELEASE_TAG_PREFIX": "dkershner6-projen-nextjs-core@"
+        "RELEASE_TAG_PREFIX": "projen-nextjs@"
       },
       "steps": [
         {
@@ -223,7 +223,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "dkershner6-projen-nextjs-core@",
+        "RELEASE_TAG_PREFIX": "projen-nextjs@",
         "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [

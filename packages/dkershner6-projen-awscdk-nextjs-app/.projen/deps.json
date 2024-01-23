@@ -122,12 +122,17 @@
       "type": "peer"
     },
     {
-      "name": "dkershner6-projen-nextjs-core",
+      "name": "dkershner6-projen-react",
       "version": "^0.x",
       "type": "peer"
     },
     {
       "name": "dkershner6-projen-typescript",
+      "version": "^0.x",
+      "type": "peer"
+    },
+    {
+      "name": "projen-nextjs",
       "version": "^0.x",
       "type": "peer"
     }

@@ -1,23 +1,25 @@
-# dkershner6-projen-nextjs-core
+dkershner6-projen-sst-nextjs-app / [Exports](modules.md)
 
-DKershner's common constructs for Projen Nextjs Apps.
+# dkershner6-projen-sst-nextjs-app
+
+DKershner's preferred constructs for Projen SST Apps using Nextjs.
 
 ## Docs
 
-See [dkershner6-projen-nextjs-core API Docs](docs/modules.md)
+See [dkershner6-projen-sst-nextjs-app API Docs](docs/modules.md)
 
 ## Usage
 
 Install the module:
 
 ```typescript
-devDeps: ["dkershner6-projen-nextjs-core"]
+devDeps: ["dkershner6-projen-sst-nextjs-app"]
 ```
 
 Import into your code:
 
 ```typescript
-import { WhateverConstruct } from "dkershner6-projen-nextjs-core";
+import { WhateverConstruct } from "dkershner6-projen-sst-nextjs-app";
 ```
 
 # Contributing

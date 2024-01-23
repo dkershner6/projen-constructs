@@ -39,7 +39,7 @@
     "clone-deep": "4.0.1",
     "constructs": "^10.0.0",
     "dkershner6-projen-awscdk-core": "0.0.0",
-    "dkershner6-projen-nextjs-core": "0.0.0",
+    "dkershner6-projen-react": "0.0.0",
     "dkershner6-projen-sst-app": "0.0.0",
     "dkershner6-projen-typescript": "0.0.0",
     "eslint": "^8",
@@ -54,6 +54,7 @@
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.4",
     "projen": "^0.79.3",
+    "projen-nextjs": "0.0.0",
     "projen-sst": "0.0.0",
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
@@ -64,9 +65,10 @@
   "peerDependencies": {
     "clone-deep": "^4.0.1",
     "dkershner6-projen-awscdk-core": "^0.x",
-    "dkershner6-projen-nextjs-core": "^0.x",
+    "dkershner6-projen-react": "^0.x",
     "dkershner6-projen-sst-app": "^0.x",
     "dkershner6-projen-typescript": "^0.x",
+    "projen-nextjs": "^0.x",
     "projen-sst": "^0.x"
   },
   "keywords": [
