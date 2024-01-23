@@ -25,7 +25,7 @@ export interface GraphQLEslintOptions {
     /**
      * Override some settings for the ts file graphql-eslint processor.
      */
-    tsOverrideConfig?: EslintOverride;
+    tsOverrideConfig?: Partial<EslintOverride>;
 }
 
 const ESLINT_PLUGIN = "@graphql-eslint/eslint-plugin";
