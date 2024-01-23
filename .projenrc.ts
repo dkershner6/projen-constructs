@@ -243,6 +243,8 @@ new ProjenConstructTsLib(rootProject, {
         "clone-deep",
         "dkershner6-projen-typescript@^0.x",
         "dkershner6-projen-awscdk-core@^0.x",
+        "dkershner6-projen-awscdk-app@^0.x",
+        "dkershner6-projen-nextjs-core@^0.x",
     ],
 });
 
@@ -268,6 +270,8 @@ new ProjenConstructTsLib(rootProject, {
         "clone-deep",
         "dkershner6-projen-typescript@^0.x",
         "dkershner6-projen-awscdk-core@^0.x",
+        "dkershner6-projen-nextjs-core@^0.x",
+        "dkershner6-projen-sst-app@^0.x",
         "projen-sst@^0.x",
     ],
 });

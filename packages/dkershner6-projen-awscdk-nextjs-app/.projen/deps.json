@@ -112,7 +112,17 @@
       "type": "peer"
     },
     {
+      "name": "dkershner6-projen-awscdk-app",
+      "version": "^0.x",
+      "type": "peer"
+    },
+    {
       "name": "dkershner6-projen-awscdk-core",
+      "version": "^0.x",
+      "type": "peer"
+    },
+    {
+      "name": "dkershner6-projen-nextjs-core",
       "version": "^0.x",
       "type": "peer"
     },

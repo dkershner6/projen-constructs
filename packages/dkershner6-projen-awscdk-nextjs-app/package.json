@@ -38,7 +38,9 @@
     "@typescript-eslint/parser": "^6",
     "clone-deep": "4.0.1",
     "constructs": "^10.0.0",
+    "dkershner6-projen-awscdk-app": "0.0.0",
     "dkershner6-projen-awscdk-core": "0.0.0",
+    "dkershner6-projen-nextjs-core": "0.0.0",
     "dkershner6-projen-typescript": "0.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
@@ -60,7 +62,9 @@
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
+    "dkershner6-projen-awscdk-app": "^0.x",
     "dkershner6-projen-awscdk-core": "^0.x",
+    "dkershner6-projen-nextjs-core": "^0.x",
     "dkershner6-projen-typescript": "^0.x"
   },
   "keywords": [

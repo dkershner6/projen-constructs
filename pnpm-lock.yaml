@@ -377,9 +377,15 @@ importers:
       constructs:
         specifier: ^10.0.0
         version: 10.3.0
+      dkershner6-projen-awscdk-app:
+        specifier: 0.0.0
+        version: link:../dkershner6-projen-awscdk-app
       dkershner6-projen-awscdk-core:
         specifier: 0.0.0
         version: link:../dkershner6-projen-awscdk-core
+      dkershner6-projen-nextjs-core:
+        specifier: 0.0.0
+        version: link:../dkershner6-projen-nextjs-core
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
@@ -878,6 +884,12 @@ importers:
       dkershner6-projen-awscdk-core:
         specifier: 0.0.0
         version: link:../dkershner6-projen-awscdk-core
+      dkershner6-projen-nextjs-core:
+        specifier: 0.0.0
+        version: link:../dkershner6-projen-nextjs-core
+      dkershner6-projen-sst-app:
+        specifier: 0.0.0
+        version: link:../dkershner6-projen-sst-app
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
