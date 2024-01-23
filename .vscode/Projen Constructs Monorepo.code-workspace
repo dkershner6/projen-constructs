@@ -18,6 +18,9 @@
       "./packages/dkershner6-projen-awscdk-core",
       "./packages/dkershner6-projen-awscdk-app",
       "./packages/dkershner6-projen-sst-app",
+      "./packages/dkershner6-projen-nextjs-core",
+      "./packages/dkershner6-projen-awscdk-nextjs-app",
+      "./packages/dkershner6-projen-sst-nextjs-app",
       "./packages/dkershner6-projen-nx-monorepo"
     ],
     "jest.disabledWorkspaceFolders": [
@@ -104,6 +107,18 @@
     {
       "name": "(Lib) dkershner6-sst-app",
       "path": "../packages/dkershner6-projen-sst-app"
+    },
+    {
+      "name": "(Lib) dkershner6-nextjs-core",
+      "path": "../packages/dkershner6-projen-nextjs-core"
+    },
+    {
+      "name": "(Lib) dkershner6-awscdk-nextjs-app",
+      "path": "../packages/dkershner6-projen-awscdk-nextjs-app"
+    },
+    {
+      "name": "(Lib) dkershner6-sst-nextjs-app",
+      "path": "../packages/dkershner6-projen-sst-nextjs-app"
     },
     {
       "name": "(Lib) dkershner6-nx-monorepo",

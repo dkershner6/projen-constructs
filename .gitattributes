@@ -10,10 +10,13 @@
 /.github/workflows/release_dkershner6-projen-awscdk-app.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-awscdk-construct-library.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-awscdk-core.yml linguist-generated
+/.github/workflows/release_dkershner6-projen-awscdk-nextjs-app.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-github-actions.yml linguist-generated
+/.github/workflows/release_dkershner6-projen-nextjs-core.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-nx-monorepo.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-react.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-sst-app.yml linguist-generated
+/.github/workflows/release_dkershner6-projen-sst-nextjs-app.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-typescript.yml linguist-generated
 /.github/workflows/release_projen-cspell.yml linguist-generated
 /.github/workflows/release_projen-github-workflows.yml linguist-generated

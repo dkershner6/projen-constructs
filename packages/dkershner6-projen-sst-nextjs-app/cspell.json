@@ -1,0 +1,7 @@
+{
+  "//": "This file can be edited, and will not be overwritten by projen.",
+  "import": [
+    "cspell-readonly.json"
+  ],
+  "words": []
+}

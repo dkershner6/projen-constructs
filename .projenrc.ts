@@ -209,6 +209,70 @@ new ProjenConstructTsLib(rootProject, {
 });
 
 new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-nextjs-core",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "nextjs",
+    ],
+    description: "DKershner's common constructs for Projen Nextjs Apps.",
+});
+
+new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-awscdk-nextjs-app",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "awscdk",
+        "cdk",
+        "awscdk-app",
+        "nextjs",
+    ],
+    description:
+        "DKershner's preferred constructs for Projen AWS CDK Apps using Nextjs.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "dkershner6-projen-awscdk-core@^0.x",
+    ],
+});
+
+new ProjenConstructTsLib(rootProject, {
+    name: "dkershner6-projen-sst-nextjs-app",
+    npmAccess: NpmAccess.PUBLIC,
+    keywords: [
+        "projen",
+        "configs",
+        "config",
+        "constructs",
+        "construct",
+        "sst",
+        "awscdk",
+        "cdk",
+        "awscdk-app",
+        "nextjs",
+    ],
+    description:
+        "DKershner's preferred constructs for Projen SST Apps using Nextjs.",
+    devDeps: ["@types/clone-deep"],
+    peerDeps: [
+        "clone-deep",
+        "dkershner6-projen-typescript@^0.x",
+        "dkershner6-projen-awscdk-core@^0.x",
+        "projen-sst@^0.x",
+    ],
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "dkershner6-projen-nx-monorepo",
     npmAccess: NpmAccess.PUBLIC,
     keywords: [

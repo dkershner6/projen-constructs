@@ -70,6 +70,9 @@ junit.xml
 !/.github/workflows/release_dkershner6-projen-awscdk-core.yml
 !/.github/workflows/release_dkershner6-projen-awscdk-app.yml
 !/.github/workflows/release_dkershner6-projen-sst-app.yml
+!/.github/workflows/release_dkershner6-projen-nextjs-core.yml
+!/.github/workflows/release_dkershner6-projen-awscdk-nextjs-app.yml
+!/.github/workflows/release_dkershner6-projen-sst-nextjs-app.yml
 !/.github/workflows/release_dkershner6-projen-nx-monorepo.yml
 !/.vscode/Projen Constructs Monorepo.code-workspace
 !/.nvmrc
