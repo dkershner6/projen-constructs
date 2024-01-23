@@ -50,6 +50,7 @@ export const GRAPHQL_ESLINT_GRAPHQL_OVERRIDE: EslintOverride = {
     plugins: ["@graphql-eslint"],
     rules: GRAPHQL_ESLINT_OPERATIONS_RULES,
 };
+
 /**
  * Add graphql-eslint to your project.
  *

@@ -18,6 +18,8 @@ export class GraphQLConfig extends Component {
 
         this.config = options.config;
 
+        project.addPackageIgnore("graphql.config.json");
+
         new JsonFile(this.project, "graphql.config.json", {
             obj: this.config,
             ...options,
