@@ -16,20 +16,27 @@ export interface Node20SstNextjsAppOptions extends Node20SstAppOptions {}
 
 export class Node20SstNextjsApp extends Node20SstApp {
     constructor(options: Node20SstNextjsAppOptions) {
-        super(
-            deepMerge([
-                deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
-                {
-                    tsconfig: {
-                        filename: "tsconfig.publish.json",
-                    },
-                    tsconfigDev: {
-                        filename: "tsconfig.dev.json",
-                    },
-                },
-                options,
-            ]) as Node20SstNextjsAppOptions,
-        );
+        const defaultNextjsOptions: Omit<
+            Node20SstNextjsAppOptions,
+            "defaultReleaseBranch" | "cdkVersion" | "name"
+        > = {
+            tsconfig: {
+                fileName: "tsconfig.publish.json",
+                compilerOptions: {},
+            },
+            tsconfigDev: {
+                fileName: "tsconfig.dev.json",
+                compilerOptions: {},
+            },
+        };
+
+        const combinedOptions = deepMerge([
+            deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
+            defaultNextjsOptions,
+            options,
+        ]) as Node20SstNextjsAppOptions;
+
+        super(combinedOptions);
 
         // Separate tsconfig for nextjs, too different from projen to coalesce
         new TypescriptConfig(this, {
