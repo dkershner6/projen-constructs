@@ -63,7 +63,7 @@ ___
 
 ### RECOMMENDED\_JEST\_CONFIG
 
-• `Const` **RECOMMENDED\_JEST\_CONFIG**: `Partial`\<`NodeProjectOptions`\>
+• `Const` **RECOMMENDED\_JEST\_CONFIG**: `Partial`\<`TypeScriptProjectOptions`\>
 
 ___
 

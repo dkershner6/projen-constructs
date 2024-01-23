@@ -1,7 +1,7 @@
 /* eslint-disable @cspell/spellchecker */
 // Cannot run cspell in here because flagWords are definite hits.
 
-import { Component, JsonFile, Project, SampleFile } from "projen";
+import { Component, JsonFile, SampleFile } from "projen";
 import { Eslint, NodeProject } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
@@ -199,7 +199,7 @@ export interface CSpellOptions extends CSpellConfigFileOptions {
 }
 
 export class CSpell extends Component {
-    constructor(project: Project, options?: CSpellOptions) {
+    constructor(project: NodeProject, options?: CSpellOptions) {
         super(project);
 
         if (options?.eslint ?? true) {

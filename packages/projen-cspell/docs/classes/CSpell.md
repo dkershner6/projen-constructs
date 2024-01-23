@@ -38,7 +38,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `project` | `Project` |
+| `project` | `NodeProject` |
 | `options?` | [`CSpellOptions`](../interfaces/CSpellOptions.md) |
 
 #### Returns

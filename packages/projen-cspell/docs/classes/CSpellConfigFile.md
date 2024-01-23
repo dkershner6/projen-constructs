@@ -39,7 +39,7 @@
 
 | Name | Type |
 | :------ | :------ |
-| `project` | `Project` |
+| `project` | `NodeProject` |
 | `options?` | [`CSpellConfigFileOptions`](../interfaces/CSpellConfigFileOptions.md) |
 
 #### Returns

@@ -7,6 +7,7 @@
 ### Properties
 
 - [operationsRules](GraphQLEslintOptions.md#operationsrules)
+- [tsEslintOverride](GraphQLEslintOptions.md#tseslintoverride)
 
 ## Properties
 
@@ -21,3 +22,11 @@ Whether or not to enable graphql-eslint operations rules in eslint.
 ```ts
 true
 ```
+
+___
+
+### tsEslintOverride
+
+• `Optional` **tsEslintOverride**: `Partial`\<`EslintOverride`\>
+
+Set the override settings for the TS Eslint Override.
