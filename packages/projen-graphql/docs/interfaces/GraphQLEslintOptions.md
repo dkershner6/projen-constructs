@@ -6,26 +6,10 @@
 
 ### Properties
 
-- [fileExtensions](GraphQLEslintOptions.md#fileextensions)
 - [operationsRules](GraphQLEslintOptions.md#operationsrules)
-- [taskArgs](GraphQLEslintOptions.md#taskargs)
-- [tsOverrideConfig](GraphQLEslintOptions.md#tsoverrideconfig)
+- [tsEslintOverride](GraphQLEslintOptions.md#tseslintoverride)
 
 ## Properties
-
-### fileExtensions
-
-• `Optional` **fileExtensions**: `string`[]
-
-The file extensions to lint with graphql-eslint.
-
-**`Default`**
-
-```ts
-- [".ts", ".tsx", ".graphql"]
-```
-
-___
 
 ### operationsRules
 
@@ -41,16 +25,8 @@ true
 
 ___
 
-### taskArgs
+### tsEslintOverride
 
-• `Optional` **taskArgs**: `string`[]
+• `Optional` **tsEslintOverride**: `Partial`\<`EslintOverride`\>
 
-Extra args to add to the ESLint task command
-
-___
-
-### tsOverrideConfig
-
-• `Optional` **tsOverrideConfig**: `Partial`\<`EslintOverride`\>
-
-Override some settings for the ts file graphql-eslint processor.
+Set the override settings for the TS Eslint Override.
