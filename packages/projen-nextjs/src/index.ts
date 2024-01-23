@@ -51,7 +51,7 @@ export class NextjsEslint extends Component {
                 ? `@${nextDep?.version}`
                 : "";
             project.addDevDeps(`@next/eslint-plugin-next${nextVersionSuffix}`);
-            project.eslint.addPlugins("plugin:@next/next/recommended");
+            project.eslint.addExtends("plugin:@next/next/recommended");
 
             const conflictingRules = ["jsx-a11y/anchor-is-valid"];
 
