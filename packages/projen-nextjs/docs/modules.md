@@ -22,4 +22,4 @@
 
 ### NEXTJS\_TSCONFIG\_OPTIONS
 
-• `Const` **NEXTJS\_TSCONFIG\_OPTIONS**: `TypescriptConfig`
+• `Const` **NEXTJS\_TSCONFIG\_OPTIONS**: `TypescriptConfigOptions`

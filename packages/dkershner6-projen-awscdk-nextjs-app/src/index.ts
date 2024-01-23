@@ -28,7 +28,7 @@ export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
 }
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
-    public readonly nextJsTypescriptConfig: TypescriptConfig;
+    public readonly nextjsTypescriptConfig: TypescriptConfig;
 
     constructor(options: Node20AwsCdkNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
@@ -54,10 +54,13 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
         super(combinedOptions);
 
         // Separate tsconfig for nextjs, too different from projen to coalesce
-        this.nextJsTypescriptConfig = new TypescriptConfig(this, {
-            ...NEXTJS_TSCONFIG_OPTIONS,
-            ...(options.nextjsTsconfig ?? {}),
-        });
+        this.nextjsTypescriptConfig = new TypescriptConfig(
+            this,
+            deepMerge([
+                NEXTJS_TSCONFIG_OPTIONS,
+                options.nextjsTsconfig ?? {},
+            ]) as TypescriptConfigOptions,
+        );
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",
