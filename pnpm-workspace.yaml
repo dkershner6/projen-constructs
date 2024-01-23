@@ -4,14 +4,17 @@ packages:
   - packages/dkershner6-projen-awscdk-app
   - packages/dkershner6-projen-awscdk-construct-library
   - packages/dkershner6-projen-awscdk-core
+  - packages/dkershner6-projen-awscdk-nextjs-app
   - packages/dkershner6-projen-github-actions
   - packages/dkershner6-projen-nx-monorepo
   - packages/dkershner6-projen-react
   - packages/dkershner6-projen-sst-app
+  - packages/dkershner6-projen-sst-nextjs-app
   - packages/dkershner6-projen-typescript
   - packages/projen-cspell
   - packages/projen-github-workflows
   - packages/projen-graphql
+  - packages/projen-nextjs
   - packages/projen-node
   - packages/projen-nvm
   - packages/projen-sonar

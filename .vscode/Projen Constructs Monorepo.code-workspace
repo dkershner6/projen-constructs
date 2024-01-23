@@ -4,6 +4,7 @@
       "./packages/projen-cspell",
       "./packages/projen-github-workflows",
       "./packages/projen-graphql",
+      "./packages/projen-nextjs",
       "./packages/projen-node",
       "./packages/projen-nvm",
       "./packages/projen-sonar",
@@ -18,6 +19,8 @@
       "./packages/dkershner6-projen-awscdk-core",
       "./packages/dkershner6-projen-awscdk-app",
       "./packages/dkershner6-projen-sst-app",
+      "./packages/dkershner6-projen-awscdk-nextjs-app",
+      "./packages/dkershner6-projen-sst-nextjs-app",
       "./packages/dkershner6-projen-nx-monorepo"
     ],
     "jest.disabledWorkspaceFolders": [
@@ -48,6 +51,10 @@
     {
       "name": "(Lib) graphql",
       "path": "../packages/projen-graphql"
+    },
+    {
+      "name": "(Lib) nextjs",
+      "path": "../packages/projen-nextjs"
     },
     {
       "name": "(Lib) node",
@@ -104,6 +111,14 @@
     {
       "name": "(Lib) dkershner6-sst-app",
       "path": "../packages/dkershner6-projen-sst-app"
+    },
+    {
+      "name": "(Lib) dkershner6-awscdk-nextjs-app",
+      "path": "../packages/dkershner6-projen-awscdk-nextjs-app"
+    },
+    {
+      "name": "(Lib) dkershner6-sst-nextjs-app",
+      "path": "../packages/dkershner6-projen-sst-nextjs-app"
     },
     {
       "name": "(Lib) dkershner6-nx-monorepo",
