@@ -8,6 +8,7 @@
 
 - [fileExtensions](GraphQLEslintOptions.md#fileextensions)
 - [operationsRules](GraphQLEslintOptions.md#operationsrules)
+- [taskArgs](GraphQLEslintOptions.md#taskargs)
 - [tsOverrideConfig](GraphQLEslintOptions.md#tsoverrideconfig)
 
 ## Properties
@@ -37,6 +38,14 @@ Whether or not to enable graphql-eslint operations rules in eslint.
 ```ts
 true
 ```
+
+___
+
+### taskArgs
+
+• `Optional` **taskArgs**: `string`[]
+
+Extra args to add to the ESLint task command
 
 ___
 
