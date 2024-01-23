@@ -51,10 +51,13 @@ export class Node20SstNextjsApp extends Node20SstApp {
         super(combinedOptions);
 
         // Separate tsconfig for nextjs, too different from projen to coalesce
-        this.nextjsTypescriptConfig = new TypescriptConfig(this, {
-            ...NEXTJS_TSCONFIG_OPTIONS,
-            ...(options.nextjsTsconfig ?? {}),
-        });
+        this.nextjsTypescriptConfig = new TypescriptConfig(
+            this,
+            deepMerge([
+                NEXTJS_TSCONFIG_OPTIONS,
+                options.nextjsTsconfig ?? {},
+            ]) as TypescriptConfigOptions,
+        );
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",

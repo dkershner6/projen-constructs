@@ -3,11 +3,11 @@ import { Component } from "projen";
 import {
     TypeScriptJsxMode,
     TypeScriptModuleResolution,
-    TypescriptConfig,
+    TypescriptConfigOptions,
 } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
-export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfig = {
+export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
     include: ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
     compilerOptions: {
         // required by Next.js - https://github.com/vercel/next.js/blob/canary/packages/create-next-app/templates/app/ts/tsconfig.json
