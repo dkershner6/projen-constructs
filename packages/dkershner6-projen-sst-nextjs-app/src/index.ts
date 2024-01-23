@@ -4,6 +4,7 @@ import {
     Node20ReactTypescriptConfigurer,
 } from "dkershner6-projen-react";
 import { Node20SstApp, Node20SstAppOptions } from "dkershner6-projen-sst-app";
+import { TypescriptConfig } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
@@ -19,11 +20,21 @@ export class Node20SstNextjsApp extends Node20SstApp {
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS),
                 {
-                    tsconfig: NEXTJS_TSCONFIG_OPTIONS,
+                    tsconfig: {
+                        filename: "tsconfig.publish.json",
+                    },
+                    tsconfigDev: {
+                        filename: "tsconfig.dev.json",
+                    },
                 },
                 options,
             ]) as Node20SstNextjsAppOptions,
         );
+
+        // Separate tsconfig for nextjs, too different from projen to coalesce
+        new TypescriptConfig(this, {
+            ...NEXTJS_TSCONFIG_OPTIONS,
+        });
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",
