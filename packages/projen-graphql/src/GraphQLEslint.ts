@@ -9,6 +9,11 @@ export interface GraphQLEslintOptions {
      * @default true
      */
     operationsRules?: boolean;
+
+    /**
+     * Set the override settings for the TS Eslint Override.
+     */
+    tsEslintOverride?: Partial<EslintOverride>;
 }
 
 const ESLINT_PLUGIN = "@graphql-eslint/eslint-plugin";
@@ -77,7 +82,10 @@ export class GraphQLEslint extends Component {
                         "--ext .graphql",
                     ];
 
-                    project.eslint?.addOverride(GRAPHQL_ESLINT_TS_OVERRIDE);
+                    project.eslint?.addOverride({
+                        ...GRAPHQL_ESLINT_TS_OVERRIDE,
+                        ...(options?.tsEslintOverride ?? {}),
+                    });
                     project.eslint?.addOverride(
                         GRAPHQL_ESLINT_GRAPHQL_OVERRIDE,
                     );

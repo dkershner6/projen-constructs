@@ -133,12 +133,18 @@ export const buildJestTransformIgnorePatterns = (
     ];
 };
 
-export const RECOMMENDED_JEST_CONFIG: Partial<NodeProjectOptions> = {
+export const RECOMMENDED_JEST_CONFIG: Partial<TypeScriptProjectOptions> = {
     jest: true,
     jestOptions: {
         jestConfig: {
             testEnvironment: "node",
+            testTimeout: 15000,
             transformIgnorePatterns: buildJestTransformIgnorePatterns(),
+        },
+    },
+    tsJestOptions: {
+        transformOptions: {
+            isolatedModules: true,
         },
     },
 };
