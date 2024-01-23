@@ -18,6 +18,11 @@ export interface GraphQLEslintOptions {
     operationsRules?: boolean;
 
     /**
+     * Extra args to add to the ESLint task command
+     */
+    taskArgs?: string[];
+
+    /**
      * Override some settings for the ts file graphql-eslint processor.
      */
     tsOverrideConfig?: EslintOverride;
@@ -96,6 +101,10 @@ export class GraphQLEslint extends Component {
                 const graphqlEslintTask = project.tasks.addTask(
                     "eslint:graphql",
                     {
+                        args: [
+                            `--config ${eslintConfigFilename}`,
+                            ...(options?.taskArgs ?? []),
+                        ],
                         exec: eslintTask.steps[0].exec?.replace(
                             /--ext ([.a-z,]*) /,
                             `--ext ${options?.fileExtensions?.join(",") ?? ".ts,.tsx,.graphql"} `,
