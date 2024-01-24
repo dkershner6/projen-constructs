@@ -35,6 +35,8 @@ export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
             },
         ],
         types: ["jest", "node", "@testing-library/jest-dom"],
+
+        declaration: false, // Storybook has trouble with PNPM and declaration files
     },
 };
 
