@@ -52,6 +52,7 @@ export class Node20SstNextjsApp extends Node20SstApp {
                     compilerOptions: {
                         ...PROJEN_COMPILER_OPTION_DEFAULTS,
                         ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+                        downlevelIteration: true,
                     },
                 }),
                 NEXTJS_TSCONFIG_OPTIONS,
