@@ -21,6 +21,31 @@ export const DEV_FILE_PATTERNS = [
     ...TEST_FOLDERS.map((folder) => `src/**/${folder}/**/*`),
     ...TEST_FILE_SUFFIXES.map((suffix) => `src/**/*.${suffix}.ts`),
 ];
+
+export const PROJEN_COMPILER_OPTION_DEFAULTS: TypeScriptCompilerOptions = {
+    alwaysStrict: true,
+    declaration: true,
+    esModuleInterop: true,
+    experimentalDecorators: true,
+    inlineSourceMap: true,
+    inlineSources: true,
+    lib: ["es2019"],
+    module: "CommonJS",
+    noEmitOnError: false,
+    noFallthroughCasesInSwitch: true,
+    noImplicitAny: true,
+    noImplicitReturns: true,
+    noImplicitThis: true,
+    noUnusedLocals: true,
+    noUnusedParameters: true,
+    resolveJsonModule: true,
+    strict: true,
+    strictNullChecks: true,
+    strictPropertyInitialization: true,
+    stripInternal: true,
+    target: "ES2019",
+};
+
 export const RECOMMENDED_TSCONFIG_COMPILER_OPTIONS: TypeScriptCompilerOptions =
     {
         lib: ["es2023"],
