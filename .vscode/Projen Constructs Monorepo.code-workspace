@@ -2,6 +2,7 @@
   "settings": {
     "eslint.workingDirectories": [
       "./packages/projen-cspell",
+      "./packages/projen-esm",
       "./packages/projen-github-workflows",
       "./packages/projen-graphql",
       "./packages/projen-nextjs",
@@ -43,6 +44,10 @@
     {
       "name": "(Lib) cspell",
       "path": "../packages/projen-cspell"
+    },
+    {
+      "name": "(Lib) esm",
+      "path": "../packages/projen-esm"
     },
     {
       "name": "(Lib) github-workflows",

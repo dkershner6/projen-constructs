@@ -98,7 +98,6 @@
 - [minNodeVersion](Node20AwsCdkNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20AwsCdkNextjsAppOptions.md#mutablebuild)
 - [name](Node20AwsCdkNextjsAppOptions.md#name)
-- [nextjsTsconfig](Node20AwsCdkNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20AwsCdkNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20AwsCdkNextjsAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20AwsCdkNextjsAppOptions.md#npmignoreoptions)
@@ -1746,20 +1745,6 @@ $BASEDIR
 #### Inherited from
 
 Node20AwsCdkAppOptions.name
-
-___
-
-### nextjsTsconfig
-
-• `Optional` **nextjsTsconfig**: `TypescriptConfigOptions`
-
-Configure the tsconfig file for Next.js.
-
-**`Default`**
-
-```ts
-- Recommended config by Next.js
-```
 
 ___
 

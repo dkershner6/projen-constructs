@@ -43,7 +43,6 @@
 - [libdir](Node20SstNextjsApp.md#libdir)
 - [logger](Node20SstNextjsApp.md#logger)
 - [name](Node20SstNextjsApp.md#name)
-- [nextjsTypescriptConfig](Node20SstNextjsApp.md#nextjstypescriptconfig)
 - [node](Node20SstNextjsApp.md#node)
 - [nodeVersion](Node20SstNextjsApp.md#nodeversion)
 - [npmignore](Node20SstNextjsApp.md#npmignore)
@@ -477,12 +476,6 @@ Project name.
 #### Inherited from
 
 Node20SstApp.name
-
-___
-
-### nextjsTypescriptConfig
-
-• `Readonly` **nextjsTypescriptConfig**: `TypescriptConfig`
 
 ___
 

@@ -146,6 +146,7 @@
       "packages/dkershner6-projen-sst-nextjs-app",
       "packages/dkershner6-projen-typescript",
       "packages/projen-cspell",
+      "packages/projen-esm",
       "packages/projen-github-workflows",
       "packages/projen-graphql",
       "packages/projen-nextjs",

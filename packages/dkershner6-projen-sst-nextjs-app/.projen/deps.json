@@ -132,6 +132,11 @@
       "type": "peer"
     },
     {
+      "name": "projen-esm",
+      "version": "^0.x",
+      "type": "peer"
+    },
+    {
       "name": "projen-nextjs",
       "version": "^0.x",
       "type": "peer"
