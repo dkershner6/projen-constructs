@@ -6,23 +6,27 @@ import {
 import { Node20SstApp, Node20SstAppOptions } from "dkershner6-projen-sst-app";
 import { TypescriptConfigOptions } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
-import { EsmTypescriptConfigurer } from "projen-esm";
+import { Esm, EsmOptions } from "projen-esm";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
     NextjsJest,
     NextjsTasks,
 } from "projen-nextjs";
-export interface Node20SstNextjsAppOptions extends Node20SstAppOptions {}
+export interface Node20SstNextjsAppOptions extends Node20SstAppOptions {
+    esmOptions?: EsmOptions;
+}
 
 export class Node20SstNextjsApp extends Node20SstApp {
+    public readonly esm: Esm;
+
     constructor(options: Node20SstNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
             Node20SstNextjsAppOptions,
             "defaultReleaseBranch" | "cdkVersion" | "name"
         > = {
-            tsconfig: deepMerge([
-                deepClone(NEXTJS_TSCONFIG_OPTIONS),
+            tsconfigDev: deepMerge([
+                { fileName: "tsconfig.dev.json" },
                 options.tsconfig ?? {},
             ]) as TypescriptConfigOptions,
         };
@@ -37,7 +41,16 @@ export class Node20SstNextjsApp extends Node20SstApp {
 
         this.gitignore.exclude(".next", "out");
 
-        new EsmTypescriptConfigurer(this);
+        this.esm = new Esm(this, {
+            ...options.esmOptions,
+            tsconfig: deepMerge([
+                deepClone(NEXTJS_TSCONFIG_OPTIONS),
+                {
+                    ...NEXTJS_TSCONFIG_OPTIONS,
+                    ...(options?.esmOptions?.tsconfig ?? {}),
+                },
+            ]) as TypescriptConfigOptions,
+        });
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",

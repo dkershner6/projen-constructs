@@ -69,6 +69,7 @@
 - [entrypointTypes](Node20AwsCdkNextjsAppOptions.md#entrypointtypes)
 - [eslint](Node20AwsCdkNextjsAppOptions.md#eslint)
 - [eslintOptions](Node20AwsCdkNextjsAppOptions.md#eslintoptions)
+- [esmOptions](Node20AwsCdkNextjsAppOptions.md#esmoptions)
 - [experimentalIntegRunner](Node20AwsCdkNextjsAppOptions.md#experimentalintegrunner)
 - [featureFlags](Node20AwsCdkNextjsAppOptions.md#featureflags)
 - [gitIgnoreOptions](Node20AwsCdkNextjsAppOptions.md#gitignoreoptions)
@@ -1229,6 +1230,12 @@ Eslint options
 #### Inherited from
 
 Node20AwsCdkAppOptions.eslintOptions
+
+___
+
+### esmOptions
+
+• `Optional` **esmOptions**: `EsmOptions`
 
 ___
 

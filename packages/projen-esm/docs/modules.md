@@ -6,4 +6,8 @@
 
 ### Classes
 
-- [EsmTypescriptConfigurer](classes/EsmTypescriptConfigurer.md)
+- [Esm](classes/Esm.md)
+
+### Interfaces
+
+- [EsmOptions](interfaces/EsmOptions.md)

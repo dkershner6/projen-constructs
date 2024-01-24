@@ -33,6 +33,7 @@
 - [docgen](Node20AwsCdkNextjsApp.md#docgen)
 - [docsDirectory](Node20AwsCdkNextjsApp.md#docsdirectory)
 - [eslint](Node20AwsCdkNextjsApp.md#eslint)
+- [esm](Node20AwsCdkNextjsApp.md#esm)
 - [gitattributes](Node20AwsCdkNextjsApp.md#gitattributes)
 - [github](Node20AwsCdkNextjsApp.md#github)
 - [gitignore](Node20AwsCdkNextjsApp.md#gitignore)
@@ -349,6 +350,12 @@ ___
 #### Inherited from
 
 Node20AwsCdkApp.eslint
+
+___
+
+### esm
+
+• `Readonly` **esm**: `Esm`
 
 ___
 
