@@ -99,6 +99,12 @@ export class NextjsTasks extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
+        project.addTask("clean-tsc", {
+            description:
+                "Clean up the TypeScript incremental compilation cache",
+            exec: "rm *.tsbuildinfo",
+        });
+
         project.addTask("dev", {
             description: "Start Next.js development server",
             exec: "next dev",
