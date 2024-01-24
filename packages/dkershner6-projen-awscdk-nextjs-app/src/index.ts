@@ -7,6 +7,10 @@ import {
     RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS,
     Node20ReactTypescriptConfigurer,
 } from "dkershner6-projen-react";
+import {
+    PROJEN_COMPILER_OPTION_DEFAULTS,
+    RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+} from "dkershner6-projen-typescript";
 import { TypescriptConfigOptions } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
 import { Esm, EsmOptions } from "projen-esm";
@@ -48,11 +52,14 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
         this.esm = new Esm(this, {
             ...(options?.esmOptions ?? {}),
             tsconfig: deepMerge([
-                deepClone(NEXTJS_TSCONFIG_OPTIONS),
-                {
-                    ...NEXTJS_TSCONFIG_OPTIONS,
-                    ...(options?.esmOptions?.tsconfig ?? {}),
-                },
+                deepClone({
+                    compilerOptions: {
+                        ...PROJEN_COMPILER_OPTION_DEFAULTS,
+                        ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+                    },
+                }),
+                NEXTJS_TSCONFIG_OPTIONS,
+                options?.esmOptions?.tsconfig ?? {},
             ]) as TypescriptConfigOptions,
         });
 

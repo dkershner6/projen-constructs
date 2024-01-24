@@ -4,6 +4,10 @@ import {
     Node20ReactTypescriptConfigurer,
 } from "dkershner6-projen-react";
 import { Node20SstApp, Node20SstAppOptions } from "dkershner6-projen-sst-app";
+import {
+    PROJEN_COMPILER_OPTION_DEFAULTS,
+    RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+} from "dkershner6-projen-typescript";
 import { TypescriptConfigOptions } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
 import { Esm, EsmOptions } from "projen-esm";
@@ -42,13 +46,16 @@ export class Node20SstNextjsApp extends Node20SstApp {
         this.gitignore.exclude(".next", "out");
 
         this.esm = new Esm(this, {
-            ...options.esmOptions,
+            ...(options?.esmOptions ?? {}),
             tsconfig: deepMerge([
-                deepClone(NEXTJS_TSCONFIG_OPTIONS),
-                {
-                    ...NEXTJS_TSCONFIG_OPTIONS,
-                    ...(options?.esmOptions?.tsconfig ?? {}),
-                },
+                deepClone({
+                    compilerOptions: {
+                        ...PROJEN_COMPILER_OPTION_DEFAULTS,
+                        ...RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
+                    },
+                }),
+                NEXTJS_TSCONFIG_OPTIONS,
+                options?.esmOptions?.tsconfig ?? {},
             ]) as TypescriptConfigOptions,
         });
 

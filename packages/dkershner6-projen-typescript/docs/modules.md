@@ -25,6 +25,7 @@
 ### Variables
 
 - [DEV\_FILE\_PATTERNS](modules.md#dev_file_patterns)
+- [PROJEN\_COMPILER\_OPTION\_DEFAULTS](modules.md#projen_compiler_option_defaults)
 - [PUBLISH\_FILE\_PATTERNS](modules.md#publish_file_patterns)
 - [RECOMMENDED\_ESLINT\_CONFIG](modules.md#recommended_eslint_config)
 - [RECOMMENDED\_JEST\_CONFIG](modules.md#recommended_jest_config)
@@ -46,6 +47,12 @@
 ### DEV\_FILE\_PATTERNS
 
 • `Const` **DEV\_FILE\_PATTERNS**: `string`[]
+
+___
+
+### PROJEN\_COMPILER\_OPTION\_DEFAULTS
+
+• `Const` **PROJEN\_COMPILER\_OPTION\_DEFAULTS**: `TypeScriptCompilerOptions`
 
 ___
 
