@@ -34,6 +34,7 @@
 - [docgen](Node20SstNextjsApp.md#docgen)
 - [docsDirectory](Node20SstNextjsApp.md#docsdirectory)
 - [eslint](Node20SstNextjsApp.md#eslint)
+- [esm](Node20SstNextjsApp.md#esm)
 - [gitattributes](Node20SstNextjsApp.md#gitattributes)
 - [github](Node20SstNextjsApp.md#github)
 - [gitignore](Node20SstNextjsApp.md#gitignore)
@@ -362,6 +363,12 @@ ___
 #### Inherited from
 
 Node20SstApp.eslint
+
+___
+
+### esm
+
+• `Readonly` **esm**: `Esm`
 
 ___
 

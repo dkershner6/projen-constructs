@@ -70,6 +70,7 @@
 - [entrypointTypes](Node20SstNextjsAppOptions.md#entrypointtypes)
 - [eslint](Node20SstNextjsAppOptions.md#eslint)
 - [eslintOptions](Node20SstNextjsAppOptions.md#eslintoptions)
+- [esmOptions](Node20SstNextjsAppOptions.md#esmoptions)
 - [experimentalIntegRunner](Node20SstNextjsAppOptions.md#experimentalintegrunner)
 - [featureFlags](Node20SstNextjsAppOptions.md#featureflags)
 - [gitIgnoreOptions](Node20SstNextjsAppOptions.md#gitignoreoptions)
@@ -1250,6 +1251,12 @@ Eslint options
 #### Inherited from
 
 Node20SstAppOptions.eslintOptions
+
+___
+
+### esmOptions
+
+• `Optional` **esmOptions**: `EsmOptions`
 
 ___
 
