@@ -99,7 +99,6 @@
 - [minNodeVersion](Node20SstNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20SstNextjsAppOptions.md#mutablebuild)
 - [name](Node20SstNextjsAppOptions.md#name)
-- [nextjsTsconfig](Node20SstNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20SstNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20SstNextjsAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20SstNextjsAppOptions.md#npmignoreoptions)
@@ -1767,20 +1766,6 @@ $BASEDIR
 #### Inherited from
 
 Node20SstAppOptions.name
-
-___
-
-### nextjsTsconfig
-
-• `Optional` **nextjsTsconfig**: `TypescriptConfigOptions`
-
-Configure the tsconfig file for Next.js.
-
-**`Default`**
-
-```ts
-- Recommended config by Next.js
-```
 
 ___
 

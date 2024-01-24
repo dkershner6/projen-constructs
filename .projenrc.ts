@@ -18,6 +18,12 @@ new ProjenConstructTsLib(rootProject, {
 });
 
 new ProjenConstructTsLib(rootProject, {
+    name: "projen-esm",
+    keywords: ["esm", "projen"],
+    description: "Helpers for Projen projects that use ESM.",
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "projen-github-workflows",
     keywords: ["projen", "github", "workflows", "workflow"],
     description: "Helpers for Projen projects that use GitHub Workflows.",
@@ -246,6 +252,7 @@ new ProjenConstructTsLib(rootProject, {
         "dkershner6-projen-typescript@^0.x",
         "dkershner6-projen-awscdk-core@^0.x",
         "dkershner6-projen-awscdk-app@^0.x",
+        "projen-esm@^0.x",
         "projen-nextjs@^0.x",
     ],
 });
@@ -274,6 +281,7 @@ new ProjenConstructTsLib(rootProject, {
         "dkershner6-projen-typescript@^0.x",
         "dkershner6-projen-awscdk-core@^0.x",
         "dkershner6-projen-sst-app@^0.x",
+        "projen-esm@^0.x",
         "projen-nextjs@^0.x",
         "projen-sst@^0.x",
     ],

@@ -108,37 +108,11 @@
       "type": "build"
     },
     {
-      "name": "clone-deep",
+      "name": "constructs",
       "type": "peer"
     },
     {
-      "name": "dkershner6-projen-awscdk-app",
-      "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "dkershner6-projen-awscdk-core",
-      "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "dkershner6-projen-react",
-      "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "dkershner6-projen-typescript",
-      "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "projen-esm",
-      "version": "^0.x",
-      "type": "peer"
-    },
-    {
-      "name": "projen-nextjs",
-      "version": "^0.x",
+      "name": "projen",
       "type": "peer"
     }
   ],

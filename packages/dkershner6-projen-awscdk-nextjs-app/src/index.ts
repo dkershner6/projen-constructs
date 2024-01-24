@@ -7,11 +7,9 @@ import {
     RECOMMENDED_NODE_20_REACT_PROJECT_OPTIONS,
     Node20ReactTypescriptConfigurer,
 } from "dkershner6-projen-react";
-import {
-    TypescriptConfig,
-    TypescriptConfigOptions,
-} from "projen/lib/javascript";
+import { TypescriptConfigOptions } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
+import { EsmTypescriptConfigurer } from "projen-esm";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
@@ -19,31 +17,18 @@ import {
     NextjsTasks,
 } from "projen-nextjs";
 
-export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
-    /**
-     * Configure the tsconfig file for Next.js.
-     *
-     * @default - Recommended config by Next.js
-     */
-    nextjsTsconfig?: TypescriptConfigOptions;
-}
+export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {}
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
-    public readonly nextjsTypescriptConfig: TypescriptConfig;
-
     constructor(options: Node20AwsCdkNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
             Node20AwsCdkNextjsAppOptions,
             "defaultReleaseBranch" | "cdkVersion" | "name"
         > = {
-            tsconfig: {
-                fileName: "tsconfig.publish.json",
-                compilerOptions: {},
-            },
-            tsconfigDev: {
-                fileName: "tsconfig.dev.json",
-                compilerOptions: {},
-            },
+            tsconfig: deepMerge([
+                deepClone(NEXTJS_TSCONFIG_OPTIONS),
+                options.tsconfig ?? {},
+            ]) as TypescriptConfigOptions,
         };
 
         const combinedOptions = deepMerge([
@@ -56,14 +41,7 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
 
         this.gitignore.exclude(".next", "out");
 
-        // Separate tsconfig for nextjs, too different from projen to coalesce
-        this.nextjsTypescriptConfig = new TypescriptConfig(
-            this,
-            deepMerge([
-                NEXTJS_TSCONFIG_OPTIONS,
-                options.nextjsTsconfig ?? {},
-            ]) as TypescriptConfigOptions,
-        );
+        new EsmTypescriptConfigurer(this);
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",
