@@ -33,6 +33,7 @@ export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
                 name: "next",
             },
         ],
+        types: ["jest", "node", "@testing-library/jest-dom"],
     },
 };
 
@@ -86,5 +87,25 @@ export class NextjsJest extends Component {
             // @ts-expect-error - Readonly violation
             this.project.jest.config = newJestConfig;
         }
+    }
+}
+
+export class NextjsTasks extends Component {
+    declare readonly project: TypeScriptProject;
+
+    constructor(project: TypeScriptProject) {
+        super(project);
+
+        project.addTask("dev", {
+            description: "Start Next.js development server",
+            exec: "next dev",
+        });
+
+        project.compileTask.exec("next build");
+
+        project.addTask("start", {
+            description: "Start Next.js production server",
+            exec: "next start",
+        });
     }
 }

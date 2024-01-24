@@ -13,6 +13,7 @@ import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
     NextjsJest,
+    NextjsTasks,
 } from "projen-nextjs";
 
 export interface Node20SstNextjsAppOptions extends Node20SstAppOptions {
@@ -64,5 +65,6 @@ export class Node20SstNextjsApp extends Node20SstApp {
         });
         new NextjsEslint(this);
         new NextjsJest(this);
+        new NextjsTasks(this);
     }
 }

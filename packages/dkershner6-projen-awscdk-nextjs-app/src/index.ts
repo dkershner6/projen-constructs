@@ -16,6 +16,7 @@ import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
     NextjsJest,
+    NextjsTasks,
 } from "projen-nextjs";
 
 export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
@@ -67,5 +68,6 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
         });
         new NextjsEslint(this);
         new NextjsJest(this);
+        new NextjsTasks(this);
     }
 }

@@ -8,6 +8,7 @@
 
 - [NextjsEslint](classes/NextjsEslint.md)
 - [NextjsJest](classes/NextjsJest.md)
+- [NextjsTasks](classes/NextjsTasks.md)
 
 ### Interfaces
 
