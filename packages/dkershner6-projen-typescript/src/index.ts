@@ -252,6 +252,7 @@ export class EslintConfig extends Component {
                 "warn",
                 { allow: ["debug", "info", "warn", "error"] },
             ],
+            "no-trailing-spaces": "off", // Handled by Prettier
             "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
             "import/namespace": "off",
             "import/order": [
