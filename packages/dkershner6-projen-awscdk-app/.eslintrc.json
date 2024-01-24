@@ -121,9 +121,7 @@
       "error",
       "always"
     ],
-    "no-trailing-spaces": [
-      "error"
-    ],
+    "no-trailing-spaces": "off",
     "dot-notation": [
       "error"
     ],
