@@ -108,9 +108,7 @@
     "key-spacing": [
       "error"
     ],
-    "no-multiple-empty-lines": [
-      "error"
-    ],
+    "no-multiple-empty-lines": "off",
     "@typescript-eslint/no-floating-promises": [
       "error"
     ],
