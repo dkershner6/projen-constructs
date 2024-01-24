@@ -54,6 +54,8 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
 
         super(combinedOptions);
 
+        this.gitignore.exclude(".next", "out");
+
         // Separate tsconfig for nextjs, too different from projen to coalesce
         this.nextjsTypescriptConfig = new TypescriptConfig(
             this,

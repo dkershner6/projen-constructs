@@ -51,6 +51,8 @@ export class Node20SstNextjsApp extends Node20SstApp {
 
         super(combinedOptions);
 
+        this.gitignore.exclude(".next", "out");
+
         // Separate tsconfig for nextjs, too different from projen to coalesce
         this.nextjsTypescriptConfig = new TypescriptConfig(
             this,
