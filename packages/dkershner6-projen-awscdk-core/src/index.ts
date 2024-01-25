@@ -26,7 +26,7 @@ export interface PublishToAwsOptions {
      * Typically a single step involved in configuring AWS credentials.
      * AKA aws-actions/configure-aws-credentials
      */
-    readonly configureAwsCredentialsJobSteps: JobStep[];
+    readonly configureAwsCredentialsJobSteps?: JobStep[];
 
     /**
      * Additional configuration for the deploy job step.
