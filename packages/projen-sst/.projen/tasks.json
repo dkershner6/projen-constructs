@@ -47,6 +47,15 @@
         }
       ]
     },
+    "clean-compile": {
+      "name": "clean-compile",
+      "description": "Clean up the compiled output",
+      "steps": [
+        {
+          "exec": "rm -rf lib && rm -rf dist"
+        }
+      ]
+    },
     "compile": {
       "name": "compile",
       "description": "Only compile",

@@ -42,6 +42,15 @@
         }
       ]
     },
+    "clean-compile": {
+      "name": "clean-compile",
+      "description": "Clean up the compiled output",
+      "steps": [
+        {
+          "exec": "rm -rf lib && rm -rf dist"
+        }
+      ]
+    },
     "clean-modules": {
       "name": "clean-modules",
       "description": "Delete all node_modules folders",
