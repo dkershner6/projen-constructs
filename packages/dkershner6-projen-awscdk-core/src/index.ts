@@ -105,14 +105,15 @@ export class AwsAppPublisher extends Component {
         project: Project,
         branchName?: string,
     ): string {
+        const branchNameToUse = branchName ? `-${branchName}` : "";
+
         // Subprojects
         if (project.parent) {
-            const branchNameToUse = branchName ? `-${branchName}` : "";
             return `${base}${branchNameToUse}_${fileSafeName(project.name)}`;
         }
 
-        // root project doesn't get a suffix
-        return base;
+        // root project doesn't get a project suffix
+        return `${base}${branchNameToUse}`;
     }
 
     constructor(
@@ -140,7 +141,6 @@ export class AwsAppPublisher extends Component {
     }
     protected addPublishToAwsJob(branchName?: string): void {
         const taskSuffix = branchName ? `:${branchName}` : "";
-        const workflowNameSuffix = branchName ? `-${branchName}` : "";
 
         const deployTask = this.project.tasks.tryFind(`deploy`);
         if (deployTask) {
@@ -162,11 +162,12 @@ export class AwsAppPublisher extends Component {
                     "release",
                     this.project,
                     branchName,
-                )}${workflowNameSuffix}`,
+                )}`,
             );
             if (releaseWorkflow) {
+                const jobNameSuffix = branchName ? `-${branchName}` : "";
                 releaseWorkflow.addJob(
-                    `release_aws${workflowNameSuffix}`,
+                    `release_aws${jobNameSuffix}`,
                     this.buildPublishToAwsJob(deployTask, branchName),
                 );
             }
