@@ -365,6 +365,16 @@ export class DKTasks extends Component {
             project.testTask.spawn(typeCheckTask);
             project.testTask.spawn(unitTestTask);
         }
+
+        // Compile
+        const cleanCompileTask =
+            project.tasks.tryFind("clean-compile") ??
+            project.tasks.addTask("clean-compile", {
+                description: "Clean up the compiled output",
+            });
+        cleanCompileTask.exec(
+            `rm -rf ${project.libdir} && rm -rf ${project.artifactsDirectory}`,
+        );
     }
 }
 

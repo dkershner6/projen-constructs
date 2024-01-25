@@ -159,6 +159,13 @@ export class Node20SstApp extends SstTypescriptApp {
                 }
             }
         }
+
+        const cleanCompileTask =
+            this.tasks.tryFind("clean-compile") ??
+            this.tasks.addTask("clean-compile", {
+                description: "Clean up the compiled output",
+            });
+        cleanCompileTask.exec(`rm -rf ${this.sstConfig.sstOut}`);
     }
 
     public buildPublishToAwsJob(

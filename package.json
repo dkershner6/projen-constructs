@@ -4,6 +4,7 @@
     "build": "pnpm exec projen build",
     "build:skip-cache": "pnpm exec projen build:skip-cache",
     "ci": "pnpm exec projen ci",
+    "clean-compile": "pnpm exec projen clean-compile",
     "clean-modules": "pnpm exec projen clean-modules",
     "clobber": "pnpm exec projen clobber",
     "compile": "pnpm exec projen compile",

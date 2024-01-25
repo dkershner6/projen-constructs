@@ -99,6 +99,15 @@ export class NextjsTasks extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
+        const cleanCompileTask =
+            project.tasks.tryFind("clean-compile") ??
+            project.addTask("clean-compile", {
+                description: "Clean up the compiled output",
+            });
+        cleanCompileTask.exec(
+            "rm -rf .next && rm -rf out && rm -rf .open-next",
+        );
+
         project.addTask("clean-tsc", {
             description:
                 "Clean up the TypeScript incremental compilation cache",

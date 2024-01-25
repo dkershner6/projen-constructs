@@ -112,6 +112,7 @@ const PROJEN_AND_THIS_MONOREPO_WORDS = [
     "jsii",
     "kershner",
     "lcov",
+    "libdir",
     "nextjs",
     "npmignore",
     "outdir",

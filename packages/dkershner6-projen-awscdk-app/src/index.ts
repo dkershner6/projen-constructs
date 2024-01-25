@@ -93,6 +93,13 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
 
             new AwsAppPublisher(this, publishToAwsOptions);
         }
+
+        const cleanCompileTask =
+            this.tasks.tryFind("clean-compile") ??
+            this.tasks.addTask("clean-compile", {
+                description: "Clean up the compiled output",
+            });
+        cleanCompileTask.exec(`rm -rf ${this.cdkConfig.cdkout}`);
     }
 
     private makeDeployAndSynthTasksNotRequireApproval(): void {

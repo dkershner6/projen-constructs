@@ -5,6 +5,7 @@
     "build": "npx projen build",
     "bump": "npx projen bump",
     "ci": "npx projen ci",
+    "clean-compile": "npx projen clean-compile",
     "compile": "npx projen compile",
     "default": "npx projen default",
     "docgen": "npx projen docgen",
