@@ -203,7 +203,6 @@ export class Node20SstApp extends SstTypescriptApp {
                     : undefined,
             steps: [
                 WorkflowSteps.checkout(),
-                ...this.workflowBootstrapSteps,
                 ...this.renderWorkflowSetup({
                     installStepConfiguration: {
                         workingDirectory: ".",
