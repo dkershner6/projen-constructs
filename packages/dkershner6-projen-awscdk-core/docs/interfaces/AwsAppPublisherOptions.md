@@ -35,7 +35,7 @@ ___
 
 ### configureAwsCredentialsJobSteps
 
-• `Readonly` **configureAwsCredentialsJobSteps**: `JobStep`[]
+• `Optional` `Readonly` **configureAwsCredentialsJobSteps**: `JobStep`[]
 
 Typically a single step involved in configuring AWS credentials.
 AKA aws-actions/configure-aws-credentials

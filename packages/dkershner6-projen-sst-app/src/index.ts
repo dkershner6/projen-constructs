@@ -73,11 +73,7 @@ export class Node20SstApp extends SstTypescriptApp {
 
         // No overriding package, since SST cant use an artifact
 
-        if (
-            this.release &&
-            options.publishToAws &&
-            options.publishToAwsOptions
-        ) {
+        if (this.release && options.publishToAws) {
             const defaultReleaseWorkflow = (
                 this.root as GitHubProject
             )?.github?.tryFindWorkflow(

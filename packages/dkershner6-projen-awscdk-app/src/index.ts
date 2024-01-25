@@ -70,13 +70,9 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
             this.overridePackageTask();
         }
 
-        if (
-            this.release &&
-            options.publishToAws &&
-            options.publishToAwsOptions
-        ) {
+        if (this.release && options.publishToAws) {
             const publishToAwsOptions: AwsAppPublisherOptions = {
-                ...options.publishToAwsOptions,
+                ...(options.publishToAwsOptions ?? {}),
                 deployJobStepBuilder: (builderParams) =>
                     this.buildDeployToAwsJobStep(builderParams.deployTask),
                 defaultReleaseBranch: options.defaultReleaseBranch,
