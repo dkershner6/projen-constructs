@@ -65,7 +65,7 @@ export interface AwsAppPublisherOptions {
      * Typically a single step involved in configuring AWS credentials.
      * AKA aws-actions/configure-aws-credentials
      */
-    readonly configureAwsCredentialsJobSteps: JobStep[];
+    readonly configureAwsCredentialsJobSteps?: JobStep[];
 
     /**
      * A function that builds the JobStep to deploy the App.
@@ -221,7 +221,7 @@ export class AwsAppPublisher extends Component {
                         `cd ${this.project.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
                     ].join("\n"),
                 },
-                ...this.options.configureAwsCredentialsJobSteps,
+                ...(this.options.configureAwsCredentialsJobSteps ?? []),
                 this.options.deployJobStepBuilder({
                     deployTask,
                     branchName,
