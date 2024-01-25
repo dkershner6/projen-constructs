@@ -124,8 +124,7 @@ export class AwsAppPublisher extends Component {
 
         if (
             (options.autoAddJob || options.autoAddJob === undefined) &&
-            this.project.release &&
-            options.configureAwsCredentialsJobSteps
+            this.project.release
         ) {
             this.addPublishToAwsJob();
 
