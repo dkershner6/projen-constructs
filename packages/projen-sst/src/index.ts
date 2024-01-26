@@ -83,7 +83,7 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
 
         const destroyPersonalTask =
             this.tasks.tryFind("destroy:personal")?.reset() ??
-            this.tasks.addTask("destroy:local");
+            this.tasks.addTask("destroy:personal");
         destroyPersonalTask.description = "Destroy personal SST stage";
 
         destroyPersonalTask.exec(`sst remove --stage $(whoami|head -c 7)`);
