@@ -13,7 +13,7 @@ import {
 } from "dkershner6-projen-typescript";
 import { TypescriptConfigOptions } from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
-import { Esm, EsmOptions } from "projen-esm";
+import { EsmRoot, EsmRootOptions } from "projen-esm";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
@@ -22,11 +22,11 @@ import {
 } from "projen-nextjs";
 
 export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
-    esmOptions?: EsmOptions;
+    esmOptions?: EsmRootOptions;
 }
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
-    public readonly esm: Esm;
+    public readonly esm: EsmRoot;
 
     constructor(options: Node20AwsCdkNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
@@ -49,7 +49,7 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
 
         this.gitignore.exclude(".next", "out");
 
-        this.esm = new Esm(this, {
+        this.esm = new EsmRoot(this, {
             ...(options?.esmOptions ?? {}),
             tsconfig: deepMerge([
                 deepClone({

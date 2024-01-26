@@ -368,7 +368,7 @@ ___
 
 ### esm
 
-• `Readonly` **esm**: `Esm`
+• `Readonly` **esm**: `EsmRoot`
 
 ___
 

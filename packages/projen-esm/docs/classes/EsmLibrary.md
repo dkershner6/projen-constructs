@@ -1,52 +1,50 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / Esm
+[projen-esm](../README.md) / [Exports](../modules.md) / EsmLibrary
 
-# Class: Esm
+# Class: EsmLibrary
 
-Adds ESM support to a projen project.
+Adds ESM support and linting to a projen TypeScript project.
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`Esm`**
+  ↳ **`EsmLibrary`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Esm.md#constructor)
+- [constructor](EsmLibrary.md#constructor)
 
 ### Properties
 
-- [node](Esm.md#node)
-- [project](Esm.md#project)
-- [tsconfig](Esm.md#tsconfig)
+- [node](EsmLibrary.md#node)
+- [project](EsmLibrary.md#project)
 
 ### Methods
 
-- [postSynthesize](Esm.md#postsynthesize)
-- [preSynthesize](Esm.md#presynthesize)
-- [synthesize](Esm.md#synthesize)
-- [toString](Esm.md#tostring)
-- [isComponent](Esm.md#iscomponent)
-- [isConstruct](Esm.md#isconstruct)
+- [postSynthesize](EsmLibrary.md#postsynthesize)
+- [preSynthesize](EsmLibrary.md#presynthesize)
+- [synthesize](EsmLibrary.md#synthesize)
+- [toString](EsmLibrary.md#tostring)
+- [isComponent](EsmLibrary.md#iscomponent)
+- [isConstruct](EsmLibrary.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new Esm**(`project`, `options?`): [`Esm`](Esm.md)
+• **new EsmLibrary**(`project`): [`EsmLibrary`](EsmLibrary.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
-| `options` | [`EsmOptions`](../interfaces/EsmOptions.md) |
 
 #### Returns
 
-[`Esm`](Esm.md)
+[`EsmLibrary`](EsmLibrary.md)
 
 #### Overrides
 
@@ -73,12 +71,6 @@ ___
 #### Overrides
 
 Component.project
-
-___
-
-### tsconfig
-
-• **tsconfig**: `TypescriptConfig`
 
 ## Methods
 
