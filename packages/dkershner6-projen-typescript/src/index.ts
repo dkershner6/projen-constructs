@@ -198,6 +198,9 @@ export class DKBugFixes extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
+        // Why not? Always true.
+        project.package.addField("sideEffects", false);
+
         // DevDeps (doesn't work in config)
         project.addDevDeps("@types/clone-deep", "clone-deep");
 
