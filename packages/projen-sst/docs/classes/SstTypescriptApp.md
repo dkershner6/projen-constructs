@@ -116,6 +116,7 @@
 - [addTestCommand](SstTypescriptApp.md#addtestcommand)
 - [addTip](SstTypescriptApp.md#addtip)
 - [annotateGenerated](SstTypescriptApp.md#annotategenerated)
+- [createPersonalTasks](SstTypescriptApp.md#createpersonaltasks)
 - [createTasksForBranch](SstTypescriptApp.md#createtasksforbranch)
 - [hasScript](SstTypescriptApp.md#hasscript)
 - [overrideTasks](SstTypescriptApp.md#overridetasks)
@@ -1529,6 +1530,16 @@ https://github.com/github/linguist/blob/master/docs/overrides.md
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptApp.annotateGenerated
+
+___
+
+### createPersonalTasks
+
+▸ **createPersonalTasks**(): `void`
+
+#### Returns
+
+`void`
 
 ___
 

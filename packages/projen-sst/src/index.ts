@@ -55,6 +55,7 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
         this.addDevDeps(`sst@${this.sstVersion}`);
 
         this.addIgnores();
+        this.createPersonalTasks();
         this.overrideTasks();
 
         if (options.sampleCode) {
@@ -67,6 +68,25 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
         this.eslint?.allowDevDeps(SST_CONFIG_FILE_NAME);
         this.tsconfig?.addExclude(SST_CONFIG_FILE_NAME);
         this.tsconfigDev?.addInclude(SST_CONFIG_FILE_NAME);
+    }
+
+    private createPersonalTasks(): void {
+        const devTask =
+            this.tasks.tryFind("dev")?.reset() ?? this.tasks.addTask("dev");
+
+        devTask.description = "Start SST Dev Server for personal stage";
+        devTask.exec(`sst dev --stage $(whoami|head -c 7)`);
+
+        const startTask =
+            this.tasks.tryFind("start")?.reset() ?? this.tasks.addTask("start");
+        startTask.spawn(devTask);
+
+        const destroyPersonalTask =
+            this.tasks.tryFind("destroy:personal")?.reset() ??
+            this.tasks.addTask("destroy:local");
+        destroyPersonalTask.description = "Destroy personal SST stage";
+
+        destroyPersonalTask.exec(`sst remove --stage $(whoami|head -c 7)`);
     }
 
     private overrideTasks(): void {
