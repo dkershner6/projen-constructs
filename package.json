@@ -134,6 +134,7 @@
   },
   "types": "lib/index.d.ts",
   "private": true,
+  "sideEffects": false,
   "workspaces": {
     "packages": [
       "packages/dkershner6-projen-awscdk-app",
