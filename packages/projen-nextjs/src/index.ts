@@ -114,16 +114,16 @@ export class NextjsTasks extends Component {
             exec: "rm *.tsbuildinfo",
         });
 
-        project.addTask("dev", {
-            description: "Start Next.js development server",
-            exec: "next dev",
-        });
+        const devTask =
+            project.tasks.tryFind("dev")?.reset() ?? project.addTask("dev");
+        devTask.description = "Start Next.js development server";
+        devTask.exec("next dev");
 
         project.compileTask.exec("next build");
 
-        project.addTask("start", {
-            description: "Start Next.js production server",
-            exec: "next start",
-        });
+        const startTask =
+            project.tasks.tryFind("start")?.reset() ?? project.addTask("start");
+        startTask.description = "Start Next.js production server";
+        startTask.exec("next start");
     }
 }
