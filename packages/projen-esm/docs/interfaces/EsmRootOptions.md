@@ -1,12 +1,12 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / EsmOptions
+[projen-esm](../README.md) / [Exports](../modules.md) / EsmRootOptions
 
-# Interface: EsmOptions
+# Interface: EsmRootOptions
 
 ## Table of contents
 
 ### Properties
 
-- [tsconfig](EsmOptions.md#tsconfig)
+- [tsconfig](EsmRootOptions.md#tsconfig)
 
 ## Properties
 

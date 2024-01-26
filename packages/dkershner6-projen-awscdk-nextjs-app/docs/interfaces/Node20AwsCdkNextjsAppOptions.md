@@ -1235,7 +1235,7 @@ ___
 
 ### esmOptions
 
-• `Optional` **esmOptions**: `EsmOptions`
+• `Optional` **esmOptions**: `EsmRootOptions`
 
 ___
 
