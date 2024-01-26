@@ -22,6 +22,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             defaultReleaseBranch: "main",
             outdir: `packages/${options.name}`,
             releaseTagPrefix: `${options.name}@`,
+            publishTasks: true,
             release: true,
             releaseToNpm: true,
             releaseWorkflowSetupSteps: [
