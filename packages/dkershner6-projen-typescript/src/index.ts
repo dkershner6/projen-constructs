@@ -353,6 +353,7 @@ export class DKTasks extends Component {
                 ...(lintTaskStepArgs ?? []),
                 maxWarningsZeroArg,
             ];
+            lintTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
 
             project
                 .addTask(DKTaskName.LINT, {
