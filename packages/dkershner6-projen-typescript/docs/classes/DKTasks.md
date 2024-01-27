@@ -18,6 +18,7 @@
 
 - [node](DKTasks.md#node)
 - [project](DKTasks.md#project)
+- [IS\_NOT\_RELEASE\_CONDITION](DKTasks.md#is_not_release_condition)
 
 ### Methods
 
@@ -69,6 +70,12 @@ ___
 #### Inherited from
 
 Component.project
+
+___
+
+### IS\_NOT\_RELEASE\_CONDITION
+
+▪ `Static` `Readonly` **IS\_NOT\_RELEASE\_CONDITION**: ``"if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"``
 
 ## Methods
 

@@ -330,6 +330,8 @@ export enum DKTaskName {
 }
 
 export class DKTasks extends Component {
+    public static readonly IS_NOT_RELEASE_CONDITION = `if [ "$RELEASE" = "true" ] ; then exit 1 ; fi`;
+
     constructor(project: TypeScriptProject) {
         super(project);
 
@@ -347,20 +349,26 @@ export class DKTasks extends Component {
         if (lintTask) {
             const lintTaskStepArgs = lintTask.steps[0].args;
             // @ts-expect-error - Violating readonly
-            (lintTask.steps[0].args = [
+            lintTask.steps[0].args = [
                 ...(lintTaskStepArgs ?? []),
                 maxWarningsZeroArg,
-            ]),
-                project
-                    .addTask(DKTaskName.LINT, {
-                        description: "Alternate lint command",
-                    })
-                    .spawn(lintTask);
+            ];
+
+            project
+                .addTask(DKTaskName.LINT, {
+                    condition: DKTasks.IS_NOT_RELEASE_CONDITION,
+                    description: "Alternate lint command",
+                    receiveArgs: true,
+                })
+                .spawn(lintTask);
 
             const originalTestTaskStep = project.testTask.steps[0];
             const { exec, ...restOfTestTaskStep } = originalTestTaskStep;
 
-            const unitTestTask = project.addTask(DKTaskName.TEST_UNIT);
+            const unitTestTask = project.addTask(DKTaskName.TEST_UNIT, {
+                condition: DKTasks.IS_NOT_RELEASE_CONDITION,
+                receiveArgs: true,
+            });
             unitTestTask.exec(exec as string, { ...restOfTestTaskStep });
 
             project.testTask.reset();
@@ -378,6 +386,12 @@ export class DKTasks extends Component {
         cleanCompileTask.exec(
             `rm -rf ${project.libdir} && rm -rf ${project.artifactsDirectory}`,
         );
+
+        // Docgen
+        const docgenTask = project.tasks.tryFind("docgen");
+        if (docgenTask) {
+            docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
+        }
     }
 }
 
