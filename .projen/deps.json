@@ -91,6 +91,10 @@
       "type": "build"
     },
     {
+      "name": "nx-cloud",
+      "type": "build"
+    },
+    {
       "name": "nx",
       "version": "^16",
       "type": "build"
