@@ -198,7 +198,8 @@
         {
           "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
         }
-      ]
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "package": {
       "name": "package",
@@ -273,7 +274,8 @@
         {
           "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
         }
-      ]
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "test:watch": {
       "name": "test:watch",
