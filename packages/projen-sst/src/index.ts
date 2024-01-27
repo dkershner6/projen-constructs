@@ -71,22 +71,20 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
     }
 
     private createPersonalTasks(): void {
-        const devTask =
-            this.tasks.tryFind("dev")?.reset() ?? this.tasks.addTask("dev");
-
+        const devTask = this.tasks.tryFind("dev") ?? this.tasks.addTask("dev");
+        devTask.reset(`sst dev --stage $(whoami|head -c 7)`);
         devTask.description = "Start SST Dev Server for personal stage";
-        devTask.exec(`sst dev --stage $(whoami|head -c 7)`);
 
         const startTask =
-            this.tasks.tryFind("start")?.reset() ?? this.tasks.addTask("start");
+            this.tasks.tryFind("start") ?? this.tasks.addTask("start");
+        startTask.reset();
         startTask.spawn(devTask);
 
         const destroyPersonalTask =
-            this.tasks.tryFind("destroy:personal")?.reset() ??
+            this.tasks.tryFind("destroy:personal") ??
             this.tasks.addTask("destroy:personal");
+        destroyPersonalTask.reset(`sst remove --stage $(whoami|head -c 7)`);
         destroyPersonalTask.description = "Destroy personal SST stage";
-
-        destroyPersonalTask.exec(`sst remove --stage $(whoami|head -c 7)`);
     }
 
     private overrideTasks(): void {
