@@ -94,7 +94,8 @@
             "--max-warnings=0"
           ]
         }
-      ]
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "i": {
       "name": "i",
