@@ -53,6 +53,7 @@ junit.xml
 !/.syncpackrc.json
 .DS_Store
 !/cspell-readonly.json
+nx-cloud.env
 !/.github/workflows/release_projen-cspell.yml
 !/.github/workflows/release_projen-esm.yml
 !/.github/workflows/release_projen-github-workflows.yml

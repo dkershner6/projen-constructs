@@ -65,5 +65,6 @@ export class RootMonorepo extends MonorepoProject {
         this.nx.useNxCloud(
             "OTNiNWJlNjgtNGE5NS00YmYwLWFmYTMtOGFlODM3YTkwNWFkfHJlYWQ=",
         );
+        this.addGitIgnore("nx-cloud.env");
     }
 }
