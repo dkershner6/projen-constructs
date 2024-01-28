@@ -166,14 +166,7 @@ export class Node20SstApp extends SstTypescriptApp {
 
     public buildPublishToAwsJob(
         { deployTask, branchName }: DeployJobStepBuilderParams,
-        options: Pick<
-            AwsAppPublisherOptions,
-            | "configureAwsCredentialsJobSteps"
-            | "deployJobStepBuilder"
-            | "env"
-            | "runsOn"
-            | "runsOnGroup"
-        >,
+        options: AwsAppPublisherOptions,
     ): Job {
         const projectPathRelativeToRoot = path.relative(
             this.root.outdir,
@@ -209,10 +202,14 @@ export class Node20SstApp extends SstTypescriptApp {
                     },
                 }),
                 ...(options.configureAwsCredentialsJobSteps ?? []),
-                options.deployJobStepBuilder({
-                    deployTask,
-                    branchName,
-                }),
+                {
+                    ...options.deployJobStepBuilder({
+                        deployTask,
+                        branchName,
+                    }),
+                    ...(options?.deployJobStepConfiguration ?? {}),
+                },
+                options?.postPublishJobSteps ?? [],
             ],
         };
     }

@@ -2,6 +2,12 @@
 
 # Interface: AwsAppPublisherOptions
 
+## Hierarchy
+
+- [`PublishToAwsOptions`](PublishToAwsOptions.md)
+
+  ↳ **`AwsAppPublisherOptions`**
+
 ## Table of contents
 
 ### Properties
@@ -10,7 +16,9 @@
 - [configureAwsCredentialsJobSteps](AwsAppPublisherOptions.md#configureawscredentialsjobsteps)
 - [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
+- [deployJobStepConfiguration](AwsAppPublisherOptions.md#deployjobstepconfiguration)
 - [env](AwsAppPublisherOptions.md#env)
+- [postPublishJobSteps](AwsAppPublisherOptions.md#postpublishjobsteps)
 - [publishTasks](AwsAppPublisherOptions.md#publishtasks)
 - [runsOn](AwsAppPublisherOptions.md#runson)
 - [runsOnGroup](AwsAppPublisherOptions.md#runsongroup)
@@ -31,6 +39,10 @@ Whether or not to automatically add the job to the release workflow.
 true
 ```
 
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[autoAddJob](PublishToAwsOptions.md#autoaddjob)
+
 ___
 
 ### configureAwsCredentialsJobSteps
@@ -39,6 +51,10 @@ ___
 
 Typically a single step involved in configuring AWS credentials.
 AKA aws-actions/configure-aws-credentials
+
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[configureAwsCredentialsJobSteps](PublishToAwsOptions.md#configureawscredentialsjobsteps)
 
 ___
 
@@ -82,6 +98,18 @@ JobStep to deploy the App
 
 ___
 
+### deployJobStepConfiguration
+
+• `Optional` `Readonly` **deployJobStepConfiguration**: `JobStepConfiguration`
+
+Additional configuration for the deploy job step.
+
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[deployJobStepConfiguration](PublishToAwsOptions.md#deployjobstepconfiguration)
+
+___
+
 ### env
 
 • `Optional` `Readonly` **env**: `Record`\<`string`, `string`\>
@@ -89,6 +117,22 @@ ___
 A map of environment variables that are available to all steps in the
 job. You can also set environment variables for the entire workflow or an
 individual step.
+
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[env](PublishToAwsOptions.md#env)
+
+___
+
+### postPublishJobSteps
+
+• `Optional` `Readonly` **postPublishJobSteps**: `JobStep`[]
+
+Job steps to run after the deploy step.
+
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[postPublishJobSteps](PublishToAwsOptions.md#postpublishjobsteps)
 
 ___
 
