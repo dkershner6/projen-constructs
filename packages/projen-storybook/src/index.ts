@@ -26,6 +26,11 @@ export class Storybook extends Component {
     ) {
         super(project);
 
+        this.project.addPackageIgnore(".storybook");
+        this.project.addPackageIgnore("*.stories.tsx");
+
+        this.project.addGitIgnore(options.staticOutDir ?? "storybook-static");
+
         this.project.addDevDeps(
             "@storybook/addon-essentials",
             "@storybook/addon-interactions",
