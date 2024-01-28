@@ -39,6 +39,11 @@ export interface PublishToAwsOptions {
      * individual step.
      */
     readonly env?: Record<string, string>;
+
+    /**
+     * Job steps to run after the deploy step.
+     */
+    readonly postPublishJobSteps?: JobStep[];
 }
 
 export interface DeployJobStepBuilderParams {
@@ -53,20 +58,7 @@ export interface DeployJobStepBuilderParams {
     readonly deployTask: Task;
 }
 
-export interface AwsAppPublisherOptions {
-    /**
-     * Whether or not to automatically add the job to the release workflow.
-     *
-     * @default true
-     */
-    readonly autoAddJob?: boolean;
-
-    /**
-     * Typically a single step involved in configuring AWS credentials.
-     * AKA aws-actions/configure-aws-credentials
-     */
-    readonly configureAwsCredentialsJobSteps?: JobStep[];
-
+export interface AwsAppPublisherOptions extends PublishToAwsOptions {
     /**
      * A function that builds the JobStep to deploy the App.
      *
@@ -79,13 +71,6 @@ export interface AwsAppPublisherOptions {
     ) => JobStep;
 
     readonly defaultReleaseBranch?: string;
-
-    /**
-     * A map of environment variables that are available to all steps in the
-     * job. You can also set environment variables for the entire workflow or an
-     * individual step.
-     */
-    readonly env?: Record<string, string>;
 
     readonly publishTasks?: boolean;
 
@@ -221,10 +206,14 @@ export class AwsAppPublisher extends Component {
                     ].join("\n"),
                 },
                 ...(this.options.configureAwsCredentialsJobSteps ?? []),
-                this.options.deployJobStepBuilder({
-                    deployTask,
-                    branchName,
-                }),
+                {
+                    ...this.options.deployJobStepBuilder({
+                        deployTask,
+                        branchName,
+                    }),
+                    ...(this.options.deployJobStepConfiguration ?? {}),
+                },
+                ...(this.options.postPublishJobSteps ?? []),
             ],
         };
     }
