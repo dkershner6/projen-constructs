@@ -118,7 +118,11 @@ export class NextjsTasks extends Component {
         devTask.reset("next dev");
         devTask.description = "Start Next.js development server";
 
-        project.compileTask.exec("next build");
+        const compileWebAppTask = project.tasks.addTask("compile-webapp", {
+            exec: "next build",
+            receiveArgs: true,
+        });
+        project.compileTask.spawn(compileWebAppTask);
 
         const startTask =
             project.tasks.tryFind("start") ?? project.addTask("start");

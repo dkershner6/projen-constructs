@@ -67,6 +67,8 @@ export class GraphQLEslint extends Component {
     constructor(project: TypeScriptProject, options?: GraphQLEslintOptions) {
         super(project);
 
+        project.addPackageIgnore(".graphql");
+
         if (project.eslint) {
             project.addDevDeps(ESLINT_PLUGIN);
 

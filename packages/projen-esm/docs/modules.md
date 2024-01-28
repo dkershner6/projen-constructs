@@ -11,6 +11,7 @@
 
 ### Interfaces
 
+- [EsmLibraryOptions](interfaces/EsmLibraryOptions.md)
 - [EsmRootOptions](interfaces/EsmRootOptions.md)
 
 ### Variables

@@ -25,8 +25,10 @@ Adds ESM support and linting to a projen TypeScript project.
 
 - [postSynthesize](EsmLibrary.md#postsynthesize)
 - [preSynthesize](EsmLibrary.md#presynthesize)
+- [setupEslintToEnforceImportFileExtensions](EsmLibrary.md#setupeslinttoenforceimportfileextensions)
 - [synthesize](EsmLibrary.md#synthesize)
 - [toString](EsmLibrary.md#tostring)
+- [useBabelInsteadOfTsc](EsmLibrary.md#usebabelinsteadoftsc)
 - [isComponent](EsmLibrary.md#iscomponent)
 - [isConstruct](EsmLibrary.md#isconstruct)
 
@@ -34,13 +36,14 @@ Adds ESM support and linting to a projen TypeScript project.
 
 ### constructor
 
-• **new EsmLibrary**(`project`): [`EsmLibrary`](EsmLibrary.md)
+• **new EsmLibrary**(`project`, `options?`): [`EsmLibrary`](EsmLibrary.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
+| `options` | [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) |
 
 #### Returns
 
@@ -106,6 +109,16 @@ Component.preSynthesize
 
 ___
 
+### setupEslintToEnforceImportFileExtensions
+
+▸ **setupEslintToEnforceImportFileExtensions**(): `void`
+
+#### Returns
+
+`void`
+
+___
+
 ### synthesize
 
 ▸ **synthesize**(): `void`
@@ -135,6 +148,16 @@ Returns a string representation of this construct.
 #### Inherited from
 
 Component.toString
+
+___
+
+### useBabelInsteadOfTsc
+
+▸ **useBabelInsteadOfTsc**(): `void`
+
+#### Returns
+
+`void`
 
 ___
 
