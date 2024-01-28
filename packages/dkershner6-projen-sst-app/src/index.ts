@@ -94,12 +94,9 @@ export class Node20SstApp extends SstTypescriptApp {
                                 deployTask,
                             },
                             {
-                                configureAwsCredentialsJobSteps:
-                                    options.publishToAwsOptions
-                                        ?.configureAwsCredentialsJobSteps,
+                                ...(options.publishToAwsOptions ?? {}),
                                 deployJobStepBuilder: (builderParams) =>
                                     this.buildDeployToAwsJobStep(builderParams),
-                                env: options.publishToAwsOptions?.env,
                                 runsOn: options.workflowRunsOn,
                                 runsOnGroup: options.workflowRunsOnGroup,
                             },
@@ -135,15 +132,11 @@ export class Node20SstApp extends SstTypescriptApp {
                                             ),
                                     },
                                     {
-                                        configureAwsCredentialsJobSteps:
-                                            options.publishToAwsOptions
-                                                ?.configureAwsCredentialsJobSteps,
-
+                                        ...(options.publishToAwsOptions ?? {}),
                                         deployJobStepBuilder: (builderParams) =>
                                             this.buildDeployToAwsJobStep(
                                                 builderParams,
                                             ),
-                                        env: options.publishToAwsOptions?.env,
                                         runsOn: options.workflowRunsOn,
                                         runsOnGroup:
                                             options.workflowRunsOnGroup,
@@ -209,7 +202,7 @@ export class Node20SstApp extends SstTypescriptApp {
                     }),
                     ...(options?.deployJobStepConfiguration ?? {}),
                 },
-                options?.postPublishJobSteps ?? [],
+                ...(options?.postPublishJobSteps ?? []),
             ],
         };
     }
