@@ -114,7 +114,7 @@ export class EsmLibrary extends Component {
             this.project.tasks.tryFind("watch") ??
             this.project.addTask("watch");
         watch.reset();
-        watch.spawn(compileTask, { args: ["--watch"] });
+        watch.spawn(compileBabelTask, { args: ["--watch"] });
 
         this.babelConfigFile = new BabelConfigFile(
             this.project,
