@@ -1,9 +1,5 @@
 import { Component, JsonFile } from "projen";
-import {
-    TypeScriptModuleResolution,
-    TypescriptConfig,
-    TypescriptConfigOptions,
-} from "projen/lib/javascript";
+import { TypeScriptModuleResolution } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 
 export const TS_WITH_JS = "^.+\\.[tj]sx?$";
@@ -157,33 +153,6 @@ export class EsmLibrary extends Component {
                 "error",
                 "always",
             ],
-        });
-    }
-}
-
-export interface EsmRootOptions {
-    /**
-     * ESM App specific tsconfig options.
-     * Due to conflicts between projen, things like the AWS CDK, and ESM tsconfig settings, a separate tsconfig is used for ESM Apps.
-     */
-    readonly tsconfig?: TypescriptConfigOptions;
-}
-
-/**
- * Adds ESM support to a projen Root project without breaking projen itself.
- * This is unneeded in a Monorepo, but is useful for standalone projects.
- */
-export class EsmRoot extends Component {
-    declare project: TypeScriptProject;
-
-    public tsconfig: TypescriptConfig;
-
-    constructor(project: TypeScriptProject, options: EsmRootOptions = {}) {
-        super(project);
-
-        this.tsconfig = new TypescriptConfig(project, {
-            ...(options.tsconfig ?? { compilerOptions: {} }),
-            fileName: options.tsconfig?.fileName ?? "tsconfig.esm.json",
         });
     }
 }

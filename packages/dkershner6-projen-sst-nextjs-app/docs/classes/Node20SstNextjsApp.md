@@ -34,7 +34,6 @@
 - [docgen](Node20SstNextjsApp.md#docgen)
 - [docsDirectory](Node20SstNextjsApp.md#docsdirectory)
 - [eslint](Node20SstNextjsApp.md#eslint)
-- [esm](Node20SstNextjsApp.md#esm)
 - [gitattributes](Node20SstNextjsApp.md#gitattributes)
 - [github](Node20SstNextjsApp.md#github)
 - [gitignore](Node20SstNextjsApp.md#gitignore)
@@ -44,6 +43,7 @@
 - [libdir](Node20SstNextjsApp.md#libdir)
 - [logger](Node20SstNextjsApp.md#logger)
 - [name](Node20SstNextjsApp.md#name)
+- [nextjsTsconfig](Node20SstNextjsApp.md#nextjstsconfig)
 - [node](Node20SstNextjsApp.md#node)
 - [nodeVersion](Node20SstNextjsApp.md#nodeversion)
 - [npmignore](Node20SstNextjsApp.md#npmignore)
@@ -366,12 +366,6 @@ Node20SstApp.eslint
 
 ___
 
-### esm
-
-• `Readonly` **esm**: `EsmRoot`
-
-___
-
 ### gitattributes
 
 • `Readonly` **gitattributes**: `GitAttributesFile`
@@ -483,6 +477,12 @@ Project name.
 #### Inherited from
 
 Node20SstApp.name
+
+___
+
+### nextjsTsconfig
+
+• `Readonly` **nextjsTsconfig**: `TypescriptConfig`
 
 ___
 

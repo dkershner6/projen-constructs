@@ -7,6 +7,7 @@
 ### Properties
 
 - [port](StorybookOptions.md#port)
+- [sampleCode](StorybookOptions.md#samplecode)
 - [staticOutDir](StorybookOptions.md#staticoutdir)
 
 ## Properties
@@ -21,6 +22,18 @@ The port that Storybook will run on.
 
 ```ts
 6006
+```
+
+___
+
+### sampleCode
+
+• `Optional` `Readonly` **sampleCode**: `boolean`
+
+**`Default`**
+
+```ts
+true
 ```
 
 ___

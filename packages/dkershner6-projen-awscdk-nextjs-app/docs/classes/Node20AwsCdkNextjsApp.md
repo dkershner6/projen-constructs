@@ -33,7 +33,6 @@
 - [docgen](Node20AwsCdkNextjsApp.md#docgen)
 - [docsDirectory](Node20AwsCdkNextjsApp.md#docsdirectory)
 - [eslint](Node20AwsCdkNextjsApp.md#eslint)
-- [esm](Node20AwsCdkNextjsApp.md#esm)
 - [gitattributes](Node20AwsCdkNextjsApp.md#gitattributes)
 - [github](Node20AwsCdkNextjsApp.md#github)
 - [gitignore](Node20AwsCdkNextjsApp.md#gitignore)
@@ -43,6 +42,7 @@
 - [libdir](Node20AwsCdkNextjsApp.md#libdir)
 - [logger](Node20AwsCdkNextjsApp.md#logger)
 - [name](Node20AwsCdkNextjsApp.md#name)
+- [nextjsTsconfig](Node20AwsCdkNextjsApp.md#nextjstsconfig)
 - [node](Node20AwsCdkNextjsApp.md#node)
 - [nodeVersion](Node20AwsCdkNextjsApp.md#nodeversion)
 - [npmignore](Node20AwsCdkNextjsApp.md#npmignore)
@@ -353,12 +353,6 @@ Node20AwsCdkApp.eslint
 
 ___
 
-### esm
-
-• `Readonly` **esm**: `EsmRoot`
-
-___
-
 ### gitattributes
 
 • `Readonly` **gitattributes**: `GitAttributesFile`
@@ -470,6 +464,12 @@ Project name.
 #### Inherited from
 
 Node20AwsCdkApp.name
+
+___
+
+### nextjsTsconfig
+
+• `Readonly` **nextjsTsconfig**: `TypescriptConfig`
 
 ___
 

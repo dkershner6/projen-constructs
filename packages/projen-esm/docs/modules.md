@@ -7,12 +7,10 @@
 ### Classes
 
 - [EsmLibrary](classes/EsmLibrary.md)
-- [EsmRoot](classes/EsmRoot.md)
 
 ### Interfaces
 
 - [EsmLibraryOptions](interfaces/EsmLibraryOptions.md)
-- [EsmRootOptions](interfaces/EsmRootOptions.md)
 
 ### Variables
 
