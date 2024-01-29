@@ -67,6 +67,16 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
                     },
                 }),
                 NEXTJS_TSCONFIG_OPTIONS,
+                {
+                    exclude: [
+                        ...(NEXTJS_TSCONFIG_OPTIONS?.exclude ?? []),
+                        ...this.tsconfigDev.exclude,
+                    ],
+                    include: [
+                        ...(NEXTJS_TSCONFIG_OPTIONS?.include ?? []),
+                        ...this.tsconfigDev.include,
+                    ],
+                },
                 options?.nextjsTsconfig ?? {},
             ]) as TypescriptConfigOptions,
         );

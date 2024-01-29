@@ -64,6 +64,16 @@ export class Node20SstNextjsApp extends Node20SstApp {
                     },
                 }),
                 NEXTJS_TSCONFIG_OPTIONS,
+                {
+                    exclude: [
+                        ...(NEXTJS_TSCONFIG_OPTIONS?.exclude ?? []),
+                        ...this.tsconfigDev.exclude,
+                    ],
+                    include: [
+                        ...(NEXTJS_TSCONFIG_OPTIONS?.include ?? []),
+                        ...this.tsconfigDev.include,
+                    ],
+                },
                 options?.nextjsTsconfig ?? {},
             ]) as TypescriptConfigOptions,
         );
