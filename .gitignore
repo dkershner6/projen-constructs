@@ -54,6 +54,7 @@ junit.xml
 .DS_Store
 !/cspell-readonly.json
 nx-cloud.env
+!/.github/workflows/release_projen-babel.yml
 !/.github/workflows/release_projen-cspell.yml
 !/.github/workflows/release_projen-esm.yml
 !/.github/workflows/release_projen-github-workflows.yml

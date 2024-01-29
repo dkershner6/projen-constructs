@@ -1,6 +1,7 @@
-import { Component, JsonFile } from "projen";
+import { Component } from "projen";
 import { TypeScriptModuleResolution } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
+import { BabelConfigFile, BabelConfigFileOptions } from "projen-babel";
 
 export const TS_WITH_JS = "^.+\\.[tj]sx?$";
 
@@ -39,6 +40,13 @@ export interface EsmLibraryOptions {
     readonly babel?: boolean;
 
     /**
+     * Options for the babel config file.
+     *
+     * @default - Typical options for an ESM library.
+     */
+    readonly babelConfigFileOptions?: BabelConfigFileOptions;
+
+    /**
      * Whether or not to setup eslint to enforce import file extensions.
      *
      * @example import { MyComponent } from "./MyComponent.js";
@@ -52,7 +60,12 @@ export interface EsmLibraryOptions {
 export class EsmLibrary extends Component {
     declare project: TypeScriptProject;
 
-    constructor(project: TypeScriptProject, options: EsmLibraryOptions = {}) {
+    public babelConfigFile?: BabelConfigFile;
+
+    constructor(
+        project: TypeScriptProject,
+        private readonly options: EsmLibraryOptions = {},
+    ) {
         super(project);
 
         project.package.addField("type", "module");
@@ -103,45 +116,56 @@ export class EsmLibrary extends Component {
         watch.reset();
         watch.spawn(compileTask, { args: ["--watch"] });
 
-        new JsonFile(this.project, "babel.config.json", {
-            allowComments: true,
-            obj: {
-                ignore: [
-                    "**/*.stories.ts",
-                    "**/*.stories.tsx",
-                    "**/*.test.ts",
-                    "**/*.test.tsx",
-                ],
-                targets: {
-                    node: "current",
+        this.babelConfigFile = new BabelConfigFile(
+            this.project,
+            "babel.config.json",
+            {
+                ...(this.options?.babelConfigFileOptions ?? {}),
+                transformOptions: {
+                    ignore: [
+                        "**/*.stories.ts",
+                        "**/*.stories.tsx",
+                        "**/*.test.ts",
+                        "**/*.test.tsx",
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.ignore ?? []),
+                    ],
+                    targets: {
+                        node: "current",
+                        ...(this.options?.babelConfigFileOptions ?? {}),
+                    },
+                    presets: [
+                        "@babel/preset-react",
+                        [
+                            "@babel/preset-typescript",
+                            {
+                                isTSX: true,
+                                allExtensions: true,
+                            },
+                        ],
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.presets ?? []),
+                    ],
+                    plugins: [
+                        // A little specific, but shouldn't hurt anything if not used.
+                        [
+                            "babel-plugin-direct-import",
+                            {
+                                modules: [
+                                    "@mui/system",
+                                    "@mui/material",
+                                    "@mui/icons-material",
+                                ],
+                            },
+                        ],
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.plugins ?? []),
+                    ],
+                    ...(this.options?.babelConfigFileOptions
+                        ?.transformOptions ?? {}),
                 },
-                presets: [
-                    "@babel/preset-react",
-                    [
-                        "@babel/preset-typescript",
-                        {
-                            isTSX: true,
-                            allExtensions: true,
-                        },
-                    ],
-                ],
-                plugins: [
-                    // A little specific, but shouldn't hurt anything if not used.
-                    [
-                        "babel-plugin-direct-import",
-                        {
-                            modules: [
-                                "@mui/system",
-                                "@mui/material",
-                                "@mui/icons-material",
-                            ],
-                        },
-                    ],
-                ],
             },
-        });
-
-        this.project.addPackageIgnore("babel.config.json");
+        );
     }
 
     private setupEslintToEnforceImportFileExtensions(): void {

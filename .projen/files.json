@@ -16,6 +16,7 @@
     ".github/workflows/release_dkershner6-projen-sst-app.yml",
     ".github/workflows/release_dkershner6-projen-sst-nextjs-app.yml",
     ".github/workflows/release_dkershner6-projen-typescript.yml",
+    ".github/workflows/release_projen-babel.yml",
     ".github/workflows/release_projen-cspell.yml",
     ".github/workflows/release_projen-esm.yml",
     ".github/workflows/release_projen-github-workflows.yml",

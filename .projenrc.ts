@@ -12,6 +12,13 @@ import { RootMonorepo } from "./projenrc/rootMonorepo";
 const rootProject = new RootMonorepo();
 
 new ProjenConstructTsLib(rootProject, {
+    name: "projen-babel",
+    keywords: ["babel", "projen", "compile"],
+    description: "Helpers for Projen projects that use babel.",
+    devDeps: ["@babel/core", "@types/babel__core"],
+});
+
+new ProjenConstructTsLib(rootProject, {
     name: "projen-cspell",
     keywords: ["cspell", "projen", "spellchecker"],
     description: "Helpers for Projen projects that use cSpell.",
@@ -21,6 +28,7 @@ new ProjenConstructTsLib(rootProject, {
     name: "projen-esm",
     keywords: ["esm", "projen"],
     description: "Helpers for Projen projects that use ESM.",
+    peerDeps: ["projen-babel@^0.x"],
 });
 
 new ProjenConstructTsLib(rootProject, {
@@ -316,7 +324,7 @@ new VsCodeWorkspaces(rootProject, {
         }
 
         if (project instanceof ProjenConstructTsLib) {
-            return `(Lib) ${project?.name.replace("projen-", "")}`;
+            return `Lib- ${project?.name.replace("projen-", "")}`;
         }
 
         throw new Error("Unknown project type");

@@ -11,6 +11,7 @@ packages:
   - packages/dkershner6-projen-sst-app
   - packages/dkershner6-projen-sst-nextjs-app
   - packages/dkershner6-projen-typescript
+  - packages/projen-babel
   - packages/projen-cspell
   - packages/projen-esm
   - packages/projen-github-workflows

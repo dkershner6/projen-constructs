@@ -17,6 +17,7 @@
 /.github/workflows/release_dkershner6-projen-sst-app.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-sst-nextjs-app.yml linguist-generated
 /.github/workflows/release_dkershner6-projen-typescript.yml linguist-generated
+/.github/workflows/release_projen-babel.yml linguist-generated
 /.github/workflows/release_projen-cspell.yml linguist-generated
 /.github/workflows/release_projen-esm.yml linguist-generated
 /.github/workflows/release_projen-github-workflows.yml linguist-generated

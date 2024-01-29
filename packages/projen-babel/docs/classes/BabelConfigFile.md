@@ -1,67 +1,57 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / EsmLibrary
+[projen-babel](../README.md) / [Exports](../modules.md) / BabelConfigFile
 
-# Class: EsmLibrary
-
-Adds ESM support and linting to a projen TypeScript project.
+# Class: BabelConfigFile
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`EsmLibrary`**
+  ↳ **`BabelConfigFile`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](EsmLibrary.md#constructor)
+- [constructor](BabelConfigFile.md#constructor)
 
 ### Properties
 
-- [babelConfigFile](EsmLibrary.md#babelconfigfile)
-- [node](EsmLibrary.md#node)
-- [options](EsmLibrary.md#options)
-- [project](EsmLibrary.md#project)
+- [node](BabelConfigFile.md#node)
+- [project](BabelConfigFile.md#project)
+- [transformOptions](BabelConfigFile.md#transformoptions)
 
 ### Methods
 
-- [postSynthesize](EsmLibrary.md#postsynthesize)
-- [preSynthesize](EsmLibrary.md#presynthesize)
-- [setupEslintToEnforceImportFileExtensions](EsmLibrary.md#setupeslinttoenforceimportfileextensions)
-- [synthesize](EsmLibrary.md#synthesize)
-- [toString](EsmLibrary.md#tostring)
-- [useBabelInsteadOfTsc](EsmLibrary.md#usebabelinsteadoftsc)
-- [isComponent](EsmLibrary.md#iscomponent)
-- [isConstruct](EsmLibrary.md#isconstruct)
+- [postSynthesize](BabelConfigFile.md#postsynthesize)
+- [preSynthesize](BabelConfigFile.md#presynthesize)
+- [synthesize](BabelConfigFile.md#synthesize)
+- [toString](BabelConfigFile.md#tostring)
+- [isComponent](BabelConfigFile.md#iscomponent)
+- [isConstruct](BabelConfigFile.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new EsmLibrary**(`project`, `options?`): [`EsmLibrary`](EsmLibrary.md)
+• **new BabelConfigFile**(`project`, `fileName?`, `options?`): [`BabelConfigFile`](BabelConfigFile.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options` | [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `project` | `Project` | `undefined` |
+| `fileName` | `string` | `"babel.config.json"` |
+| `options` | [`BabelConfigFileOptions`](../interfaces/BabelConfigFileOptions.md) | `{}` |
 
 #### Returns
 
-[`EsmLibrary`](EsmLibrary.md)
+[`BabelConfigFile`](BabelConfigFile.md)
 
 #### Overrides
 
 Component.constructor
 
 ## Properties
-
-### babelConfigFile
-
-• `Optional` **babelConfigFile**: `BabelConfigFile`
-
-___
 
 ### node
 
@@ -75,19 +65,19 @@ Component.node
 
 ___
 
-### options
+### project
 
-• `Private` `Readonly` **options**: [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) = `{}`
+• `Readonly` **project**: `Project`
+
+#### Inherited from
+
+Component.project
 
 ___
 
-### project
+### transformOptions
 
-• **project**: `TypeScriptProject`
-
-#### Overrides
-
-Component.project
+• **transformOptions**: `TransformOptions`
 
 ## Methods
 
@@ -123,16 +113,6 @@ Component.preSynthesize
 
 ___
 
-### setupEslintToEnforceImportFileExtensions
-
-▸ **setupEslintToEnforceImportFileExtensions**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
 ### synthesize
 
 ▸ **synthesize**(): `void`
@@ -162,16 +142,6 @@ Returns a string representation of this construct.
 #### Inherited from
 
 Component.toString
-
-___
-
-### useBabelInsteadOfTsc
-
-▸ **useBabelInsteadOfTsc**(): `void`
-
-#### Returns
-
-`void`
 
 ___
 

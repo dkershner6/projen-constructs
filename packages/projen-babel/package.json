@@ -1,6 +1,6 @@
 {
-  "name": "projen-esm",
-  "description": "Helpers for Projen projects that use ESM.",
+  "name": "projen-babel",
+  "description": "Helpers for Projen projects that use babel.",
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
@@ -33,14 +33,16 @@
     "organization": false
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
     "@cspell/eslint-plugin": "^8.3.2",
+    "@types/babel__core": "^7.20.5",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.11",
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "clone-deep": "^4.0.1",
-    "constructs": "^10.0.0",
+    "constructs": "10.3.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -53,7 +55,6 @@
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.4",
     "projen": "0.79.3",
-    "projen-babel": "0.0.0",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
     "typedoc": "^0.25.7",
@@ -61,10 +62,12 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "projen-babel": "^0.x"
+    "constructs": "^10.3.0",
+    "projen": "^0.79.3"
   },
   "keywords": [
-    "esm",
+    "babel",
+    "compile",
     "projen"
   ],
   "engines": {
