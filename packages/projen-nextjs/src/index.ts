@@ -9,7 +9,7 @@ import { TypeScriptProject } from "projen/lib/typescript";
 
 export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
     fileName: "tsconfig.json",
-    include: ["**/*.ts", "**/*.tsx", "next-env.d.ts", ".next/types/**/*.ts"],
+    include: ["next-env.d.ts", ".next/types/**/*.ts"],
     compilerOptions: {
         // required by Next.js - https://github.com/vercel/next.js/blob/canary/packages/create-next-app/templates/app/ts/tsconfig.json
         esModuleInterop: true,
