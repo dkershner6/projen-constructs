@@ -1,6 +1,7 @@
 {
   "settings": {
     "eslint.workingDirectories": [
+      "./packages/projen-babel",
       "./packages/projen-cspell",
       "./packages/projen-esm",
       "./packages/projen-github-workflows",
@@ -42,91 +43,95 @@
       "path": ".."
     },
     {
-      "name": "(Lib) cspell",
+      "name": "Lib- babel",
+      "path": "../packages/projen-babel"
+    },
+    {
+      "name": "Lib- cspell",
       "path": "../packages/projen-cspell"
     },
     {
-      "name": "(Lib) esm",
+      "name": "Lib- esm",
       "path": "../packages/projen-esm"
     },
     {
-      "name": "(Lib) github-workflows",
+      "name": "Lib- github-workflows",
       "path": "../packages/projen-github-workflows"
     },
     {
-      "name": "(Lib) graphql",
+      "name": "Lib- graphql",
       "path": "../packages/projen-graphql"
     },
     {
-      "name": "(Lib) nextjs",
+      "name": "Lib- nextjs",
       "path": "../packages/projen-nextjs"
     },
     {
-      "name": "(Lib) node",
+      "name": "Lib- node",
       "path": "../packages/projen-node"
     },
     {
-      "name": "(Lib) nvm",
+      "name": "Lib- nvm",
       "path": "../packages/projen-nvm"
     },
     {
-      "name": "(Lib) sonar",
+      "name": "Lib- sonar",
       "path": "../packages/projen-sonar"
     },
     {
-      "name": "(Lib) sst",
+      "name": "Lib- sst",
       "path": "../packages/projen-sst"
     },
     {
-      "name": "(Lib) storybook",
+      "name": "Lib- storybook",
       "path": "../packages/projen-storybook"
     },
     {
-      "name": "(Lib) typedoc",
+      "name": "Lib- typedoc",
       "path": "../packages/projen-typedoc"
     },
     {
-      "name": "(Lib) vscode-workspaces",
+      "name": "Lib- vscode-workspaces",
       "path": "../packages/projen-vscode-workspaces"
     },
     {
-      "name": "(Lib) dkershner6-typescript",
+      "name": "Lib- dkershner6-typescript",
       "path": "../packages/dkershner6-projen-typescript"
     },
     {
-      "name": "(Lib) dkershner6-react",
+      "name": "Lib- dkershner6-react",
       "path": "../packages/dkershner6-projen-react"
     },
     {
-      "name": "(Lib) dkershner6-awscdk-construct-library",
+      "name": "Lib- dkershner6-awscdk-construct-library",
       "path": "../packages/dkershner6-projen-awscdk-construct-library"
     },
     {
-      "name": "(Lib) dkershner6-github-actions",
+      "name": "Lib- dkershner6-github-actions",
       "path": "../packages/dkershner6-projen-github-actions"
     },
     {
-      "name": "(Lib) dkershner6-awscdk-core",
+      "name": "Lib- dkershner6-awscdk-core",
       "path": "../packages/dkershner6-projen-awscdk-core"
     },
     {
-      "name": "(Lib) dkershner6-awscdk-app",
+      "name": "Lib- dkershner6-awscdk-app",
       "path": "../packages/dkershner6-projen-awscdk-app"
     },
     {
-      "name": "(Lib) dkershner6-sst-app",
+      "name": "Lib- dkershner6-sst-app",
       "path": "../packages/dkershner6-projen-sst-app"
     },
     {
-      "name": "(Lib) dkershner6-awscdk-nextjs-app",
+      "name": "Lib- dkershner6-awscdk-nextjs-app",
       "path": "../packages/dkershner6-projen-awscdk-nextjs-app"
     },
     {
-      "name": "(Lib) dkershner6-sst-nextjs-app",
+      "name": "Lib- dkershner6-sst-nextjs-app",
       "path": "../packages/dkershner6-projen-sst-nextjs-app"
     },
     {
-      "name": "(Lib) dkershner6-nx-monorepo",
+      "name": "Lib- dkershner6-nx-monorepo",
       "path": "../packages/dkershner6-projen-nx-monorepo"
     }
   ],

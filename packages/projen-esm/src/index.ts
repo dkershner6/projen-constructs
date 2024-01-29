@@ -1,10 +1,7 @@
-import { Component, JsonFile } from "projen";
-import {
-    TypeScriptModuleResolution,
-    TypescriptConfig,
-    TypescriptConfigOptions,
-} from "projen/lib/javascript";
+import { Component } from "projen";
+import { TypeScriptModuleResolution } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
+import { BabelConfigFile, BabelConfigFileOptions } from "projen-babel";
 
 export const TS_WITH_JS = "^.+\\.[tj]sx?$";
 
@@ -43,6 +40,13 @@ export interface EsmLibraryOptions {
     readonly babel?: boolean;
 
     /**
+     * Options for the babel config file.
+     *
+     * @default - Typical options for an ESM library.
+     */
+    readonly babelConfigFileOptions?: BabelConfigFileOptions;
+
+    /**
      * Whether or not to setup eslint to enforce import file extensions.
      *
      * @example import { MyComponent } from "./MyComponent.js";
@@ -56,7 +60,12 @@ export interface EsmLibraryOptions {
 export class EsmLibrary extends Component {
     declare project: TypeScriptProject;
 
-    constructor(project: TypeScriptProject, options: EsmLibraryOptions = {}) {
+    public babelConfigFile?: BabelConfigFile;
+
+    constructor(
+        project: TypeScriptProject,
+        private readonly options: EsmLibraryOptions = {},
+    ) {
         super(project);
 
         project.package.addField("type", "module");
@@ -81,55 +90,82 @@ export class EsmLibrary extends Component {
             "babel-plugin-direct-import",
         );
 
-        const compileTask = this.project.tasks.tryFind("compile");
-        if (compileTask) {
-            compileTask.reset(
-                `babel src --out-dir ${this.project.libdir} --extensions ".ts,.tsx"`,
-            );
-            compileTask.exec(
-                `tsc -p ${this.project.tsconfig?.fileName} --emitDeclarationOnly`,
-            );
-        }
-
-        new JsonFile(this.project, "babel.config.json", {
-            allowComments: true,
-            obj: {
-                ignore: [
-                    "**/*.stories.ts",
-                    "**/*.stories.tsx",
-                    "**/*.test.ts",
-                    "**/*.test.tsx",
-                ],
-                targets: {
-                    node: "current",
-                },
-                presets: [
-                    "@babel/preset-react",
-                    [
-                        "@babel/preset-typescript",
-                        {
-                            isTSX: true,
-                            allExtensions: true,
-                        },
-                    ],
-                ],
-                plugins: [
-                    // A little specific, but shouldn't hurt anything if not used.
-                    [
-                        "babel-plugin-direct-import",
-                        {
-                            modules: [
-                                "@mui/system",
-                                "@mui/material",
-                                "@mui/icons-material",
-                            ],
-                        },
-                    ],
-                ],
-            },
+        const compileBabelTask = this.project.addTask("compile:babel", {
+            description: "Compile TypeScript to JavaScript using Babel",
+            exec: `babel src --out-dir ${this.project.libdir} --extensions ".ts,.tsx"`,
+            receiveArgs: true,
         });
 
-        this.project.addPackageIgnore("babel.config.json");
+        const compileTypesTask = this.project.addTask("compile:types", {
+            description: "Compile TypeScript types only",
+            exec: `tsc -p ${this.project.tsconfig?.fileName} --emitDeclarationOnly`,
+            receiveArgs: true,
+        });
+
+        const compileTask =
+            this.project.tasks.tryFind("compile") ??
+            this.project.addTask("compile");
+
+        compileTask.reset();
+        compileTask.spawn(compileBabelTask);
+        compileTask.spawn(compileTypesTask);
+
+        const watch =
+            this.project.tasks.tryFind("watch") ??
+            this.project.addTask("watch");
+        watch.reset();
+        watch.spawn(compileTask, { args: ["--watch"] });
+
+        this.babelConfigFile = new BabelConfigFile(
+            this.project,
+            "babel.config.json",
+            {
+                ...(this.options?.babelConfigFileOptions ?? {}),
+                transformOptions: {
+                    ignore: [
+                        "**/*.stories.ts",
+                        "**/*.stories.tsx",
+                        "**/*.test.ts",
+                        "**/*.test.tsx",
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.ignore ?? []),
+                    ],
+                    targets: {
+                        node: "current",
+                        ...(this.options?.babelConfigFileOptions ?? {}),
+                    },
+                    presets: [
+                        "@babel/preset-react",
+                        [
+                            "@babel/preset-typescript",
+                            {
+                                isTSX: true,
+                                allExtensions: true,
+                            },
+                        ],
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.presets ?? []),
+                    ],
+                    plugins: [
+                        // A little specific, but shouldn't hurt anything if not used.
+                        [
+                            "babel-plugin-direct-import",
+                            {
+                                modules: [
+                                    "@mui/system",
+                                    "@mui/material",
+                                    "@mui/icons-material",
+                                ],
+                            },
+                        ],
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.plugins ?? []),
+                    ],
+                    ...(this.options?.babelConfigFileOptions
+                        ?.transformOptions ?? {}),
+                },
+            },
+        );
     }
 
     private setupEslintToEnforceImportFileExtensions(): void {
@@ -141,33 +177,6 @@ export class EsmLibrary extends Component {
                 "error",
                 "always",
             ],
-        });
-    }
-}
-
-export interface EsmRootOptions {
-    /**
-     * ESM App specific tsconfig options.
-     * Due to conflicts between projen, things like the AWS CDK, and ESM tsconfig settings, a separate tsconfig is used for ESM Apps.
-     */
-    readonly tsconfig?: TypescriptConfigOptions;
-}
-
-/**
- * Adds ESM support to a projen Root project without breaking projen itself.
- * This is unneeded in a Monorepo, but is useful for standalone projects.
- */
-export class EsmRoot extends Component {
-    declare project: TypeScriptProject;
-
-    public tsconfig: TypescriptConfig;
-
-    constructor(project: TypeScriptProject, options: EsmRootOptions = {}) {
-        super(project);
-
-        this.tsconfig = new TypescriptConfig(project, {
-            ...(options.tsconfig ?? { compilerOptions: {} }),
-            fileName: options.tsconfig?.fileName ?? "tsconfig.esm.json",
         });
     }
 }

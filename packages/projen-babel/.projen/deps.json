@@ -1,7 +1,15 @@
 {
   "dependencies": [
     {
+      "name": "@babel/core",
+      "type": "build"
+    },
+    {
       "name": "@cspell/eslint-plugin",
+      "type": "build"
+    },
+    {
+      "name": "@types/babel__core",
       "type": "build"
     },
     {
@@ -108,8 +116,11 @@
       "type": "build"
     },
     {
-      "name": "projen-babel",
-      "version": "^0.x",
+      "name": "constructs",
+      "type": "peer"
+    },
+    {
+      "name": "projen",
       "type": "peer"
     }
   ],

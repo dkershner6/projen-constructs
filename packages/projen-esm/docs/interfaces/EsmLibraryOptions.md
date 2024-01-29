@@ -7,6 +7,7 @@
 ### Properties
 
 - [babel](EsmLibraryOptions.md#babel)
+- [babelConfigFileOptions](EsmLibraryOptions.md#babelconfigfileoptions)
 - [setupEslintToEnforceImportFileExtensions](EsmLibraryOptions.md#setupeslinttoenforceimportfileextensions)
 
 ## Properties
@@ -16,6 +17,20 @@
 • `Optional` `Readonly` **babel**: `boolean`
 
 Use babel instead of tsc to compile.
+
+___
+
+### babelConfigFileOptions
+
+• `Optional` `Readonly` **babelConfigFileOptions**: `BabelConfigFileOptions`
+
+Options for the babel config file.
+
+**`Default`**
+
+```ts
+- Typical options for an ESM library.
+```
 
 ___
 

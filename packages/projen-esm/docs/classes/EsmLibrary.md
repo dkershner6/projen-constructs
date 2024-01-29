@@ -18,7 +18,9 @@ Adds ESM support and linting to a projen TypeScript project.
 
 ### Properties
 
+- [babelConfigFile](EsmLibrary.md#babelconfigfile)
 - [node](EsmLibrary.md#node)
+- [options](EsmLibrary.md#options)
 - [project](EsmLibrary.md#project)
 
 ### Methods
@@ -55,6 +57,12 @@ Component.constructor
 
 ## Properties
 
+### babelConfigFile
+
+• `Optional` **babelConfigFile**: `BabelConfigFile`
+
+___
+
 ### node
 
 • `Readonly` **node**: `Node`
@@ -64,6 +72,12 @@ The tree node.
 #### Inherited from
 
 Component.node
+
+___
+
+### options
+
+• `Private` `Readonly` **options**: [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) = `{}`
 
 ___
 

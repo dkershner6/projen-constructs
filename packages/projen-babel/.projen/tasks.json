@@ -29,7 +29,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-esm@",
+        "RELEASE_TAG_PREFIX": "projen-babel@",
         "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
@@ -203,7 +203,7 @@
       "description": "Prepare a release from \"main\" branch",
       "env": {
         "RELEASE": "true",
-        "RELEASE_TAG_PREFIX": "projen-esm@"
+        "RELEASE_TAG_PREFIX": "projen-babel@"
       },
       "steps": [
         {
@@ -273,7 +273,7 @@
         "CHANGELOG": "dist/changelog.md",
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
-        "RELEASE_TAG_PREFIX": "projen-esm@",
+        "RELEASE_TAG_PREFIX": "projen-babel@",
         "RELEASABLE_COMMITS": "git log --oneline $LATEST_TAG..HEAD -- ."
       },
       "steps": [
@@ -290,13 +290,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,jest-mock,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript,projen-babel"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@babel/core,@cspell/eslint-plugin,@types/babel__core,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,jest-mock,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit jest-mock prettier projen standard-version ts-jest typedoc typedoc-plugin-markdown typescript projen-babel"
+          "exec": "pnpm update @babel/core @cspell/eslint-plugin @types/babel__core @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit jest-mock prettier projen standard-version ts-jest typedoc typedoc-plugin-markdown typescript"
         },
         {
           "exec": "npx projen"

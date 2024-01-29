@@ -11,9 +11,11 @@ import {
     PROJEN_COMPILER_OPTION_DEFAULTS,
     RECOMMENDED_TSCONFIG_COMPILER_OPTIONS,
 } from "dkershner6-projen-typescript";
-import { TypescriptConfigOptions } from "projen/lib/javascript";
+import {
+    TypescriptConfig,
+    TypescriptConfigOptions,
+} from "projen/lib/javascript";
 import { deepMerge } from "projen/lib/util";
-import { EsmRoot, EsmRootOptions } from "projen-esm";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
@@ -22,11 +24,16 @@ import {
 } from "projen-nextjs";
 
 export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
-    esmOptions?: EsmRootOptions;
+    /**
+     * A custom tsconfig for nextjs development, separate from Projen's tsconfig.
+     *
+     * @default - Recommended tsconfig for Next.js development by Vercel.
+     */
+    nextjsTsconfig?: TypescriptConfigOptions;
 }
 
 export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
-    public readonly esm: EsmRoot;
+    public readonly nextjsTsconfig: TypescriptConfig;
 
     constructor(options: Node20AwsCdkNextjsAppOptions) {
         const defaultNextjsOptions: Omit<
@@ -49,9 +56,9 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
 
         this.gitignore.exclude(".next", "out");
 
-        this.esm = new EsmRoot(this, {
-            ...(options?.esmOptions ?? {}),
-            tsconfig: deepMerge([
+        this.nextjsTsconfig = new TypescriptConfig(
+            this,
+            deepMerge([
                 deepClone({
                     compilerOptions: {
                         ...PROJEN_COMPILER_OPTION_DEFAULTS,
@@ -60,9 +67,9 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
                     },
                 }),
                 NEXTJS_TSCONFIG_OPTIONS,
-                options?.esmOptions?.tsconfig ?? {},
+                options?.nextjsTsconfig ?? {},
             ]) as TypescriptConfigOptions,
-        });
+        );
 
         new Node20ReactTypescriptConfigurer(this, {
             projectType: "app",

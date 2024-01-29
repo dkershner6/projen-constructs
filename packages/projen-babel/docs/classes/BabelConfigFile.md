@@ -1,53 +1,51 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / EsmRoot
+[projen-babel](../README.md) / [Exports](../modules.md) / BabelConfigFile
 
-# Class: EsmRoot
-
-Adds ESM support to a projen Root project without breaking projen itself.
-This is unneeded in a Monorepo, but is useful for standalone projects.
+# Class: BabelConfigFile
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`EsmRoot`**
+  ↳ **`BabelConfigFile`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](EsmRoot.md#constructor)
+- [constructor](BabelConfigFile.md#constructor)
 
 ### Properties
 
-- [node](EsmRoot.md#node)
-- [project](EsmRoot.md#project)
-- [tsconfig](EsmRoot.md#tsconfig)
+- [node](BabelConfigFile.md#node)
+- [project](BabelConfigFile.md#project)
+- [transformOptions](BabelConfigFile.md#transformoptions)
 
 ### Methods
 
-- [postSynthesize](EsmRoot.md#postsynthesize)
-- [preSynthesize](EsmRoot.md#presynthesize)
-- [synthesize](EsmRoot.md#synthesize)
-- [toString](EsmRoot.md#tostring)
-- [isComponent](EsmRoot.md#iscomponent)
-- [isConstruct](EsmRoot.md#isconstruct)
+- [postSynthesize](BabelConfigFile.md#postsynthesize)
+- [preSynthesize](BabelConfigFile.md#presynthesize)
+- [synthesize](BabelConfigFile.md#synthesize)
+- [toString](BabelConfigFile.md#tostring)
+- [isComponent](BabelConfigFile.md#iscomponent)
+- [isConstruct](BabelConfigFile.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new EsmRoot**(`project`, `options?`): [`EsmRoot`](EsmRoot.md)
+• **new BabelConfigFile**(`project`, `fileName?`, `options?`): [`BabelConfigFile`](BabelConfigFile.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options` | [`EsmRootOptions`](../interfaces/EsmRootOptions.md) |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `project` | `Project` | `undefined` |
+| `fileName` | `string` | `"babel.config.json"` |
+| `options` | [`BabelConfigFileOptions`](../interfaces/BabelConfigFileOptions.md) | `{}` |
 
 #### Returns
 
-[`EsmRoot`](EsmRoot.md)
+[`BabelConfigFile`](BabelConfigFile.md)
 
 #### Overrides
 
@@ -69,17 +67,17 @@ ___
 
 ### project
 
-• **project**: `TypeScriptProject`
+• `Readonly` **project**: `Project`
 
-#### Overrides
+#### Inherited from
 
 Component.project
 
 ___
 
-### tsconfig
+### transformOptions
 
-• **tsconfig**: `TypescriptConfig`
+• **transformOptions**: `TransformOptions`
 
 ## Methods
 

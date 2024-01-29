@@ -69,7 +69,6 @@
 - [entrypointTypes](Node20AwsCdkNextjsAppOptions.md#entrypointtypes)
 - [eslint](Node20AwsCdkNextjsAppOptions.md#eslint)
 - [eslintOptions](Node20AwsCdkNextjsAppOptions.md#eslintoptions)
-- [esmOptions](Node20AwsCdkNextjsAppOptions.md#esmoptions)
 - [experimentalIntegRunner](Node20AwsCdkNextjsAppOptions.md#experimentalintegrunner)
 - [featureFlags](Node20AwsCdkNextjsAppOptions.md#featureflags)
 - [gitIgnoreOptions](Node20AwsCdkNextjsAppOptions.md#gitignoreoptions)
@@ -99,6 +98,7 @@
 - [minNodeVersion](Node20AwsCdkNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20AwsCdkNextjsAppOptions.md#mutablebuild)
 - [name](Node20AwsCdkNextjsAppOptions.md#name)
+- [nextjsTsconfig](Node20AwsCdkNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20AwsCdkNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20AwsCdkNextjsAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20AwsCdkNextjsAppOptions.md#npmignoreoptions)
@@ -1233,12 +1233,6 @@ Node20AwsCdkAppOptions.eslintOptions
 
 ___
 
-### esmOptions
-
-• `Optional` **esmOptions**: `EsmRootOptions`
-
-___
-
 ### experimentalIntegRunner
 
 • `Optional` `Readonly` **experimentalIntegRunner**: `boolean`
@@ -1752,6 +1746,20 @@ $BASEDIR
 #### Inherited from
 
 Node20AwsCdkAppOptions.name
+
+___
+
+### nextjsTsconfig
+
+• `Optional` **nextjsTsconfig**: `TypescriptConfigOptions`
+
+A custom tsconfig for nextjs development, separate from Projen's tsconfig.
+
+**`Default`**
+
+```ts
+- Recommended tsconfig for Next.js development by Vercel.
+```
 
 ___
 

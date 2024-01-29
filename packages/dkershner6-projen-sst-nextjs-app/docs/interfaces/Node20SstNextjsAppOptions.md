@@ -70,7 +70,6 @@
 - [entrypointTypes](Node20SstNextjsAppOptions.md#entrypointtypes)
 - [eslint](Node20SstNextjsAppOptions.md#eslint)
 - [eslintOptions](Node20SstNextjsAppOptions.md#eslintoptions)
-- [esmOptions](Node20SstNextjsAppOptions.md#esmoptions)
 - [experimentalIntegRunner](Node20SstNextjsAppOptions.md#experimentalintegrunner)
 - [featureFlags](Node20SstNextjsAppOptions.md#featureflags)
 - [gitIgnoreOptions](Node20SstNextjsAppOptions.md#gitignoreoptions)
@@ -100,6 +99,7 @@
 - [minNodeVersion](Node20SstNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20SstNextjsAppOptions.md#mutablebuild)
 - [name](Node20SstNextjsAppOptions.md#name)
+- [nextjsTsconfig](Node20SstNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20SstNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20SstNextjsAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20SstNextjsAppOptions.md#npmignoreoptions)
@@ -1254,12 +1254,6 @@ Node20SstAppOptions.eslintOptions
 
 ___
 
-### esmOptions
-
-• `Optional` **esmOptions**: `EsmRootOptions`
-
-___
-
 ### experimentalIntegRunner
 
 • `Optional` `Readonly` **experimentalIntegRunner**: `boolean`
@@ -1773,6 +1767,20 @@ $BASEDIR
 #### Inherited from
 
 Node20SstAppOptions.name
+
+___
+
+### nextjsTsconfig
+
+• `Optional` **nextjsTsconfig**: `TypescriptConfigOptions`
+
+A custom tsconfig for nextjs development, separate from Projen's tsconfig.
+
+**`Default`**
+
+```ts
+- Recommended tsconfig for Next.js development by Vercel.
+```
 
 ___
 

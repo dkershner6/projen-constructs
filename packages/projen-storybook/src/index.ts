@@ -15,6 +15,11 @@ export interface StorybookOptions {
      * @default 6006
      */
     readonly port?: number;
+
+    /**
+     * @default true
+     */
+    readonly sampleCode?: boolean;
 }
 
 export class Storybook extends Component {
@@ -82,8 +87,9 @@ export class StorybookNextjs extends Storybook {
 
         this.project.addDevDeps("@storybook/nextjs", "@storybook/react");
 
-        new SampleFile(this.project, ".storybook/main.ts", {
-            contents: `import type { StorybookConfig } from "@storybook/nextjs";
+        if (options.sampleCode ?? true) {
+            new SampleFile(this.project, ".storybook/main.ts", {
+                contents: `import type { StorybookConfig } from "@storybook/nextjs";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
@@ -103,10 +109,10 @@ const config: StorybookConfig = {
 };
 export default config;
 `,
-        });
+            });
 
-        new SampleFile(this.project, ".storybook/preview.ts", {
-            contents: `import type { Preview } from "@storybook/react";
+            new SampleFile(this.project, ".storybook/preview.ts", {
+                contents: `import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
   parameters: {
@@ -121,6 +127,7 @@ const preview: Preview = {
 };
 
 export default preview;`,
-        });
+            });
+        }
     }
 }
