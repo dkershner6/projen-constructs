@@ -81,15 +81,31 @@ export class EsmLibrary extends Component {
             "babel-plugin-direct-import",
         );
 
-        const compileTask = this.project.tasks.tryFind("compile");
-        if (compileTask) {
-            compileTask.reset(
-                `babel src --out-dir ${this.project.libdir} --extensions ".ts,.tsx"`,
-            );
-            compileTask.exec(
-                `tsc -p ${this.project.tsconfig?.fileName} --emitDeclarationOnly`,
-            );
-        }
+        const compileBabelTask = this.project.addTask("compile:babel", {
+            description: "Compile TypeScript to JavaScript using Babel",
+            exec: `babel src --out-dir ${this.project.libdir} --extensions ".ts,.tsx"`,
+            receiveArgs: true,
+        });
+
+        const compileTypesTask = this.project.addTask("compile:types", {
+            description: "Compile TypeScript types only",
+            exec: `tsc -p ${this.project.tsconfig?.fileName} --emitDeclarationOnly`,
+            receiveArgs: true,
+        });
+
+        const compileTask =
+            this.project.tasks.tryFind("compile") ??
+            this.project.addTask("compile");
+
+        compileTask.reset();
+        compileTask.spawn(compileBabelTask);
+        compileTask.spawn(compileTypesTask);
+
+        const watch =
+            this.project.tasks.tryFind("watch") ??
+            this.project.addTask("watch");
+        watch.reset();
+        watch.spawn(compileTask, { args: ["--watch"] });
 
         new JsonFile(this.project, "babel.config.json", {
             allowComments: true,
