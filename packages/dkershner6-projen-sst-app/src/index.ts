@@ -166,6 +166,10 @@ export class Node20SstApp extends SstTypescriptApp {
             this.outdir,
         );
 
+        const workingDirectory = ensureRelativePathStartsWithDot(
+            projectPathRelativeToRoot,
+        );
+
         // We are basically ignoring the artifact since SST needs too many things to use it anyway, but we still download it
         return {
             name: "Publish to AWS",
@@ -181,9 +185,7 @@ export class Node20SstApp extends SstTypescriptApp {
                 projectPathRelativeToRoot.length > 0 // is subproject
                     ? {
                           run: {
-                              workingDirectory: ensureRelativePathStartsWithDot(
-                                  projectPathRelativeToRoot,
-                              ),
+                              workingDirectory,
                           },
                       }
                     : undefined,
@@ -194,7 +196,7 @@ export class Node20SstApp extends SstTypescriptApp {
                     uses: "actions/download-artifact@v3",
                     with: {
                         name: "build-artifact",
-                        path: this.artifactsDirectory,
+                        path: `${workingDirectory}/${this.artifactsDirectory}`,
                     },
                 },
                 {
