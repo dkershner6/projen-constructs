@@ -190,6 +190,7 @@ export class Node20SstApp extends SstTypescriptApp {
                       }
                     : undefined,
             steps: [
+                ...(options.workflowBootstrapSteps ?? []),
                 WorkflowSteps.checkout(),
                 {
                     name: "Download build artifacts",
