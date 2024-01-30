@@ -36,9 +36,6 @@
       "steps": [
         {
           "spawn": "install:ci"
-        },
-        {
-          "exec": "pnpm exec nx run-many --target=ci --output-style=stream --nx-bail"
         }
       ]
     },
@@ -165,9 +162,6 @@
       "steps": [
         {
           "spawn": "install"
-        },
-        {
-          "exec": "pnpm exec nx run-many --target=i --output-style=stream --nx-bail"
         }
       ]
     },
