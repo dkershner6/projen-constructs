@@ -166,7 +166,7 @@ export class Node20SstApp extends SstTypescriptApp {
             this.outdir,
         );
 
-        // We are basically ignoring the artifact since SST needs too many things to use it anyway
+        // We are basically ignoring the artifact since SST needs too many things to use it anyway, but we still download it
         return {
             name: "Publish to AWS",
             if: this.release?.publisher.condition,
@@ -189,6 +189,21 @@ export class Node20SstApp extends SstTypescriptApp {
                     : undefined,
             steps: [
                 WorkflowSteps.checkout(),
+                {
+                    name: "Download build artifacts",
+                    uses: "actions/download-artifact@v3",
+                    with: {
+                        name: "build-artifact",
+                        path: this.artifactsDirectory,
+                    },
+                },
+                {
+                    name: "Restore build artifact permissions",
+                    continueOnError: true,
+                    run: [
+                        `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
+                    ].join("\n"),
+                },
                 ...this.renderWorkflowSetup({
                     installStepConfiguration: {
                         workingDirectory: ".",
