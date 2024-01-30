@@ -49,7 +49,11 @@ export class RootMonorepo extends MonorepoProject {
         new EslintConfig(this);
         new DKTasks(this);
 
-        for (const taskName of Object.values(DKTaskName)) {
+        for (const taskName of [
+            DKTaskName.LINT,
+            DKTaskName.TEST_UNIT,
+            DKTaskName.TYPE_CHECK,
+        ]) {
             const task = this.tasks.tryFind(taskName);
             if (task) {
                 task.exec(
