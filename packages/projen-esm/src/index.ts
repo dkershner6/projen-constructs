@@ -147,20 +147,9 @@ export class EsmLibrary extends Component {
                             ?.transformOptions?.presets ?? []),
                     ],
                     plugins: [
-                        // A little specific, but shouldn't hurt anything if not used.
-                        [
-                            "babel-plugin-direct-import",
-                            {
-                                modules: [
-                                    "@mui/system",
-                                    "@mui/material",
-                                    "@mui/icons-material",
-                                ],
-                            },
-                        ],
                         ...(this.options?.babelConfigFileOptions
                             ?.transformOptions?.plugins ?? []),
-                    ],
+                    ].filter(Boolean),
                     ...(this.options?.babelConfigFileOptions
                         ?.transformOptions ?? {}),
                 },
