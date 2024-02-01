@@ -132,7 +132,11 @@ export class EsmLibrary extends Component {
                     ],
                     targets: {
                         node: "current",
-                        ...(this.options?.babelConfigFileOptions ?? {}),
+                        ...(this.options?.babelConfigFileOptions
+                            ?.transformOptions?.targets instanceof Object
+                            ? this.options?.babelConfigFileOptions
+                                  ?.transformOptions?.targets ?? {}
+                            : {}), // Ignore string arrays for now, not sure how to handle
                     },
                     presets: [
                         "@babel/preset-react",
