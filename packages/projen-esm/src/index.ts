@@ -19,7 +19,7 @@ export const ESM_PROJECT_OPTIONS = {
             },
             transform: {
                 [TS_WITH_JS]: new Transform("babel-jest", {
-                    configFile: TEST_BABEL_CONFIG_FILE,
+                    configFile: `./${TEST_BABEL_CONFIG_FILE}`,
                 }),
             },
         },
