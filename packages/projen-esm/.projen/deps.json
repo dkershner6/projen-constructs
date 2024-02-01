@@ -1,7 +1,15 @@
 {
   "dependencies": [
     {
+      "name": "@babel/core",
+      "type": "build"
+    },
+    {
       "name": "@cspell/eslint-plugin",
+      "type": "build"
+    },
+    {
+      "name": "@types/babel__core",
       "type": "build"
     },
     {

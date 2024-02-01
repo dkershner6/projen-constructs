@@ -15,6 +15,7 @@
 ### Variables
 
 - [ESM\_PROJECT\_OPTIONS](modules.md#esm_project_options)
+- [TEST\_BABEL\_CONFIG\_FILE](modules.md#test_babel_config_file)
 - [TS\_WITH\_JS](modules.md#ts_with_js)
 
 ## Variables
@@ -29,11 +30,13 @@ Helps Jest and TSJest play nice with ESM.
 
 | Name | Type |
 | :------ | :------ |
-| `jestOptions` | \{ `jestConfig`: \{ `extensionsToTreatAsEsm`: `string`[] ; `moduleNameMapper`: \{ `(.+)\.js`: `string` = "$1" }  }  } |
-| `jestOptions.jestConfig` | \{ `extensionsToTreatAsEsm`: `string`[] ; `moduleNameMapper`: \{ `(.+)\.js`: `string` = "$1" }  } |
+| `jestOptions` | \{ `jestConfig`: \{ `extensionsToTreatAsEsm`: `string`[] ; `moduleNameMapper`: \{ `(.+)\.js`: `string` = "$1" } ; `transform`: \{ `^.+\.[tj]sx?$`: `Transform`  }  }  } |
+| `jestOptions.jestConfig` | \{ `extensionsToTreatAsEsm`: `string`[] ; `moduleNameMapper`: \{ `(.+)\.js`: `string` = "$1" } ; `transform`: \{ `^.+\.[tj]sx?$`: `Transform`  }  } |
 | `jestOptions.jestConfig.extensionsToTreatAsEsm` | `string`[] |
 | `jestOptions.jestConfig.moduleNameMapper` | \{ `(.+)\.js`: `string` = "$1" } |
 | jestOptions.jestConfig.moduleNameMapper.(.+)\.js | `string` |
+| `jestOptions.jestConfig.transform` | \{ `^.+\.[tj]sx?$`: `Transform`  } |
+| jestOptions.jestConfig.transform.^.+\.[tj]sx?$ | `Transform` |
 | `tsJestOptions` | \{ `transformOptions`: \{ `isolatedModules`: `boolean` = true; `useESM`: `boolean` = true } ; `transformPattern`: `string` = TS\_WITH\_JS } |
 | `tsJestOptions.transformOptions` | \{ `isolatedModules`: `boolean` = true; `useESM`: `boolean` = true } |
 | `tsJestOptions.transformOptions.isolatedModules` | `boolean` |
@@ -44,6 +47,12 @@ Helps Jest and TSJest play nice with ESM.
 | `tsconfig.compilerOptions.allowJs` | `boolean` |
 | `tsconfig.compilerOptions.module` | `string` |
 | `tsconfig.compilerOptions.moduleResolution` | `TypeScriptModuleResolution` |
+
+___
+
+### TEST\_BABEL\_CONFIG\_FILE
+
+• `Const` **TEST\_BABEL\_CONFIG\_FILE**: ``"babel.test.config.json"``
 
 ___
 

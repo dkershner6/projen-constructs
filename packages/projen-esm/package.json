@@ -33,7 +33,9 @@
     "organization": false
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
     "@cspell/eslint-plugin": "^8.3.2",
+    "@types/babel__core": "^7.20.5",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.11",
     "@types/node": "^20",

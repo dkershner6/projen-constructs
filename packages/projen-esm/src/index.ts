@@ -1,8 +1,10 @@
+import type { PluginItem, TransformOptions } from "@babel/core";
 import { Component } from "projen";
-import { TypeScriptModuleResolution } from "projen/lib/javascript";
+import { Transform, TypeScriptModuleResolution } from "projen/lib/javascript";
 import { TypeScriptProject } from "projen/lib/typescript";
 import { BabelConfigFile, BabelConfigFileOptions } from "projen-babel";
 
+export const TEST_BABEL_CONFIG_FILE = "babel.test.config.json";
 export const TS_WITH_JS = "^.+\\.[tj]sx?$";
 
 /**
@@ -15,8 +17,14 @@ export const ESM_PROJECT_OPTIONS = {
             moduleNameMapper: {
                 "(.+)\\.js": "$1",
             },
+            transform: {
+                [TS_WITH_JS]: new Transform("babel-jest", {
+                    configFile: TEST_BABEL_CONFIG_FILE,
+                }),
+            },
         },
     },
+    // just in case someone wants to use ts-jest
     tsJestOptions: {
         transformOptions: {
             isolatedModules: true,
@@ -47,6 +55,13 @@ export interface EsmLibraryOptions {
     readonly babelConfigFileOptions?: BabelConfigFileOptions;
 
     /**
+     * Options for the babel test config file.
+     *
+     * @default - Typical options for an ESM library.
+     */
+    readonly babelTestConfigFileOptions?: BabelConfigFileOptions;
+
+    /**
      * Whether or not to setup eslint to enforce import file extensions.
      *
      * @example import { MyComponent } from "./MyComponent.js";
@@ -56,11 +71,35 @@ export interface EsmLibraryOptions {
 
 /**
  * Adds ESM support and linting to a projen TypeScript project.
+ * Supports React as well.
  */
 export class EsmLibrary extends Component {
+    public static DEFAULT_BABEL_PUBLISH_IGNORES = [
+        "**/*.stories.ts",
+        "**/*.stories.tsx",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+    ];
+
+    public static DEFAULT_BABEL_PRESETS: PluginItem[] = [
+        "@babel/preset-react",
+        [
+            "@babel/preset-typescript",
+            {
+                isTSX: true,
+                allExtensions: true,
+            },
+        ],
+    ];
+
+    public static DEFAULT_BABEL_TARGETS = {
+        node: "current",
+    };
+
     declare project: TypeScriptProject;
 
     public babelConfigFile?: BabelConfigFile;
+    public babelTestConfigFile?: BabelConfigFile;
 
     constructor(
         project: TypeScriptProject,
@@ -86,6 +125,7 @@ export class EsmLibrary extends Component {
             "@babel/preset-env",
             "@babel/preset-react",
             "@babel/preset-typescript",
+            "babel-jest",
             "babel-loader",
             "babel-plugin-direct-import",
         );
@@ -120,45 +160,47 @@ export class EsmLibrary extends Component {
             this.project,
             "babel.config.json",
             {
-                ...(this.options?.babelConfigFileOptions ?? {}),
-                transformOptions: {
-                    ignore: [
-                        "**/*.stories.ts",
-                        "**/*.stories.tsx",
-                        "**/*.test.ts",
-                        "**/*.test.tsx",
-                        ...(this.options?.babelConfigFileOptions
-                            ?.transformOptions?.ignore ?? []),
-                    ],
-                    targets: {
-                        node: "current",
-                        ...(this.options?.babelConfigFileOptions
-                            ?.transformOptions?.targets instanceof Object
-                            ? this.options?.babelConfigFileOptions
-                                  ?.transformOptions?.targets ?? {}
-                            : {}), // Ignore string arrays for now, not sure how to handle
-                    },
-                    presets: [
-                        "@babel/preset-react",
-                        [
-                            "@babel/preset-typescript",
-                            {
-                                isTSX: true,
-                                allExtensions: true,
-                            },
-                        ],
-                        ...(this.options?.babelConfigFileOptions
-                            ?.transformOptions?.presets ?? []),
-                    ],
-                    plugins: [
-                        ...(this.options?.babelConfigFileOptions
-                            ?.transformOptions?.plugins ?? []),
-                    ].filter(Boolean),
+                transformOptions: this.buildBabelConfigTransformOptions({
                     ...(this.options?.babelConfigFileOptions
                         ?.transformOptions ?? {}),
-                },
+                    ignore:
+                        this.options?.babelConfigFileOptions?.transformOptions
+                            ?.ignore ??
+                        EsmLibrary.DEFAULT_BABEL_PUBLISH_IGNORES,
+                }),
             },
         );
+        this.babelTestConfigFile = new BabelConfigFile(
+            this.project,
+            TEST_BABEL_CONFIG_FILE,
+            {
+                transformOptions: this.buildBabelConfigTransformOptions({
+                    ...(this.options?.babelTestConfigFileOptions
+                        ?.transformOptions ?? {}),
+                    presets: this.options?.babelTestConfigFileOptions
+                        ?.transformOptions?.presets ?? [
+                        "@babel/preset-env",
+                        ...EsmLibrary.DEFAULT_BABEL_PRESETS,
+                    ],
+                }),
+            },
+        );
+    }
+
+    private buildBabelConfigTransformOptions(
+        providedOptions: TransformOptions,
+    ): TransformOptions {
+        const targets = providedOptions?.targets ?? {
+            node: "current",
+        };
+        const presets =
+            providedOptions?.presets ?? EsmLibrary.DEFAULT_BABEL_PRESETS;
+
+        return {
+            ...providedOptions,
+            targets,
+            presets,
+        };
     }
 
     private setupEslintToEnforceImportFileExtensions(): void {
