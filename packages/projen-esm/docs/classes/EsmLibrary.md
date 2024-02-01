@@ -3,6 +3,7 @@
 # Class: EsmLibrary
 
 Adds ESM support and linting to a projen TypeScript project.
+Supports React as well.
 
 ## Hierarchy
 
@@ -19,12 +20,17 @@ Adds ESM support and linting to a projen TypeScript project.
 ### Properties
 
 - [babelConfigFile](EsmLibrary.md#babelconfigfile)
+- [babelTestConfigFile](EsmLibrary.md#babeltestconfigfile)
 - [node](EsmLibrary.md#node)
 - [options](EsmLibrary.md#options)
 - [project](EsmLibrary.md#project)
+- [DEFAULT\_BABEL\_PRESETS](EsmLibrary.md#default_babel_presets)
+- [DEFAULT\_BABEL\_PUBLISH\_IGNORES](EsmLibrary.md#default_babel_publish_ignores)
+- [DEFAULT\_BABEL\_TARGETS](EsmLibrary.md#default_babel_targets)
 
 ### Methods
 
+- [buildBabelConfigTransformOptions](EsmLibrary.md#buildbabelconfigtransformoptions)
 - [postSynthesize](EsmLibrary.md#postsynthesize)
 - [preSynthesize](EsmLibrary.md#presynthesize)
 - [setupEslintToEnforceImportFileExtensions](EsmLibrary.md#setupeslinttoenforceimportfileextensions)
@@ -63,6 +69,12 @@ Component.constructor
 
 ___
 
+### babelTestConfigFile
+
+• `Optional` **babelTestConfigFile**: `BabelConfigFile`
+
+___
+
 ### node
 
 • `Readonly` **node**: `Node`
@@ -89,7 +101,47 @@ ___
 
 Component.project
 
+___
+
+### DEFAULT\_BABEL\_PRESETS
+
+▪ `Static` **DEFAULT\_BABEL\_PRESETS**: `PluginItem`[]
+
+___
+
+### DEFAULT\_BABEL\_PUBLISH\_IGNORES
+
+▪ `Static` **DEFAULT\_BABEL\_PUBLISH\_IGNORES**: `string`[]
+
+___
+
+### DEFAULT\_BABEL\_TARGETS
+
+▪ `Static` **DEFAULT\_BABEL\_TARGETS**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `node` | `string` |
+
 ## Methods
+
+### buildBabelConfigTransformOptions
+
+▸ **buildBabelConfigTransformOptions**(`providedOptions`): `TransformOptions`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `providedOptions` | `TransformOptions` |
+
+#### Returns
+
+`TransformOptions`
+
+___
 
 ### postSynthesize
 

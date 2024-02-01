@@ -28,6 +28,7 @@ new ProjenConstructTsLib(rootProject, {
     name: "projen-esm",
     keywords: ["esm", "projen"],
     description: "Helpers for Projen projects that use ESM.",
+    devDeps: ["@babel/core", "@types/babel__core"],
     peerDeps: ["projen-babel@^0.x"],
 });
 

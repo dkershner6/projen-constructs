@@ -1127,9 +1127,15 @@ importers:
 
   packages/projen-esm:
     devDependencies:
+      '@babel/core':
+        specifier: ^7.23.7
+        version: 7.23.7
       '@cspell/eslint-plugin':
         specifier: ^8.3.2
         version: 8.3.2
+      '@types/babel__core':
+        specifier: ^7.20.5
+        version: 7.20.5
       '@types/clone-deep':
         specifier: ^4.0.4
         version: 4.0.4

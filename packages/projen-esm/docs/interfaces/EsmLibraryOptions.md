@@ -8,6 +8,7 @@
 
 - [babel](EsmLibraryOptions.md#babel)
 - [babelConfigFileOptions](EsmLibraryOptions.md#babelconfigfileoptions)
+- [babelTestConfigFileOptions](EsmLibraryOptions.md#babeltestconfigfileoptions)
 - [setupEslintToEnforceImportFileExtensions](EsmLibraryOptions.md#setupeslinttoenforceimportfileextensions)
 
 ## Properties
@@ -25,6 +26,20 @@ ___
 • `Optional` `Readonly` **babelConfigFileOptions**: `BabelConfigFileOptions`
 
 Options for the babel config file.
+
+**`Default`**
+
+```ts
+- Typical options for an ESM library.
+```
+
+___
+
+### babelTestConfigFileOptions
+
+• `Optional` `Readonly` **babelTestConfigFileOptions**: `BabelConfigFileOptions`
+
+Options for the babel test config file.
 
 **`Default`**
 
