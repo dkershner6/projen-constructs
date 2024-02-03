@@ -317,6 +317,10 @@ export class EslintConfig extends Component {
                 "**/app/**",
                 "**/pages/**",
                 "**/pages/**",
+                // Storybook Stories have a forced default export
+                "**/.storybook/**",
+                "*.stories.ts",
+                "*.stories.tsx",
             ],
             rules: {
                 "import/no-default-export": "warn", // Causes issues when using babel and tsc separately

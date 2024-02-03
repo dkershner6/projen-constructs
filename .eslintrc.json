@@ -183,7 +183,10 @@
         "**/app/**",
         "**/app/**",
         "**/pages/**",
-        "**/pages/**"
+        "**/pages/**",
+        "**/.storybook/**",
+        "*.stories.ts",
+        "*.stories.tsx"
       ],
       "rules": {
         "import/no-default-export": "warn"
