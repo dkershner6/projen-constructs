@@ -126,10 +126,7 @@
       "steps": [
         {
           "spawn": "eslint:monorepo",
-          "receiveArgs": true,
-          "args": [
-            "--max-warnings=0"
-          ]
+          "receiveArgs": true
         },
         {
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",

@@ -96,9 +96,7 @@
         }
       }
     ],
-    "no-duplicate-imports": [
-      "error"
-    ],
+    "no-duplicate-imports": "off",
     "no-shadow": [
       "off"
     ],
@@ -143,7 +141,7 @@
       }
     ],
     "no-console": [
-      "warn",
+      "error",
       {
         "allow": [
           "debug",
@@ -154,10 +152,13 @@
       }
     ],
     "import/namespace": "off",
+    "import/no-duplicates": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
     "sonarjs/no-redundant-jump": "off",
     "sonarjs/no-small-switch": "warn",
     "@typescript-eslint/explicit-function-return-type": [
-      "warn",
+      "error",
       {
         "allowExpressions": true,
         "allowTypedFunctionExpressions": true,
@@ -167,13 +168,28 @@
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "warn",
+      "error",
       {
         "ignoreRestSiblings": true
       }
     ]
   },
   "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "excludedFiles": [
+        "**/app/**",
+        "**/app/**",
+        "**/pages/**",
+        "**/pages/**"
+      ],
+      "rules": {
+        "import/no-default-export": "warn"
+      }
+    },
     {
       "files": [
         "*.js",
