@@ -259,6 +259,10 @@ export class EslintConfig extends Component {
             "no-multiple-empty-lines": "off", // Conflicts with Prettier
             "import/no-unresolved": "off", // Handled by TS and it gets confused on @types packages.
             "import/namespace": "off",
+            "no-duplicate-imports": "off", // Handled by import/no-duplicates
+            "import/no-duplicates": "error",
+            "import/no-named-as-default": "error",
+            "import/no-named-as-default-member": "error",
             "import/order": [
                 "error",
                 {

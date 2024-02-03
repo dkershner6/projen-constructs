@@ -95,9 +95,7 @@
         }
       }
     ],
-    "no-duplicate-imports": [
-      "error"
-    ],
+    "no-duplicate-imports": "off",
     "no-shadow": [
       "off"
     ],
@@ -153,6 +151,9 @@
       }
     ],
     "import/namespace": "off",
+    "import/no-duplicates": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
     "sonarjs/no-redundant-jump": "off",
     "sonarjs/no-small-switch": "warn",
     "@typescript-eslint/explicit-function-return-type": [
