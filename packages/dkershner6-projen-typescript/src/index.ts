@@ -252,7 +252,7 @@ export class EslintConfig extends Component {
         );
         project.eslint?.addRules({
             "no-console": [
-                "warn",
+                "error",
                 { allow: ["debug", "info", "warn", "error"] },
             ],
             "no-trailing-spaces": "off", // Conflicts with Prettier
@@ -287,7 +287,7 @@ export class EslintConfig extends Component {
             "sonarjs/no-redundant-jump": "off",
             "sonarjs/no-small-switch": "warn",
             "@typescript-eslint/explicit-function-return-type": [
-                "warn",
+                "error",
                 {
                     allowExpressions: true,
                     allowTypedFunctionExpressions: true,
@@ -298,11 +298,25 @@ export class EslintConfig extends Component {
             ],
             "@typescript-eslint/return-await": ["error", "always"],
             "@typescript-eslint/no-unused-vars": [
-                "warn",
+                "error",
                 {
                     ignoreRestSiblings: true,
                 },
             ],
+        });
+
+        project.eslint?.addOverride({
+            files: ["*.ts", "*.tsx"],
+            excludedFiles: [
+                // Next.js forced default exports
+                "**/app/**",
+                "**/app/**",
+                "**/pages/**",
+                "**/pages/**",
+            ],
+            rules: {
+                "import/no-default-export": "warn", // Causes issues when using babel and tsc separately
+            },
         });
 
         project.eslint?.addOverride({
@@ -343,16 +357,9 @@ export class DKTasks extends Component {
         typeCheckTask.exec("tsc --noEmit");
 
         // Eslint
-        const maxWarningsZeroArg = "--max-warnings=0";
         const lintTask = project.eslint?.eslintTask;
 
         if (lintTask) {
-            const lintTaskStepArgs = lintTask.steps[0].args;
-            // @ts-expect-error - Violating readonly
-            lintTask.steps[0].args = [
-                ...(lintTaskStepArgs ?? []),
-                maxWarningsZeroArg,
-            ];
             lintTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
 
             project
