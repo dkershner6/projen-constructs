@@ -149,11 +149,10 @@ export const buildJestTransformIgnorePatterns = (
             ...ESM_MODULES_TO_TRANSFORM,
             ...(nodeModulesToTransform ?? []),
         ]),
-    ]
-        .map((module) => `.*${module}`) // .* is needed on front for pnpm nesting
-        .join("|");
+    ].join("|");
     return [
-        `node_modules/(?!(${modulesRegex})/)`, // default is just `node_modules`
+        `/node_modules/(?!.pnpm)(?!(${modulesRegex})/)`,
+        `/node_modules/.pnpm/(?!(${modulesRegex.replace(/\//g, "\\+")})@)`, // default is just `node_modules`
         "\\.pnp\\.[^\\/]+$", // default
     ];
 };
