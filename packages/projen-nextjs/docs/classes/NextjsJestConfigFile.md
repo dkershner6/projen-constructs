@@ -1,56 +1,64 @@
-[projen-nextjs](../README.md) / [Exports](../modules.md) / NextjsJest
+[projen-nextjs](../README.md) / [Exports](../modules.md) / NextjsJestConfigFile
 
-# Class: NextjsJest
+# Class: NextjsJestConfigFile
+
+Must be used in conjunction with a jest config json file (not inside package.json).
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`NextjsJest`**
+  ↳ **`NextjsJestConfigFile`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](NextjsJest.md#constructor)
+- [constructor](NextjsJestConfigFile.md#constructor)
 
 ### Properties
 
-- [node](NextjsJest.md#node)
-- [options](NextjsJest.md#options)
-- [project](NextjsJest.md#project)
+- [file](NextjsJestConfigFile.md#file)
+- [node](NextjsJestConfigFile.md#node)
+- [project](NextjsJestConfigFile.md#project)
 
 ### Methods
 
-- [postSynthesize](NextjsJest.md#postsynthesize)
-- [preSynthesize](NextjsJest.md#presynthesize)
-- [synthesize](NextjsJest.md#synthesize)
-- [toString](NextjsJest.md#tostring)
-- [isComponent](NextjsJest.md#iscomponent)
-- [isConstruct](NextjsJest.md#isconstruct)
+- [postSynthesize](NextjsJestConfigFile.md#postsynthesize)
+- [preSynthesize](NextjsJestConfigFile.md#presynthesize)
+- [synthesize](NextjsJestConfigFile.md#synthesize)
+- [toString](NextjsJestConfigFile.md#tostring)
+- [isComponent](NextjsJestConfigFile.md#iscomponent)
+- [isConstruct](NextjsJestConfigFile.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new NextjsJest**(`project`, `options?`): [`NextjsJest`](NextjsJest.md)
+• **new NextjsJestConfigFile**(`project`, `options?`): [`NextjsJestConfigFile`](NextjsJestConfigFile.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
-| `options` | [`NextjsJestOptions`](../interfaces/NextjsJestOptions.md) |
+| `options` | [`NextjsJestConfigFileOptions`](../interfaces/NextjsJestConfigFileOptions.md) |
 
 #### Returns
 
-[`NextjsJest`](NextjsJest.md)
+[`NextjsJestConfigFile`](NextjsJestConfigFile.md)
 
 #### Overrides
 
 Component.constructor
 
 ## Properties
+
+### file
+
+• `Readonly` **file**: `undefined` \| `TextFile`
+
+___
 
 ### node
 
@@ -61,12 +69,6 @@ The tree node.
 #### Inherited from
 
 Component.node
-
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`NextjsJestOptions`](../interfaces/NextjsJestOptions.md) = `{}`
 
 ___
 
@@ -98,13 +100,15 @@ ___
 
 ### preSynthesize
 
-▸ **preSynthesize**(): `Promise`\<`void`\>
+▸ **preSynthesize**(): `void`
+
+Called before synthesis.
 
 #### Returns
 
-`Promise`\<`void`\>
+`void`
 
-#### Overrides
+#### Inherited from
 
 Component.preSynthesize
 

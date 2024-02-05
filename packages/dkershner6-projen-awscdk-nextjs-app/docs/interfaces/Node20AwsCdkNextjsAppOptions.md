@@ -99,7 +99,7 @@
 - [mutableBuild](Node20AwsCdkNextjsAppOptions.md#mutablebuild)
 - [name](Node20AwsCdkNextjsAppOptions.md#name)
 - [nextjsJest](Node20AwsCdkNextjsAppOptions.md#nextjsjest)
-- [nextjsJestOptions](Node20AwsCdkNextjsAppOptions.md#nextjsjestoptions)
+- [nextjsJestConfigFileOptions](Node20AwsCdkNextjsAppOptions.md#nextjsjestconfigfileoptions)
 - [nextjsTsconfig](Node20AwsCdkNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20AwsCdkNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20AwsCdkNextjsAppOptions.md#npmdisttag)
@@ -1765,9 +1765,9 @@ true
 
 ___
 
-### nextjsJestOptions
+### nextjsJestConfigFileOptions
 
-• `Optional` **nextjsJestOptions**: `NextjsJestOptions`
+• `Optional` **nextjsJestConfigFileOptions**: `NextjsJestConfigFileOptions`
 
 ___
 

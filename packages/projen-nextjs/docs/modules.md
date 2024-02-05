@@ -7,13 +7,13 @@
 ### Classes
 
 - [NextjsEslint](classes/NextjsEslint.md)
-- [NextjsJest](classes/NextjsJest.md)
+- [NextjsJestConfigFile](classes/NextjsJestConfigFile.md)
 - [NextjsTasks](classes/NextjsTasks.md)
 
 ### Interfaces
 
 - [NextjsEslintOptions](interfaces/NextjsEslintOptions.md)
-- [NextjsJestOptions](interfaces/NextjsJestOptions.md)
+- [NextjsJestConfigFileOptions](interfaces/NextjsJestConfigFileOptions.md)
 
 ### Variables
 

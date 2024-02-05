@@ -1,5 +1,4 @@
-import nextJest from "next/jest";
-import { Component } from "projen";
+import { Component, TextFile } from "projen";
 import {
     TypeScriptJsxMode,
     TypeScriptModuleResolution,
@@ -45,7 +44,8 @@ export interface NextjsEslintOptions {}
 export class NextjsEslint extends Component {
     constructor(
         project: TypeScriptProject,
-        private readonly options: NextjsEslintOptions = {},
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        _options: NextjsEslintOptions = {},
     ) {
         super(project);
 
@@ -68,29 +68,60 @@ export class NextjsEslint extends Component {
     }
 }
 
-export interface NextjsJestOptions {
+export interface NextjsJestConfigFileOptions {
+    /**
+     * The relative directory where next.config.js is located in relation to the jest config file.
+     *
+     * @default "./"
+     */
     dir?: string;
+
+    /**
+     * The filename of the jest config file being created as a shim for next/jest.
+     *
+     * @default "jest.config.cjs"
+     */
+    filename?: string;
 }
 
-export class NextjsJest extends Component {
+/**
+ * Must be used in conjunction with a jest config json file (not inside package.json).
+ */
+export class NextjsJestConfigFile extends Component {
     declare readonly project: TypeScriptProject;
+
+    public readonly file: TextFile | undefined;
 
     constructor(
         project: TypeScriptProject,
-        private readonly options: NextjsJestOptions = {},
+        options: NextjsJestConfigFileOptions = {},
     ) {
         super(project);
-    }
 
-    override async preSynthesize(): Promise<void> {
-        if (this.project.jest) {
-            // Whole bunch of nested functions to dig through to get the jest config
-            const nextJester = nextJest({ dir: this.options?.dir });
-            const newJestConfig = await nextJester(this.project.jest.config)();
+        if (project.jest?.file?.path) {
+            this.file = new TextFile(
+                project,
+                options.filename ?? "jest.config.cjs",
+                {
+                    lines: [
+                        'const fs = require("fs");',
+                        'const nextJest = require("next/jest");',
+                        "",
+                        "// eslint-disable-next-line import/no-default-export",
+                        `module.exports = async () => {
+    const standardConfig = JSON.parse(fs.readFileSync("${project.jest?.file?.path}", "utf-8"));
 
-            for (const [key, value] of Object.entries(newJestConfig)) {
-                this.project.jest.config[key] = value;
-            }
+    const buildNextJestConfig = nextJest({ dir: "${options.dir ?? "./"}" });
+    const nextJestConfig = await buildNextJestConfig(standardConfig)();
+
+    return {
+        ...nextJestConfig,
+        transformIgnorePatterns: standardConfig.transformIgnorePatterns, // nextJest adds /node_modules for no reason
+    };
+};`,
+                    ],
+                },
+            );
         }
     }
 }

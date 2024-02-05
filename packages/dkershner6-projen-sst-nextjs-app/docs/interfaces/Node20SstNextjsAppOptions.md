@@ -100,7 +100,7 @@
 - [mutableBuild](Node20SstNextjsAppOptions.md#mutablebuild)
 - [name](Node20SstNextjsAppOptions.md#name)
 - [nextjsJest](Node20SstNextjsAppOptions.md#nextjsjest)
-- [nextjsJestOptions](Node20SstNextjsAppOptions.md#nextjsjestoptions)
+- [nextjsJestConfigFileOptions](Node20SstNextjsAppOptions.md#nextjsjestconfigfileoptions)
 - [nextjsTsconfig](Node20SstNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20SstNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20SstNextjsAppOptions.md#npmdisttag)
@@ -1786,9 +1786,9 @@ true
 
 ___
 
-### nextjsJestOptions
+### nextjsJestConfigFileOptions
 
-• `Optional` **nextjsJestOptions**: `NextjsJestOptions`
+• `Optional` **nextjsJestConfigFileOptions**: `NextjsJestConfigFileOptions`
 
 ___
 
