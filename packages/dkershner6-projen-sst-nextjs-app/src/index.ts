@@ -16,8 +16,8 @@ import { deepMerge } from "projen/lib/util";
 import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
-    NextjsJest,
-    NextjsJestOptions,
+    NextjsJestConfigFile,
+    NextjsJestConfigFileOptions,
     NextjsTasks,
 } from "projen-nextjs";
 
@@ -29,7 +29,7 @@ export interface Node20SstNextjsAppOptions extends Node20SstAppOptions {
      */
     nextjsJest?: boolean;
 
-    nextjsJestOptions?: NextjsJestOptions;
+    nextjsJestConfigFileOptions?: NextjsJestConfigFileOptions;
 
     /**
      * A custom tsconfig for nextjs development, separate from Projen's tsconfig.
@@ -93,7 +93,7 @@ export class Node20SstNextjsApp extends Node20SstApp {
         });
         new NextjsEslint(this);
         if (options.nextjsJest ?? true) {
-            new NextjsJest(this, options.nextjsJestOptions);
+            new NextjsJestConfigFile(this, options.nextjsJestConfigFileOptions);
         }
         new NextjsTasks(this);
     }

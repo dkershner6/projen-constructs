@@ -17,7 +17,6 @@
 ### Properties
 
 - [node](NextjsEslint.md#node)
-- [options](NextjsEslint.md#options)
 - [project](NextjsEslint.md#project)
 
 ### Methods
@@ -33,14 +32,14 @@
 
 ### constructor
 
-• **new NextjsEslint**(`project`, `options?`): [`NextjsEslint`](NextjsEslint.md)
+• **new NextjsEslint**(`project`, `_options?`): [`NextjsEslint`](NextjsEslint.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
-| `options` | [`NextjsEslintOptions`](../interfaces/NextjsEslintOptions.md) |
+| `_options` | [`NextjsEslintOptions`](../interfaces/NextjsEslintOptions.md) |
 
 #### Returns
 
@@ -61,12 +60,6 @@ The tree node.
 #### Inherited from
 
 Component.node
-
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`NextjsEslintOptions`](../interfaces/NextjsEslintOptions.md) = `{}`
 
 ___
 
