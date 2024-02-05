@@ -98,11 +98,11 @@ ___
 
 ### preSynthesize
 
-▸ **preSynthesize**(): `void`
+▸ **preSynthesize**(): `Promise`\<`void`\>
 
 #### Returns
 
-`void`
+`Promise`\<`void`\>
 
 #### Overrides
 

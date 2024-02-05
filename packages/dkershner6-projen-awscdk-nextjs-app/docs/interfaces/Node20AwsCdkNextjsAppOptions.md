@@ -98,6 +98,8 @@
 - [minNodeVersion](Node20AwsCdkNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20AwsCdkNextjsAppOptions.md#mutablebuild)
 - [name](Node20AwsCdkNextjsAppOptions.md#name)
+- [nextjsJest](Node20AwsCdkNextjsAppOptions.md#nextjsjest)
+- [nextjsJestOptions](Node20AwsCdkNextjsAppOptions.md#nextjsjestoptions)
 - [nextjsTsconfig](Node20AwsCdkNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20AwsCdkNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20AwsCdkNextjsAppOptions.md#npmdisttag)
@@ -1746,6 +1748,26 @@ $BASEDIR
 #### Inherited from
 
 Node20AwsCdkAppOptions.name
+
+___
+
+### nextjsJest
+
+• `Optional` **nextjsJest**: `boolean`
+
+Implement next/jest on the project's jestConfig.
+
+**`Default`**
+
+```ts
+true
+```
+
+___
+
+### nextjsJestOptions
+
+• `Optional` **nextjsJestOptions**: `NextjsJestOptions`
 
 ___
 

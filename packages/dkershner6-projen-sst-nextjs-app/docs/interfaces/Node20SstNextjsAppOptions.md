@@ -99,6 +99,8 @@
 - [minNodeVersion](Node20SstNextjsAppOptions.md#minnodeversion)
 - [mutableBuild](Node20SstNextjsAppOptions.md#mutablebuild)
 - [name](Node20SstNextjsAppOptions.md#name)
+- [nextjsJest](Node20SstNextjsAppOptions.md#nextjsjest)
+- [nextjsJestOptions](Node20SstNextjsAppOptions.md#nextjsjestoptions)
 - [nextjsTsconfig](Node20SstNextjsAppOptions.md#nextjstsconfig)
 - [npmAccess](Node20SstNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20SstNextjsAppOptions.md#npmdisttag)
@@ -1767,6 +1769,26 @@ $BASEDIR
 #### Inherited from
 
 Node20SstAppOptions.name
+
+___
+
+### nextjsJest
+
+• `Optional` **nextjsJest**: `boolean`
+
+Implement next/jest on the project's jestConfig.
+
+**`Default`**
+
+```ts
+true
+```
+
+___
+
+### nextjsJestOptions
+
+• `Optional` **nextjsJestOptions**: `NextjsJestOptions`
 
 ___
 

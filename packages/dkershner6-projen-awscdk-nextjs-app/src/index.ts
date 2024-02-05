@@ -20,10 +20,20 @@ import {
     NEXTJS_TSCONFIG_OPTIONS,
     NextjsEslint,
     NextjsJest,
+    NextjsJestOptions,
     NextjsTasks,
 } from "projen-nextjs";
 
 export interface Node20AwsCdkNextjsAppOptions extends Node20AwsCdkAppOptions {
+    /**
+     * Implement next/jest on the project's jestConfig.
+     *
+     * @default true
+     */
+    nextjsJest?: boolean;
+
+    nextjsJestOptions?: NextjsJestOptions;
+
     /**
      * A custom tsconfig for nextjs development, separate from Projen's tsconfig.
      *
@@ -85,7 +95,9 @@ export class Node20AwsCdkNextjsApp extends Node20AwsCdkApp {
             projectType: "app",
         });
         new NextjsEslint(this);
-        new NextjsJest(this);
+        if (options.nextjsJest ?? true) {
+            new NextjsJest(this, options.nextjsJestOptions);
+        }
         new NextjsTasks(this);
     }
 }

@@ -82,13 +82,15 @@ export class NextjsJest extends Component {
         super(project);
     }
 
-    override preSynthesize(): void {
+    override async preSynthesize(): Promise<void> {
         if (this.project.jest) {
+            // Whole bunch of nested functions to dig through to get the jest config
             const nextJester = nextJest({ dir: this.options?.dir });
+            const newJestConfig = await nextJester(this.project.jest.config)();
 
-            const newJestConfig = nextJester(this.project.jest.config);
-            // @ts-expect-error - Readonly violation
-            this.project.jest.config = newJestConfig;
+            for (const [key, value] of Object.entries(newJestConfig)) {
+                this.project.jest.config[key] = value;
+            }
         }
     }
 }
