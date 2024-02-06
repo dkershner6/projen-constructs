@@ -8,11 +8,14 @@
 
 - [GraphQLConfig](classes/GraphQLConfig.md)
 - [GraphQLEslint](classes/GraphQLEslint.md)
+- [GraphQLSchemaLinter](classes/GraphQLSchemaLinter.md)
 
 ### Interfaces
 
 - [GraphQLConfigOptions](interfaces/GraphQLConfigOptions.md)
 - [GraphQLEslintOptions](interfaces/GraphQLEslintOptions.md)
+- [GraphQLSchemaLinterConfig](interfaces/GraphQLSchemaLinterConfig.md)
+- [GraphQLSchemaLinterOptions](interfaces/GraphQLSchemaLinterOptions.md)
 
 ### Variables
 
