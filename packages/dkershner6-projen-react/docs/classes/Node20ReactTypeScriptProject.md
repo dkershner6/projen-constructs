@@ -35,6 +35,7 @@
 - [gitpod](Node20ReactTypeScriptProject.md#gitpod)
 - [initProject](Node20ReactTypeScriptProject.md#initproject)
 - [jest](Node20ReactTypeScriptProject.md#jest)
+- [jestTransformer](Node20ReactTypeScriptProject.md#jesttransformer)
 - [libdir](Node20ReactTypeScriptProject.md#libdir)
 - [logger](Node20ReactTypeScriptProject.md#logger)
 - [name](Node20ReactTypeScriptProject.md#name)
@@ -373,6 +374,12 @@ The Jest configuration (if enabled)
 #### Inherited from
 
 TypeScriptProject.jest
+
+___
+
+### jestTransformer
+
+• `Readonly` **jestTransformer**: `JestTransformer`
 
 ___
 

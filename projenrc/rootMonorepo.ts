@@ -6,7 +6,7 @@ import {
 } from "../packages/dkershner6-projen-nx-monorepo/src/MonorepoProject";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
-    EslintConfig,
+    DKEslintConfig,
     DKBugFixes,
     DKTaskName,
     DKTasks,
@@ -46,7 +46,7 @@ export class RootMonorepo extends MonorepoProject {
         this.npmignore?.exclude(".DS_Store");
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
 
         for (const taskName of [

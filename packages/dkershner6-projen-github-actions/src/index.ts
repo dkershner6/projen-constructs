@@ -2,7 +2,7 @@ import deepClone from "clone-deep";
 import {
     DKBugFixes,
     DKTasks,
-    EslintConfig,
+    DKEslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
 import { JobPermission } from "projen/lib/github/workflows-model";
@@ -36,7 +36,7 @@ export class Node20GitHubActionTypescriptProject extends GitHubActionTypeScriptP
         super(combinedOptions);
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
 
         const releaseWorkflow = this.github?.tryFindWorkflow("release");

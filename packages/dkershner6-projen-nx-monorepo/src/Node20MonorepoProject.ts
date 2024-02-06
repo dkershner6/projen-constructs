@@ -4,7 +4,7 @@ import {
     DKBugFixes,
     DKTaskName,
     DKTasks,
-    EslintConfig,
+    DKEslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
 import { deepMerge } from "projen/lib/util";
@@ -29,7 +29,7 @@ export class Node20MonorepoProject extends MonorepoProject {
         );
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
 
         for (const taskName of [

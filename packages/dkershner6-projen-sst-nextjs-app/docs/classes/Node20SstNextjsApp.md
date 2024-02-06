@@ -40,6 +40,7 @@
 - [gitpod](Node20SstNextjsApp.md#gitpod)
 - [initProject](Node20SstNextjsApp.md#initproject)
 - [jest](Node20SstNextjsApp.md#jest)
+- [jestTransformer](Node20SstNextjsApp.md#jesttransformer)
 - [libdir](Node20SstNextjsApp.md#libdir)
 - [logger](Node20SstNextjsApp.md#logger)
 - [name](Node20SstNextjsApp.md#name)
@@ -441,6 +442,16 @@ The Jest configuration (if enabled)
 #### Inherited from
 
 Node20SstApp.jest
+
+___
+
+### jestTransformer
+
+• `Readonly` **jestTransformer**: `JestTransformer`
+
+#### Inherited from
+
+Node20SstApp.jestTransformer
 
 ___
 

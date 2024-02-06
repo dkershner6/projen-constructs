@@ -5,10 +5,10 @@ import {
     RECOMMENDED_JEST_CONFIG,
     RECOMMENDED_PRETTIER_CONFIG,
     DKBugFixes,
-    EslintConfig,
+    DKEslintConfig,
     DKTasks,
     Node20TypeScriptProjectJestOptions,
-    DKJest,
+    JestTransformer,
 } from "dkershner6-projen-typescript";
 import { ProjectOptions } from "projen";
 import {
@@ -35,6 +35,8 @@ export interface Node20AwsCdkConstructLibraryOptions
 }
 
 export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
+    public readonly jestTransformer: JestTransformer;
+
     constructor(options: Node20AwsCdkConstructLibraryOptions) {
         super(
             deepMerge([
@@ -44,8 +46,8 @@ export class Node20AwsCdkConstructLibrary extends AwsCdkConstructLibrary {
         );
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
-        new DKJest(this, options.jestOptions);
+        this.jestTransformer = new JestTransformer(this, options.jestOptions);
     }
 }

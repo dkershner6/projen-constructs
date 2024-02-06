@@ -1,10 +1,10 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / Node20TypeScriptExtraJestOptions
+[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / JestTransformerOptions
 
-# Interface: Node20TypeScriptExtraJestOptions
+# Interface: JestTransformerOptions
 
 ## Hierarchy
 
-- **`Node20TypeScriptExtraJestOptions`**
+- **`JestTransformerOptions`**
 
   ↳ [`Node20TypeScriptProjectJestOptions`](Node20TypeScriptProjectJestOptions.md)
 
@@ -12,7 +12,7 @@
 
 ### Properties
 
-- [modulesToTransform](Node20TypeScriptExtraJestOptions.md#modulestotransform)
+- [modulesToTransform](JestTransformerOptions.md#modulestotransform)
 
 ## Properties
 

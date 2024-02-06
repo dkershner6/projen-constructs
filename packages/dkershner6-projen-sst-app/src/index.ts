@@ -9,9 +9,9 @@ import {
 } from "dkershner6-projen-awscdk-core";
 import {
     DKBugFixes,
-    DKJest,
+    JestTransformer,
     DKTasks,
-    EslintConfig,
+    DKEslintConfig,
     Node20TypeScriptProjectJestOptions,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
@@ -43,6 +43,8 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
 }
 
 export class Node20SstApp extends SstTypescriptApp {
+    public readonly jestTransformer: JestTransformer;
+
     private readonly publishToAwsOptions?: PublishToAwsOptions;
 
     // eslint-disable-next-line sonarjs/cognitive-complexity
@@ -58,8 +60,8 @@ export class Node20SstApp extends SstTypescriptApp {
 
         new DKBugFixes(this);
         new DKTasks(this);
-        new EslintConfig(this);
-        new DKJest(this, options.jestOptions);
+        new DKEslintConfig(this);
+        this.jestTransformer = new JestTransformer(this, options.jestOptions);
 
         this.eslint?.allowDevDeps(`${this.srcdir}/main.ts`);
         this.eslint?.allowDevDeps(`${this.srcdir}/*Stack.ts`);
