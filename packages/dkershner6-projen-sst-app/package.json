@@ -128,7 +128,12 @@
           "isolatedModules": true
         }
       ]
-    }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!.pnpm)(?!(@babel/runtime|@mui.*|@panva/hkdf|bail|ccount|character-entities.*|comma-separated-tokens|decode-named-character-reference|devlop|direction|dom7|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|jose|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|separated-tokens|space-separated-tokens|ssr-window|stringify-entities|strip-markdown|swiper|swiper/react|trim-lines|trough|unified|unist.*|util-gfm.*|uuid|vfile.*|web-namespaces|zwitch)/)",
+      "/node_modules/.pnpm/(?!(@babel\\+runtime|@mui.*|@panva\\+hkdf|bail|ccount|character-entities.*|comma-separated-tokens|decode-named-character-reference|devlop|direction|dom7|escape-string-regexp|github-slugger|hast.*|html-void-elements|is-plain-obj|jose|longest-streak|markdown.*|mdast.*|micromark.*|property-information|rehype.*|remark.*|separated-tokens|space-separated-tokens|ssr-window|stringify-entities|strip-markdown|swiper|swiper\\+react|trim-lines|trough|unified|unist.*|util-gfm.*|uuid|vfile.*|web-namespaces|zwitch)@)",
+      "\\.pnp\\.[^\\/]+$"
+    ]
   },
   "types": "lib/index.d.ts",
   "sideEffects": false,
