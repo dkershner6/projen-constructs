@@ -6,25 +6,10 @@
 
 ### Properties
 
-- [configFolder](GraphQLSchemaLinterOptions.md#configfolder)
 - [graphqlSchemaLintConfig](GraphQLSchemaLinterOptions.md#graphqlschemalintconfig)
 - [graphqlSchemaLintConfigFilename](GraphQLSchemaLinterOptions.md#graphqlschemalintconfigfilename)
 
 ## Properties
-
-### configFolder
-
-• `Optional` `Readonly` **configFolder**: `string`
-
-The directory of the graphql-schema-lint other files.
-
-**`Default`**
-
-```ts
-".graphql-schema-lint"
-```
-
-___
 
 ### graphqlSchemaLintConfig
 
