@@ -424,20 +424,16 @@ export class JestTransformer extends Component {
         if (project.jest) {
             project.addDevDeps("jest-mock");
 
-            if (options?.modulesToTransform) {
-                project.jest.config.transformIgnorePatterns =
-                    this.buildTransformIgnorePatterns([
-                        ...(
-                            (project.jest.config.transformIgnorePatterns as
-                                | string[]
-                                | undefined) ?? new Array<string>()
-                        ).filter(
-                            (pattern) => !pattern.includes("node_modules"),
-                        ),
-                        ...JestTransformer.ESM_MODULES_TO_TRANSFORM,
-                        ...options.modulesToTransform,
-                    ]);
-            }
+            project.jest.config.transformIgnorePatterns =
+                this.buildTransformIgnorePatterns([
+                    ...(
+                        (project.jest.config.transformIgnorePatterns as
+                            | string[]
+                            | undefined) ?? new Array<string>()
+                    ).filter((pattern) => !pattern.includes("node_modules")),
+                    ...JestTransformer.ESM_MODULES_TO_TRANSFORM,
+                    ...Array.from(this._modulesToTransform),
+                ]);
         }
     }
 
