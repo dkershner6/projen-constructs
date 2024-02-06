@@ -36,6 +36,7 @@
 - [gitpod](Node20AwsCdkConstructLibrary.md#gitpod)
 - [initProject](Node20AwsCdkConstructLibrary.md#initproject)
 - [jest](Node20AwsCdkConstructLibrary.md#jest)
+- [jestTransformer](Node20AwsCdkConstructLibrary.md#jesttransformer)
 - [libdir](Node20AwsCdkConstructLibrary.md#libdir)
 - [logger](Node20AwsCdkConstructLibrary.md#logger)
 - [name](Node20AwsCdkConstructLibrary.md#name)
@@ -389,6 +390,12 @@ The Jest configuration (if enabled)
 #### Inherited from
 
 AwsCdkConstructLibrary.jest
+
+___
+
+### jestTransformer
+
+• `Readonly` **jestTransformer**: `JestTransformer`
 
 ___
 

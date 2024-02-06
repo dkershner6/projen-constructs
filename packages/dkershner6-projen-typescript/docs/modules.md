@@ -11,14 +11,14 @@
 ### Classes
 
 - [DKBugFixes](classes/DKBugFixes.md)
-- [DKJest](classes/DKJest.md)
+- [DKEslintConfig](classes/DKEslintConfig.md)
 - [DKTasks](classes/DKTasks.md)
-- [EslintConfig](classes/EslintConfig.md)
+- [JestTransformer](classes/JestTransformer.md)
 - [Node20TypeScriptProject](classes/Node20TypeScriptProject.md)
 
 ### Interfaces
 
-- [Node20TypeScriptExtraJestOptions](interfaces/Node20TypeScriptExtraJestOptions.md)
+- [JestTransformerOptions](interfaces/JestTransformerOptions.md)
 - [Node20TypeScriptProjectJestOptions](interfaces/Node20TypeScriptProjectJestOptions.md)
 - [Node20TypeScriptProjectOptions](interfaces/Node20TypeScriptProjectOptions.md)
 
@@ -37,10 +37,6 @@
 - [RECOMMENDED\_TSCONFIG\_NODE\_20](modules.md#recommended_tsconfig_node_20)
 - [TEST\_FILE\_SUFFIXES](modules.md#test_file_suffixes)
 - [TEST\_FOLDERS](modules.md#test_folders)
-
-### Functions
-
-- [buildJestTransformIgnorePatterns](modules.md#buildjesttransformignorepatterns)
 
 ## Variables
 
@@ -119,19 +115,3 @@ ___
 ### TEST\_FOLDERS
 
 • `Const` **TEST\_FOLDERS**: `string`[]
-
-## Functions
-
-### buildJestTransformIgnorePatterns
-
-▸ **buildJestTransformIgnorePatterns**(`nodeModulesToTransform?`): `string`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `nodeModulesToTransform?` | `string`[] |
-
-#### Returns
-
-`string`[]

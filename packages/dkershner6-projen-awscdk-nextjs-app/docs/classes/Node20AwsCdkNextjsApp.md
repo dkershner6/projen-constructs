@@ -39,6 +39,7 @@
 - [gitpod](Node20AwsCdkNextjsApp.md#gitpod)
 - [initProject](Node20AwsCdkNextjsApp.md#initproject)
 - [jest](Node20AwsCdkNextjsApp.md#jest)
+- [jestTransformer](Node20AwsCdkNextjsApp.md#jesttransformer)
 - [libdir](Node20AwsCdkNextjsApp.md#libdir)
 - [logger](Node20AwsCdkNextjsApp.md#logger)
 - [name](Node20AwsCdkNextjsApp.md#name)
@@ -428,6 +429,16 @@ The Jest configuration (if enabled)
 #### Inherited from
 
 Node20AwsCdkApp.jest
+
+___
+
+### jestTransformer
+
+• `Readonly` **jestTransformer**: `JestTransformer`
+
+#### Inherited from
+
+Node20AwsCdkApp.jestTransformer
 
 ___
 

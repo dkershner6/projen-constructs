@@ -1,38 +1,47 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / DKJest
+[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / JestTransformer
 
-# Class: DKJest
+# Class: JestTransformer
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`DKJest`**
+  ↳ **`JestTransformer`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](DKJest.md#constructor)
+- [constructor](JestTransformer.md#constructor)
 
 ### Properties
 
-- [node](DKJest.md#node)
-- [project](DKJest.md#project)
+- [\_modulesToTransform](JestTransformer.md#_modulestotransform)
+- [node](JestTransformer.md#node)
+- [project](JestTransformer.md#project)
+- [ESM\_MODULES\_TO\_TRANSFORM](JestTransformer.md#esm_modules_to_transform)
+
+### Accessors
+
+- [modulesToTransform](JestTransformer.md#modulestotransform)
 
 ### Methods
 
-- [postSynthesize](DKJest.md#postsynthesize)
-- [preSynthesize](DKJest.md#presynthesize)
-- [synthesize](DKJest.md#synthesize)
-- [toString](DKJest.md#tostring)
-- [isComponent](DKJest.md#iscomponent)
-- [isConstruct](DKJest.md#isconstruct)
+- [addModulesToTransform](JestTransformer.md#addmodulestotransform)
+- [buildTransformIgnorePatterns](JestTransformer.md#buildtransformignorepatterns)
+- [postSynthesize](JestTransformer.md#postsynthesize)
+- [preSynthesize](JestTransformer.md#presynthesize)
+- [removeModulesToTransform](JestTransformer.md#removemodulestotransform)
+- [synthesize](JestTransformer.md#synthesize)
+- [toString](JestTransformer.md#tostring)
+- [isComponent](JestTransformer.md#iscomponent)
+- [isConstruct](JestTransformer.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new DKJest**(`project`, `options?`): [`DKJest`](DKJest.md)
+• **new JestTransformer**(`project`, `options?`): [`JestTransformer`](JestTransformer.md)
 
 #### Parameters
 
@@ -43,13 +52,19 @@
 
 #### Returns
 
-[`DKJest`](DKJest.md)
+[`JestTransformer`](JestTransformer.md)
 
 #### Overrides
 
 Component.constructor
 
 ## Properties
+
+### \_modulesToTransform
+
+• `Private` `Readonly` **\_modulesToTransform**: `Set`\<`string`\>
+
+___
 
 ### node
 
@@ -71,7 +86,55 @@ ___
 
 Component.project
 
+___
+
+### ESM\_MODULES\_TO\_TRANSFORM
+
+▪ `Static` **ESM\_MODULES\_TO\_TRANSFORM**: `string`[]
+
+## Accessors
+
+### modulesToTransform
+
+• `get` **modulesToTransform**(): `Set`\<`string`\>
+
+#### Returns
+
+`Set`\<`string`\>
+
 ## Methods
+
+### addModulesToTransform
+
+▸ **addModulesToTransform**(`...modules`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...modules` | `string`[] |
+
+#### Returns
+
+`void`
+
+___
+
+### buildTransformIgnorePatterns
+
+▸ **buildTransformIgnorePatterns**(`nodeModulesToTransform?`): `string`[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `nodeModulesToTransform?` | `string`[] |
+
+#### Returns
+
+`string`[]
+
+___
 
 ### postSynthesize
 
@@ -102,6 +165,22 @@ Called before synthesis.
 #### Inherited from
 
 Component.preSynthesize
+
+___
+
+### removeModulesToTransform
+
+▸ **removeModulesToTransform**(`...modules`): `void`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...modules` | `string`[] |
+
+#### Returns
+
+`void`
 
 ___
 

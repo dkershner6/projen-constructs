@@ -100,70 +100,12 @@ export const RECOMMENDED_ESLINT_CONFIG: Partial<TypeScriptProjectOptions> = {
     eslint: true,
 };
 
-const ESM_MODULES_TO_TRANSFORM = [
-    "@babel/runtime",
-    "@mui*",
-    "separated-tokens",
-    "util-gfm.*",
-    "bail",
-    "ccount",
-    "character-entities.*",
-    "decode-named-character-reference",
-    "devlop",
-    "direction",
-    "escape-string-regexp",
-    "github-slugger",
-    "hast.*",
-    "html-void-elements",
-    "is-plain-obj",
-    "longest-streak",
-    "markdown.*",
-    "mdast.*",
-    "micromark.*",
-    "property-information",
-    "rehype.*",
-    "remark.*",
-    "stringify-entities",
-    "strip-markdown",
-    "trim-lines",
-    "trough",
-    "unified",
-    "unist.*",
-    "vfile.*",
-    "web-namespaces",
-    "zwitch",
-    "@panva/hkdf",
-    "jose",
-    "swiper",
-    "swiper/react",
-    "ssr-window",
-    "dom7",
-    "uuid",
-];
-
-export const buildJestTransformIgnorePatterns = (
-    nodeModulesToTransform?: string[],
-): string[] => {
-    const modulesRegex = [
-        ...new Set([
-            ...ESM_MODULES_TO_TRANSFORM,
-            ...(nodeModulesToTransform ?? []),
-        ]),
-    ].join("|");
-    return [
-        `/node_modules/(?!.pnpm)(?!(${modulesRegex})/)`,
-        `/node_modules/.pnpm/(?!(${modulesRegex.replace(/\//g, "\\+")})@)`, // default is just `node_modules`
-        "\\.pnp\\.[^\\/]+$", // default
-    ];
-};
-
 export const RECOMMENDED_JEST_CONFIG: Partial<TypeScriptProjectOptions> = {
     jest: true,
     jestOptions: {
         jestConfig: {
             testEnvironment: "node",
             testTimeout: 15000,
-            transformIgnorePatterns: buildJestTransformIgnorePatterns(),
         },
     },
     tsJestOptions: {
@@ -236,7 +178,7 @@ export class DKBugFixes extends Component {
     }
 }
 
-export class EslintConfig extends Component {
+export class DKEslintConfig extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
@@ -410,7 +352,7 @@ export class DKTasks extends Component {
     }
 }
 
-export interface Node20TypeScriptExtraJestOptions {
+export interface JestTransformerOptions {
     /**
      * Additional modules for jest to transform, typically ESM modules.
      *
@@ -421,25 +363,112 @@ export interface Node20TypeScriptExtraJestOptions {
 
 export interface Node20TypeScriptProjectJestOptions
     extends JestOptions,
-        Node20TypeScriptExtraJestOptions {}
+        JestTransformerOptions {}
 
-export class DKJest extends Component {
+export class JestTransformer extends Component {
+    public static ESM_MODULES_TO_TRANSFORM = [
+        "@babel/runtime",
+        "@mui.*",
+        "@panva/hkdf",
+        "bail",
+        "ccount",
+        "character-entities.*",
+        "comma-separated-tokens",
+        "decode-named-character-reference",
+        "devlop",
+        "direction",
+        "dom7",
+        "escape-string-regexp",
+        "github-slugger",
+        "hast.*",
+        "html-void-elements",
+        "is-plain-obj",
+        "jose",
+        "longest-streak",
+        "markdown.*",
+        "mdast.*",
+        "micromark.*",
+        "property-information",
+        "rehype.*",
+        "remark.*",
+        "separated-tokens",
+        "space-separated-tokens",
+        "ssr-window",
+        "stringify-entities",
+        "strip-markdown",
+        "swiper",
+        "swiper/react",
+        "trim-lines",
+        "trough",
+        "unified",
+        "unist.*",
+        "util-gfm.*",
+        "uuid",
+        "vfile.*",
+        "web-namespaces",
+        "zwitch",
+    ];
+
+    private readonly _modulesToTransform = new Set<string>();
+
     constructor(
         project: TypeScriptProject,
         options?: Node20TypeScriptProjectJestOptions,
     ) {
         super(project);
 
+        if (options?.modulesToTransform) {
+            this.addModulesToTransform(...options.modulesToTransform);
+        }
+
         if (project.jest) {
             project.addDevDeps("jest-mock");
+
             if (options?.modulesToTransform) {
                 project.jest.config.transformIgnorePatterns =
-                    buildJestTransformIgnorePatterns([
-                        ...ESM_MODULES_TO_TRANSFORM,
+                    this.buildTransformIgnorePatterns([
+                        ...(
+                            (project.jest.config.transformIgnorePatterns as
+                                | string[]
+                                | undefined) ?? new Array<string>()
+                        ).filter(
+                            (pattern) => !pattern.includes("node_modules"),
+                        ),
+                        ...JestTransformer.ESM_MODULES_TO_TRANSFORM,
                         ...options.modulesToTransform,
                     ]);
             }
         }
+    }
+
+    public get modulesToTransform(): Set<string> {
+        return this._modulesToTransform;
+    }
+
+    public addModulesToTransform(...modules: string[]): void {
+        for (const module of modules) {
+            this._modulesToTransform.add(module);
+        }
+    }
+
+    public removeModulesToTransform(...modules: string[]): void {
+        for (const module of modules) {
+            this._modulesToTransform.delete(module);
+        }
+    }
+
+    private buildTransformIgnorePatterns(
+        nodeModulesToTransform?: string[],
+    ): string[] {
+        const modulesRegex = [
+            ...new Set([...(nodeModulesToTransform ?? [])]),
+        ].join("|");
+
+        return [
+            `/node_modules/(?!.pnpm)(?!(${modulesRegex})/)`,
+            `/node_modules/.pnpm/(?!(${modulesRegex.replace(/\//g, "\\+")})@)`, // default is just `node_modules`
+            "\\.pnp\\.[^\\/]+$", // default
+        ];
     }
 }
 
@@ -449,6 +478,8 @@ export interface Node20TypeScriptProjectOptions
 }
 
 export class Node20TypeScriptProject extends TypeScriptProject {
+    public readonly jestTransformer: JestTransformer;
+
     constructor(options: Node20TypeScriptProjectOptions) {
         super(
             deepMerge([
@@ -458,8 +489,8 @@ export class Node20TypeScriptProject extends TypeScriptProject {
         );
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
-        new DKJest(this, options.jestOptions);
+        this.jestTransformer = new JestTransformer(this, options.jestOptions);
     }
 }

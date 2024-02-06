@@ -2,9 +2,9 @@ import deepClone from "clone-deep";
 import {
     DEV_FILE_PATTERNS,
     DKBugFixes,
-    DKJest,
+    JestTransformer,
     DKTasks,
-    EslintConfig,
+    DKEslintConfig,
     Node20TypeScriptProjectOptions,
     PUBLISH_FILE_PATTERNS,
     RECOMMENDED_ESLINT_CONFIG,
@@ -203,6 +203,8 @@ export class Node20ReactTypescriptConfigurer extends Component {
 }
 
 export class Node20ReactTypeScriptProject extends TypeScriptProject {
+    public readonly jestTransformer: JestTransformer;
+
     constructor(options: Node20TypeScriptProjectOptions) {
         super(
             deepMerge([
@@ -212,9 +214,9 @@ export class Node20ReactTypeScriptProject extends TypeScriptProject {
         );
 
         new DKBugFixes(this);
-        new EslintConfig(this);
+        new DKEslintConfig(this);
         new DKTasks(this);
-        new DKJest(this, options.jestOptions);
+        this.jestTransformer = new JestTransformer(this, options.jestOptions);
 
         new Node20ReactTypescriptConfigurer(this);
     }

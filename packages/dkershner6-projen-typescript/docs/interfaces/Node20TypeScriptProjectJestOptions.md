@@ -6,7 +6,7 @@
 
 - `JestOptions`
 
-- [`Node20TypeScriptExtraJestOptions`](Node20TypeScriptExtraJestOptions.md)
+- [`JestTransformerOptions`](JestTransformerOptions.md)
 
   ↳ **`Node20TypeScriptProjectJestOptions`**
 
@@ -199,7 +199,7 @@ Additional modules for jest to transform, typically ESM modules.
 
 #### Inherited from
 
-[Node20TypeScriptExtraJestOptions](Node20TypeScriptExtraJestOptions.md).[modulesToTransform](Node20TypeScriptExtraJestOptions.md#modulestotransform)
+[JestTransformerOptions](JestTransformerOptions.md).[modulesToTransform](JestTransformerOptions.md#modulestotransform)
 
 ___
 

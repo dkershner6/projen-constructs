@@ -1,38 +1,38 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / EslintConfig
+[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / DKEslintConfig
 
-# Class: EslintConfig
+# Class: DKEslintConfig
 
 ## Hierarchy
 
 - `Component`
 
-  ↳ **`EslintConfig`**
+  ↳ **`DKEslintConfig`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](EslintConfig.md#constructor)
+- [constructor](DKEslintConfig.md#constructor)
 
 ### Properties
 
-- [node](EslintConfig.md#node)
-- [project](EslintConfig.md#project)
+- [node](DKEslintConfig.md#node)
+- [project](DKEslintConfig.md#project)
 
 ### Methods
 
-- [postSynthesize](EslintConfig.md#postsynthesize)
-- [preSynthesize](EslintConfig.md#presynthesize)
-- [synthesize](EslintConfig.md#synthesize)
-- [toString](EslintConfig.md#tostring)
-- [isComponent](EslintConfig.md#iscomponent)
-- [isConstruct](EslintConfig.md#isconstruct)
+- [postSynthesize](DKEslintConfig.md#postsynthesize)
+- [preSynthesize](DKEslintConfig.md#presynthesize)
+- [synthesize](DKEslintConfig.md#synthesize)
+- [toString](DKEslintConfig.md#tostring)
+- [isComponent](DKEslintConfig.md#iscomponent)
+- [isConstruct](DKEslintConfig.md#isconstruct)
 
 ## Constructors
 
 ### constructor
 
-• **new EslintConfig**(`project`): [`EslintConfig`](EslintConfig.md)
+• **new DKEslintConfig**(`project`): [`DKEslintConfig`](DKEslintConfig.md)
 
 #### Parameters
 
@@ -42,7 +42,7 @@
 
 #### Returns
 
-[`EslintConfig`](EslintConfig.md)
+[`DKEslintConfig`](DKEslintConfig.md)
 
 #### Overrides
 

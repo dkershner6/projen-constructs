@@ -8,9 +8,9 @@ import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     DKBugFixes,
     DKTasks,
-    EslintConfig,
+    DKEslintConfig,
     Node20TypeScriptProjectJestOptions,
-    DKJest,
+    JestTransformer,
 } from "dkershner6-projen-typescript";
 import { Task, awscdk } from "projen";
 import { JobStep } from "projen/lib/github/workflows-model";
@@ -38,6 +38,8 @@ export interface Node20AwsCdkAppOptions
 }
 
 export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
+    public readonly jestTransformer: JestTransformer;
+
     private readonly publishToAwsOptions?: PublishToAwsOptions;
 
     constructor(options: Node20AwsCdkAppOptions) {
@@ -51,8 +53,8 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
 
         new DKBugFixes(this);
         new DKTasks(this);
-        new EslintConfig(this);
-        new DKJest(this, options.jestOptions);
+        new DKEslintConfig(this);
+        this.jestTransformer = new JestTransformer(this, options.jestOptions);
 
         this.eslint?.allowDevDeps(`${this.srcdir}/main.ts`);
         this.eslint?.allowDevDeps(`${this.srcdir}/*Stack.ts`);
