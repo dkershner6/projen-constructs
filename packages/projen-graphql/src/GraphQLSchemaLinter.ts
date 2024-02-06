@@ -3,6 +3,7 @@ import { NodeProject } from "projen/lib/javascript";
 
 export interface GraphQLSchemaLinterConfig {
     customRulePaths?: string[];
+    ignore?: Record<string, string[]>;
     rules?: string[];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     ruleOptions?: Record<string, any>;
@@ -10,13 +11,6 @@ export interface GraphQLSchemaLinterConfig {
 }
 
 export interface GraphQLSchemaLinterOptions {
-    /**
-     * The directory of the graphql-schema-lint other files.
-     *
-     * @default ".graphql-schema-lint"
-     */
-    readonly configFolder?: string;
-
     /**
      * The filename of the graphql-schema-lint configuration file.
      *
