@@ -1,4 +1,5 @@
 import { monorepo } from "@aws/pdk";
+import { NodePackageUtils } from "@aws/pdk/monorepo";
 import deepClone from "clone-deep";
 import {
     DKBugFixes,
@@ -62,9 +63,15 @@ export class Node20MonorepoProject extends MonorepoProject {
             this.tasks.addTask(upgradeTask.name, {
                 description: upgradeTask.description,
                 env: upgradeTask.envVars,
-
                 steps: [
-                    ...checkUpdatesTask.steps,
+                    { spawn: checkUpdatesTask.name },
+                    {
+                        exec: NodePackageUtils.command.exec(
+                            this.package.packageManager,
+                            "syncpack",
+                            "fix-mismatches",
+                        ),
+                    },
                     // @ts-expect-error - It's there
                     ...upgradeTask._renderSpec().steps.toJSON(),
                 ],

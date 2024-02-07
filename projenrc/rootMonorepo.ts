@@ -1,3 +1,4 @@
+import { NodePackageUtils } from "@aws/pdk/monorepo";
 import merge from "lodash.merge";
 
 import {
@@ -88,7 +89,14 @@ export class RootMonorepo extends MonorepoProject {
                 env: upgradeTask.envVars,
 
                 steps: [
-                    ...checkUpdatesTask.steps,
+                    { spawn: checkUpdatesTask.name },
+                    {
+                        exec: NodePackageUtils.command.exec(
+                            this.package.packageManager,
+                            "syncpack",
+                            "fix-mismatches",
+                        ),
+                    },
                     // @ts-expect-error - It's there
                     ...upgradeTask._renderSpec().steps.toJSON(),
                 ],
