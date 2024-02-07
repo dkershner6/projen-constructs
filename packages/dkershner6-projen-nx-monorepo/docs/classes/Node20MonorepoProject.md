@@ -48,7 +48,6 @@
 - [prettier](Node20MonorepoProject.md#prettier)
 - [projectBuild](Node20MonorepoProject.md#projectbuild)
 - [projectType](Node20MonorepoProject.md#projecttype)
-- [projenCommand](Node20MonorepoProject.md#projencommand)
 - [publisher](Node20MonorepoProject.md#publisher)
 - [release](Node20MonorepoProject.md#release)
 - [runScriptCommand](Node20MonorepoProject.md#runscriptcommand)
@@ -85,6 +84,7 @@
 - [packageTask](Node20MonorepoProject.md#packagetask)
 - [postCompileTask](Node20MonorepoProject.md#postcompiletask)
 - [preCompileTask](Node20MonorepoProject.md#precompiletask)
+- [projenCommand](Node20MonorepoProject.md#projencommand)
 - [root](Node20MonorepoProject.md#root)
 - [sortedSubProjects](Node20MonorepoProject.md#sortedsubprojects)
 - [subprojects](Node20MonorepoProject.md#subprojects)
@@ -532,18 +532,6 @@ ___
 #### Inherited from
 
 [MonorepoProject](MonorepoProject.md).[projectType](MonorepoProject.md#projecttype)
-
-___
-
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-[MonorepoProject](MonorepoProject.md).[projenCommand](MonorepoProject.md#projencommand)
 
 ___
 
@@ -1006,6 +994,22 @@ ___
 #### Inherited from
 
 MonorepoProject.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+MonorepoProject.projenCommand
 
 ___
 
@@ -1678,7 +1682,7 @@ ___
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 [MonorepoProject](MonorepoProject.md).[preSynthesize](MonorepoProject.md#presynthesize)
 

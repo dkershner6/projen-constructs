@@ -53,7 +53,6 @@
 - [prettier](Node20AwsCdkNextjsApp.md#prettier)
 - [projectBuild](Node20AwsCdkNextjsApp.md#projectbuild)
 - [projectType](Node20AwsCdkNextjsApp.md#projecttype)
-- [projenCommand](Node20AwsCdkNextjsApp.md#projencommand)
 - [publisher](Node20AwsCdkNextjsApp.md#publisher)
 - [release](Node20AwsCdkNextjsApp.md#release)
 - [runScriptCommand](Node20AwsCdkNextjsApp.md#runscriptcommand)
@@ -90,6 +89,7 @@
 - [packageTask](Node20AwsCdkNextjsApp.md#packagetask)
 - [postCompileTask](Node20AwsCdkNextjsApp.md#postcompiletask)
 - [preCompileTask](Node20AwsCdkNextjsApp.md#precompiletask)
+- [projenCommand](Node20AwsCdkNextjsApp.md#projencommand)
 - [root](Node20AwsCdkNextjsApp.md#root)
 - [subprojects](Node20AwsCdkNextjsApp.md#subprojects)
 - [testTask](Node20AwsCdkNextjsApp.md#testtask)
@@ -586,18 +586,6 @@ Node20AwsCdkApp.projectType
 
 ___
 
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-Node20AwsCdkApp.projenCommand
-
-___
-
 ### publisher
 
 • `Optional` `Readonly` **publisher**: `Publisher`
@@ -1057,6 +1045,22 @@ ___
 #### Inherited from
 
 Node20AwsCdkApp.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+Node20AwsCdkApp.projenCommand
 
 ___
 

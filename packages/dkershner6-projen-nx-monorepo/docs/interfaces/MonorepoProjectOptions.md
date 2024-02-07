@@ -30,6 +30,7 @@
 - [buildWorkflowTriggers](MonorepoProjectOptions.md#buildworkflowtriggers)
 - [bundledDeps](MonorepoProjectOptions.md#bundleddeps)
 - [bundlerOptions](MonorepoProjectOptions.md#bundleroptions)
+- [checkLicenses](MonorepoProjectOptions.md#checklicenses)
 - [clobber](MonorepoProjectOptions.md#clobber)
 - [codeArtifactOptions](MonorepoProjectOptions.md#codeartifactoptions)
 - [codeCov](MonorepoProjectOptions.md#codecov)
@@ -142,6 +143,7 @@
 - [stale](MonorepoProjectOptions.md#stale)
 - [staleOptions](MonorepoProjectOptions.md#staleoptions)
 - [testdir](MonorepoProjectOptions.md#testdir)
+- [tsJestOptions](MonorepoProjectOptions.md#tsjestoptions)
 - [tsconfig](MonorepoProjectOptions.md#tsconfig)
 - [tsconfigDev](MonorepoProjectOptions.md#tsconfigdev)
 - [tsconfigDevFile](MonorepoProjectOptions.md#tsconfigdevfile)
@@ -517,6 +519,29 @@ experimental
 #### Inherited from
 
 monorepo.MonorepoTsProjectOptions.bundlerOptions
+
+___
+
+### checkLicenses
+
+• `Optional` `Readonly` **checkLicenses**: `LicenseCheckerOptions`
+
+Configure which licenses should be deemed acceptable for use by dependencies.
+This setting will cause the build to fail, if any prohibited or not allowed licenses ares encountered.
+
+**`Default`**
+
+```ts
+- no license checks are run during the build and all licenses will be accepted
+```
+
+**`Stability`**
+
+experimental
+
+#### Inherited from
+
+monorepo.MonorepoTsProjectOptions.checkLicenses
 
 ___
 
@@ -2710,7 +2735,7 @@ The name of the default release workflow.
 **`Default`**
 
 ```ts
-"Release"
+"release"
 ```
 
 **`Stability`**
@@ -2994,6 +3019,22 @@ experimental
 #### Inherited from
 
 monorepo.MonorepoTsProjectOptions.testdir
+
+___
+
+### tsJestOptions
+
+• `Optional` `Readonly` **tsJestOptions**: `TsJestOptions`
+
+Options for ts-jest.
+
+**`Stability`**
+
+experimental
+
+#### Inherited from
+
+monorepo.MonorepoTsProjectOptions.tsJestOptions
 
 ___
 

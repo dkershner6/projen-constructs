@@ -54,7 +54,6 @@
 - [prettier](Node20SstNextjsApp.md#prettier)
 - [projectBuild](Node20SstNextjsApp.md#projectbuild)
 - [projectType](Node20SstNextjsApp.md#projecttype)
-- [projenCommand](Node20SstNextjsApp.md#projencommand)
 - [publisher](Node20SstNextjsApp.md#publisher)
 - [release](Node20SstNextjsApp.md#release)
 - [runScriptCommand](Node20SstNextjsApp.md#runscriptcommand)
@@ -93,6 +92,7 @@
 - [packageTask](Node20SstNextjsApp.md#packagetask)
 - [postCompileTask](Node20SstNextjsApp.md#postcompiletask)
 - [preCompileTask](Node20SstNextjsApp.md#precompiletask)
+- [projenCommand](Node20SstNextjsApp.md#projencommand)
 - [root](Node20SstNextjsApp.md#root)
 - [subprojects](Node20SstNextjsApp.md#subprojects)
 - [testTask](Node20SstNextjsApp.md#testtask)
@@ -599,18 +599,6 @@ Node20SstApp.projectType
 
 ___
 
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-Node20SstApp.projenCommand
-
-___
-
 ### publisher
 
 • `Optional` `Readonly` **publisher**: `Publisher`
@@ -1090,6 +1078,22 @@ ___
 #### Inherited from
 
 Node20SstApp.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+Node20SstApp.projenCommand
 
 ___
 

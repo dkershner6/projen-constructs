@@ -49,7 +49,6 @@
 - [prettier](Node20AwsCdkConstructLibrary.md#prettier)
 - [projectBuild](Node20AwsCdkConstructLibrary.md#projectbuild)
 - [projectType](Node20AwsCdkConstructLibrary.md#projecttype)
-- [projenCommand](Node20AwsCdkConstructLibrary.md#projencommand)
 - [publisher](Node20AwsCdkConstructLibrary.md#publisher)
 - [release](Node20AwsCdkConstructLibrary.md#release)
 - [runScriptCommand](Node20AwsCdkConstructLibrary.md#runscriptcommand)
@@ -86,6 +85,7 @@
 - [packageTask](Node20AwsCdkConstructLibrary.md#packagetask)
 - [postCompileTask](Node20AwsCdkConstructLibrary.md#postcompiletask)
 - [preCompileTask](Node20AwsCdkConstructLibrary.md#precompiletask)
+- [projenCommand](Node20AwsCdkConstructLibrary.md#projencommand)
 - [releaseTagFilePath](Node20AwsCdkConstructLibrary.md#releasetagfilepath)
 - [root](Node20AwsCdkConstructLibrary.md#root)
 - [subprojects](Node20AwsCdkConstructLibrary.md#subprojects)
@@ -534,18 +534,6 @@ ___
 #### Inherited from
 
 AwsCdkConstructLibrary.projectType
-
-___
-
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-AwsCdkConstructLibrary.projenCommand
 
 ___
 
@@ -1008,6 +996,22 @@ ___
 #### Inherited from
 
 AwsCdkConstructLibrary.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+AwsCdkConstructLibrary.projenCommand
 
 ___
 

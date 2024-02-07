@@ -53,7 +53,6 @@
 - [prettier](Node20SstApp.md#prettier)
 - [projectBuild](Node20SstApp.md#projectbuild)
 - [projectType](Node20SstApp.md#projecttype)
-- [projenCommand](Node20SstApp.md#projencommand)
 - [publishToAwsOptions](Node20SstApp.md#publishtoawsoptions)
 - [publisher](Node20SstApp.md#publisher)
 - [release](Node20SstApp.md#release)
@@ -93,6 +92,7 @@
 - [packageTask](Node20SstApp.md#packagetask)
 - [postCompileTask](Node20SstApp.md#postcompiletask)
 - [preCompileTask](Node20SstApp.md#precompiletask)
+- [projenCommand](Node20SstApp.md#projencommand)
 - [root](Node20SstApp.md#root)
 - [subprojects](Node20SstApp.md#subprojects)
 - [testTask](Node20SstApp.md#testtask)
@@ -590,18 +590,6 @@ SstTypescriptApp.projectType
 
 ___
 
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-SstTypescriptApp.projenCommand
-
-___
-
 ### publishToAwsOptions
 
 • `Private` `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
@@ -1087,6 +1075,22 @@ ___
 #### Inherited from
 
 SstTypescriptApp.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+SstTypescriptApp.projenCommand
 
 ___
 

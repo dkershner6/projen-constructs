@@ -18,6 +18,7 @@
 
 ### Interfaces
 
+- [DKTasksOptions](interfaces/DKTasksOptions.md)
 - [JestTransformerOptions](interfaces/JestTransformerOptions.md)
 - [Node20TypeScriptProjectJestOptions](interfaces/Node20TypeScriptProjectJestOptions.md)
 - [Node20TypeScriptProjectOptions](interfaces/Node20TypeScriptProjectOptions.md)

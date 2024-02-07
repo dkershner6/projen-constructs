@@ -47,7 +47,6 @@
 - [prettier](Node20GitHubActionTypescriptProject.md#prettier)
 - [projectBuild](Node20GitHubActionTypescriptProject.md#projectbuild)
 - [projectType](Node20GitHubActionTypescriptProject.md#projecttype)
-- [projenCommand](Node20GitHubActionTypescriptProject.md#projencommand)
 - [publisher](Node20GitHubActionTypescriptProject.md#publisher)
 - [release](Node20GitHubActionTypescriptProject.md#release)
 - [runScriptCommand](Node20GitHubActionTypescriptProject.md#runscriptcommand)
@@ -83,6 +82,7 @@
 - [packageTask](Node20GitHubActionTypescriptProject.md#packagetask)
 - [postCompileTask](Node20GitHubActionTypescriptProject.md#postcompiletask)
 - [preCompileTask](Node20GitHubActionTypescriptProject.md#precompiletask)
+- [projenCommand](Node20GitHubActionTypescriptProject.md#projencommand)
 - [root](Node20GitHubActionTypescriptProject.md#root)
 - [subprojects](Node20GitHubActionTypescriptProject.md#subprojects)
 - [testTask](Node20GitHubActionTypescriptProject.md#testtask)
@@ -511,18 +511,6 @@ ___
 #### Inherited from
 
 GitHubActionTypeScriptProject.projectType
-
-___
-
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-GitHubActionTypeScriptProject.projenCommand
 
 ___
 
@@ -969,6 +957,22 @@ ___
 #### Inherited from
 
 GitHubActionTypeScriptProject.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+GitHubActionTypeScriptProject.projenCommand
 
 ___
 
