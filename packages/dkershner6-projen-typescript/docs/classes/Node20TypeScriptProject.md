@@ -48,7 +48,6 @@
 - [prettier](Node20TypeScriptProject.md#prettier)
 - [projectBuild](Node20TypeScriptProject.md#projectbuild)
 - [projectType](Node20TypeScriptProject.md#projecttype)
-- [projenCommand](Node20TypeScriptProject.md#projencommand)
 - [publisher](Node20TypeScriptProject.md#publisher)
 - [release](Node20TypeScriptProject.md#release)
 - [runScriptCommand](Node20TypeScriptProject.md#runscriptcommand)
@@ -84,6 +83,7 @@
 - [packageTask](Node20TypeScriptProject.md#packagetask)
 - [postCompileTask](Node20TypeScriptProject.md#postcompiletask)
 - [preCompileTask](Node20TypeScriptProject.md#precompiletask)
+- [projenCommand](Node20TypeScriptProject.md#projencommand)
 - [root](Node20TypeScriptProject.md#root)
 - [subprojects](Node20TypeScriptProject.md#subprojects)
 - [testTask](Node20TypeScriptProject.md#testtask)
@@ -518,18 +518,6 @@ ___
 #### Inherited from
 
 TypeScriptProject.projectType
-
-___
-
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-TypeScriptProject.projenCommand
 
 ___
 
@@ -976,6 +964,22 @@ ___
 #### Inherited from
 
 TypeScriptProject.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+TypeScriptProject.projenCommand
 
 ___
 

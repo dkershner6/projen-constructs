@@ -1,3 +1,4 @@
+import { NodePackageUtils } from "@aws/pdk/monorepo";
 import merge from "lodash.merge";
 
 import {
@@ -47,7 +48,9 @@ export class RootMonorepo extends MonorepoProject {
 
         new DKBugFixes(this);
         new DKEslintConfig(this);
-        new DKTasks(this);
+        new DKTasks(this, {
+            checkUpdatesTask: false,
+        });
 
         for (const taskName of [
             DKTaskName.LINT,
@@ -70,5 +73,34 @@ export class RootMonorepo extends MonorepoProject {
             "OTNiNWJlNjgtNGE5NS00YmYwLWFmYTMtOGFlODM3YTkwNWFkfHJlYWQ=",
         );
         this.addGitIgnore("nx-cloud.env");
+    }
+
+    override preSynthesize(): void {
+        super.preSynthesize();
+
+        const checkUpdatesTask = this.addNxRunManyTask("check-updates", {
+            target: "check-updates",
+        });
+        const upgradeTask = this.upgradeWorkflow?.upgradeTask;
+        if (upgradeTask) {
+            this.tasks.removeTask(upgradeTask.name);
+            this.tasks.addTask(upgradeTask.name, {
+                description: upgradeTask.description,
+                env: upgradeTask.envVars,
+
+                steps: [
+                    { spawn: checkUpdatesTask.name },
+                    {
+                        exec: NodePackageUtils.command.exec(
+                            this.package.packageManager,
+                            "syncpack",
+                            "fix-mismatches",
+                        ),
+                    },
+                    // @ts-expect-error - It's there
+                    ...upgradeTask._renderSpec().steps.toJSON(),
+                ],
+            });
+        }
     }
 }

@@ -285,6 +285,7 @@ export class DKEslintConfig extends Component {
 }
 
 export enum DKTaskName {
+    CHECK_UPDATES = "check-updates",
     CI = "ci",
     I = "i",
     LINT = "lint",
@@ -292,10 +293,22 @@ export enum DKTaskName {
     TYPE_CHECK = "type-check",
 }
 
+export interface DKTasksOptions {
+    /**
+     * @default true
+     */
+    checkUpdatesTask?: boolean;
+}
+
 export class DKTasks extends Component {
     public static readonly IS_NOT_RELEASE_CONDITION = `if [ "$RELEASE" = "true" ] ; then exit 1 ; fi`;
 
-    constructor(project: TypeScriptProject) {
+    declare project: TypeScriptProject;
+
+    constructor(
+        project: TypeScriptProject,
+        private readonly options: DKTasksOptions = {},
+    ) {
         super(project);
 
         // Install
@@ -348,6 +361,26 @@ export class DKTasks extends Component {
         const docgenTask = project.tasks.tryFind("docgen");
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
+        }
+    }
+
+    override preSynthesize(): void {
+        super.preSynthesize();
+
+        if (this.options.checkUpdatesTask ?? true) {
+            // Check updates
+            const upgradeTask = this.project.upgradeWorkflow?.upgradeTask;
+            if (upgradeTask) {
+                // @ts-expect-error - it does
+                const steps = upgradeTask._renderSpec().steps?.toJSON();
+                const ncuUpgradeStep = steps[0];
+
+                if (ncuUpgradeStep.exec) {
+                    this.project
+                        .addTask(DKTaskName.CHECK_UPDATES)
+                        .exec(ncuUpgradeStep.exec);
+                }
+            }
         }
     }
 }

@@ -50,7 +50,6 @@
 - [prettier](MonorepoProject.md#prettier)
 - [projectBuild](MonorepoProject.md#projectbuild)
 - [projectType](MonorepoProject.md#projecttype)
-- [projenCommand](MonorepoProject.md#projencommand)
 - [publisher](MonorepoProject.md#publisher)
 - [release](MonorepoProject.md#release)
 - [runScriptCommand](MonorepoProject.md#runscriptcommand)
@@ -87,6 +86,7 @@
 - [packageTask](MonorepoProject.md#packagetask)
 - [postCompileTask](MonorepoProject.md#postcompiletask)
 - [preCompileTask](MonorepoProject.md#precompiletask)
+- [projenCommand](MonorepoProject.md#projencommand)
 - [root](MonorepoProject.md#root)
 - [sortedSubProjects](MonorepoProject.md#sortedsubprojects)
 - [subprojects](MonorepoProject.md#subprojects)
@@ -536,18 +536,6 @@ ___
 #### Inherited from
 
 monorepo.MonorepoTsProject.projectType
-
-___
-
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-monorepo.MonorepoTsProject.projenCommand
 
 ___
 
@@ -1010,6 +998,22 @@ ___
 #### Inherited from
 
 monorepo.MonorepoTsProject.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+monorepo.MonorepoTsProject.projenCommand
 
 ___
 

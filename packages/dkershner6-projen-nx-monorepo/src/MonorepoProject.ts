@@ -83,38 +83,30 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         upgradeDependenciesOptions: UpgradeDependenciesOptions | undefined,
     ): void {
         const upgradeName = upgradeDependenciesOptions?.taskName ?? "upgrade";
-        this.tasks.removeTask(upgradeName);
 
-        const upgradeDepsTask = this.tasks.tryFind("upgrade-deps");
+        this.tasks.removeTask("upgrade-deps");
 
-        if (upgradeDepsTask) {
-            upgradeDepsTask.env("CI", "0"); // Lock file has weird behavior without this
+        const upgradeWorkflow = this.github?.tryFindWorkflow(upgradeName);
 
-            const upgradeWorkflow = this.github?.tryFindWorkflow(upgradeName);
-
-            if (upgradeWorkflow) {
-                const upgradeTask = this.tasks.addTask(upgradeName);
-                upgradeTask.spawn(upgradeDepsTask);
-
-                const job = upgradeWorkflow?.getJob("upgrade");
-                if (job) {
-                    const newSteps = (job as Job).steps.flatMap((step) => {
-                        if (step.run?.includes("upgrade")) {
-                            return [
-                                ...(upgradeDependenciesOptions?.workflowOptions
-                                    ?.preUpgradeSteps ?? []),
-                                {
-                                    ...step,
-                                },
-                            ];
-                        }
-                        return [step];
-                    });
-                    upgradeWorkflow.updateJob(upgradeName, {
-                        ...job,
-                        steps: newSteps,
-                    });
-                }
+        if (upgradeWorkflow) {
+            const job = upgradeWorkflow?.getJob("upgrade");
+            if (job) {
+                const newSteps = (job as Job).steps.flatMap((step) => {
+                    if (step.run?.includes("upgrade")) {
+                        return [
+                            ...(upgradeDependenciesOptions?.workflowOptions
+                                ?.preUpgradeSteps ?? []),
+                            {
+                                ...step,
+                            },
+                        ];
+                    }
+                    return [step];
+                });
+                upgradeWorkflow.updateJob(upgradeName, {
+                    ...job,
+                    steps: newSteps,
+                });
             }
         }
     }

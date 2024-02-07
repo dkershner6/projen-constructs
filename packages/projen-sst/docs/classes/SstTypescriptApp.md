@@ -53,7 +53,6 @@
 - [prettier](SstTypescriptApp.md#prettier)
 - [projectBuild](SstTypescriptApp.md#projectbuild)
 - [projectType](SstTypescriptApp.md#projecttype)
-- [projenCommand](SstTypescriptApp.md#projencommand)
 - [publisher](SstTypescriptApp.md#publisher)
 - [release](SstTypescriptApp.md#release)
 - [runScriptCommand](SstTypescriptApp.md#runscriptcommand)
@@ -92,6 +91,7 @@
 - [packageTask](SstTypescriptApp.md#packagetask)
 - [postCompileTask](SstTypescriptApp.md#postcompiletask)
 - [preCompileTask](SstTypescriptApp.md#precompiletask)
+- [projenCommand](SstTypescriptApp.md#projencommand)
 - [root](SstTypescriptApp.md#root)
 - [subprojects](SstTypescriptApp.md#subprojects)
 - [testTask](SstTypescriptApp.md#testtask)
@@ -587,18 +587,6 @@ awscdk.AwsCdkTypeScriptApp.projectType
 
 ___
 
-### projenCommand
-
-• `Readonly` **projenCommand**: `string`
-
-The command to use in order to run the projen CLI.
-
-#### Inherited from
-
-awscdk.AwsCdkTypeScriptApp.projenCommand
-
-___
-
 ### publisher
 
 • `Optional` `Readonly` **publisher**: `Publisher`
@@ -1070,6 +1058,22 @@ ___
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptApp.preCompileTask
+
+___
+
+### projenCommand
+
+• `get` **projenCommand**(): `string`
+
+The command to use in order to run the projen CLI.
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+awscdk.AwsCdkTypeScriptApp.projenCommand
 
 ___
 
