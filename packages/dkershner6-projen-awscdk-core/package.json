@@ -4,6 +4,7 @@
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
+    "check-updates": "npx projen check-updates",
     "ci": "npx projen ci",
     "clean-compile": "npx projen clean-compile",
     "compile": "npx projen compile",

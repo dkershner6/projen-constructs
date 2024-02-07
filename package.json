@@ -3,6 +3,7 @@
   "scripts": {
     "build": "pnpm exec projen build",
     "build:skip-cache": "pnpm exec projen build:skip-cache",
+    "check-updates": "pnpm exec projen check-updates",
     "ci": "pnpm exec projen ci",
     "clean-compile": "pnpm exec projen clean-compile",
     "clean-modules": "pnpm exec projen clean-modules",
@@ -26,7 +27,6 @@
     "test:watch": "pnpm exec projen test:watch",
     "type-check": "pnpm exec projen type-check",
     "upgrade": "pnpm exec projen upgrade",
-    "upgrade-deps": "pnpm exec projen upgrade-deps",
     "watch": "pnpm exec projen watch",
     "install:ci": "pnpm exec projen install:ci",
     "synth-workspace": "pnpm exec projen"

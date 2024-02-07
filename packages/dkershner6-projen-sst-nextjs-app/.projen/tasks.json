@@ -39,6 +39,14 @@
       ],
       "condition": "! git log --oneline -1 | grep -q \"chore(release):\""
     },
+    "check-updates": {
+      "name": "check-updates",
+      "steps": [
+        {
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,jest-mock,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript,dkershner6-projen-awscdk-core,dkershner6-projen-react,dkershner6-projen-sst-app,dkershner6-projen-typescript,projen-esm,projen-nextjs,projen-sst"
+        }
+      ]
+    },
     "ci": {
       "name": "ci",
       "steps": [

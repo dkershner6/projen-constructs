@@ -30,7 +30,9 @@ export class Node20MonorepoProject extends MonorepoProject {
 
         new DKBugFixes(this);
         new DKEslintConfig(this);
-        new DKTasks(this);
+        new DKTasks(this, {
+            checkUpdatesTask: false,
+        });
 
         for (const taskName of [
             DKTaskName.LINT,
@@ -45,6 +47,28 @@ export class Node20MonorepoProject extends MonorepoProject {
                     }),
                 );
             }
+        }
+    }
+
+    override preSynthesize(): void {
+        super.preSynthesize();
+
+        const checkUpdatesTask = this.addNxRunManyTask("check-updates", {
+            target: "check-updates",
+        });
+        const upgradeTask = this.upgradeWorkflow?.upgradeTask;
+        if (upgradeTask) {
+            this.tasks.removeTask(upgradeTask.name);
+            this.tasks.addTask(upgradeTask.name, {
+                description: upgradeTask.description,
+                env: upgradeTask.envVars,
+
+                steps: [
+                    ...checkUpdatesTask.steps,
+                    // @ts-expect-error - It's there
+                    ...upgradeTask._renderSpec().steps.toJSON(),
+                ],
+            });
         }
     }
 }
