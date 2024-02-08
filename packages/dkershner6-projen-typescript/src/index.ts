@@ -159,7 +159,7 @@ export class DKBugFixes extends Component {
 
         if (project.docgen) {
             project.gitattributes.addAttributes(
-                `/${project.docsDirectory}`,
+                `/${project.docsDirectory}/**`,
                 "linguist-generated",
             );
         }
