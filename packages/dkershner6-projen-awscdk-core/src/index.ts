@@ -7,7 +7,7 @@ import {
     filteredRunsOnOptions,
     github,
 } from "projen";
-import { GitHubProject } from "projen/lib/github";
+import { GitHubProject, WorkflowSteps } from "projen/lib/github";
 import {
     Job,
     JobStep,
@@ -192,7 +192,7 @@ export class AwsAppPublisher extends Component {
                 },
                 {
                     name: "Download build artifacts",
-                    uses: "actions/download-artifact@v3",
+                    uses: "actions/download-artifact@v4",
                     with: {
                         name: "build-artifact",
                         path: this.project.artifactsDirectory,
