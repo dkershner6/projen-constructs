@@ -7,7 +7,7 @@ import {
     filteredRunsOnOptions,
     github,
 } from "projen";
-import { GitHubProject, WorkflowSteps } from "projen/lib/github";
+import { GitHubProject } from "projen/lib/github";
 import {
     Job,
     JobStep,

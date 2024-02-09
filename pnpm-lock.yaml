@@ -20,12 +20,12 @@ importers:
         specifier: ^2.126.0
         version: 2.126.0(constructs@10.3.0)
       cdk-nag:
-        specifier: ^2.28.27
-        version: 2.28.27(aws-cdk-lib@2.126.0)(constructs@10.3.0)
+        specifier: ^2.28.29
+        version: 2.28.29(aws-cdk-lib@2.126.0)(constructs@10.3.0)
     devDependencies:
       '@aws/pdk':
-        specifier: ^0.23.2
-        version: 0.23.2(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.27)(constructs@10.3.0)(projen@0.79.6)
+        specifier: ^0.23.3
+        version: 0.23.3(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.29)(constructs@10.3.0)(projen@0.79.6)
       '@cspell/eslint-plugin':
         specifier: ^8.3.2
         version: 8.3.2
@@ -40,7 +40,7 @@ importers:
         version: 4.6.9
       '@types/node':
         specifier: ^20
-        version: 20.11.16
+        version: 20.11.17
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
         version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -76,7 +76,7 @@ importers:
         version: 0.23.0(eslint@8.56.0)
       jest:
         specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+        version: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
@@ -106,7 +106,7 @@ importers:
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.11.16)(typescript@5.3.3)
+        version: 10.9.2(@types/node@20.11.17)(typescript@5.3.3)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -186,11 +186,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -267,11 +267,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -345,11 +345,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -441,11 +441,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -525,11 +525,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -537,8 +537,8 @@ importers:
   packages/dkershner6-projen-nx-monorepo:
     devDependencies:
       '@aws/pdk':
-        specifier: ^0.23.2
-        version: 0.23.2(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.27)(constructs@10.3.0)(projen@0.79.6)
+        specifier: ^0.23.3
+        version: 0.23.3(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.29)(constructs@10.3.0)(projen@0.79.6)
       '@cspell/eslint-plugin':
         specifier: ^8.3.2
         version: 8.3.2
@@ -609,11 +609,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -690,11 +690,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -777,11 +777,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -876,11 +876,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -954,11 +954,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1038,11 +1038,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1116,11 +1116,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1203,11 +1203,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1281,11 +1281,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1362,11 +1362,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1443,11 +1443,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1521,11 +1521,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1599,11 +1599,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1677,11 +1677,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1755,11 +1755,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1833,11 +1833,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1911,11 +1911,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -1989,11 +1989,11 @@ importers:
         specifier: ^29.1.2
         version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
       typedoc:
-        specifier: ^0.25.7
-        version: 0.25.7(typescript@5.3.3)
+        specifier: ^0.25.8
+        version: 0.25.8(typescript@5.3.3)
       typedoc-plugin-markdown:
         specifier: ^3.17.1
-        version: 3.17.1(typedoc@0.25.7)
+        version: 3.17.1(typedoc@0.25.8)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
@@ -2052,8 +2052,8 @@ packages:
       aws-cdk-lib: 2.126.0(constructs@10.3.0)
       constructs: 10.3.0
 
-  /@aws/pdk@0.23.2(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.27)(constructs@10.3.0)(projen@0.79.6):
-    resolution: {integrity: sha512-TFQKuuIVrjrR9yvWSJ2C8H5rU52m/HVNjD4E2BkUOTaD3rUl9PobPotBuhAAsAJsg0YQGuFprPElrfB+KyxJoA==}
+  /@aws/pdk@0.23.3(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.29)(constructs@10.3.0)(projen@0.79.6):
+    resolution: {integrity: sha512-l8HjXw8V+SAPMzcMRMqcDVz+Zvyqe6F8eNIJtylmmuUW6dieptcnbcBhVmv/aiJPPfN3UrFS06JNgWndEDWE2A==}
     hasBin: true
     peerDependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0
@@ -2064,7 +2064,7 @@ packages:
     dependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': 2.104.0-alpha.0(aws-cdk-lib@2.126.0)(constructs@10.3.0)
       aws-cdk-lib: 2.126.0(constructs@10.3.0)
-      cdk-nag: 2.28.27(aws-cdk-lib@2.126.0)(constructs@10.3.0)
+      cdk-nag: 2.28.29(aws-cdk-lib@2.126.0)(constructs@10.3.0)
       constructs: 10.3.0
       projen: 0.79.6(constructs@10.3.0)
     dev: true
@@ -2101,8 +2101,8 @@ packages:
       - ts-node
       - word-wrap
 
-  /@aws/pdk@0.23.2(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.27)(constructs@10.3.0)(projen@0.79.6):
-    resolution: {integrity: sha512-TFQKuuIVrjrR9yvWSJ2C8H5rU52m/HVNjD4E2BkUOTaD3rUl9PobPotBuhAAsAJsg0YQGuFprPElrfB+KyxJoA==}
+  /@aws/pdk@0.23.3(@aws-cdk/aws-cognito-identitypool-alpha@2.116.1-alpha.0)(aws-cdk-lib@2.126.0)(cdk-nag@2.28.29)(constructs@10.3.0)(projen@0.79.6):
+    resolution: {integrity: sha512-l8HjXw8V+SAPMzcMRMqcDVz+Zvyqe6F8eNIJtylmmuUW6dieptcnbcBhVmv/aiJPPfN3UrFS06JNgWndEDWE2A==}
     hasBin: true
     peerDependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': ^2.104.0-alpha.0
@@ -2113,7 +2113,7 @@ packages:
     dependencies:
       '@aws-cdk/aws-cognito-identitypool-alpha': 2.116.1-alpha.0(aws-cdk-lib@2.126.0)(constructs@10.3.0)
       aws-cdk-lib: 2.126.0(constructs@10.3.0)
-      cdk-nag: 2.28.27(aws-cdk-lib@2.126.0)(constructs@10.3.0)
+      cdk-nag: 2.28.29(aws-cdk-lib@2.126.0)(constructs@10.3.0)
       constructs: 10.3.0
       projen: 0.79.6(constructs@10.3.0)
     dev: true
@@ -3147,7 +3147,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       jest-message-util: 29.7.0
       jest-util: 29.7.0
@@ -3168,14 +3168,14 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       ci-info: 3.9.0
       exit: 0.1.2
       graceful-fs: 4.2.11
       jest-changed-files: 29.7.0
-      jest-config: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      jest-config: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
       jest-haste-map: 29.7.0
       jest-message-util: 29.7.0
       jest-regex-util: 29.6.3
@@ -3203,7 +3203,7 @@ packages:
     dependencies:
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       jest-mock: 29.7.0
     dev: true
 
@@ -3230,7 +3230,7 @@ packages:
     dependencies:
       '@jest/types': 29.6.3
       '@sinonjs/fake-timers': 10.3.0
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       jest-message-util: 29.7.0
       jest-mock: 29.7.0
       jest-util: 29.7.0
@@ -3263,7 +3263,7 @@ packages:
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
       '@jridgewell/trace-mapping': 0.3.20
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       collect-v8-coverage: 1.0.2
       exit: 0.1.2
@@ -3351,7 +3351,7 @@ packages:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       '@types/yargs': 17.0.32
       chalk: 4.1.2
     dev: true
@@ -3865,7 +3865,7 @@ packages:
   /@types/graceful-fs@4.1.9:
     resolution: {integrity: sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ==}
     dependencies:
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
     dev: true
 
   /@types/http-cache-semantics@4.0.4:
@@ -3923,8 +3923,8 @@ packages:
       undici-types: 5.26.5
     dev: true
 
-  /@types/node@20.11.16:
-    resolution: {integrity: sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==}
+  /@types/node@20.11.17:
+    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3944,7 +3944,7 @@ packages:
   /@types/ws@8.5.10:
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
     dependencies:
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
     dev: true
 
   /@types/yargs-parser@21.0.3:
@@ -5275,8 +5275,8 @@ packages:
     resolution: {integrity: sha512-tYq/6MoXhdezDLFZuCO/TKboTzuQ/xR5cFdgXPfDtM7/kchBO3b4VWghE/OAi/DV7tTdhmLjZiZBZi1fA/GheQ==}
     dev: true
 
-  /cdk-nag@2.28.27(aws-cdk-lib@2.126.0)(constructs@10.3.0):
-    resolution: {integrity: sha512-b9QnWZ6KPoFZtowMxYPlsdTEoMrOfg0jRx09gr4525uHlO6gWf+eNJtXUmQRYcBgaWF05a9vGBnbq+QKoslbNw==}
+  /cdk-nag@2.28.29(aws-cdk-lib@2.126.0)(constructs@10.3.0):
+    resolution: {integrity: sha512-GmBFS1wKjiBoV1zkOtFyjtlpP7z/y+py/3cWi4QaTdx5bnYTE9REDGo8RdxBXStuNAyLhbjOPZXCY2w3QO0ntg==}
     peerDependencies:
       aws-cdk-lib: ^2.116.0
       constructs: ^10.0.5
@@ -5722,7 +5722,7 @@ packages:
       - ts-node
     dev: true
 
-  /create-jest@29.7.0(@types/node@20.11.16)(ts-node@10.9.2):
+  /create-jest@29.7.0(@types/node@20.11.17)(ts-node@10.9.2):
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -5731,7 +5731,7 @@ packages:
       chalk: 4.1.2
       exit: 0.1.2
       graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      jest-config: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
       jest-util: 29.7.0
       prompts: 2.4.2
     transitivePeerDependencies:
@@ -6762,7 +6762,7 @@ packages:
       '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
       eslint: 8.56.0
-      jest: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      jest: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8077,7 +8077,7 @@ packages:
       '@jest/expect': 29.7.0
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       co: 4.6.0
       dedent: 1.5.1
@@ -8126,7 +8126,7 @@ packages:
       - ts-node
     dev: true
 
-  /jest-cli@29.7.0(@types/node@20.11.16)(ts-node@10.9.2):
+  /jest-cli@29.7.0(@types/node@20.11.17)(ts-node@10.9.2):
     resolution: {integrity: sha512-OVVobw2IubN/GSYsxETi+gOe7Ka59EFMR/twOU3Jb2GnKKeMGJB5SGUUrEz3SFVmJASUdZUzy83sLNNQ2gZslg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -8140,10 +8140,10 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
       chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      create-jest: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
       exit: 0.1.2
       import-local: 3.1.0
-      jest-config: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      jest-config: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
       jest-util: 29.7.0
       jest-validate: 29.7.0
       yargs: 17.7.2
@@ -8189,13 +8189,13 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.2(@types/node@20.11.16)(typescript@5.3.3)
+      ts-node: 10.9.2(@types/node@20.11.17)(typescript@5.3.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
     dev: true
 
-  /jest-config@29.7.0(@types/node@20.11.16)(ts-node@10.9.2):
+  /jest-config@29.7.0(@types/node@20.11.17)(ts-node@10.9.2):
     resolution: {integrity: sha512-uXbpfeQ7R6TZBqI3/TxCU4q4ttk3u0PJeC+E0zbfSoSjq6bJ7buBPxzQPL0ifrkY4DNu4JUdk0ImlBUYi840eQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
@@ -8210,7 +8210,7 @@ packages:
       '@babel/core': 7.23.9
       '@jest/test-sequencer': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       babel-jest: 29.7.0(@babel/core@7.23.9)
       chalk: 4.1.2
       ci-info: 3.9.0
@@ -8230,7 +8230,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.2(@types/node@20.11.16)(typescript@5.3.3)
+      ts-node: 10.9.2(@types/node@20.11.17)(typescript@5.3.3)
     transitivePeerDependencies:
       - babel-plugin-macros
       - supports-color
@@ -8271,7 +8271,7 @@ packages:
       '@jest/environment': 29.7.0
       '@jest/fake-timers': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       jest-mock: 29.7.0
       jest-util: 29.7.0
     dev: true
@@ -8287,7 +8287,7 @@ packages:
     dependencies:
       '@jest/types': 29.6.3
       '@types/graceful-fs': 4.1.9
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       anymatch: 3.1.3
       fb-watchman: 2.0.2
       graceful-fs: 4.2.11
@@ -8403,7 +8403,7 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       emittery: 0.13.1
       graceful-fs: 4.2.11
@@ -8434,7 +8434,7 @@ packages:
       '@jest/test-result': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       cjs-module-lexer: 1.2.3
       collect-v8-coverage: 1.0.2
@@ -8486,7 +8486,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -8511,7 +8511,7 @@ packages:
     dependencies:
       '@jest/test-result': 29.7.0
       '@jest/types': 29.6.3
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       emittery: 0.13.1
@@ -8523,7 +8523,7 @@ packages:
     resolution: {integrity: sha512-eIz2msL/EzL9UFTFFx7jBTkeZfku0yUAyZZZmJ93H2TYEiroIx2PQjEXcwYtYl8zXCxb+PAmA2hLIt/6ZEkPHw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
@@ -8550,7 +8550,7 @@ packages:
       - ts-node
     dev: true
 
-  /jest@29.7.0(@types/node@20.11.16)(ts-node@10.9.2):
+  /jest@29.7.0(@types/node@20.11.17)(ts-node@10.9.2):
     resolution: {integrity: sha512-NIy3oAFp9shda19hy4HK0HRTWKtPJmGdnvywu01nOqNC2vZg+Z+fvJDxpMQA88eb2I9EcafcdjYgsDthnYTvGw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -8563,7 +8563,7 @@ packages:
       '@jest/core': 29.7.0(ts-node@10.9.2)
       '@jest/types': 29.6.3
       import-local: 3.1.0
-      jest-cli: 29.7.0(@types/node@20.11.16)(ts-node@10.9.2)
+      jest-cli: 29.7.0(@types/node@20.11.17)(ts-node@10.9.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -10905,7 +10905,7 @@ packages:
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.11.16)(typescript@5.3.3):
+  /ts-node@10.9.2(@types/node@20.11.17)(typescript@5.3.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -10924,7 +10924,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.11.16
+      '@types/node': 20.11.17
       acorn: 8.11.2
       acorn-walk: 8.3.1
       arg: 4.1.3
@@ -11078,17 +11078,17 @@ packages:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
     dev: true
 
-  /typedoc-plugin-markdown@3.17.1(typedoc@0.25.7):
+  /typedoc-plugin-markdown@3.17.1(typedoc@0.25.8):
     resolution: {integrity: sha512-QzdU3fj0Kzw2XSdoL15ExLASt2WPqD7FbLeaqwT70+XjKyTshBnUlQA5nNREO1C2P8Uen0CDjsBLMsCQ+zd0lw==}
     peerDependencies:
       typedoc: '>=0.24.0'
     dependencies:
       handlebars: 4.7.8
-      typedoc: 0.25.7(typescript@5.3.3)
+      typedoc: 0.25.8(typescript@5.3.3)
     dev: true
 
-  /typedoc@0.25.7(typescript@5.3.3):
-    resolution: {integrity: sha512-m6A6JjQRg39p2ZVRIN3NKXgrN8vzlHhOS+r9ymUYtcUP/TIQPvWSq7YgE5ZjASfv5Vd5BW5xrir6Gm2XNNcOow==}
+  /typedoc@0.25.8(typescript@5.3.3):
+    resolution: {integrity: sha512-mh8oLW66nwmeB9uTa0Bdcjfis+48bAjSH3uqdzSuSawfduROQLlXw//WSNZLYDdhmMVB7YcYZicq6e8T0d271A==}
     engines: {node: '>= 16'}
     hasBin: true
     peerDependencies:
