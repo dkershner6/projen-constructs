@@ -5,6 +5,7 @@ import {
     DKEslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
+import { WorkflowSteps } from "projen/lib/github";
 import { JobPermission } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
 import {
@@ -48,12 +49,11 @@ export class Node20GitHubActionTypescriptProject extends GitHubActionTypeScriptP
                     contents: JobPermission.WRITE,
                 },
                 steps: [
-                    {
-                        uses: "actions/checkout@v3",
+                    WorkflowSteps.checkout({
                         with: {
-                            "fetch-depth": 0,
+                            fetchDepth: 0,
                         },
-                    },
+                    }),
                     {
                         uses: "rickstaa/action-create-tag@v1",
                         with: {

@@ -196,7 +196,7 @@ export class Node20SstApp extends SstTypescriptApp {
                 WorkflowSteps.checkout(),
                 {
                     name: "Download build artifacts",
-                    uses: "actions/download-artifact@v3",
+                    uses: "actions/download-artifact@v4",
                     with: {
                         name: "build-artifact",
                         path: `${workingDirectory}/${this.artifactsDirectory}`,

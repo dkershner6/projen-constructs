@@ -183,7 +183,7 @@ export class AwsAppPublisher extends Component {
                 ...(this.options.workflowBootstrapSteps ?? []),
                 {
                     name: "Setup Node.js",
-                    uses: "actions/setup-node@v3",
+                    uses: "actions/setup-node@v4",
                     with: {
                         ...(this.options.workflowNodeVersion && {
                             "node-version": this.options.workflowNodeVersion,
@@ -192,7 +192,7 @@ export class AwsAppPublisher extends Component {
                 },
                 {
                     name: "Download build artifacts",
-                    uses: "actions/download-artifact@v3",
+                    uses: "actions/download-artifact@v4",
                     with: {
                         name: "build-artifact",
                         path: this.project.artifactsDirectory,
