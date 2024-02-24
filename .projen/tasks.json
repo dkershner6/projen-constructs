@@ -312,13 +312,13 @@
           "exec": "pnpm exec syncpack fix-mismatches"
         },
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,lodash.merge,npm-check-updates,nx-cloud,nx,prettier,projen,syncpack,ts-jest,ts-node,typescript,aws-cdk-lib,cdk-nag"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,npm-check-updates,nx-cloud,prettier,ts-jest,ts-node,typescript,@aws-cdk/aws-cognito-identitypool-alpha,aws-cdk-lib,cdk-nag"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @cspell/eslint-plugin @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx-cloud nx prettier projen syncpack ts-jest ts-node typescript aws-cdk-lib cdk-nag"
+          "exec": "pnpm update @aws/pdk @cspell/eslint-plugin @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx-cloud nx prettier projen syncpack ts-jest ts-node typescript @aws-cdk/aws-cognito-identitypool-alpha aws-cdk-lib cdk-nag"
         },
         {
           "exec": "pnpm exec projen"
