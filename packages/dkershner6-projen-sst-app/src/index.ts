@@ -15,7 +15,7 @@ import {
     Node20TypeScriptProjectJestOptions,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
-import { Task, filteredRunsOnOptions, github } from "projen";
+import { Task, github } from "projen";
 import { GitHubProject, WorkflowSteps } from "projen/lib/github";
 import { Job, JobStep } from "projen/lib/github/workflows-model";
 import { deepMerge } from "projen/lib/util";
@@ -99,8 +99,12 @@ export class Node20SstApp extends SstTypescriptApp {
                                 ...(options.publishToAwsOptions ?? {}),
                                 deployJobStepBuilder: (builderParams) =>
                                     this.buildDeployToAwsJobStep(builderParams),
-                                runsOn: options.workflowRunsOn,
-                                runsOnGroup: options.workflowRunsOnGroup,
+                                jobConfiguration: {
+                                    runsOn: options.workflowRunsOn,
+                                    runsOnGroup: options.workflowRunsOnGroup,
+                                    ...(options.publishToAwsOptions
+                                        ?.jobConfiguration ?? {}),
+                                },
                             },
                         ),
                     );
@@ -139,9 +143,13 @@ export class Node20SstApp extends SstTypescriptApp {
                                             this.buildDeployToAwsJobStep(
                                                 builderParams,
                                             ),
-                                        runsOn: options.workflowRunsOn,
-                                        runsOnGroup:
-                                            options.workflowRunsOnGroup,
+                                        jobConfiguration: {
+                                            runsOn: options.workflowRunsOn,
+                                            runsOnGroup:
+                                                options.workflowRunsOnGroup,
+                                            ...(options.publishToAwsOptions
+                                                ?.jobConfiguration ?? {}),
+                                        },
                                     },
                                 ),
                             );
@@ -174,16 +182,18 @@ export class Node20SstApp extends SstTypescriptApp {
 
         // We are basically ignoring the artifact since SST needs too many things to use it anyway, but we still download it
         return {
-            name: "Publish to AWS",
-            if: this.release?.publisher.condition,
-            needs: ["release"],
-            ...filteredRunsOnOptions(options.runsOn, options.runsOnGroup),
-            env: options.env,
-            permissions: {
+            ...(options?.jobConfiguration ?? {}),
+            name: options?.jobConfiguration?.name ?? "Publish to AWS",
+            if:
+                options?.jobConfiguration?.if ??
+                this.release?.publisher.condition,
+            needs: options?.jobConfiguration?.needs ?? ["release"],
+            permissions: options?.jobConfiguration?.permissions ?? {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,
             },
             defaults:
+                options?.jobConfiguration?.defaults ??
                 projectPathRelativeToRoot.length > 0 // is subproject
                     ? {
                           run: {

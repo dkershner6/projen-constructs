@@ -17,11 +17,9 @@
 - [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
 - [deployJobStepConfiguration](AwsAppPublisherOptions.md#deployjobstepconfiguration)
-- [env](AwsAppPublisherOptions.md#env)
+- [jobConfiguration](AwsAppPublisherOptions.md#jobconfiguration)
 - [postPublishJobSteps](AwsAppPublisherOptions.md#postpublishjobsteps)
 - [publishTasks](AwsAppPublisherOptions.md#publishtasks)
-- [runsOn](AwsAppPublisherOptions.md#runson)
-- [runsOnGroup](AwsAppPublisherOptions.md#runsongroup)
 - [workflowBootstrapSteps](AwsAppPublisherOptions.md#workflowbootstrapsteps)
 - [workflowNodeVersion](AwsAppPublisherOptions.md#workflownodeversion)
 
@@ -110,17 +108,16 @@ Additional configuration for the deploy job step.
 
 ___
 
-### env
+### jobConfiguration
 
-• `Optional` `Readonly` **env**: `Record`\<`string`, `string`\>
+• `Optional` `Readonly` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, ``"steps"``\>\>
 
-A map of environment variables that are available to all steps in the
-job. You can also set environment variables for the entire workflow or an
-individual step.
+The configuration for the deploy job. This is useful for when you want to
+change the timeoutMinutes, env, or other job-level configuration.
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[env](PublishToAwsOptions.md#env)
+[PublishToAwsOptions](PublishToAwsOptions.md).[jobConfiguration](PublishToAwsOptions.md#jobconfiguration)
 
 ___
 
@@ -139,18 +136,6 @@ ___
 ### publishTasks
 
 • `Optional` `Readonly` **publishTasks**: `boolean`
-
-___
-
-### runsOn
-
-• `Optional` `Readonly` **runsOn**: `string`[]
-
-___
-
-### runsOnGroup
-
-• `Optional` `Readonly` **runsOnGroup**: `GroupRunnerOptions`
 
 ___
 

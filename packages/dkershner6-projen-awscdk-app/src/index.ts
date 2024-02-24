@@ -79,8 +79,11 @@ export class Node20AwsCdkApp extends awscdk.AwsCdkTypeScriptApp {
                     this.buildDeployToAwsJobStep(builderParams.deployTask),
                 defaultReleaseBranch: options.defaultReleaseBranch,
                 publishTasks: options.publishTasks,
-                runsOn: options.workflowRunsOn,
-                runsOnGroup: options.workflowRunsOnGroup,
+                jobConfiguration: {
+                    runsOn: options.workflowRunsOn,
+                    runsOnGroup: options.workflowRunsOnGroup,
+                    ...(options.publishToAwsOptions?.jobConfiguration ?? {}),
+                },
                 workflowBootstrapSteps: options.workflowBootstrapSteps,
                 workflowNodeVersion:
                     options.workflowNodeVersion ??
