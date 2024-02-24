@@ -18,10 +18,9 @@
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
 - [deployJobStepConfiguration](AwsAppPublisherOptions.md#deployjobstepconfiguration)
 - [env](AwsAppPublisherOptions.md#env)
+- [jobConfiguration](AwsAppPublisherOptions.md#jobconfiguration)
 - [postPublishJobSteps](AwsAppPublisherOptions.md#postpublishjobsteps)
 - [publishTasks](AwsAppPublisherOptions.md#publishtasks)
-- [runsOn](AwsAppPublisherOptions.md#runson)
-- [runsOnGroup](AwsAppPublisherOptions.md#runsongroup)
 - [workflowBootstrapSteps](AwsAppPublisherOptions.md#workflowbootstrapsteps)
 - [workflowNodeVersion](AwsAppPublisherOptions.md#workflownodeversion)
 
@@ -124,6 +123,19 @@ individual step.
 
 ___
 
+### jobConfiguration
+
+• `Optional` `Readonly` **jobConfiguration**: `Omit`\<`Job`, ``"steps"``\>
+
+The configuration for the deploy job. This is useful for when you want to
+change the timeoutMinutes, or other job-level configuration.
+
+#### Inherited from
+
+[PublishToAwsOptions](PublishToAwsOptions.md).[jobConfiguration](PublishToAwsOptions.md#jobconfiguration)
+
+___
+
 ### postPublishJobSteps
 
 • `Optional` `Readonly` **postPublishJobSteps**: `JobStep`[]
@@ -139,18 +151,6 @@ ___
 ### publishTasks
 
 • `Optional` `Readonly` **publishTasks**: `boolean`
-
-___
-
-### runsOn
-
-• `Optional` `Readonly` **runsOn**: `string`[]
-
-___
-
-### runsOnGroup
-
-• `Optional` `Readonly` **runsOnGroup**: `GroupRunnerOptions`
 
 ___
 

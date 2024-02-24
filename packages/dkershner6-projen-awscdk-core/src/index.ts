@@ -1,12 +1,4 @@
-import {
-    Component,
-    GroupRunnerOptions,
-    Project,
-    Task,
-    awscdk,
-    filteredRunsOnOptions,
-    github,
-} from "projen";
+import { Component, Project, Task, awscdk, github } from "projen";
 import { GitHubProject } from "projen/lib/github";
 import {
     Job,
@@ -32,6 +24,12 @@ export interface PublishToAwsOptions {
      * Additional configuration for the deploy job step.
      */
     readonly deployJobStepConfiguration?: JobStepConfiguration;
+
+    /**
+     * The configuration for the deploy job. This is useful for when you want to
+     * change the timeoutMinutes, or other job-level configuration.
+     */
+    readonly jobConfiguration?: Omit<Job, "steps">;
 
     /**
      * A map of environment variables that are available to all steps in the
@@ -73,10 +71,6 @@ export interface AwsAppPublisherOptions extends PublishToAwsOptions {
     readonly defaultReleaseBranch?: string;
 
     readonly publishTasks?: boolean;
-
-    readonly runsOn?: string[];
-
-    readonly runsOnGroup?: GroupRunnerOptions;
 
     readonly workflowBootstrapSteps?: JobStep[];
 
@@ -167,15 +161,14 @@ export class AwsAppPublisher extends Component {
      */
     public buildPublishToAwsJob(deployTask: Task, branchName?: string): Job {
         return {
-            name: "Publish to AWS",
-            if: this.project.release?.publisher.condition,
-            needs: ["release"],
-            ...filteredRunsOnOptions(
-                this.options.runsOn,
-                this.options.runsOnGroup,
-            ),
-            env: this.options.env,
-            permissions: {
+            ...(this.options?.jobConfiguration ?? {}),
+            name: this.options?.jobConfiguration?.name ?? "Publish to AWS",
+            if:
+                this.options?.jobConfiguration?.if ??
+                this.project.release?.publisher.condition,
+            needs: this.options?.jobConfiguration?.needs ?? ["release"],
+            env: this.options?.jobConfiguration?.env ?? this.options.env,
+            permissions: this.options?.jobConfiguration?.permissions ?? {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,
             },

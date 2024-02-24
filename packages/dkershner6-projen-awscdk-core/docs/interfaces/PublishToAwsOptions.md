@@ -16,6 +16,7 @@
 - [configureAwsCredentialsJobSteps](PublishToAwsOptions.md#configureawscredentialsjobsteps)
 - [deployJobStepConfiguration](PublishToAwsOptions.md#deployjobstepconfiguration)
 - [env](PublishToAwsOptions.md#env)
+- [jobConfiguration](PublishToAwsOptions.md#jobconfiguration)
 - [postPublishJobSteps](PublishToAwsOptions.md#postpublishjobsteps)
 
 ## Properties
@@ -58,6 +59,15 @@ ___
 A map of environment variables that are available to all steps in the
 job. You can also set environment variables for the entire workflow or an
 individual step.
+
+___
+
+### jobConfiguration
+
+• `Optional` `Readonly` **jobConfiguration**: `Omit`\<`Job`, ``"steps"``\>
+
+The configuration for the deploy job. This is useful for when you want to
+change the timeoutMinutes, or other job-level configuration.
 
 ___
 
