@@ -17,7 +17,6 @@
 - [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
 - [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
 - [deployJobStepConfiguration](AwsAppPublisherOptions.md#deployjobstepconfiguration)
-- [env](AwsAppPublisherOptions.md#env)
 - [jobConfiguration](AwsAppPublisherOptions.md#jobconfiguration)
 - [postPublishJobSteps](AwsAppPublisherOptions.md#postpublishjobsteps)
 - [publishTasks](AwsAppPublisherOptions.md#publishtasks)
@@ -109,26 +108,12 @@ Additional configuration for the deploy job step.
 
 ___
 
-### env
-
-• `Optional` `Readonly` **env**: `Record`\<`string`, `string`\>
-
-A map of environment variables that are available to all steps in the
-job. You can also set environment variables for the entire workflow or an
-individual step.
-
-#### Inherited from
-
-[PublishToAwsOptions](PublishToAwsOptions.md).[env](PublishToAwsOptions.md#env)
-
-___
-
 ### jobConfiguration
 
-• `Optional` `Readonly` **jobConfiguration**: `Omit`\<`Job`, ``"steps"``\>
+• `Optional` `Readonly` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, ``"steps"``\>\>
 
 The configuration for the deploy job. This is useful for when you want to
-change the timeoutMinutes, or other job-level configuration.
+change the timeoutMinutes, env, or other job-level configuration.
 
 #### Inherited from
 

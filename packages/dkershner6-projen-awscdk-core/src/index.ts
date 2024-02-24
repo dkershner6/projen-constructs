@@ -27,16 +27,9 @@ export interface PublishToAwsOptions {
 
     /**
      * The configuration for the deploy job. This is useful for when you want to
-     * change the timeoutMinutes, or other job-level configuration.
+     * change the timeoutMinutes, env, or other job-level configuration.
      */
-    readonly jobConfiguration?: Omit<Job, "steps">;
-
-    /**
-     * A map of environment variables that are available to all steps in the
-     * job. You can also set environment variables for the entire workflow or an
-     * individual step.
-     */
-    readonly env?: Record<string, string>;
+    readonly jobConfiguration?: Partial<Omit<Job, "steps">>;
 
     /**
      * Job steps to run after the deploy step.
@@ -167,7 +160,6 @@ export class AwsAppPublisher extends Component {
                 this.options?.jobConfiguration?.if ??
                 this.project.release?.publisher.condition,
             needs: this.options?.jobConfiguration?.needs ?? ["release"],
-            env: this.options?.jobConfiguration?.env ?? this.options.env,
             permissions: this.options?.jobConfiguration?.permissions ?? {
                 contents: github.workflows.JobPermission.WRITE,
                 packages: github.workflows.JobPermission.WRITE,
