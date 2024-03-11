@@ -309,7 +309,7 @@
           "spawn": "check-updates"
         },
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,npm-check-updates,nx-cloud,prettier,ts-jest,ts-node,typescript,@aws-cdk/aws-cognito-identitypool-alpha,aws-cdk-lib,cdk-nag"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,npm-check-updates,nx-cloud,prettier,ts-jest,ts-node,typescript"
         },
         {
           "exec": "pnpm exec syncpack fix-mismatches"
