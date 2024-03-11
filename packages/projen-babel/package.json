@@ -34,8 +34,8 @@
     "organization": false
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@cspell/eslint-plugin": "^8.4.1",
+    "@babel/core": "^7.24.0",
+    "@cspell/eslint-plugin": "^8.6.0",
     "@types/babel__core": "^7.20.5",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
@@ -55,16 +55,16 @@
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.5",
-    "projen": "0.79.6",
+    "projen": "0.79.24",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
-    "typedoc": "^0.25.8",
+    "typedoc": "^0.25.12",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "peerDependencies": {
     "constructs": "^10.3.0",
-    "projen": "^0.79.6"
+    "projen": "^0.79.24"
   },
   "keywords": [
     "babel",

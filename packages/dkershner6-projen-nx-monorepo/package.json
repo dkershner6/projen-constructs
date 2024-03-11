@@ -34,8 +34,8 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws/pdk": "^0.23.7",
-    "@cspell/eslint-plugin": "^8.4.1",
+    "@aws/pdk": "^0.23.12",
+    "@cspell/eslint-plugin": "^8.6.0",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20",
@@ -55,15 +55,15 @@
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.5",
-    "projen": "^0.79.6",
+    "projen": "^0.79.24",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
-    "typedoc": "^0.25.8",
+    "typedoc": "^0.25.12",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "peerDependencies": {
-    "@aws/pdk": "^0.23.7",
+    "@aws/pdk": "^0.23.12",
     "clone-deep": "^4.0.1",
     "dkershner6-projen-typescript": "^0.x"
   },

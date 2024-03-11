@@ -105,12 +105,12 @@
     },
     {
       "name": "projen",
-      "version": "^0.79.6",
+      "version": "^0.79.24",
       "type": "build"
     },
     {
       "name": "syncpack",
-      "version": "^8",
+      "version": "^12",
       "type": "build"
     },
     {

@@ -27,13 +27,14 @@
     "test:watch": "pnpm exec projen test:watch",
     "type-check": "pnpm exec projen type-check",
     "upgrade": "pnpm exec projen upgrade",
+    "upgrade-deps": "pnpm exec projen upgrade-deps",
     "watch": "pnpm exec projen watch",
     "install:ci": "pnpm exec projen install:ci",
     "synth-workspace": "pnpm exec projen"
   },
   "devDependencies": {
-    "@aws/pdk": "^0.23.7",
-    "@cspell/eslint-plugin": "^8.4.1",
+    "@aws/pdk": "^0.23.12",
+    "@cspell/eslint-plugin": "^8.6.0",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
     "@types/lodash.merge": "^4.6.9",
@@ -56,19 +57,19 @@
     "nx": "16.0.0",
     "nx-cloud": "^16.5.2",
     "prettier": "^3.2.5",
-    "projen": "^0.79.6",
-    "syncpack": "^8",
+    "projen": "^0.79.24",
+    "syncpack": "^12",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.2"
   },
   "peerDependencies": {
     "nx": "^16"
   },
   "dependencies": {
     "@aws-cdk/aws-cognito-identitypool-alpha": "latest",
-    "aws-cdk-lib": "^2.130.0",
-    "cdk-nag": "^2.28.44"
+    "aws-cdk-lib": "^2.132.0",
+    "cdk-nag": "^2.28.60"
   },
   "pnpm": {
     "overrides": {

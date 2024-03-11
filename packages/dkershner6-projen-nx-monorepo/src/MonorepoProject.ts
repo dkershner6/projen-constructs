@@ -22,8 +22,6 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
     constructor(options: MonorepoProjectOptions) {
         super(options);
 
-        this.addDevDeps("syncpack@^8");
-
         this.addAndEditTasks();
         this.overwriteUpgradeWorkflow(options.depsUpgradeOptions);
     }
