@@ -7,7 +7,11 @@ import { CSpell } from "../../packages/projen-cspell/src";
 import { TypedocMarkdown } from "../../packages/projen-typedoc/src";
 import { RootMonorepo } from "../rootMonorepo";
 
-import { CONSTRUCTS_VERSION, PROJEN_VERSION } from "./constants";
+import {
+    CONSTRUCTS_VERSION,
+    PROJEN_VERSION,
+    THIS_REPOSITORY,
+} from "./constants";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
     constructor(
@@ -47,6 +51,7 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
 
             authorName: "Derek Kershner",
             authorUrl: "https://dkershner.com",
+            repository: THIS_REPOSITORY,
             docgen: true,
         };
 

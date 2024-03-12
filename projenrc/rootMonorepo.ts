@@ -15,7 +15,7 @@ import {
 } from "../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../packages/projen-cspell/src";
 
-import { PROJEN_VERSION } from "./common/constants";
+import { PROJEN_VERSION, THIS_REPOSITORY } from "./common/constants";
 
 export class RootMonorepo extends MonorepoProject {
     constructor() {
@@ -41,6 +41,8 @@ export class RootMonorepo extends MonorepoProject {
                             ],
                         },
                     },
+
+                    repository: THIS_REPOSITORY,
                 },
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),

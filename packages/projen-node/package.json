@@ -1,6 +1,10 @@
 {
   "name": "projen-node",
   "description": "Helpers for Projen Node projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

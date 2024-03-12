@@ -1,6 +1,10 @@
 {
   "name": "dkershner6-projen-awscdk-core",
   "description": "DKershner's common constructs for Projen AWS CDK Apps.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

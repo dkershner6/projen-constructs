@@ -1,6 +1,10 @@
 {
   "name": "dkershner6-projen-typescript",
   "description": "DKershner's preferred constructs for Projen TypeScript projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
