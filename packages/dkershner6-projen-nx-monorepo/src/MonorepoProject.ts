@@ -22,10 +22,16 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
     constructor(options: MonorepoProjectOptions) {
         super(options);
 
-        this.addDevDeps("syncpack@^8");
-
+        this.removeUnneededPackages();
         this.addAndEditTasks();
         this.overwriteUpgradeWorkflow(options.depsUpgradeOptions);
+    }
+
+    /** PDK is one big package, and monorepo doesn't need these */
+    private removeUnneededPackages(): void {
+        this.deps.removeDependency("@aws-cdk/aws-cognito-identitypool-alpha");
+        this.deps.removeDependency("aws-cdk-lib");
+        this.deps.removeDependency("cdk-nag");
     }
 
     private addAndEditTasks(): void {

@@ -68,19 +68,9 @@ ___
 
 A function that builds the JobStep to deploy the App.
 
-**`Param`**
-
-The deploy task of the project.
-
-**`Param`**
-
-The branch name being published. Undefined for the default branch.
-
 #### Type declaration
 
 ▸ (`builderParams`): `JobStep`
-
-A function that builds the JobStep to deploy the App.
 
 ##### Parameters
 
@@ -91,8 +81,6 @@ A function that builds the JobStep to deploy the App.
 ##### Returns
 
 `JobStep`
-
-JobStep to deploy the App
 
 ___
 

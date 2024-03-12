@@ -8,6 +8,7 @@ import {
     DKEslintConfig,
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
 } from "dkershner6-projen-typescript";
+import { TaskStep } from "projen";
 import { deepMerge } from "projen/lib/util";
 
 import { MonorepoProject, MonorepoProjectOptions } from "./MonorepoProject";
@@ -60,11 +61,17 @@ export class Node20MonorepoProject extends MonorepoProject {
         const upgradeTask = this.upgradeWorkflow?.upgradeTask;
         if (upgradeTask) {
             this.tasks.removeTask(upgradeTask.name);
+
+            const upgradeTaskSteps = upgradeTask
+                ?._renderSpec?.()
+                // @ts-expect-error - It's there
+                ?.steps?.toJSON?.();
             this.tasks.addTask(upgradeTask.name, {
                 description: upgradeTask.description,
                 env: upgradeTask.envVars,
                 steps: [
                     { spawn: checkUpdatesTask.name },
+                    upgradeTaskSteps?.[0],
                     {
                         exec: NodePackageUtils.command.exec(
                             this.package.packageManager,
@@ -72,9 +79,10 @@ export class Node20MonorepoProject extends MonorepoProject {
                             "fix-mismatches",
                         ),
                     },
-                    // @ts-expect-error - It's there
-                    ...upgradeTask._renderSpec().steps.toJSON(),
-                ],
+                    ...(upgradeTaskSteps?.slice?.(1)?.filter(
+                        (step: TaskStep) => typeof step?.exec !== "function", // pnpm update command is a function and we don't want it, causes issues
+                    ) ?? []),
+                ].filter(Boolean),
             });
         }
     }

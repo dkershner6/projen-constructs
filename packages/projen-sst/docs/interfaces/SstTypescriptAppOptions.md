@@ -103,6 +103,7 @@
 - [npmAccess](SstTypescriptAppOptions.md#npmaccess)
 - [npmDistTag](SstTypescriptAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](SstTypescriptAppOptions.md#npmignoreoptions)
+- [npmProvenance](SstTypescriptAppOptions.md#npmprovenance)
 - [npmRegistry](SstTypescriptAppOptions.md#npmregistry)
 - [npmRegistryUrl](SstTypescriptAppOptions.md#npmregistryurl)
 - [npmTokenSecret](SstTypescriptAppOptions.md#npmtokensecret)
@@ -1811,6 +1812,34 @@ Configuration options for .npmignore file
 #### Inherited from
 
 awscdk.AwsCdkTypeScriptAppOptions.npmIgnoreOptions
+
+___
+
+### npmProvenance
+
+• `Optional` `Readonly` **npmProvenance**: `boolean`
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+**`See`**
+
+https://docs.npmjs.com/generating-provenance-statements
+
+**`Default`**
+
+```ts
+- true for public packages, false otherwise
+```
+
+#### Inherited from
+
+awscdk.AwsCdkTypeScriptAppOptions.npmProvenance
 
 ___
 

@@ -1,5 +1,6 @@
 import { NodePackageUtils } from "@aws/pdk/monorepo";
 import merge from "lodash.merge";
+import { TaskStep } from "projen";
 
 import {
     MonorepoProject,
@@ -13,6 +14,8 @@ import {
     DKTasks,
 } from "../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../packages/projen-cspell/src";
+
+import { PROJEN_VERSION } from "./common/constants";
 
 export class RootMonorepo extends MonorepoProject {
     constructor() {
@@ -28,9 +31,9 @@ export class RootMonorepo extends MonorepoProject {
                     name: "projen-constructs",
 
                     projenrcTs: true,
+                    projenVersion: PROJEN_VERSION,
                     github: true,
 
-                    workflowPackageCache: true,
                     depsUpgradeOptions: {
                         workflowOptions: {
                             preUpgradeSteps: [
@@ -84,12 +87,16 @@ export class RootMonorepo extends MonorepoProject {
         const upgradeTask = this.upgradeWorkflow?.upgradeTask;
         if (upgradeTask) {
             this.tasks.removeTask(upgradeTask.name);
+            const upgradeTaskSteps = upgradeTask
+                ?._renderSpec?.()
+                // @ts-expect-error - It's there
+                ?.steps?.toJSON?.();
             this.tasks.addTask(upgradeTask.name, {
                 description: upgradeTask.description,
                 env: upgradeTask.envVars,
-
                 steps: [
                     { spawn: checkUpdatesTask.name },
+                    upgradeTaskSteps?.[0],
                     {
                         exec: NodePackageUtils.command.exec(
                             this.package.packageManager,
@@ -97,9 +104,13 @@ export class RootMonorepo extends MonorepoProject {
                             "fix-mismatches",
                         ),
                     },
-                    // @ts-expect-error - It's there
-                    ...upgradeTask._renderSpec().steps.toJSON(),
-                ],
+                    ...(upgradeTaskSteps
+                        ?.slice?.(1)
+                        ?.filter(
+                            (step: TaskStep) =>
+                                typeof step?.exec !== "function",
+                        ) ?? []),
+                ].filter(Boolean),
             });
         }
     }

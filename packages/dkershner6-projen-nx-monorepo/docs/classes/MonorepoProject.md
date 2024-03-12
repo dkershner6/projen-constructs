@@ -125,6 +125,7 @@
 - [preSynthesize](MonorepoProject.md#presynthesize)
 - [removeScript](MonorepoProject.md#removescript)
 - [removeTask](MonorepoProject.md#removetask)
+- [removeUnneededPackages](MonorepoProject.md#removeunneededpackages)
 - [renderWorkflowSetup](MonorepoProject.md#renderworkflowsetup)
 - [runTaskCommand](MonorepoProject.md#runtaskcommand)
 - [setScript](MonorepoProject.md#setscript)
@@ -1761,6 +1762,18 @@ The `Task` that was removed, otherwise `undefined`.
 #### Inherited from
 
 monorepo.MonorepoTsProject.removeTask
+
+___
+
+### removeUnneededPackages
+
+▸ **removeUnneededPackages**(): `void`
+
+PDK is one big package, and monorepo doesn't need these
+
+#### Returns
+
+`void`
 
 ___
 

@@ -43,7 +43,7 @@
       "name": "check-updates",
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,jest-mock,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript,dkershner6-projen-awscdk-core,dkershner6-projen-typescript,projen-sst"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         }
       ]
     },
@@ -189,7 +189,8 @@
       "description": "Publish this package to npm",
       "env": {
         "NPM_DIST_TAG": "latest",
-        "NPM_REGISTRY": "registry.npmjs.org"
+        "NPM_REGISTRY": "registry.npmjs.org",
+        "NPM_CONFIG_PROVENANCE": "true"
       },
       "requiredEnv": [
         "NPM_TOKEN"
@@ -295,7 +296,7 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,clone-deep,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,eslint,jest,jest-junit,jest-mock,prettier,projen,standard-version,ts-jest,typedoc,typedoc-plugin-markdown,typescript,dkershner6-projen-awscdk-core,dkershner6-projen-typescript,projen-sst"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"

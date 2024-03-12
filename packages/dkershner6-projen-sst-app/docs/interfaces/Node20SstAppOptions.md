@@ -102,6 +102,7 @@
 - [npmAccess](Node20SstAppOptions.md#npmaccess)
 - [npmDistTag](Node20SstAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20SstAppOptions.md#npmignoreoptions)
+- [npmProvenance](Node20SstAppOptions.md#npmprovenance)
 - [npmRegistry](Node20SstAppOptions.md#npmregistry)
 - [npmRegistryUrl](Node20SstAppOptions.md#npmregistryurl)
 - [npmTokenSecret](Node20SstAppOptions.md#npmtokensecret)
@@ -1813,6 +1814,34 @@ Configuration options for .npmignore file
 #### Inherited from
 
 SstTypescriptAppOptions.npmIgnoreOptions
+
+___
+
+### npmProvenance
+
+• `Optional` `Readonly` **npmProvenance**: `boolean`
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+**`See`**
+
+https://docs.npmjs.com/generating-provenance-statements
+
+**`Default`**
+
+```ts
+- true for public packages, false otherwise
+```
+
+#### Inherited from
+
+SstTypescriptAppOptions.npmProvenance
 
 ___
 

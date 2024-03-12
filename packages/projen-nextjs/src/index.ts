@@ -26,8 +26,8 @@ export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
         lib: ["dom", "dom.iterable", "esnext"],
         strict: true,
         target: "es5",
-        // @ts-expect-error - projen type bug
         incremental: true,
+        // @ts-expect-error - it exists
         plugins: [
             {
                 name: "next",

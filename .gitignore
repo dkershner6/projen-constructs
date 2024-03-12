@@ -50,7 +50,6 @@ junit.xml
 .nx/cache
 !/nx.json
 !/.nxignore
-!/.syncpackrc.json
 .DS_Store
 !/cspell-readonly.json
 nx-cloud.env
@@ -81,4 +80,5 @@ nx-cloud.env
 !/.nvmrc
 !/.github/CODEOWNERS
 !/pnpm-workspace.yaml
+!/.syncpackrc.json
 !/.projenrc.ts

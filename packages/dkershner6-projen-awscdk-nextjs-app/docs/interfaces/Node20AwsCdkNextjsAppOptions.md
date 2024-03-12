@@ -104,6 +104,7 @@
 - [npmAccess](Node20AwsCdkNextjsAppOptions.md#npmaccess)
 - [npmDistTag](Node20AwsCdkNextjsAppOptions.md#npmdisttag)
 - [npmIgnoreOptions](Node20AwsCdkNextjsAppOptions.md#npmignoreoptions)
+- [npmProvenance](Node20AwsCdkNextjsAppOptions.md#npmprovenance)
 - [npmRegistry](Node20AwsCdkNextjsAppOptions.md#npmregistry)
 - [npmRegistryUrl](Node20AwsCdkNextjsAppOptions.md#npmregistryurl)
 - [npmTokenSecret](Node20AwsCdkNextjsAppOptions.md#npmtokensecret)
@@ -1833,6 +1834,34 @@ Configuration options for .npmignore file
 #### Inherited from
 
 Node20AwsCdkAppOptions.npmIgnoreOptions
+
+___
+
+### npmProvenance
+
+• `Optional` `Readonly` **npmProvenance**: `boolean`
+
+Should provenance statements be generated when the package is published.
+
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+**`See`**
+
+https://docs.npmjs.com/generating-provenance-statements
+
+**`Default`**
+
+```ts
+- true for public packages, false otherwise
+```
+
+#### Inherited from
+
+Node20AwsCdkAppOptions.npmProvenance
 
 ___
 
