@@ -2,16 +2,16 @@
 import { ReleasableCommits, TextFile } from "projen";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
 
-import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
+import {
+    CONSTRUCTS_VERSION,
+    Node20TypeScriptProject,
+    PROJEN_VERSION,
+} from "../../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../../packages/projen-cspell/src";
 import { TypedocMarkdown } from "../../packages/projen-typedoc/src";
 import { RootMonorepo } from "../rootMonorepo";
 
-import {
-    CONSTRUCTS_VERSION,
-    PROJEN_VERSION,
-    THIS_REPOSITORY,
-} from "./constants";
+import { THIS_REPOSITORY } from "./constants";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
     constructor(

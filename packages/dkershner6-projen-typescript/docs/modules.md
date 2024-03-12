@@ -25,8 +25,10 @@
 
 ### Variables
 
+- [CONSTRUCTS\_VERSION](modules.md#constructs_version)
 - [DEV\_FILE\_PATTERNS](modules.md#dev_file_patterns)
 - [PROJEN\_COMPILER\_OPTION\_DEFAULTS](modules.md#projen_compiler_option_defaults)
+- [PROJEN\_VERSION](modules.md#projen_version)
 - [PUBLISH\_FILE\_PATTERNS](modules.md#publish_file_patterns)
 - [RECOMMENDED\_ESLINT\_CONFIG](modules.md#recommended_eslint_config)
 - [RECOMMENDED\_JEST\_CONFIG](modules.md#recommended_jest_config)
@@ -41,6 +43,12 @@
 
 ## Variables
 
+### CONSTRUCTS\_VERSION
+
+• `Const` **CONSTRUCTS\_VERSION**: ``"^10.3.0"``
+
+___
+
 ### DEV\_FILE\_PATTERNS
 
 • `Const` **DEV\_FILE\_PATTERNS**: `string`[]
@@ -50,6 +58,12 @@ ___
 ### PROJEN\_COMPILER\_OPTION\_DEFAULTS
 
 • `Const` **PROJEN\_COMPILER\_OPTION\_DEFAULTS**: `TypeScriptCompilerOptions`
+
+___
+
+### PROJEN\_VERSION
+
+• `Const` **PROJEN\_VERSION**: ``"^0.80.10"``
 
 ___
 
