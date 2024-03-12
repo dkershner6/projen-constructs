@@ -1,6 +1,10 @@
 {
   "name": "projen-nextjs",
   "description": "Helpers for Projen Nextjs Apps.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",

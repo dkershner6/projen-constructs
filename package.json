@@ -1,5 +1,9 @@
 {
   "name": "projen-constructs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "pnpm exec projen build",
     "build:skip-cache": "pnpm exec projen build:skip-cache",

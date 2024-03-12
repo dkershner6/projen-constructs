@@ -1,6 +1,10 @@
 {
   "name": "projen-vscode-workspaces",
   "description": "Helpers for Projen projects that use VSCode workspaces.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkershner6/projen-constructs"
+  },
   "scripts": {
     "build": "npx projen build",
     "bump": "npx projen bump",
