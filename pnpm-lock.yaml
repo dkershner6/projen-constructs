@@ -14,19 +14,19 @@ importers:
   .:
     devDependencies:
       '@aws/pdk':
-        specifier: ^0.23.12
-        version: 0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.79.24)
+        specifier: 0.23.12
+        version: 0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.80.10)
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/lodash.merge':
-        specifier: ^4.6.9
+        specifier: 4.6.9
         version: 4.6.9
       '@types/node':
         specifier: ^20
@@ -38,7 +38,7 @@ importers:
         specifier: ^6
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
         specifier: ^10.0.0
@@ -47,85 +47,85 @@ importers:
         specifier: ^8
         version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
+        specifier: 9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
+        specifier: 3.6.1
         version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
+        specifier: 2.29.1
         version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
+        specifier: 27.9.0
         version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
+        specifier: 5.1.3
         version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
+        specifier: 0.24.0
         version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       lodash.merge:
-        specifier: ^4.6.2
+        specifier: 4.6.2
         version: 4.6.2
       npm-check-updates:
-        specifier: ^16.14.15
+        specifier: 16.14.15
         version: 16.14.15
       nx:
         specifier: 16.0.0
         version: 16.0.0
       nx-cloud:
-        specifier: ^16.5.2
+        specifier: 16.5.2
         version: 16.5.2
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: ^0.80.10
+        version: 0.80.10(constructs@10.3.0)
       syncpack:
         specifier: ^12
         version: 12.3.0(typescript@5.4.2)
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       ts-node:
-        specifier: ^10.9.2
+        specifier: 10.9.2
         version: 10.9.2(@types/node@20.11.20)(typescript@5.4.2)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-awscdk-app:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.17.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-awscdk-core:
         specifier: 0.0.0
@@ -135,240 +135,240 @@ importers:
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-awscdk-construct-library:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.17.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-awscdk-core:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-awscdk-nextjs-app:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-awscdk-app:
         specifier: 0.0.0
@@ -384,40 +384,40 @@ importers:
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       projen-esm:
         specifier: 0.0.0
         version: link:../projen-esm
@@ -428,292 +428,292 @@ importers:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-github-actions:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.16.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       projen-github-action-typescript:
-        specifier: ^0.0.395
-        version: 0.0.395(projen@0.79.24)
+        specifier: 0.0.395
+        version: 0.0.395(projen@0.80.10)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-nx-monorepo:
     devDependencies:
       '@aws/pdk':
-        specifier: ^0.23.12
-        version: 0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.79.24)
+        specifier: 0.23.12
+        version: 0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.80.10)
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.17.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-react:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.16.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-typescript:
         specifier: 0.0.0
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-sst-app:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-awscdk-core:
         specifier: 0.0.0
@@ -723,40 +723,40 @@ importers:
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       projen-sst:
         specifier: 0.0.0
         version: link:../projen-sst
@@ -764,43 +764,43 @@ importers:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-sst-nextjs-app:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       dkershner6-projen-awscdk-core:
         specifier: 0.0.0
@@ -816,40 +816,40 @@ importers:
         version: link:../dkershner6-projen-typescript
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       projen-esm:
         specifier: 0.0.0
         version: link:../projen-esm
@@ -863,326 +863,326 @@ importers:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/dkershner6-projen-typescript:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.16.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-babel:
     devDependencies:
       '@babel/core':
-        specifier: ^7.24.0
+        specifier: 7.24.0
         version: 7.24.0
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/babel__core':
-        specifier: ^7.20.5
+        specifier: 7.20.5
         version: 7.20.5
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-cspell:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-esm:
     devDependencies:
       '@babel/core':
-        specifier: ^7.24.0
+        specifier: 7.24.0
         version: 7.24.0
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/babel__core':
-        specifier: ^7.20.5
+        specifier: 7.20.5
         version: 7.20.5
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       projen-babel:
         specifier: 0.0.0
         version: link:../projen-babel
@@ -1190,802 +1190,802 @@ importers:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-github-workflows:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.15.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.15.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.15.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-graphql:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       graphql-config:
-        specifier: ^5.0.3
-        version: 5.0.3(@types/node@20.11.0)(graphql@16.8.1)(typescript@5.4.2)
+        specifier: 5.0.3
+        version: 5.0.3(@types/node@20.11.20)(graphql@16.8.1)(typescript@5.4.2)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-nextjs:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.0.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       next:
         specifier: 13.5.6
         version: 13.5.6(@babel/core@7.24.0)(react-dom@18.2.0)(react@18.2.0)
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: ^0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-node:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.17.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-nvm:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.15.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.15.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.15.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-sonar:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-sst:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-storybook:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-typedoc:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.18.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
   packages/projen-vscode-workspaces:
     devDependencies:
       '@cspell/eslint-plugin':
-        specifier: ^8.6.0
+        specifier: 8.6.0
         version: 8.6.0
       '@types/clone-deep':
-        specifier: ^4.0.4
+        specifier: 4.0.4
         version: 4.0.4
       '@types/jest':
-        specifier: ^29.5.12
+        specifier: 29.5.12
         version: 29.5.12
       '@types/node':
         specifier: ^20
-        version: 20.11.0
+        version: 20.11.20
       '@typescript-eslint/eslint-plugin':
         specifier: ^6
-        version: 6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^6
-        version: 6.15.0(eslint@8.56.0)(typescript@5.4.2)
+        version: 6.21.0(eslint@8.57.0)(typescript@5.4.2)
       clone-deep:
-        specifier: ^4.0.1
+        specifier: 4.0.1
         version: 4.0.1
       constructs:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       eslint:
         specifier: ^8
-        version: 8.56.0
+        version: 8.57.0
       eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.56.0)
+        specifier: 9.1.0
+        version: 9.1.0(eslint@8.57.0)
       eslint-import-resolver-typescript:
-        specifier: ^3.6.1
-        version: 3.6.1(@typescript-eslint/parser@6.15.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+        specifier: 3.6.1
+        version: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
       eslint-plugin-import:
-        specifier: ^2.29.1
-        version: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        specifier: 2.29.1
+        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jest:
-        specifier: ^27.9.0
-        version: 27.9.0(@typescript-eslint/eslint-plugin@6.15.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2)
+        specifier: 27.9.0
+        version: 27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2)
       eslint-plugin-prettier:
-        specifier: ^5.1.3
-        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
+        specifier: 5.1.3
+        version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5)
       eslint-plugin-sonarjs:
-        specifier: ^0.24.0
-        version: 0.24.0(eslint@8.56.0)
+        specifier: 0.24.0
+        version: 0.24.0(eslint@8.57.0)
       jest:
-        specifier: ^29.7.0
-        version: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-junit:
         specifier: ^15
         version: 15.0.0
       jest-mock:
-        specifier: ^29.7.0
+        specifier: 29.7.0
         version: 29.7.0
       prettier:
-        specifier: ^3.2.5
+        specifier: 3.2.5
         version: 3.2.5
       projen:
-        specifier: 0.79.24
-        version: 0.79.24(constructs@10.3.0)
+        specifier: 0.80.10
+        version: 0.80.10(constructs@10.3.0)
       standard-version:
         specifier: ^9
         version: 9.5.0
       ts-jest:
-        specifier: ^29.1.2
+        specifier: 29.1.2
         version: 29.1.2(@babel/core@7.24.0)(jest@29.7.0)(typescript@5.4.2)
       typedoc:
-        specifier: ^0.25.12
+        specifier: 0.25.12
         version: 0.25.12(typescript@5.4.2)
       typedoc-plugin-markdown:
-        specifier: ^3.17.1
+        specifier: 3.17.1
         version: 3.17.1(typedoc@0.25.12)
       typescript:
-        specifier: ^5.4.2
+        specifier: 5.4.2
         version: 5.4.2
 
 packages:
@@ -2035,7 +2035,7 @@ packages:
       constructs: 10.3.0
     dev: true
 
-  /@aws/pdk@0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.79.24):
+  /@aws/pdk@0.23.12(@aws-cdk/aws-cognito-identitypool-alpha@2.104.0-alpha.0)(aws-cdk-lib@2.132.0)(cdk-nag@2.28.60)(constructs@10.3.0)(projen@0.80.10):
     resolution: {integrity: sha512-MCUJQiWUp1ryqKr+LAw5q7Kss6hxSoIr2EExJBZIpnerIZyHLr7JsKdH2XaH40b2YqhpPHG6Y0R5SkRnslgr0A==}
     hasBin: true
     peerDependencies:
@@ -2049,7 +2049,7 @@ packages:
       aws-cdk-lib: 2.132.0(constructs@10.3.0)
       cdk-nag: 2.28.60(aws-cdk-lib@2.132.0)(constructs@10.3.0)
       constructs: 10.3.0
-      projen: 0.79.24(constructs@10.3.0)
+      projen: 0.80.10(constructs@10.3.0)
     dev: true
     bundledDependencies:
       - '@pnpm/reviewing.dependencies-hierarchy'
@@ -2122,7 +2122,7 @@ packages:
     resolution: {integrity: sha512-qrSfCYxYQB5owCmGLbl8XRpX1ytXlpueOb0N0UmQwA073KZxejgQTzAmJezxvpwQD9uGtK2shHdi55QT+MbjIw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': 7.23.9
+      '@babel/types': 7.24.0
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.20
       jsesc: 2.5.2
@@ -2232,22 +2232,6 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: true
-
-  /@babel/parser@7.23.6:
-    resolution: {integrity: sha512-Z2uID7YJ7oNvAI20O9X0bblw7Qqs8Q2hFy0R9tAfnfLkp5MW0UH9eUvnDSnFwKZ0AvgS1ucqR4KzvVHgnke1VQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.23.6
-    dev: true
-
-  /@babel/parser@7.23.9:
-    resolution: {integrity: sha512-9tcKgqKbs3xGJ+NtKF2ndOBBLVwPjl1SHxPQkd36r3Dlirw3xWUeGaTbqr7uGZcTaxkVNwc+03SVP7aCdWrTlA==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.23.9
     dev: true
 
   /@babel/parser@7.24.0:
@@ -2387,15 +2371,6 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /@babel/template@7.23.9:
-    resolution: {integrity: sha512-+xrD2BWLpvHKNmX2QbpdpsBaWnRxahMwJjO+KZk2JOElj5nSmKezyS1B4u+QbHMTX69t4ukm6hh9lsYQ7GHCKA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/code-frame': 7.23.5
-      '@babel/parser': 7.23.9
-      '@babel/types': 7.23.9
-    dev: true
-
   /@babel/template@7.24.0:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
     engines: {node: '>=6.9.0'}
@@ -2421,24 +2396,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.23.6:
-    resolution: {integrity: sha512-+uarb83brBzPKN38NX1MkB6vb6+mwvR6amUulqAE7ccQw1pEl+bCia9TbdG1lsnFP7lZySvUn37CHyXQdfTwzg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
-    dev: true
-
-  /@babel/types@7.23.9:
-    resolution: {integrity: sha512-dQjSq/7HaSjRM43FFGnv5keM2HsxpmyV1PfaSVm0nzzjwwTmjOe6J4bC8e3+pTEIgHaHj+1ZlLThRJ2auc/w1Q==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.24.0:
@@ -2774,16 +2731,6 @@ packages:
       fast-check: 3.15.0
     dev: true
 
-  /@eslint-community/eslint-utils@4.4.0(eslint@8.56.0):
-    resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
-    dependencies:
-      eslint: 8.56.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
   /@eslint-community/eslint-utils@4.4.0(eslint@8.57.0):
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -2814,11 +2761,6 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@eslint/js@8.56.0:
-    resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
   /@eslint/js@8.57.0:
@@ -2876,7 +2818,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@graphql-tools/executor-http@1.0.7(@types/node@20.11.0)(graphql@16.8.1):
+  /@graphql-tools/executor-http@1.0.7(@types/node@20.11.20)(graphql@16.8.1):
     resolution: {integrity: sha512-/MoRYzQS50Tz5mxRfq3ZmeZ2SOins9wGZAGetsJ55F3PxL0PmHdSGlCq12KzffZDbwHV5YMlwigBsSGWq4y9Iw==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -2887,7 +2829,7 @@ packages:
       '@whatwg-node/fetch': 0.9.15
       extract-files: 11.0.0
       graphql: 16.8.1
-      meros: 1.3.0(@types/node@20.11.0)
+      meros: 1.3.0(@types/node@20.11.20)
       tslib: 2.6.2
       value-or-promise: 1.0.12
     transitivePeerDependencies:
@@ -3001,7 +2943,7 @@ packages:
       value-or-promise: 1.0.12
     dev: true
 
-  /@graphql-tools/url-loader@8.0.1(@types/node@20.11.0)(graphql@16.8.1):
+  /@graphql-tools/url-loader@8.0.1(@types/node@20.11.20)(graphql@16.8.1):
     resolution: {integrity: sha512-B2k8KQEkEQmfV1zhurT5GLoXo8jbXP+YQHUayhCSxKYlRV7j/1Fhp1b21PDM8LXIDGlDRXaZ0FbWKOs7eYXDuQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -3010,7 +2952,7 @@ packages:
       '@ardatan/sync-fetch': 0.0.1
       '@graphql-tools/delegate': 10.0.3(graphql@16.8.1)
       '@graphql-tools/executor-graphql-ws': 1.1.0(graphql@16.8.1)
-      '@graphql-tools/executor-http': 1.0.7(@types/node@20.11.0)(graphql@16.8.1)
+      '@graphql-tools/executor-http': 1.0.7(@types/node@20.11.20)(graphql@16.8.1)
       '@graphql-tools/executor-legacy-ws': 1.0.5(graphql@16.8.1)
       '@graphql-tools/utils': 10.0.12(graphql@16.8.1)
       '@graphql-tools/wrap': 10.0.1(graphql@16.8.1)
@@ -3061,17 +3003,6 @@ packages:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
       graphql: 16.8.1
-    dev: true
-
-  /@humanwhocodes/config-array@0.11.13:
-    resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
-    engines: {node: '>=10.10.0'}
-    dependencies:
-      '@humanwhocodes/object-schema': 2.0.2
-      debug: 4.3.4
-      minimatch: 3.1.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@humanwhocodes/config-array@0.11.14:
@@ -3813,8 +3744,8 @@ packages:
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
     dependencies:
-      '@babel/parser': 7.23.6
-      '@babel/types': 7.23.6
+      '@babel/parser': 7.24.0
+      '@babel/types': 7.24.0
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.18.2
@@ -3823,20 +3754,20 @@ packages:
   /@types/babel__generator@7.6.8:
     resolution: {integrity: sha512-ASsj+tpEDsEiFr1arWrlN6V3mdfjRMZt6LtK/Vp/kreFLnr5QH5+DhvD5nINYZXzwJvXeGq+05iUXcAzVrqWtw==}
     dependencies:
-      '@babel/types': 7.23.6
+      '@babel/types': 7.24.0
     dev: true
 
   /@types/babel__template@7.4.4:
     resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
     dependencies:
-      '@babel/parser': 7.23.6
-      '@babel/types': 7.23.6
+      '@babel/parser': 7.24.0
+      '@babel/types': 7.24.0
     dev: true
 
   /@types/babel__traverse@7.18.2:
     resolution: {integrity: sha512-FcFaxOr2V5KZCviw1TnutEMVUVsGt4D2hP1TAfXZAMKuHYW3xQhe3jTxNPWutgCJ3/X1c5yX8ZoGVEItxKbwBg==}
     dependencies:
-      '@babel/types': 7.23.6
+      '@babel/types': 7.24.0
     dev: true
 
   /@types/clone-deep@4.0.4:
@@ -3902,12 +3833,6 @@ packages:
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
     dev: true
 
-  /@types/node@20.11.0:
-    resolution: {integrity: sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: true
-
   /@types/node@20.11.20:
     resolution: {integrity: sha512-7/rR21OS+fq8IyHTgtLkDK949uzsa6n8BkziAKtPVpugIkO6D+/ooXMvzXxDnZrmtXVfjb1bKQafYpb8s89LOg==}
     dependencies:
@@ -3942,122 +3867,6 @@ packages:
       '@types/yargs-parser': 21.0.3
     dev: true
 
-  /@typescript-eslint/eslint-plugin@6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-j5qoikQqPccq9QoBAupOP+CBu8BaJ8BLjaXSioDISeTZkVO3ig7oSIKh3H+rEpee7xCXtWwSB4KIL5l6hWZzpg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/scope-manager': 6.15.0
-      '@typescript-eslint/type-utils': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.15.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      graphemer: 1.4.0
-      ignore: 5.3.0
-      natural-compare: 1.4.0
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/eslint-plugin@6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-O5f7Kv5o4dLWQtPX4ywPPa+v9G+1q1x8mz0Kr0pXUtKsevo+gIJHLkGc8RxaZWtP8RrhwhSNIWThnW42K9/0rQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/scope-manager': 6.16.0
-      '@typescript-eslint/type-utils': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      graphemer: 1.4.0
-      ignore: 5.3.0
-      natural-compare: 1.4.0
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/eslint-plugin@6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-Vih/4xLXmY7V490dGwBQJTpIZxH4ZFH6eCVmQ4RFkB+wmaCTDAx4dtgoWwMNGKLkqRY1L6rPqzEbjorRnDo4rQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/scope-manager': 6.17.0
-      '@typescript-eslint/type-utils': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.17.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      graphemer: 1.4.0
-      ignore: 5.3.0
-      natural-compare: 1.4.0
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/eslint-plugin@6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-3lqEvQUdCozi6d1mddWqd+kf8KxmGq2Plzx36BlkjuQe3rSTm/O98cLf0A4uDO+a5N1KD2SeEEl6fW97YHY+6w==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^6.0.0 || ^6.0.0-alpha
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@eslint-community/regexpp': 4.10.0
-      '@typescript-eslint/parser': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/scope-manager': 6.18.0
-      '@typescript-eslint/type-utils': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.18.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      graphemer: 1.4.0
-      ignore: 5.3.0
-      natural-compare: 1.4.0
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.2):
     resolution: {integrity: sha512-oy9+hTPCUFpngkEZUSzbf9MxI65wbKFoQYsgPdILTfbUldp5ovUuphZVe4i30emU9M/kP+T64Di0mxl7dSw3MA==}
     engines: {node: ^16.0.0 || >=18.0.0}
@@ -4082,90 +3891,6 @@ packages:
       natural-compare: 1.4.0
       semver: 7.6.0
       ts-api-utils: 1.2.1(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/parser@6.15.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-MkgKNnsjC6QwcMdlNAel24jjkEO/0hQaMDLqP4S9zq5HBAUJNQB6y+3DwLjX7b3l2b37eNAxMPLwb3/kh8VKdA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 6.15.0
-      '@typescript-eslint/types': 6.15.0
-      '@typescript-eslint/typescript-estree': 6.15.0(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.15.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/parser@6.16.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-H2GM3eUo12HpKZU9njig3DF5zJ58ja6ahj1GoHEHOgQvYxzoFJJEvC1MQ7T2l9Ha+69ZSOn7RTxOdpC/y3ikMw==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 6.16.0
-      '@typescript-eslint/types': 6.16.0
-      '@typescript-eslint/typescript-estree': 6.16.0(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/parser@6.17.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-C4bBaX2orvhK+LlwrY8oWGmSl4WolCfYm513gEccdWZj0CwGadbIADb0FtVEcI+WzUyjyoBj2JRP8g25E6IB8A==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 6.17.0
-      '@typescript-eslint/types': 6.17.0
-      '@typescript-eslint/typescript-estree': 6.17.0(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.17.0
-      debug: 4.3.4
-      eslint: 8.56.0
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/parser@6.18.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-v6uR68SFvqhNQT41frCMCQpsP+5vySy6IdgjlzUWoo7ALCnpaWYcz/Ij2k4L8cEsL0wkvOviCMpjmtRtHNOKzA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 6.18.0
-      '@typescript-eslint/types': 6.18.0
-      '@typescript-eslint/typescript-estree': 6.18.0(typescript@5.4.2)
-      '@typescript-eslint/visitor-keys': 6.18.0
-      debug: 4.3.4
-      eslint: 8.56.0
       typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
@@ -4200,124 +3925,12 @@ packages:
       '@typescript-eslint/visitor-keys': 5.62.0
     dev: true
 
-  /@typescript-eslint/scope-manager@6.15.0:
-    resolution: {integrity: sha512-+BdvxYBltqrmgCNu4Li+fGDIkW9n//NrruzG9X1vBzaNK+ExVXPoGB71kneaVw/Jp+4rH/vaMAGC6JfMbHstVg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.15.0
-      '@typescript-eslint/visitor-keys': 6.15.0
-    dev: true
-
-  /@typescript-eslint/scope-manager@6.16.0:
-    resolution: {integrity: sha512-0N7Y9DSPdaBQ3sqSCwlrm9zJwkpOuc6HYm7LpzLAPqBL7dmzAUimr4M29dMkOP/tEwvOCC/Cxo//yOfJD3HUiw==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.16.0
-      '@typescript-eslint/visitor-keys': 6.16.0
-    dev: true
-
-  /@typescript-eslint/scope-manager@6.17.0:
-    resolution: {integrity: sha512-RX7a8lwgOi7am0k17NUO0+ZmMOX4PpjLtLRgLmT1d3lBYdWH4ssBUbwdmc5pdRX8rXon8v9x8vaoOSpkHfcXGA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.17.0
-      '@typescript-eslint/visitor-keys': 6.17.0
-    dev: true
-
-  /@typescript-eslint/scope-manager@6.18.0:
-    resolution: {integrity: sha512-o/UoDT2NgOJ2VfHpfr+KBY2ErWvCySNUIX/X7O9g8Zzt/tXdpfEU43qbNk8LVuWUT2E0ptzTWXh79i74PP0twA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.18.0
-      '@typescript-eslint/visitor-keys': 6.18.0
-    dev: true
-
   /@typescript-eslint/scope-manager@6.21.0:
     resolution: {integrity: sha512-OwLUIWZJry80O99zvqXVEioyniJMa+d2GrqpUTqi5/v5D5rOrppJVBPa0yKCblcigC0/aYAzxxqQ1B+DS2RYsg==}
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
       '@typescript-eslint/types': 6.21.0
       '@typescript-eslint/visitor-keys': 6.21.0
-    dev: true
-
-  /@typescript-eslint/type-utils@6.15.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-CnmHKTfX6450Bo49hPg2OkIm/D/TVYV7jO1MCfPYGwf6x3GO0VU8YMO5AYMn+u3X05lRRxA4fWCz87GFQV6yVQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/typescript-estree': 6.15.0(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 4.3.4
-      eslint: 8.56.0
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/type-utils@6.16.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-ThmrEOcARmOnoyQfYkHw/DX2SEYBalVECmoldVuH6qagKROp/jMnfXpAU/pAIWub9c4YTxga+XwgAkoA0pxfmg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/typescript-estree': 6.16.0(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 4.3.4
-      eslint: 8.56.0
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/type-utils@6.17.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-hDXcWmnbtn4P2B37ka3nil3yi3VCQO2QEB9gBiHJmQp5wmyQWqnjA85+ZcE8c4FqnaB6lBwMrPkgd4aBYz3iNg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/typescript-estree': 6.17.0(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 4.3.4
-      eslint: 8.56.0
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/type-utils@6.18.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-ZeMtrXnGmTcHciJN1+u2CigWEEXgy1ufoxtWcHORt5kGvpjjIlK9MUhzHm4RM8iVy6dqSaZA/6PVkX6+r+ChjQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/typescript-estree': 6.18.0(typescript@5.4.2)
-      '@typescript-eslint/utils': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 4.3.4
-      eslint: 8.56.0
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@typescript-eslint/type-utils@6.21.0(eslint@8.57.0)(typescript@5.4.2):
@@ -4343,26 +3956,6 @@ packages:
   /@typescript-eslint/types@5.62.0:
     resolution: {integrity: sha512-87NVngcbVXUahrRTqIK27gD2t5Cu1yuCXxbLcFtCzZGlfyVWWh8mLHkoxzjsB6DDNnvdL+fW8MiwPEJyGJQDgQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /@typescript-eslint/types@6.15.0:
-    resolution: {integrity: sha512-yXjbt//E4T/ee8Ia1b5mGlbNj9fB9lJP4jqLbZualwpP2BCQ5is6BcWwxpIsY4XKAhmdv3hrW92GdtJbatC6dQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dev: true
-
-  /@typescript-eslint/types@6.16.0:
-    resolution: {integrity: sha512-hvDFpLEvTJoHutVl87+MG/c5C8I6LOgEx05zExTSJDEVU7hhR3jhV8M5zuggbdFCw98+HhZWPHZeKS97kS3JoQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dev: true
-
-  /@typescript-eslint/types@6.17.0:
-    resolution: {integrity: sha512-qRKs9tvc3a4RBcL/9PXtKSehI/q8wuU9xYJxe97WFxnzH8NWWtcW3ffNS+EWg8uPvIerhjsEZ+rHtDqOCiH57A==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dev: true
-
-  /@typescript-eslint/types@6.18.0:
-    resolution: {integrity: sha512-/RFVIccwkwSdW/1zeMx3hADShWbgBxBnV/qSrex6607isYjj05t36P6LyONgqdUrNLl5TYU8NIKdHUYpFvExkA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
     dev: true
 
   /@typescript-eslint/types@6.21.0:
@@ -4391,93 +3984,6 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/typescript-estree@6.15.0(typescript@5.4.2):
-    resolution: {integrity: sha512-7mVZJN7Hd15OmGuWrp2T9UvqR2Ecg+1j/Bp1jXUEY2GZKV6FXlOIoqVDmLpBiEiq3katvj/2n2mR0SDwtloCew==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 6.15.0
-      '@typescript-eslint/visitor-keys': 6.15.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/typescript-estree@6.16.0(typescript@5.4.2):
-    resolution: {integrity: sha512-VTWZuixh/vr7nih6CfrdpmFNLEnoVBF1skfjdyGnNwXOH1SLeHItGdZDHhhAIzd3ACazyY2Fg76zuzOVTaknGA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 6.16.0
-      '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      minimatch: 9.0.3
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/typescript-estree@6.17.0(typescript@5.4.2):
-    resolution: {integrity: sha512-gVQe+SLdNPfjlJn5VNGhlOhrXz4cajwFd5kAgWtZ9dCZf4XJf8xmgCTLIqec7aha3JwgLI2CK6GY1043FRxZwg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 6.17.0
-      '@typescript-eslint/visitor-keys': 6.17.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      minimatch: 9.0.3
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@typescript-eslint/typescript-estree@6.18.0(typescript@5.4.2):
-    resolution: {integrity: sha512-klNvl+Ql4NsBNGB4W9TZ2Od03lm7aGvTbs0wYaFYsplVPhr+oeXjlPZCDI4U9jgJIDK38W1FKhacCFzCC+nbIg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 6.18.0
-      '@typescript-eslint/visitor-keys': 6.18.0
-      debug: 4.3.4
-      globby: 11.1.0
-      is-glob: 4.0.3
-      minimatch: 9.0.3
-      semver: 7.5.4
-      ts-api-utils: 1.0.3(typescript@5.4.2)
-      typescript: 5.4.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@typescript-eslint/typescript-estree@6.21.0(typescript@5.4.2):
     resolution: {integrity: sha512-6npJTkZcO+y2/kr+z0hc4HwNfrrP4kNYh57ek7yCNlrBjWQ1Y0OS7jiZTkgumrvkX5HkEKXFZkkdFNkaW2wmUQ==}
     engines: {node: ^16.0.0 || >=18.0.0}
@@ -4500,26 +4006,6 @@ packages:
       - supports-color
     dev: true
 
-  /@typescript-eslint/utils@5.62.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-n8oxjeb5aIbPFEtmQxQYOLI0i9n5ySBEY/ZEHHZqKQSFnxio1rv6dthascc9dLuwrL0RC5mPCxB7vnAVGAYWAQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
-      '@typescript-eslint/scope-manager': 5.62.0
-      '@typescript-eslint/types': 5.62.0
-      '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.4.2)
-      eslint: 8.56.0
-      eslint-scope: 5.1.1
-      semver: 7.6.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
   /@typescript-eslint/utils@5.62.0(eslint@8.57.0)(typescript@5.4.2):
     resolution: {integrity: sha512-n8oxjeb5aIbPFEtmQxQYOLI0i9n5ySBEY/ZEHHZqKQSFnxio1rv6dthascc9dLuwrL0RC5mPCxB7vnAVGAYWAQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -4535,82 +4021,6 @@ packages:
       eslint: 8.57.0
       eslint-scope: 5.1.1
       semver: 7.6.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /@typescript-eslint/utils@6.15.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-eF82p0Wrrlt8fQSRL0bGXzK5nWPRV2dYQZdajcfzOD9+cQz9O7ugifrJxclB+xVOvWvagXfqS4Es7vpLP4augw==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
-      '@typescript-eslint/scope-manager': 6.15.0
-      '@typescript-eslint/types': 6.15.0
-      '@typescript-eslint/typescript-estree': 6.15.0(typescript@5.4.2)
-      eslint: 8.56.0
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /@typescript-eslint/utils@6.16.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-T83QPKrBm6n//q9mv7oiSvy/Xq/7Hyw9SzSEhMHJwznEmQayfBM87+oAlkNAMEO7/MjIwKyOHgBJbxB0s7gx2A==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
-      '@typescript-eslint/scope-manager': 6.16.0
-      '@typescript-eslint/types': 6.16.0
-      '@typescript-eslint/typescript-estree': 6.16.0(typescript@5.4.2)
-      eslint: 8.56.0
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /@typescript-eslint/utils@6.17.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-LofsSPjN/ITNkzV47hxas2JCsNCEnGhVvocfyOcLzT9c/tSZE7SfhS/iWtzP1lKNOEfLhRTZz6xqI8N2RzweSQ==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
-      '@typescript-eslint/scope-manager': 6.17.0
-      '@typescript-eslint/types': 6.17.0
-      '@typescript-eslint/typescript-estree': 6.17.0(typescript@5.4.2)
-      eslint: 8.56.0
-      semver: 7.5.4
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /@typescript-eslint/utils@6.18.0(eslint@8.56.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-wiKKCbUeDPGaYEYQh1S580dGxJ/V9HI7K5sbGAVklyf+o5g3O+adnS4UNJajplF4e7z2q0uVBaTdT/yLb4XAVA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    peerDependencies:
-      eslint: ^7.0.0 || ^8.0.0
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@types/json-schema': 7.0.15
-      '@types/semver': 7.5.6
-      '@typescript-eslint/scope-manager': 6.18.0
-      '@typescript-eslint/types': 6.18.0
-      '@typescript-eslint/typescript-estree': 6.18.0(typescript@5.4.2)
-      eslint: 8.56.0
-      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4640,38 +4050,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       '@typescript-eslint/types': 5.62.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
-  /@typescript-eslint/visitor-keys@6.15.0:
-    resolution: {integrity: sha512-1zvtdC1a9h5Tb5jU9x3ADNXO9yjP8rXlaoChu0DQX40vf5ACVpYIVIZhIMZ6d5sDXH7vq4dsZBT1fEGj8D2n2w==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.15.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
-  /@typescript-eslint/visitor-keys@6.16.0:
-    resolution: {integrity: sha512-QSFQLruk7fhs91a/Ep/LqRdbJCZ1Rq03rqBdKT5Ky17Sz8zRLUksqIe9DW0pKtg/Z35/ztbLQ6qpOCN6rOC11A==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.16.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
-  /@typescript-eslint/visitor-keys@6.17.0:
-    resolution: {integrity: sha512-H6VwB/k3IuIeQOyYczyyKN8wH6ed8EwliaYHLxOIhyF0dYEIsN8+Bk3GE19qafeMKyZJJHP8+O1HiFhFLUNKSg==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.17.0
-      eslint-visitor-keys: 3.4.3
-    dev: true
-
-  /@typescript-eslint/visitor-keys@6.18.0:
-    resolution: {integrity: sha512-1wetAlSZpewRDb2h9p/Q8kRjdGuqdTAQbkJIOUMLug2LBLG+QOjiWoSj6/3B/hA9/tVTFFdtiKvAYoYnSRW/RA==}
-    engines: {node: ^16.0.0 || >=18.0.0}
-    dependencies:
-      '@typescript-eslint/types': 6.18.0
       eslint-visitor-keys: 3.4.3
     dev: true
 
@@ -5044,8 +4422,8 @@ packages:
     resolution: {integrity: sha512-ESAc/RJvGTFEzRwOTT4+lNDk/GNHMkKbNzsvT0qKRfDyyYTskxB5rnU2njIDYVxXCBHHEI1c0YwHob3WaYujOg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
-      '@babel/template': 7.23.9
-      '@babel/types': 7.23.9
+      '@babel/template': 7.24.0
+      '@babel/types': 7.24.0
       '@types/babel__core': 7.20.5
       '@types/babel__traverse': 7.18.2
     dev: true
@@ -5723,25 +5101,6 @@ packages:
       typescript: 5.4.2
     dev: true
 
-  /create-jest@29.7.0(@types/node@20.11.0)(ts-node@10.9.2):
-    resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    hasBin: true
-    dependencies:
-      '@jest/types': 29.6.3
-      chalk: 4.1.2
-      exit: 0.1.2
-      graceful-fs: 4.2.11
-      jest-config: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-      jest-util: 29.7.0
-      prompts: 2.4.2
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
-    dev: true
-
   /create-jest@29.7.0(@types/node@20.11.20)(ts-node@10.9.2):
     resolution: {integrity: sha512-Adz2bdH0Vq3F53KEMJOoftQFutWCukm6J24wbPWRO4k1kMY7gS7ds/uoJkNuV8wDCtWWnuwGcJwpWcih+zEW1Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -6237,15 +5596,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier@9.1.0(eslint@8.56.0):
-    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-    dependencies:
-      eslint: 8.56.0
-    dev: true
-
   /eslint-config-prettier@9.1.0(eslint@8.57.0):
     resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
     hasBin: true
@@ -6262,98 +5612,6 @@ packages:
       is-core-module: 2.13.1
       resolve: 1.22.8
     transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.15.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '*'
-      eslint-plugin-import: '*'
-    dependencies:
-      debug: 4.3.4
-      enhanced-resolve: 5.15.0
-      eslint: 8.56.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      fast-glob: 3.3.2
-      get-tsconfig: 4.7.2
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-node
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '*'
-      eslint-plugin-import: '*'
-    dependencies:
-      debug: 4.3.4
-      enhanced-resolve: 5.15.0
-      eslint: 8.56.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      fast-glob: 3.3.2
-      get-tsconfig: 4.7.2
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-node
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '*'
-      eslint-plugin-import: '*'
-    dependencies:
-      debug: 4.3.4
-      enhanced-resolve: 5.15.0
-      eslint: 8.56.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      fast-glob: 3.3.2
-      get-tsconfig: 4.7.2
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-node
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      eslint: '*'
-      eslint-plugin-import: '*'
-    dependencies:
-      debug: 4.3.4
-      enhanced-resolve: 5.15.0
-      eslint: 8.56.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      fast-glob: 3.3.2
-      get-tsconfig: 4.7.2
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-    transitivePeerDependencies:
-      - '@typescript-eslint/parser'
-      - eslint-import-resolver-node
-      - eslint-import-resolver-webpack
       - supports-color
     dev: true
 
@@ -6377,126 +5635,6 @@ packages:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 3.2.7
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.15.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 3.2.7
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.16.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 3.2.7
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.17.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      debug: 3.2.7
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.18.0)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-    transitivePeerDependencies:
       - supports-color
     dev: true
 
@@ -6527,146 +5665,6 @@ packages:
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
     transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.15.0(eslint@8.56.0)(typescript@5.4.2)
-      array-includes: 3.1.7
-      array.prototype.findlastindex: 1.2.3
-      array.prototype.flat: 1.3.2
-      array.prototype.flatmap: 1.3.2
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      hasown: 2.0.0
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.7
-      object.groupby: 1.0.1
-      object.values: 1.1.7
-      semver: 6.3.1
-      tsconfig-paths: 3.15.0
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.16.0(eslint@8.56.0)(typescript@5.4.2)
-      array-includes: 3.1.7
-      array.prototype.findlastindex: 1.2.3
-      array.prototype.flat: 1.3.2
-      array.prototype.flatmap: 1.3.2
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      hasown: 2.0.0
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.7
-      object.groupby: 1.0.1
-      object.values: 1.1.7
-      semver: 6.3.1
-      tsconfig-paths: 3.15.0
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.17.0(eslint@8.56.0)(typescript@5.4.2)
-      array-includes: 3.1.7
-      array.prototype.findlastindex: 1.2.3
-      array.prototype.flat: 1.3.2
-      array.prototype.flatmap: 1.3.2
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      hasown: 2.0.0
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.7
-      object.groupby: 1.0.1
-      object.values: 1.1.7
-      semver: 6.3.1
-      tsconfig-paths: 3.15.0
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
-    dev: true
-
-  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
-    resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.18.0(eslint@8.56.0)(typescript@5.4.2)
-      array-includes: 3.1.7
-      array.prototype.findlastindex: 1.2.3
-      array.prototype.flat: 1.3.2
-      array.prototype.flatmap: 1.3.2
-      debug: 3.2.7
-      doctrine: 2.1.0
-      eslint: 8.56.0
-      eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.18.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      hasown: 2.0.0
-      is-core-module: 2.13.1
-      is-glob: 4.0.3
-      minimatch: 3.1.2
-      object.fromentries: 2.0.7
-      object.groupby: 1.0.1
-      object.values: 1.1.7
-      semver: 6.3.1
-      tsconfig-paths: 3.15.0
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
       - supports-color
     dev: true
 
@@ -6705,94 +5703,6 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@6.15.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0 || ^7.0.0
-      eslint: ^7.0.0 || ^8.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 6.15.0(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.4.2)
-      eslint: 8.56.0
-      jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@6.16.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0 || ^7.0.0
-      eslint: ^7.0.0 || ^8.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 6.16.0(@typescript-eslint/parser@6.16.0)(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.4.2)
-      eslint: 8.56.0
-      jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@6.17.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0 || ^7.0.0
-      eslint: ^7.0.0 || ^8.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 6.17.0(@typescript-eslint/parser@6.17.0)(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.4.2)
-      eslint: 8.56.0
-      jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
-  /eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@6.18.0)(eslint@8.56.0)(jest@29.7.0)(typescript@5.4.2):
-    resolution: {integrity: sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0 || ^7.0.0
-      eslint: ^7.0.0 || ^8.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
-    dependencies:
-      '@typescript-eslint/eslint-plugin': 6.18.0(@typescript-eslint/parser@6.18.0)(eslint@8.56.0)(typescript@5.4.2)
-      '@typescript-eslint/utils': 5.62.0(eslint@8.56.0)(typescript@5.4.2)
-      eslint: 8.56.0
-      jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
   /eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)(jest@29.7.0)(typescript@5.4.2):
     resolution: {integrity: sha512-QIT7FH7fNmd9n4se7FFKHbsLKGQiw885Ds6Y/sxKgCZ6natwCsXdgPOADnYVxN2QrRweF0FZWbJ6S7Rsn7llug==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -6815,27 +5725,6 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5):
-    resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      '@types/eslint': '>=8.0.0'
-      eslint: '>=8.0.0'
-      eslint-config-prettier: '*'
-      prettier: '>=3.0.0'
-    peerDependenciesMeta:
-      '@types/eslint':
-        optional: true
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      eslint: 8.56.0
-      eslint-config-prettier: 9.1.0(eslint@8.56.0)
-      prettier: 3.2.5
-      prettier-linter-helpers: 1.0.0
-      synckit: 0.8.8
-    dev: true
-
   /eslint-plugin-prettier@5.1.3(eslint-config-prettier@9.1.0)(eslint@8.57.0)(prettier@3.2.5):
     resolution: {integrity: sha512-C9GCVAs4Eq7ZC/XFQHITLiHJxQngdtraXaM+LoUFoFp/lHNl2Zn8f3WQbe9HvTBBQ9YnKFB0/2Ajdqwo5D1EAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -6855,15 +5744,6 @@ packages:
       prettier: 3.2.5
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.8
-    dev: true
-
-  /eslint-plugin-sonarjs@0.24.0(eslint@8.56.0):
-    resolution: {integrity: sha512-87zp50mbbNrSTuoEOebdRQBPa0mdejA5UEjyuScyIw8hEpEjfWP89Qhkq5xVZfVyVSRQKZc9alVm7yRKQvvUmg==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      eslint: 8.56.0
     dev: true
 
   /eslint-plugin-sonarjs@0.24.0(eslint@8.57.0):
@@ -6894,53 +5774,6 @@ packages:
   /eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dev: true
-
-  /eslint@8.56.0:
-    resolution: {integrity: sha512-Go19xM6T9puCOWntie1/P997aXxFsOi37JIHRWI514Hc6ZnaHGKY9xFhrU65RT6CcBEzZoGG1e6Nq+DT04ZtZQ==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    hasBin: true
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      '@eslint-community/regexpp': 4.10.0
-      '@eslint/eslintrc': 2.1.4
-      '@eslint/js': 8.56.0
-      '@humanwhocodes/config-array': 0.11.13
-      '@humanwhocodes/module-importer': 1.0.1
-      '@nodelib/fs.walk': 1.2.8
-      '@ungap/structured-clone': 1.2.0
-      ajv: 6.12.6
-      chalk: 4.1.2
-      cross-spawn: 7.0.3
-      debug: 4.3.4
-      doctrine: 3.0.0
-      escape-string-regexp: 4.0.0
-      eslint-scope: 7.2.2
-      eslint-visitor-keys: 3.4.3
-      espree: 9.6.1
-      esquery: 1.5.0
-      esutils: 2.0.3
-      fast-deep-equal: 3.1.3
-      file-entry-cache: 6.0.1
-      find-up: 5.0.0
-      glob-parent: 6.0.2
-      globals: 13.24.0
-      graphemer: 1.4.0
-      ignore: 5.3.0
-      imurmurhash: 0.1.4
-      is-glob: 4.0.3
-      is-path-inside: 3.0.3
-      js-yaml: 4.1.0
-      json-stable-stringify-without-jsonify: 1.0.1
-      levn: 0.4.1
-      lodash.merge: 4.6.2
-      minimatch: 3.1.2
-      natural-compare: 1.4.0
-      optionator: 0.9.3
-      strip-ansi: 6.0.1
-      text-table: 0.2.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /eslint@8.57.0:
@@ -7581,7 +6414,7 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
 
-  /graphql-config@5.0.3(@types/node@20.11.0)(graphql@16.8.1)(typescript@5.4.2):
+  /graphql-config@5.0.3(@types/node@20.11.20)(graphql@16.8.1)(typescript@5.4.2):
     resolution: {integrity: sha512-BNGZaoxIBkv9yy6Y7omvsaBUHOzfFcII3UN++tpH8MGOKFPFkCPZuwx09ggANMt8FgyWP1Od8SWPmrUEZca4NQ==}
     engines: {node: '>= 16.0.0'}
     peerDependencies:
@@ -7595,7 +6428,7 @@ packages:
       '@graphql-tools/json-file-loader': 8.0.0(graphql@16.8.1)
       '@graphql-tools/load': 8.0.1(graphql@16.8.1)
       '@graphql-tools/merge': 9.0.1(graphql@16.8.1)
-      '@graphql-tools/url-loader': 8.0.1(@types/node@20.11.0)(graphql@16.8.1)
+      '@graphql-tools/url-loader': 8.0.1(@types/node@20.11.20)(graphql@16.8.1)
       '@graphql-tools/utils': 10.0.12(graphql@16.8.1)
       cosmiconfig: 8.3.6(typescript@5.4.2)
       graphql: 16.8.1
@@ -8133,7 +6966,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@babel/core': 7.24.0
-      '@babel/parser': 7.23.9
+      '@babel/parser': 7.24.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 6.3.1
@@ -8146,7 +6979,7 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       '@babel/core': 7.24.0
-      '@babel/parser': 7.23.6
+      '@babel/parser': 7.24.0
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
       semver: 7.6.0
@@ -8229,34 +7062,6 @@ packages:
       - supports-color
     dev: true
 
-  /jest-cli@29.7.0(@types/node@20.11.0)(ts-node@10.9.2):
-    resolution: {integrity: sha512-OVVobw2IubN/GSYsxETi+gOe7Ka59EFMR/twOU3Jb2GnKKeMGJB5SGUUrEz3SFVmJASUdZUzy83sLNNQ2gZslg==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    hasBin: true
-    peerDependencies:
-      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
-    peerDependenciesMeta:
-      node-notifier:
-        optional: true
-    dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2)
-      '@jest/test-result': 29.7.0
-      '@jest/types': 29.6.3
-      chalk: 4.1.2
-      create-jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-      exit: 0.1.2
-      import-local: 3.1.0
-      jest-config: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-      jest-util: 29.7.0
-      jest-validate: 29.7.0
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
-    dev: true
-
   /jest-cli@29.7.0(@types/node@20.11.20)(ts-node@10.9.2):
     resolution: {integrity: sha512-OVVobw2IubN/GSYsxETi+gOe7Ka59EFMR/twOU3Jb2GnKKeMGJB5SGUUrEz3SFVmJASUdZUzy83sLNNQ2gZslg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -8283,47 +7088,6 @@ packages:
       - babel-plugin-macros
       - supports-color
       - ts-node
-    dev: true
-
-  /jest-config@29.7.0(@types/node@20.11.0)(ts-node@10.9.2):
-    resolution: {integrity: sha512-uXbpfeQ7R6TZBqI3/TxCU4q4ttk3u0PJeC+E0zbfSoSjq6bJ7buBPxzQPL0ifrkY4DNu4JUdk0ImlBUYi840eQ==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    peerDependencies:
-      '@types/node': '*'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      '@babel/core': 7.24.0
-      '@jest/test-sequencer': 29.7.0
-      '@jest/types': 29.6.3
-      '@types/node': 20.11.0
-      babel-jest: 29.7.0(@babel/core@7.24.0)
-      chalk: 4.1.2
-      ci-info: 3.9.0
-      deepmerge: 4.3.1
-      glob: 7.2.3
-      graceful-fs: 4.2.11
-      jest-circus: 29.7.0
-      jest-environment-node: 29.7.0
-      jest-get-type: 29.6.3
-      jest-regex-util: 29.6.3
-      jest-resolve: 29.7.0
-      jest-runner: 29.7.0
-      jest-util: 29.7.0
-      jest-validate: 29.7.0
-      micromatch: 4.0.5
-      parse-json: 5.2.0
-      pretty-format: 29.7.0
-      slash: 3.0.0
-      strip-json-comments: 3.1.1
-      ts-node: 10.9.2(@types/node@20.11.20)(typescript@5.4.2)
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - supports-color
     dev: true
 
   /jest-config@29.7.0(@types/node@20.11.20)(ts-node@10.9.2):
@@ -8479,7 +7243,7 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 20.11.0
+      '@types/node': 20.11.20
       jest-util: 29.7.0
     dev: true
 
@@ -8592,7 +7356,7 @@ packages:
       '@babel/generator': 7.23.6
       '@babel/plugin-syntax-jsx': 7.23.3(@babel/core@7.24.0)
       '@babel/plugin-syntax-typescript': 7.23.3(@babel/core@7.24.0)
-      '@babel/types': 7.23.6
+      '@babel/types': 7.24.0
       '@jest/expect-utils': 29.7.0
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
@@ -8658,27 +7422,6 @@ packages:
       jest-util: 29.7.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
-    dev: true
-
-  /jest@29.7.0(@types/node@20.11.0)(ts-node@10.9.2):
-    resolution: {integrity: sha512-NIy3oAFp9shda19hy4HK0HRTWKtPJmGdnvywu01nOqNC2vZg+Z+fvJDxpMQA88eb2I9EcafcdjYgsDthnYTvGw==}
-    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
-    hasBin: true
-    peerDependencies:
-      node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
-    peerDependenciesMeta:
-      node-notifier:
-        optional: true
-    dependencies:
-      '@jest/core': 29.7.0(ts-node@10.9.2)
-      '@jest/types': 29.6.3
-      import-local: 3.1.0
-      jest-cli: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
-    transitivePeerDependencies:
-      - '@types/node'
-      - babel-plugin-macros
-      - supports-color
-      - ts-node
     dev: true
 
   /jest@29.7.0(@types/node@20.11.20)(ts-node@10.9.2):
@@ -9065,7 +7808,7 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /meros@1.3.0(@types/node@20.11.0):
+  /meros@1.3.0(@types/node@20.11.20):
     resolution: {integrity: sha512-2BNGOimxEz5hmjUG2FwoxCt5HN7BXdaWyFqEwxPTrJzVdABtrL4TiHTcsWSFAxPQ/tOnEaQEJh3qWq71QRMY+w==}
     engines: {node: '>=13'}
     peerDependencies:
@@ -9074,7 +7817,7 @@ packages:
       '@types/node':
         optional: true
     dependencies:
-      '@types/node': 20.11.0
+      '@types/node': 20.11.20
     dev: true
 
   /micromatch@4.0.5:
@@ -10006,16 +8749,16 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /projen-github-action-typescript@0.0.395(projen@0.79.24):
+  /projen-github-action-typescript@0.0.395(projen@0.80.10):
     resolution: {integrity: sha512-6wYEbV3MVt1ikzt1WKfFCFGi2QW94vZF6UU/UkIPY9al9YxfYkS9H3jJ2sz2gtRAXSX9JBk8g3IvmphRpqGsDg==}
     peerDependencies:
       projen: ^0.76.15
     dependencies:
-      projen: 0.79.24(constructs@10.3.0)
+      projen: 0.80.10(constructs@10.3.0)
     dev: true
 
-  /projen@0.79.24(constructs@10.3.0):
-    resolution: {integrity: sha512-feRBel2kl/dRsXTUFwYDnhZjQ7ZEdTAgxsAXIgJX4tEZllw4VzsbFX6P6/qxIUg+swPxYcJOU48bPA2IpuJWuQ==}
+  /projen@0.80.10(constructs@10.3.0):
+    resolution: {integrity: sha512-dwXYGZS0xfTXC2ZKS8AbrGOs3x2s+p1NwAK+iID0l7/eM171RL4z90Tr6xZqSzQuVDEiG7W2uoL8XjYdXVkkpw==}
     engines: {node: '>= 16.0.0'}
     hasBin: true
     peerDependencies:
@@ -10683,7 +9426,7 @@ packages:
       figures: 3.2.0
       find-up: 5.0.0
       git-semver-tags: 4.1.1
-      semver: 7.5.4
+      semver: 7.6.0
       stringify-package: 1.0.1
       yargs: 16.2.0
     dev: true
@@ -11023,15 +9766,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /ts-api-utils@1.0.3(typescript@5.4.2):
-    resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==}
-    engines: {node: '>=16.13.0'}
-    peerDependencies:
-      typescript: '>=4.2.0'
-    dependencies:
-      typescript: 5.4.2
-    dev: true
-
   /ts-api-utils@1.2.1(typescript@5.4.2):
     resolution: {integrity: sha512-RIYA36cJn2WiH9Hy77hdF9r7oEwxAtB/TS9/S4Qd90Ap4z5FSiin5zEiTL44OII1Y3IIlEvxwxFUVgrHSZ/UpA==}
     engines: {node: '>=16'}
@@ -11065,12 +9799,12 @@ packages:
       '@babel/core': 7.24.0
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      jest: 29.7.0(@types/node@20.11.0)(ts-node@10.9.2)
+      jest: 29.7.0(@types/node@20.11.20)(ts-node@10.9.2)
       jest-util: 29.7.0
       json5: 2.2.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      semver: 7.5.4
+      semver: 7.6.0
       typescript: 5.4.2
       yargs-parser: 21.1.1
     dev: true

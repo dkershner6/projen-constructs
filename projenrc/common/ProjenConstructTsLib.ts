@@ -1,12 +1,13 @@
 /* eslint-disable @cspell/spellchecker */
 import { ReleasableCommits, TextFile } from "projen";
 import { TypeScriptProjectOptions } from "projen/lib/typescript";
-import { deepMerge } from "projen/lib/util";
 
 import { Node20TypeScriptProject } from "../../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../../packages/projen-cspell/src";
 import { TypedocMarkdown } from "../../packages/projen-typedoc/src";
 import { RootMonorepo } from "../rootMonorepo";
+
+import { CONSTRUCTS_VERSION, PROJEN_VERSION } from "./constants";
 
 export class ProjenConstructTsLib extends Node20TypeScriptProject {
     constructor(
@@ -16,15 +17,18 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
             "defaultReleaseBranch" | "outDir"
         >,
     ) {
-        const defaultOptions: Omit<TypeScriptProjectOptions, "name"> = {
+        const combinedOptions: TypeScriptProjectOptions = {
+            ...options,
             parent: rootMonorepoProject,
+
+            projenVersion: PROJEN_VERSION,
 
             defaultReleaseBranch: "main",
             outdir: `packages/${options.name}`,
             releaseTagPrefix: `${options.name}@`,
-            publishTasks: true,
-            release: true,
-            releaseToNpm: true,
+            publishTasks: options.publishTasks ?? true,
+            release: options.release ?? true,
+            releaseToNpm: options?.releaseToNpm ?? true,
             releaseWorkflowSetupSteps: [
                 {
                     name: "Compile all libs",
@@ -32,20 +36,19 @@ export class ProjenConstructTsLib extends Node20TypeScriptProject {
                     workingDirectory: ".",
                 },
             ],
-            releasableCommits: ReleasableCommits.everyCommit("."),
+            releasableCommits:
+                options.releasableCommits ?? ReleasableCommits.everyCommit("."),
 
-            peerDeps: ["constructs", "projen", ...(options.peerDeps ?? [])],
-            devDeps: ["constructs", "projen", ...(options.devDeps ?? [])],
+            peerDeps: [
+                `constructs@${CONSTRUCTS_VERSION}`,
+                `projen@${PROJEN_VERSION}`,
+                ...(options.peerDeps ?? []),
+            ],
 
             authorName: "Derek Kershner",
             authorUrl: "https://dkershner.com",
             docgen: true,
         };
-
-        const combinedOptions: TypeScriptProjectOptions = deepMerge([
-            defaultOptions,
-            options,
-        ]) as TypeScriptProjectOptions;
 
         super(combinedOptions);
 

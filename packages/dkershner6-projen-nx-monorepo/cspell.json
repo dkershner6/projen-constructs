@@ -3,5 +3,7 @@
   "import": [
     "cspell-readonly.json"
   ],
-  "words": []
+  "words": [
+    "identitypool"
+  ]
 }

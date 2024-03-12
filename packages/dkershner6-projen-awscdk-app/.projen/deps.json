@@ -84,7 +84,7 @@
     },
     {
       "name": "projen",
-      "version": "^0.79.24",
+      "version": "^0.80.10",
       "type": "build"
     },
     {
@@ -113,6 +113,11 @@
       "type": "peer"
     },
     {
+      "name": "constructs",
+      "version": "^10.3.0",
+      "type": "peer"
+    },
+    {
       "name": "dkershner6-projen-awscdk-core",
       "version": "^0.x",
       "type": "peer"
@@ -120,6 +125,11 @@
     {
       "name": "dkershner6-projen-typescript",
       "version": "^0.x",
+      "type": "peer"
+    },
+    {
+      "name": "projen",
+      "version": "^0.80.10",
       "type": "peer"
     }
   ],

@@ -84,6 +84,7 @@
 - [npmAccess](MonorepoProjectOptions.md#npmaccess)
 - [npmDistTag](MonorepoProjectOptions.md#npmdisttag)
 - [npmIgnoreOptions](MonorepoProjectOptions.md#npmignoreoptions)
+- [npmProvenance](MonorepoProjectOptions.md#npmprovenance)
 - [npmRegistry](MonorepoProjectOptions.md#npmregistry)
 - [npmRegistryUrl](MonorepoProjectOptions.md#npmregistryurl)
 - [npmTokenSecret](MonorepoProjectOptions.md#npmtokensecret)
@@ -1694,6 +1695,33 @@ experimental
 #### Inherited from
 
 monorepo.MonorepoTsProjectOptions.npmIgnoreOptions
+
+___
+
+### npmProvenance
+
+• `Optional` `Readonly` **npmProvenance**: `boolean`
+
+Should provenance statements be generated when the package is published.
+A supported package manager is required to publish a package with npm provenance statements and
+you will need to use a supported CI/CD provider.
+
+Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
+which is using npm internally and supports provenance statements independently of the package manager used.
+
+**`Default`**
+
+```ts
+- true for public packages, false otherwise
+```
+
+**`Stability`**
+
+experimental
+
+#### Inherited from
+
+monorepo.MonorepoTsProjectOptions.npmProvenance
 
 ___
 

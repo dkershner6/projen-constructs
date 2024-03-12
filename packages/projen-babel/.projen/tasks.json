@@ -43,7 +43,7 @@
       "name": "check-updates",
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@babel/core,@cspell/eslint-plugin,@types/babel__core,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript,constructs"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@babel/core,@cspell/eslint-plugin,@types/babel__core,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         }
       ]
     },
@@ -296,7 +296,7 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@babel/core,@cspell/eslint-plugin,@types/babel__core,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript,constructs"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@babel/core,@cspell/eslint-plugin,@types/babel__core,@types/clone-deep,@types/jest,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,jest-mock,prettier,ts-jest,typedoc,typedoc-plugin-markdown,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"

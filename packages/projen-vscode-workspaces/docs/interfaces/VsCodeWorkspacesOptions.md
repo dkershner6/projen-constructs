@@ -68,14 +68,6 @@ ___
 (project) => project.name
 ```
 
-**`Param`**
-
-The root project definition to use for naming
-
-**`Param`**
-
-The project definition to use for naming
-
 #### Type declaration
 
 ▸ (`project`, `rootProject`): `string`
@@ -90,11 +82,3 @@ The project definition to use for naming
 ##### Returns
 
 `string`
-
-The name of the project in the context of VSCode Workspaces
-
-**`Default`**
-
-```ts
-(project) => project.name
-```
