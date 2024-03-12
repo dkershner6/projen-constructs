@@ -81,7 +81,11 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
+export const PROJEN_VERSION = "^0.80.10";
+export const CONSTRUCTS_VERSION = "^10.3.0";
+
 export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
+    projenVersion: PROJEN_VERSION,
     minNodeVersion: "20.10.0",
     maxNodeVersion: "20.10.0",
     workflowNodeVersion: "20.10.0",
@@ -138,6 +142,8 @@ export const RECOMMENDED_NODE_20_PROJECT_OPTIONS: Omit<
 export class DKBugFixes extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
+
+        project.addDevDeps(`constructs@${CONSTRUCTS_VERSION}`);
 
         // Why not? Always true.
         project.package.addField("sideEffects", false);
