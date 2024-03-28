@@ -1,6 +1,4 @@
-import { NodePackageUtils } from "@aws/pdk/monorepo";
 import merge from "lodash.merge";
-import { TaskStep } from "projen";
 
 import {
     MonorepoProject,
@@ -11,7 +9,6 @@ import {
     DKEslintConfig,
     DKBugFixes,
     DKTaskName,
-    DKTasks,
 } from "../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../packages/projen-cspell/src";
 
@@ -52,9 +49,6 @@ export class RootMonorepo extends MonorepoProject {
 
         new DKBugFixes(this);
         new DKEslintConfig(this);
-        new DKTasks(this, {
-            checkUpdatesTask: false,
-        });
 
         for (const taskName of [
             DKTaskName.LINT,
@@ -77,42 +71,5 @@ export class RootMonorepo extends MonorepoProject {
             "OTNiNWJlNjgtNGE5NS00YmYwLWFmYTMtOGFlODM3YTkwNWFkfHJlYWQ=",
         );
         this.addGitIgnore("nx-cloud.env");
-    }
-
-    override preSynthesize(): void {
-        super.preSynthesize();
-
-        const checkUpdatesTask = this.addNxRunManyTask("check-updates", {
-            target: "check-updates",
-        });
-        const upgradeTask = this.upgradeWorkflow?.upgradeTask;
-        if (upgradeTask) {
-            this.tasks.removeTask(upgradeTask.name);
-            const upgradeTaskSteps = upgradeTask
-                ?._renderSpec?.()
-                // @ts-expect-error - It's there
-                ?.steps?.toJSON?.();
-            this.tasks.addTask(upgradeTask.name, {
-                description: upgradeTask.description,
-                env: upgradeTask.envVars,
-                steps: [
-                    { spawn: checkUpdatesTask.name },
-                    upgradeTaskSteps?.[0],
-                    {
-                        exec: NodePackageUtils.command.exec(
-                            this.package.packageManager,
-                            "syncpack",
-                            "fix-mismatches",
-                        ),
-                    },
-                    ...(upgradeTaskSteps
-                        ?.slice?.(1)
-                        ?.filter(
-                            (step: TaskStep) =>
-                                typeof step?.exec !== "function",
-                        ) ?? []),
-                ].filter(Boolean),
-            });
-        }
     }
 }

@@ -17,7 +17,6 @@
 ### Properties
 
 - [node](DKTasks.md#node)
-- [options](DKTasks.md#options)
 - [project](DKTasks.md#project)
 - [IS\_NOT\_RELEASE\_CONDITION](DKTasks.md#is_not_release_condition)
 
@@ -34,14 +33,13 @@
 
 ### constructor
 
-• **new DKTasks**(`project`, `options?`): [`DKTasks`](DKTasks.md)
+• **new DKTasks**(`project`): [`DKTasks`](DKTasks.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `TypeScriptProject` |
-| `options` | [`DKTasksOptions`](../interfaces/DKTasksOptions.md) |
 
 #### Returns
 
@@ -62,12 +60,6 @@ The tree node.
 #### Inherited from
 
 Component.node
-
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`DKTasksOptions`](../interfaces/DKTasksOptions.md) = `{}`
 
 ___
 
@@ -107,11 +99,13 @@ ___
 
 ▸ **preSynthesize**(): `void`
 
+Called before synthesis.
+
 #### Returns
 
 `void`
 
-#### Overrides
+#### Inherited from
 
 Component.preSynthesize
 

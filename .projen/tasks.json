@@ -31,32 +31,6 @@
         }
       ]
     },
-    "check-updates": {
-      "name": "check-updates",
-      "steps": [
-        {
-          "exec": "pnpm exec nx run-many --target=check-updates --output-style=stream --nx-bail",
-          "receiveArgs": true
-        }
-      ]
-    },
-    "ci": {
-      "name": "ci",
-      "steps": [
-        {
-          "spawn": "install:ci"
-        }
-      ]
-    },
-    "clean-compile": {
-      "name": "clean-compile",
-      "description": "Clean up the compiled output",
-      "steps": [
-        {
-          "exec": "rm -rf lib && rm -rf dist"
-        }
-      ]
-    },
     "clean-modules": {
       "name": "clean-modules",
       "description": "Delete all node_modules folders",
@@ -141,8 +115,7 @@
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
           "receiveArgs": true
         }
-      ],
-      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
+      ]
     },
     "eslint:monorepo": {
       "name": "eslint:monorepo",
@@ -163,14 +136,6 @@
         }
       ]
     },
-    "i": {
-      "name": "i",
-      "steps": [
-        {
-          "spawn": "install"
-        }
-      ]
-    },
     "install": {
       "name": "install",
       "description": "Install project dependencies and update lockfile (non-frozen)",
@@ -186,21 +151,12 @@
       "steps": [
         {
           "exec": "pnpm i --frozen-lockfile"
-        }
-      ]
-    },
-    "lint": {
-      "name": "lint",
-      "description": "Alternate lint command",
-      "steps": [
-        {
-          "spawn": "eslint"
         },
         {
-          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=install:ci --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
-      ],
-      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
+      ]
     },
     "package": {
       "name": "package",
@@ -228,7 +184,12 @@
     },
     "post-upgrade": {
       "name": "post-upgrade",
-      "description": "Runs after upgrading dependencies"
+      "description": "Runs after upgrading dependencies",
+      "steps": [
+        {
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail"
+        }
+      ]
     },
     "pre-compile": {
       "name": "pre-compile",
@@ -255,28 +216,10 @@
       "description": "Run tests for all affected projects",
       "steps": [
         {
-          "spawn": "eslint"
-        },
-        {
-          "spawn": "type-check"
-        },
-        {
-          "spawn": "test-unit"
-        }
-      ]
-    },
-    "test-unit": {
-      "name": "test-unit",
-      "steps": [
-        {
           "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
           "receiveArgs": true
-        },
-        {
-          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
         }
-      ],
-      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
+      ]
     },
     "test:watch": {
       "name": "test:watch",
@@ -284,17 +227,6 @@
       "steps": [
         {
           "exec": "jest --watch"
-        }
-      ]
-    },
-    "type-check": {
-      "name": "type-check",
-      "steps": [
-        {
-          "exec": "tsc --noEmit"
-        },
-        {
-          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail"
         }
       ]
     },
@@ -306,16 +238,13 @@
       },
       "steps": [
         {
-          "spawn": "check-updates"
-        },
-        {
           "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,npm-check-updates,nx-cloud,prettier,ts-jest,ts-node,typescript"
         },
         {
-          "exec": "pnpm exec syncpack fix-mismatches"
+          "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm i --no-frozen-lockfile"
+          "exec": "pnpm update @aws/pdk @cspell/eslint-plugin @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx-cloud nx prettier projen syncpack ts-jest ts-node typescript"
         },
         {
           "exec": "pnpm exec projen"
