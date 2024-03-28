@@ -38,7 +38,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cspell/eslint-plugin": "8.6.0",
+    "@cspell/eslint-plugin": "8.6.1",
     "@types/clone-deep": "4.0.4",
     "@types/jest": "29.5.12",
     "@types/node": "^20",
@@ -69,7 +69,7 @@
     "ts-jest": "29.1.2",
     "typedoc": "0.25.12",
     "typedoc-plugin-markdown": "3.17.1",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3"
   },
   "peerDependencies": {
     "clone-deep": "4.0.1",
