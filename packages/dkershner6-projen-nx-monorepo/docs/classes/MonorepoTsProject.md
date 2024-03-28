@@ -563,7 +563,7 @@ ___
 
 ### projenVersion
 
-• `Private` `Readonly` **projenVersion**: `string`
+• `Private` `Readonly` **projenVersion**: `undefined` \| `string`
 
 Version of projen used by the monorepo and its subprojects
 
