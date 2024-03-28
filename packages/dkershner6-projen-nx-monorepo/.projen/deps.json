@@ -109,10 +109,6 @@
       "type": "build"
     },
     {
-      "name": "@aws/pdk",
-      "type": "peer"
-    },
-    {
       "name": "clone-deep",
       "type": "peer"
     },

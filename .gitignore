@@ -80,5 +80,4 @@ nx-cloud.env
 !/.nvmrc
 !/.github/CODEOWNERS
 !/pnpm-workspace.yaml
-!/.syncpackrc.json
 !/.projenrc.ts

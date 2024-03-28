@@ -238,40 +238,19 @@
       },
       "steps": [
         {
-          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@aws/pdk,@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,npm-check-updates,nx-cloud,prettier,ts-jest,ts-node,typescript"
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@cspell/eslint-plugin,@types/clone-deep,@types/jest,@types/lodash.merge,clone-deep,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-jest,eslint-plugin-prettier,eslint-plugin-sonarjs,jest,lodash.merge,nx-cloud,prettier,ts-jest,ts-node,typescript"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @aws/pdk @cspell/eslint-plugin @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge npm-check-updates nx-cloud nx prettier projen syncpack ts-jest ts-node typescript"
+          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/lodash.merge @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit lodash.merge nx-cloud nx prettier projen ts-jest ts-node typescript"
         },
         {
           "exec": "pnpm exec projen"
         },
         {
           "spawn": "post-upgrade"
-        }
-      ]
-    },
-    "upgrade-deps": {
-      "name": "upgrade-deps",
-      "description": "Upgrade dependencies in the monorepo",
-      "steps": [
-        {
-          "exec": "pnpm exec npm-check-updates --deep --rejectVersion 0.0.0 -u --dep prod,dev,peer,optional,bundle --target=minor"
-        },
-        {
-          "exec": "pnpm exec syncpack fix-mismatches"
-        },
-        {
-          "exec": "rm pnpm-lock.yaml"
-        },
-        {
-          "exec": "pnpm i"
-        },
-        {
-          "exec": "pnpm exec projen"
         }
       ]
     },

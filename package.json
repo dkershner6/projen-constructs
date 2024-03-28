@@ -24,13 +24,11 @@
     "test": "pnpm exec projen test",
     "test:watch": "pnpm exec projen test:watch",
     "upgrade": "pnpm exec projen upgrade",
-    "upgrade-deps": "pnpm exec projen upgrade-deps",
     "watch": "pnpm exec projen watch",
     "install:ci": "pnpm exec projen install:ci",
     "synth-workspace": "pnpm exec projen"
   },
   "devDependencies": {
-    "@aws/pdk": "^0.23.26",
     "@cspell/eslint-plugin": "^8.6.1",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
@@ -50,12 +48,10 @@
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "lodash.merge": "^4.6.2",
-    "npm-check-updates": "^16.14.18",
     "nx": "16.0.0",
     "nx-cloud": "^16.5.2",
     "prettier": "^3.2.5",
     "projen": "^0.80.14",
-    "syncpack": "^12",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"

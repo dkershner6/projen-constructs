@@ -224,8 +224,16 @@ ___
 
 ### workflowOptions
 
-• `Optional` `Readonly` **workflowOptions**: [`UpgradeDependenciesWorkflowOptions`](UpgradeDependenciesWorkflowOptions.md)
+• `Optional` `Readonly` **workflowOptions**: `UpgradeDependenciesWorkflowOptions`
 
-#### Overrides
+Options for the github workflow. Only applies if `workflow` is true.
+
+**`Default`**
+
+```ts
+- default options.
+```
+
+#### Inherited from
 
 javascript.UpgradeDependenciesOptions.workflowOptions

@@ -37,7 +37,6 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws/pdk": "0.23.26",
     "@cspell/eslint-plugin": "^8.6.1",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
@@ -66,7 +65,6 @@
     "typescript": "^5.4.3"
   },
   "peerDependencies": {
-    "@aws/pdk": "^0.23.26",
     "clone-deep": "^4.0.1",
     "constructs": "^10.3.0",
     "dkershner6-projen-typescript": "^0.x",
