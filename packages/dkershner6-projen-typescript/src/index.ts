@@ -81,7 +81,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
-export const PROJEN_VERSION = "^0.80.10";
+export const PROJEN_VERSION = "^0.80.14";
 export const CONSTRUCTS_VERSION = "^10.3.0";
 
 export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
@@ -291,7 +291,6 @@ export class DKEslintConfig extends Component {
 }
 
 export enum DKTaskName {
-    CHECK_UPDATES = "check-updates",
     CI = "ci",
     I = "i",
     LINT = "lint",
@@ -299,22 +298,12 @@ export enum DKTaskName {
     TYPE_CHECK = "type-check",
 }
 
-export interface DKTasksOptions {
-    /**
-     * @default true
-     */
-    checkUpdatesTask?: boolean;
-}
-
 export class DKTasks extends Component {
     public static readonly IS_NOT_RELEASE_CONDITION = `if [ "$RELEASE" = "true" ] ; then exit 1 ; fi`;
 
     declare project: TypeScriptProject;
 
-    constructor(
-        project: TypeScriptProject,
-        private readonly options: DKTasksOptions = {},
-    ) {
+    constructor(project: TypeScriptProject) {
         super(project);
 
         // Install
@@ -367,26 +356,6 @@ export class DKTasks extends Component {
         const docgenTask = project.tasks.tryFind("docgen");
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
-        }
-    }
-
-    override preSynthesize(): void {
-        super.preSynthesize();
-
-        if (this.options.checkUpdatesTask ?? true) {
-            // Check updates
-            const upgradeTask = this.project.upgradeWorkflow?.upgradeTask;
-            if (upgradeTask) {
-                // @ts-expect-error - it does
-                const steps = upgradeTask._renderSpec().steps?.toJSON();
-                const ncuUpgradeStep = steps[0];
-
-                if (ncuUpgradeStep.exec) {
-                    this.project
-                        .addTask(DKTaskName.CHECK_UPDATES)
-                        .exec(ncuUpgradeStep.exec);
-                }
-            }
         }
     }
 }

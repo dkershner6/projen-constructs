@@ -69,6 +69,7 @@
 - [keywords](MonorepoProjectOptions.md#keywords)
 - [libdir](MonorepoProjectOptions.md#libdir)
 - [license](MonorepoProjectOptions.md#license)
+- [licenseOptions](MonorepoProjectOptions.md#licenseoptions)
 - [licensed](MonorepoProjectOptions.md#licensed)
 - [logging](MonorepoProjectOptions.md#logging)
 - [majorVersion](MonorepoProjectOptions.md#majorversion)
@@ -1362,6 +1363,24 @@ experimental
 #### Inherited from
 
 monorepo.MonorepoTsProjectOptions.license
+
+___
+
+### licenseOptions
+
+• `Optional` `Readonly` **licenseOptions**: `LicenseOptions`
+
+Default license to apply to all PDK managed packages.
+
+**`Default`**
+
+```ts
+Apache-2.0
+```
+
+#### Inherited from
+
+monorepo.MonorepoTsProjectOptions.licenseOptions
 
 ___
 

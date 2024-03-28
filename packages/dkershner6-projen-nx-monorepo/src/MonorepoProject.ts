@@ -1,6 +1,5 @@
 import { monorepo } from "@aws/pdk";
 import { github, javascript } from "projen";
-import { Job } from "projen/lib/github/workflows-model";
 
 export interface UpgradeDependenciesWorkflowOptions
     extends javascript.UpgradeDependenciesWorkflowOptions {
@@ -24,7 +23,6 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
 
         this.removeUnneededPackages();
         this.addAndEditTasks();
-        this.overwriteUpgradeWorkflow(options.depsUpgradeOptions);
     }
 
     /** PDK is one big package, and monorepo doesn't need these */
@@ -32,6 +30,9 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
         this.deps.removeDependency("@aws-cdk/aws-cognito-identitypool-alpha");
         this.deps.removeDependency("aws-cdk-lib");
         this.deps.removeDependency("cdk-nag");
+
+        // No longer using this
+        this.deps.removeDependency("syncpack");
     }
 
     private addAndEditTasks(): void {
@@ -83,37 +84,14 @@ export class MonorepoProject extends monorepo.MonorepoTsProject {
             ...nxBuild,
             dependsOn: ["^compile"],
         });
-    }
 
-    private overwriteUpgradeWorkflow(
-        upgradeDependenciesOptions: UpgradeDependenciesOptions | undefined,
-    ): void {
-        const upgradeName = upgradeDependenciesOptions?.taskName ?? "upgrade";
-
-        this.tasks.removeTask("upgrade-deps");
-
-        const upgradeWorkflow = this.github?.tryFindWorkflow(upgradeName);
-
-        if (upgradeWorkflow) {
-            const job = upgradeWorkflow?.getJob("upgrade");
-            if (job) {
-                const newSteps = (job as Job).steps.flatMap((step) => {
-                    if (step.run?.includes("upgrade")) {
-                        return [
-                            ...(upgradeDependenciesOptions?.workflowOptions
-                                ?.preUpgradeSteps ?? []),
-                            {
-                                ...step,
-                            },
-                        ];
-                    }
-                    return [step];
-                });
-                upgradeWorkflow.updateJob(upgradeName, {
-                    ...job,
-                    steps: newSteps,
-                });
-            }
+        const postUpgradeTask = this.tasks.tryFind("post-upgrade");
+        if (postUpgradeTask) {
+            postUpgradeTask.reset(
+                this.execNxRunManyCommand({
+                    target: "upgrade",
+                }),
+            );
         }
     }
 

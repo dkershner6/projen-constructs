@@ -1682,7 +1682,7 @@ ___
 
 `void`
 
-#### Overrides
+#### Inherited from
 
 [MonorepoProject](MonorepoProject.md).[preSynthesize](MonorepoProject.md#presynthesize)
 

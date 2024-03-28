@@ -6,7 +6,6 @@
 
 ### Enumeration Members
 
-- [CHECK\_UPDATES](DKTaskName.md#check_updates)
 - [CI](DKTaskName.md#ci)
 - [I](DKTaskName.md#i)
 - [LINT](DKTaskName.md#lint)
@@ -14,12 +13,6 @@
 - [TYPE\_CHECK](DKTaskName.md#type_check)
 
 ## Enumeration Members
-
-### CHECK\_UPDATES
-
-• **CHECK\_UPDATES** = ``"check-updates"``
-
-___
 
 ### CI
 

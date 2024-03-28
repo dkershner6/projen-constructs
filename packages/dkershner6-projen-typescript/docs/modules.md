@@ -18,7 +18,6 @@
 
 ### Interfaces
 
-- [DKTasksOptions](interfaces/DKTasksOptions.md)
 - [JestTransformerOptions](interfaces/JestTransformerOptions.md)
 - [Node20TypeScriptProjectJestOptions](interfaces/Node20TypeScriptProjectJestOptions.md)
 - [Node20TypeScriptProjectOptions](interfaces/Node20TypeScriptProjectOptions.md)
@@ -63,7 +62,7 @@ ___
 
 ### PROJEN\_VERSION
 
-• `Const` **PROJEN\_VERSION**: ``"^0.80.10"``
+• `Const` **PROJEN\_VERSION**: ``"^0.80.14"``
 
 ___
 
