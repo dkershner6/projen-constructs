@@ -36,8 +36,6 @@
 - [codeCov](MonorepoProjectOptions.md#codecov)
 - [codeCovTokenSecret](MonorepoProjectOptions.md#codecovtokensecret)
 - [commitGenerated](MonorepoProjectOptions.md#commitgenerated)
-- [copyrightOwner](MonorepoProjectOptions.md#copyrightowner)
-- [copyrightPeriod](MonorepoProjectOptions.md#copyrightperiod)
 - [defaultReleaseBranch](MonorepoProjectOptions.md#defaultreleasebranch)
 - [dependabot](MonorepoProjectOptions.md#dependabot)
 - [dependabotOptions](MonorepoProjectOptions.md#dependabotoptions)
@@ -68,8 +66,7 @@
 - [jsiiReleaseVersion](MonorepoProjectOptions.md#jsiireleaseversion)
 - [keywords](MonorepoProjectOptions.md#keywords)
 - [libdir](MonorepoProjectOptions.md#libdir)
-- [license](MonorepoProjectOptions.md#license)
-- [licensed](MonorepoProjectOptions.md#licensed)
+- [licenseOptions](MonorepoProjectOptions.md#licenseoptions)
 - [logging](MonorepoProjectOptions.md#logging)
 - [majorVersion](MonorepoProjectOptions.md#majorversion)
 - [maxNodeVersion](MonorepoProjectOptions.md#maxnodeversion)
@@ -654,48 +651,6 @@ experimental
 #### Inherited from
 
 monorepo.MonorepoTsProjectOptions.commitGenerated
-
-___
-
-### copyrightOwner
-
-• `Optional` `Readonly` **copyrightOwner**: `string`
-
-License copyright owner.
-
-**`Default`**
-
-- defaults to the value of authorName or "" if `authorName` is undefined.
-
-**`Stability`**
-
-experimental
-
-#### Inherited from
-
-monorepo.MonorepoTsProjectOptions.copyrightOwner
-
-___
-
-### copyrightPeriod
-
-• `Optional` `Readonly` **copyrightPeriod**: `string`
-
-The copyright years to put in the LICENSE file.
-
-**`Default`**
-
-```ts
-- current year
-```
-
-**`Stability`**
-
-experimental
-
-#### Inherited from
-
-monorepo.MonorepoTsProjectOptions.copyrightPeriod
 
 ___
 
@@ -1341,49 +1296,21 @@ monorepo.MonorepoTsProjectOptions.libdir
 
 ___
 
-### license
+### licenseOptions
 
-• `Optional` `Readonly` **license**: `string`
+• `Optional` `Readonly` **licenseOptions**: `LicenseOptions`
 
-License's SPDX identifier.
-See https://github.com/projen/projen/tree/main/license-text for a list of supported licenses.
-Use the `licensed` option if you want to no license to be specified.
+Default license to apply to all PDK managed packages.
 
 **`Default`**
 
 ```ts
-"Apache-2.0"
+Apache-2.0
 ```
-
-**`Stability`**
-
-experimental
 
 #### Inherited from
 
-monorepo.MonorepoTsProjectOptions.license
-
-___
-
-### licensed
-
-• `Optional` `Readonly` **licensed**: `boolean`
-
-Indicates if a license should be added.
-
-**`Default`**
-
-```ts
-true
-```
-
-**`Stability`**
-
-experimental
-
-#### Inherited from
-
-monorepo.MonorepoTsProjectOptions.licensed
+monorepo.MonorepoTsProjectOptions.licenseOptions
 
 ___
 
