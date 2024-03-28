@@ -18,10 +18,7 @@ import {
 } from "../../components/nx-configurator";
 import { NxProject } from "../../components/nx-project";
 import { NxWorkspace } from "../../components/nx-workspace";
-import {
-    DEFAULT_PROJEN_VERSION,
-    syncProjenVersions,
-} from "../../components/projen-dependency";
+import { syncProjenVersions } from "../../components/projen-dependency";
 import { Nx } from "../../nx-types";
 import { NodePackageUtils } from "../../utils/node";
 import { ProjectUtils } from "../../utils/project";
@@ -110,7 +107,7 @@ export class MonorepoTsProject
     /**
      * Version of projen used by the monorepo and its subprojects
      */
-    private readonly projenVersion: string;
+    private readonly projenVersion: string | undefined;
 
     // immutable data structures
     private readonly workspaceConfig?: WorkspaceConfig;
@@ -152,10 +149,10 @@ export class MonorepoTsProject
             peerDeps: ["nx@^16", ...(options.peerDeps || [])],
             devDeps: ["nx@^16", ...(options.devDeps || [])],
             deps: options.deps,
-            projenVersion: options.projenVersion ?? DEFAULT_PROJEN_VERSION,
+            projenVersion: options.projenVersion,
         });
 
-        this.projenVersion = options.projenVersion ?? DEFAULT_PROJEN_VERSION;
+        this.projenVersion = options.projenVersion;
 
         this.nxConfigurator = new NxConfigurator(this, {
             defaultReleaseBranch,
@@ -477,7 +474,9 @@ export class MonorepoTsProject
             }
         });
 
-        syncProjenVersions(this.subprojects, this.projenVersion);
+        if (this.projenVersion) {
+            syncProjenVersions(this.subprojects, this.projenVersion);
+        }
     }
 
     /**
