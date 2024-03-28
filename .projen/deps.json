@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@aws/pdk",
-      "type": "build"
-    },
-    {
       "name": "@cspell/eslint-plugin",
       "type": "build"
     },
@@ -87,10 +83,6 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "type": "build"
-    },
-    {
       "name": "nx-cloud",
       "type": "build"
     },
@@ -106,11 +98,6 @@
     {
       "name": "projen",
       "version": "^0.80.14",
-      "type": "build"
-    },
-    {
-      "name": "syncpack",
-      "version": "^12",
       "type": "build"
     },
     {

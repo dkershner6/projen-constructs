@@ -1,6 +1,6 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / Node20MonorepoProject
+[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / NxMonorepoProject
 
-# Class: Node20MonorepoProject
+# Class: NxMonorepoProject
 
 This project type will bootstrap a monorepo with support for polygot
 builds, build caching, dependency graph visualization and much more.
@@ -11,141 +11,144 @@ monorepo-ts
 
 ## Hierarchy
 
-- [`NxMonorepoProject`](NxMonorepoProject.md)
+- [`MonorepoTsProject`](MonorepoTsProject.md)
 
-  ↳ **`Node20MonorepoProject`**
+  ↳ **`NxMonorepoProject`**
+
+  ↳↳ [`Node20MonorepoProject`](Node20MonorepoProject.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](Node20MonorepoProject.md#constructor)
+- [constructor](NxMonorepoProject.md#constructor)
 
 ### Properties
 
-- [artifactsDirectory](Node20MonorepoProject.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](Node20MonorepoProject.md#artifactsjavascriptdirectory)
-- [autoApprove](Node20MonorepoProject.md#autoapprove)
-- [autoMerge](Node20MonorepoProject.md#automerge)
-- [buildWorkflow](Node20MonorepoProject.md#buildworkflow)
-- [bundler](Node20MonorepoProject.md#bundler)
-- [commitGenerated](Node20MonorepoProject.md#commitgenerated)
-- [defaultTask](Node20MonorepoProject.md#defaulttask)
-- [deps](Node20MonorepoProject.md#deps)
-- [devContainer](Node20MonorepoProject.md#devcontainer)
-- [docgen](Node20MonorepoProject.md#docgen)
-- [docsDirectory](Node20MonorepoProject.md#docsdirectory)
-- [eslint](Node20MonorepoProject.md#eslint)
-- [gitattributes](Node20MonorepoProject.md#gitattributes)
-- [github](Node20MonorepoProject.md#github)
-- [gitignore](Node20MonorepoProject.md#gitignore)
-- [gitpod](Node20MonorepoProject.md#gitpod)
-- [initProject](Node20MonorepoProject.md#initproject)
-- [jest](Node20MonorepoProject.md#jest)
-- [libdir](Node20MonorepoProject.md#libdir)
-- [logger](Node20MonorepoProject.md#logger)
-- [name](Node20MonorepoProject.md#name)
-- [node](Node20MonorepoProject.md#node)
-- [nodeVersion](Node20MonorepoProject.md#nodeversion)
-- [npmignore](Node20MonorepoProject.md#npmignore)
-- [nxConfigurator](Node20MonorepoProject.md#nxconfigurator)
-- [outdir](Node20MonorepoProject.md#outdir)
-- [package](Node20MonorepoProject.md#package)
-- [parent](Node20MonorepoProject.md#parent)
-- [prettier](Node20MonorepoProject.md#prettier)
-- [projectBuild](Node20MonorepoProject.md#projectbuild)
-- [projectType](Node20MonorepoProject.md#projecttype)
-- [publisher](Node20MonorepoProject.md#publisher)
-- [release](Node20MonorepoProject.md#release)
-- [runScriptCommand](Node20MonorepoProject.md#runscriptcommand)
-- [srcdir](Node20MonorepoProject.md#srcdir)
-- [tasks](Node20MonorepoProject.md#tasks)
-- [testdir](Node20MonorepoProject.md#testdir)
-- [tsconfig](Node20MonorepoProject.md#tsconfig)
-- [tsconfigDev](Node20MonorepoProject.md#tsconfigdev)
-- [tsconfigEslint](Node20MonorepoProject.md#tsconfigeslint)
-- [upgradeWorkflow](Node20MonorepoProject.md#upgradeworkflow)
-- [vscode](Node20MonorepoProject.md#vscode)
-- [watchTask](Node20MonorepoProject.md#watchtask)
-- [workflowBootstrapSteps](Node20MonorepoProject.md#workflowbootstrapsteps)
-- [workflowPackageCache](Node20MonorepoProject.md#workflowpackagecache)
-- [DEFAULT\_TASK](Node20MonorepoProject.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](Node20MonorepoProject.md#default_ts_jest_tranform_pattern)
+- [artifactsDirectory](NxMonorepoProject.md#artifactsdirectory)
+- [artifactsJavascriptDirectory](NxMonorepoProject.md#artifactsjavascriptdirectory)
+- [autoApprove](NxMonorepoProject.md#autoapprove)
+- [autoMerge](NxMonorepoProject.md#automerge)
+- [buildWorkflow](NxMonorepoProject.md#buildworkflow)
+- [bundler](NxMonorepoProject.md#bundler)
+- [commitGenerated](NxMonorepoProject.md#commitgenerated)
+- [defaultTask](NxMonorepoProject.md#defaulttask)
+- [deps](NxMonorepoProject.md#deps)
+- [devContainer](NxMonorepoProject.md#devcontainer)
+- [docgen](NxMonorepoProject.md#docgen)
+- [docsDirectory](NxMonorepoProject.md#docsdirectory)
+- [eslint](NxMonorepoProject.md#eslint)
+- [gitattributes](NxMonorepoProject.md#gitattributes)
+- [github](NxMonorepoProject.md#github)
+- [gitignore](NxMonorepoProject.md#gitignore)
+- [gitpod](NxMonorepoProject.md#gitpod)
+- [initProject](NxMonorepoProject.md#initproject)
+- [jest](NxMonorepoProject.md#jest)
+- [libdir](NxMonorepoProject.md#libdir)
+- [logger](NxMonorepoProject.md#logger)
+- [name](NxMonorepoProject.md#name)
+- [node](NxMonorepoProject.md#node)
+- [nodeVersion](NxMonorepoProject.md#nodeversion)
+- [npmignore](NxMonorepoProject.md#npmignore)
+- [nxConfigurator](NxMonorepoProject.md#nxconfigurator)
+- [outdir](NxMonorepoProject.md#outdir)
+- [package](NxMonorepoProject.md#package)
+- [parent](NxMonorepoProject.md#parent)
+- [prettier](NxMonorepoProject.md#prettier)
+- [projectBuild](NxMonorepoProject.md#projectbuild)
+- [projectType](NxMonorepoProject.md#projecttype)
+- [publisher](NxMonorepoProject.md#publisher)
+- [release](NxMonorepoProject.md#release)
+- [runScriptCommand](NxMonorepoProject.md#runscriptcommand)
+- [srcdir](NxMonorepoProject.md#srcdir)
+- [tasks](NxMonorepoProject.md#tasks)
+- [testdir](NxMonorepoProject.md#testdir)
+- [tsconfig](NxMonorepoProject.md#tsconfig)
+- [tsconfigDev](NxMonorepoProject.md#tsconfigdev)
+- [tsconfigEslint](NxMonorepoProject.md#tsconfigeslint)
+- [upgradeWorkflow](NxMonorepoProject.md#upgradeworkflow)
+- [vscode](NxMonorepoProject.md#vscode)
+- [watchTask](NxMonorepoProject.md#watchtask)
+- [workflowBootstrapSteps](NxMonorepoProject.md#workflowbootstrapsteps)
+- [workflowPackageCache](NxMonorepoProject.md#workflowpackagecache)
+- [DEFAULT\_TASK](NxMonorepoProject.md#default_task)
+- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](NxMonorepoProject.md#default_ts_jest_tranform_pattern)
 
 ### Accessors
 
-- [allowLibraryDependencies](Node20MonorepoProject.md#allowlibrarydependencies)
-- [buildTask](Node20MonorepoProject.md#buildtask)
-- [buildWorkflowJobId](Node20MonorepoProject.md#buildworkflowjobid)
-- [compileTask](Node20MonorepoProject.md#compiletask)
-- [components](Node20MonorepoProject.md#components)
-- [ejected](Node20MonorepoProject.md#ejected)
-- [entrypoint](Node20MonorepoProject.md#entrypoint)
-- [files](Node20MonorepoProject.md#files)
-- [manifest](Node20MonorepoProject.md#manifest)
-- [maxNodeVersion](Node20MonorepoProject.md#maxnodeversion)
-- [minNodeVersion](Node20MonorepoProject.md#minnodeversion)
-- [npmrc](Node20MonorepoProject.md#npmrc)
-- [nx](Node20MonorepoProject.md#nx)
-- [packageManager](Node20MonorepoProject.md#packagemanager)
-- [packageTask](Node20MonorepoProject.md#packagetask)
-- [postCompileTask](Node20MonorepoProject.md#postcompiletask)
-- [preCompileTask](Node20MonorepoProject.md#precompiletask)
-- [projenCommand](Node20MonorepoProject.md#projencommand)
-- [root](Node20MonorepoProject.md#root)
-- [sortedSubProjects](Node20MonorepoProject.md#sortedsubprojects)
-- [subprojects](Node20MonorepoProject.md#subprojects)
-- [testTask](Node20MonorepoProject.md#testtask)
+- [allowLibraryDependencies](NxMonorepoProject.md#allowlibrarydependencies)
+- [buildTask](NxMonorepoProject.md#buildtask)
+- [buildWorkflowJobId](NxMonorepoProject.md#buildworkflowjobid)
+- [compileTask](NxMonorepoProject.md#compiletask)
+- [components](NxMonorepoProject.md#components)
+- [ejected](NxMonorepoProject.md#ejected)
+- [entrypoint](NxMonorepoProject.md#entrypoint)
+- [files](NxMonorepoProject.md#files)
+- [manifest](NxMonorepoProject.md#manifest)
+- [maxNodeVersion](NxMonorepoProject.md#maxnodeversion)
+- [minNodeVersion](NxMonorepoProject.md#minnodeversion)
+- [npmrc](NxMonorepoProject.md#npmrc)
+- [nx](NxMonorepoProject.md#nx)
+- [packageManager](NxMonorepoProject.md#packagemanager)
+- [packageTask](NxMonorepoProject.md#packagetask)
+- [postCompileTask](NxMonorepoProject.md#postcompiletask)
+- [preCompileTask](NxMonorepoProject.md#precompiletask)
+- [projenCommand](NxMonorepoProject.md#projencommand)
+- [root](NxMonorepoProject.md#root)
+- [sortedSubProjects](NxMonorepoProject.md#sortedsubprojects)
+- [subprojects](NxMonorepoProject.md#subprojects)
+- [testTask](NxMonorepoProject.md#testtask)
 
 ### Methods
 
-- [addBins](Node20MonorepoProject.md#addbins)
-- [addBundledDeps](Node20MonorepoProject.md#addbundleddeps)
-- [addCompileCommand](Node20MonorepoProject.md#addcompilecommand)
-- [addDeps](Node20MonorepoProject.md#adddeps)
-- [addDevDeps](Node20MonorepoProject.md#adddevdeps)
-- [addExcludeFromCleanup](Node20MonorepoProject.md#addexcludefromcleanup)
-- [addFields](Node20MonorepoProject.md#addfields)
-- [addGitIgnore](Node20MonorepoProject.md#addgitignore)
-- [addImplicitDependency](Node20MonorepoProject.md#addimplicitdependency)
-- [addJavaDependency](Node20MonorepoProject.md#addjavadependency)
-- [addKeywords](Node20MonorepoProject.md#addkeywords)
-- [addNxRunManyTask](Node20MonorepoProject.md#addnxrunmanytask)
-- [addPackageIgnore](Node20MonorepoProject.md#addpackageignore)
-- [addPeerDeps](Node20MonorepoProject.md#addpeerdeps)
-- [addPythonPoetryDependency](Node20MonorepoProject.md#addpythonpoetrydependency)
-- [addScripts](Node20MonorepoProject.md#addscripts)
-- [addTask](Node20MonorepoProject.md#addtask)
-- [addTestCommand](Node20MonorepoProject.md#addtestcommand)
-- [addTip](Node20MonorepoProject.md#addtip)
-- [addWorkspacePackages](Node20MonorepoProject.md#addworkspacepackages)
-- [annotateGenerated](Node20MonorepoProject.md#annotategenerated)
-- [composeNxRunManyCommand](Node20MonorepoProject.md#composenxrunmanycommand)
-- [execNxRunManyCommand](Node20MonorepoProject.md#execnxrunmanycommand)
-- [hasScript](Node20MonorepoProject.md#hasscript)
-- [linkLocalWorkspaceBins](Node20MonorepoProject.md#linklocalworkspacebins)
-- [postSynthesize](Node20MonorepoProject.md#postsynthesize)
-- [preSynthesize](Node20MonorepoProject.md#presynthesize)
-- [removeScript](Node20MonorepoProject.md#removescript)
-- [removeTask](Node20MonorepoProject.md#removetask)
-- [renderWorkflowSetup](Node20MonorepoProject.md#renderworkflowsetup)
-- [runTaskCommand](Node20MonorepoProject.md#runtaskcommand)
-- [setScript](Node20MonorepoProject.md#setscript)
-- [synth](Node20MonorepoProject.md#synth)
-- [toString](Node20MonorepoProject.md#tostring)
-- [tryFindFile](Node20MonorepoProject.md#tryfindfile)
-- [tryFindJsonFile](Node20MonorepoProject.md#tryfindjsonfile)
-- [tryFindObjectFile](Node20MonorepoProject.md#tryfindobjectfile)
-- [tryRemoveFile](Node20MonorepoProject.md#tryremovefile)
-- [isConstruct](Node20MonorepoProject.md#isconstruct)
-- [isProject](Node20MonorepoProject.md#isproject)
-- [of](Node20MonorepoProject.md#of)
+- [addAndEditTasks](NxMonorepoProject.md#addandedittasks)
+- [addBins](NxMonorepoProject.md#addbins)
+- [addBundledDeps](NxMonorepoProject.md#addbundleddeps)
+- [addCompileCommand](NxMonorepoProject.md#addcompilecommand)
+- [addDeps](NxMonorepoProject.md#adddeps)
+- [addDevDeps](NxMonorepoProject.md#adddevdeps)
+- [addExcludeFromCleanup](NxMonorepoProject.md#addexcludefromcleanup)
+- [addFields](NxMonorepoProject.md#addfields)
+- [addGitIgnore](NxMonorepoProject.md#addgitignore)
+- [addImplicitDependency](NxMonorepoProject.md#addimplicitdependency)
+- [addJavaDependency](NxMonorepoProject.md#addjavadependency)
+- [addKeywords](NxMonorepoProject.md#addkeywords)
+- [addNxRunManyTask](NxMonorepoProject.md#addnxrunmanytask)
+- [addPackageIgnore](NxMonorepoProject.md#addpackageignore)
+- [addPeerDeps](NxMonorepoProject.md#addpeerdeps)
+- [addPythonPoetryDependency](NxMonorepoProject.md#addpythonpoetrydependency)
+- [addScripts](NxMonorepoProject.md#addscripts)
+- [addTask](NxMonorepoProject.md#addtask)
+- [addTestCommand](NxMonorepoProject.md#addtestcommand)
+- [addTip](NxMonorepoProject.md#addtip)
+- [addWorkspacePackages](NxMonorepoProject.md#addworkspacepackages)
+- [annotateGenerated](NxMonorepoProject.md#annotategenerated)
+- [composeNxRunManyCommand](NxMonorepoProject.md#composenxrunmanycommand)
+- [execNxRunManyCommand](NxMonorepoProject.md#execnxrunmanycommand)
+- [hasScript](NxMonorepoProject.md#hasscript)
+- [linkLocalWorkspaceBins](NxMonorepoProject.md#linklocalworkspacebins)
+- [postSynthesize](NxMonorepoProject.md#postsynthesize)
+- [preSynthesize](NxMonorepoProject.md#presynthesize)
+- [removeScript](NxMonorepoProject.md#removescript)
+- [removeTask](NxMonorepoProject.md#removetask)
+- [renderWorkflowSetup](NxMonorepoProject.md#renderworkflowsetup)
+- [runTaskCommand](NxMonorepoProject.md#runtaskcommand)
+- [setScript](NxMonorepoProject.md#setscript)
+- [synth](NxMonorepoProject.md#synth)
+- [toString](NxMonorepoProject.md#tostring)
+- [tryFindFile](NxMonorepoProject.md#tryfindfile)
+- [tryFindJsonFile](NxMonorepoProject.md#tryfindjsonfile)
+- [tryFindObjectFile](NxMonorepoProject.md#tryfindobjectfile)
+- [tryRemoveFile](NxMonorepoProject.md#tryremovefile)
+- [isConstruct](NxMonorepoProject.md#isconstruct)
+- [isProject](NxMonorepoProject.md#isproject)
+- [of](NxMonorepoProject.md#of)
 
 ## Constructors
 
 ### constructor
 
-• **new Node20MonorepoProject**(`options`): [`Node20MonorepoProject`](Node20MonorepoProject.md)
+• **new NxMonorepoProject**(`options`): [`NxMonorepoProject`](NxMonorepoProject.md)
 
 #### Parameters
 
@@ -155,11 +158,11 @@ monorepo-ts
 
 #### Returns
 
-[`Node20MonorepoProject`](Node20MonorepoProject.md)
+[`NxMonorepoProject`](NxMonorepoProject.md)
 
 #### Overrides
 
-[NxMonorepoProject](NxMonorepoProject.md).[constructor](NxMonorepoProject.md#constructor)
+[MonorepoTsProject](MonorepoTsProject.md).[constructor](MonorepoTsProject.md#constructor)
 
 ## Properties
 
@@ -173,7 +176,7 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[artifactsDirectory](NxMonorepoProject.md#artifactsdirectory)
+[MonorepoTsProject](MonorepoTsProject.md).[artifactsDirectory](MonorepoTsProject.md#artifactsdirectory)
 
 ___
 
@@ -185,7 +188,7 @@ The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[artifactsJavascriptDirectory](NxMonorepoProject.md#artifactsjavascriptdirectory)
+[MonorepoTsProject](MonorepoTsProject.md).[artifactsJavascriptDirectory](MonorepoTsProject.md#artifactsjavascriptdirectory)
 
 ___
 
@@ -197,7 +200,7 @@ Auto approve set up for this project.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[autoApprove](NxMonorepoProject.md#autoapprove)
+[MonorepoTsProject](MonorepoTsProject.md).[autoApprove](MonorepoTsProject.md#autoapprove)
 
 ___
 
@@ -209,7 +212,7 @@ Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[autoMerge](NxMonorepoProject.md#automerge)
+[MonorepoTsProject](MonorepoTsProject.md).[autoMerge](MonorepoTsProject.md#automerge)
 
 ___
 
@@ -221,7 +224,7 @@ The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[buildWorkflow](NxMonorepoProject.md#buildworkflow)
+[MonorepoTsProject](MonorepoTsProject.md).[buildWorkflow](MonorepoTsProject.md#buildworkflow)
 
 ___
 
@@ -231,7 +234,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[bundler](NxMonorepoProject.md#bundler)
+[MonorepoTsProject](MonorepoTsProject.md).[bundler](MonorepoTsProject.md#bundler)
 
 ___
 
@@ -243,7 +246,7 @@ Whether to commit the managed files by default.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[commitGenerated](NxMonorepoProject.md#commitgenerated)
+[MonorepoTsProject](MonorepoTsProject.md).[commitGenerated](MonorepoTsProject.md#commitgenerated)
 
 ___
 
@@ -256,7 +259,7 @@ the project is being ejected.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[defaultTask](NxMonorepoProject.md#defaulttask)
+[MonorepoTsProject](MonorepoTsProject.md).[defaultTask](MonorepoTsProject.md#defaulttask)
 
 ___
 
@@ -268,7 +271,7 @@ Project dependencies.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[deps](NxMonorepoProject.md#deps)
+[MonorepoTsProject](MonorepoTsProject.md).[deps](MonorepoTsProject.md#deps)
 
 ___
 
@@ -282,7 +285,7 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[devContainer](NxMonorepoProject.md#devcontainer)
+[MonorepoTsProject](MonorepoTsProject.md).[devContainer](MonorepoTsProject.md#devcontainer)
 
 ___
 
@@ -292,7 +295,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[docgen](NxMonorepoProject.md#docgen)
+[MonorepoTsProject](MonorepoTsProject.md).[docgen](MonorepoTsProject.md#docgen)
 
 ___
 
@@ -302,7 +305,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[docsDirectory](NxMonorepoProject.md#docsdirectory)
+[MonorepoTsProject](MonorepoTsProject.md).[docsDirectory](MonorepoTsProject.md#docsdirectory)
 
 ___
 
@@ -312,7 +315,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[eslint](NxMonorepoProject.md#eslint)
+[MonorepoTsProject](MonorepoTsProject.md).[eslint](MonorepoTsProject.md#eslint)
 
 ___
 
@@ -324,7 +327,7 @@ The .gitattributes file for this repository.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[gitattributes](NxMonorepoProject.md#gitattributes)
+[MonorepoTsProject](MonorepoTsProject.md).[gitattributes](MonorepoTsProject.md#gitattributes)
 
 ___
 
@@ -338,7 +341,7 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[github](NxMonorepoProject.md#github)
+[MonorepoTsProject](MonorepoTsProject.md).[github](MonorepoTsProject.md#github)
 
 ___
 
@@ -350,7 +353,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[gitignore](NxMonorepoProject.md#gitignore)
+[MonorepoTsProject](MonorepoTsProject.md).[gitignore](MonorepoTsProject.md#gitignore)
 
 ___
 
@@ -364,7 +367,7 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[gitpod](NxMonorepoProject.md#gitpod)
+[MonorepoTsProject](MonorepoTsProject.md).[gitpod](MonorepoTsProject.md#gitpod)
 
 ___
 
@@ -378,7 +381,7 @@ FQN of the project type.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[initProject](NxMonorepoProject.md#initproject)
+[MonorepoTsProject](MonorepoTsProject.md).[initProject](MonorepoTsProject.md#initproject)
 
 ___
 
@@ -390,7 +393,7 @@ The Jest configuration (if enabled)
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[jest](NxMonorepoProject.md#jest)
+[MonorepoTsProject](MonorepoTsProject.md).[jest](MonorepoTsProject.md#jest)
 
 ___
 
@@ -402,7 +405,7 @@ The directory in which compiled .js files reside.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[libdir](NxMonorepoProject.md#libdir)
+[MonorepoTsProject](MonorepoTsProject.md).[libdir](MonorepoTsProject.md#libdir)
 
 ___
 
@@ -414,7 +417,7 @@ Logging utilities.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[logger](NxMonorepoProject.md#logger)
+[MonorepoTsProject](MonorepoTsProject.md).[logger](MonorepoTsProject.md#logger)
 
 ___
 
@@ -426,7 +429,7 @@ Project name.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[name](NxMonorepoProject.md#name)
+[MonorepoTsProject](MonorepoTsProject.md).[name](MonorepoTsProject.md#name)
 
 ___
 
@@ -438,7 +441,7 @@ The tree node.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[node](NxMonorepoProject.md#node)
+[MonorepoTsProject](MonorepoTsProject.md).[node](MonorepoTsProject.md#node)
 
 ___
 
@@ -448,7 +451,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[nodeVersion](NxMonorepoProject.md#nodeversion)
+[MonorepoTsProject](MonorepoTsProject.md).[nodeVersion](MonorepoTsProject.md#nodeversion)
 
 ___
 
@@ -460,7 +463,7 @@ The .npmignore file.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[npmignore](NxMonorepoProject.md#npmignore)
+[MonorepoTsProject](MonorepoTsProject.md).[npmignore](MonorepoTsProject.md#npmignore)
 
 ___
 
@@ -470,7 +473,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[nxConfigurator](NxMonorepoProject.md#nxconfigurator)
+[MonorepoTsProject](MonorepoTsProject.md).[nxConfigurator](MonorepoTsProject.md#nxconfigurator)
 
 ___
 
@@ -482,7 +485,7 @@ Absolute output directory of this project.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[outdir](NxMonorepoProject.md#outdir)
+[MonorepoTsProject](MonorepoTsProject.md).[outdir](MonorepoTsProject.md#outdir)
 
 ___
 
@@ -494,7 +497,7 @@ API for managing the node package.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[package](NxMonorepoProject.md#package)
+[MonorepoTsProject](MonorepoTsProject.md).[package](MonorepoTsProject.md#package)
 
 ___
 
@@ -506,7 +509,7 @@ A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[parent](NxMonorepoProject.md#parent)
+[MonorepoTsProject](MonorepoTsProject.md).[parent](MonorepoTsProject.md#parent)
 
 ___
 
@@ -516,7 +519,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[prettier](NxMonorepoProject.md#prettier)
+[MonorepoTsProject](MonorepoTsProject.md).[prettier](MonorepoTsProject.md#prettier)
 
 ___
 
@@ -528,7 +531,7 @@ Manages the build process of the project.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[projectBuild](NxMonorepoProject.md#projectbuild)
+[MonorepoTsProject](MonorepoTsProject.md).[projectBuild](MonorepoTsProject.md#projectbuild)
 
 ___
 
@@ -538,7 +541,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[projectType](NxMonorepoProject.md#projecttype)
+[MonorepoTsProject](MonorepoTsProject.md).[projectType](MonorepoTsProject.md#projecttype)
 
 ___
 
@@ -555,7 +558,7 @@ use `release.publisher`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[publisher](NxMonorepoProject.md#publisher)
+[MonorepoTsProject](MonorepoTsProject.md).[publisher](MonorepoTsProject.md#publisher)
 
 ___
 
@@ -567,7 +570,7 @@ Release management.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[release](NxMonorepoProject.md#release)
+[MonorepoTsProject](MonorepoTsProject.md).[release](MonorepoTsProject.md#release)
 
 ___
 
@@ -579,7 +582,7 @@ The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the p
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[runScriptCommand](NxMonorepoProject.md#runscriptcommand)
+[MonorepoTsProject](MonorepoTsProject.md).[runScriptCommand](MonorepoTsProject.md#runscriptcommand)
 
 ___
 
@@ -591,7 +594,7 @@ The directory in which the .ts sources reside.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[srcdir](NxMonorepoProject.md#srcdir)
+[MonorepoTsProject](MonorepoTsProject.md).[srcdir](MonorepoTsProject.md#srcdir)
 
 ___
 
@@ -603,7 +606,7 @@ Project tasks.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tasks](NxMonorepoProject.md#tasks)
+[MonorepoTsProject](MonorepoTsProject.md).[tasks](MonorepoTsProject.md#tasks)
 
 ___
 
@@ -615,7 +618,7 @@ The directory in which tests reside.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[testdir](NxMonorepoProject.md#testdir)
+[MonorepoTsProject](MonorepoTsProject.md).[testdir](MonorepoTsProject.md#testdir)
 
 ___
 
@@ -625,7 +628,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tsconfig](NxMonorepoProject.md#tsconfig)
+[MonorepoTsProject](MonorepoTsProject.md).[tsconfig](MonorepoTsProject.md#tsconfig)
 
 ___
 
@@ -637,7 +640,7 @@ A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tsconfigDev](NxMonorepoProject.md#tsconfigdev)
+[MonorepoTsProject](MonorepoTsProject.md).[tsconfigDev](MonorepoTsProject.md#tsconfigdev)
 
 ___
 
@@ -647,7 +650,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tsconfigEslint](NxMonorepoProject.md#tsconfigeslint)
+[MonorepoTsProject](MonorepoTsProject.md).[tsconfigEslint](MonorepoTsProject.md#tsconfigeslint)
 
 ___
 
@@ -659,7 +662,7 @@ The upgrade workflow.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[upgradeWorkflow](NxMonorepoProject.md#upgradeworkflow)
+[MonorepoTsProject](MonorepoTsProject.md).[upgradeWorkflow](MonorepoTsProject.md#upgradeworkflow)
 
 ___
 
@@ -673,7 +676,7 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[vscode](NxMonorepoProject.md#vscode)
+[MonorepoTsProject](MonorepoTsProject.md).[vscode](MonorepoTsProject.md#vscode)
 
 ___
 
@@ -685,7 +688,7 @@ The "watch" task.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[watchTask](NxMonorepoProject.md#watchtask)
+[MonorepoTsProject](MonorepoTsProject.md).[watchTask](MonorepoTsProject.md#watchtask)
 
 ___
 
@@ -695,7 +698,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[workflowBootstrapSteps](NxMonorepoProject.md#workflowbootstrapsteps)
+[MonorepoTsProject](MonorepoTsProject.md).[workflowBootstrapSteps](MonorepoTsProject.md#workflowbootstrapsteps)
 
 ___
 
@@ -705,7 +708,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[workflowPackageCache](NxMonorepoProject.md#workflowpackagecache)
+[MonorepoTsProject](MonorepoTsProject.md).[workflowPackageCache](MonorepoTsProject.md#workflowpackagecache)
 
 ___
 
@@ -718,7 +721,7 @@ this task should synthesize the project files.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[DEFAULT_TASK](NxMonorepoProject.md#default_task)
+[MonorepoTsProject](MonorepoTsProject.md).[DEFAULT_TASK](MonorepoTsProject.md#default_task)
 
 ___
 
@@ -728,7 +731,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[DEFAULT_TS_JEST_TRANFORM_PATTERN](NxMonorepoProject.md#default_ts_jest_tranform_pattern)
+[MonorepoTsProject](MonorepoTsProject.md).[DEFAULT_TS_JEST_TRANFORM_PATTERN](MonorepoTsProject.md#default_ts_jest_tranform_pattern)
 
 ## Accessors
 
@@ -746,7 +749,7 @@ use `package.allowLibraryDependencies`
 
 #### Inherited from
 
-NxMonorepoProject.allowLibraryDependencies
+MonorepoTsProject.allowLibraryDependencies
 
 ___
 
@@ -760,7 +763,7 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.buildTask
+MonorepoTsProject.buildTask
 
 ___
 
@@ -776,7 +779,7 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-NxMonorepoProject.buildWorkflowJobId
+MonorepoTsProject.buildWorkflowJobId
 
 ___
 
@@ -790,7 +793,7 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.compileTask
+MonorepoTsProject.compileTask
 
 ___
 
@@ -806,7 +809,7 @@ Returns all the components within this project.
 
 #### Inherited from
 
-NxMonorepoProject.components
+MonorepoTsProject.components
 
 ___
 
@@ -822,7 +825,7 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-NxMonorepoProject.ejected
+MonorepoTsProject.ejected
 
 ___
 
@@ -840,7 +843,7 @@ use `package.entrypoint`
 
 #### Inherited from
 
-NxMonorepoProject.entrypoint
+MonorepoTsProject.entrypoint
 
 ___
 
@@ -856,7 +859,7 @@ All files in this project.
 
 #### Inherited from
 
-NxMonorepoProject.files
+MonorepoTsProject.files
 
 ___
 
@@ -874,7 +877,7 @@ use `package.addField(x, y)`
 
 #### Inherited from
 
-NxMonorepoProject.manifest
+MonorepoTsProject.manifest
 
 ___
 
@@ -890,7 +893,7 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-NxMonorepoProject.maxNodeVersion
+MonorepoTsProject.maxNodeVersion
 
 ___
 
@@ -906,7 +909,7 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-NxMonorepoProject.minNodeVersion
+MonorepoTsProject.minNodeVersion
 
 ___
 
@@ -922,7 +925,7 @@ The .npmrc file
 
 #### Inherited from
 
-NxMonorepoProject.npmrc
+MonorepoTsProject.npmrc
 
 ___
 
@@ -938,7 +941,7 @@ Return the NxWorkspace instance. This should be implemented using a getter.
 
 #### Inherited from
 
-NxMonorepoProject.nx
+MonorepoTsProject.nx
 
 ___
 
@@ -958,7 +961,7 @@ use `package.packageManager`
 
 #### Inherited from
 
-NxMonorepoProject.packageManager
+MonorepoTsProject.packageManager
 
 ___
 
@@ -972,7 +975,7 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.packageTask
+MonorepoTsProject.packageTask
 
 ___
 
@@ -986,7 +989,7 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.postCompileTask
+MonorepoTsProject.postCompileTask
 
 ___
 
@@ -1000,7 +1003,7 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.preCompileTask
+MonorepoTsProject.preCompileTask
 
 ___
 
@@ -1016,7 +1019,7 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-NxMonorepoProject.projenCommand
+MonorepoTsProject.projenCommand
 
 ___
 
@@ -1032,7 +1035,7 @@ The root project.
 
 #### Inherited from
 
-NxMonorepoProject.root
+MonorepoTsProject.root
 
 ___
 
@@ -1048,7 +1051,7 @@ Get consistently sorted list of subprojects
 
 #### Inherited from
 
-NxMonorepoProject.sortedSubProjects
+MonorepoTsProject.sortedSubProjects
 
 ___
 
@@ -1064,7 +1067,7 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-NxMonorepoProject.subprojects
+MonorepoTsProject.subprojects
 
 ___
 
@@ -1078,9 +1081,19 @@ ___
 
 #### Inherited from
 
-NxMonorepoProject.testTask
+MonorepoTsProject.testTask
 
 ## Methods
+
+### addAndEditTasks
+
+▸ **addAndEditTasks**(): `void`
+
+#### Returns
+
+`void`
+
+___
 
 ### addBins
 
@@ -1098,7 +1111,7 @@ NxMonorepoProject.testTask
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addBins](NxMonorepoProject.md#addbins)
+[MonorepoTsProject](MonorepoTsProject.md).[addBins](MonorepoTsProject.md#addbins)
 
 ___
 
@@ -1123,7 +1136,7 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addBundledDeps](NxMonorepoProject.md#addbundleddeps)
+[MonorepoTsProject](MonorepoTsProject.md).[addBundledDeps](MonorepoTsProject.md#addbundleddeps)
 
 ___
 
@@ -1149,7 +1162,7 @@ use `project.compileTask.exec()`
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addCompileCommand](NxMonorepoProject.md#addcompilecommand)
+[MonorepoTsProject](MonorepoTsProject.md).[addCompileCommand](MonorepoTsProject.md#addcompilecommand)
 
 ___
 
@@ -1171,7 +1184,7 @@ Defines normal dependencies.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addDeps](NxMonorepoProject.md#adddeps)
+[MonorepoTsProject](MonorepoTsProject.md).[addDeps](MonorepoTsProject.md#adddeps)
 
 ___
 
@@ -1193,7 +1206,7 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addDevDeps](NxMonorepoProject.md#adddevdeps)
+[MonorepoTsProject](MonorepoTsProject.md).[addDevDeps](MonorepoTsProject.md#adddevdeps)
 
 ___
 
@@ -1216,7 +1229,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addExcludeFromCleanup](NxMonorepoProject.md#addexcludefromcleanup)
+[MonorepoTsProject](MonorepoTsProject.md).[addExcludeFromCleanup](MonorepoTsProject.md#addexcludefromcleanup)
 
 ___
 
@@ -1238,7 +1251,7 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addFields](NxMonorepoProject.md#addfields)
+[MonorepoTsProject](MonorepoTsProject.md).[addFields](MonorepoTsProject.md#addfields)
 
 ___
 
@@ -1260,7 +1273,7 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addGitIgnore](NxMonorepoProject.md#addgitignore)
+[MonorepoTsProject](MonorepoTsProject.md).[addGitIgnore](MonorepoTsProject.md#addgitignore)
 
 ___
 
@@ -1289,7 +1302,7 @@ error if this is called on a dependent which does not have a NXProject component
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addImplicitDependency](NxMonorepoProject.md#addimplicitdependency)
+[MonorepoTsProject](MonorepoTsProject.md).[addImplicitDependency](MonorepoTsProject.md#addimplicitdependency)
 
 ___
 
@@ -1312,7 +1325,7 @@ Adds a dependency between two Java Projects in the monorepo.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addJavaDependency](NxMonorepoProject.md#addjavadependency)
+[MonorepoTsProject](MonorepoTsProject.md).[addJavaDependency](MonorepoTsProject.md#addjavadependency)
 
 ___
 
@@ -1334,7 +1347,7 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addKeywords](NxMonorepoProject.md#addkeywords)
+[MonorepoTsProject](MonorepoTsProject.md).[addKeywords](MonorepoTsProject.md#addkeywords)
 
 ___
 
@@ -1357,7 +1370,7 @@ Add project task that executes `npx nx run-many ...` style command.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addNxRunManyTask](NxMonorepoProject.md#addnxrunmanytask)
+[MonorepoTsProject](MonorepoTsProject.md).[addNxRunManyTask](MonorepoTsProject.md#addnxrunmanytask)
 
 ___
 
@@ -1383,7 +1396,7 @@ If you are having trouble getting an ignore to populate, try using your construc
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addPackageIgnore](NxMonorepoProject.md#addpackageignore)
+[MonorepoTsProject](MonorepoTsProject.md).[addPackageIgnore](MonorepoTsProject.md#addpackageignore)
 
 ___
 
@@ -1409,7 +1422,7 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addPeerDeps](NxMonorepoProject.md#addpeerdeps)
+[MonorepoTsProject](MonorepoTsProject.md).[addPeerDeps](MonorepoTsProject.md#addpeerdeps)
 
 ___
 
@@ -1436,7 +1449,7 @@ error if the dependent does not have Poetry enabled
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addPythonPoetryDependency](NxMonorepoProject.md#addpythonpoetrydependency)
+[MonorepoTsProject](MonorepoTsProject.md).[addPythonPoetryDependency](MonorepoTsProject.md#addpythonpoetrydependency)
 
 ___
 
@@ -1458,7 +1471,7 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addScripts](NxMonorepoProject.md#addscripts)
+[MonorepoTsProject](MonorepoTsProject.md).[addScripts](MonorepoTsProject.md#addscripts)
 
 ___
 
@@ -1482,7 +1495,7 @@ a task with this name.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addTask](NxMonorepoProject.md#addtask)
+[MonorepoTsProject](MonorepoTsProject.md).[addTask](MonorepoTsProject.md#addtask)
 
 ___
 
@@ -1508,7 +1521,7 @@ use `project.testTask.exec()`
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addTestCommand](NxMonorepoProject.md#addtestcommand)
+[MonorepoTsProject](MonorepoTsProject.md).[addTestCommand](MonorepoTsProject.md#addtestcommand)
 
 ___
 
@@ -1534,7 +1547,7 @@ Prints a "tip" message during synthesis.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addTip](NxMonorepoProject.md#addtip)
+[MonorepoTsProject](MonorepoTsProject.md).[addTip](MonorepoTsProject.md#addtip)
 
 ___
 
@@ -1556,7 +1569,7 @@ Add one or more additional package globs to the workspace.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[addWorkspacePackages](NxMonorepoProject.md#addworkspacepackages)
+[MonorepoTsProject](MonorepoTsProject.md).[addWorkspacePackages](MonorepoTsProject.md#addworkspacepackages)
 
 ___
 
@@ -1584,7 +1597,7 @@ https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[annotateGenerated](NxMonorepoProject.md#annotategenerated)
+[MonorepoTsProject](MonorepoTsProject.md).[annotateGenerated](MonorepoTsProject.md#annotategenerated)
 
 ___
 
@@ -1606,7 +1619,7 @@ Helper to format `npx nx run-many ...` style command
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[composeNxRunManyCommand](NxMonorepoProject.md#composenxrunmanycommand)
+[MonorepoTsProject](MonorepoTsProject.md).[composeNxRunManyCommand](MonorepoTsProject.md#composenxrunmanycommand)
 
 ___
 
@@ -1628,7 +1641,7 @@ Helper to format `npx nx run-many ...` style command execution in package manage
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[execNxRunManyCommand](NxMonorepoProject.md#execnxrunmanycommand)
+[MonorepoTsProject](MonorepoTsProject.md).[execNxRunManyCommand](MonorepoTsProject.md#execnxrunmanycommand)
 
 ___
 
@@ -1654,7 +1667,7 @@ Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[hasScript](NxMonorepoProject.md#hasscript)
+[MonorepoTsProject](MonorepoTsProject.md).[hasScript](MonorepoTsProject.md#hasscript)
 
 ___
 
@@ -1671,7 +1684,7 @@ way as consumers of the packages have when installing from the registry.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[linkLocalWorkspaceBins](NxMonorepoProject.md#linklocalworkspacebins)
+[MonorepoTsProject](MonorepoTsProject.md).[linkLocalWorkspaceBins](MonorepoTsProject.md#linklocalworkspacebins)
 
 ___
 
@@ -1687,7 +1700,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[postSynthesize](NxMonorepoProject.md#postsynthesize)
+[MonorepoTsProject](MonorepoTsProject.md).[postSynthesize](MonorepoTsProject.md#postsynthesize)
 
 ___
 
@@ -1699,9 +1712,9 @@ ___
 
 `void`
 
-#### Inherited from
+#### Overrides
 
-[NxMonorepoProject](NxMonorepoProject.md).[preSynthesize](NxMonorepoProject.md#presynthesize)
+[MonorepoTsProject](MonorepoTsProject.md).[preSynthesize](MonorepoTsProject.md#presynthesize)
 
 ___
 
@@ -1723,7 +1736,7 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[removeScript](NxMonorepoProject.md#removescript)
+[MonorepoTsProject](MonorepoTsProject.md).[removeScript](MonorepoTsProject.md#removescript)
 
 ___
 
@@ -1747,7 +1760,7 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[removeTask](NxMonorepoProject.md#removetask)
+[MonorepoTsProject](MonorepoTsProject.md).[removeTask](MonorepoTsProject.md#removetask)
 
 ___
 
@@ -1772,7 +1785,7 @@ Job steps
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[renderWorkflowSetup](NxMonorepoProject.md#renderworkflowsetup)
+[MonorepoTsProject](MonorepoTsProject.md).[renderWorkflowSetup](MonorepoTsProject.md#renderworkflowsetup)
 
 ___
 
@@ -1795,7 +1808,7 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[runTaskCommand](NxMonorepoProject.md#runtaskcommand)
+[MonorepoTsProject](MonorepoTsProject.md).[runTaskCommand](MonorepoTsProject.md#runtaskcommand)
 
 ___
 
@@ -1818,7 +1831,7 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[setScript](NxMonorepoProject.md#setscript)
+[MonorepoTsProject](MonorepoTsProject.md).[setScript](MonorepoTsProject.md#setscript)
 
 ___
 
@@ -1834,7 +1847,7 @@ ___
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[synth](NxMonorepoProject.md#synth)
+[MonorepoTsProject](MonorepoTsProject.md).[synth](MonorepoTsProject.md#synth)
 
 ___
 
@@ -1850,7 +1863,7 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[toString](NxMonorepoProject.md#tostring)
+[MonorepoTsProject](MonorepoTsProject.md).[toString](MonorepoTsProject.md#tostring)
 
 ___
 
@@ -1875,7 +1888,7 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tryFindFile](NxMonorepoProject.md#tryfindfile)
+[MonorepoTsProject](MonorepoTsProject.md).[tryFindFile](MonorepoTsProject.md#tryfindfile)
 
 ___
 
@@ -1901,7 +1914,7 @@ use `tryFindObjectFile`
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tryFindJsonFile](NxMonorepoProject.md#tryfindjsonfile)
+[MonorepoTsProject](MonorepoTsProject.md).[tryFindJsonFile](MonorepoTsProject.md#tryfindjsonfile)
 
 ___
 
@@ -1923,7 +1936,7 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tryFindObjectFile](NxMonorepoProject.md#tryfindobjectfile)
+[MonorepoTsProject](MonorepoTsProject.md).[tryFindObjectFile](MonorepoTsProject.md#tryfindobjectfile)
 
 ___
 
@@ -1949,7 +1962,7 @@ the file was not found.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[tryRemoveFile](NxMonorepoProject.md#tryremovefile)
+[MonorepoTsProject](MonorepoTsProject.md).[tryRemoveFile](MonorepoTsProject.md#tryremovefile)
 
 ___
 
@@ -1987,7 +2000,7 @@ true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[isConstruct](NxMonorepoProject.md#isconstruct)
+[MonorepoTsProject](MonorepoTsProject.md).[isConstruct](MonorepoTsProject.md#isconstruct)
 
 ___
 
@@ -2009,7 +2022,7 @@ x is Project
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[isProject](NxMonorepoProject.md#isproject)
+[MonorepoTsProject](MonorepoTsProject.md).[isProject](MonorepoTsProject.md#isproject)
 
 ___
 
@@ -2036,4 +2049,4 @@ when no project is found in the path to the root
 
 #### Inherited from
 
-[NxMonorepoProject](NxMonorepoProject.md).[of](NxMonorepoProject.md#of)
+[MonorepoTsProject](MonorepoTsProject.md).[of](MonorepoTsProject.md#of)

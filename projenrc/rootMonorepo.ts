@@ -1,9 +1,9 @@
 import merge from "lodash.merge";
 
 import {
-    MonorepoProject,
-    MonorepoProjectOptions,
-} from "../packages/dkershner6-projen-nx-monorepo/src/MonorepoProject";
+    NxMonorepoProject,
+    NxMonorepoProjectOptions,
+} from "../packages/dkershner6-projen-nx-monorepo/src/NxMonorepoProject";
 import {
     RECOMMENDED_NODE_20_PROJECT_OPTIONS,
     DKEslintConfig,
@@ -14,13 +14,12 @@ import { CSpell } from "../packages/projen-cspell/src";
 
 import { THIS_REPOSITORY } from "./common/constants";
 
-export class RootMonorepo extends MonorepoProject {
+export class RootMonorepo extends NxMonorepoProject {
     constructor() {
         super(
-            merge<MonorepoProjectOptions, Partial<MonorepoProjectOptions>>(
+            merge<NxMonorepoProjectOptions, Partial<NxMonorepoProjectOptions>>(
                 {
                     devDeps: [
-                        "@aws/pdk",
                         "@types/jest",
                         "@types/lodash.merge",
                         "lodash.merge",
@@ -30,16 +29,8 @@ export class RootMonorepo extends MonorepoProject {
                     projenrcTs: true,
                     github: true,
 
-                    depsUpgradeOptions: {
-                        workflowOptions: {
-                            preUpgradeSteps: [
-                                { run: "echo 'preUpgradeSteps'" },
-                            ],
-                        },
-                    },
-
                     repository: THIS_REPOSITORY,
-                },
+                } as NxMonorepoProjectOptions,
                 RECOMMENDED_NODE_20_PROJECT_OPTIONS,
             ),
         );

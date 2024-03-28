@@ -42,7 +42,6 @@
 /.projen/deps.json linguist-generated
 /.projen/files.json linguist-generated
 /.projen/tasks.json linguist-generated
-/.syncpackrc.json linguist-generated
 /.vscode/Projen Constructs Monorepo.code-workspace linguist-generated
 /cspell-readonly.json linguist-generated
 /LICENSE linguist-generated

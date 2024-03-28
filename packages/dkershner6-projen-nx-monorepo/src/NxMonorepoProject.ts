@@ -1,38 +1,22 @@
-import { monorepo } from "@aws/pdk";
-import { github, javascript } from "projen";
+import { javascript } from "projen";
 
-export interface UpgradeDependenciesWorkflowOptions
-    extends javascript.UpgradeDependenciesWorkflowOptions {
-    /** Steps that will be placed just in front of the upgrade step in the upgrade Workflow */
-    readonly preUpgradeSteps?: github.workflows.JobStep[];
-}
+import {
+    MonorepoTsProject,
+    MonorepoTsProjectOptions,
+} from "./projects/typescript/monorepo-ts";
 
 export interface UpgradeDependenciesOptions
-    extends javascript.UpgradeDependenciesOptions {
-    readonly workflowOptions?: UpgradeDependenciesWorkflowOptions;
-}
+    extends javascript.UpgradeDependenciesOptions {}
 
-export interface MonorepoProjectOptions
-    extends monorepo.MonorepoTsProjectOptions {
+export interface NxMonorepoProjectOptions extends MonorepoTsProjectOptions {
     readonly depsUpgradeOptions?: UpgradeDependenciesOptions;
 }
 
-export class MonorepoProject extends monorepo.MonorepoTsProject {
-    constructor(options: MonorepoProjectOptions) {
+export class NxMonorepoProject extends MonorepoTsProject {
+    constructor(options: NxMonorepoProjectOptions) {
         super(options);
 
-        this.removeUnneededPackages();
         this.addAndEditTasks();
-    }
-
-    /** PDK is one big package, and monorepo doesn't need these */
-    private removeUnneededPackages(): void {
-        this.deps.removeDependency("@aws-cdk/aws-cognito-identitypool-alpha");
-        this.deps.removeDependency("aws-cdk-lib");
-        this.deps.removeDependency("cdk-nag");
-
-        // No longer using this
-        this.deps.removeDependency("syncpack");
     }
 
     private addAndEditTasks(): void {

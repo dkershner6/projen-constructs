@@ -310,7 +310,7 @@ new ProjenConstructTsLib(rootProject, {
     ],
     description: "DKershner's preferred constructs for Projen NX Monorepos.",
     devDeps: ["@types/clone-deep"],
-    peerDeps: ["@aws/pdk", "clone-deep", "dkershner6-projen-typescript@^0.x"],
+    peerDeps: ["clone-deep", "dkershner6-projen-typescript@^0.x"],
 });
 
 // Using the packages inside this repo, for this repo.

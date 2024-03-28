@@ -40,7 +40,6 @@
     ".projen/deps.json",
     ".projen/files.json",
     ".projen/tasks.json",
-    ".syncpackrc.json",
     ".vscode/Projen Constructs Monorepo.code-workspace",
     "cspell-readonly.json",
     "LICENSE",

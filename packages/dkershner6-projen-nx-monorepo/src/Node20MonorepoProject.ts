@@ -1,4 +1,3 @@
-import { monorepo } from "@aws/pdk";
 import deepClone from "clone-deep";
 import {
     DKBugFixes,
@@ -9,23 +8,26 @@ import {
 } from "dkershner6-projen-typescript";
 import { deepMerge } from "projen/lib/util";
 
-import { MonorepoProject, MonorepoProjectOptions } from "./MonorepoProject";
+import {
+    NxMonorepoProject,
+    NxMonorepoProjectOptions,
+} from "./NxMonorepoProject";
+import { MonorepoTsProjectOptions } from "./projects/typescript/monorepo-ts";
 
-export class Node20MonorepoProject extends MonorepoProject {
-    constructor(options: MonorepoProjectOptions) {
+export class Node20MonorepoProject extends NxMonorepoProject {
+    constructor(options: NxMonorepoProjectOptions) {
         super(
             deepMerge([
                 deepClone(RECOMMENDED_NODE_20_PROJECT_OPTIONS),
                 {
                     devDeps: [
-                        "@aws/pdk",
                         "@types/jest",
                         "@types/lodash.merge",
                         "lodash.merge",
                     ],
                 },
                 options,
-            ]) as monorepo.MonorepoTsProjectOptions,
+            ]) as MonorepoTsProjectOptions,
         );
 
         new DKBugFixes(this);

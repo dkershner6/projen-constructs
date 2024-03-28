@@ -1,164 +1,190 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / MonorepoProject
+[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / MonorepoTsProject
 
-# Class: MonorepoProject
+# Class: MonorepoTsProject
+
+This project type will bootstrap a monorepo with support for polygot
+builds, build caching, dependency graph visualization and much more.
+
+**`Pjid`**
+
+monorepo-ts
 
 ## Hierarchy
 
-- `MonorepoTsProject`
+- `TypeScriptProject`
 
-  ↳ **`MonorepoProject`**
+  ↳ **`MonorepoTsProject`**
 
-  ↳↳ [`Node20MonorepoProject`](Node20MonorepoProject.md)
+  ↳↳ [`NxMonorepoProject`](NxMonorepoProject.md)
+
+## Implements
+
+- [`INxProjectCore`](../interfaces/INxProjectCore.md)
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](MonorepoProject.md#constructor)
+- [constructor](MonorepoTsProject.md#constructor)
 
 ### Properties
 
-- [artifactsDirectory](MonorepoProject.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](MonorepoProject.md#artifactsjavascriptdirectory)
-- [autoApprove](MonorepoProject.md#autoapprove)
-- [autoMerge](MonorepoProject.md#automerge)
-- [buildWorkflow](MonorepoProject.md#buildworkflow)
-- [bundler](MonorepoProject.md#bundler)
-- [commitGenerated](MonorepoProject.md#commitgenerated)
-- [defaultTask](MonorepoProject.md#defaulttask)
-- [deps](MonorepoProject.md#deps)
-- [devContainer](MonorepoProject.md#devcontainer)
-- [docgen](MonorepoProject.md#docgen)
-- [docsDirectory](MonorepoProject.md#docsdirectory)
-- [eslint](MonorepoProject.md#eslint)
-- [gitattributes](MonorepoProject.md#gitattributes)
-- [github](MonorepoProject.md#github)
-- [gitignore](MonorepoProject.md#gitignore)
-- [gitpod](MonorepoProject.md#gitpod)
-- [initProject](MonorepoProject.md#initproject)
-- [jest](MonorepoProject.md#jest)
-- [libdir](MonorepoProject.md#libdir)
-- [logger](MonorepoProject.md#logger)
-- [name](MonorepoProject.md#name)
-- [node](MonorepoProject.md#node)
-- [nodeVersion](MonorepoProject.md#nodeversion)
-- [npmignore](MonorepoProject.md#npmignore)
-- [nxConfigurator](MonorepoProject.md#nxconfigurator)
-- [outdir](MonorepoProject.md#outdir)
-- [package](MonorepoProject.md#package)
-- [parent](MonorepoProject.md#parent)
-- [prettier](MonorepoProject.md#prettier)
-- [projectBuild](MonorepoProject.md#projectbuild)
-- [projectType](MonorepoProject.md#projecttype)
-- [publisher](MonorepoProject.md#publisher)
-- [release](MonorepoProject.md#release)
-- [runScriptCommand](MonorepoProject.md#runscriptcommand)
-- [srcdir](MonorepoProject.md#srcdir)
-- [tasks](MonorepoProject.md#tasks)
-- [testdir](MonorepoProject.md#testdir)
-- [tsconfig](MonorepoProject.md#tsconfig)
-- [tsconfigDev](MonorepoProject.md#tsconfigdev)
-- [tsconfigEslint](MonorepoProject.md#tsconfigeslint)
-- [upgradeWorkflow](MonorepoProject.md#upgradeworkflow)
-- [vscode](MonorepoProject.md#vscode)
-- [watchTask](MonorepoProject.md#watchtask)
-- [workflowBootstrapSteps](MonorepoProject.md#workflowbootstrapsteps)
-- [workflowPackageCache](MonorepoProject.md#workflowpackagecache)
-- [DEFAULT\_TASK](MonorepoProject.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](MonorepoProject.md#default_ts_jest_tranform_pattern)
+- [\_options](MonorepoTsProject.md#_options)
+- [artifactsDirectory](MonorepoTsProject.md#artifactsdirectory)
+- [artifactsJavascriptDirectory](MonorepoTsProject.md#artifactsjavascriptdirectory)
+- [autoApprove](MonorepoTsProject.md#autoapprove)
+- [autoMerge](MonorepoTsProject.md#automerge)
+- [buildWorkflow](MonorepoTsProject.md#buildworkflow)
+- [bundler](MonorepoTsProject.md#bundler)
+- [commitGenerated](MonorepoTsProject.md#commitgenerated)
+- [defaultTask](MonorepoTsProject.md#defaulttask)
+- [deps](MonorepoTsProject.md#deps)
+- [devContainer](MonorepoTsProject.md#devcontainer)
+- [docgen](MonorepoTsProject.md#docgen)
+- [docsDirectory](MonorepoTsProject.md#docsdirectory)
+- [eslint](MonorepoTsProject.md#eslint)
+- [gitattributes](MonorepoTsProject.md#gitattributes)
+- [github](MonorepoTsProject.md#github)
+- [gitignore](MonorepoTsProject.md#gitignore)
+- [gitpod](MonorepoTsProject.md#gitpod)
+- [initProject](MonorepoTsProject.md#initproject)
+- [jest](MonorepoTsProject.md#jest)
+- [libdir](MonorepoTsProject.md#libdir)
+- [logger](MonorepoTsProject.md#logger)
+- [name](MonorepoTsProject.md#name)
+- [node](MonorepoTsProject.md#node)
+- [nodeVersion](MonorepoTsProject.md#nodeversion)
+- [npmignore](MonorepoTsProject.md#npmignore)
+- [nxConfigurator](MonorepoTsProject.md#nxconfigurator)
+- [outdir](MonorepoTsProject.md#outdir)
+- [package](MonorepoTsProject.md#package)
+- [parent](MonorepoTsProject.md#parent)
+- [prettier](MonorepoTsProject.md#prettier)
+- [projectBuild](MonorepoTsProject.md#projectbuild)
+- [projectType](MonorepoTsProject.md#projecttype)
+- [projenVersion](MonorepoTsProject.md#projenversion)
+- [publisher](MonorepoTsProject.md#publisher)
+- [release](MonorepoTsProject.md#release)
+- [runScriptCommand](MonorepoTsProject.md#runscriptcommand)
+- [srcdir](MonorepoTsProject.md#srcdir)
+- [subNodeProjectResolves](MonorepoTsProject.md#subnodeprojectresolves)
+- [tasks](MonorepoTsProject.md#tasks)
+- [testdir](MonorepoTsProject.md#testdir)
+- [tsconfig](MonorepoTsProject.md#tsconfig)
+- [tsconfigDev](MonorepoTsProject.md#tsconfigdev)
+- [tsconfigEslint](MonorepoTsProject.md#tsconfigeslint)
+- [upgradeWorkflow](MonorepoTsProject.md#upgradeworkflow)
+- [vscode](MonorepoTsProject.md#vscode)
+- [watchTask](MonorepoTsProject.md#watchtask)
+- [workflowBootstrapSteps](MonorepoTsProject.md#workflowbootstrapsteps)
+- [workflowPackageCache](MonorepoTsProject.md#workflowpackagecache)
+- [workspaceConfig](MonorepoTsProject.md#workspaceconfig)
+- [workspacePackages](MonorepoTsProject.md#workspacepackages)
+- [DEFAULT\_TASK](MonorepoTsProject.md#default_task)
+- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](MonorepoTsProject.md#default_ts_jest_tranform_pattern)
 
 ### Accessors
 
-- [allowLibraryDependencies](MonorepoProject.md#allowlibrarydependencies)
-- [buildTask](MonorepoProject.md#buildtask)
-- [buildWorkflowJobId](MonorepoProject.md#buildworkflowjobid)
-- [compileTask](MonorepoProject.md#compiletask)
-- [components](MonorepoProject.md#components)
-- [ejected](MonorepoProject.md#ejected)
-- [entrypoint](MonorepoProject.md#entrypoint)
-- [files](MonorepoProject.md#files)
-- [manifest](MonorepoProject.md#manifest)
-- [maxNodeVersion](MonorepoProject.md#maxnodeversion)
-- [minNodeVersion](MonorepoProject.md#minnodeversion)
-- [npmrc](MonorepoProject.md#npmrc)
-- [nx](MonorepoProject.md#nx)
-- [packageManager](MonorepoProject.md#packagemanager)
-- [packageTask](MonorepoProject.md#packagetask)
-- [postCompileTask](MonorepoProject.md#postcompiletask)
-- [preCompileTask](MonorepoProject.md#precompiletask)
-- [projenCommand](MonorepoProject.md#projencommand)
-- [root](MonorepoProject.md#root)
-- [sortedSubProjects](MonorepoProject.md#sortedsubprojects)
-- [subprojects](MonorepoProject.md#subprojects)
-- [testTask](MonorepoProject.md#testtask)
+- [allowLibraryDependencies](MonorepoTsProject.md#allowlibrarydependencies)
+- [buildTask](MonorepoTsProject.md#buildtask)
+- [buildWorkflowJobId](MonorepoTsProject.md#buildworkflowjobid)
+- [compileTask](MonorepoTsProject.md#compiletask)
+- [components](MonorepoTsProject.md#components)
+- [ejected](MonorepoTsProject.md#ejected)
+- [entrypoint](MonorepoTsProject.md#entrypoint)
+- [files](MonorepoTsProject.md#files)
+- [manifest](MonorepoTsProject.md#manifest)
+- [maxNodeVersion](MonorepoTsProject.md#maxnodeversion)
+- [minNodeVersion](MonorepoTsProject.md#minnodeversion)
+- [npmrc](MonorepoTsProject.md#npmrc)
+- [nx](MonorepoTsProject.md#nx)
+- [packageManager](MonorepoTsProject.md#packagemanager)
+- [packageTask](MonorepoTsProject.md#packagetask)
+- [postCompileTask](MonorepoTsProject.md#postcompiletask)
+- [preCompileTask](MonorepoTsProject.md#precompiletask)
+- [projenCommand](MonorepoTsProject.md#projencommand)
+- [root](MonorepoTsProject.md#root)
+- [sortedSubProjects](MonorepoTsProject.md#sortedsubprojects)
+- [subprojects](MonorepoTsProject.md#subprojects)
+- [testTask](MonorepoTsProject.md#testtask)
 
 ### Methods
 
-- [addAndEditTasks](MonorepoProject.md#addandedittasks)
-- [addBins](MonorepoProject.md#addbins)
-- [addBundledDeps](MonorepoProject.md#addbundleddeps)
-- [addCompileCommand](MonorepoProject.md#addcompilecommand)
-- [addDeps](MonorepoProject.md#adddeps)
-- [addDevDeps](MonorepoProject.md#adddevdeps)
-- [addExcludeFromCleanup](MonorepoProject.md#addexcludefromcleanup)
-- [addFields](MonorepoProject.md#addfields)
-- [addGitIgnore](MonorepoProject.md#addgitignore)
-- [addImplicitDependency](MonorepoProject.md#addimplicitdependency)
-- [addJavaDependency](MonorepoProject.md#addjavadependency)
-- [addKeywords](MonorepoProject.md#addkeywords)
-- [addNxRunManyTask](MonorepoProject.md#addnxrunmanytask)
-- [addPackageIgnore](MonorepoProject.md#addpackageignore)
-- [addPeerDeps](MonorepoProject.md#addpeerdeps)
-- [addPythonPoetryDependency](MonorepoProject.md#addpythonpoetrydependency)
-- [addScripts](MonorepoProject.md#addscripts)
-- [addTask](MonorepoProject.md#addtask)
-- [addTestCommand](MonorepoProject.md#addtestcommand)
-- [addTip](MonorepoProject.md#addtip)
-- [addWorkspacePackages](MonorepoProject.md#addworkspacepackages)
-- [annotateGenerated](MonorepoProject.md#annotategenerated)
-- [composeNxRunManyCommand](MonorepoProject.md#composenxrunmanycommand)
-- [execNxRunManyCommand](MonorepoProject.md#execnxrunmanycommand)
-- [hasScript](MonorepoProject.md#hasscript)
-- [linkLocalWorkspaceBins](MonorepoProject.md#linklocalworkspacebins)
-- [postSynthesize](MonorepoProject.md#postsynthesize)
-- [preSynthesize](MonorepoProject.md#presynthesize)
-- [removeScript](MonorepoProject.md#removescript)
-- [removeTask](MonorepoProject.md#removetask)
-- [removeUnneededPackages](MonorepoProject.md#removeunneededpackages)
-- [renderWorkflowSetup](MonorepoProject.md#renderworkflowsetup)
-- [runTaskCommand](MonorepoProject.md#runtaskcommand)
-- [setScript](MonorepoProject.md#setscript)
-- [synth](MonorepoProject.md#synth)
-- [toString](MonorepoProject.md#tostring)
-- [tryFindFile](MonorepoProject.md#tryfindfile)
-- [tryFindJsonFile](MonorepoProject.md#tryfindjsonfile)
-- [tryFindObjectFile](MonorepoProject.md#tryfindobjectfile)
-- [tryRemoveFile](MonorepoProject.md#tryremovefile)
-- [isConstruct](MonorepoProject.md#isconstruct)
-- [isProject](MonorepoProject.md#isproject)
-- [of](MonorepoProject.md#of)
+- [addBins](MonorepoTsProject.md#addbins)
+- [addBundledDeps](MonorepoTsProject.md#addbundleddeps)
+- [addCompileCommand](MonorepoTsProject.md#addcompilecommand)
+- [addDeps](MonorepoTsProject.md#adddeps)
+- [addDevDeps](MonorepoTsProject.md#adddevdeps)
+- [addExcludeFromCleanup](MonorepoTsProject.md#addexcludefromcleanup)
+- [addFields](MonorepoTsProject.md#addfields)
+- [addGitIgnore](MonorepoTsProject.md#addgitignore)
+- [addImplicitDependency](MonorepoTsProject.md#addimplicitdependency)
+- [addJavaDependency](MonorepoTsProject.md#addjavadependency)
+- [addKeywords](MonorepoTsProject.md#addkeywords)
+- [addNxRunManyTask](MonorepoTsProject.md#addnxrunmanytask)
+- [addPackageIgnore](MonorepoTsProject.md#addpackageignore)
+- [addPeerDeps](MonorepoTsProject.md#addpeerdeps)
+- [addPythonPoetryDependency](MonorepoTsProject.md#addpythonpoetrydependency)
+- [addScripts](MonorepoTsProject.md#addscripts)
+- [addTask](MonorepoTsProject.md#addtask)
+- [addTestCommand](MonorepoTsProject.md#addtestcommand)
+- [addTip](MonorepoTsProject.md#addtip)
+- [addWorkspacePackages](MonorepoTsProject.md#addworkspacepackages)
+- [annotateGenerated](MonorepoTsProject.md#annotategenerated)
+- [composeNxRunManyCommand](MonorepoTsProject.md#composenxrunmanycommand)
+- [disableNodeWarnings](MonorepoTsProject.md#disablenodewarnings)
+- [execNxRunManyCommand](MonorepoTsProject.md#execnxrunmanycommand)
+- [hasScript](MonorepoTsProject.md#hasscript)
+- [installNonNodeDependencies](MonorepoTsProject.md#installnonnodedependencies)
+- [linkLocalWorkspaceBins](MonorepoTsProject.md#linklocalworkspacebins)
+- [postSynthesize](MonorepoTsProject.md#postsynthesize)
+- [preSynthesize](MonorepoTsProject.md#presynthesize)
+- [removeScript](MonorepoTsProject.md#removescript)
+- [removeTask](MonorepoTsProject.md#removetask)
+- [renderWorkflowSetup](MonorepoTsProject.md#renderworkflowsetup)
+- [resolveLocalBunDependencies](MonorepoTsProject.md#resolvelocalbundependencies)
+- [resolveSubNodeProjects](MonorepoTsProject.md#resolvesubnodeprojects)
+- [runTaskCommand](MonorepoTsProject.md#runtaskcommand)
+- [setScript](MonorepoTsProject.md#setscript)
+- [synth](MonorepoTsProject.md#synth)
+- [toString](MonorepoTsProject.md#tostring)
+- [tryFindFile](MonorepoTsProject.md#tryfindfile)
+- [tryFindJsonFile](MonorepoTsProject.md#tryfindjsonfile)
+- [tryFindObjectFile](MonorepoTsProject.md#tryfindobjectfile)
+- [tryRemoveFile](MonorepoTsProject.md#tryremovefile)
+- [updateWorkspace](MonorepoTsProject.md#updateworkspace)
+- [validateSubProjects](MonorepoTsProject.md#validatesubprojects)
+- [isConstruct](MonorepoTsProject.md#isconstruct)
+- [isProject](MonorepoTsProject.md#isproject)
+- [of](MonorepoTsProject.md#of)
 
 ## Constructors
 
 ### constructor
 
-• **new MonorepoProject**(`options`): [`MonorepoProject`](MonorepoProject.md)
+• **new MonorepoTsProject**(`options`): [`MonorepoTsProject`](MonorepoTsProject.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `options` | [`MonorepoProjectOptions`](../interfaces/MonorepoProjectOptions.md) |
+| `options` | [`MonorepoTsProjectOptions`](../interfaces/MonorepoTsProjectOptions.md) |
 
 #### Returns
 
-[`MonorepoProject`](MonorepoProject.md)
+[`MonorepoTsProject`](MonorepoTsProject.md)
 
 #### Overrides
 
-monorepo.MonorepoTsProject.constructor
+TypeScriptProject.constructor
 
 ## Properties
+
+### \_options
+
+• `Private` `Readonly` **\_options**: [`MonorepoTsProjectOptions`](../interfaces/MonorepoTsProjectOptions.md)
+
+___
 
 ### artifactsDirectory
 
@@ -170,7 +196,7 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.artifactsDirectory
+TypeScriptProject.artifactsDirectory
 
 ___
 
@@ -182,7 +208,7 @@ The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.artifactsJavascriptDirectory
+TypeScriptProject.artifactsJavascriptDirectory
 
 ___
 
@@ -194,7 +220,7 @@ Auto approve set up for this project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.autoApprove
+TypeScriptProject.autoApprove
 
 ___
 
@@ -206,7 +232,7 @@ Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.autoMerge
+TypeScriptProject.autoMerge
 
 ___
 
@@ -218,7 +244,7 @@ The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.buildWorkflow
+TypeScriptProject.buildWorkflow
 
 ___
 
@@ -228,7 +254,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.bundler
+TypeScriptProject.bundler
 
 ___
 
@@ -240,7 +266,7 @@ Whether to commit the managed files by default.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.commitGenerated
+TypeScriptProject.commitGenerated
 
 ___
 
@@ -253,7 +279,7 @@ the project is being ejected.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.defaultTask
+TypeScriptProject.defaultTask
 
 ___
 
@@ -265,7 +291,7 @@ Project dependencies.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.deps
+TypeScriptProject.deps
 
 ___
 
@@ -279,7 +305,7 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.devContainer
+TypeScriptProject.devContainer
 
 ___
 
@@ -289,7 +315,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.docgen
+TypeScriptProject.docgen
 
 ___
 
@@ -299,7 +325,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.docsDirectory
+TypeScriptProject.docsDirectory
 
 ___
 
@@ -309,7 +335,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.eslint
+TypeScriptProject.eslint
 
 ___
 
@@ -321,7 +347,7 @@ The .gitattributes file for this repository.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.gitattributes
+TypeScriptProject.gitattributes
 
 ___
 
@@ -335,7 +361,7 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.github
+TypeScriptProject.github
 
 ___
 
@@ -347,7 +373,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.gitignore
+TypeScriptProject.gitignore
 
 ___
 
@@ -361,7 +387,7 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.gitpod
+TypeScriptProject.gitpod
 
 ___
 
@@ -375,7 +401,7 @@ FQN of the project type.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.initProject
+TypeScriptProject.initProject
 
 ___
 
@@ -387,7 +413,7 @@ The Jest configuration (if enabled)
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.jest
+TypeScriptProject.jest
 
 ___
 
@@ -399,7 +425,7 @@ The directory in which compiled .js files reside.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.libdir
+TypeScriptProject.libdir
 
 ___
 
@@ -411,7 +437,7 @@ Logging utilities.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.logger
+TypeScriptProject.logger
 
 ___
 
@@ -423,7 +449,7 @@ Project name.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.name
+TypeScriptProject.name
 
 ___
 
@@ -435,7 +461,7 @@ The tree node.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.node
+TypeScriptProject.node
 
 ___
 
@@ -445,7 +471,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.nodeVersion
+TypeScriptProject.nodeVersion
 
 ___
 
@@ -457,17 +483,13 @@ The .npmignore file.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.npmignore
+TypeScriptProject.npmignore
 
 ___
 
 ### nxConfigurator
 
-• `Readonly` **nxConfigurator**: `NxConfigurator`
-
-#### Inherited from
-
-monorepo.MonorepoTsProject.nxConfigurator
+• `Readonly` **nxConfigurator**: [`NxConfigurator`](NxConfigurator.md)
 
 ___
 
@@ -479,7 +501,7 @@ Absolute output directory of this project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.outdir
+TypeScriptProject.outdir
 
 ___
 
@@ -491,7 +513,7 @@ API for managing the node package.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.package
+TypeScriptProject.package
 
 ___
 
@@ -503,7 +525,7 @@ A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.parent
+TypeScriptProject.parent
 
 ___
 
@@ -513,7 +535,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.prettier
+TypeScriptProject.prettier
 
 ___
 
@@ -525,7 +547,7 @@ Manages the build process of the project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.projectBuild
+TypeScriptProject.projectBuild
 
 ___
 
@@ -535,7 +557,15 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.projectType
+TypeScriptProject.projectType
+
+___
+
+### projenVersion
+
+• `Private` `Readonly` **projenVersion**: `string`
+
+Version of projen used by the monorepo and its subprojects
 
 ___
 
@@ -552,7 +582,7 @@ use `release.publisher`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.publisher
+TypeScriptProject.publisher
 
 ___
 
@@ -564,7 +594,7 @@ Release management.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.release
+TypeScriptProject.release
 
 ___
 
@@ -576,7 +606,7 @@ The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the p
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.runScriptCommand
+TypeScriptProject.runScriptCommand
 
 ___
 
@@ -588,7 +618,13 @@ The directory in which the .ts sources reside.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.srcdir
+TypeScriptProject.srcdir
+
+___
+
+### subNodeProjectResolves
+
+• `Private` **subNodeProjectResolves**: () => `boolean`[] = `[]`
 
 ___
 
@@ -600,7 +636,7 @@ Project tasks.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tasks
+TypeScriptProject.tasks
 
 ___
 
@@ -612,7 +648,7 @@ The directory in which tests reside.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.testdir
+TypeScriptProject.testdir
 
 ___
 
@@ -622,7 +658,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tsconfig
+TypeScriptProject.tsconfig
 
 ___
 
@@ -634,7 +670,7 @@ A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tsconfigDev
+TypeScriptProject.tsconfigDev
 
 ___
 
@@ -644,7 +680,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tsconfigEslint
+TypeScriptProject.tsconfigEslint
 
 ___
 
@@ -656,7 +692,7 @@ The upgrade workflow.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.upgradeWorkflow
+TypeScriptProject.upgradeWorkflow
 
 ___
 
@@ -670,7 +706,7 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.vscode
+TypeScriptProject.vscode
 
 ___
 
@@ -682,7 +718,7 @@ The "watch" task.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.watchTask
+TypeScriptProject.watchTask
 
 ___
 
@@ -692,7 +728,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.workflowBootstrapSteps
+TypeScriptProject.workflowBootstrapSteps
 
 ___
 
@@ -702,7 +738,19 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.workflowPackageCache
+TypeScriptProject.workflowPackageCache
+
+___
+
+### workspaceConfig
+
+• `Private` `Optional` `Readonly` **workspaceConfig**: [`WorkspaceConfig`](../interfaces/WorkspaceConfig.md)
+
+___
+
+### workspacePackages
+
+• `Private` `Readonly` **workspacePackages**: `string`[]
 
 ___
 
@@ -715,7 +763,7 @@ this task should synthesize the project files.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.DEFAULT\_TASK
+TypeScriptProject.DEFAULT\_TASK
 
 ___
 
@@ -725,7 +773,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+TypeScriptProject.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
 ## Accessors
 
@@ -743,7 +791,7 @@ use `package.allowLibraryDependencies`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.allowLibraryDependencies
+TypeScriptProject.allowLibraryDependencies
 
 ___
 
@@ -757,7 +805,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.buildTask
+TypeScriptProject.buildTask
 
 ___
 
@@ -773,7 +821,7 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.buildWorkflowJobId
+TypeScriptProject.buildWorkflowJobId
 
 ___
 
@@ -787,7 +835,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.compileTask
+TypeScriptProject.compileTask
 
 ___
 
@@ -803,7 +851,7 @@ Returns all the components within this project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.components
+TypeScriptProject.components
 
 ___
 
@@ -819,7 +867,7 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.ejected
+TypeScriptProject.ejected
 
 ___
 
@@ -837,7 +885,7 @@ use `package.entrypoint`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.entrypoint
+TypeScriptProject.entrypoint
 
 ___
 
@@ -853,7 +901,7 @@ All files in this project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.files
+TypeScriptProject.files
 
 ___
 
@@ -871,7 +919,7 @@ use `package.addField(x, y)`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.manifest
+TypeScriptProject.manifest
 
 ___
 
@@ -887,7 +935,7 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.maxNodeVersion
+TypeScriptProject.maxNodeVersion
 
 ___
 
@@ -903,7 +951,7 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.minNodeVersion
+TypeScriptProject.minNodeVersion
 
 ___
 
@@ -919,23 +967,23 @@ The .npmrc file
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.npmrc
+TypeScriptProject.npmrc
 
 ___
 
 ### nx
 
-• `get` **nx**(): `NxWorkspace`
+• `get` **nx**(): [`NxWorkspace`](NxWorkspace.md)
+
+Return the NxWorkspace instance. This should be implemented using a getter.
 
 #### Returns
 
-`NxWorkspace`
+[`NxWorkspace`](NxWorkspace.md)
 
-**`Inherit Doc`**
+#### Implementation of
 
-#### Inherited from
-
-monorepo.MonorepoTsProject.nx
+[INxProjectCore](../interfaces/INxProjectCore.md).[nx](../interfaces/INxProjectCore.md#nx)
 
 ___
 
@@ -955,7 +1003,7 @@ use `package.packageManager`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.packageManager
+TypeScriptProject.packageManager
 
 ___
 
@@ -969,7 +1017,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.packageTask
+TypeScriptProject.packageTask
 
 ___
 
@@ -983,7 +1031,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.postCompileTask
+TypeScriptProject.postCompileTask
 
 ___
 
@@ -997,7 +1045,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.preCompileTask
+TypeScriptProject.preCompileTask
 
 ___
 
@@ -1013,7 +1061,7 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.projenCommand
+TypeScriptProject.projenCommand
 
 ___
 
@@ -1029,7 +1077,7 @@ The root project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.root
+TypeScriptProject.root
 
 ___
 
@@ -1042,10 +1090,6 @@ Get consistently sorted list of subprojects
 #### Returns
 
 `Project`[]
-
-#### Inherited from
-
-monorepo.MonorepoTsProject.sortedSubProjects
 
 ___
 
@@ -1061,7 +1105,7 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.subprojects
+TypeScriptProject.subprojects
 
 ___
 
@@ -1075,19 +1119,9 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.testTask
+TypeScriptProject.testTask
 
 ## Methods
-
-### addAndEditTasks
-
-▸ **addAndEditTasks**(): `void`
-
-#### Returns
-
-`void`
-
-___
 
 ### addBins
 
@@ -1105,7 +1139,7 @@ ___
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addBins
+TypeScriptProject.addBins
 
 ___
 
@@ -1130,7 +1164,7 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addBundledDeps
+TypeScriptProject.addBundledDeps
 
 ___
 
@@ -1156,7 +1190,7 @@ use `project.compileTask.exec()`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addCompileCommand
+TypeScriptProject.addCompileCommand
 
 ___
 
@@ -1178,7 +1212,7 @@ Defines normal dependencies.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addDeps
+TypeScriptProject.addDeps
 
 ___
 
@@ -1200,7 +1234,7 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addDevDeps
+TypeScriptProject.addDevDeps
 
 ___
 
@@ -1223,7 +1257,7 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addExcludeFromCleanup
+TypeScriptProject.addExcludeFromCleanup
 
 ___
 
@@ -1245,7 +1279,7 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addFields
+TypeScriptProject.addFields
 
 ___
 
@@ -1267,7 +1301,7 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addGitIgnore
+TypeScriptProject.addGitIgnore
 
 ___
 
@@ -1275,22 +1309,28 @@ ___
 
 ▸ **addImplicitDependency**(`dependent`, `dependee`): `void`
 
+Create an implicit dependency between two Projects. This is typically
+used in polygot repos where a Typescript project wants a build dependency
+on a Python project as an example.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dependent` | `Project` |
-| `dependee` | `string` \| `Project` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `dependent` | `Project` | project you want to have the dependency. |
+| `dependee` | `string` \| `Project` | project you wish to depend on. |
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+**`Throws`**
 
-#### Inherited from
+error if this is called on a dependent which does not have a NXProject component attached.
 
-monorepo.MonorepoTsProject.addImplicitDependency
+#### Implementation of
+
+[INxProjectCore](../interfaces/INxProjectCore.md).[addImplicitDependency](../interfaces/INxProjectCore.md#addimplicitdependency)
 
 ___
 
@@ -1298,22 +1338,22 @@ ___
 
 ▸ **addJavaDependency**(`dependent`, `dependee`): `void`
 
+Adds a dependency between two Java Projects in the monorepo.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dependent` | `JavaProject` |
-| `dependee` | `JavaProject` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `dependent` | `JavaProject` | project you want to have the dependency |
+| `dependee` | `JavaProject` | project you wish to depend on |
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+#### Implementation of
 
-#### Inherited from
-
-monorepo.MonorepoTsProject.addJavaDependency
+[INxProjectCore](../interfaces/INxProjectCore.md).[addJavaDependency](../interfaces/INxProjectCore.md#addjavadependency)
 
 ___
 
@@ -1335,7 +1375,7 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addKeywords
+TypeScriptProject.addKeywords
 
 ___
 
@@ -1343,22 +1383,22 @@ ___
 
 ▸ **addNxRunManyTask**(`name`, `options`): `Task`
 
+Add project task that executes `npx nx run-many ...` style command.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `options` | `RunManyOptions` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | task name |
+| `options` | `RunManyOptions` | options |
 
 #### Returns
 
 `Task`
 
-**`Inherit Doc`**
+#### Implementation of
 
-#### Inherited from
-
-monorepo.MonorepoTsProject.addNxRunManyTask
+[INxProjectCore](../interfaces/INxProjectCore.md).[addNxRunManyTask](../interfaces/INxProjectCore.md#addnxrunmanytask)
 
 ___
 
@@ -1384,7 +1424,7 @@ If you are having trouble getting an ignore to populate, try using your construc
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addPackageIgnore
+TypeScriptProject.addPackageIgnore
 
 ___
 
@@ -1410,7 +1450,7 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addPeerDeps
+TypeScriptProject.addPeerDeps
 
 ___
 
@@ -1418,22 +1458,26 @@ ___
 
 ▸ **addPythonPoetryDependency**(`dependent`, `dependee`): `void`
 
+Adds a dependency between two Python Projects in the monorepo. The dependent must have Poetry enabled.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `dependent` | `PythonProject` |
-| `dependee` | `PythonProject` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `dependent` | `PythonProject` | project you want to have the dependency (must be a Poetry Python Project) |
+| `dependee` | `PythonProject` | project you wish to depend on |
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+**`Throws`**
 
-#### Inherited from
+error if the dependent does not have Poetry enabled
 
-monorepo.MonorepoTsProject.addPythonPoetryDependency
+#### Implementation of
+
+[INxProjectCore](../interfaces/INxProjectCore.md).[addPythonPoetryDependency](../interfaces/INxProjectCore.md#addpythonpoetrydependency)
 
 ___
 
@@ -1455,7 +1499,7 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addScripts
+TypeScriptProject.addScripts
 
 ___
 
@@ -1479,7 +1523,7 @@ a task with this name.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addTask
+TypeScriptProject.addTask
 
 ___
 
@@ -1505,7 +1549,7 @@ use `project.testTask.exec()`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addTestCommand
+TypeScriptProject.addTestCommand
 
 ___
 
@@ -1531,7 +1575,7 @@ Prints a "tip" message during synthesis.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.addTip
+TypeScriptProject.addTip
 
 ___
 
@@ -1550,10 +1594,6 @@ Add one or more additional package globs to the workspace.
 #### Returns
 
 `void`
-
-#### Inherited from
-
-monorepo.MonorepoTsProject.addWorkspacePackages
 
 ___
 
@@ -1581,13 +1621,15 @@ https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.annotateGenerated
+TypeScriptProject.annotateGenerated
 
 ___
 
 ### composeNxRunManyCommand
 
 ▸ **composeNxRunManyCommand**(`options`): `string`[]
+
+Helper to format `npx nx run-many ...` style command
 
 #### Parameters
 
@@ -1599,17 +1641,29 @@ ___
 
 `string`[]
 
-**`Inherit Doc`**
+#### Implementation of
 
-#### Inherited from
+[INxProjectCore](../interfaces/INxProjectCore.md).[composeNxRunManyCommand](../interfaces/INxProjectCore.md#composenxrunmanycommand)
 
-monorepo.MonorepoTsProject.composeNxRunManyCommand
+___
+
+### disableNodeWarnings
+
+▸ **disableNodeWarnings**(): `void`
+
+Suppress Node warnings from being presented in the console when running builds.
+
+#### Returns
+
+`void`
 
 ___
 
 ### execNxRunManyCommand
 
 ▸ **execNxRunManyCommand**(`options`): `string`
+
+Helper to format `npx nx run-many ...` style command execution in package manager.
 
 #### Parameters
 
@@ -1621,11 +1675,9 @@ ___
 
 `string`
 
-**`Inherit Doc`**
+#### Implementation of
 
-#### Inherited from
-
-monorepo.MonorepoTsProject.execNxRunManyCommand
+[INxProjectCore](../interfaces/INxProjectCore.md).[execNxRunManyCommand](../interfaces/INxProjectCore.md#execnxrunmanycommand)
 
 ___
 
@@ -1651,7 +1703,19 @@ Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.hasScript
+TypeScriptProject.hasScript
+
+___
+
+### installNonNodeDependencies
+
+▸ **installNonNodeDependencies**(): `void`
+
+Ensures the install task for non-node projects is executed postinstall.
+
+#### Returns
+
+`void`
 
 ___
 
@@ -1666,10 +1730,6 @@ way as consumers of the packages have when installing from the registry.
 
 `void`
 
-#### Inherited from
-
-monorepo.MonorepoTsProject.linkLocalWorkspaceBins
-
 ___
 
 ### postSynthesize
@@ -1682,9 +1742,9 @@ ___
 
 **`Inherit Doc`**
 
-#### Inherited from
+#### Overrides
 
-monorepo.MonorepoTsProject.postSynthesize
+TypeScriptProject.postSynthesize
 
 ___
 
@@ -1698,7 +1758,7 @@ ___
 
 #### Overrides
 
-monorepo.MonorepoTsProject.preSynthesize
+TypeScriptProject.preSynthesize
 
 ___
 
@@ -1720,7 +1780,7 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.removeScript
+TypeScriptProject.removeScript
 
 ___
 
@@ -1744,19 +1804,7 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.removeTask
-
-___
-
-### removeUnneededPackages
-
-▸ **removeUnneededPackages**(): `void`
-
-PDK is one big package, and monorepo doesn't need these
-
-#### Returns
-
-`void`
+TypeScriptProject.removeTask
 
 ___
 
@@ -1781,7 +1829,31 @@ Job steps
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.renderWorkflowSetup
+TypeScriptProject.renderWorkflowSetup
+
+___
+
+### resolveLocalBunDependencies
+
+▸ **resolveLocalBunDependencies**(): `void`
+
+Resolve all local workspace dependencies to keep bun happy.
+
+#### Returns
+
+`void`
+
+___
+
+### resolveSubNodeProjects
+
+▸ **resolveSubNodeProjects**(): `void`
+
+Resolve sub `NodePackage` dependencies.
+
+#### Returns
+
+`void`
 
 ___
 
@@ -1804,7 +1876,7 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.runTaskCommand
+TypeScriptProject.runTaskCommand
 
 ___
 
@@ -1827,7 +1899,7 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.setScript
+TypeScriptProject.setScript
 
 ___
 
@@ -1841,9 +1913,9 @@ ___
 
 **`Inherit Doc`**
 
-#### Inherited from
+#### Overrides
 
-monorepo.MonorepoTsProject.synth
+TypeScriptProject.synth
 
 ___
 
@@ -1859,7 +1931,7 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.toString
+TypeScriptProject.toString
 
 ___
 
@@ -1884,7 +1956,7 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tryFindFile
+TypeScriptProject.tryFindFile
 
 ___
 
@@ -1910,7 +1982,7 @@ use `tryFindObjectFile`
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tryFindJsonFile
+TypeScriptProject.tryFindJsonFile
 
 ___
 
@@ -1932,7 +2004,7 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tryFindObjectFile
+TypeScriptProject.tryFindObjectFile
 
 ___
 
@@ -1958,7 +2030,31 @@ the file was not found.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.tryRemoveFile
+TypeScriptProject.tryRemoveFile
+
+___
+
+### updateWorkspace
+
+▸ **updateWorkspace**(): `void`
+
+Add a submodule entry to the appropriate workspace file.
+
+#### Returns
+
+`void`
+
+___
+
+### validateSubProjects
+
+▸ **validateSubProjects**(): `void`
+
+Ensures subprojects don't have a default task and that all packages use the same package manager.
+
+#### Returns
+
+`void`
 
 ___
 
@@ -1996,7 +2092,7 @@ true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.isConstruct
+TypeScriptProject.isConstruct
 
 ___
 
@@ -2018,7 +2114,7 @@ x is Project
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.isProject
+TypeScriptProject.isProject
 
 ___
 
@@ -2045,4 +2141,4 @@ when no project is found in the path to the root
 
 #### Inherited from
 
-monorepo.MonorepoTsProject.of
+TypeScriptProject.of
