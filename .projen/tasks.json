@@ -188,6 +188,12 @@
       "steps": [
         {
           "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail"
+        },
+        {
+          "exec": "pnpm i --no-frozen-lockfile"
+        },
+        {
+          "spawn": "default"
         }
       ]
     },

@@ -76,6 +76,8 @@ export class NxMonorepoProject extends MonorepoTsProject {
                     target: "upgrade",
                 }),
             );
+            postUpgradeTask.exec(this.package.installAndUpdateLockfileCommand);
+            if (defaultTask) postUpgradeTask.spawn(defaultTask);
         }
     }
 
