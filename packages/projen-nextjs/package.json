@@ -65,9 +65,9 @@
     "typescript": "^5.4.3"
   },
   "peerDependencies": {
-    "constructs": "^10.3.0",
+    "constructs": "10.3.0",
     "next": ">=13.5.6",
-    "projen": "^0.80.15"
+    "projen": "0.80.15"
   },
   "keywords": [
     "config",

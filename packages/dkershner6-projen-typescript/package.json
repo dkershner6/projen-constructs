@@ -65,8 +65,8 @@
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
-    "projen": "^0.80.15"
+    "constructs": "10.3.0",
+    "projen": "0.80.15"
   },
   "keywords": [
     "config",

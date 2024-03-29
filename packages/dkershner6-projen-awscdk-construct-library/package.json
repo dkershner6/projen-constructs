@@ -66,9 +66,9 @@
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
+    "constructs": "10.3.0",
     "dkershner6-projen-typescript": "^0.x",
-    "projen": "^0.80.15"
+    "projen": "0.80.15"
   },
   "keywords": [
     "awscdk",
