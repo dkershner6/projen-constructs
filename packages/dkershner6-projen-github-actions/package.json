@@ -57,7 +57,7 @@
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.5",
-    "projen": "0.80.14",
+    "projen": "0.80.15",
     "projen-github-action-typescript": "0.0.395",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
@@ -67,9 +67,9 @@
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
-    "constructs": "^10.3.0",
+    "constructs": "10.3.0",
     "dkershner6-projen-typescript": "^0.x",
-    "projen": "^0.80.14",
+    "projen": "0.80.15",
     "projen-github-action-typescript": "^0.0.395"
   },
   "keywords": [

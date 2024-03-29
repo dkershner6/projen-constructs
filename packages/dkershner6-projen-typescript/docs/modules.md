@@ -44,7 +44,7 @@
 
 ### CONSTRUCTS\_VERSION
 
-• `Const` **CONSTRUCTS\_VERSION**: ``"^10.3.0"``
+• `Const` **CONSTRUCTS\_VERSION**: ``"10.3.0"``
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 ### PROJEN\_VERSION
 
-• `Const` **PROJEN\_VERSION**: ``"^0.80.14"``
+• `Const` **PROJEN\_VERSION**: ``"0.80.15"``
 
 ___
 
