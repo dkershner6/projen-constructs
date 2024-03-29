@@ -187,7 +187,7 @@
       "description": "Runs after upgrading dependencies",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
