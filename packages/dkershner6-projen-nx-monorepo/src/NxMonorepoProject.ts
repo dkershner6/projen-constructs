@@ -71,7 +71,7 @@ export class NxMonorepoProject extends MonorepoTsProject {
 
         const postUpgradeTask = this.tasks.tryFind("post-upgrade");
         if (postUpgradeTask) {
-            postUpgradeTask.reset(
+            postUpgradeTask.exec(
                 this.execNxRunManyCommand({
                     target: "upgrade",
                     parallel: 1, // Otherwise package manager can be updating lock file two at once, which is bad
