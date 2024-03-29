@@ -74,6 +74,7 @@ export class NxMonorepoProject extends MonorepoTsProject {
             postUpgradeTask.reset(
                 this.execNxRunManyCommand({
                     target: "upgrade",
+                    parallel: 1, // Otherwise package manager can be updating lock file two at once, which is bad
                 }),
             );
             postUpgradeTask.exec(this.package.installAndUpdateLockfileCommand);
