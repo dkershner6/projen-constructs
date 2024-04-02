@@ -22,7 +22,6 @@ Configures common NX related tasks and methods.
 
 ### Properties
 
-- [licenseOptions](NxConfigurator.md#licenseoptions)
 - [node](NxConfigurator.md#node)
 - [nx](NxConfigurator.md#nx)
 - [nxPlugins](NxConfigurator.md#nxplugins)
@@ -30,7 +29,6 @@ Configures common NX related tasks and methods.
 
 ### Methods
 
-- [\_addLicenses](NxConfigurator.md#_addlicenses)
 - [\_invokeInstallCITasks](NxConfigurator.md#_invokeinstallcitasks)
 - [addImplicitDependency](NxConfigurator.md#addimplicitdependency)
 - [addJavaDependency](NxConfigurator.md#addjavadependency)
@@ -72,12 +70,6 @@ Configures common NX related tasks and methods.
 Component.constructor
 
 ## Properties
-
-### licenseOptions
-
-• `Private` `Optional` `Readonly` **licenseOptions**: [`LicenseOptions`](../interfaces/LicenseOptions.md)
-
-___
 
 ### node
 
@@ -122,18 +114,6 @@ ___
 Component.project
 
 ## Methods
-
-### \_addLicenses
-
-▸ **_addLicenses**(): `void`
-
-Add licenses to any subprojects which don't already have a license.
-
-#### Returns
-
-`void`
-
-___
 
 ### \_invokeInstallCITasks
 
