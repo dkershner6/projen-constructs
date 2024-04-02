@@ -73,7 +73,6 @@ Configuration options for the MonorepoTsProject.
 - [keywords](MonorepoTsProjectOptions.md#keywords)
 - [libdir](MonorepoTsProjectOptions.md#libdir)
 - [license](MonorepoTsProjectOptions.md#license)
-- [licenseOptions](MonorepoTsProjectOptions.md#licenseoptions)
 - [licensed](MonorepoTsProjectOptions.md#licensed)
 - [logging](MonorepoTsProjectOptions.md#logging)
 - [majorVersion](MonorepoTsProjectOptions.md#majorversion)
@@ -1163,20 +1162,6 @@ Use the `licensed` option if you want to no license to be specified.
 #### Inherited from
 
 TypeScriptProjectOptions.license
-
-___
-
-### licenseOptions
-
-• `Optional` `Readonly` **licenseOptions**: [`LicenseOptions`](LicenseOptions.md)
-
-Default license to apply to all PDK managed packages.
-
-**`Default`**
-
-```ts
-Apache-2.0
-```
 
 ___
 

@@ -21,7 +21,6 @@
 ### Interfaces
 
 - [INxProjectCore](interfaces/INxProjectCore.md)
-- [LicenseOptions](interfaces/LicenseOptions.md)
 - [MonorepoTsProjectOptions](interfaces/MonorepoTsProjectOptions.md)
 - [NxConfiguratorOptions](interfaces/NxConfiguratorOptions.md)
 - [NxMonorepoProjectOptions](interfaces/NxMonorepoProjectOptions.md)

@@ -71,7 +71,6 @@ Configuration options for the MonorepoTsProject.
 - [keywords](NxMonorepoProjectOptions.md#keywords)
 - [libdir](NxMonorepoProjectOptions.md#libdir)
 - [license](NxMonorepoProjectOptions.md#license)
-- [licenseOptions](NxMonorepoProjectOptions.md#licenseoptions)
 - [licensed](NxMonorepoProjectOptions.md#licensed)
 - [logging](NxMonorepoProjectOptions.md#logging)
 - [majorVersion](NxMonorepoProjectOptions.md#majorversion)
@@ -1165,24 +1164,6 @@ Use the `licensed` option if you want to no license to be specified.
 #### Inherited from
 
 [MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[license](MonorepoTsProjectOptions.md#license)
-
-___
-
-### licenseOptions
-
-• `Optional` `Readonly` **licenseOptions**: [`LicenseOptions`](LicenseOptions.md)
-
-Default license to apply to all PDK managed packages.
-
-**`Default`**
-
-```ts
-Apache-2.0
-```
-
-#### Inherited from
-
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[licenseOptions](MonorepoTsProjectOptions.md#licenseoptions)
 
 ___
 
