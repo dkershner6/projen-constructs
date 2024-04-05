@@ -29,6 +29,7 @@
 - [bugsEmail](Node20AwsCdkConstructLibraryOptions.md#bugsemail)
 - [bugsUrl](Node20AwsCdkConstructLibraryOptions.md#bugsurl)
 - [buildWorkflow](Node20AwsCdkConstructLibraryOptions.md#buildworkflow)
+- [buildWorkflowOptions](Node20AwsCdkConstructLibraryOptions.md#buildworkflowoptions)
 - [buildWorkflowTriggers](Node20AwsCdkConstructLibraryOptions.md#buildworkflowtriggers)
 - [bundledDeps](Node20AwsCdkConstructLibraryOptions.md#bundleddeps)
 - [bundlerOptions](Node20AwsCdkConstructLibraryOptions.md#bundleroptions)
@@ -464,6 +465,18 @@ AwsCdkConstructLibraryOptions.buildWorkflow
 
 ___
 
+### buildWorkflowOptions
+
+• `Optional` `Readonly` **buildWorkflowOptions**: `BuildWorkflowOptions`
+
+Options for PR build workflow.
+
+#### Inherited from
+
+AwsCdkConstructLibraryOptions.buildWorkflowOptions
+
+___
+
 ### buildWorkflowTriggers
 
 • `Optional` `Readonly` **buildWorkflowTriggers**: `Triggers`
@@ -475,6 +488,10 @@ Build workflow triggers
 ```ts
 "{ pullRequest: {}, workflowDispatch: {} }"
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.workflowTriggers`
 
 #### Inherited from
 
@@ -1821,6 +1838,10 @@ Implies that PR builds do not have anti-tamper checks.
 ```ts
 true
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.mutableBuild`
 
 #### Inherited from
 

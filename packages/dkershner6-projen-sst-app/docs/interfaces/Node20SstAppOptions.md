@@ -30,6 +30,7 @@
 - [bugsUrl](Node20SstAppOptions.md#bugsurl)
 - [buildCommand](Node20SstAppOptions.md#buildcommand)
 - [buildWorkflow](Node20SstAppOptions.md#buildworkflow)
+- [buildWorkflowOptions](Node20SstAppOptions.md#buildworkflowoptions)
 - [buildWorkflowTriggers](Node20SstAppOptions.md#buildworkflowtriggers)
 - [bundledDeps](Node20SstAppOptions.md#bundleddeps)
 - [bundlerOptions](Node20SstAppOptions.md#bundleroptions)
@@ -482,6 +483,18 @@ SstTypescriptAppOptions.buildWorkflow
 
 ___
 
+### buildWorkflowOptions
+
+• `Optional` `Readonly` **buildWorkflowOptions**: `BuildWorkflowOptions`
+
+Options for PR build workflow.
+
+#### Inherited from
+
+SstTypescriptAppOptions.buildWorkflowOptions
+
+___
+
 ### buildWorkflowTriggers
 
 • `Optional` `Readonly` **buildWorkflowTriggers**: `Triggers`
@@ -493,6 +506,10 @@ Build workflow triggers
 ```ts
 "{ pullRequest: {}, workflowDispatch: {} }"
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.workflowTriggers`
 
 #### Inherited from
 
@@ -1739,6 +1756,10 @@ Implies that PR builds do not have anti-tamper checks.
 ```ts
 true
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.mutableBuild`
 
 #### Inherited from
 

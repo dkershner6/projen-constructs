@@ -51,22 +51,22 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-sonarjs": "^0.25.0",
+    "eslint-plugin-sonarjs": "^0.25.1",
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.2.5",
-    "projen": "0.80.15",
+    "projen": "0.80.19",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
     "typedoc": "^0.25.12",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "peerDependencies": {
     "clone-deep": "^4.0.1",
     "constructs": "10.3.0",
-    "projen": "0.80.15"
+    "projen": "0.80.19"
   },
   "keywords": [
     "config",

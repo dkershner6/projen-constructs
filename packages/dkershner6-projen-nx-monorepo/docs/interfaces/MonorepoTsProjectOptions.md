@@ -31,6 +31,7 @@ Configuration options for the MonorepoTsProject.
 - [bugsEmail](MonorepoTsProjectOptions.md#bugsemail)
 - [bugsUrl](MonorepoTsProjectOptions.md#bugsurl)
 - [buildWorkflow](MonorepoTsProjectOptions.md#buildworkflow)
+- [buildWorkflowOptions](MonorepoTsProjectOptions.md#buildworkflowoptions)
 - [buildWorkflowTriggers](MonorepoTsProjectOptions.md#buildworkflowtriggers)
 - [bundledDeps](MonorepoTsProjectOptions.md#bundleddeps)
 - [bundlerOptions](MonorepoTsProjectOptions.md#bundleroptions)
@@ -403,6 +404,18 @@ TypeScriptProjectOptions.buildWorkflow
 
 ___
 
+### buildWorkflowOptions
+
+• `Optional` `Readonly` **buildWorkflowOptions**: `BuildWorkflowOptions`
+
+Options for PR build workflow.
+
+#### Inherited from
+
+TypeScriptProjectOptions.buildWorkflowOptions
+
+___
+
 ### buildWorkflowTriggers
 
 • `Optional` `Readonly` **buildWorkflowTriggers**: `Triggers`
@@ -414,6 +427,10 @@ Build workflow triggers
 ```ts
 "{ pullRequest: {}, workflowDispatch: {} }"
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.workflowTriggers`
 
 #### Inherited from
 
@@ -1340,6 +1357,10 @@ Implies that PR builds do not have anti-tamper checks.
 ```ts
 true
 ```
+
+**`Deprecated`**
+
+- Use `buildWorkflowOptions.mutableBuild`
 
 #### Inherited from
 
