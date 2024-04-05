@@ -62,7 +62,7 @@ ___
 
 ### PROJEN\_VERSION
 
-• `Const` **PROJEN\_VERSION**: ``"0.80.15"``
+• `Const` **PROJEN\_VERSION**: ``"0.80.19"``
 
 ___
 
