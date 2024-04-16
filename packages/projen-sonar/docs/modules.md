@@ -22,13 +22,14 @@
 
 ### buildSonarQualityScanJobStep
 
-▸ **buildSonarQualityScanJobStep**(`jobStepConfig?`): `JobStep`
+▸ **buildSonarQualityScanJobStep**(`jobStepConfig?`, `actionVersion?`): `JobStep`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `jobStepConfig?` | `JobStepConfiguration` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `jobStepConfig?` | `JobStepConfiguration` | `undefined` |
+| `actionVersion` | `string` | `"v1.2.0"` |
 
 #### Returns
 

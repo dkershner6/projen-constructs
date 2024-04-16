@@ -6,15 +6,24 @@
 
 ### Properties
 
+- [actionVersion](SonarFullQualityScanWorkflowOptions.md#actionversion)
 - [branches](SonarFullQualityScanWorkflowOptions.md#branches)
 - [jobConfig](SonarFullQualityScanWorkflowOptions.md#jobconfig)
 - [workflowOptions](SonarFullQualityScanWorkflowOptions.md#workflowoptions)
 
 ## Properties
 
+### actionVersion
+
+• `Optional` `Readonly` **actionVersion**: `string`
+
+The version of the Sonar Quality Scan action to use.
+
+___
+
 ### branches
 
-• `Optional` **branches**: `string`[]
+• `Optional` `Readonly` **branches**: `string`[]
 
 The branches to run the workflow on (push).
 
@@ -22,7 +31,7 @@ ___
 
 ### jobConfig
 
-• `Optional` **jobConfig**: `Partial`\<`Job`\>
+• `Optional` `Readonly` **jobConfig**: `Partial`\<`Job`\>
 
 The job configuration for the Sonar Quality Scan job.
 
@@ -36,4 +45,4 @@ ___
 
 ### workflowOptions
 
-• `Optional` **workflowOptions**: `GithubWorkflowOptions`
+• `Optional` `Readonly` **workflowOptions**: `GithubWorkflowOptions`
