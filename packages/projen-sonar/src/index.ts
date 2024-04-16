@@ -20,6 +20,7 @@ import { NodeProject } from "projen/lib/javascript";
 
 export const buildSonarQualityScanJobStep = (
     jobStepConfig?: JobStepConfiguration,
+    actionVersion = "v1.2.0",
 ): JobStep => ({
     ...(jobStepConfig ?? {}),
     name: jobStepConfig?.name ?? "Sonar Quality Scan",
@@ -29,7 +30,7 @@ export const buildSonarQualityScanJobStep = (
         SONAR_HOST_URL: "${{ secrets.SONAR_HOST_URL }}",
         ...(jobStepConfig?.env ?? {}),
     },
-    uses: "sonarsource/sonarqube-scan-action@master",
+    uses: `sonarsource/sonarqube-scan-action@${actionVersion}`,
 });
 
 export class SonarPropertiesFile extends Component {
@@ -109,18 +110,23 @@ export class SonarPropertiesFile extends Component {
 
 export interface SonarFullQualityScanWorkflowOptions {
     /**
+     * The version of the Sonar Quality Scan action to use.
+     */
+    readonly actionVersion?: string;
+
+    /**
      * The branches to run the workflow on (push).
      */
-    branches?: string[];
+    readonly branches?: string[];
 
     /**
      * The job configuration for the Sonar Quality Scan job.
      *
      * @default Same as the build job
      */
-    jobConfig?: Partial<Job>;
+    readonly jobConfig?: Partial<Job>;
 
-    workflowOptions?: GithubWorkflowOptions;
+    readonly workflowOptions?: GithubWorkflowOptions;
 }
 
 /**
@@ -184,7 +190,10 @@ export class SonarFullQualityScanWorkflow extends Component {
                         name: "Build",
                         run: project.runTaskCommand(project.buildTask),
                     },
-                    buildSonarQualityScanJobStep(),
+                    buildSonarQualityScanJobStep(
+                        options?.jobConfig,
+                        options?.actionVersion,
+                    ),
                 ],
                 ...(options?.jobConfig ?? {}),
             });
@@ -193,7 +202,13 @@ export class SonarFullQualityScanWorkflow extends Component {
 }
 
 export class SonarBuildWorkflowPatch extends Component {
-    constructor(project: Project) {
+    constructor(
+        project: Project,
+        options?: Pick<
+            SonarFullQualityScanWorkflowOptions,
+            "actionVersion" | "jobConfig"
+        >,
+    ) {
         super(project);
 
         const buildWorkflowFile = project.tryFindObjectFile(
@@ -211,7 +226,10 @@ export class SonarBuildWorkflowPatch extends Component {
             );
 
             const { continueOnError, ...restOfStep } =
-                buildSonarQualityScanJobStep();
+                buildSonarQualityScanJobStep(
+                    options?.jobConfig,
+                    options?.actionVersion,
+                );
             buildWorkflowFile.addToArray("jobs.build.steps", {
                 ...restOfStep,
                 "continue-on-error": continueOnError,

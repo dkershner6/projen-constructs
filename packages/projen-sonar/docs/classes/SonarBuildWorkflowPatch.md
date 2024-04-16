@@ -32,13 +32,14 @@
 
 ### constructor
 
-• **new SonarBuildWorkflowPatch**(`project`): [`SonarBuildWorkflowPatch`](SonarBuildWorkflowPatch.md)
+• **new SonarBuildWorkflowPatch**(`project`, `options?`): [`SonarBuildWorkflowPatch`](SonarBuildWorkflowPatch.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `project` | `Project` |
+| `options?` | `Pick`\<[`SonarFullQualityScanWorkflowOptions`](../interfaces/SonarFullQualityScanWorkflowOptions.md), ``"jobConfig"`` \| ``"actionVersion"``\> |
 
 #### Returns
 
