@@ -4,7 +4,12 @@
     "cspell-readonly.json"
   ],
   "words": [
+    "cacheable",
     "devlop",
-    "libdir"
+    "libdir",
+    "responselike",
+    "sindresorhus",
+    "strtok",
+    "szmarczak"
   ]
 }
