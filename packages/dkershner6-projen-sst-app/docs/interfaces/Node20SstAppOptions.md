@@ -770,7 +770,7 @@ ___
 • `Optional` `Readonly` **codeCov**: `boolean`
 
 Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/
-Uses codecov/codecov-action@v3
+Uses codecov/codecov-action@v4
 A secret is required for private repos. Configured with `@codeCovTokenSecret`
 
 **`Default`**
@@ -2250,7 +2250,7 @@ Indicates of "projen" should be installed as a devDependency.
 **`Default`**
 
 ```ts
-true
+- true if not a subproject
 ```
 
 #### Inherited from

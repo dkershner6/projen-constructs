@@ -29,7 +29,7 @@
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `jobStepConfig?` | `JobStepConfiguration` | `undefined` |
-| `actionVersion` | `string` | `"v1.2.0"` |
+| `actionVersion` | `string` | `"v2.0.2"` |
 
 #### Returns
 
