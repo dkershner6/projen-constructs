@@ -81,7 +81,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
-export const PROJEN_VERSION = "0.80.19";
+export const PROJEN_VERSION = "0.81.5";
 export const CONSTRUCTS_VERSION = "10.3.0";
 
 export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {

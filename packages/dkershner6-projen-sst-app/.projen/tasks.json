@@ -138,7 +138,7 @@
           "exec": "mkdir -p dist/js"
         },
         {
-          "exec": "mv $(pnpm pack) dist/js/"
+          "exec": "pnpm pack --pack-destination dist/js"
         }
       ]
     },
@@ -294,7 +294,7 @@
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit jest-mock prettier projen standard-version ts-jest typedoc typedoc-plugin-markdown typescript dkershner6-projen-awscdk-core dkershner6-projen-typescript projen-sst"
+          "exec": "pnpm update @cspell/eslint-plugin @types/clone-deep @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser clone-deep constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-jest eslint-plugin-prettier eslint-plugin-sonarjs eslint jest jest-junit jest-mock prettier standard-version ts-jest typedoc typedoc-plugin-markdown typescript dkershner6-projen-awscdk-core dkershner6-projen-typescript projen-sst projen"
         },
         {
           "exec": "npx projen"
