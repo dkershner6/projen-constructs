@@ -20,7 +20,7 @@ import { NodeProject } from "projen/lib/javascript";
 
 export const buildSonarQualityScanJobStep = (
     jobStepConfig?: JobStepConfiguration,
-    actionVersion = "master",
+    actionVersion = "v2.0.2",
 ): JobStep => ({
     ...(jobStepConfig ?? {}),
     name: jobStepConfig?.name ?? "Sonar Quality Scan",
