@@ -31,6 +31,26 @@
         }
       ]
     },
+    "ci": {
+      "name": "ci",
+      "steps": [
+        {
+          "spawn": "install:ci"
+        }
+      ]
+    },
+    "clean-compile": {
+      "name": "clean-compile",
+      "description": "Clean up the compiled output",
+      "steps": [
+        {
+          "exec": "rm -rf lib && rm -rf dist"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=clean-compile --output-style=stream --nx-bail"
+        }
+      ]
+    },
     "clean-modules": {
       "name": "clean-modules",
       "description": "Delete all node_modules folders",
@@ -115,7 +135,8 @@
           "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
           "receiveArgs": true
         }
-      ]
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "eslint:monorepo": {
       "name": "eslint:monorepo",
@@ -133,6 +154,14 @@
         {
           "exec": "pnpm exec nx graph",
           "receiveArgs": true
+        }
+      ]
+    },
+    "i": {
+      "name": "i",
+      "steps": [
+        {
+          "spawn": "install"
         }
       ]
     },
@@ -157,6 +186,19 @@
           "receiveArgs": true
         }
       ]
+    },
+    "lint": {
+      "name": "lint",
+      "description": "Alternate lint command",
+      "steps": [
+        {
+          "spawn": "eslint"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
+        }
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "package": {
       "name": "package",
@@ -222,10 +264,28 @@
       "description": "Run tests for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
-          "receiveArgs": true
+          "spawn": "eslint"
+        },
+        {
+          "spawn": "type-check"
+        },
+        {
+          "spawn": "test-unit"
         }
       ]
+    },
+    "test-unit": {
+      "name": "test-unit",
+      "steps": [
+        {
+          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
+          "receiveArgs": true
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
+        }
+      ],
+      "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "test:watch": {
       "name": "test:watch",
@@ -233,6 +293,17 @@
       "steps": [
         {
           "exec": "jest --watch"
+        }
+      ]
+    },
+    "type-check": {
+      "name": "type-check",
+      "steps": [
+        {
+          "exec": "tsc --noEmit"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail"
         }
       ]
     },

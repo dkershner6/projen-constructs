@@ -35,6 +35,7 @@ export class Node20MonorepoProject extends NxMonorepoProject {
         new DKTasks(this);
 
         for (const taskName of [
+            DKTaskName.CLEAN_COMPILE,
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,
