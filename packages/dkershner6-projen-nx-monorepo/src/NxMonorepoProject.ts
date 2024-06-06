@@ -12,8 +12,6 @@ export interface NxMonorepoProjectOptions extends MonorepoTsProjectOptions {
     readonly depsUpgradeOptions?: UpgradeDependenciesOptions;
 }
 
-/** In order to encourage upgrades to use the root */
-const SUBPROJECT_UPGRADE_TASK_NAME = "upgrade:subproject";
 const I_AM_MONOREPO_ENV = {
     I_AM_MONOREPO: "true",
 };
@@ -78,7 +76,7 @@ export class NxMonorepoProject extends MonorepoTsProject {
         const postUpgradeTask = this.tasks.tryFind("post-upgrade");
         if (postUpgradeTask) {
             const upgradeRunManyExec = this.execNxRunManyCommand({
-                target: SUBPROJECT_UPGRADE_TASK_NAME,
+                target: "upgrade",
                 parallel: 1, // Otherwise package manager can be updating lock file two at once, which is bad
             });
 
