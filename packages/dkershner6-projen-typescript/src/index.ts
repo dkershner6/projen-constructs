@@ -291,6 +291,7 @@ export class DKEslintConfig extends Component {
 }
 
 export enum DKTaskName {
+    CLEAN_COMPILE = "clean-compile",
     CI = "ci",
     I = "i",
     LINT = "lint",
@@ -344,8 +345,8 @@ export class DKTasks extends Component {
 
         // Compile
         const cleanCompileTask =
-            project.tasks.tryFind("clean-compile") ??
-            project.tasks.addTask("clean-compile", {
+            project.tasks.tryFind(DKTaskName.CLEAN_COMPILE) ??
+            project.tasks.addTask(DKTaskName.CLEAN_COMPILE, {
                 description: "Clean up the compiled output",
             });
         cleanCompileTask.exec(

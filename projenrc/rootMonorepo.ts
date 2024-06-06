@@ -9,6 +9,7 @@ import {
     DKEslintConfig,
     DKBugFixes,
     DKTaskName,
+    DKTasks,
 } from "../packages/dkershner6-projen-typescript/src";
 import { CSpell } from "../packages/projen-cspell/src";
 
@@ -40,8 +41,10 @@ export class RootMonorepo extends NxMonorepoProject {
 
         new DKBugFixes(this);
         new DKEslintConfig(this);
+        new DKTasks(this);
 
         for (const taskName of [
+            DKTaskName.CLEAN_COMPILE,
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,

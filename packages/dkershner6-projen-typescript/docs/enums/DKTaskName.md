@@ -7,6 +7,7 @@
 ### Enumeration Members
 
 - [CI](DKTaskName.md#ci)
+- [CLEAN\_COMPILE](DKTaskName.md#clean_compile)
 - [I](DKTaskName.md#i)
 - [LINT](DKTaskName.md#lint)
 - [TEST\_UNIT](DKTaskName.md#test_unit)
@@ -17,6 +18,12 @@
 ### CI
 
 • **CI** = ``"ci"``
+
+___
+
+### CLEAN\_COMPILE
+
+• **CLEAN\_COMPILE** = ``"clean-compile"``
 
 ___
 
