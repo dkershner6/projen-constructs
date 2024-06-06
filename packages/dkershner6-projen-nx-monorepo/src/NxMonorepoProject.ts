@@ -1,4 +1,3 @@
-import { DKTaskName } from "dkershner6-projen-typescript";
 import { javascript } from "projen";
 
 import {
