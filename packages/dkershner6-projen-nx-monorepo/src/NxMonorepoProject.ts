@@ -1,3 +1,4 @@
+import { DKTaskName } from "dkershner6-projen-typescript";
 import { javascript } from "projen";
 
 import {
@@ -109,16 +110,18 @@ export class NxMonorepoProject extends MonorepoTsProject {
             compileTask.description = "Compile all projects";
         }
 
-        this.addConditionalToSubprojectTasksThatShouldBeRunInRoot();
+        this.manageSubprojectTasksThatShouldBeRunInRoot();
     }
 
-    private addConditionalToSubprojectTasksThatShouldBeRunInRoot(): void {
+    private manageSubprojectTasksThatShouldBeRunInRoot(): void {
         for (const subproject of this.subprojects) {
-            const subprojectUpgradeTask = subproject.tasks.tryFind("upgrade");
-            if (subprojectUpgradeTask) {
-                subprojectUpgradeTask.addCondition(
-                    `if [ "$I_AM_MONOREPO" != "true" ] ; then echo "Please run upgrade from the root, or set env variable I_AM_MONOREPO=true to override this behavior" && exit 1 ; fi`,
-                );
+            for (const taskName of ["upgrade"]) {
+                const subprojectTask = subproject.tasks.tryFind(taskName);
+                if (subprojectTask) {
+                    subprojectTask.addCondition(
+                        `if [ "$I_AM_MONOREPO" != "true" ] ; then echo "Please run upgrade from the root, or set env variable I_AM_MONOREPO=true to override this behavior" && exit 1 ; fi`,
+                    );
+                }
             }
         }
     }
