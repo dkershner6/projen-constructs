@@ -12,6 +12,12 @@ export interface NxMonorepoProjectOptions extends MonorepoTsProjectOptions {
     readonly depsUpgradeOptions?: UpgradeDependenciesOptions;
 }
 
+/** In order to encourage upgrades to use the root */
+const SUBPROJECT_UPGRADE_TASK_NAME = "upgrade:subproject";
+const I_AM_MONOREPO_ENV = {
+    I_AM_MONOREPO: "true",
+};
+
 export class NxMonorepoProject extends MonorepoTsProject {
     constructor(options: NxMonorepoProjectOptions) {
         super(options);
@@ -46,7 +52,7 @@ export class NxMonorepoProject extends MonorepoTsProject {
         });
         buildTask?.spawn(postBuildTask);
 
-        const defaultTask = this.tasks.tryFind("default");
+        const defaultTask = this.defaultTask;
         if (defaultTask && buildTask) {
             buildTask.prependSpawn(defaultTask); // First
         }
@@ -71,12 +77,18 @@ export class NxMonorepoProject extends MonorepoTsProject {
 
         const postUpgradeTask = this.tasks.tryFind("post-upgrade");
         if (postUpgradeTask) {
-            postUpgradeTask.exec(
-                this.execNxRunManyCommand({
-                    target: "upgrade",
-                    parallel: 1, // Otherwise package manager can be updating lock file two at once, which is bad
-                }),
-            );
+            const upgradeRunManyExec = this.execNxRunManyCommand({
+                target: SUBPROJECT_UPGRADE_TASK_NAME,
+                parallel: 1, // Otherwise package manager can be updating lock file two at once, which is bad
+            });
+
+            postUpgradeTask.exec(upgradeRunManyExec, {
+                env: I_AM_MONOREPO_ENV,
+            });
+            postUpgradeTask.exec(upgradeRunManyExec, {
+                env: I_AM_MONOREPO_ENV,
+            }); // Upgrading twice can help with sticky peer dependencies
+
             postUpgradeTask.exec(this.package.installAndUpdateLockfileCommand);
             if (defaultTask) postUpgradeTask.spawn(defaultTask);
         }
@@ -97,6 +109,19 @@ export class NxMonorepoProject extends MonorepoTsProject {
             );
 
             compileTask.description = "Compile all projects";
+        }
+
+        this.addConditionalToSubprojectTasksThatShouldBeRunInRoot();
+    }
+
+    private addConditionalToSubprojectTasksThatShouldBeRunInRoot(): void {
+        for (const subproject of this.subprojects) {
+            const subprojectUpgradeTask = subproject.tasks.tryFind("upgrade");
+            if (subprojectUpgradeTask) {
+                subprojectUpgradeTask.addCondition(
+                    `if [ "$I_AM_MONOREPO" != "true" ] ; then echo "Please run upgrade from the root, or set env variable I_AM_MONOREPO=true to override this behavior" && exit 1 ; fi`,
+                );
+            }
         }
     }
 }

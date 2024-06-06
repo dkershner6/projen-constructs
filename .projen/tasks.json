@@ -229,7 +229,16 @@
       "description": "Runs after upgrading dependencies",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail"
+          "exec": "pnpm exec nx run-many --target=upgrade:subproject --output-style=stream --parallel=1 --nx-bail",
+          "env": {
+            "I_AM_MONOREPO": "true"
+          }
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=upgrade:subproject --output-style=stream --parallel=1 --nx-bail",
+          "env": {
+            "I_AM_MONOREPO": "true"
+          }
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
