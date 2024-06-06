@@ -127,6 +127,7 @@ monorepo-ts
 - [execNxRunManyCommand](NxMonorepoProject.md#execnxrunmanycommand)
 - [hasScript](NxMonorepoProject.md#hasscript)
 - [linkLocalWorkspaceBins](NxMonorepoProject.md#linklocalworkspacebins)
+- [manageSubprojectTasksThatShouldBeRunInRoot](NxMonorepoProject.md#managesubprojecttasksthatshouldberuninroot)
 - [postSynthesize](NxMonorepoProject.md#postsynthesize)
 - [preSynthesize](NxMonorepoProject.md#presynthesize)
 - [removeScript](NxMonorepoProject.md#removescript)
@@ -1685,6 +1686,16 @@ way as consumers of the packages have when installing from the registry.
 #### Inherited from
 
 [MonorepoTsProject](MonorepoTsProject.md).[linkLocalWorkspaceBins](MonorepoTsProject.md#linklocalworkspacebins)
+
+___
+
+### manageSubprojectTasksThatShouldBeRunInRoot
+
+▸ **manageSubprojectTasksThatShouldBeRunInRoot**(): `void`
+
+#### Returns
+
+`void`
 
 ___
 
