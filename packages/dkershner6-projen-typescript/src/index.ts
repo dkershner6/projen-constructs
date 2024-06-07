@@ -362,29 +362,36 @@ export class DKTasks extends Component {
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
         }
+
+        // Create task here so that others can use it in spawns
+        new javascript.UpgradeDependencies(this.project, {
+            workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
+
+            taskName: DKTaskName.UPGRADE_SCOPE,
+            include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
+        });
     }
 
     override preSynthesize(): void {
-        this.createUpgradeScopeTask();
+        super.preSynthesize();
+
+        this.alterUpgradeScopeTask();
     }
 
-    private createUpgradeScopeTask(): void {
-        const upgradeDependencies = new javascript.UpgradeDependencies(
-            this.project,
-            {
-                workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
-
-                taskName: DKTaskName.UPGRADE_SCOPE,
-                include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
-            },
+    private alterUpgradeScopeTask(): void {
+        const upgradeScopeTask = this.project.tasks.tryFind(
+            DKTaskName.UPGRADE_SCOPE,
         );
 
-        // @ts-expect-error - private, hacky
-        upgradeDependencies.upgradeTask._locked = false;
-        upgradeDependencies.upgradeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
-        upgradeDependencies.upgradeTask.addCondition(
-            DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
-        );
+        // Alter task here because otherwise it warns about lazy loading
+        if (upgradeScopeTask) {
+            // @ts-expect-error - private, hacky
+            upgradeScopeTask._locked = false;
+            upgradeScopeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
+            upgradeScopeTask.addCondition(
+                DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
+            );
+        }
     }
 }
 
