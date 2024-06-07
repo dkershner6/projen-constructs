@@ -117,13 +117,11 @@ ___
 
 ▸ **preSynthesize**(): `void`
 
-Called before synthesis.
-
 #### Returns
 
 `void`
 
-#### Inherited from
+#### Overrides
 
 Component.preSynthesize
 
