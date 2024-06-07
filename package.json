@@ -30,6 +30,7 @@
     "test:watch": "pnpm exec projen test:watch",
     "type-check": "pnpm exec projen type-check",
     "upgrade": "pnpm exec projen upgrade",
+    "upgrade:scope": "pnpm exec projen upgrade:scope",
     "watch": "pnpm exec projen watch",
     "install:ci": "pnpm exec projen install:ci",
     "synth-workspace": "pnpm exec projen"
@@ -40,8 +41,8 @@
     "@types/jest": "^29.5.12",
     "@types/lodash.merge": "^4.6.9",
     "@types/node": "^20",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "clone-deep": "^4.0.1",
     "constructs": "10.3.0",
     "eslint": "^8",
@@ -57,7 +58,7 @@
     "nx": "16.0.0",
     "nx-cloud": "^16.5.2",
     "prettier": "^3.3.1",
-    "projen": "0.81.5",
+    "projen": "0.82.5",
     "ts-jest": "^29.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
@@ -78,13 +79,17 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "testEnvironment": "node",
     "testTimeout": 15000,
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,

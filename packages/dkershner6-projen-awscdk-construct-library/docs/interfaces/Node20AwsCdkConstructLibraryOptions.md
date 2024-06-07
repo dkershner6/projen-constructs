@@ -1546,7 +1546,7 @@ and should remain on the same minor, so we recommend using a `~` dependency
 
 **`Pjnew`**
 
-"~5.0.0"
+"~5.4.0"
 
 #### Inherited from
 

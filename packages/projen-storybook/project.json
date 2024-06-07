@@ -156,6 +156,13 @@
         "cwd": "packages/projen-storybook"
       }
     },
+    "upgrade:scope": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:scope",
+        "cwd": "packages/projen-storybook"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

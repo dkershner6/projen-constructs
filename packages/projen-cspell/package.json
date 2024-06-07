@@ -29,6 +29,7 @@
     "type-check": "npx projen type-check",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
+    "upgrade:scope": "npx projen upgrade:scope",
     "watch": "npx projen watch"
   },
   "author": {
@@ -41,8 +42,8 @@
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20",
-    "@typescript-eslint/eslint-plugin": "^6",
-    "@typescript-eslint/parser": "^6",
+    "@typescript-eslint/eslint-plugin": "^7",
+    "@typescript-eslint/parser": "^7",
     "clone-deep": "^4.0.1",
     "constructs": "10.3.0",
     "eslint": "^8",
@@ -56,7 +57,7 @@
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.3.1",
-    "projen": "0.81.5",
+    "projen": "0.82.5",
     "standard-version": "^9",
     "ts-jest": "^29.1.4",
     "typedoc": "^0.25.13",
@@ -65,7 +66,7 @@
   },
   "peerDependencies": {
     "constructs": "10.3.0",
-    "projen": "0.81.5"
+    "projen": "0.82.5"
   },
   "keywords": [
     "cspell",
@@ -77,13 +78,17 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "testEnvironment": "node",
     "testTimeout": 15000,
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,

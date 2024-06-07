@@ -39,6 +39,7 @@
 - [RECOMMENDED\_TSCONFIG\_NODE\_20](modules.md#recommended_tsconfig_node_20)
 - [TEST\_FILE\_SUFFIXES](modules.md#test_file_suffixes)
 - [TEST\_FOLDERS](modules.md#test_folders)
+- [UPGRADE\_SCOPE\_ENV\_VARIABLE\_NAME](modules.md#upgrade_scope_env_variable_name)
 
 ## Variables
 
@@ -62,7 +63,7 @@ ___
 
 ### PROJEN\_VERSION
 
-• `Const` **PROJEN\_VERSION**: ``"0.81.5"``
+• `Const` **PROJEN\_VERSION**: ``"0.82.5"``
 
 ___
 
@@ -129,3 +130,9 @@ ___
 ### TEST\_FOLDERS
 
 • `Const` **TEST\_FOLDERS**: `string`[]
+
+___
+
+### UPGRADE\_SCOPE\_ENV\_VARIABLE\_NAME
+
+• `Const` **UPGRADE\_SCOPE\_ENV\_VARIABLE\_NAME**: ``"UPGRADE_SCOPE"``

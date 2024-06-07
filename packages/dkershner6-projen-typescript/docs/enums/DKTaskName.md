@@ -12,6 +12,7 @@
 - [LINT](DKTaskName.md#lint)
 - [TEST\_UNIT](DKTaskName.md#test_unit)
 - [TYPE\_CHECK](DKTaskName.md#type_check)
+- [UPGRADE\_SCOPE](DKTaskName.md#upgrade_scope)
 
 ## Enumeration Members
 
@@ -48,3 +49,9 @@ ___
 ### TYPE\_CHECK
 
 • **TYPE\_CHECK** = ``"type-check"``
+
+___
+
+### UPGRADE\_SCOPE
+
+• **UPGRADE\_SCOPE** = ``"upgrade:scope"``

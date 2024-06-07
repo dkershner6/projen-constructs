@@ -39,6 +39,7 @@ export class Node20MonorepoProject extends NxMonorepoProject {
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,
+            DKTaskName.UPGRADE_SCOPE,
         ]) {
             const task = this.tasks.tryFind(taskName);
             if (task) {

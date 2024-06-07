@@ -96,7 +96,7 @@
         }
       }
     ],
-    "no-duplicate-imports": "off",
+    "import/no-duplicates": "error",
     "no-shadow": [
       "off"
     ],
@@ -152,7 +152,7 @@
       }
     ],
     "import/namespace": "off",
-    "import/no-duplicates": "error",
+    "no-duplicate-imports": "off",
     "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "error",
     "sonarjs/no-redundant-jump": "off",
