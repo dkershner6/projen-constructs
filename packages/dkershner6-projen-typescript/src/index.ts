@@ -362,7 +362,9 @@ export class DKTasks extends Component {
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
         }
+    }
 
+    override preSynthesize(): void {
         this.createUpgradeScopeTask();
     }
 
