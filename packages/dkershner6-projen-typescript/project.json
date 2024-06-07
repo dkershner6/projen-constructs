@@ -156,6 +156,13 @@
         "cwd": "packages/dkershner6-projen-typescript"
       }
     },
+    "upgrade:scope": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:scope",
+        "cwd": "packages/dkershner6-projen-typescript"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

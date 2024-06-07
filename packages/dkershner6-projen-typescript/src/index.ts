@@ -81,7 +81,7 @@ export const RECOMMENDED_TSCONFIG_NODE_20: Partial<TypeScriptProjectOptions> = {
     },
 };
 
-export const PROJEN_VERSION = "0.81.5";
+export const PROJEN_VERSION = "0.82.5";
 export const CONSTRUCTS_VERSION = "10.3.0";
 
 export const RECOMMENDED_NODE_20: Partial<TypeScriptProjectOptions> = {
@@ -297,10 +297,14 @@ export enum DKTaskName {
     LINT = "lint",
     TEST_UNIT = "test-unit",
     TYPE_CHECK = "type-check",
+    UPGRADE_SCOPE = "upgrade:scope",
 }
+
+export const UPGRADE_SCOPE_ENV_VARIABLE_NAME = "UPGRADE_SCOPE";
 
 export class DKTasks extends Component {
     public static readonly IS_NOT_RELEASE_CONDITION = `if [ "$RELEASE" = "true" ] ; then exit 1 ; fi`;
+    public static readonly UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION = `if [ -z "$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}" ] ; then echo 'UPGRADE_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi`;
 
     declare project: TypeScriptProject;
 
@@ -357,6 +361,28 @@ export class DKTasks extends Component {
         const docgenTask = project.tasks.tryFind("docgen");
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
+        }
+
+        this.createUpgradeScopeTask();
+    }
+
+    private createUpgradeScopeTask(): void {
+        new javascript.UpgradeDependencies(this.project, {
+            workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
+
+            taskName: DKTaskName.UPGRADE_SCOPE,
+            include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
+        });
+
+        const upgradeScopeTask = this.project.tasks.tryFind(
+            DKTaskName.UPGRADE_SCOPE,
+        );
+
+        if (upgradeScopeTask) {
+            upgradeScopeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
+            upgradeScopeTask.addCondition(
+                DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
+            );
         }
     }
 }

@@ -240,7 +240,7 @@
       "name": "test-unit",
       "steps": [
         {
-          "exec": "jest --passWithNoTests --coverageProvider=v8 --updateSnapshot",
+          "exec": "jest --passWithNoTests --updateSnapshot",
           "receiveArgs": true
         }
       ],
@@ -304,6 +304,31 @@
         }
       ],
       "condition": "if [ \"$I_AM_MONOREPO\" != \"true\" ] ; then echo \"Please run upgrade from the root, or set env variable I_AM_MONOREPO=true to override this behavior\" && exit 1 ; fi"
+    },
+    "upgrade:scope": {
+      "name": "upgrade:scope",
+      "description": "Upgrade a single scope of packages by populating the UPGRADE_SCOPE env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen upgrade:scope",
+      "env": {
+        "CI": "0"
+      },
+      "steps": [
+        {
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=\"$UPGRADE_SCOPE/*\""
+        },
+        {
+          "exec": "pnpm i --no-frozen-lockfile"
+        },
+        {
+          "exec": "pnpm update \"$UPGRADE_SCOPE/*\""
+        },
+        {
+          "exec": "npx projen"
+        },
+        {
+          "spawn": "post-upgrade"
+        }
+      ],
+      "condition": "if [ -z \"$UPGRADE_SCOPE\" ] ; then echo 'UPGRADE_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi"
     },
     "watch": {
       "name": "watch",

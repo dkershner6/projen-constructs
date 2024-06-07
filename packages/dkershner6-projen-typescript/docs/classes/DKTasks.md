@@ -19,9 +19,11 @@
 - [node](DKTasks.md#node)
 - [project](DKTasks.md#project)
 - [IS\_NOT\_RELEASE\_CONDITION](DKTasks.md#is_not_release_condition)
+- [UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION](DKTasks.md#upgrade_scope_env_not_blank_condition)
 
 ### Methods
 
+- [createUpgradeScopeTask](DKTasks.md#createupgradescopetask)
 - [postSynthesize](DKTasks.md#postsynthesize)
 - [preSynthesize](DKTasks.md#presynthesize)
 - [synthesize](DKTasks.md#synthesize)
@@ -77,7 +79,23 @@ ___
 
 ▪ `Static` `Readonly` **IS\_NOT\_RELEASE\_CONDITION**: ``"if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"``
 
+___
+
+### UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION
+
+▪ `Static` `Readonly` **UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION**: ``"if [ -z \"$UPGRADE_SCOPE\" ] ; then echo 'UPGRADE_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi"``
+
 ## Methods
+
+### createUpgradeScopeTask
+
+▸ **createUpgradeScopeTask**(): `void`
+
+#### Returns
+
+`void`
+
+___
 
 ### postSynthesize
 
