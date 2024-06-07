@@ -367,23 +367,22 @@ export class DKTasks extends Component {
     }
 
     private createUpgradeScopeTask(): void {
-        new javascript.UpgradeDependencies(this.project, {
-            workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
+        const upgradeDependencies = new javascript.UpgradeDependencies(
+            this.project,
+            {
+                workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
 
-            taskName: DKTaskName.UPGRADE_SCOPE,
-            include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
-        });
-
-        const upgradeScopeTask = this.project.tasks.tryFind(
-            DKTaskName.UPGRADE_SCOPE,
+                taskName: DKTaskName.UPGRADE_SCOPE,
+                include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
+            },
         );
 
-        if (upgradeScopeTask) {
-            upgradeScopeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
-            upgradeScopeTask.addCondition(
-                DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
-            );
-        }
+        // @ts-expect-error - private, hacky
+        upgradeDependencies.upgradeTask._locked = false;
+        upgradeDependencies.upgradeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
+        upgradeDependencies.upgradeTask.addCondition(
+            DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
+        );
     }
 }
 
