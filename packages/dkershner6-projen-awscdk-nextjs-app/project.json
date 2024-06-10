@@ -156,6 +156,13 @@
         "cwd": "packages/dkershner6-projen-awscdk-nextjs-app"
       }
     },
+    "upgrade:scope": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:scope",
+        "cwd": "packages/dkershner6-projen-awscdk-nextjs-app"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {
@@ -167,13 +174,6 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "pnpm exec projen publish:npm",
-        "cwd": "packages/dkershner6-projen-awscdk-nextjs-app"
-      }
-    },
-    "upgrade:scope": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen upgrade:scope",
         "cwd": "packages/dkershner6-projen-awscdk-nextjs-app"
       }
     }

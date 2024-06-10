@@ -23,7 +23,7 @@
 
 ### Methods
 
-- [createUpgradeScopeTask](DKTasks.md#createupgradescopetask)
+- [alterUpgradeScopeTask](DKTasks.md#alterupgradescopetask)
 - [postSynthesize](DKTasks.md#postsynthesize)
 - [preSynthesize](DKTasks.md#presynthesize)
 - [synthesize](DKTasks.md#synthesize)
@@ -87,9 +87,9 @@ ___
 
 ## Methods
 
-### createUpgradeScopeTask
+### alterUpgradeScopeTask
 
-▸ **createUpgradeScopeTask**(): `void`
+▸ **alterUpgradeScopeTask**(): `void`
 
 #### Returns
 
