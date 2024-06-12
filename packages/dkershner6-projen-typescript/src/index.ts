@@ -364,18 +364,18 @@ export class DKTasks extends Component {
         }
 
         // Create task here so that others can use it in spawns
-        new javascript.UpgradeDependencies(this.project, {
-            workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
+        // new javascript.UpgradeDependencies(this.project, {
+        //     workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
 
-            taskName: DKTaskName.UPGRADE_SCOPE,
-            include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
-        });
+        //     taskName: DKTaskName.UPGRADE_SCOPE,
+        //     include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
+        // });
     }
 
     override preSynthesize(): void {
         super.preSynthesize();
 
-        this.alterUpgradeScopeTask();
+        // this.alterUpgradeScopeTask();
     }
 
     private alterUpgradeScopeTask(): void {
