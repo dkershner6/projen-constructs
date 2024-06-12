@@ -106,15 +106,6 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
             this.branchNameToSstStageMap?.[this.options.defaultReleaseBranch] ??
             this.options.defaultReleaseBranch;
 
-        const deployTask = this.tasks.tryFind("deploy");
-        if (deployTask) {
-            const { exec: _, ...restOfStep } = deployTask.steps[0];
-            deployTask.reset(`sst deploy --stage ${defaultStageName}`, {
-                ...restOfStep,
-                receiveArgs: true,
-            });
-        }
-
         const synthTask = this.tasks.tryFind("synth");
         if (synthTask) {
             const { exec: _, ...restOfStep } = synthTask.steps[0];
@@ -136,6 +127,18 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
                     ...restOfStep,
                     receiveArgs: true,
                 },
+            );
+        }
+
+        const deployTask = this.tasks.tryFind("deploy");
+        if (deployTask) {
+            const { exec: _, ...restOfStep } = deployTask.steps[0];
+            deployTask.reset();
+            // Deploy needs to be a two-step process for SST for large deploys, and everything needs to be installed for this to work
+            if (synthSilentTask) deployTask.spawn(synthSilentTask);
+            deployTask.exec(
+                `sst deploy --stage ${defaultStageName} --from ${this.sstConfig.sstOut}`,
+                { ...restOfStep, receiveArgs: true },
             );
         }
 
