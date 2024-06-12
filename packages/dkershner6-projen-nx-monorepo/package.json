@@ -29,7 +29,6 @@
     "type-check": "npx projen type-check",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
-    "upgrade:scope": "npx projen upgrade:scope",
     "watch": "npx projen watch"
   },
   "author": {
