@@ -156,13 +156,6 @@
         "cwd": "packages/projen-nvm"
       }
     },
-    "upgrade:scope": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen upgrade:scope",
-        "cwd": "packages/projen-nvm"
-      }
-    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

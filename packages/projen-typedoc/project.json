@@ -156,13 +156,6 @@
         "cwd": "packages/projen-typedoc"
       }
     },
-    "upgrade:scope": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "pnpm exec projen upgrade:scope",
-        "cwd": "packages/projen-typedoc"
-      }
-    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {
