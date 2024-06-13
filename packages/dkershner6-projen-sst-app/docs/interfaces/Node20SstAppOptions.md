@@ -843,7 +843,7 @@ ___
 
 ### constructsVersionPinning
 
-• `Optional` **constructsVersionPinning**: `boolean`
+• `Optional` `Readonly` **constructsVersionPinning**: `boolean`
 
 Whether or not to pin the version of constructs to the version specified in the
 `constructsVersion` property.
@@ -1447,7 +1447,7 @@ ___
 
 ### jestOptions
 
-• `Optional` **jestOptions**: `Node20TypeScriptProjectJestOptions`
+• `Optional` `Readonly` **jestOptions**: `Node20TypeScriptProjectJestOptions`
 
 #### Overrides
 
