@@ -27,9 +27,9 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
      * Whether or not to pin the version of constructs to the version specified in the
      * `constructsVersion` property.
      */
-    constructsVersionPinning?: boolean;
+    readonly constructsVersionPinning?: boolean;
 
-    jestOptions?: Node20TypeScriptProjectJestOptions;
+    readonly jestOptions?: Node20TypeScriptProjectJestOptions;
 
     /**
      * Whether to publish this App to AWS.
