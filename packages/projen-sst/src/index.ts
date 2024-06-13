@@ -161,7 +161,7 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
 
         this.addTask(`deploy:${stageName}`, {
             description: `Deploy ${stageName} stage`,
-            exec: `sst deploy --stage ${stageName}`,
+            exec: `sst deploy --stage ${stageName} --from ${this.sstConfig.sstOut}`,
             receiveArgs: true,
         });
 
