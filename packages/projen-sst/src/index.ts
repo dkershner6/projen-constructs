@@ -159,23 +159,28 @@ export class SstTypescriptApp extends awscdk.AwsCdkTypeScriptApp {
         const stageName =
             this.branchNameToSstStageMap?.[branchName] ?? branchName;
 
-        this.addTask(`deploy:${stageName}`, {
-            description: `Deploy ${stageName} stage`,
-            exec: `sst deploy --stage ${stageName} --from ${this.sstConfig.sstOut}`,
-            receiveArgs: true,
-        });
-
         this.addTask(`synth:${stageName}`, {
             description: `Synth ${stageName} stage`,
             exec: `sst build --stage ${stageName} --to ${this.sstConfig.sstOut}`,
             receiveArgs: true,
         });
 
-        this.addTask(`synth:silent:${stageName}`, {
+        const synthSilentTask = this.addTask(`synth:silent:${stageName}`, {
             description: `Synth ${stageName} stage`,
             exec: `sst build --stage ${stageName} --to ${this.sstConfig.sstOut}`,
             receiveArgs: true,
         });
+
+        const deployTask = this.addTask(`deploy:${stageName}`, {
+            description: `Deploy ${stageName} stage`,
+        });
+        deployTask.spawn(synthSilentTask);
+        deployTask.exec(
+            `sst deploy --stage ${stageName} --from ${this.sstConfig.sstOut}`,
+            {
+                receiveArgs: true,
+            },
+        );
 
         this.addTask(`destroy:${stageName}`, {
             description: `Destroy ${stageName} stage`,

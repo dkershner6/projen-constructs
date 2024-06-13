@@ -27,9 +27,9 @@ export interface Node20SstAppOptions extends SstTypescriptAppOptions {
      * Whether or not to pin the version of constructs to the version specified in the
      * `constructsVersion` property.
      */
-    constructsVersionPinning?: boolean;
+    readonly constructsVersionPinning?: boolean;
 
-    jestOptions?: Node20TypeScriptProjectJestOptions;
+    readonly jestOptions?: Node20TypeScriptProjectJestOptions;
 
     /**
      * Whether to publish this App to AWS.
@@ -245,20 +245,13 @@ export class Node20SstApp extends SstTypescriptApp {
             deployTask,
             branchName,
         });
-        const exec = deployTaskToUse.steps[0].exec;
-        const args = deployTaskToUse.steps[0].args;
 
         return {
             ...(this.publishToAwsOptions?.deployJobStepConfiguration ?? {}),
             name:
                 this.publishToAwsOptions?.deployJobStepConfiguration?.name ??
                 "Deploy to AWS",
-            run: [
-                exec?.replace("sst", `npx sst@${this.sstVersion}`),
-                ...(args ?? []),
-            ]
-                .filter(Boolean)
-                .join(" "),
+            run: `npx projen ${deployTaskToUse.name}`, // pj is installed
         };
     }
 
