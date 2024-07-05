@@ -47,7 +47,8 @@
           "exec": "rm -rf lib && rm -rf dist"
         },
         {
-          "exec": "pnpm exec nx run-many --target=clean-compile --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=clean-compile --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -119,7 +120,8 @@
           "exec": "rm -rf docs/"
         },
         {
-          "exec": "pnpm exec nx run-many --target=docgen:remove --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=docgen:remove --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -207,7 +209,8 @@
           "spawn": "eslint"
         },
         {
-          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
@@ -303,7 +306,8 @@
           "receiveArgs": true
         },
         {
-          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
@@ -324,7 +328,8 @@
           "exec": "tsc --noEmit"
         },
         {
-          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },
@@ -349,6 +354,20 @@
         },
         {
           "spawn": "post-upgrade"
+        }
+      ]
+    },
+    "upgrade:package": {
+      "name": "upgrade:package",
+      "description": "Upgrade a single package (or otherwise use NPM Check Updates). This should be used as 'npx projen upgrade:package -- <package-name>'",
+      "steps": [
+        {
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade",
+          "receiveArgs": true
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=upgrade:package --output-style=stream --nx-bail",
+          "receiveArgs": true
         }
       ]
     },

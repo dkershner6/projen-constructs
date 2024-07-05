@@ -163,6 +163,13 @@
         "cwd": "packages/projen-esm"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/projen-esm"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

@@ -31,6 +31,7 @@
     "test:watch": "pnpm exec projen test:watch",
     "type-check": "pnpm exec projen type-check",
     "upgrade": "pnpm exec projen upgrade",
+    "upgrade:package": "pnpm exec projen upgrade:package",
     "watch": "pnpm exec projen watch",
     "install:ci": "pnpm exec projen install:ci",
     "synth-workspace": "pnpm exec projen"

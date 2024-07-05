@@ -30,6 +30,7 @@
     "type-check": "npx projen type-check",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
+    "upgrade:package": "npx projen upgrade:package",
     "watch": "npx projen watch"
   },
   "author": {
@@ -64,7 +65,7 @@
     "standard-version": "^9",
     "ts-jest": "^29.1.5",
     "typedoc": "^0.26.3",
-    "typedoc-plugin-markdown": "^4.1.2",
+    "typedoc-plugin-markdown": "^4",
     "typescript": "^5.5.3"
   },
   "peerDependencies": {
