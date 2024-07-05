@@ -86,9 +86,10 @@ export class Node20SstApp extends SstTypescriptApp {
                     options.publishToAwsOptions?.autoAddJob) ||
                 options.publishToAwsOptions?.autoAddJob === undefined
             ) {
+                const synthSilentTask = this.tasks.tryFind("synth:silent");
                 const deployTask = this.tasks.tryFind("deploy");
 
-                if (deployTask) {
+                if (synthSilentTask && deployTask) {
                     defaultReleaseWorkflow?.addJob(
                         "release_aws",
                         this.buildPublishToAwsJob(
@@ -97,6 +98,17 @@ export class Node20SstApp extends SstTypescriptApp {
                             },
                             {
                                 ...(options.publishToAwsOptions ?? {}),
+                                configureAwsCredentialsJobSteps: [
+                                    ...(options?.publishToAwsOptions
+                                        ?.configureAwsCredentialsJobSteps ??
+                                        []),
+                                    {
+                                        ...this.buildDeployToAwsJobStep({
+                                            deployTask: synthSilentTask,
+                                        }),
+                                        name: "Synth",
+                                    },
+                                ],
                                 deployJobStepBuilder: (builderParams) =>
                                     this.buildDeployToAwsJobStep(builderParams),
                                 jobConfiguration: {
@@ -124,35 +136,63 @@ export class Node20SstApp extends SstTypescriptApp {
                                     branch,
                                 ),
                             );
-                            branchReleaseWorkflow?.addJob(
-                                `release_aws-${branch}`,
-                                this.buildPublishToAwsJob(
-                                    {
-                                        branchName: branch,
-                                        deployTask:
-                                            this.determineDeployTaskToUseForAwsJobStep(
-                                                {
-                                                    deployTask,
-                                                    branchName: branch,
-                                                },
-                                            ),
-                                    },
-                                    {
-                                        ...(options.publishToAwsOptions ?? {}),
-                                        deployJobStepBuilder: (builderParams) =>
-                                            this.buildDeployToAwsJobStep(
-                                                builderParams,
-                                            ),
-                                        jobConfiguration: {
-                                            runsOn: options.workflowRunsOn,
-                                            runsOnGroup:
-                                                options.workflowRunsOnGroup,
-                                            ...(options.publishToAwsOptions
-                                                ?.jobConfiguration ?? {}),
-                                        },
-                                    },
-                                ),
+
+                            const stageName =
+                                this.branchNameToSstStageMap?.[branch] ??
+                                branch;
+                            const synthSilentTaskForBranch = this.tasks.tryFind(
+                                `synth:silent:${stageName}`,
                             );
+
+                            if (synthSilentTaskForBranch) {
+                                branchReleaseWorkflow?.addJob(
+                                    `release_aws-${branch}`,
+                                    this.buildPublishToAwsJob(
+                                        {
+                                            branchName: branch,
+                                            deployTask:
+                                                this.determineDeployTaskToUseForAwsJobStep(
+                                                    {
+                                                        deployTask,
+                                                        branchName: branch,
+                                                    },
+                                                ),
+                                        },
+                                        {
+                                            ...(options.publishToAwsOptions ??
+                                                {}),
+                                            configureAwsCredentialsJobSteps: [
+                                                ...(options?.publishToAwsOptions
+                                                    ?.configureAwsCredentialsJobSteps ??
+                                                    []),
+                                                {
+                                                    ...this.buildDeployToAwsJobStep(
+                                                        {
+                                                            deployTask:
+                                                                synthSilentTaskForBranch,
+                                                            branchName: branch,
+                                                        },
+                                                    ),
+                                                    name: "Synth",
+                                                },
+                                            ],
+                                            deployJobStepBuilder: (
+                                                builderParams,
+                                            ) =>
+                                                this.buildDeployToAwsJobStep(
+                                                    builderParams,
+                                                ),
+                                            jobConfiguration: {
+                                                runsOn: options.workflowRunsOn,
+                                                runsOnGroup:
+                                                    options.workflowRunsOnGroup,
+                                                ...(options.publishToAwsOptions
+                                                    ?.jobConfiguration ?? {}),
+                                            },
+                                        },
+                                    ),
+                                );
+                            }
                         }
                     }
                 }
@@ -204,21 +244,21 @@ export class Node20SstApp extends SstTypescriptApp {
             steps: [
                 ...(options.workflowBootstrapSteps ?? []),
                 WorkflowSteps.checkout(),
-                {
-                    name: "Download build artifacts",
-                    uses: "actions/download-artifact@v4",
-                    with: {
-                        name: "build-artifact",
-                        path: `${workingDirectory}/${this.artifactsDirectory}`,
-                    },
-                },
-                {
-                    name: "Restore build artifact permissions",
-                    continueOnError: true,
-                    run: [
-                        `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
-                    ].join("\n"),
-                },
+                // {
+                //     name: "Download build artifacts",
+                //     uses: "actions/download-artifact@v4",
+                //     with: {
+                //         name: "build-artifact",
+                //         path: `${workingDirectory}/${this.artifactsDirectory}`,
+                //     },
+                // },
+                // {
+                //     name: "Restore build artifact permissions",
+                //     continueOnError: true,
+                //     run: [
+                //         `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
+                //     ].join("\n"),
+                // },
                 ...this.renderWorkflowSetup({
                     installStepConfiguration: {
                         workingDirectory: ".",
