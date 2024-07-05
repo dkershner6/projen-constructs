@@ -35,7 +35,7 @@
     "synth-workspace": "pnpm exec projen"
   },
   "devDependencies": {
-    "@cspell/eslint-plugin": "^8.8.4",
+    "@cspell/eslint-plugin": "^8.10.0",
     "@types/clone-deep": "^4.0.4",
     "@types/jest": "^29.5.12",
     "@types/lodash.merge": "^4.6.9",
@@ -56,11 +56,11 @@
     "lodash.merge": "^4.6.2",
     "nx": "16.0.0",
     "nx-cloud": "^16.5.2",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "projen": "0.82.5",
-    "ts-jest": "^29.1.4",
+    "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "nx": "^16"
