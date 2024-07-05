@@ -104,7 +104,7 @@ export class Node20SstApp extends SstTypescriptApp {
                                         []),
                                     {
                                         name: "Synth",
-                                        run: synthSilentTask.steps[0].exec,
+                                        run: `npx projen ${synthSilentTask.name}`,
                                     },
                                 ],
                                 deployJobStepBuilder: (builderParams) =>
@@ -165,8 +165,7 @@ export class Node20SstApp extends SstTypescriptApp {
                                                     []),
                                                 {
                                                     name: "Synth",
-                                                    run: synthSilentTaskForBranch
-                                                        .steps[0].exec,
+                                                    run: `npx projen ${synthSilentTaskForBranch.name}`,
                                                 },
                                             ],
                                             deployJobStepBuilder: (
