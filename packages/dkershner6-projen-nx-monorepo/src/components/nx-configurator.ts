@@ -334,6 +334,7 @@ export class NxConfigurator extends Component implements INxProjectCore {
             `--target=${options.target}`,
             `--output-style=${options.outputStyle || "stream"}`,
             ...args,
+            "-- @$",
         ];
     }
 

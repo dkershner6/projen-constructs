@@ -163,6 +163,13 @@
         "cwd": "packages/dkershner6-projen-sst-app"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/dkershner6-projen-sst-app"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

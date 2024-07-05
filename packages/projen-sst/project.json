@@ -163,6 +163,13 @@
         "cwd": "packages/projen-sst"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/projen-sst"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

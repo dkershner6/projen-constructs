@@ -163,6 +163,13 @@
         "cwd": "packages/projen-graphql"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/projen-graphql"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

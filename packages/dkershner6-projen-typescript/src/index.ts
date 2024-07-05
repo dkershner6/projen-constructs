@@ -298,14 +298,11 @@ export enum DKTaskName {
     LINT = "lint",
     TEST_UNIT = "test-unit",
     TYPE_CHECK = "type-check",
-    UPGRADE_SCOPE = "upgrade:scope",
+    UPGRADE_PACKAGE = "upgrade:package",
 }
-
-export const UPGRADE_SCOPE_ENV_VARIABLE_NAME = "UPGRADE_SCOPE";
 
 export class DKTasks extends Component {
     public static readonly IS_NOT_RELEASE_CONDITION = `if [ "$RELEASE" = "true" ] ; then exit 1 ; fi`;
-    public static readonly UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION = `if [ -z "$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}" ] ; then echo 'UPGRADE_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi`;
 
     declare project: TypeScriptProject;
 
@@ -359,46 +356,28 @@ export class DKTasks extends Component {
         );
 
         // Docgen
+        const docgenRemoveTask = project.addTask(DKTaskName.DOCGEN_REMOVE, {
+            description: "Remove the docgen directory",
+        });
+        docgenRemoveTask.exec(`rm -rf ${project.docsDirectory}`);
+
         const docgenTask = project.tasks.tryFind("docgen");
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
+            docgenTask.prependSpawn(docgenRemoveTask);
         }
 
-        project
-            .addTask(DKTaskName.DOCGEN_REMOVE, {
-                description: "Remove the docgen directory",
-            })
-            .exec(`rm -rf ${project.docsDirectory}`);
-
-        // Create task here so that others can use it in spawns
-        // new javascript.UpgradeDependencies(this.project, {
-        //     workflow: false, // We don't want to run this in CI, just hacking this construct to get the task
-
-        //     taskName: DKTaskName.UPGRADE_SCOPE,
-        //     include: [`"$${UPGRADE_SCOPE_ENV_VARIABLE_NAME}/*"`], // env variable, ends up like "@mui/*"
-        // });
+        // Upgrade Package
+        project.addTask(DKTaskName.UPGRADE_PACKAGE, {
+            description:
+                "Upgrade a single package (or otherwise use NPM Check Updates). This should be used as 'npx projen upgrade:package -- <package-name>'",
+            exec: "pnpm dlx npm-check-updates@16 --upgrade",
+            receiveArgs: true,
+        });
     }
 
     override preSynthesize(): void {
         super.preSynthesize();
-
-        // this.alterUpgradeScopeTask();
-    }
-
-    private alterUpgradeScopeTask(): void {
-        const upgradeScopeTask = this.project.tasks.tryFind(
-            DKTaskName.UPGRADE_SCOPE,
-        );
-
-        // Alter task here because otherwise it warns about lazy loading
-        if (upgradeScopeTask) {
-            // @ts-expect-error - private, hacky
-            upgradeScopeTask._locked = false;
-            upgradeScopeTask.description = `Upgrade a single scope of packages by populating the ${UPGRADE_SCOPE_ENV_VARIABLE_NAME} env variable with the scope name (only one at a time), for example: UPGRADE_SCOPE=@mui npx projen ${DKTaskName.UPGRADE_SCOPE}`;
-            upgradeScopeTask.addCondition(
-                DKTasks.UPGRADE_SCOPE_ENV_NOT_BLANK_CONDITION,
-            );
-        }
     }
 }
 

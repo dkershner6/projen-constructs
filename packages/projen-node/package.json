@@ -30,6 +30,7 @@
     "type-check": "npx projen type-check",
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
+    "upgrade:package": "npx projen upgrade:package",
     "watch": "npx projen watch"
   },
   "author": {

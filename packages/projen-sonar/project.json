@@ -163,6 +163,13 @@
         "cwd": "packages/projen-sonar"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/projen-sonar"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

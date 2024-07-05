@@ -12,7 +12,7 @@
           "receiveArgs": true
         },
         {
-          "exec": "pnpm exec nx run-many --target=build --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=build --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         },
         {
@@ -47,7 +47,8 @@
           "exec": "rm -rf lib && rm -rf dist"
         },
         {
-          "exec": "pnpm exec nx run-many --target=clean-compile --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=clean-compile --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
         }
       ]
     },
@@ -97,7 +98,7 @@
       "description": "Compile all projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=compile --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ]
@@ -119,7 +120,8 @@
           "exec": "rm -rf docs/"
         },
         {
-          "exec": "pnpm exec nx run-many --target=docgen:remove --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=docgen:remove --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
         }
       ]
     },
@@ -144,7 +146,7 @@
           "receiveArgs": true
         },
         {
-          "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=eslint --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ],
@@ -194,7 +196,7 @@
           "exec": "pnpm i --frozen-lockfile"
         },
         {
-          "exec": "pnpm exec nx run-many --target=install:ci --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=install:ci --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ]
@@ -207,7 +209,8 @@
           "spawn": "eslint"
         },
         {
-          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=lint --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
         }
       ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
@@ -217,7 +220,7 @@
       "description": "Creates the distribution package for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=package --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=package --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ]
@@ -231,7 +234,7 @@
       "description": "Runs after successful compilation for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=post-compile --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=post-compile --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ]
@@ -241,13 +244,13 @@
       "description": "Runs after upgrading dependencies",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail",
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail -- @$",
           "env": {
             "I_AM_MONOREPO": "true"
           }
         },
         {
-          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail",
+          "exec": "pnpm exec nx run-many --target=upgrade --output-style=stream --parallel=1 --nx-bail -- @$",
           "env": {
             "I_AM_MONOREPO": "true"
           }
@@ -265,7 +268,7 @@
       "description": "Prepare the project for compilation for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=pre-compile --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=pre-compile --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         }
       ]
@@ -299,11 +302,12 @@
       "name": "test-unit",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail",
+          "exec": "pnpm exec nx run-many --target=test --output-style=stream --nx-bail -- @$",
           "receiveArgs": true
         },
         {
-          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=test-unit --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
         }
       ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
@@ -324,7 +328,8 @@
           "exec": "tsc --noEmit"
         },
         {
-          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail"
+          "exec": "pnpm exec nx run-many --target=type-check --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
         }
       ]
     },
@@ -352,12 +357,26 @@
         }
       ]
     },
+    "upgrade:package": {
+      "name": "upgrade:package",
+      "description": "Upgrade a single package (or otherwise use NPM Check Updates)",
+      "steps": [
+        {
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade",
+          "receiveArgs": true
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=upgrade:package --output-style=stream --nx-bail -- @$",
+          "receiveArgs": true
+        }
+      ]
+    },
     "watch": {
       "name": "watch",
       "description": "Watch & compile in the background for all affected projects",
       "steps": [
         {
-          "exec": "pnpm exec nx run-many --target=watch --output-style=stream --skip-nx-cache --nx-ignore-cycles --nx-bail",
+          "exec": "pnpm exec nx run-many --target=watch --output-style=stream --skip-nx-cache --nx-ignore-cycles --nx-bail -- @$",
           "receiveArgs": true
         }
       ]

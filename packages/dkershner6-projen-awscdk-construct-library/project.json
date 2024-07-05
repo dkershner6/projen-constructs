@@ -163,6 +163,13 @@
         "cwd": "packages/dkershner6-projen-awscdk-construct-library"
       }
     },
+    "upgrade:package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen upgrade:package",
+        "cwd": "packages/dkershner6-projen-awscdk-construct-library"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

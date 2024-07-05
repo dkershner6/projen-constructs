@@ -40,6 +40,7 @@ export class Node20MonorepoProject extends NxMonorepoProject {
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,
+            DKTaskName.UPGRADE_PACKAGE,
         ]) {
             const task = this.tasks.tryFind(taskName);
             if (task) {
@@ -47,6 +48,9 @@ export class Node20MonorepoProject extends NxMonorepoProject {
                     this.execNxRunManyCommand({
                         target: taskName,
                     }),
+                    {
+                        receiveArgs: true,
+                    },
                 );
                 continue;
             }
@@ -55,6 +59,7 @@ export class Node20MonorepoProject extends NxMonorepoProject {
                 exec: this.execNxRunManyCommand({
                     target: taskName,
                 }),
+                receiveArgs: true,
             });
         }
     }

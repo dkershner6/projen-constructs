@@ -72,15 +72,6 @@
     "docgen": {
       "name": "docgen",
       "description": "Generate TypeScript API reference docs/",
-      "steps": [
-        {
-          "exec": "typedoc src --disableSources --out docs/",
-          "args": [
-            "--plugin typedoc-plugin-markdown"
-          ],
-          "receiveArgs": true
-        }
-      ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
     "docgen:remove": {
@@ -313,6 +304,16 @@
         }
       ],
       "condition": "if [ \"$I_AM_MONOREPO\" != \"true\" ] ; then echo \"Please run upgrade from the root, or set env variable I_AM_MONOREPO=true to override this behavior\" && exit 1 ; fi"
+    },
+    "upgrade:package": {
+      "name": "upgrade:package",
+      "description": "Upgrade a single package (or otherwise use NPM Check Updates)",
+      "steps": [
+        {
+          "exec": "pnpm dlx npm-check-updates@16 --upgrade",
+          "receiveArgs": true
+        }
+      ]
     },
     "watch": {
       "name": "watch",
