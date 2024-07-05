@@ -36,10 +36,10 @@ export class Node20MonorepoProject extends NxMonorepoProject {
 
         for (const taskName of [
             DKTaskName.CLEAN_COMPILE,
+            DKTaskName.DOCGEN_REMOVE,
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,
-            DKTaskName.UPGRADE_SCOPE,
         ]) {
             const task = this.tasks.tryFind(taskName);
             if (task) {
@@ -48,7 +48,14 @@ export class Node20MonorepoProject extends NxMonorepoProject {
                         target: taskName,
                     }),
                 );
+                continue;
             }
+
+            this.addTask(taskName, {
+                exec: this.execNxRunManyCommand({
+                    target: taskName,
+                }),
+            });
         }
     }
 }

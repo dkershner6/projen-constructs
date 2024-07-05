@@ -1,48 +1,26 @@
-[dkershner6-projen-react](../README.md) / [Exports](../modules.md) / Node20ReactTypescriptConfigurer
+[**dkershner6-projen-react**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-react](../globals.md) / Node20ReactTypescriptConfigurer
 
 # Class: Node20ReactTypescriptConfigurer
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`Node20ReactTypescriptConfigurer`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Node20ReactTypescriptConfigurer.md#constructor)
-
-### Properties
-
-- [node](Node20ReactTypescriptConfigurer.md#node)
-- [project](Node20ReactTypescriptConfigurer.md#project)
-
-### Methods
-
-- [configureEslint](Node20ReactTypescriptConfigurer.md#configureeslint)
-- [configureJest](Node20ReactTypescriptConfigurer.md#configurejest)
-- [installDeps](Node20ReactTypescriptConfigurer.md#installdeps)
-- [postSynthesize](Node20ReactTypescriptConfigurer.md#postsynthesize)
-- [preSynthesize](Node20ReactTypescriptConfigurer.md#presynthesize)
-- [synthesize](Node20ReactTypescriptConfigurer.md#synthesize)
-- [toString](Node20ReactTypescriptConfigurer.md#tostring)
-- [isComponent](Node20ReactTypescriptConfigurer.md#iscomponent)
-- [isConstruct](Node20ReactTypescriptConfigurer.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new Node20ReactTypescriptConfigurer()
 
-• **new Node20ReactTypescriptConfigurer**(`project`, `options?`): [`Node20ReactTypescriptConfigurer`](Node20ReactTypescriptConfigurer.md)
+> **new Node20ReactTypescriptConfigurer**(`project`, `options`): [`Node20ReactTypescriptConfigurer`](Node20ReactTypescriptConfigurer.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options` | [`Node20ReactTypescriptConfigurerOptions`](../interfaces/Node20ReactTypescriptConfigurerOptions.md) |
+• **project**: `TypeScriptProject`
+
+• **options**: [`Node20ReactTypescriptConfigurerOptions`](../interfaces/Node20ReactTypescriptConfigurerOptions.md) = `{}`
 
 #### Returns
 
@@ -50,71 +28,35 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `TypeScriptProject`
+> `readonly` **project**: `TypeScriptProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### configureEslint
+### postSynthesize()
 
-▸ **configureEslint**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### configureJest
-
-▸ **configureJest**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### installDeps
-
-▸ **installDeps**(`projectType`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `projectType` | `undefined` \| ``"library"`` \| ``"app"`` |
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -124,13 +66,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -140,13 +82,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -156,13 +98,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -172,35 +114,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -220,16 +160,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

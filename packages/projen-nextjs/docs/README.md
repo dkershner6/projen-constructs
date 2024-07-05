@@ -1,4 +1,6 @@
-projen-nextjs / [Exports](modules.md)
+**projen-nextjs** • [**Docs**](globals.md)
+
+***
 
 # projen-nextjs
 

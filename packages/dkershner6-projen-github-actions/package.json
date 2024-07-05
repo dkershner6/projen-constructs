@@ -13,6 +13,7 @@
     "compile": "npx projen compile",
     "default": "npx projen default",
     "docgen": "npx projen docgen",
+    "docgen:remove": "npx projen docgen:remove",
     "eslint": "npx projen eslint",
     "i": "npx projen i",
     "lint": "npx projen lint",
@@ -62,7 +63,7 @@
     "standard-version": "^9",
     "ts-jest": "^29.1.5",
     "typedoc": "^0.26.3",
-    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-markdown": "^4.1.2",
     "typescript": "^5.5.3"
   },
   "peerDependencies": {

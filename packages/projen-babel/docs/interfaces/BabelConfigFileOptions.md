@@ -1,15 +1,13 @@
-[projen-babel](../README.md) / [Exports](../modules.md) / BabelConfigFileOptions
+[**projen-babel**](../README.md) • **Docs**
+
+***
+
+[projen-babel](../globals.md) / BabelConfigFileOptions
 
 # Interface: BabelConfigFileOptions
 
-## Table of contents
-
-### Properties
-
-- [transformOptions](BabelConfigFileOptions.md#transformoptions)
-
 ## Properties
 
-### transformOptions
+### transformOptions?
 
-• `Optional` **transformOptions**: `TransformOptions`
+> `optional` **transformOptions**: `TransformOptions`

@@ -1,4 +1,6 @@
-projen-storybook / [Exports](modules.md)
+**projen-storybook** • [**Docs**](globals.md)
+
+***
 
 # projen-storybook
 

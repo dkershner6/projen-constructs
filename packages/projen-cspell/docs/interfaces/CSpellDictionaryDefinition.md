@@ -1,35 +1,31 @@
-[projen-cspell](../README.md) / [Exports](../modules.md) / CSpellDictionaryDefinition
+[**projen-cspell**](../README.md) • **Docs**
+
+***
+
+[projen-cspell](../globals.md) / CSpellDictionaryDefinition
 
 # Interface: CSpellDictionaryDefinition
-
-## Table of contents
-
-### Properties
-
-- [addWords](CSpellDictionaryDefinition.md#addwords)
-- [name](CSpellDictionaryDefinition.md#name)
-- [path](CSpellDictionaryDefinition.md#path)
 
 ## Properties
 
 ### addWords
 
-• `Readonly` **addWords**: `boolean`
+> `readonly` **addWords**: `boolean`
 
 Some editor extensions will use `addWords` for adding words to your personal dictionary.
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 The name of the dictionary.
 
-___
+***
 
 ### path
 
-• `Readonly` **path**: `string`
+> `readonly` **path**: `string`
 
 The path to the dictionary file.

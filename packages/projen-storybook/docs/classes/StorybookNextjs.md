@@ -1,45 +1,26 @@
-[projen-storybook](../README.md) / [Exports](../modules.md) / StorybookNextjs
+[**projen-storybook**](../README.md) • **Docs**
+
+***
+
+[projen-storybook](../globals.md) / StorybookNextjs
 
 # Class: StorybookNextjs
 
-## Hierarchy
+## Extends
 
 - [`Storybook`](Storybook.md)
 
-  ↳ **`StorybookNextjs`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](StorybookNextjs.md#constructor)
-
-### Properties
-
-- [node](StorybookNextjs.md#node)
-- [project](StorybookNextjs.md#project)
-
-### Methods
-
-- [postSynthesize](StorybookNextjs.md#postsynthesize)
-- [preSynthesize](StorybookNextjs.md#presynthesize)
-- [synthesize](StorybookNextjs.md#synthesize)
-- [toString](StorybookNextjs.md#tostring)
-- [isComponent](StorybookNextjs.md#iscomponent)
-- [isConstruct](StorybookNextjs.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new StorybookNextjs()
 
-• **new StorybookNextjs**(`project`, `options?`): [`StorybookNextjs`](StorybookNextjs.md)
+> **new StorybookNextjs**(`project`, `options`): [`StorybookNextjs`](StorybookNextjs.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `NodeProject` |
-| `options` | [`StorybookOptions`](../interfaces/StorybookOptions.md) |
+• **project**: `NodeProject`
+
+• **options**: [`StorybookOptions`](../interfaces/StorybookOptions.md) = `{}`
 
 #### Returns
 
@@ -47,35 +28,35 @@
 
 #### Overrides
 
-[Storybook](Storybook.md).[constructor](Storybook.md#constructor)
+[`Storybook`](Storybook.md).[`constructor`](Storybook.md#constructors)
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[node](Storybook.md#node)
+[`Storybook`](Storybook.md).[`node`](Storybook.md#node)
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `NodeProject`
+> `readonly` **project**: `NodeProject`
 
 #### Inherited from
 
-[Storybook](Storybook.md).[project](Storybook.md#project)
+[`Storybook`](Storybook.md).[`project`](Storybook.md#project)
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -85,13 +66,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[postSynthesize](Storybook.md#postsynthesize)
+[`Storybook`](Storybook.md).[`postSynthesize`](Storybook.md#postsynthesize)
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -101,13 +82,13 @@ Called before synthesis.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[preSynthesize](Storybook.md#presynthesize)
+[`Storybook`](Storybook.md).[`preSynthesize`](Storybook.md#presynthesize)
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -117,13 +98,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[synthesize](Storybook.md#synthesize)
+[`Storybook`](Storybook.md).[`synthesize`](Storybook.md#synthesize)
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -133,35 +114,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[toString](Storybook.md#tostring)
+[`Storybook`](Storybook.md).[`toString`](Storybook.md#tostring)
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-[Storybook](Storybook.md).[isComponent](Storybook.md#iscomponent)
+[`Storybook`](Storybook.md).[`isComponent`](Storybook.md#iscomponent)
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -181,16 +160,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-[Storybook](Storybook.md).[isConstruct](Storybook.md#isconstruct)
+[`Storybook`](Storybook.md).[`isConstruct`](Storybook.md#isconstruct)

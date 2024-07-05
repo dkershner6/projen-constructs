@@ -1,47 +1,30 @@
-[projen-storybook](../README.md) / [Exports](../modules.md) / Storybook
+[**projen-storybook**](../README.md) • **Docs**
+
+***
+
+[projen-storybook](../globals.md) / Storybook
 
 # Class: Storybook
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`Storybook`**
+## Extended by
 
-  ↳↳ [`StorybookNextjs`](StorybookNextjs.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Storybook.md#constructor)
-
-### Properties
-
-- [node](Storybook.md#node)
-- [project](Storybook.md#project)
-
-### Methods
-
-- [postSynthesize](Storybook.md#postsynthesize)
-- [preSynthesize](Storybook.md#presynthesize)
-- [synthesize](Storybook.md#synthesize)
-- [toString](Storybook.md#tostring)
-- [isComponent](Storybook.md#iscomponent)
-- [isConstruct](Storybook.md#isconstruct)
+- [`StorybookNextjs`](StorybookNextjs.md)
 
 ## Constructors
 
-### constructor
+### new Storybook()
 
-• **new Storybook**(`project`, `options?`): [`Storybook`](Storybook.md)
+> **new Storybook**(`project`, `options`): [`Storybook`](Storybook.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `NodeProject` |
-| `options` | [`StorybookOptions`](../interfaces/StorybookOptions.md) |
+• **project**: `NodeProject`
+
+• **options**: [`StorybookOptions`](../interfaces/StorybookOptions.md) = `{}`
 
 #### Returns
 
@@ -49,35 +32,35 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `NodeProject`
+> `readonly` **project**: `NodeProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -87,13 +70,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -103,13 +86,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -119,13 +102,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -135,35 +118,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -183,16 +164,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

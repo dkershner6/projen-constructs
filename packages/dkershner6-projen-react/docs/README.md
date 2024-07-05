@@ -1,4 +1,6 @@
-dkershner6-projen-react / [Exports](modules.md)
+**dkershner6-projen-react** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-react
 

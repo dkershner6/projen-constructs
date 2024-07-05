@@ -1,4 +1,6 @@
-projen-node / [Exports](modules.md)
+**projen-node** • [**Docs**](globals.md)
+
+***
 
 # projen-node
 

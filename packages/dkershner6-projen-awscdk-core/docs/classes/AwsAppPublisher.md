@@ -1,49 +1,26 @@
-[dkershner6-projen-awscdk-core](../README.md) / [Exports](../modules.md) / AwsAppPublisher
+[**dkershner6-projen-awscdk-core**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-awscdk-core](../globals.md) / AwsAppPublisher
 
 # Class: AwsAppPublisher
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`AwsAppPublisher`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](AwsAppPublisher.md#constructor)
-
-### Properties
-
-- [node](AwsAppPublisher.md#node)
-- [options](AwsAppPublisher.md#options)
-- [project](AwsAppPublisher.md#project)
-
-### Methods
-
-- [addPublishToAwsJob](AwsAppPublisher.md#addpublishtoawsjob)
-- [buildPublishToAwsJob](AwsAppPublisher.md#buildpublishtoawsjob)
-- [postSynthesize](AwsAppPublisher.md#postsynthesize)
-- [preSynthesize](AwsAppPublisher.md#presynthesize)
-- [synthesize](AwsAppPublisher.md#synthesize)
-- [toString](AwsAppPublisher.md#tostring)
-- [isComponent](AwsAppPublisher.md#iscomponent)
-- [isConstruct](AwsAppPublisher.md#isconstruct)
-- [workflowNameForProject](AwsAppPublisher.md#workflownameforproject)
-
 ## Constructors
 
-### constructor
+### new AwsAppPublisher()
 
-• **new AwsAppPublisher**(`project`, `options`): [`AwsAppPublisher`](AwsAppPublisher.md)
+> **new AwsAppPublisher**(`project`, `options`): [`AwsAppPublisher`](AwsAppPublisher.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `AwsCdkTypeScriptApp` |
-| `options` | [`AwsAppPublisherOptions`](../interfaces/AwsAppPublisherOptions.md) |
+• **project**: `AwsCdkTypeScriptApp`
+
+• **options**: [`AwsAppPublisherOptions`](../interfaces/AwsAppPublisherOptions.md)
 
 #### Returns
 
@@ -51,66 +28,61 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`AwsAppPublisherOptions`](../interfaces/AwsAppPublisherOptions.md)
-
-___
+***
 
 ### project
 
-• `Readonly` **project**: `AwsCdkTypeScriptApp`
+> `readonly` **project**: `AwsCdkTypeScriptApp`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### addPublishToAwsJob
+### addPublishToAwsJob()
 
-▸ **addPublishToAwsJob**(`branchName?`): `void`
+> `protected` **addPublishToAwsJob**(`branchName`?): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `branchName?` | `string` |
+• **branchName?**: `string`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### buildPublishToAwsJob
+### buildPublishToAwsJob()
 
-▸ **buildPublishToAwsJob**(`deployTask`, `branchName?`): `Job`
+> **buildPublishToAwsJob**(`deployTask`, `branchName`?): `Job`
 
 Allows for manual creation of the publish to AWS Job.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `deployTask` | `Task` | The deploy task to use in the deploy JobStep |
-| `branchName?` | `string` | Optional branchName |
+• **deployTask**: `Task`
+
+The deploy task to use in the deploy JobStep
+
+• **branchName?**: `string`
+
+Optional branchName
 
 #### Returns
 
@@ -118,11 +90,11 @@ Allows for manual creation of the publish to AWS Job.
 
 The job to add
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -132,13 +104,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -148,13 +120,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -164,13 +136,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -180,35 +152,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -228,35 +198,35 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`
 
-___
+***
 
-### workflowNameForProject
+### workflowNameForProject()
 
-▸ **workflowNameForProject**(`base`, `project`, `branchName?`): `string`
+> `static` **workflowNameForProject**(`base`, `project`, `branchName`?): `string`
 
 release.ts in projen, not exported
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `base` | `string` |
-| `project` | `Project` |
-| `branchName?` | `string` |
+• **base**: `string`
+
+• **project**: `Project`
+
+• **branchName?**: `string`
 
 #### Returns
 

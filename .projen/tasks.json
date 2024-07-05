@@ -111,6 +111,18 @@
         }
       ]
     },
+    "docgen:remove": {
+      "name": "docgen:remove",
+      "description": "Remove the docgen directory",
+      "steps": [
+        {
+          "exec": "rm -rf docs/"
+        },
+        {
+          "exec": "pnpm exec nx run-many --target=docgen:remove --output-style=stream --nx-bail"
+        }
+      ]
+    },
     "eject": {
       "name": "eject",
       "description": "Remove projen from the project",

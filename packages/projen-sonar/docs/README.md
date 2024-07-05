@@ -1,4 +1,6 @@
-projen-sonar / [Exports](modules.md)
+**projen-sonar** • [**Docs**](globals.md)
+
+***
 
 # projen-sonar
 

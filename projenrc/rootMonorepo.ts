@@ -45,6 +45,7 @@ export class RootMonorepo extends NxMonorepoProject {
 
         for (const taskName of [
             DKTaskName.CLEAN_COMPILE,
+            DKTaskName.DOCGEN_REMOVE,
             DKTaskName.LINT,
             DKTaskName.TEST_UNIT,
             DKTaskName.TYPE_CHECK,
@@ -56,7 +57,14 @@ export class RootMonorepo extends NxMonorepoProject {
                         target: taskName,
                     }),
                 );
+                continue;
             }
+
+            this.addTask(taskName, {
+                exec: this.execNxRunManyCommand({
+                    target: taskName,
+                }),
+            });
         }
 
         new CSpell(this);

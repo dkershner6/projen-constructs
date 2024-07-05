@@ -1,67 +1,30 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / NxWorkspace
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / NxWorkspace
 
 # Class: NxWorkspace
 
+**`Experimental`**
+
 Component which manages the workspace specific NX Config for the root monorepo.
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`NxWorkspace`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](NxWorkspace.md#constructor)
-
-### Properties
-
-- [affected](NxWorkspace.md#affected)
-- [autoInferProjectTargets](NxWorkspace.md#autoinferprojecttargets)
-- [cacheDirectory](NxWorkspace.md#cachedirectory)
-- [cacheableOperations](NxWorkspace.md#cacheableoperations)
-- [defaultTaskRunner](NxWorkspace.md#defaulttaskrunner)
-- [defaultTaskRunnerOptions](NxWorkspace.md#defaulttaskrunneroptions)
-- [extends](NxWorkspace.md#extends)
-- [namedInputs](NxWorkspace.md#namedinputs)
-- [node](NxWorkspace.md#node)
-- [nonNativeHasher](NxWorkspace.md#nonnativehasher)
-- [npmScope](NxWorkspace.md#npmscope)
-- [nxIgnore](NxWorkspace.md#nxignore)
-- [nxJson](NxWorkspace.md#nxjson)
-- [plugins](NxWorkspace.md#plugins)
-- [pluginsConfig](NxWorkspace.md#pluginsconfig)
-- [project](NxWorkspace.md#project)
-- [targetDefaults](NxWorkspace.md#targetdefaults)
-- [tasksRunnerOptions](NxWorkspace.md#tasksrunneroptions)
-- [workspaceLayout](NxWorkspace.md#workspacelayout)
-
-### Methods
-
-- [postSynthesize](NxWorkspace.md#postsynthesize)
-- [preSynthesize](NxWorkspace.md#presynthesize)
-- [setNamedInput](NxWorkspace.md#setnamedinput)
-- [setTargetDefault](NxWorkspace.md#settargetdefault)
-- [synthesize](NxWorkspace.md#synthesize)
-- [toString](NxWorkspace.md#tostring)
-- [useNxCloud](NxWorkspace.md#usenxcloud)
-- [isComponent](NxWorkspace.md#iscomponent)
-- [isConstruct](NxWorkspace.md#isconstruct)
-- [of](NxWorkspace.md#of)
-
 ## Constructors
 
-### constructor
+### new NxWorkspace()
 
-• **new NxWorkspace**(`project`): [`NxWorkspace`](NxWorkspace.md)
+> **new NxWorkspace**(`project`): [`NxWorkspace`](NxWorkspace.md)
+
+**`Experimental`**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `Project` |
+• **project**: `Project`
 
 #### Returns
 
@@ -69,129 +32,155 @@ Component which manages the workspace specific NX Config for the root monorepo.
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### affected
 
-• **affected**: `INxAffectedConfig`
+> **affected**: `INxAffectedConfig`
+
+**`Experimental`**
 
 Default options for `nx affected`
 
-___
+***
 
 ### autoInferProjectTargets
 
-• **autoInferProjectTargets**: `boolean` = `false`
+> **autoInferProjectTargets**: `boolean` = `false`
+
+**`Experimental`**
 
 Automatically infer NxProject targets based on project type.
 
-___
+***
 
-### cacheDirectory
+### cacheDirectory?
 
-• `Optional` **cacheDirectory**: `string`
+> `optional` **cacheDirectory**: `string`
+
+**`Experimental`**
 
 Override the default nx cacheDirectory
  May cause `Could not find 'nx' module in this workspace.` [issue](https://github.com/nrwl/nx/issues/8929). If you experience this issue, please remove `cacheDirectory` override.
 
-___
+***
 
 ### cacheableOperations
 
-• **cacheableOperations**: `string`[]
+> **cacheableOperations**: `string`[]
+
+**`Experimental`**
 
 List of cacheable operations.
 
-___
+***
 
 ### defaultTaskRunner
 
-• **defaultTaskRunner**: `string` = `"nx/tasks-runners/default"`
+> **defaultTaskRunner**: `string` = `"nx/tasks-runners/default"`
+
+**`Experimental`**
 
 Default task runner
 
-___
+***
 
 ### defaultTaskRunnerOptions
 
-• **defaultTaskRunnerOptions**: `Obj`\<`any`\>
+> **defaultTaskRunnerOptions**: `Obj`\<`any`\>
+
+**`Experimental`**
 
 Default task runner options
 
-___
+***
 
 ### extends
 
-• **extends**: `string` = `"nx/presets/npm.json"`
+> **extends**: `string` = `"nx/presets/npm.json"`
+
+**`Experimental`**
 
 Some presets use the extends property to hide some default options in a separate json file.
 The json file specified in the extends property is located in your node_modules folder.
 The Nx preset files are specified in the nx package.
 
-**`Default`**
+#### Default
 
 ```ts
 "nx/presets/npm.json"
 ```
 
-___
+***
 
 ### namedInputs
 
-• **namedInputs**: `INamedInputs`
+> **namedInputs**: `INamedInputs`
+
+**`Experimental`**
 
 Named inputs
 
-**`See`**
+#### See
 
 https://nx.dev/reference/nx-json#inputs-&-namedinputs
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
+
+**`Experimental`**
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### nonNativeHasher
 
-• **nonNativeHasher**: `boolean` = `false`
+> **nonNativeHasher**: `boolean` = `false`
+
+**`Experimental`**
 
 Indicates if non-native nx hasher will be used.
 
 If true, the NX_NON_NATIVE_HASHER env var will be set
 to true for all project tasks.
 
-___
+***
 
 ### npmScope
 
-• **npmScope**: `string` = `"monorepo"`
+> **npmScope**: `string` = `"monorepo"`
+
+**`Experimental`**
 
 Tells Nx what prefix to use when generating library imports.
 
-___
+***
 
 ### nxIgnore
 
-• `Readonly` **nxIgnore**: `IgnoreFile`
+> `readonly` **nxIgnore**: `IgnoreFile`
+
+**`Experimental`**
 
 .nxignore file
 
-___
+***
 
 ### nxJson
 
-• `Readonly` **nxJson**: `JsonFile`
+> `readonly` **nxJson**: `JsonFile`
+
+**`Experimental`**
 
 Raw nx.json file to support overrides that aren't handled
 directly.
@@ -200,67 +189,81 @@ directly.
 in the properties and only included in final synthesized output,
 and likely to override native handling.
 
-**`Advanced`**
+#### Advanced
 
-___
+***
 
 ### plugins
 
-• **plugins**: `string`[] = `[]`
+> **plugins**: `string`[] = `[]`
+
+**`Experimental`**
 
 Plugins for extending the project graph
 
-___
+***
 
 ### pluginsConfig
 
-• **pluginsConfig**: `Obj`\<`any`\> = `{}`
+> **pluginsConfig**: `Obj`\<`any`\> = `{}`
+
+**`Experimental`**
 
 Configuration for Nx Plugins
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
+
+**`Experimental`**
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### targetDefaults
 
-• **targetDefaults**: `ITargetDefaults`
+> **targetDefaults**: `ITargetDefaults`
+
+**`Experimental`**
 
 Dependencies between different target names across all projects
 
-**`See`**
+#### See
 
 https://nx.dev/reference/nx-json#target-defaults
 
-___
+***
 
 ### tasksRunnerOptions
 
-• **tasksRunnerOptions**: `Obj`\<`any`\>
+> **tasksRunnerOptions**: `Obj`\<`any`\>
+
+**`Experimental`**
 
 Task runner options.
 
-___
+***
 
-### workspaceLayout
+### workspaceLayout?
 
-• `Optional` **workspaceLayout**: `IWorkspaceLayout`
+> `optional` **workspaceLayout**: `IWorkspaceLayout`
+
+**`Experimental`**
 
 Where new apps + libs should be placed
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
+
+**`Experimental`**
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -270,84 +273,93 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
+
+**`Experimental`**
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+#### Inherit Doc
 
 #### Overrides
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### setNamedInput
+### setNamedInput()
 
-▸ **setNamedInput**(`name`, `inputs`): `void`
+> **setNamedInput**(`name`, `inputs`): `void`
+
+**`Experimental`**
 
 Set `namedInput` value helper
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `inputs` | `string`[] |
+• **name**: `string`
+
+• **inputs**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### setTargetDefault
+### setTargetDefault()
 
-▸ **setTargetDefault**(`name`, `target`, `merge?`): `void`
+> **setTargetDefault**(`name`, `target`, `merge`): `void`
+
+**`Experimental`**
 
 Set `targetDefaults` helper
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `name` | `string` | `undefined` |
-| `target` | `IProjectTarget` | `undefined` |
-| `merge` | `boolean` | `false` |
+• **name**: `string`
+
+• **target**: `IProjectTarget`
+
+• **merge**: `boolean` = `false`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
+
+**`Experimental`**
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+#### Inherit Doc
 
 #### Overrides
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
+
+**`Experimental`**
 
 Returns a string representation of this construct.
 
@@ -357,53 +369,55 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### useNxCloud
+### useNxCloud()
 
-▸ **useNxCloud**(`readOnlyAccessToken`): `void`
+> **useNxCloud**(`readOnlyAccessToken`): `void`
+
+**`Experimental`**
 
 Setup workspace to use nx-cloud
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `readOnlyAccessToken` | `string` |
+• **readOnlyAccessToken**: `string`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
+
+**`Experimental`**
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
+
+**`Experimental`**
 
 Checks if `x` is a construct.
 
@@ -423,33 +437,35 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`scope`): `undefined` \| [`NxWorkspace`](NxWorkspace.md)
+> `static` **of**(`scope`): `undefined` \| [`NxWorkspace`](NxWorkspace.md)
+
+**`Experimental`**
 
 Retrieves the singleton instance associated with project root.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scope` | `Project` | project instance. |
+• **scope**: `Project`
+
+project instance.
 
 #### Returns
 

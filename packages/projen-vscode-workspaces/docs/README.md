@@ -1,4 +1,6 @@
-projen-vscode-workspaces / [Exports](modules.md)
+**projen-vscode-workspaces** • [**Docs**](globals.md)
+
+***
 
 # projen-vscode-workspaces
 

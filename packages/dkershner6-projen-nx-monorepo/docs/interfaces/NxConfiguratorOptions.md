@@ -1,19 +1,17 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / NxConfiguratorOptions
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / NxConfiguratorOptions
 
 # Interface: NxConfiguratorOptions
 
 NXConfigurator options.
 
-## Table of contents
-
-### Properties
-
-- [defaultReleaseBranch](NxConfiguratorOptions.md#defaultreleasebranch)
-
 ## Properties
 
-### defaultReleaseBranch
+### defaultReleaseBranch?
 
-• `Optional` `Readonly` **defaultReleaseBranch**: `string`
+> `readonly` `optional` **defaultReleaseBranch**: `string`
 
 Branch that NX affected should run against.

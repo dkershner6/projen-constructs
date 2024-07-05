@@ -1,4 +1,6 @@
-projen-typedoc / [Exports](modules.md)
+**projen-typedoc** • [**Docs**](globals.md)
+
+***
 
 # projen-typedoc
 

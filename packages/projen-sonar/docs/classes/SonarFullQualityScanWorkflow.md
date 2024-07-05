@@ -1,49 +1,30 @@
-[projen-sonar](../README.md) / [Exports](../modules.md) / SonarFullQualityScanWorkflow
+[**projen-sonar**](../README.md) • **Docs**
+
+***
+
+[projen-sonar](../globals.md) / SonarFullQualityScanWorkflow
 
 # Class: SonarFullQualityScanWorkflow
 
 Run a full quality scan on your project after pushing to your default branch(es).
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`SonarFullQualityScanWorkflow`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SonarFullQualityScanWorkflow.md#constructor)
-
-### Properties
-
-- [node](SonarFullQualityScanWorkflow.md#node)
-- [project](SonarFullQualityScanWorkflow.md#project)
-- [workflow](SonarFullQualityScanWorkflow.md#workflow)
-
-### Methods
-
-- [postSynthesize](SonarFullQualityScanWorkflow.md#postsynthesize)
-- [preSynthesize](SonarFullQualityScanWorkflow.md#presynthesize)
-- [synthesize](SonarFullQualityScanWorkflow.md#synthesize)
-- [toString](SonarFullQualityScanWorkflow.md#tostring)
-- [isComponent](SonarFullQualityScanWorkflow.md#iscomponent)
-- [isConstruct](SonarFullQualityScanWorkflow.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new SonarFullQualityScanWorkflow()
 
-• **new SonarFullQualityScanWorkflow**(`project`, `name?`, `options?`): [`SonarFullQualityScanWorkflow`](SonarFullQualityScanWorkflow.md)
+> **new SonarFullQualityScanWorkflow**(`project`, `name`?, `options`?): [`SonarFullQualityScanWorkflow`](SonarFullQualityScanWorkflow.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `NodeProject` |
-| `name?` | `string` |
-| `options?` | [`SonarFullQualityScanWorkflowOptions`](../interfaces/SonarFullQualityScanWorkflowOptions.md) |
+• **project**: `NodeProject`
+
+• **name?**: `string`
+
+• **options?**: [`SonarFullQualityScanWorkflowOptions`](../interfaces/SonarFullQualityScanWorkflowOptions.md)
 
 #### Returns
 
@@ -51,41 +32,41 @@ Run a full quality scan on your project after pushing to your default branch(es)
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• **project**: `NodeProject`
+> **project**: `NodeProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### workflow
 
-• `Readonly` **workflow**: `undefined` \| `GithubWorkflow`
+> `readonly` **workflow**: `undefined` \| `GithubWorkflow`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -95,13 +76,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -111,13 +92,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -127,13 +108,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -143,35 +124,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -191,16 +170,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

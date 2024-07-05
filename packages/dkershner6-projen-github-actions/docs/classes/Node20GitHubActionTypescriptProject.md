@@ -1,139 +1,24 @@
-[dkershner6-projen-github-actions](../README.md) / [Exports](../modules.md) / Node20GitHubActionTypescriptProject
+[**dkershner6-projen-github-actions**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-github-actions](../globals.md) / Node20GitHubActionTypescriptProject
 
 # Class: Node20GitHubActionTypescriptProject
 
-## Hierarchy
+## Extends
 
 - `GitHubActionTypeScriptProject`
 
-  ↳ **`Node20GitHubActionTypescriptProject`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Node20GitHubActionTypescriptProject.md#constructor)
-
-### Properties
-
-- [artifactsDirectory](Node20GitHubActionTypescriptProject.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](Node20GitHubActionTypescriptProject.md#artifactsjavascriptdirectory)
-- [autoApprove](Node20GitHubActionTypescriptProject.md#autoapprove)
-- [autoMerge](Node20GitHubActionTypescriptProject.md#automerge)
-- [buildWorkflow](Node20GitHubActionTypescriptProject.md#buildworkflow)
-- [bundler](Node20GitHubActionTypescriptProject.md#bundler)
-- [commitGenerated](Node20GitHubActionTypescriptProject.md#commitgenerated)
-- [defaultTask](Node20GitHubActionTypescriptProject.md#defaulttask)
-- [deps](Node20GitHubActionTypescriptProject.md#deps)
-- [devContainer](Node20GitHubActionTypescriptProject.md#devcontainer)
-- [docgen](Node20GitHubActionTypescriptProject.md#docgen)
-- [docsDirectory](Node20GitHubActionTypescriptProject.md#docsdirectory)
-- [eslint](Node20GitHubActionTypescriptProject.md#eslint)
-- [gitattributes](Node20GitHubActionTypescriptProject.md#gitattributes)
-- [github](Node20GitHubActionTypescriptProject.md#github)
-- [gitignore](Node20GitHubActionTypescriptProject.md#gitignore)
-- [gitpod](Node20GitHubActionTypescriptProject.md#gitpod)
-- [initProject](Node20GitHubActionTypescriptProject.md#initproject)
-- [jest](Node20GitHubActionTypescriptProject.md#jest)
-- [libdir](Node20GitHubActionTypescriptProject.md#libdir)
-- [logger](Node20GitHubActionTypescriptProject.md#logger)
-- [name](Node20GitHubActionTypescriptProject.md#name)
-- [node](Node20GitHubActionTypescriptProject.md#node)
-- [nodeVersion](Node20GitHubActionTypescriptProject.md#nodeversion)
-- [npmignore](Node20GitHubActionTypescriptProject.md#npmignore)
-- [outdir](Node20GitHubActionTypescriptProject.md#outdir)
-- [package](Node20GitHubActionTypescriptProject.md#package)
-- [parent](Node20GitHubActionTypescriptProject.md#parent)
-- [prettier](Node20GitHubActionTypescriptProject.md#prettier)
-- [projectBuild](Node20GitHubActionTypescriptProject.md#projectbuild)
-- [projectType](Node20GitHubActionTypescriptProject.md#projecttype)
-- [publisher](Node20GitHubActionTypescriptProject.md#publisher)
-- [release](Node20GitHubActionTypescriptProject.md#release)
-- [runScriptCommand](Node20GitHubActionTypescriptProject.md#runscriptcommand)
-- [srcdir](Node20GitHubActionTypescriptProject.md#srcdir)
-- [tasks](Node20GitHubActionTypescriptProject.md#tasks)
-- [testdir](Node20GitHubActionTypescriptProject.md#testdir)
-- [tsconfig](Node20GitHubActionTypescriptProject.md#tsconfig)
-- [tsconfigDev](Node20GitHubActionTypescriptProject.md#tsconfigdev)
-- [tsconfigEslint](Node20GitHubActionTypescriptProject.md#tsconfigeslint)
-- [upgradeWorkflow](Node20GitHubActionTypescriptProject.md#upgradeworkflow)
-- [vscode](Node20GitHubActionTypescriptProject.md#vscode)
-- [watchTask](Node20GitHubActionTypescriptProject.md#watchtask)
-- [workflowBootstrapSteps](Node20GitHubActionTypescriptProject.md#workflowbootstrapsteps)
-- [workflowPackageCache](Node20GitHubActionTypescriptProject.md#workflowpackagecache)
-- [DEFAULT\_TASK](Node20GitHubActionTypescriptProject.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](Node20GitHubActionTypescriptProject.md#default_ts_jest_tranform_pattern)
-
-### Accessors
-
-- [allowLibraryDependencies](Node20GitHubActionTypescriptProject.md#allowlibrarydependencies)
-- [buildTask](Node20GitHubActionTypescriptProject.md#buildtask)
-- [buildWorkflowJobId](Node20GitHubActionTypescriptProject.md#buildworkflowjobid)
-- [compileTask](Node20GitHubActionTypescriptProject.md#compiletask)
-- [components](Node20GitHubActionTypescriptProject.md#components)
-- [ejected](Node20GitHubActionTypescriptProject.md#ejected)
-- [entrypoint](Node20GitHubActionTypescriptProject.md#entrypoint)
-- [files](Node20GitHubActionTypescriptProject.md#files)
-- [manifest](Node20GitHubActionTypescriptProject.md#manifest)
-- [maxNodeVersion](Node20GitHubActionTypescriptProject.md#maxnodeversion)
-- [minNodeVersion](Node20GitHubActionTypescriptProject.md#minnodeversion)
-- [npmrc](Node20GitHubActionTypescriptProject.md#npmrc)
-- [packageManager](Node20GitHubActionTypescriptProject.md#packagemanager)
-- [packageTask](Node20GitHubActionTypescriptProject.md#packagetask)
-- [postCompileTask](Node20GitHubActionTypescriptProject.md#postcompiletask)
-- [preCompileTask](Node20GitHubActionTypescriptProject.md#precompiletask)
-- [projenCommand](Node20GitHubActionTypescriptProject.md#projencommand)
-- [root](Node20GitHubActionTypescriptProject.md#root)
-- [subprojects](Node20GitHubActionTypescriptProject.md#subprojects)
-- [testTask](Node20GitHubActionTypescriptProject.md#testtask)
-
-### Methods
-
-- [addBins](Node20GitHubActionTypescriptProject.md#addbins)
-- [addBundledDeps](Node20GitHubActionTypescriptProject.md#addbundleddeps)
-- [addCompileCommand](Node20GitHubActionTypescriptProject.md#addcompilecommand)
-- [addDeps](Node20GitHubActionTypescriptProject.md#adddeps)
-- [addDevDeps](Node20GitHubActionTypescriptProject.md#adddevdeps)
-- [addExcludeFromCleanup](Node20GitHubActionTypescriptProject.md#addexcludefromcleanup)
-- [addFields](Node20GitHubActionTypescriptProject.md#addfields)
-- [addGitIgnore](Node20GitHubActionTypescriptProject.md#addgitignore)
-- [addKeywords](Node20GitHubActionTypescriptProject.md#addkeywords)
-- [addPackageIgnore](Node20GitHubActionTypescriptProject.md#addpackageignore)
-- [addPeerDeps](Node20GitHubActionTypescriptProject.md#addpeerdeps)
-- [addScripts](Node20GitHubActionTypescriptProject.md#addscripts)
-- [addTask](Node20GitHubActionTypescriptProject.md#addtask)
-- [addTestCommand](Node20GitHubActionTypescriptProject.md#addtestcommand)
-- [addTip](Node20GitHubActionTypescriptProject.md#addtip)
-- [annotateGenerated](Node20GitHubActionTypescriptProject.md#annotategenerated)
-- [hasScript](Node20GitHubActionTypescriptProject.md#hasscript)
-- [postSynthesize](Node20GitHubActionTypescriptProject.md#postsynthesize)
-- [preSynthesize](Node20GitHubActionTypescriptProject.md#presynthesize)
-- [removeScript](Node20GitHubActionTypescriptProject.md#removescript)
-- [removeTask](Node20GitHubActionTypescriptProject.md#removetask)
-- [renderWorkflowSetup](Node20GitHubActionTypescriptProject.md#renderworkflowsetup)
-- [runTaskCommand](Node20GitHubActionTypescriptProject.md#runtaskcommand)
-- [setScript](Node20GitHubActionTypescriptProject.md#setscript)
-- [synth](Node20GitHubActionTypescriptProject.md#synth)
-- [toString](Node20GitHubActionTypescriptProject.md#tostring)
-- [tryFindFile](Node20GitHubActionTypescriptProject.md#tryfindfile)
-- [tryFindJsonFile](Node20GitHubActionTypescriptProject.md#tryfindjsonfile)
-- [tryFindObjectFile](Node20GitHubActionTypescriptProject.md#tryfindobjectfile)
-- [tryRemoveFile](Node20GitHubActionTypescriptProject.md#tryremovefile)
-- [isConstruct](Node20GitHubActionTypescriptProject.md#isconstruct)
-- [isProject](Node20GitHubActionTypescriptProject.md#isproject)
-- [of](Node20GitHubActionTypescriptProject.md#of)
-
 ## Constructors
 
-### constructor
+### new Node20GitHubActionTypescriptProject()
 
-• **new Node20GitHubActionTypescriptProject**(`options`): [`Node20GitHubActionTypescriptProject`](Node20GitHubActionTypescriptProject.md)
+> **new Node20GitHubActionTypescriptProject**(`options`): [`Node20GitHubActionTypescriptProject`](Node20GitHubActionTypescriptProject.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `GitHubActionTypeScriptOptions` |
+• **options**: `GitHubActionTypeScriptOptions`
 
 #### Returns
 
@@ -141,13 +26,13 @@
 
 #### Overrides
 
-GitHubActionTypeScriptProject.constructor
+`GitHubActionTypeScriptProject.constructor`
 
 ## Properties
 
 ### artifactsDirectory
 
-• `Readonly` **artifactsDirectory**: `string`
+> `readonly` **artifactsDirectory**: `string`
 
 The build output directory. An npm tarball will be created under the `js`
 subdirectory. For example, if this is set to `dist` (the default), the npm
@@ -155,108 +40,108 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.artifactsDirectory
+`GitHubActionTypeScriptProject.artifactsDirectory`
 
-___
+***
 
 ### artifactsJavascriptDirectory
 
-• `Readonly` **artifactsJavascriptDirectory**: `string`
+> `readonly` **artifactsJavascriptDirectory**: `string`
 
 The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.artifactsJavascriptDirectory
+`GitHubActionTypeScriptProject.artifactsJavascriptDirectory`
 
-___
+***
 
-### autoApprove
+### autoApprove?
 
-• `Optional` `Readonly` **autoApprove**: `AutoApprove`
+> `readonly` `optional` **autoApprove**: `AutoApprove`
 
 Auto approve set up for this project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.autoApprove
+`GitHubActionTypeScriptProject.autoApprove`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `AutoMerge`
+> `readonly` `optional` **autoMerge**: `AutoMerge`
 
 Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.autoMerge
+`GitHubActionTypeScriptProject.autoMerge`
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `BuildWorkflow`
+> `readonly` `optional` **buildWorkflow**: `BuildWorkflow`
 
 The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.buildWorkflow
+`GitHubActionTypeScriptProject.buildWorkflow`
 
-___
+***
 
 ### bundler
 
-• `Readonly` **bundler**: `Bundler`
+> `readonly` **bundler**: `Bundler`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.bundler
+`GitHubActionTypeScriptProject.bundler`
 
-___
+***
 
 ### commitGenerated
 
-• `Readonly` **commitGenerated**: `boolean`
+> `readonly` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.commitGenerated
+`GitHubActionTypeScriptProject.commitGenerated`
 
-___
+***
 
-### defaultTask
+### defaultTask?
 
-• `Optional` `Readonly` **defaultTask**: `Task`
+> `readonly` `optional` **defaultTask**: `Task`
 
 This is the "default" task, the one that executes "projen". Undefined if
 the project is being ejected.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.defaultTask
+`GitHubActionTypeScriptProject.defaultTask`
 
-___
+***
 
 ### deps
 
-• `Readonly` **deps**: `Dependencies`
+> `readonly` **deps**: `Dependencies`
 
 Project dependencies.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.deps
+`GitHubActionTypeScriptProject.deps`
 
-___
+***
 
 ### devContainer
 
-• `Readonly` **devContainer**: `undefined` \| `DevContainer`
+> `readonly` **devContainer**: `undefined` \| `DevContainer`
 
 Access for .devcontainer.json (used for GitHub Codespaces)
 
@@ -264,55 +149,55 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.devContainer
+`GitHubActionTypeScriptProject.devContainer`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.docgen
+`GitHubActionTypeScriptProject.docgen`
 
-___
+***
 
 ### docsDirectory
 
-• `Readonly` **docsDirectory**: `string`
+> `readonly` **docsDirectory**: `string`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.docsDirectory
+`GitHubActionTypeScriptProject.docsDirectory`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `Eslint`
+> `readonly` `optional` **eslint**: `Eslint`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.eslint
+`GitHubActionTypeScriptProject.eslint`
 
-___
+***
 
 ### gitattributes
 
-• `Readonly` **gitattributes**: `GitAttributesFile`
+> `readonly` **gitattributes**: `GitAttributesFile`
 
 The .gitattributes file for this repository.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.gitattributes
+`GitHubActionTypeScriptProject.gitattributes`
 
-___
+***
 
 ### github
 
-• `Readonly` **github**: `undefined` \| `GitHub`
+> `readonly` **github**: `undefined` \| `GitHub`
 
 Access all github components.
 
@@ -320,25 +205,25 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.github
+`GitHubActionTypeScriptProject.github`
 
-___
+***
 
 ### gitignore
 
-• `Readonly` **gitignore**: `IgnoreFile`
+> `readonly` **gitignore**: `IgnoreFile`
 
 .gitignore
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.gitignore
+`GitHubActionTypeScriptProject.gitignore`
 
-___
+***
 
 ### gitpod
 
-• `Readonly` **gitpod**: `undefined` \| `Gitpod`
+> `readonly` **gitpod**: `undefined` \| `Gitpod`
 
 Access for Gitpod
 
@@ -346,13 +231,13 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.gitpod
+`GitHubActionTypeScriptProject.gitpod`
 
-___
+***
 
-### initProject
+### initProject?
 
-• `Optional` `Readonly` **initProject**: `InitProject`
+> `readonly` `optional` **initProject**: `InitProject`
 
 The options used when this project is bootstrapped via `projen new`. It
 includes the original set of options passed to the CLI and also the JSII
@@ -360,284 +245,284 @@ FQN of the project type.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.initProject
+`GitHubActionTypeScriptProject.initProject`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `Jest`
+> `readonly` `optional` **jest**: `Jest`
 
 The Jest configuration (if enabled)
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.jest
+`GitHubActionTypeScriptProject.jest`
 
-___
+***
 
 ### libdir
 
-• `Readonly` **libdir**: `string`
+> `readonly` **libdir**: `string`
 
 The directory in which compiled .js files reside.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.libdir
+`GitHubActionTypeScriptProject.libdir`
 
-___
+***
 
 ### logger
 
-• `Readonly` **logger**: `Logger`
+> `readonly` **logger**: `Logger`
 
 Logging utilities.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.logger
+`GitHubActionTypeScriptProject.logger`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 Project name.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.name
+`GitHubActionTypeScriptProject.name`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.node
+`GitHubActionTypeScriptProject.node`
 
-___
+***
 
-### nodeVersion
+### nodeVersion?
 
-• `Protected` `Optional` `Readonly` **nodeVersion**: `string`
+> `protected` `readonly` `optional` **nodeVersion**: `string`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.nodeVersion
+`GitHubActionTypeScriptProject.nodeVersion`
 
-___
+***
 
-### npmignore
+### npmignore?
 
-• `Optional` `Readonly` **npmignore**: `IgnoreFile`
+> `readonly` `optional` **npmignore**: `IgnoreFile`
 
 The .npmignore file.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.npmignore
+`GitHubActionTypeScriptProject.npmignore`
 
-___
+***
 
 ### outdir
 
-• `Readonly` **outdir**: `string`
+> `readonly` **outdir**: `string`
 
 Absolute output directory of this project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.outdir
+`GitHubActionTypeScriptProject.outdir`
 
-___
+***
 
 ### package
 
-• `Readonly` **package**: `NodePackage`
+> `readonly` **package**: `NodePackage`
 
 API for managing the node package.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.package
+`GitHubActionTypeScriptProject.package`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.parent
+`GitHubActionTypeScriptProject.parent`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `Prettier`
+> `readonly` `optional` **prettier**: `Prettier`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.prettier
+`GitHubActionTypeScriptProject.prettier`
 
-___
+***
 
 ### projectBuild
 
-• `Readonly` **projectBuild**: `ProjectBuild`
+> `readonly` **projectBuild**: `ProjectBuild`
 
 Manages the build process of the project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.projectBuild
+`GitHubActionTypeScriptProject.projectBuild`
 
-___
+***
 
 ### projectType
 
-• `Readonly` **projectType**: `ProjectType`
+> `readonly` **projectType**: `ProjectType`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.projectType
+`GitHubActionTypeScriptProject.projectType`
 
-___
+***
 
-### publisher
+### ~~publisher?~~
 
-• `Optional` `Readonly` **publisher**: `Publisher`
+> `readonly` `optional` **publisher**: `Publisher`
 
 Package publisher. This will be `undefined` if the project does not have a
 release workflow.
 
-**`Deprecated`**
+#### Deprecated
 
 use `release.publisher`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.publisher
+`GitHubActionTypeScriptProject.publisher`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `Release`
+> `readonly` `optional` **release**: `Release`
 
 Release management.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.release
+`GitHubActionTypeScriptProject.release`
 
-___
+***
 
 ### runScriptCommand
 
-• `Readonly` **runScriptCommand**: `string`
+> `readonly` **runScriptCommand**: `string`
 
 The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager).
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.runScriptCommand
+`GitHubActionTypeScriptProject.runScriptCommand`
 
-___
+***
 
 ### srcdir
 
-• `Readonly` **srcdir**: `string`
+> `readonly` **srcdir**: `string`
 
 The directory in which the .ts sources reside.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.srcdir
+`GitHubActionTypeScriptProject.srcdir`
 
-___
+***
 
 ### tasks
 
-• `Readonly` **tasks**: `Tasks`
+> `readonly` **tasks**: `Tasks`
 
 Project tasks.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tasks
+`GitHubActionTypeScriptProject.tasks`
 
-___
+***
 
 ### testdir
 
-• `Readonly` **testdir**: `string`
+> `readonly` **testdir**: `string`
 
 The directory in which tests reside.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.testdir
+`GitHubActionTypeScriptProject.testdir`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfig`
+> `readonly` `optional` **tsconfig**: `TypescriptConfig`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tsconfig
+`GitHubActionTypeScriptProject.tsconfig`
 
-___
+***
 
 ### tsconfigDev
 
-• `Readonly` **tsconfigDev**: `TypescriptConfig`
+> `readonly` **tsconfigDev**: `TypescriptConfig`
 
 A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tsconfigDev
+`GitHubActionTypeScriptProject.tsconfigDev`
 
-___
+***
 
-### tsconfigEslint
+### tsconfigEslint?
 
-• `Optional` `Readonly` **tsconfigEslint**: `TypescriptConfig`
+> `readonly` `optional` **tsconfigEslint**: `TypescriptConfig`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tsconfigEslint
+`GitHubActionTypeScriptProject.tsconfigEslint`
 
-___
+***
 
-### upgradeWorkflow
+### upgradeWorkflow?
 
-• `Optional` `Readonly` **upgradeWorkflow**: `UpgradeDependencies`
+> `readonly` `optional` **upgradeWorkflow**: `UpgradeDependencies`
 
 The upgrade workflow.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.upgradeWorkflow
+`GitHubActionTypeScriptProject.upgradeWorkflow`
 
-___
+***
 
 ### vscode
 
-• `Readonly` **vscode**: `undefined` \| `VsCode`
+> `readonly` **vscode**: `undefined` \| `VsCode`
 
 Access all VSCode components.
 
@@ -645,86 +530,86 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.vscode
+`GitHubActionTypeScriptProject.vscode`
 
-___
+***
 
 ### watchTask
 
-• `Readonly` **watchTask**: `Task`
+> `readonly` **watchTask**: `Task`
 
 The "watch" task.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.watchTask
+`GitHubActionTypeScriptProject.watchTask`
 
-___
+***
 
 ### workflowBootstrapSteps
 
-• `Protected` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `protected` `readonly` **workflowBootstrapSteps**: `JobStep`[]
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.workflowBootstrapSteps
+`GitHubActionTypeScriptProject.workflowBootstrapSteps`
 
-___
+***
 
 ### workflowPackageCache
 
-• `Protected` `Readonly` **workflowPackageCache**: `boolean`
+> `protected` `readonly` **workflowPackageCache**: `boolean`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.workflowPackageCache
+`GitHubActionTypeScriptProject.workflowPackageCache`
 
-___
+***
 
 ### DEFAULT\_TASK
 
-▪ `Static` `Readonly` **DEFAULT\_TASK**: ``"default"``
+> `readonly` `static` **DEFAULT\_TASK**: `"default"` = `"default"`
 
 The name of the default task (the task executed when `projen` is run without arguments). Normally
 this task should synthesize the project files.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.DEFAULT\_TASK
+`GitHubActionTypeScriptProject.DEFAULT_TASK`
 
-___
+***
 
 ### DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
-▪ `Static` `Readonly` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: ``"^.+\\.[t]sx?$"``
+> `readonly` `static` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: "^.+\\.\[t\]sx?$" = `"^.+\\.[t]sx?$"`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+`GitHubActionTypeScriptProject.DEFAULT_TS_JEST_TRANFORM_PATTERN`
 
 ## Accessors
 
 ### allowLibraryDependencies
 
-• `get` **allowLibraryDependencies**(): `boolean`
+> `get` **allowLibraryDependencies**(): `boolean`
+
+#### Deprecated
+
+use `package.allowLibraryDependencies`
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
-
-use `package.allowLibraryDependencies`
-
 #### Inherited from
 
-GitHubActionTypeScriptProject.allowLibraryDependencies
+`GitHubActionTypeScriptProject.allowLibraryDependencies`
 
-___
+***
 
 ### buildTask
 
-• `get` **buildTask**(): `Task`
+> `get` **buildTask**(): `Task`
 
 #### Returns
 
@@ -732,13 +617,13 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.buildTask
+`GitHubActionTypeScriptProject.buildTask`
 
-___
+***
 
 ### buildWorkflowJobId
 
-• `get` **buildWorkflowJobId**(): `undefined` \| `string`
+> `get` **buildWorkflowJobId**(): `undefined` \| `string`
 
 The job ID of the build workflow.
 
@@ -748,13 +633,13 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.buildWorkflowJobId
+`GitHubActionTypeScriptProject.buildWorkflowJobId`
 
-___
+***
 
 ### compileTask
 
-• `get` **compileTask**(): `Task`
+> `get` **compileTask**(): `Task`
 
 #### Returns
 
@@ -762,13 +647,13 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.compileTask
+`GitHubActionTypeScriptProject.compileTask`
 
-___
+***
 
 ### components
 
-• `get` **components**(): `Component`[]
+> `get` **components**(): `Component`[]
 
 Returns all the components within this project.
 
@@ -778,13 +663,13 @@ Returns all the components within this project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.components
+`GitHubActionTypeScriptProject.components`
 
-___
+***
 
 ### ejected
 
-• `get` **ejected**(): `boolean`
+> `get` **ejected**(): `boolean`
 
 Whether or not the project is being ejected.
 
@@ -794,31 +679,31 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.ejected
+`GitHubActionTypeScriptProject.ejected`
 
-___
+***
 
 ### entrypoint
 
-• `get` **entrypoint**(): `string`
+> `get` **entrypoint**(): `string`
+
+#### Deprecated
+
+use `package.entrypoint`
 
 #### Returns
 
 `string`
 
-**`Deprecated`**
-
-use `package.entrypoint`
-
 #### Inherited from
 
-GitHubActionTypeScriptProject.entrypoint
+`GitHubActionTypeScriptProject.entrypoint`
 
-___
+***
 
 ### files
 
-• `get` **files**(): `FileBase`[]
+> `get` **files**(): `FileBase`[]
 
 All files in this project.
 
@@ -828,31 +713,31 @@ All files in this project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.files
+`GitHubActionTypeScriptProject.files`
 
-___
+***
 
 ### manifest
 
-• `get` **manifest**(): `any`
+> `get` **manifest**(): `any`
+
+#### Deprecated
+
+use `package.addField(x, y)`
 
 #### Returns
 
 `any`
 
-**`Deprecated`**
-
-use `package.addField(x, y)`
-
 #### Inherited from
 
-GitHubActionTypeScriptProject.manifest
+`GitHubActionTypeScriptProject.manifest`
 
-___
+***
 
 ### maxNodeVersion
 
-• `get` **maxNodeVersion**(): `undefined` \| `string`
+> `get` **maxNodeVersion**(): `undefined` \| `string`
 
 Maximum node version required by this package.
 
@@ -862,13 +747,13 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.maxNodeVersion
+`GitHubActionTypeScriptProject.maxNodeVersion`
 
-___
+***
 
 ### minNodeVersion
 
-• `get` **minNodeVersion**(): `undefined` \| `string`
+> `get` **minNodeVersion**(): `undefined` \| `string`
 
 Minimum node.js version required by this package.
 
@@ -878,13 +763,13 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.minNodeVersion
+`GitHubActionTypeScriptProject.minNodeVersion`
 
-___
+***
 
 ### npmrc
 
-• `get` **npmrc**(): `NpmConfig`
+> `get` **npmrc**(): `NpmConfig`
 
 The .npmrc file
 
@@ -894,33 +779,33 @@ The .npmrc file
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.npmrc
+`GitHubActionTypeScriptProject.npmrc`
 
-___
+***
 
 ### packageManager
 
-• `get` **packageManager**(): `NodePackageManager`
+> `get` **packageManager**(): `NodePackageManager`
 
 The package manager to use.
+
+#### Deprecated
+
+use `package.packageManager`
 
 #### Returns
 
 `NodePackageManager`
 
-**`Deprecated`**
-
-use `package.packageManager`
-
 #### Inherited from
 
-GitHubActionTypeScriptProject.packageManager
+`GitHubActionTypeScriptProject.packageManager`
 
-___
+***
 
 ### packageTask
 
-• `get` **packageTask**(): `Task`
+> `get` **packageTask**(): `Task`
 
 #### Returns
 
@@ -928,13 +813,13 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.packageTask
+`GitHubActionTypeScriptProject.packageTask`
 
-___
+***
 
 ### postCompileTask
 
-• `get` **postCompileTask**(): `Task`
+> `get` **postCompileTask**(): `Task`
 
 #### Returns
 
@@ -942,13 +827,13 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.postCompileTask
+`GitHubActionTypeScriptProject.postCompileTask`
 
-___
+***
 
 ### preCompileTask
 
-• `get` **preCompileTask**(): `Task`
+> `get` **preCompileTask**(): `Task`
 
 #### Returns
 
@@ -956,13 +841,13 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.preCompileTask
+`GitHubActionTypeScriptProject.preCompileTask`
 
-___
+***
 
 ### projenCommand
 
-• `get` **projenCommand**(): `string`
+> `get` **projenCommand**(): `string`
 
 The command to use in order to run the projen CLI.
 
@@ -972,13 +857,13 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.projenCommand
+`GitHubActionTypeScriptProject.projenCommand`
 
-___
+***
 
 ### root
 
-• `get` **root**(): `Project`
+> `get` **root**(): `Project`
 
 The root project.
 
@@ -988,13 +873,13 @@ The root project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.root
+`GitHubActionTypeScriptProject.root`
 
-___
+***
 
 ### subprojects
 
-• `get` **subprojects**(): `Project`[]
+> `get` **subprojects**(): `Project`[]
 
 Returns all the subprojects within this project.
 
@@ -1004,13 +889,13 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.subprojects
+`GitHubActionTypeScriptProject.subprojects`
 
-___
+***
 
 ### testTask
 
-• `get` **testTask**(): `Task`
+> `get` **testTask**(): `Task`
 
 #### Returns
 
@@ -1018,19 +903,17 @@ ___
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.testTask
+`GitHubActionTypeScriptProject.testTask`
 
 ## Methods
 
-### addBins
+### addBins()
 
-▸ **addBins**(`bins`): `void`
+> **addBins**(`bins`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bins` | `Record`\<`string`, `string`\> |
+• **bins**: `Record`\<`string`, `string`\>
 
 #### Returns
 
@@ -1038,13 +921,13 @@ GitHubActionTypeScriptProject.testTask
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addBins
+`GitHubActionTypeScriptProject.addBins`
 
-___
+***
 
-### addBundledDeps
+### addBundledDeps()
 
-▸ **addBundledDeps**(`...deps`): `void`
+> **addBundledDeps**(...`deps`): `void`
 
 Defines bundled dependencies.
 
@@ -1053,9 +936,13 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1063,47 +950,49 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addBundledDeps
+`GitHubActionTypeScriptProject.addBundledDeps`
 
-___
+***
 
-### addCompileCommand
+### ~~addCompileCommand()~~
 
-▸ **addCompileCommand**(`...commands`): `void`
+> **addCompileCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.compileTask.exec()`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addCompileCommand
+`GitHubActionTypeScriptProject.addCompileCommand`
 
-___
+***
 
-### addDeps
+### addDeps()
 
-▸ **addDeps**(`...deps`): `void`
+> **addDeps**(...`deps`): `void`
 
 Defines normal dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1111,21 +1000,25 @@ Defines normal dependencies.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addDeps
+`GitHubActionTypeScriptProject.addDeps`
 
-___
+***
 
-### addDevDeps
+### addDevDeps()
 
-▸ **addDevDeps**(`...deps`): `void`
+> **addDevDeps**(...`deps`): `void`
 
 Defines development/test dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1133,22 +1026,22 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addDevDeps
+`GitHubActionTypeScriptProject.addDevDeps`
 
-___
+***
 
-### addExcludeFromCleanup
+### addExcludeFromCleanup()
 
-▸ **addExcludeFromCleanup**(`...globs`): `void`
+> **addExcludeFromCleanup**(...`globs`): `void`
 
 Exclude the matching files from pre-synth cleanup. Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...globs` | `string`[] | The glob patterns to match |
+• ...**globs**: `string`[]
+
+The glob patterns to match
 
 #### Returns
 
@@ -1156,21 +1049,21 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addExcludeFromCleanup
+`GitHubActionTypeScriptProject.addExcludeFromCleanup`
 
-___
+***
 
-### addFields
+### addFields()
 
-▸ **addFields**(`fields`): `void`
+> **addFields**(`fields`): `void`
 
 Directly set fields in `package.json`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fields` | `Object` | The fields to set |
+• **fields**
+
+The fields to set
 
 #### Returns
 
@@ -1178,21 +1071,21 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addFields
+`GitHubActionTypeScriptProject.addFields`
 
-___
+***
 
-### addGitIgnore
+### addGitIgnore()
 
-▸ **addGitIgnore**(`pattern`): `void`
+> **addGitIgnore**(`pattern`): `void`
 
 Adds a .gitignore pattern.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The glob pattern to ignore. |
+• **pattern**: `string`
+
+The glob pattern to ignore.
 
 #### Returns
 
@@ -1200,21 +1093,21 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addGitIgnore
+`GitHubActionTypeScriptProject.addGitIgnore`
 
-___
+***
 
-### addKeywords
+### addKeywords()
 
-▸ **addKeywords**(`...keywords`): `void`
+> **addKeywords**(...`keywords`): `void`
 
 Adds keywords to package.json (deduplicated)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...keywords` | `string`[] | The keywords to add |
+• ...**keywords**: `string`[]
+
+The keywords to add
 
 #### Returns
 
@@ -1222,39 +1115,39 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addKeywords
+`GitHubActionTypeScriptProject.addKeywords`
 
-___
+***
 
-### addPackageIgnore
+### addPackageIgnore()
 
-▸ **addPackageIgnore**(`pattern`): `void`
+> **addPackageIgnore**(`pattern`): `void`
 
 Adds patterns to be ignored by npm.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The pattern to ignore. |
+• **pattern**: `string`
+
+The pattern to ignore.
 
 #### Returns
 
 `void`
 
-**`Remarks`**
+#### Remarks
 
 If you are having trouble getting an ignore to populate, try using your construct or component's preSynthesize method to properly delay calling this method.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addPackageIgnore
+`GitHubActionTypeScriptProject.addPackageIgnore`
 
-___
+***
 
-### addPeerDeps
+### addPeerDeps()
 
-▸ **addPeerDeps**(`...deps`): `void`
+> **addPeerDeps**(...`deps`): `void`
 
 Defines peer dependencies.
 
@@ -1264,9 +1157,13 @@ your code against the minimum version required from your consumers.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1274,21 +1171,21 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addPeerDeps
+`GitHubActionTypeScriptProject.addPeerDeps`
 
-___
+***
 
-### addScripts
+### addScripts()
 
-▸ **addScripts**(`scripts`): `void`
+> **addScripts**(`scripts`): `void`
 
 Replaces the contents of multiple npm package.json scripts.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scripts` | `Object` | The scripts to set |
+• **scripts**
+
+The scripts to set
 
 #### Returns
 
@@ -1296,23 +1193,26 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addScripts
+`GitHubActionTypeScriptProject.addScripts`
 
-___
+***
 
-### addTask
+### addTask()
 
-▸ **addTask**(`name`, `props?`): `Task`
+> **addTask**(`name`, `props`?): `Task`
 
 Adds a new task to this project. This will fail if the project already has
 a task with this name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The task name to add |
-| `props?` | `TaskOptions` | Task properties |
+• **name**: `string`
+
+The task name to add
+
+• **props?**: `TaskOptions`
+
+Task properties
 
 #### Returns
 
@@ -1320,65 +1220,63 @@ a task with this name.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addTask
+`GitHubActionTypeScriptProject.addTask`
 
-___
+***
 
-### addTestCommand
+### ~~addTestCommand()~~
 
-▸ **addTestCommand**(`...commands`): `void`
+> **addTestCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.testTask.exec()`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addTestCommand
+`GitHubActionTypeScriptProject.addTestCommand`
 
-___
+***
 
-### addTip
+### ~~addTip()~~
 
-▸ **addTip**(`message`): `void`
+> **addTip**(`message`): `void`
 
 Prints a "tip" message during synthesis.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | The message |
+• **message**: `string`
+
+The message
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.logger.info(message)` to show messages during synthesis
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.addTip
+`GitHubActionTypeScriptProject.addTip`
 
-___
+***
 
-### annotateGenerated
+### annotateGenerated()
 
-▸ **annotateGenerated**(`glob`): `void`
+> **annotateGenerated**(`glob`): `void`
 
 Marks the provided file(s) as being generated. This is achieved using the
 github-linguist attributes. Generated files do not count against the
@@ -1386,53 +1284,53 @@ repository statistics and language breakdown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `glob` | `string` | the glob pattern to match (could be a file path). |
+• **glob**: `string`
+
+the glob pattern to match (could be a file path).
 
 #### Returns
 
 `void`
 
-**`See`**
+#### See
 
 https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.annotateGenerated
+`GitHubActionTypeScriptProject.annotateGenerated`
 
-___
+***
 
-### hasScript
+### ~~hasScript()~~
 
-▸ **hasScript**(`name`): `boolean`
+> **hasScript**(`name`): `boolean`
 
 Indicates if a script by the name name is defined.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script |
+• **name**: `string`
+
+The name of the script
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
+#### Deprecated
 
 Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.hasScript
+`GitHubActionTypeScriptProject.hasScript`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after all components are synthesized. Order is *not* guaranteed.
 
@@ -1442,13 +1340,13 @@ Called after all components are synthesized. Order is *not* guaranteed.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.postSynthesize
+`GitHubActionTypeScriptProject.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before all components are synthesized.
 
@@ -1458,21 +1356,21 @@ Called before all components are synthesized.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.preSynthesize
+`GitHubActionTypeScriptProject.preSynthesize`
 
-___
+***
 
-### removeScript
+### removeScript()
 
-▸ **removeScript**(`name`): `void`
+> **removeScript**(`name`): `void`
 
 Removes the npm script (always successful).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script. |
+• **name**: `string`
+
+The name of the script.
 
 #### Returns
 
@@ -1480,21 +1378,21 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.removeScript
+`GitHubActionTypeScriptProject.removeScript`
 
-___
+***
 
-### removeTask
+### removeTask()
 
-▸ **removeTask**(`name`): `undefined` \| `Task`
+> **removeTask**(`name`): `undefined` \| `Task`
 
 Removes a task from a project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the task to remove. |
+• **name**: `string`
+
+The name of the task to remove.
 
 #### Returns
 
@@ -1504,22 +1402,22 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.removeTask
+`GitHubActionTypeScriptProject.removeTask`
 
-___
+***
 
-### renderWorkflowSetup
+### renderWorkflowSetup()
 
-▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
+> **renderWorkflowSetup**(`options`?): `JobStep`[]
 
 Returns the set of workflow steps which should be executed to bootstrap a
 workflow.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `RenderWorkflowSetupOptions` | Options. |
+• **options?**: `RenderWorkflowSetupOptions`
+
+Options.
 
 #### Returns
 
@@ -1529,22 +1427,22 @@ Job steps
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.renderWorkflowSetup
+`GitHubActionTypeScriptProject.renderWorkflowSetup`
 
-___
+***
 
-### runTaskCommand
+### runTaskCommand()
 
-▸ **runTaskCommand**(`task`): `string`
+> **runTaskCommand**(`task`): `string`
 
 Returns the shell command to execute in order to run a task. This will
 typically be `npx projen TASK`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `task` | `Task` | The task for which the command is required |
+• **task**: `Task`
+
+The task for which the command is required
 
 #### Returns
 
@@ -1552,22 +1450,25 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.runTaskCommand
+`GitHubActionTypeScriptProject.runTaskCommand`
 
-___
+***
 
-### setScript
+### setScript()
 
-▸ **setScript**(`name`, `command`): `void`
+> **setScript**(`name`, `command`): `void`
 
 Replaces the contents of an npm package.json script.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The script name |
-| `command` | `string` | The command to execute |
+• **name**: `string`
+
+The script name
+
+• **command**: `string`
+
+The command to execute
 
 #### Returns
 
@@ -1575,13 +1476,13 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.setScript
+`GitHubActionTypeScriptProject.setScript`
 
-___
+***
 
-### synth
+### synth()
 
-▸ **synth**(): `void`
+> **synth**(): `void`
 
 Synthesize all project files into `outdir`.
 
@@ -1598,13 +1499,13 @@ Synthesize all project files into `outdir`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.synth
+`GitHubActionTypeScriptProject.synth`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -1614,22 +1515,23 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.toString
+`GitHubActionTypeScriptProject.toString`
 
-___
+***
 
-### tryFindFile
+### tryFindFile()
 
-▸ **tryFindFile**(`filePath`): `undefined` \| `FileBase`
+> **tryFindFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and all
 its subprojects.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be resolved
+from the root of _this_ project.
 
 #### Returns
 
@@ -1639,47 +1541,47 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tryFindFile
+`GitHubActionTypeScriptProject.tryFindFile`
 
-___
+***
 
-### tryFindJsonFile
+### ~~tryFindJsonFile()~~
 
-▸ **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
+> **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
 
 Finds a json file by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
 `undefined` \| `JsonFile`
 
-**`Deprecated`**
+#### Deprecated
 
 use `tryFindObjectFile`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tryFindJsonFile
+`GitHubActionTypeScriptProject.tryFindJsonFile`
 
-___
+***
 
-### tryFindObjectFile
+### tryFindObjectFile()
 
-▸ **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
+> **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
@@ -1687,22 +1589,23 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tryFindObjectFile
+`GitHubActionTypeScriptProject.tryFindObjectFile`
 
-___
+***
 
-### tryRemoveFile
+### tryRemoveFile()
 
-▸ **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
+> **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and removes
 it.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be
+resolved from the root of _this_ project.
 
 #### Returns
 
@@ -1713,13 +1616,13 @@ the file was not found.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.tryRemoveFile
+`GitHubActionTypeScriptProject.tryRemoveFile`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -1739,65 +1642,61 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.isConstruct
+`GitHubActionTypeScriptProject.isConstruct`
 
-___
+***
 
-### isProject
+### isProject()
 
-▸ **isProject**(`x`): x is Project
+> `static` **isProject**(`x`): `x is Project`
 
 Test whether the given construct is a project.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Project
+`x is Project`
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.isProject
+`GitHubActionTypeScriptProject.isProject`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`construct`): `Project`
+> `static` **of**(`construct`): `Project`
 
 Find the closest ancestor project for given construct.
 When given a project, this it the project itself.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `construct` | `IConstruct` |
+• **construct**: `IConstruct`
 
 #### Returns
 
 `Project`
 
-**`Throws`**
+#### Throws
 
 when no project is found in the path to the root
 
 #### Inherited from
 
-GitHubActionTypeScriptProject.of
+`GitHubActionTypeScriptProject.of`

@@ -1,174 +1,39 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / MonorepoTsProject
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / MonorepoTsProject
 
 # Class: MonorepoTsProject
 
 This project type will bootstrap a monorepo with support for polygot
 builds, build caching, dependency graph visualization and much more.
 
-**`Pjid`**
+## Pjid
 
 monorepo-ts
 
-## Hierarchy
+## Extends
 
 - `TypeScriptProject`
 
-  ↳ **`MonorepoTsProject`**
+## Extended by
 
-  ↳↳ [`NxMonorepoProject`](NxMonorepoProject.md)
+- [`NxMonorepoProject`](NxMonorepoProject.md)
 
 ## Implements
 
 - [`INxProjectCore`](../interfaces/INxProjectCore.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](MonorepoTsProject.md#constructor)
-
-### Properties
-
-- [\_options](MonorepoTsProject.md#_options)
-- [artifactsDirectory](MonorepoTsProject.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](MonorepoTsProject.md#artifactsjavascriptdirectory)
-- [autoApprove](MonorepoTsProject.md#autoapprove)
-- [autoMerge](MonorepoTsProject.md#automerge)
-- [buildWorkflow](MonorepoTsProject.md#buildworkflow)
-- [bundler](MonorepoTsProject.md#bundler)
-- [commitGenerated](MonorepoTsProject.md#commitgenerated)
-- [defaultTask](MonorepoTsProject.md#defaulttask)
-- [deps](MonorepoTsProject.md#deps)
-- [devContainer](MonorepoTsProject.md#devcontainer)
-- [docgen](MonorepoTsProject.md#docgen)
-- [docsDirectory](MonorepoTsProject.md#docsdirectory)
-- [eslint](MonorepoTsProject.md#eslint)
-- [gitattributes](MonorepoTsProject.md#gitattributes)
-- [github](MonorepoTsProject.md#github)
-- [gitignore](MonorepoTsProject.md#gitignore)
-- [gitpod](MonorepoTsProject.md#gitpod)
-- [initProject](MonorepoTsProject.md#initproject)
-- [jest](MonorepoTsProject.md#jest)
-- [libdir](MonorepoTsProject.md#libdir)
-- [logger](MonorepoTsProject.md#logger)
-- [name](MonorepoTsProject.md#name)
-- [node](MonorepoTsProject.md#node)
-- [nodeVersion](MonorepoTsProject.md#nodeversion)
-- [npmignore](MonorepoTsProject.md#npmignore)
-- [nxConfigurator](MonorepoTsProject.md#nxconfigurator)
-- [outdir](MonorepoTsProject.md#outdir)
-- [package](MonorepoTsProject.md#package)
-- [parent](MonorepoTsProject.md#parent)
-- [prettier](MonorepoTsProject.md#prettier)
-- [projectBuild](MonorepoTsProject.md#projectbuild)
-- [projectType](MonorepoTsProject.md#projecttype)
-- [projenVersion](MonorepoTsProject.md#projenversion)
-- [publisher](MonorepoTsProject.md#publisher)
-- [release](MonorepoTsProject.md#release)
-- [runScriptCommand](MonorepoTsProject.md#runscriptcommand)
-- [srcdir](MonorepoTsProject.md#srcdir)
-- [subNodeProjectResolves](MonorepoTsProject.md#subnodeprojectresolves)
-- [tasks](MonorepoTsProject.md#tasks)
-- [testdir](MonorepoTsProject.md#testdir)
-- [tsconfig](MonorepoTsProject.md#tsconfig)
-- [tsconfigDev](MonorepoTsProject.md#tsconfigdev)
-- [tsconfigEslint](MonorepoTsProject.md#tsconfigeslint)
-- [upgradeWorkflow](MonorepoTsProject.md#upgradeworkflow)
-- [vscode](MonorepoTsProject.md#vscode)
-- [watchTask](MonorepoTsProject.md#watchtask)
-- [workflowBootstrapSteps](MonorepoTsProject.md#workflowbootstrapsteps)
-- [workflowPackageCache](MonorepoTsProject.md#workflowpackagecache)
-- [workspaceConfig](MonorepoTsProject.md#workspaceconfig)
-- [workspacePackages](MonorepoTsProject.md#workspacepackages)
-- [DEFAULT\_TASK](MonorepoTsProject.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](MonorepoTsProject.md#default_ts_jest_tranform_pattern)
-
-### Accessors
-
-- [allowLibraryDependencies](MonorepoTsProject.md#allowlibrarydependencies)
-- [buildTask](MonorepoTsProject.md#buildtask)
-- [buildWorkflowJobId](MonorepoTsProject.md#buildworkflowjobid)
-- [compileTask](MonorepoTsProject.md#compiletask)
-- [components](MonorepoTsProject.md#components)
-- [ejected](MonorepoTsProject.md#ejected)
-- [entrypoint](MonorepoTsProject.md#entrypoint)
-- [files](MonorepoTsProject.md#files)
-- [manifest](MonorepoTsProject.md#manifest)
-- [maxNodeVersion](MonorepoTsProject.md#maxnodeversion)
-- [minNodeVersion](MonorepoTsProject.md#minnodeversion)
-- [npmrc](MonorepoTsProject.md#npmrc)
-- [nx](MonorepoTsProject.md#nx)
-- [packageManager](MonorepoTsProject.md#packagemanager)
-- [packageTask](MonorepoTsProject.md#packagetask)
-- [postCompileTask](MonorepoTsProject.md#postcompiletask)
-- [preCompileTask](MonorepoTsProject.md#precompiletask)
-- [projenCommand](MonorepoTsProject.md#projencommand)
-- [root](MonorepoTsProject.md#root)
-- [sortedSubProjects](MonorepoTsProject.md#sortedsubprojects)
-- [subprojects](MonorepoTsProject.md#subprojects)
-- [testTask](MonorepoTsProject.md#testtask)
-
-### Methods
-
-- [addBins](MonorepoTsProject.md#addbins)
-- [addBundledDeps](MonorepoTsProject.md#addbundleddeps)
-- [addCompileCommand](MonorepoTsProject.md#addcompilecommand)
-- [addDeps](MonorepoTsProject.md#adddeps)
-- [addDevDeps](MonorepoTsProject.md#adddevdeps)
-- [addExcludeFromCleanup](MonorepoTsProject.md#addexcludefromcleanup)
-- [addFields](MonorepoTsProject.md#addfields)
-- [addGitIgnore](MonorepoTsProject.md#addgitignore)
-- [addImplicitDependency](MonorepoTsProject.md#addimplicitdependency)
-- [addJavaDependency](MonorepoTsProject.md#addjavadependency)
-- [addKeywords](MonorepoTsProject.md#addkeywords)
-- [addNxRunManyTask](MonorepoTsProject.md#addnxrunmanytask)
-- [addPackageIgnore](MonorepoTsProject.md#addpackageignore)
-- [addPeerDeps](MonorepoTsProject.md#addpeerdeps)
-- [addPythonPoetryDependency](MonorepoTsProject.md#addpythonpoetrydependency)
-- [addScripts](MonorepoTsProject.md#addscripts)
-- [addTask](MonorepoTsProject.md#addtask)
-- [addTestCommand](MonorepoTsProject.md#addtestcommand)
-- [addTip](MonorepoTsProject.md#addtip)
-- [addWorkspacePackages](MonorepoTsProject.md#addworkspacepackages)
-- [annotateGenerated](MonorepoTsProject.md#annotategenerated)
-- [composeNxRunManyCommand](MonorepoTsProject.md#composenxrunmanycommand)
-- [disableNodeWarnings](MonorepoTsProject.md#disablenodewarnings)
-- [execNxRunManyCommand](MonorepoTsProject.md#execnxrunmanycommand)
-- [hasScript](MonorepoTsProject.md#hasscript)
-- [installNonNodeDependencies](MonorepoTsProject.md#installnonnodedependencies)
-- [linkLocalWorkspaceBins](MonorepoTsProject.md#linklocalworkspacebins)
-- [postSynthesize](MonorepoTsProject.md#postsynthesize)
-- [preSynthesize](MonorepoTsProject.md#presynthesize)
-- [removeScript](MonorepoTsProject.md#removescript)
-- [removeTask](MonorepoTsProject.md#removetask)
-- [renderWorkflowSetup](MonorepoTsProject.md#renderworkflowsetup)
-- [resolveLocalBunDependencies](MonorepoTsProject.md#resolvelocalbundependencies)
-- [resolveSubNodeProjects](MonorepoTsProject.md#resolvesubnodeprojects)
-- [runTaskCommand](MonorepoTsProject.md#runtaskcommand)
-- [setScript](MonorepoTsProject.md#setscript)
-- [synth](MonorepoTsProject.md#synth)
-- [toString](MonorepoTsProject.md#tostring)
-- [tryFindFile](MonorepoTsProject.md#tryfindfile)
-- [tryFindJsonFile](MonorepoTsProject.md#tryfindjsonfile)
-- [tryFindObjectFile](MonorepoTsProject.md#tryfindobjectfile)
-- [tryRemoveFile](MonorepoTsProject.md#tryremovefile)
-- [updateWorkspace](MonorepoTsProject.md#updateworkspace)
-- [validateSubProjects](MonorepoTsProject.md#validatesubprojects)
-- [isConstruct](MonorepoTsProject.md#isconstruct)
-- [isProject](MonorepoTsProject.md#isproject)
-- [of](MonorepoTsProject.md#of)
-
 ## Constructors
 
-### constructor
+### new MonorepoTsProject()
 
-• **new MonorepoTsProject**(`options`): [`MonorepoTsProject`](MonorepoTsProject.md)
+> **new MonorepoTsProject**(`options`): [`MonorepoTsProject`](MonorepoTsProject.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`MonorepoTsProjectOptions`](../interfaces/MonorepoTsProjectOptions.md) |
+• **options**: [`MonorepoTsProjectOptions`](../interfaces/MonorepoTsProjectOptions.md)
 
 #### Returns
 
@@ -176,19 +41,13 @@ monorepo-ts
 
 #### Overrides
 
-TypeScriptProject.constructor
+`TypeScriptProject.constructor`
 
 ## Properties
 
-### \_options
-
-• `Private` `Readonly` **\_options**: [`MonorepoTsProjectOptions`](../interfaces/MonorepoTsProjectOptions.md)
-
-___
-
 ### artifactsDirectory
 
-• `Readonly` **artifactsDirectory**: `string`
+> `readonly` **artifactsDirectory**: `string`
 
 The build output directory. An npm tarball will be created under the `js`
 subdirectory. For example, if this is set to `dist` (the default), the npm
@@ -196,108 +55,108 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-TypeScriptProject.artifactsDirectory
+`TypeScriptProject.artifactsDirectory`
 
-___
+***
 
 ### artifactsJavascriptDirectory
 
-• `Readonly` **artifactsJavascriptDirectory**: `string`
+> `readonly` **artifactsJavascriptDirectory**: `string`
 
 The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-TypeScriptProject.artifactsJavascriptDirectory
+`TypeScriptProject.artifactsJavascriptDirectory`
 
-___
+***
 
-### autoApprove
+### autoApprove?
 
-• `Optional` `Readonly` **autoApprove**: `AutoApprove`
+> `readonly` `optional` **autoApprove**: `AutoApprove`
 
 Auto approve set up for this project.
 
 #### Inherited from
 
-TypeScriptProject.autoApprove
+`TypeScriptProject.autoApprove`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `AutoMerge`
+> `readonly` `optional` **autoMerge**: `AutoMerge`
 
 Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-TypeScriptProject.autoMerge
+`TypeScriptProject.autoMerge`
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `BuildWorkflow`
+> `readonly` `optional` **buildWorkflow**: `BuildWorkflow`
 
 The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-TypeScriptProject.buildWorkflow
+`TypeScriptProject.buildWorkflow`
 
-___
+***
 
 ### bundler
 
-• `Readonly` **bundler**: `Bundler`
+> `readonly` **bundler**: `Bundler`
 
 #### Inherited from
 
-TypeScriptProject.bundler
+`TypeScriptProject.bundler`
 
-___
+***
 
 ### commitGenerated
 
-• `Readonly` **commitGenerated**: `boolean`
+> `readonly` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
 #### Inherited from
 
-TypeScriptProject.commitGenerated
+`TypeScriptProject.commitGenerated`
 
-___
+***
 
-### defaultTask
+### defaultTask?
 
-• `Optional` `Readonly` **defaultTask**: `Task`
+> `readonly` `optional` **defaultTask**: `Task`
 
 This is the "default" task, the one that executes "projen". Undefined if
 the project is being ejected.
 
 #### Inherited from
 
-TypeScriptProject.defaultTask
+`TypeScriptProject.defaultTask`
 
-___
+***
 
 ### deps
 
-• `Readonly` **deps**: `Dependencies`
+> `readonly` **deps**: `Dependencies`
 
 Project dependencies.
 
 #### Inherited from
 
-TypeScriptProject.deps
+`TypeScriptProject.deps`
 
-___
+***
 
 ### devContainer
 
-• `Readonly` **devContainer**: `undefined` \| `DevContainer`
+> `readonly` **devContainer**: `undefined` \| `DevContainer`
 
 Access for .devcontainer.json (used for GitHub Codespaces)
 
@@ -305,55 +164,55 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-TypeScriptProject.devContainer
+`TypeScriptProject.devContainer`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 #### Inherited from
 
-TypeScriptProject.docgen
+`TypeScriptProject.docgen`
 
-___
+***
 
 ### docsDirectory
 
-• `Readonly` **docsDirectory**: `string`
+> `readonly` **docsDirectory**: `string`
 
 #### Inherited from
 
-TypeScriptProject.docsDirectory
+`TypeScriptProject.docsDirectory`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `Eslint`
+> `readonly` `optional` **eslint**: `Eslint`
 
 #### Inherited from
 
-TypeScriptProject.eslint
+`TypeScriptProject.eslint`
 
-___
+***
 
 ### gitattributes
 
-• `Readonly` **gitattributes**: `GitAttributesFile`
+> `readonly` **gitattributes**: `GitAttributesFile`
 
 The .gitattributes file for this repository.
 
 #### Inherited from
 
-TypeScriptProject.gitattributes
+`TypeScriptProject.gitattributes`
 
-___
+***
 
 ### github
 
-• `Readonly` **github**: `undefined` \| `GitHub`
+> `readonly` **github**: `undefined` \| `GitHub`
 
 Access all github components.
 
@@ -361,25 +220,25 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-TypeScriptProject.github
+`TypeScriptProject.github`
 
-___
+***
 
 ### gitignore
 
-• `Readonly` **gitignore**: `IgnoreFile`
+> `readonly` **gitignore**: `IgnoreFile`
 
 .gitignore
 
 #### Inherited from
 
-TypeScriptProject.gitignore
+`TypeScriptProject.gitignore`
 
-___
+***
 
 ### gitpod
 
-• `Readonly` **gitpod**: `undefined` \| `Gitpod`
+> `readonly` **gitpod**: `undefined` \| `Gitpod`
 
 Access for Gitpod
 
@@ -387,13 +246,13 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-TypeScriptProject.gitpod
+`TypeScriptProject.gitpod`
 
-___
+***
 
-### initProject
+### initProject?
 
-• `Optional` `Readonly` **initProject**: `InitProject`
+> `readonly` `optional` **initProject**: `InitProject`
 
 The options used when this project is bootstrapped via `projen new`. It
 includes the original set of options passed to the CLI and also the JSII
@@ -401,304 +260,290 @@ FQN of the project type.
 
 #### Inherited from
 
-TypeScriptProject.initProject
+`TypeScriptProject.initProject`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `Jest`
+> `readonly` `optional` **jest**: `Jest`
 
 The Jest configuration (if enabled)
 
 #### Inherited from
 
-TypeScriptProject.jest
+`TypeScriptProject.jest`
 
-___
+***
 
 ### libdir
 
-• `Readonly` **libdir**: `string`
+> `readonly` **libdir**: `string`
 
 The directory in which compiled .js files reside.
 
 #### Inherited from
 
-TypeScriptProject.libdir
+`TypeScriptProject.libdir`
 
-___
+***
 
 ### logger
 
-• `Readonly` **logger**: `Logger`
+> `readonly` **logger**: `Logger`
 
 Logging utilities.
 
 #### Inherited from
 
-TypeScriptProject.logger
+`TypeScriptProject.logger`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 Project name.
 
 #### Inherited from
 
-TypeScriptProject.name
+`TypeScriptProject.name`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-TypeScriptProject.node
+`TypeScriptProject.node`
 
-___
+***
 
-### nodeVersion
+### nodeVersion?
 
-• `Protected` `Optional` `Readonly` **nodeVersion**: `string`
+> `protected` `readonly` `optional` **nodeVersion**: `string`
 
 #### Inherited from
 
-TypeScriptProject.nodeVersion
+`TypeScriptProject.nodeVersion`
 
-___
+***
 
-### npmignore
+### npmignore?
 
-• `Optional` `Readonly` **npmignore**: `IgnoreFile`
+> `readonly` `optional` **npmignore**: `IgnoreFile`
 
 The .npmignore file.
 
 #### Inherited from
 
-TypeScriptProject.npmignore
+`TypeScriptProject.npmignore`
 
-___
+***
 
 ### nxConfigurator
 
-• `Readonly` **nxConfigurator**: [`NxConfigurator`](NxConfigurator.md)
+> `readonly` **nxConfigurator**: [`NxConfigurator`](NxConfigurator.md)
 
-___
+***
 
 ### outdir
 
-• `Readonly` **outdir**: `string`
+> `readonly` **outdir**: `string`
 
 Absolute output directory of this project.
 
 #### Inherited from
 
-TypeScriptProject.outdir
+`TypeScriptProject.outdir`
 
-___
+***
 
 ### package
 
-• `Readonly` **package**: `NodePackage`
+> `readonly` **package**: `NodePackage`
 
 API for managing the node package.
 
 #### Inherited from
 
-TypeScriptProject.package
+`TypeScriptProject.package`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-TypeScriptProject.parent
+`TypeScriptProject.parent`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `Prettier`
+> `readonly` `optional` **prettier**: `Prettier`
 
 #### Inherited from
 
-TypeScriptProject.prettier
+`TypeScriptProject.prettier`
 
-___
+***
 
 ### projectBuild
 
-• `Readonly` **projectBuild**: `ProjectBuild`
+> `readonly` **projectBuild**: `ProjectBuild`
 
 Manages the build process of the project.
 
 #### Inherited from
 
-TypeScriptProject.projectBuild
+`TypeScriptProject.projectBuild`
 
-___
+***
 
 ### projectType
 
-• `Readonly` **projectType**: `ProjectType`
+> `readonly` **projectType**: `ProjectType`
 
 #### Inherited from
 
-TypeScriptProject.projectType
+`TypeScriptProject.projectType`
 
-___
+***
 
-### projenVersion
+### ~~publisher?~~
 
-• `Private` `Readonly` **projenVersion**: `undefined` \| `string`
-
-Version of projen used by the monorepo and its subprojects
-
-___
-
-### publisher
-
-• `Optional` `Readonly` **publisher**: `Publisher`
+> `readonly` `optional` **publisher**: `Publisher`
 
 Package publisher. This will be `undefined` if the project does not have a
 release workflow.
 
-**`Deprecated`**
+#### Deprecated
 
 use `release.publisher`.
 
 #### Inherited from
 
-TypeScriptProject.publisher
+`TypeScriptProject.publisher`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `Release`
+> `readonly` `optional` **release**: `Release`
 
 Release management.
 
 #### Inherited from
 
-TypeScriptProject.release
+`TypeScriptProject.release`
 
-___
+***
 
 ### runScriptCommand
 
-• `Readonly` **runScriptCommand**: `string`
+> `readonly` **runScriptCommand**: `string`
 
 The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager).
 
 #### Inherited from
 
-TypeScriptProject.runScriptCommand
+`TypeScriptProject.runScriptCommand`
 
-___
+***
 
 ### srcdir
 
-• `Readonly` **srcdir**: `string`
+> `readonly` **srcdir**: `string`
 
 The directory in which the .ts sources reside.
 
 #### Inherited from
 
-TypeScriptProject.srcdir
+`TypeScriptProject.srcdir`
 
-___
-
-### subNodeProjectResolves
-
-• `Private` **subNodeProjectResolves**: () => `boolean`[] = `[]`
-
-___
+***
 
 ### tasks
 
-• `Readonly` **tasks**: `Tasks`
+> `readonly` **tasks**: `Tasks`
 
 Project tasks.
 
 #### Inherited from
 
-TypeScriptProject.tasks
+`TypeScriptProject.tasks`
 
-___
+***
 
 ### testdir
 
-• `Readonly` **testdir**: `string`
+> `readonly` **testdir**: `string`
 
 The directory in which tests reside.
 
 #### Inherited from
 
-TypeScriptProject.testdir
+`TypeScriptProject.testdir`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfig`
+> `readonly` `optional` **tsconfig**: `TypescriptConfig`
 
 #### Inherited from
 
-TypeScriptProject.tsconfig
+`TypeScriptProject.tsconfig`
 
-___
+***
 
 ### tsconfigDev
 
-• `Readonly` **tsconfigDev**: `TypescriptConfig`
+> `readonly` **tsconfigDev**: `TypescriptConfig`
 
 A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-TypeScriptProject.tsconfigDev
+`TypeScriptProject.tsconfigDev`
 
-___
+***
 
-### tsconfigEslint
+### tsconfigEslint?
 
-• `Optional` `Readonly` **tsconfigEslint**: `TypescriptConfig`
+> `readonly` `optional` **tsconfigEslint**: `TypescriptConfig`
 
 #### Inherited from
 
-TypeScriptProject.tsconfigEslint
+`TypeScriptProject.tsconfigEslint`
 
-___
+***
 
-### upgradeWorkflow
+### upgradeWorkflow?
 
-• `Optional` `Readonly` **upgradeWorkflow**: `UpgradeDependencies`
+> `readonly` `optional` **upgradeWorkflow**: `UpgradeDependencies`
 
 The upgrade workflow.
 
 #### Inherited from
 
-TypeScriptProject.upgradeWorkflow
+`TypeScriptProject.upgradeWorkflow`
 
-___
+***
 
 ### vscode
 
-• `Readonly` **vscode**: `undefined` \| `VsCode`
+> `readonly` **vscode**: `undefined` \| `VsCode`
 
 Access all VSCode components.
 
@@ -706,98 +551,86 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-TypeScriptProject.vscode
+`TypeScriptProject.vscode`
 
-___
+***
 
 ### watchTask
 
-• `Readonly` **watchTask**: `Task`
+> `readonly` **watchTask**: `Task`
 
 The "watch" task.
 
 #### Inherited from
 
-TypeScriptProject.watchTask
+`TypeScriptProject.watchTask`
 
-___
+***
 
 ### workflowBootstrapSteps
 
-• `Protected` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `protected` `readonly` **workflowBootstrapSteps**: `JobStep`[]
 
 #### Inherited from
 
-TypeScriptProject.workflowBootstrapSteps
+`TypeScriptProject.workflowBootstrapSteps`
 
-___
+***
 
 ### workflowPackageCache
 
-• `Protected` `Readonly` **workflowPackageCache**: `boolean`
+> `protected` `readonly` **workflowPackageCache**: `boolean`
 
 #### Inherited from
 
-TypeScriptProject.workflowPackageCache
+`TypeScriptProject.workflowPackageCache`
 
-___
-
-### workspaceConfig
-
-• `Private` `Optional` `Readonly` **workspaceConfig**: [`WorkspaceConfig`](../interfaces/WorkspaceConfig.md)
-
-___
-
-### workspacePackages
-
-• `Private` `Readonly` **workspacePackages**: `string`[]
-
-___
+***
 
 ### DEFAULT\_TASK
 
-▪ `Static` `Readonly` **DEFAULT\_TASK**: ``"default"``
+> `readonly` `static` **DEFAULT\_TASK**: `"default"` = `"default"`
 
 The name of the default task (the task executed when `projen` is run without arguments). Normally
 this task should synthesize the project files.
 
 #### Inherited from
 
-TypeScriptProject.DEFAULT\_TASK
+`TypeScriptProject.DEFAULT_TASK`
 
-___
+***
 
 ### DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
-▪ `Static` `Readonly` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: ``"^.+\\.[t]sx?$"``
+> `readonly` `static` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: "^.+\\.\[t\]sx?$" = `"^.+\\.[t]sx?$"`
 
 #### Inherited from
 
-TypeScriptProject.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+`TypeScriptProject.DEFAULT_TS_JEST_TRANFORM_PATTERN`
 
 ## Accessors
 
 ### allowLibraryDependencies
 
-• `get` **allowLibraryDependencies**(): `boolean`
+> `get` **allowLibraryDependencies**(): `boolean`
+
+#### Deprecated
+
+use `package.allowLibraryDependencies`
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
-
-use `package.allowLibraryDependencies`
-
 #### Inherited from
 
-TypeScriptProject.allowLibraryDependencies
+`TypeScriptProject.allowLibraryDependencies`
 
-___
+***
 
 ### buildTask
 
-• `get` **buildTask**(): `Task`
+> `get` **buildTask**(): `Task`
 
 #### Returns
 
@@ -805,13 +638,13 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.buildTask
+`TypeScriptProject.buildTask`
 
-___
+***
 
 ### buildWorkflowJobId
 
-• `get` **buildWorkflowJobId**(): `undefined` \| `string`
+> `get` **buildWorkflowJobId**(): `undefined` \| `string`
 
 The job ID of the build workflow.
 
@@ -821,13 +654,13 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-TypeScriptProject.buildWorkflowJobId
+`TypeScriptProject.buildWorkflowJobId`
 
-___
+***
 
 ### compileTask
 
-• `get` **compileTask**(): `Task`
+> `get` **compileTask**(): `Task`
 
 #### Returns
 
@@ -835,13 +668,13 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.compileTask
+`TypeScriptProject.compileTask`
 
-___
+***
 
 ### components
 
-• `get` **components**(): `Component`[]
+> `get` **components**(): `Component`[]
 
 Returns all the components within this project.
 
@@ -851,13 +684,13 @@ Returns all the components within this project.
 
 #### Inherited from
 
-TypeScriptProject.components
+`TypeScriptProject.components`
 
-___
+***
 
 ### ejected
 
-• `get` **ejected**(): `boolean`
+> `get` **ejected**(): `boolean`
 
 Whether or not the project is being ejected.
 
@@ -867,31 +700,31 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-TypeScriptProject.ejected
+`TypeScriptProject.ejected`
 
-___
+***
 
 ### entrypoint
 
-• `get` **entrypoint**(): `string`
+> `get` **entrypoint**(): `string`
+
+#### Deprecated
+
+use `package.entrypoint`
 
 #### Returns
 
 `string`
 
-**`Deprecated`**
-
-use `package.entrypoint`
-
 #### Inherited from
 
-TypeScriptProject.entrypoint
+`TypeScriptProject.entrypoint`
 
-___
+***
 
 ### files
 
-• `get` **files**(): `FileBase`[]
+> `get` **files**(): `FileBase`[]
 
 All files in this project.
 
@@ -901,31 +734,31 @@ All files in this project.
 
 #### Inherited from
 
-TypeScriptProject.files
+`TypeScriptProject.files`
 
-___
+***
 
 ### manifest
 
-• `get` **manifest**(): `any`
+> `get` **manifest**(): `any`
+
+#### Deprecated
+
+use `package.addField(x, y)`
 
 #### Returns
 
 `any`
 
-**`Deprecated`**
-
-use `package.addField(x, y)`
-
 #### Inherited from
 
-TypeScriptProject.manifest
+`TypeScriptProject.manifest`
 
-___
+***
 
 ### maxNodeVersion
 
-• `get` **maxNodeVersion**(): `undefined` \| `string`
+> `get` **maxNodeVersion**(): `undefined` \| `string`
 
 Maximum node version required by this package.
 
@@ -935,13 +768,13 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-TypeScriptProject.maxNodeVersion
+`TypeScriptProject.maxNodeVersion`
 
-___
+***
 
 ### minNodeVersion
 
-• `get` **minNodeVersion**(): `undefined` \| `string`
+> `get` **minNodeVersion**(): `undefined` \| `string`
 
 Minimum node.js version required by this package.
 
@@ -951,13 +784,13 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-TypeScriptProject.minNodeVersion
+`TypeScriptProject.minNodeVersion`
 
-___
+***
 
 ### npmrc
 
-• `get` **npmrc**(): `NpmConfig`
+> `get` **npmrc**(): `NpmConfig`
 
 The .npmrc file
 
@@ -967,13 +800,13 @@ The .npmrc file
 
 #### Inherited from
 
-TypeScriptProject.npmrc
+`TypeScriptProject.npmrc`
 
-___
+***
 
 ### nx
 
-• `get` **nx**(): [`NxWorkspace`](NxWorkspace.md)
+> `get` **nx**(): [`NxWorkspace`](NxWorkspace.md)
 
 Return the NxWorkspace instance. This should be implemented using a getter.
 
@@ -983,33 +816,33 @@ Return the NxWorkspace instance. This should be implemented using a getter.
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[nx](../interfaces/INxProjectCore.md#nx)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`nx`](../interfaces/INxProjectCore.md#nx)
 
-___
+***
 
 ### packageManager
 
-• `get` **packageManager**(): `NodePackageManager`
+> `get` **packageManager**(): `NodePackageManager`
 
 The package manager to use.
+
+#### Deprecated
+
+use `package.packageManager`
 
 #### Returns
 
 `NodePackageManager`
 
-**`Deprecated`**
-
-use `package.packageManager`
-
 #### Inherited from
 
-TypeScriptProject.packageManager
+`TypeScriptProject.packageManager`
 
-___
+***
 
 ### packageTask
 
-• `get` **packageTask**(): `Task`
+> `get` **packageTask**(): `Task`
 
 #### Returns
 
@@ -1017,13 +850,13 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.packageTask
+`TypeScriptProject.packageTask`
 
-___
+***
 
 ### postCompileTask
 
-• `get` **postCompileTask**(): `Task`
+> `get` **postCompileTask**(): `Task`
 
 #### Returns
 
@@ -1031,13 +864,13 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.postCompileTask
+`TypeScriptProject.postCompileTask`
 
-___
+***
 
 ### preCompileTask
 
-• `get` **preCompileTask**(): `Task`
+> `get` **preCompileTask**(): `Task`
 
 #### Returns
 
@@ -1045,13 +878,13 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.preCompileTask
+`TypeScriptProject.preCompileTask`
 
-___
+***
 
 ### projenCommand
 
-• `get` **projenCommand**(): `string`
+> `get` **projenCommand**(): `string`
 
 The command to use in order to run the projen CLI.
 
@@ -1061,13 +894,13 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-TypeScriptProject.projenCommand
+`TypeScriptProject.projenCommand`
 
-___
+***
 
 ### root
 
-• `get` **root**(): `Project`
+> `get` **root**(): `Project`
 
 The root project.
 
@@ -1077,13 +910,13 @@ The root project.
 
 #### Inherited from
 
-TypeScriptProject.root
+`TypeScriptProject.root`
 
-___
+***
 
 ### sortedSubProjects
 
-• `get` **sortedSubProjects**(): `Project`[]
+> `get` **sortedSubProjects**(): `Project`[]
 
 Get consistently sorted list of subprojects
 
@@ -1091,11 +924,11 @@ Get consistently sorted list of subprojects
 
 `Project`[]
 
-___
+***
 
 ### subprojects
 
-• `get` **subprojects**(): `Project`[]
+> `get` **subprojects**(): `Project`[]
 
 Returns all the subprojects within this project.
 
@@ -1105,13 +938,13 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-TypeScriptProject.subprojects
+`TypeScriptProject.subprojects`
 
-___
+***
 
 ### testTask
 
-• `get` **testTask**(): `Task`
+> `get` **testTask**(): `Task`
 
 #### Returns
 
@@ -1119,19 +952,17 @@ ___
 
 #### Inherited from
 
-TypeScriptProject.testTask
+`TypeScriptProject.testTask`
 
 ## Methods
 
-### addBins
+### addBins()
 
-▸ **addBins**(`bins`): `void`
+> **addBins**(`bins`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bins` | `Record`\<`string`, `string`\> |
+• **bins**: `Record`\<`string`, `string`\>
 
 #### Returns
 
@@ -1139,13 +970,13 @@ TypeScriptProject.testTask
 
 #### Inherited from
 
-TypeScriptProject.addBins
+`TypeScriptProject.addBins`
 
-___
+***
 
-### addBundledDeps
+### addBundledDeps()
 
-▸ **addBundledDeps**(`...deps`): `void`
+> **addBundledDeps**(...`deps`): `void`
 
 Defines bundled dependencies.
 
@@ -1154,9 +985,13 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1164,47 +999,49 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-TypeScriptProject.addBundledDeps
+`TypeScriptProject.addBundledDeps`
 
-___
+***
 
-### addCompileCommand
+### ~~addCompileCommand()~~
 
-▸ **addCompileCommand**(`...commands`): `void`
+> **addCompileCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.compileTask.exec()`
 
 #### Inherited from
 
-TypeScriptProject.addCompileCommand
+`TypeScriptProject.addCompileCommand`
 
-___
+***
 
-### addDeps
+### addDeps()
 
-▸ **addDeps**(`...deps`): `void`
+> **addDeps**(...`deps`): `void`
 
 Defines normal dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1212,21 +1049,25 @@ Defines normal dependencies.
 
 #### Inherited from
 
-TypeScriptProject.addDeps
+`TypeScriptProject.addDeps`
 
-___
+***
 
-### addDevDeps
+### addDevDeps()
 
-▸ **addDevDeps**(`...deps`): `void`
+> **addDevDeps**(...`deps`): `void`
 
 Defines development/test dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1234,22 +1075,22 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-TypeScriptProject.addDevDeps
+`TypeScriptProject.addDevDeps`
 
-___
+***
 
-### addExcludeFromCleanup
+### addExcludeFromCleanup()
 
-▸ **addExcludeFromCleanup**(`...globs`): `void`
+> **addExcludeFromCleanup**(...`globs`): `void`
 
 Exclude the matching files from pre-synth cleanup. Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...globs` | `string`[] | The glob patterns to match |
+• ...**globs**: `string`[]
+
+The glob patterns to match
 
 #### Returns
 
@@ -1257,21 +1098,21 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-TypeScriptProject.addExcludeFromCleanup
+`TypeScriptProject.addExcludeFromCleanup`
 
-___
+***
 
-### addFields
+### addFields()
 
-▸ **addFields**(`fields`): `void`
+> **addFields**(`fields`): `void`
 
 Directly set fields in `package.json`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fields` | `Object` | The fields to set |
+• **fields**
+
+The fields to set
 
 #### Returns
 
@@ -1279,21 +1120,21 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-TypeScriptProject.addFields
+`TypeScriptProject.addFields`
 
-___
+***
 
-### addGitIgnore
+### addGitIgnore()
 
-▸ **addGitIgnore**(`pattern`): `void`
+> **addGitIgnore**(`pattern`): `void`
 
 Adds a .gitignore pattern.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The glob pattern to ignore. |
+• **pattern**: `string`
+
+The glob pattern to ignore.
 
 #### Returns
 
@@ -1301,13 +1142,13 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-TypeScriptProject.addGitIgnore
+`TypeScriptProject.addGitIgnore`
 
-___
+***
 
-### addImplicitDependency
+### addImplicitDependency()
 
-▸ **addImplicitDependency**(`dependent`, `dependee`): `void`
+> **addImplicitDependency**(`dependent`, `dependee`): `void`
 
 Create an implicit dependency between two Projects. This is typically
 used in polygot repos where a Typescript project wants a build dependency
@@ -1315,37 +1156,43 @@ on a Python project as an example.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dependent` | `Project` | project you want to have the dependency. |
-| `dependee` | `string` \| `Project` | project you wish to depend on. |
+• **dependent**: `Project`
+
+project you want to have the dependency.
+
+• **dependee**: `string` \| `Project`
+
+project you wish to depend on.
 
 #### Returns
 
 `void`
 
-**`Throws`**
+#### Throws
 
 error if this is called on a dependent which does not have a NXProject component attached.
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[addImplicitDependency](../interfaces/INxProjectCore.md#addimplicitdependency)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`addImplicitDependency`](../interfaces/INxProjectCore.md#addimplicitdependency)
 
-___
+***
 
-### addJavaDependency
+### addJavaDependency()
 
-▸ **addJavaDependency**(`dependent`, `dependee`): `void`
+> **addJavaDependency**(`dependent`, `dependee`): `void`
 
 Adds a dependency between two Java Projects in the monorepo.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dependent` | `JavaProject` | project you want to have the dependency |
-| `dependee` | `JavaProject` | project you wish to depend on |
+• **dependent**: `JavaProject`
+
+project you want to have the dependency
+
+• **dependee**: `JavaProject`
+
+project you wish to depend on
 
 #### Returns
 
@@ -1353,21 +1200,21 @@ Adds a dependency between two Java Projects in the monorepo.
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[addJavaDependency](../interfaces/INxProjectCore.md#addjavadependency)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`addJavaDependency`](../interfaces/INxProjectCore.md#addjavadependency)
 
-___
+***
 
-### addKeywords
+### addKeywords()
 
-▸ **addKeywords**(`...keywords`): `void`
+> **addKeywords**(...`keywords`): `void`
 
 Adds keywords to package.json (deduplicated)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...keywords` | `string`[] | The keywords to add |
+• ...**keywords**: `string`[]
+
+The keywords to add
 
 #### Returns
 
@@ -1375,22 +1222,25 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-TypeScriptProject.addKeywords
+`TypeScriptProject.addKeywords`
 
-___
+***
 
-### addNxRunManyTask
+### addNxRunManyTask()
 
-▸ **addNxRunManyTask**(`name`, `options`): `Task`
+> **addNxRunManyTask**(`name`, `options`): `Task`
 
 Add project task that executes `npx nx run-many ...` style command.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | task name |
-| `options` | `RunManyOptions` | options |
+• **name**: `string`
+
+task name
+
+• **options**: `RunManyOptions`
+
+options
 
 #### Returns
 
@@ -1398,39 +1248,39 @@ Add project task that executes `npx nx run-many ...` style command.
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[addNxRunManyTask](../interfaces/INxProjectCore.md#addnxrunmanytask)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`addNxRunManyTask`](../interfaces/INxProjectCore.md#addnxrunmanytask)
 
-___
+***
 
-### addPackageIgnore
+### addPackageIgnore()
 
-▸ **addPackageIgnore**(`pattern`): `void`
+> **addPackageIgnore**(`pattern`): `void`
 
 Adds patterns to be ignored by npm.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The pattern to ignore. |
+• **pattern**: `string`
+
+The pattern to ignore.
 
 #### Returns
 
 `void`
 
-**`Remarks`**
+#### Remarks
 
 If you are having trouble getting an ignore to populate, try using your construct or component's preSynthesize method to properly delay calling this method.
 
 #### Inherited from
 
-TypeScriptProject.addPackageIgnore
+`TypeScriptProject.addPackageIgnore`
 
-___
+***
 
-### addPeerDeps
+### addPeerDeps()
 
-▸ **addPeerDeps**(`...deps`): `void`
+> **addPeerDeps**(...`deps`): `void`
 
 Defines peer dependencies.
 
@@ -1440,9 +1290,13 @@ your code against the minimum version required from your consumers.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1450,48 +1304,51 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-TypeScriptProject.addPeerDeps
+`TypeScriptProject.addPeerDeps`
 
-___
+***
 
-### addPythonPoetryDependency
+### addPythonPoetryDependency()
 
-▸ **addPythonPoetryDependency**(`dependent`, `dependee`): `void`
+> **addPythonPoetryDependency**(`dependent`, `dependee`): `void`
 
 Adds a dependency between two Python Projects in the monorepo. The dependent must have Poetry enabled.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dependent` | `PythonProject` | project you want to have the dependency (must be a Poetry Python Project) |
-| `dependee` | `PythonProject` | project you wish to depend on |
+• **dependent**: `PythonProject`
+
+project you want to have the dependency (must be a Poetry Python Project)
+
+• **dependee**: `PythonProject`
+
+project you wish to depend on
 
 #### Returns
 
 `void`
 
-**`Throws`**
+#### Throws
 
 error if the dependent does not have Poetry enabled
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[addPythonPoetryDependency](../interfaces/INxProjectCore.md#addpythonpoetrydependency)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`addPythonPoetryDependency`](../interfaces/INxProjectCore.md#addpythonpoetrydependency)
 
-___
+***
 
-### addScripts
+### addScripts()
 
-▸ **addScripts**(`scripts`): `void`
+> **addScripts**(`scripts`): `void`
 
 Replaces the contents of multiple npm package.json scripts.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scripts` | `Object` | The scripts to set |
+• **scripts**
+
+The scripts to set
 
 #### Returns
 
@@ -1499,23 +1356,26 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-TypeScriptProject.addScripts
+`TypeScriptProject.addScripts`
 
-___
+***
 
-### addTask
+### addTask()
 
-▸ **addTask**(`name`, `props?`): `Task`
+> **addTask**(`name`, `props`?): `Task`
 
 Adds a new task to this project. This will fail if the project already has
 a task with this name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The task name to add |
-| `props?` | `TaskOptions` | Task properties |
+• **name**: `string`
+
+The task name to add
+
+• **props?**: `TaskOptions`
+
+Task properties
 
 #### Returns
 
@@ -1523,83 +1383,81 @@ a task with this name.
 
 #### Inherited from
 
-TypeScriptProject.addTask
+`TypeScriptProject.addTask`
 
-___
+***
 
-### addTestCommand
+### ~~addTestCommand()~~
 
-▸ **addTestCommand**(`...commands`): `void`
+> **addTestCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.testTask.exec()`
 
 #### Inherited from
 
-TypeScriptProject.addTestCommand
+`TypeScriptProject.addTestCommand`
 
-___
+***
 
-### addTip
+### ~~addTip()~~
 
-▸ **addTip**(`message`): `void`
+> **addTip**(`message`): `void`
 
 Prints a "tip" message during synthesis.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | The message |
+• **message**: `string`
+
+The message
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.logger.info(message)` to show messages during synthesis
 
 #### Inherited from
 
-TypeScriptProject.addTip
+`TypeScriptProject.addTip`
 
-___
+***
 
-### addWorkspacePackages
+### addWorkspacePackages()
 
-▸ **addWorkspacePackages**(`...packageGlobs`): `void`
+> **addWorkspacePackages**(...`packageGlobs`): `void`
 
 Add one or more additional package globs to the workspace.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...packageGlobs` | `string`[] | paths to the package to include in the workspace (for example packages/my-package) |
+• ...**packageGlobs**: `string`[]
+
+paths to the package to include in the workspace (for example packages/my-package)
 
 #### Returns
 
 `void`
 
-___
+***
 
-### annotateGenerated
+### annotateGenerated()
 
-▸ **annotateGenerated**(`glob`): `void`
+> **annotateGenerated**(`glob`): `void`
 
 Marks the provided file(s) as being generated. This is achieved using the
 github-linguist attributes. Generated files do not count against the
@@ -1607,35 +1465,33 @@ repository statistics and language breakdown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `glob` | `string` | the glob pattern to match (could be a file path). |
+• **glob**: `string`
+
+the glob pattern to match (could be a file path).
 
 #### Returns
 
 `void`
 
-**`See`**
+#### See
 
 https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-TypeScriptProject.annotateGenerated
+`TypeScriptProject.annotateGenerated`
 
-___
+***
 
-### composeNxRunManyCommand
+### composeNxRunManyCommand()
 
-▸ **composeNxRunManyCommand**(`options`): `string`[]
+> **composeNxRunManyCommand**(`options`): `string`[]
 
 Helper to format `npx nx run-many ...` style command
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `RunManyOptions` |
+• **options**: `RunManyOptions`
 
 #### Returns
 
@@ -1643,33 +1499,19 @@ Helper to format `npx nx run-many ...` style command
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[composeNxRunManyCommand](../interfaces/INxProjectCore.md#composenxrunmanycommand)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`composeNxRunManyCommand`](../interfaces/INxProjectCore.md#composenxrunmanycommand)
 
-___
+***
 
-### disableNodeWarnings
+### execNxRunManyCommand()
 
-▸ **disableNodeWarnings**(): `void`
-
-Suppress Node warnings from being presented in the console when running builds.
-
-#### Returns
-
-`void`
-
-___
-
-### execNxRunManyCommand
-
-▸ **execNxRunManyCommand**(`options`): `string`
+> **execNxRunManyCommand**(`options`): `string`
 
 Helper to format `npx nx run-many ...` style command execution in package manager.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | `RunManyOptions` |
+• **options**: `RunManyOptions`
 
 #### Returns
 
@@ -1677,51 +1519,39 @@ Helper to format `npx nx run-many ...` style command execution in package manage
 
 #### Implementation of
 
-[INxProjectCore](../interfaces/INxProjectCore.md).[execNxRunManyCommand](../interfaces/INxProjectCore.md#execnxrunmanycommand)
+[`INxProjectCore`](../interfaces/INxProjectCore.md).[`execNxRunManyCommand`](../interfaces/INxProjectCore.md#execnxrunmanycommand)
 
-___
+***
 
-### hasScript
+### ~~hasScript()~~
 
-▸ **hasScript**(`name`): `boolean`
+> **hasScript**(`name`): `boolean`
 
 Indicates if a script by the name name is defined.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script |
+• **name**: `string`
+
+The name of the script
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
+#### Deprecated
 
 Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-TypeScriptProject.hasScript
+`TypeScriptProject.hasScript`
 
-___
+***
 
-### installNonNodeDependencies
+### linkLocalWorkspaceBins()
 
-▸ **installNonNodeDependencies**(): `void`
-
-Ensures the install task for non-node projects is executed postinstall.
-
-#### Returns
-
-`void`
-
-___
-
-### linkLocalWorkspaceBins
-
-▸ **linkLocalWorkspaceBins**(): `void`
+> `protected` **linkLocalWorkspaceBins**(): `void`
 
 Create symbolic links to all local workspace bins. This enables the usage of bins the same
 way as consumers of the packages have when installing from the registry.
@@ -1730,49 +1560,51 @@ way as consumers of the packages have when installing from the registry.
 
 `void`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
-
-#### Returns
-
-`void`
-
-**`Inherit Doc`**
-
-#### Overrides
-
-TypeScriptProject.postSynthesize
-
-___
-
-### preSynthesize
-
-▸ **preSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 #### Returns
 
 `void`
 
+#### Inherit Doc
+
 #### Overrides
 
-TypeScriptProject.preSynthesize
+`TypeScriptProject.postSynthesize`
 
-___
+***
 
-### removeScript
+### preSynthesize()
 
-▸ **removeScript**(`name`): `void`
+> **preSynthesize**(): `void`
+
+Called before all components are synthesized.
+
+#### Returns
+
+`void`
+
+#### Overrides
+
+`TypeScriptProject.preSynthesize`
+
+***
+
+### removeScript()
+
+> **removeScript**(`name`): `void`
 
 Removes the npm script (always successful).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script. |
+• **name**: `string`
+
+The name of the script.
 
 #### Returns
 
@@ -1780,21 +1612,21 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-TypeScriptProject.removeScript
+`TypeScriptProject.removeScript`
 
-___
+***
 
-### removeTask
+### removeTask()
 
-▸ **removeTask**(`name`): `undefined` \| `Task`
+> **removeTask**(`name`): `undefined` \| `Task`
 
 Removes a task from a project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the task to remove. |
+• **name**: `string`
+
+The name of the task to remove.
 
 #### Returns
 
@@ -1804,22 +1636,22 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-TypeScriptProject.removeTask
+`TypeScriptProject.removeTask`
 
-___
+***
 
-### renderWorkflowSetup
+### renderWorkflowSetup()
 
-▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
+> **renderWorkflowSetup**(`options`?): `JobStep`[]
 
 Returns the set of workflow steps which should be executed to bootstrap a
 workflow.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `RenderWorkflowSetupOptions` | Options. |
+• **options?**: `RenderWorkflowSetupOptions`
+
+Options.
 
 #### Returns
 
@@ -1829,46 +1661,22 @@ Job steps
 
 #### Inherited from
 
-TypeScriptProject.renderWorkflowSetup
+`TypeScriptProject.renderWorkflowSetup`
 
-___
+***
 
-### resolveLocalBunDependencies
+### runTaskCommand()
 
-▸ **resolveLocalBunDependencies**(): `void`
-
-Resolve all local workspace dependencies to keep bun happy.
-
-#### Returns
-
-`void`
-
-___
-
-### resolveSubNodeProjects
-
-▸ **resolveSubNodeProjects**(): `void`
-
-Resolve sub `NodePackage` dependencies.
-
-#### Returns
-
-`void`
-
-___
-
-### runTaskCommand
-
-▸ **runTaskCommand**(`task`): `string`
+> **runTaskCommand**(`task`): `string`
 
 Returns the shell command to execute in order to run a task. This will
 typically be `npx projen TASK`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `task` | `Task` | The task for which the command is required |
+• **task**: `Task`
+
+The task for which the command is required
 
 #### Returns
 
@@ -1876,22 +1684,25 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-TypeScriptProject.runTaskCommand
+`TypeScriptProject.runTaskCommand`
 
-___
+***
 
-### setScript
+### setScript()
 
-▸ **setScript**(`name`, `command`): `void`
+> **setScript**(`name`, `command`): `void`
 
 Replaces the contents of an npm package.json script.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The script name |
-| `command` | `string` | The command to execute |
+• **name**: `string`
+
+The script name
+
+• **command**: `string`
+
+The command to execute
 
 #### Returns
 
@@ -1899,29 +1710,29 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-TypeScriptProject.setScript
+`TypeScriptProject.setScript`
 
-___
+***
 
-### synth
+### synth()
 
-▸ **synth**(): `void`
+> **synth**(): `void`
 
 #### Returns
 
 `void`
 
-**`Inherit Doc`**
+#### Inherit Doc
 
 #### Overrides
 
-TypeScriptProject.synth
+`TypeScriptProject.synth`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -1931,22 +1742,23 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-TypeScriptProject.toString
+`TypeScriptProject.toString`
 
-___
+***
 
-### tryFindFile
+### tryFindFile()
 
-▸ **tryFindFile**(`filePath`): `undefined` \| `FileBase`
+> **tryFindFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and all
 its subprojects.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be resolved
+from the root of _this_ project.
 
 #### Returns
 
@@ -1956,47 +1768,47 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-TypeScriptProject.tryFindFile
+`TypeScriptProject.tryFindFile`
 
-___
+***
 
-### tryFindJsonFile
+### ~~tryFindJsonFile()~~
 
-▸ **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
+> **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
 
 Finds a json file by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
 `undefined` \| `JsonFile`
 
-**`Deprecated`**
+#### Deprecated
 
 use `tryFindObjectFile`
 
 #### Inherited from
 
-TypeScriptProject.tryFindJsonFile
+`TypeScriptProject.tryFindJsonFile`
 
-___
+***
 
-### tryFindObjectFile
+### tryFindObjectFile()
 
-▸ **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
+> **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
@@ -2004,22 +1816,23 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-TypeScriptProject.tryFindObjectFile
+`TypeScriptProject.tryFindObjectFile`
 
-___
+***
 
-### tryRemoveFile
+### tryRemoveFile()
 
-▸ **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
+> **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and removes
 it.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be
+resolved from the root of _this_ project.
 
 #### Returns
 
@@ -2030,37 +1843,13 @@ the file was not found.
 
 #### Inherited from
 
-TypeScriptProject.tryRemoveFile
+`TypeScriptProject.tryRemoveFile`
 
-___
+***
 
-### updateWorkspace
+### isConstruct()
 
-▸ **updateWorkspace**(): `void`
-
-Add a submodule entry to the appropriate workspace file.
-
-#### Returns
-
-`void`
-
-___
-
-### validateSubProjects
-
-▸ **validateSubProjects**(): `void`
-
-Ensures subprojects don't have a default task and that all packages use the same package manager.
-
-#### Returns
-
-`void`
-
-___
-
-### isConstruct
-
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -2080,65 +1869,61 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-TypeScriptProject.isConstruct
+`TypeScriptProject.isConstruct`
 
-___
+***
 
-### isProject
+### isProject()
 
-▸ **isProject**(`x`): x is Project
+> `static` **isProject**(`x`): `x is Project`
 
 Test whether the given construct is a project.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Project
+`x is Project`
 
 #### Inherited from
 
-TypeScriptProject.isProject
+`TypeScriptProject.isProject`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`construct`): `Project`
+> `static` **of**(`construct`): `Project`
 
 Find the closest ancestor project for given construct.
 When given a project, this it the project itself.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `construct` | `IConstruct` |
+• **construct**: `IConstruct`
 
 #### Returns
 
 `Project`
 
-**`Throws`**
+#### Throws
 
 when no project is found in the path to the root
 
 #### Inherited from
 
-TypeScriptProject.of
+`TypeScriptProject.of`

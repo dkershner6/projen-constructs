@@ -1,46 +1,26 @@
-[projen-cspell](../README.md) / [Exports](../modules.md) / CSpellConfigFile
+[**projen-cspell**](../README.md) • **Docs**
+
+***
+
+[projen-cspell](../globals.md) / CSpellConfigFile
 
 # Class: CSpellConfigFile
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`CSpellConfigFile`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](CSpellConfigFile.md#constructor)
-
-### Properties
-
-- [config](CSpellConfigFile.md#config)
-- [node](CSpellConfigFile.md#node)
-- [project](CSpellConfigFile.md#project)
-
-### Methods
-
-- [postSynthesize](CSpellConfigFile.md#postsynthesize)
-- [preSynthesize](CSpellConfigFile.md#presynthesize)
-- [synthesize](CSpellConfigFile.md#synthesize)
-- [toString](CSpellConfigFile.md#tostring)
-- [isComponent](CSpellConfigFile.md#iscomponent)
-- [isConstruct](CSpellConfigFile.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new CSpellConfigFile()
 
-• **new CSpellConfigFile**(`project`, `options?`): [`CSpellConfigFile`](CSpellConfigFile.md)
+> **new CSpellConfigFile**(`project`, `options`?): [`CSpellConfigFile`](CSpellConfigFile.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `NodeProject` |
-| `options?` | [`CSpellConfigFileOptions`](../interfaces/CSpellConfigFileOptions.md) |
+• **project**: `NodeProject`
+
+• **options?**: [`CSpellConfigFileOptions`](../interfaces/CSpellConfigFileOptions.md)
 
 #### Returns
 
@@ -48,41 +28,41 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### config
 
-• `Readonly` **config**: [`CSpellConfig`](../interfaces/CSpellConfig.md)
+> `readonly` **config**: [`CSpellConfig`](../interfaces/CSpellConfig.md)
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -92,13 +72,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -108,13 +88,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -124,13 +104,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -140,35 +120,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -188,16 +166,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

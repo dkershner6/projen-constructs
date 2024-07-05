@@ -1,50 +1,46 @@
-[projen-storybook](../README.md) / [Exports](../modules.md) / StorybookOptions
+[**projen-storybook**](../README.md) • **Docs**
+
+***
+
+[projen-storybook](../globals.md) / StorybookOptions
 
 # Interface: StorybookOptions
 
-## Table of contents
-
-### Properties
-
-- [port](StorybookOptions.md#port)
-- [sampleCode](StorybookOptions.md#samplecode)
-- [staticOutDir](StorybookOptions.md#staticoutdir)
-
 ## Properties
 
-### port
+### port?
 
-• `Optional` `Readonly` **port**: `number`
+> `readonly` `optional` **port**: `number`
 
 The port that Storybook will run on.
 
-**`Default`**
+#### Default
 
 ```ts
 6006
 ```
 
-___
+***
 
-### sampleCode
+### sampleCode?
 
-• `Optional` `Readonly` **sampleCode**: `boolean`
+> `readonly` `optional` **sampleCode**: `boolean`
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-___
+***
 
-### staticOutDir
+### staticOutDir?
 
-• `Optional` `Readonly` **staticOutDir**: `string`
+> `readonly` `optional` **staticOutDir**: `string`
 
 The directory where static files will be written to.
 
-**`Default`**
+#### Default
 
 ```ts
 "storybook-static"

@@ -83,6 +83,15 @@
       ],
       "condition": "if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"
     },
+    "docgen:remove": {
+      "name": "docgen:remove",
+      "description": "Remove the docgen directory",
+      "steps": [
+        {
+          "exec": "rm -rf docs/"
+        }
+      ]
+    },
     "eslint": {
       "name": "eslint",
       "description": "Runs eslint against the codebase",

@@ -1,37 +1,24 @@
-[dkershner6-projen-awscdk-core](../README.md) / [Exports](../modules.md) / AwsAppPublisherOptions
+[**dkershner6-projen-awscdk-core**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-awscdk-core](../globals.md) / AwsAppPublisherOptions
 
 # Interface: AwsAppPublisherOptions
 
-## Hierarchy
+## Extends
 
 - [`PublishToAwsOptions`](PublishToAwsOptions.md)
 
-  ↳ **`AwsAppPublisherOptions`**
-
-## Table of contents
-
-### Properties
-
-- [autoAddJob](AwsAppPublisherOptions.md#autoaddjob)
-- [configureAwsCredentialsJobSteps](AwsAppPublisherOptions.md#configureawscredentialsjobsteps)
-- [defaultReleaseBranch](AwsAppPublisherOptions.md#defaultreleasebranch)
-- [deployJobStepBuilder](AwsAppPublisherOptions.md#deployjobstepbuilder)
-- [deployJobStepConfiguration](AwsAppPublisherOptions.md#deployjobstepconfiguration)
-- [jobConfiguration](AwsAppPublisherOptions.md#jobconfiguration)
-- [postPublishJobSteps](AwsAppPublisherOptions.md#postpublishjobsteps)
-- [publishTasks](AwsAppPublisherOptions.md#publishtasks)
-- [workflowBootstrapSteps](AwsAppPublisherOptions.md#workflowbootstrapsteps)
-- [workflowNodeVersion](AwsAppPublisherOptions.md#workflownodeversion)
-
 ## Properties
 
-### autoAddJob
+### autoAddJob?
 
-• `Optional` `Readonly` **autoAddJob**: `boolean`
+> `readonly` `optional` **autoAddJob**: `boolean`
 
 Whether or not to automatically add the job to the release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -39,100 +26,94 @@ true
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[autoAddJob](PublishToAwsOptions.md#autoaddjob)
+[`PublishToAwsOptions`](PublishToAwsOptions.md).[`autoAddJob`](PublishToAwsOptions.md#autoaddjob)
 
-___
+***
 
-### configureAwsCredentialsJobSteps
+### configureAwsCredentialsJobSteps?
 
-• `Optional` `Readonly` **configureAwsCredentialsJobSteps**: `JobStep`[]
+> `readonly` `optional` **configureAwsCredentialsJobSteps**: `JobStep`[]
 
 Typically a single step involved in configuring AWS credentials.
 AKA aws-actions/configure-aws-credentials
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[configureAwsCredentialsJobSteps](PublishToAwsOptions.md#configureawscredentialsjobsteps)
+[`PublishToAwsOptions`](PublishToAwsOptions.md).[`configureAwsCredentialsJobSteps`](PublishToAwsOptions.md#configureawscredentialsjobsteps)
 
-___
+***
 
-### defaultReleaseBranch
+### defaultReleaseBranch?
 
-• `Optional` `Readonly` **defaultReleaseBranch**: `string`
+> `readonly` `optional` **defaultReleaseBranch**: `string`
 
-___
+***
 
-### deployJobStepBuilder
+### deployJobStepBuilder()
 
-• `Readonly` **deployJobStepBuilder**: (`builderParams`: [`DeployJobStepBuilderParams`](DeployJobStepBuilderParams.md)) => `JobStep`
+> `readonly` **deployJobStepBuilder**: (`builderParams`) => `JobStep`
 
-A function that builds the JobStep to deploy the App.
+#### Parameters
 
-#### Type declaration
+• **builderParams**: [`DeployJobStepBuilderParams`](DeployJobStepBuilderParams.md)
 
-▸ (`builderParams`): `JobStep`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `builderParams` | [`DeployJobStepBuilderParams`](DeployJobStepBuilderParams.md) |
-
-##### Returns
+#### Returns
 
 `JobStep`
 
-___
+JobStep to deploy the App
 
-### deployJobStepConfiguration
+***
 
-• `Optional` `Readonly` **deployJobStepConfiguration**: `JobStepConfiguration`
+### deployJobStepConfiguration?
+
+> `readonly` `optional` **deployJobStepConfiguration**: `JobStepConfiguration`
 
 Additional configuration for the deploy job step.
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[deployJobStepConfiguration](PublishToAwsOptions.md#deployjobstepconfiguration)
+[`PublishToAwsOptions`](PublishToAwsOptions.md).[`deployJobStepConfiguration`](PublishToAwsOptions.md#deployjobstepconfiguration)
 
-___
+***
 
-### jobConfiguration
+### jobConfiguration?
 
-• `Optional` `Readonly` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, ``"steps"``\>\>
+> `readonly` `optional` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, `"steps"`\>\>
 
 The configuration for the deploy job. This is useful for when you want to
 change the timeoutMinutes, env, or other job-level configuration.
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[jobConfiguration](PublishToAwsOptions.md#jobconfiguration)
+[`PublishToAwsOptions`](PublishToAwsOptions.md).[`jobConfiguration`](PublishToAwsOptions.md#jobconfiguration)
 
-___
+***
 
-### postPublishJobSteps
+### postPublishJobSteps?
 
-• `Optional` `Readonly` **postPublishJobSteps**: `JobStep`[]
+> `readonly` `optional` **postPublishJobSteps**: `JobStep`[]
 
 Job steps to run after the deploy step.
 
 #### Inherited from
 
-[PublishToAwsOptions](PublishToAwsOptions.md).[postPublishJobSteps](PublishToAwsOptions.md#postpublishjobsteps)
+[`PublishToAwsOptions`](PublishToAwsOptions.md).[`postPublishJobSteps`](PublishToAwsOptions.md#postpublishjobsteps)
 
-___
+***
 
-### publishTasks
+### publishTasks?
 
-• `Optional` `Readonly` **publishTasks**: `boolean`
+> `readonly` `optional` **publishTasks**: `boolean`
 
-___
+***
 
-### workflowBootstrapSteps
+### workflowBootstrapSteps?
 
-• `Optional` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `readonly` `optional` **workflowBootstrapSteps**: `JobStep`[]
 
-___
+***
 
-### workflowNodeVersion
+### workflowNodeVersion?
 
-• `Optional` `Readonly` **workflowNodeVersion**: `string`
+> `readonly` `optional` **workflowNodeVersion**: `string`

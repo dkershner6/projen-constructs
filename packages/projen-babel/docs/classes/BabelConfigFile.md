@@ -1,47 +1,28 @@
-[projen-babel](../README.md) / [Exports](../modules.md) / BabelConfigFile
+[**projen-babel**](../README.md) • **Docs**
+
+***
+
+[projen-babel](../globals.md) / BabelConfigFile
 
 # Class: BabelConfigFile
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`BabelConfigFile`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](BabelConfigFile.md#constructor)
-
-### Properties
-
-- [node](BabelConfigFile.md#node)
-- [project](BabelConfigFile.md#project)
-- [transformOptions](BabelConfigFile.md#transformoptions)
-
-### Methods
-
-- [postSynthesize](BabelConfigFile.md#postsynthesize)
-- [preSynthesize](BabelConfigFile.md#presynthesize)
-- [synthesize](BabelConfigFile.md#synthesize)
-- [toString](BabelConfigFile.md#tostring)
-- [isComponent](BabelConfigFile.md#iscomponent)
-- [isConstruct](BabelConfigFile.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new BabelConfigFile()
 
-• **new BabelConfigFile**(`project`, `fileName?`, `options?`): [`BabelConfigFile`](BabelConfigFile.md)
+> **new BabelConfigFile**(`project`, `fileName`, `options`): [`BabelConfigFile`](BabelConfigFile.md)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `project` | `Project` | `undefined` |
-| `fileName` | `string` | `"babel.config.json"` |
-| `options` | [`BabelConfigFileOptions`](../interfaces/BabelConfigFileOptions.md) | `{}` |
+• **project**: `Project`
+
+• **fileName**: `string` = `"babel.config.json"`
+
+• **options**: [`BabelConfigFileOptions`](../interfaces/BabelConfigFileOptions.md) = `{}`
 
 #### Returns
 
@@ -49,41 +30,41 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### transformOptions
 
-• **transformOptions**: `TransformOptions`
+> **transformOptions**: `TransformOptions`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -93,13 +74,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -109,13 +90,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -125,13 +106,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -141,35 +122,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -189,16 +168,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

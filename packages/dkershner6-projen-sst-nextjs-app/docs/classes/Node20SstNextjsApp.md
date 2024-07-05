@@ -1,152 +1,24 @@
-[dkershner6-projen-sst-nextjs-app](../README.md) / [Exports](../modules.md) / Node20SstNextjsApp
+[**dkershner6-projen-sst-nextjs-app**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-sst-nextjs-app](../globals.md) / Node20SstNextjsApp
 
 # Class: Node20SstNextjsApp
 
-## Hierarchy
+## Extends
 
 - `Node20SstApp`
 
-  ↳ **`Node20SstNextjsApp`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Node20SstNextjsApp.md#constructor)
-
-### Properties
-
-- [appEntrypoint](Node20SstNextjsApp.md#appentrypoint)
-- [artifactsDirectory](Node20SstNextjsApp.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](Node20SstNextjsApp.md#artifactsjavascriptdirectory)
-- [autoApprove](Node20SstNextjsApp.md#autoapprove)
-- [autoMerge](Node20SstNextjsApp.md#automerge)
-- [branchNameToSstStageMap](Node20SstNextjsApp.md#branchnametosststagemap)
-- [buildWorkflow](Node20SstNextjsApp.md#buildworkflow)
-- [bundler](Node20SstNextjsApp.md#bundler)
-- [cdkConfig](Node20SstNextjsApp.md#cdkconfig)
-- [cdkDeps](Node20SstNextjsApp.md#cdkdeps)
-- [cdkTasks](Node20SstNextjsApp.md#cdktasks)
-- [commitGenerated](Node20SstNextjsApp.md#commitgenerated)
-- [defaultTask](Node20SstNextjsApp.md#defaulttask)
-- [deps](Node20SstNextjsApp.md#deps)
-- [devContainer](Node20SstNextjsApp.md#devcontainer)
-- [docgen](Node20SstNextjsApp.md#docgen)
-- [docsDirectory](Node20SstNextjsApp.md#docsdirectory)
-- [eslint](Node20SstNextjsApp.md#eslint)
-- [gitattributes](Node20SstNextjsApp.md#gitattributes)
-- [github](Node20SstNextjsApp.md#github)
-- [gitignore](Node20SstNextjsApp.md#gitignore)
-- [gitpod](Node20SstNextjsApp.md#gitpod)
-- [initProject](Node20SstNextjsApp.md#initproject)
-- [jest](Node20SstNextjsApp.md#jest)
-- [jestTransformer](Node20SstNextjsApp.md#jesttransformer)
-- [libdir](Node20SstNextjsApp.md#libdir)
-- [logger](Node20SstNextjsApp.md#logger)
-- [name](Node20SstNextjsApp.md#name)
-- [nextjsTsconfig](Node20SstNextjsApp.md#nextjstsconfig)
-- [node](Node20SstNextjsApp.md#node)
-- [nodeVersion](Node20SstNextjsApp.md#nodeversion)
-- [npmignore](Node20SstNextjsApp.md#npmignore)
-- [outdir](Node20SstNextjsApp.md#outdir)
-- [package](Node20SstNextjsApp.md#package)
-- [parent](Node20SstNextjsApp.md#parent)
-- [prettier](Node20SstNextjsApp.md#prettier)
-- [projectBuild](Node20SstNextjsApp.md#projectbuild)
-- [projectType](Node20SstNextjsApp.md#projecttype)
-- [publisher](Node20SstNextjsApp.md#publisher)
-- [release](Node20SstNextjsApp.md#release)
-- [runScriptCommand](Node20SstNextjsApp.md#runscriptcommand)
-- [srcdir](Node20SstNextjsApp.md#srcdir)
-- [sstConfig](Node20SstNextjsApp.md#sstconfig)
-- [sstVersion](Node20SstNextjsApp.md#sstversion)
-- [tasks](Node20SstNextjsApp.md#tasks)
-- [testdir](Node20SstNextjsApp.md#testdir)
-- [tsconfig](Node20SstNextjsApp.md#tsconfig)
-- [tsconfigDev](Node20SstNextjsApp.md#tsconfigdev)
-- [tsconfigEslint](Node20SstNextjsApp.md#tsconfigeslint)
-- [upgradeWorkflow](Node20SstNextjsApp.md#upgradeworkflow)
-- [vscode](Node20SstNextjsApp.md#vscode)
-- [watchTask](Node20SstNextjsApp.md#watchtask)
-- [workflowBootstrapSteps](Node20SstNextjsApp.md#workflowbootstrapsteps)
-- [workflowPackageCache](Node20SstNextjsApp.md#workflowpackagecache)
-- [DEFAULT\_TASK](Node20SstNextjsApp.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](Node20SstNextjsApp.md#default_ts_jest_tranform_pattern)
-
-### Accessors
-
-- [allowLibraryDependencies](Node20SstNextjsApp.md#allowlibrarydependencies)
-- [buildTask](Node20SstNextjsApp.md#buildtask)
-- [buildWorkflowJobId](Node20SstNextjsApp.md#buildworkflowjobid)
-- [cdkVersion](Node20SstNextjsApp.md#cdkversion)
-- [compileTask](Node20SstNextjsApp.md#compiletask)
-- [components](Node20SstNextjsApp.md#components)
-- [ejected](Node20SstNextjsApp.md#ejected)
-- [entrypoint](Node20SstNextjsApp.md#entrypoint)
-- [files](Node20SstNextjsApp.md#files)
-- [manifest](Node20SstNextjsApp.md#manifest)
-- [maxNodeVersion](Node20SstNextjsApp.md#maxnodeversion)
-- [minNodeVersion](Node20SstNextjsApp.md#minnodeversion)
-- [npmrc](Node20SstNextjsApp.md#npmrc)
-- [packageManager](Node20SstNextjsApp.md#packagemanager)
-- [packageTask](Node20SstNextjsApp.md#packagetask)
-- [postCompileTask](Node20SstNextjsApp.md#postcompiletask)
-- [preCompileTask](Node20SstNextjsApp.md#precompiletask)
-- [projenCommand](Node20SstNextjsApp.md#projencommand)
-- [root](Node20SstNextjsApp.md#root)
-- [subprojects](Node20SstNextjsApp.md#subprojects)
-- [testTask](Node20SstNextjsApp.md#testtask)
-
-### Methods
-
-- [addBins](Node20SstNextjsApp.md#addbins)
-- [addBundledDeps](Node20SstNextjsApp.md#addbundleddeps)
-- [addCdkDependency](Node20SstNextjsApp.md#addcdkdependency)
-- [addCompileCommand](Node20SstNextjsApp.md#addcompilecommand)
-- [addDeps](Node20SstNextjsApp.md#adddeps)
-- [addDevDeps](Node20SstNextjsApp.md#adddevdeps)
-- [addExcludeFromCleanup](Node20SstNextjsApp.md#addexcludefromcleanup)
-- [addFields](Node20SstNextjsApp.md#addfields)
-- [addGitIgnore](Node20SstNextjsApp.md#addgitignore)
-- [addKeywords](Node20SstNextjsApp.md#addkeywords)
-- [addPackageIgnore](Node20SstNextjsApp.md#addpackageignore)
-- [addPeerDeps](Node20SstNextjsApp.md#addpeerdeps)
-- [addScripts](Node20SstNextjsApp.md#addscripts)
-- [addTask](Node20SstNextjsApp.md#addtask)
-- [addTestCommand](Node20SstNextjsApp.md#addtestcommand)
-- [addTip](Node20SstNextjsApp.md#addtip)
-- [annotateGenerated](Node20SstNextjsApp.md#annotategenerated)
-- [buildDeployToAwsJobStep](Node20SstNextjsApp.md#builddeploytoawsjobstep)
-- [buildPublishToAwsJob](Node20SstNextjsApp.md#buildpublishtoawsjob)
-- [hasScript](Node20SstNextjsApp.md#hasscript)
-- [postSynthesize](Node20SstNextjsApp.md#postsynthesize)
-- [preSynthesize](Node20SstNextjsApp.md#presynthesize)
-- [removeScript](Node20SstNextjsApp.md#removescript)
-- [removeTask](Node20SstNextjsApp.md#removetask)
-- [renderWorkflowSetup](Node20SstNextjsApp.md#renderworkflowsetup)
-- [runTaskCommand](Node20SstNextjsApp.md#runtaskcommand)
-- [setScript](Node20SstNextjsApp.md#setscript)
-- [synth](Node20SstNextjsApp.md#synth)
-- [toString](Node20SstNextjsApp.md#tostring)
-- [tryFindFile](Node20SstNextjsApp.md#tryfindfile)
-- [tryFindJsonFile](Node20SstNextjsApp.md#tryfindjsonfile)
-- [tryFindObjectFile](Node20SstNextjsApp.md#tryfindobjectfile)
-- [tryRemoveFile](Node20SstNextjsApp.md#tryremovefile)
-- [isConstruct](Node20SstNextjsApp.md#isconstruct)
-- [isProject](Node20SstNextjsApp.md#isproject)
-- [of](Node20SstNextjsApp.md#of)
-
 ## Constructors
 
-### constructor
+### new Node20SstNextjsApp()
 
-• **new Node20SstNextjsApp**(`options`): [`Node20SstNextjsApp`](Node20SstNextjsApp.md)
+> **new Node20SstNextjsApp**(`options`): [`Node20SstNextjsApp`](Node20SstNextjsApp.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`Node20SstNextjsAppOptions`](../interfaces/Node20SstNextjsAppOptions.md) |
+• **options**: [`Node20SstNextjsAppOptions`](../interfaces/Node20SstNextjsAppOptions.md)
 
 #### Returns
 
@@ -154,25 +26,25 @@
 
 #### Overrides
 
-Node20SstApp.constructor
+`Node20SstApp.constructor`
 
 ## Properties
 
 ### appEntrypoint
 
-• `Readonly` **appEntrypoint**: `string`
+> `readonly` **appEntrypoint**: `string`
 
 The CDK app entrypoint
 
 #### Inherited from
 
-Node20SstApp.appEntrypoint
+`Node20SstApp.appEntrypoint`
 
-___
+***
 
 ### artifactsDirectory
 
-• `Readonly` **artifactsDirectory**: `string`
+> `readonly` **artifactsDirectory**: `string`
 
 The build output directory. An npm tarball will be created under the `js`
 subdirectory. For example, if this is set to `dist` (the default), the npm
@@ -180,152 +52,152 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-Node20SstApp.artifactsDirectory
+`Node20SstApp.artifactsDirectory`
 
-___
+***
 
 ### artifactsJavascriptDirectory
 
-• `Readonly` **artifactsJavascriptDirectory**: `string`
+> `readonly` **artifactsJavascriptDirectory**: `string`
 
 The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-Node20SstApp.artifactsJavascriptDirectory
+`Node20SstApp.artifactsJavascriptDirectory`
 
-___
+***
 
-### autoApprove
+### autoApprove?
 
-• `Optional` `Readonly` **autoApprove**: `AutoApprove`
+> `readonly` `optional` **autoApprove**: `AutoApprove`
 
 Auto approve set up for this project.
 
 #### Inherited from
 
-Node20SstApp.autoApprove
+`Node20SstApp.autoApprove`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `AutoMerge`
+> `readonly` `optional` **autoMerge**: `AutoMerge`
 
 Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-Node20SstApp.autoMerge
+`Node20SstApp.autoMerge`
 
-___
+***
 
-### branchNameToSstStageMap
+### branchNameToSstStageMap?
 
-• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
 #### Inherited from
 
-Node20SstApp.branchNameToSstStageMap
+`Node20SstApp.branchNameToSstStageMap`
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `BuildWorkflow`
+> `readonly` `optional` **buildWorkflow**: `BuildWorkflow`
 
 The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-Node20SstApp.buildWorkflow
+`Node20SstApp.buildWorkflow`
 
-___
+***
 
 ### bundler
 
-• `Readonly` **bundler**: `Bundler`
+> `readonly` **bundler**: `Bundler`
 
 #### Inherited from
 
-Node20SstApp.bundler
+`Node20SstApp.bundler`
 
-___
+***
 
 ### cdkConfig
 
-• `Readonly` **cdkConfig**: `CdkConfig`
+> `readonly` **cdkConfig**: `CdkConfig`
 
 cdk.json configuration.
 
 #### Inherited from
 
-Node20SstApp.cdkConfig
+`Node20SstApp.cdkConfig`
 
-___
+***
 
 ### cdkDeps
 
-• `Readonly` **cdkDeps**: `AwsCdkDeps`
+> `readonly` **cdkDeps**: `AwsCdkDeps`
 
 #### Inherited from
 
-Node20SstApp.cdkDeps
+`Node20SstApp.cdkDeps`
 
-___
+***
 
 ### cdkTasks
 
-• `Readonly` **cdkTasks**: `CdkTasks`
+> `readonly` **cdkTasks**: `CdkTasks`
 
 Common CDK tasks.
 
 #### Inherited from
 
-Node20SstApp.cdkTasks
+`Node20SstApp.cdkTasks`
 
-___
+***
 
 ### commitGenerated
 
-• `Readonly` **commitGenerated**: `boolean`
+> `readonly` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
 #### Inherited from
 
-Node20SstApp.commitGenerated
+`Node20SstApp.commitGenerated`
 
-___
+***
 
-### defaultTask
+### defaultTask?
 
-• `Optional` `Readonly` **defaultTask**: `Task`
+> `readonly` `optional` **defaultTask**: `Task`
 
 This is the "default" task, the one that executes "projen". Undefined if
 the project is being ejected.
 
 #### Inherited from
 
-Node20SstApp.defaultTask
+`Node20SstApp.defaultTask`
 
-___
+***
 
 ### deps
 
-• `Readonly` **deps**: `Dependencies`
+> `readonly` **deps**: `Dependencies`
 
 Project dependencies.
 
 #### Inherited from
 
-Node20SstApp.deps
+`Node20SstApp.deps`
 
-___
+***
 
 ### devContainer
 
-• `Readonly` **devContainer**: `undefined` \| `DevContainer`
+> `readonly` **devContainer**: `undefined` \| `DevContainer`
 
 Access for .devcontainer.json (used for GitHub Codespaces)
 
@@ -333,55 +205,55 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-Node20SstApp.devContainer
+`Node20SstApp.devContainer`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 #### Inherited from
 
-Node20SstApp.docgen
+`Node20SstApp.docgen`
 
-___
+***
 
 ### docsDirectory
 
-• `Readonly` **docsDirectory**: `string`
+> `readonly` **docsDirectory**: `string`
 
 #### Inherited from
 
-Node20SstApp.docsDirectory
+`Node20SstApp.docsDirectory`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `Eslint`
+> `readonly` `optional` **eslint**: `Eslint`
 
 #### Inherited from
 
-Node20SstApp.eslint
+`Node20SstApp.eslint`
 
-___
+***
 
 ### gitattributes
 
-• `Readonly` **gitattributes**: `GitAttributesFile`
+> `readonly` **gitattributes**: `GitAttributesFile`
 
 The .gitattributes file for this repository.
 
 #### Inherited from
 
-Node20SstApp.gitattributes
+`Node20SstApp.gitattributes`
 
-___
+***
 
 ### github
 
-• `Readonly` **github**: `undefined` \| `GitHub`
+> `readonly` **github**: `undefined` \| `GitHub`
 
 Access all github components.
 
@@ -389,25 +261,25 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-Node20SstApp.github
+`Node20SstApp.github`
 
-___
+***
 
 ### gitignore
 
-• `Readonly` **gitignore**: `IgnoreFile`
+> `readonly` **gitignore**: `IgnoreFile`
 
 .gitignore
 
 #### Inherited from
 
-Node20SstApp.gitignore
+`Node20SstApp.gitignore`
 
-___
+***
 
 ### gitpod
 
-• `Readonly` **gitpod**: `undefined` \| `Gitpod`
+> `readonly` **gitpod**: `undefined` \| `Gitpod`
 
 Access for Gitpod
 
@@ -415,13 +287,13 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-Node20SstApp.gitpod
+`Node20SstApp.gitpod`
 
-___
+***
 
-### initProject
+### initProject?
 
-• `Optional` `Readonly` **initProject**: `InitProject`
+> `readonly` `optional` **initProject**: `InitProject`
 
 The options used when this project is bootstrapped via `projen new`. It
 includes the original set of options passed to the CLI and also the JSII
@@ -429,320 +301,320 @@ FQN of the project type.
 
 #### Inherited from
 
-Node20SstApp.initProject
+`Node20SstApp.initProject`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `Jest`
+> `readonly` `optional` **jest**: `Jest`
 
 The Jest configuration (if enabled)
 
 #### Inherited from
 
-Node20SstApp.jest
+`Node20SstApp.jest`
 
-___
+***
 
 ### jestTransformer
 
-• `Readonly` **jestTransformer**: `JestTransformer`
+> `readonly` **jestTransformer**: `JestTransformer`
 
 #### Inherited from
 
-Node20SstApp.jestTransformer
+`Node20SstApp.jestTransformer`
 
-___
+***
 
 ### libdir
 
-• `Readonly` **libdir**: `string`
+> `readonly` **libdir**: `string`
 
 The directory in which compiled .js files reside.
 
 #### Inherited from
 
-Node20SstApp.libdir
+`Node20SstApp.libdir`
 
-___
+***
 
 ### logger
 
-• `Readonly` **logger**: `Logger`
+> `readonly` **logger**: `Logger`
 
 Logging utilities.
 
 #### Inherited from
 
-Node20SstApp.logger
+`Node20SstApp.logger`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 Project name.
 
 #### Inherited from
 
-Node20SstApp.name
+`Node20SstApp.name`
 
-___
+***
 
 ### nextjsTsconfig
 
-• `Readonly` **nextjsTsconfig**: `TypescriptConfig`
+> `readonly` **nextjsTsconfig**: `TypescriptConfig`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Node20SstApp.node
+`Node20SstApp.node`
 
-___
+***
 
-### nodeVersion
+### nodeVersion?
 
-• `Protected` `Optional` `Readonly` **nodeVersion**: `string`
+> `protected` `readonly` `optional` **nodeVersion**: `string`
 
 #### Inherited from
 
-Node20SstApp.nodeVersion
+`Node20SstApp.nodeVersion`
 
-___
+***
 
-### npmignore
+### npmignore?
 
-• `Optional` `Readonly` **npmignore**: `IgnoreFile`
+> `readonly` `optional` **npmignore**: `IgnoreFile`
 
 The .npmignore file.
 
 #### Inherited from
 
-Node20SstApp.npmignore
+`Node20SstApp.npmignore`
 
-___
+***
 
 ### outdir
 
-• `Readonly` **outdir**: `string`
+> `readonly` **outdir**: `string`
 
 Absolute output directory of this project.
 
 #### Inherited from
 
-Node20SstApp.outdir
+`Node20SstApp.outdir`
 
-___
+***
 
 ### package
 
-• `Readonly` **package**: `NodePackage`
+> `readonly` **package**: `NodePackage`
 
 API for managing the node package.
 
 #### Inherited from
 
-Node20SstApp.package
+`Node20SstApp.package`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-Node20SstApp.parent
+`Node20SstApp.parent`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `Prettier`
+> `readonly` `optional` **prettier**: `Prettier`
 
 #### Inherited from
 
-Node20SstApp.prettier
+`Node20SstApp.prettier`
 
-___
+***
 
 ### projectBuild
 
-• `Readonly` **projectBuild**: `ProjectBuild`
+> `readonly` **projectBuild**: `ProjectBuild`
 
 Manages the build process of the project.
 
 #### Inherited from
 
-Node20SstApp.projectBuild
+`Node20SstApp.projectBuild`
 
-___
+***
 
 ### projectType
 
-• `Readonly` **projectType**: `ProjectType`
+> `readonly` **projectType**: `ProjectType`
 
 #### Inherited from
 
-Node20SstApp.projectType
+`Node20SstApp.projectType`
 
-___
+***
 
-### publisher
+### ~~publisher?~~
 
-• `Optional` `Readonly` **publisher**: `Publisher`
+> `readonly` `optional` **publisher**: `Publisher`
 
 Package publisher. This will be `undefined` if the project does not have a
 release workflow.
 
-**`Deprecated`**
+#### Deprecated
 
 use `release.publisher`.
 
 #### Inherited from
 
-Node20SstApp.publisher
+`Node20SstApp.publisher`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `Release`
+> `readonly` `optional` **release**: `Release`
 
 Release management.
 
 #### Inherited from
 
-Node20SstApp.release
+`Node20SstApp.release`
 
-___
+***
 
 ### runScriptCommand
 
-• `Readonly` **runScriptCommand**: `string`
+> `readonly` **runScriptCommand**: `string`
 
 The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager).
 
 #### Inherited from
 
-Node20SstApp.runScriptCommand
+`Node20SstApp.runScriptCommand`
 
-___
+***
 
 ### srcdir
 
-• `Readonly` **srcdir**: `string`
+> `readonly` **srcdir**: `string`
 
 The directory in which the .ts sources reside.
 
 #### Inherited from
 
-Node20SstApp.srcdir
+`Node20SstApp.srcdir`
 
-___
+***
 
 ### sstConfig
 
-• `Readonly` **sstConfig**: `SstConfiguration`
+> `readonly` **sstConfig**: `SstConfiguration`
 
 #### Inherited from
 
-Node20SstApp.sstConfig
+`Node20SstApp.sstConfig`
 
-___
+***
 
 ### sstVersion
 
-• `Readonly` **sstVersion**: `string`
+> `readonly` **sstVersion**: `string`
 
 #### Inherited from
 
-Node20SstApp.sstVersion
+`Node20SstApp.sstVersion`
 
-___
+***
 
 ### tasks
 
-• `Readonly` **tasks**: `Tasks`
+> `readonly` **tasks**: `Tasks`
 
 Project tasks.
 
 #### Inherited from
 
-Node20SstApp.tasks
+`Node20SstApp.tasks`
 
-___
+***
 
 ### testdir
 
-• `Readonly` **testdir**: `string`
+> `readonly` **testdir**: `string`
 
 The directory in which tests reside.
 
 #### Inherited from
 
-Node20SstApp.testdir
+`Node20SstApp.testdir`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfig`
+> `readonly` `optional` **tsconfig**: `TypescriptConfig`
 
 #### Inherited from
 
-Node20SstApp.tsconfig
+`Node20SstApp.tsconfig`
 
-___
+***
 
 ### tsconfigDev
 
-• `Readonly` **tsconfigDev**: `TypescriptConfig`
+> `readonly` **tsconfigDev**: `TypescriptConfig`
 
 A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-Node20SstApp.tsconfigDev
+`Node20SstApp.tsconfigDev`
 
-___
+***
 
-### tsconfigEslint
+### tsconfigEslint?
 
-• `Optional` `Readonly` **tsconfigEslint**: `TypescriptConfig`
+> `readonly` `optional` **tsconfigEslint**: `TypescriptConfig`
 
 #### Inherited from
 
-Node20SstApp.tsconfigEslint
+`Node20SstApp.tsconfigEslint`
 
-___
+***
 
-### upgradeWorkflow
+### upgradeWorkflow?
 
-• `Optional` `Readonly` **upgradeWorkflow**: `UpgradeDependencies`
+> `readonly` `optional` **upgradeWorkflow**: `UpgradeDependencies`
 
 The upgrade workflow.
 
 #### Inherited from
 
-Node20SstApp.upgradeWorkflow
+`Node20SstApp.upgradeWorkflow`
 
-___
+***
 
 ### vscode
 
-• `Readonly` **vscode**: `undefined` \| `VsCode`
+> `readonly` **vscode**: `undefined` \| `VsCode`
 
 Access all VSCode components.
 
@@ -750,86 +622,86 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-Node20SstApp.vscode
+`Node20SstApp.vscode`
 
-___
+***
 
 ### watchTask
 
-• `Readonly` **watchTask**: `Task`
+> `readonly` **watchTask**: `Task`
 
 The "watch" task.
 
 #### Inherited from
 
-Node20SstApp.watchTask
+`Node20SstApp.watchTask`
 
-___
+***
 
 ### workflowBootstrapSteps
 
-• `Protected` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `protected` `readonly` **workflowBootstrapSteps**: `JobStep`[]
 
 #### Inherited from
 
-Node20SstApp.workflowBootstrapSteps
+`Node20SstApp.workflowBootstrapSteps`
 
-___
+***
 
 ### workflowPackageCache
 
-• `Protected` `Readonly` **workflowPackageCache**: `boolean`
+> `protected` `readonly` **workflowPackageCache**: `boolean`
 
 #### Inherited from
 
-Node20SstApp.workflowPackageCache
+`Node20SstApp.workflowPackageCache`
 
-___
+***
 
 ### DEFAULT\_TASK
 
-▪ `Static` `Readonly` **DEFAULT\_TASK**: ``"default"``
+> `readonly` `static` **DEFAULT\_TASK**: `"default"` = `"default"`
 
 The name of the default task (the task executed when `projen` is run without arguments). Normally
 this task should synthesize the project files.
 
 #### Inherited from
 
-Node20SstApp.DEFAULT\_TASK
+`Node20SstApp.DEFAULT_TASK`
 
-___
+***
 
 ### DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
-▪ `Static` `Readonly` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: ``"^.+\\.[t]sx?$"``
+> `readonly` `static` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: "^.+\\.\[t\]sx?$" = `"^.+\\.[t]sx?$"`
 
 #### Inherited from
 
-Node20SstApp.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+`Node20SstApp.DEFAULT_TS_JEST_TRANFORM_PATTERN`
 
 ## Accessors
 
 ### allowLibraryDependencies
 
-• `get` **allowLibraryDependencies**(): `boolean`
+> `get` **allowLibraryDependencies**(): `boolean`
+
+#### Deprecated
+
+use `package.allowLibraryDependencies`
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
-
-use `package.allowLibraryDependencies`
-
 #### Inherited from
 
-Node20SstApp.allowLibraryDependencies
+`Node20SstApp.allowLibraryDependencies`
 
-___
+***
 
 ### buildTask
 
-• `get` **buildTask**(): `Task`
+> `get` **buildTask**(): `Task`
 
 #### Returns
 
@@ -837,13 +709,13 @@ ___
 
 #### Inherited from
 
-Node20SstApp.buildTask
+`Node20SstApp.buildTask`
 
-___
+***
 
 ### buildWorkflowJobId
 
-• `get` **buildWorkflowJobId**(): `undefined` \| `string`
+> `get` **buildWorkflowJobId**(): `undefined` \| `string`
 
 The job ID of the build workflow.
 
@@ -853,13 +725,13 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-Node20SstApp.buildWorkflowJobId
+`Node20SstApp.buildWorkflowJobId`
 
-___
+***
 
 ### cdkVersion
 
-• `get` **cdkVersion**(): `string`
+> `get` **cdkVersion**(): `string`
 
 The CDK version this app is using.
 
@@ -869,13 +741,13 @@ The CDK version this app is using.
 
 #### Inherited from
 
-Node20SstApp.cdkVersion
+`Node20SstApp.cdkVersion`
 
-___
+***
 
 ### compileTask
 
-• `get` **compileTask**(): `Task`
+> `get` **compileTask**(): `Task`
 
 #### Returns
 
@@ -883,13 +755,13 @@ ___
 
 #### Inherited from
 
-Node20SstApp.compileTask
+`Node20SstApp.compileTask`
 
-___
+***
 
 ### components
 
-• `get` **components**(): `Component`[]
+> `get` **components**(): `Component`[]
 
 Returns all the components within this project.
 
@@ -899,13 +771,13 @@ Returns all the components within this project.
 
 #### Inherited from
 
-Node20SstApp.components
+`Node20SstApp.components`
 
-___
+***
 
 ### ejected
 
-• `get` **ejected**(): `boolean`
+> `get` **ejected**(): `boolean`
 
 Whether or not the project is being ejected.
 
@@ -915,31 +787,31 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-Node20SstApp.ejected
+`Node20SstApp.ejected`
 
-___
+***
 
 ### entrypoint
 
-• `get` **entrypoint**(): `string`
+> `get` **entrypoint**(): `string`
+
+#### Deprecated
+
+use `package.entrypoint`
 
 #### Returns
 
 `string`
 
-**`Deprecated`**
-
-use `package.entrypoint`
-
 #### Inherited from
 
-Node20SstApp.entrypoint
+`Node20SstApp.entrypoint`
 
-___
+***
 
 ### files
 
-• `get` **files**(): `FileBase`[]
+> `get` **files**(): `FileBase`[]
 
 All files in this project.
 
@@ -949,31 +821,31 @@ All files in this project.
 
 #### Inherited from
 
-Node20SstApp.files
+`Node20SstApp.files`
 
-___
+***
 
 ### manifest
 
-• `get` **manifest**(): `any`
+> `get` **manifest**(): `any`
+
+#### Deprecated
+
+use `package.addField(x, y)`
 
 #### Returns
 
 `any`
 
-**`Deprecated`**
-
-use `package.addField(x, y)`
-
 #### Inherited from
 
-Node20SstApp.manifest
+`Node20SstApp.manifest`
 
-___
+***
 
 ### maxNodeVersion
 
-• `get` **maxNodeVersion**(): `undefined` \| `string`
+> `get` **maxNodeVersion**(): `undefined` \| `string`
 
 Maximum node version required by this package.
 
@@ -983,13 +855,13 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-Node20SstApp.maxNodeVersion
+`Node20SstApp.maxNodeVersion`
 
-___
+***
 
 ### minNodeVersion
 
-• `get` **minNodeVersion**(): `undefined` \| `string`
+> `get` **minNodeVersion**(): `undefined` \| `string`
 
 Minimum node.js version required by this package.
 
@@ -999,13 +871,13 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-Node20SstApp.minNodeVersion
+`Node20SstApp.minNodeVersion`
 
-___
+***
 
 ### npmrc
 
-• `get` **npmrc**(): `NpmConfig`
+> `get` **npmrc**(): `NpmConfig`
 
 The .npmrc file
 
@@ -1015,33 +887,33 @@ The .npmrc file
 
 #### Inherited from
 
-Node20SstApp.npmrc
+`Node20SstApp.npmrc`
 
-___
+***
 
 ### packageManager
 
-• `get` **packageManager**(): `NodePackageManager`
+> `get` **packageManager**(): `NodePackageManager`
 
 The package manager to use.
+
+#### Deprecated
+
+use `package.packageManager`
 
 #### Returns
 
 `NodePackageManager`
 
-**`Deprecated`**
-
-use `package.packageManager`
-
 #### Inherited from
 
-Node20SstApp.packageManager
+`Node20SstApp.packageManager`
 
-___
+***
 
 ### packageTask
 
-• `get` **packageTask**(): `Task`
+> `get` **packageTask**(): `Task`
 
 #### Returns
 
@@ -1049,13 +921,13 @@ ___
 
 #### Inherited from
 
-Node20SstApp.packageTask
+`Node20SstApp.packageTask`
 
-___
+***
 
 ### postCompileTask
 
-• `get` **postCompileTask**(): `Task`
+> `get` **postCompileTask**(): `Task`
 
 #### Returns
 
@@ -1063,13 +935,13 @@ ___
 
 #### Inherited from
 
-Node20SstApp.postCompileTask
+`Node20SstApp.postCompileTask`
 
-___
+***
 
 ### preCompileTask
 
-• `get` **preCompileTask**(): `Task`
+> `get` **preCompileTask**(): `Task`
 
 #### Returns
 
@@ -1077,13 +949,13 @@ ___
 
 #### Inherited from
 
-Node20SstApp.preCompileTask
+`Node20SstApp.preCompileTask`
 
-___
+***
 
 ### projenCommand
 
-• `get` **projenCommand**(): `string`
+> `get` **projenCommand**(): `string`
 
 The command to use in order to run the projen CLI.
 
@@ -1093,13 +965,13 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-Node20SstApp.projenCommand
+`Node20SstApp.projenCommand`
 
-___
+***
 
 ### root
 
-• `get` **root**(): `Project`
+> `get` **root**(): `Project`
 
 The root project.
 
@@ -1109,13 +981,13 @@ The root project.
 
 #### Inherited from
 
-Node20SstApp.root
+`Node20SstApp.root`
 
-___
+***
 
 ### subprojects
 
-• `get` **subprojects**(): `Project`[]
+> `get` **subprojects**(): `Project`[]
 
 Returns all the subprojects within this project.
 
@@ -1125,13 +997,13 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-Node20SstApp.subprojects
+`Node20SstApp.subprojects`
 
-___
+***
 
 ### testTask
 
-• `get` **testTask**(): `Task`
+> `get` **testTask**(): `Task`
 
 #### Returns
 
@@ -1139,19 +1011,17 @@ ___
 
 #### Inherited from
 
-Node20SstApp.testTask
+`Node20SstApp.testTask`
 
 ## Methods
 
-### addBins
+### addBins()
 
-▸ **addBins**(`bins`): `void`
+> **addBins**(`bins`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bins` | `Record`\<`string`, `string`\> |
+• **bins**: `Record`\<`string`, `string`\>
 
 #### Returns
 
@@ -1159,13 +1029,13 @@ Node20SstApp.testTask
 
 #### Inherited from
 
-Node20SstApp.addBins
+`Node20SstApp.addBins`
 
-___
+***
 
-### addBundledDeps
+### addBundledDeps()
 
-▸ **addBundledDeps**(`...deps`): `void`
+> **addBundledDeps**(...`deps`): `void`
 
 Defines bundled dependencies.
 
@@ -1174,9 +1044,13 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1184,21 +1058,21 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-Node20SstApp.addBundledDeps
+`Node20SstApp.addBundledDeps`
 
-___
+***
 
-### addCdkDependency
+### addCdkDependency()
 
-▸ **addCdkDependency**(`...modules`): `void`
+> **addCdkDependency**(...`modules`): `void`
 
 Adds an AWS CDK module dependencies
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...modules` | `string`[] | The list of modules to depend on |
+• ...**modules**: `string`[]
+
+The list of modules to depend on
 
 #### Returns
 
@@ -1206,47 +1080,49 @@ Adds an AWS CDK module dependencies
 
 #### Inherited from
 
-Node20SstApp.addCdkDependency
+`Node20SstApp.addCdkDependency`
 
-___
+***
 
-### addCompileCommand
+### ~~addCompileCommand()~~
 
-▸ **addCompileCommand**(`...commands`): `void`
+> **addCompileCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.compileTask.exec()`
 
 #### Inherited from
 
-Node20SstApp.addCompileCommand
+`Node20SstApp.addCompileCommand`
 
-___
+***
 
-### addDeps
+### addDeps()
 
-▸ **addDeps**(`...deps`): `void`
+> **addDeps**(...`deps`): `void`
 
 Defines normal dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1254,21 +1130,25 @@ Defines normal dependencies.
 
 #### Inherited from
 
-Node20SstApp.addDeps
+`Node20SstApp.addDeps`
 
-___
+***
 
-### addDevDeps
+### addDevDeps()
 
-▸ **addDevDeps**(`...deps`): `void`
+> **addDevDeps**(...`deps`): `void`
 
 Defines development/test dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1276,22 +1156,22 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-Node20SstApp.addDevDeps
+`Node20SstApp.addDevDeps`
 
-___
+***
 
-### addExcludeFromCleanup
+### addExcludeFromCleanup()
 
-▸ **addExcludeFromCleanup**(`...globs`): `void`
+> **addExcludeFromCleanup**(...`globs`): `void`
 
 Exclude the matching files from pre-synth cleanup. Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...globs` | `string`[] | The glob patterns to match |
+• ...**globs**: `string`[]
+
+The glob patterns to match
 
 #### Returns
 
@@ -1299,21 +1179,21 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-Node20SstApp.addExcludeFromCleanup
+`Node20SstApp.addExcludeFromCleanup`
 
-___
+***
 
-### addFields
+### addFields()
 
-▸ **addFields**(`fields`): `void`
+> **addFields**(`fields`): `void`
 
 Directly set fields in `package.json`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fields` | `Object` | The fields to set |
+• **fields**
+
+The fields to set
 
 #### Returns
 
@@ -1321,21 +1201,21 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-Node20SstApp.addFields
+`Node20SstApp.addFields`
 
-___
+***
 
-### addGitIgnore
+### addGitIgnore()
 
-▸ **addGitIgnore**(`pattern`): `void`
+> **addGitIgnore**(`pattern`): `void`
 
 Adds a .gitignore pattern.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The glob pattern to ignore. |
+• **pattern**: `string`
+
+The glob pattern to ignore.
 
 #### Returns
 
@@ -1343,21 +1223,21 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-Node20SstApp.addGitIgnore
+`Node20SstApp.addGitIgnore`
 
-___
+***
 
-### addKeywords
+### addKeywords()
 
-▸ **addKeywords**(`...keywords`): `void`
+> **addKeywords**(...`keywords`): `void`
 
 Adds keywords to package.json (deduplicated)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...keywords` | `string`[] | The keywords to add |
+• ...**keywords**: `string`[]
+
+The keywords to add
 
 #### Returns
 
@@ -1365,39 +1245,39 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-Node20SstApp.addKeywords
+`Node20SstApp.addKeywords`
 
-___
+***
 
-### addPackageIgnore
+### addPackageIgnore()
 
-▸ **addPackageIgnore**(`pattern`): `void`
+> **addPackageIgnore**(`pattern`): `void`
 
 Adds patterns to be ignored by npm.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The pattern to ignore. |
+• **pattern**: `string`
+
+The pattern to ignore.
 
 #### Returns
 
 `void`
 
-**`Remarks`**
+#### Remarks
 
 If you are having trouble getting an ignore to populate, try using your construct or component's preSynthesize method to properly delay calling this method.
 
 #### Inherited from
 
-Node20SstApp.addPackageIgnore
+`Node20SstApp.addPackageIgnore`
 
-___
+***
 
-### addPeerDeps
+### addPeerDeps()
 
-▸ **addPeerDeps**(`...deps`): `void`
+> **addPeerDeps**(...`deps`): `void`
 
 Defines peer dependencies.
 
@@ -1407,9 +1287,13 @@ your code against the minimum version required from your consumers.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1417,21 +1301,21 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-Node20SstApp.addPeerDeps
+`Node20SstApp.addPeerDeps`
 
-___
+***
 
-### addScripts
+### addScripts()
 
-▸ **addScripts**(`scripts`): `void`
+> **addScripts**(`scripts`): `void`
 
 Replaces the contents of multiple npm package.json scripts.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scripts` | `Object` | The scripts to set |
+• **scripts**
+
+The scripts to set
 
 #### Returns
 
@@ -1439,23 +1323,26 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-Node20SstApp.addScripts
+`Node20SstApp.addScripts`
 
-___
+***
 
-### addTask
+### addTask()
 
-▸ **addTask**(`name`, `props?`): `Task`
+> **addTask**(`name`, `props`?): `Task`
 
 Adds a new task to this project. This will fail if the project already has
 a task with this name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The task name to add |
-| `props?` | `TaskOptions` | Task properties |
+• **name**: `string`
+
+The task name to add
+
+• **props?**: `TaskOptions`
+
+Task properties
 
 #### Returns
 
@@ -1463,65 +1350,63 @@ a task with this name.
 
 #### Inherited from
 
-Node20SstApp.addTask
+`Node20SstApp.addTask`
 
-___
+***
 
-### addTestCommand
+### ~~addTestCommand()~~
 
-▸ **addTestCommand**(`...commands`): `void`
+> **addTestCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.testTask.exec()`
 
 #### Inherited from
 
-Node20SstApp.addTestCommand
+`Node20SstApp.addTestCommand`
 
-___
+***
 
-### addTip
+### ~~addTip()~~
 
-▸ **addTip**(`message`): `void`
+> **addTip**(`message`): `void`
 
 Prints a "tip" message during synthesis.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | The message |
+• **message**: `string`
+
+The message
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.logger.info(message)` to show messages during synthesis
 
 #### Inherited from
 
-Node20SstApp.addTip
+`Node20SstApp.addTip`
 
-___
+***
 
-### annotateGenerated
+### annotateGenerated()
 
-▸ **annotateGenerated**(`glob`): `void`
+> **annotateGenerated**(`glob`): `void`
 
 Marks the provided file(s) as being generated. This is achieved using the
 github-linguist attributes. Generated files do not count against the
@@ -1529,33 +1414,31 @@ repository statistics and language breakdown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `glob` | `string` | the glob pattern to match (could be a file path). |
+• **glob**: `string`
+
+the glob pattern to match (could be a file path).
 
 #### Returns
 
 `void`
 
-**`See`**
+#### See
 
 https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-Node20SstApp.annotateGenerated
+`Node20SstApp.annotateGenerated`
 
-___
+***
 
-### buildDeployToAwsJobStep
+### buildDeployToAwsJobStep()
 
-▸ **buildDeployToAwsJobStep**(`«destructured»`): `JobStep`
+> **buildDeployToAwsJobStep**(`__namedParameters`): `JobStep`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `DeployJobStepBuilderParams` |
+• **\_\_namedParameters**: `DeployJobStepBuilderParams`
 
 #### Returns
 
@@ -1563,20 +1446,19 @@ ___
 
 #### Inherited from
 
-Node20SstApp.buildDeployToAwsJobStep
+`Node20SstApp.buildDeployToAwsJobStep`
 
-___
+***
 
-### buildPublishToAwsJob
+### buildPublishToAwsJob()
 
-▸ **buildPublishToAwsJob**(`«destructured»`, `options`): `Job`
+> **buildPublishToAwsJob**(`__namedParameters`, `options`): `Job`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `DeployJobStepBuilderParams` |
-| `options` | `AwsAppPublisherOptions` |
+• **\_\_namedParameters**: `DeployJobStepBuilderParams`
+
+• **options**: `AwsAppPublisherOptions`
 
 #### Returns
 
@@ -1584,39 +1466,39 @@ ___
 
 #### Inherited from
 
-Node20SstApp.buildPublishToAwsJob
+`Node20SstApp.buildPublishToAwsJob`
 
-___
+***
 
-### hasScript
+### ~~hasScript()~~
 
-▸ **hasScript**(`name`): `boolean`
+> **hasScript**(`name`): `boolean`
 
 Indicates if a script by the name name is defined.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script |
+• **name**: `string`
+
+The name of the script
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
+#### Deprecated
 
 Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-Node20SstApp.hasScript
+`Node20SstApp.hasScript`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after all components are synthesized. Order is *not* guaranteed.
 
@@ -1626,13 +1508,13 @@ Called after all components are synthesized. Order is *not* guaranteed.
 
 #### Inherited from
 
-Node20SstApp.postSynthesize
+`Node20SstApp.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before all components are synthesized.
 
@@ -1642,21 +1524,21 @@ Called before all components are synthesized.
 
 #### Inherited from
 
-Node20SstApp.preSynthesize
+`Node20SstApp.preSynthesize`
 
-___
+***
 
-### removeScript
+### removeScript()
 
-▸ **removeScript**(`name`): `void`
+> **removeScript**(`name`): `void`
 
 Removes the npm script (always successful).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script. |
+• **name**: `string`
+
+The name of the script.
 
 #### Returns
 
@@ -1664,21 +1546,21 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-Node20SstApp.removeScript
+`Node20SstApp.removeScript`
 
-___
+***
 
-### removeTask
+### removeTask()
 
-▸ **removeTask**(`name`): `undefined` \| `Task`
+> **removeTask**(`name`): `undefined` \| `Task`
 
 Removes a task from a project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the task to remove. |
+• **name**: `string`
+
+The name of the task to remove.
 
 #### Returns
 
@@ -1688,22 +1570,22 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-Node20SstApp.removeTask
+`Node20SstApp.removeTask`
 
-___
+***
 
-### renderWorkflowSetup
+### renderWorkflowSetup()
 
-▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
+> **renderWorkflowSetup**(`options`?): `JobStep`[]
 
 Returns the set of workflow steps which should be executed to bootstrap a
 workflow.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `RenderWorkflowSetupOptions` | Options. |
+• **options?**: `RenderWorkflowSetupOptions`
+
+Options.
 
 #### Returns
 
@@ -1713,22 +1595,22 @@ Job steps
 
 #### Inherited from
 
-Node20SstApp.renderWorkflowSetup
+`Node20SstApp.renderWorkflowSetup`
 
-___
+***
 
-### runTaskCommand
+### runTaskCommand()
 
-▸ **runTaskCommand**(`task`): `string`
+> **runTaskCommand**(`task`): `string`
 
 Returns the shell command to execute in order to run a task. This will
 typically be `npx projen TASK`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `task` | `Task` | The task for which the command is required |
+• **task**: `Task`
+
+The task for which the command is required
 
 #### Returns
 
@@ -1736,22 +1618,25 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-Node20SstApp.runTaskCommand
+`Node20SstApp.runTaskCommand`
 
-___
+***
 
-### setScript
+### setScript()
 
-▸ **setScript**(`name`, `command`): `void`
+> **setScript**(`name`, `command`): `void`
 
 Replaces the contents of an npm package.json script.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The script name |
-| `command` | `string` | The command to execute |
+• **name**: `string`
+
+The script name
+
+• **command**: `string`
+
+The command to execute
 
 #### Returns
 
@@ -1759,13 +1644,13 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-Node20SstApp.setScript
+`Node20SstApp.setScript`
 
-___
+***
 
-### synth
+### synth()
 
-▸ **synth**(): `void`
+> **synth**(): `void`
 
 Synthesize all project files into `outdir`.
 
@@ -1782,13 +1667,13 @@ Synthesize all project files into `outdir`.
 
 #### Inherited from
 
-Node20SstApp.synth
+`Node20SstApp.synth`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -1798,22 +1683,23 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Node20SstApp.toString
+`Node20SstApp.toString`
 
-___
+***
 
-### tryFindFile
+### tryFindFile()
 
-▸ **tryFindFile**(`filePath`): `undefined` \| `FileBase`
+> **tryFindFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and all
 its subprojects.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be resolved
+from the root of _this_ project.
 
 #### Returns
 
@@ -1823,47 +1709,47 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-Node20SstApp.tryFindFile
+`Node20SstApp.tryFindFile`
 
-___
+***
 
-### tryFindJsonFile
+### ~~tryFindJsonFile()~~
 
-▸ **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
+> **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
 
 Finds a json file by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
 `undefined` \| `JsonFile`
 
-**`Deprecated`**
+#### Deprecated
 
 use `tryFindObjectFile`
 
 #### Inherited from
 
-Node20SstApp.tryFindJsonFile
+`Node20SstApp.tryFindJsonFile`
 
-___
+***
 
-### tryFindObjectFile
+### tryFindObjectFile()
 
-▸ **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
+> **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
@@ -1871,22 +1757,23 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-Node20SstApp.tryFindObjectFile
+`Node20SstApp.tryFindObjectFile`
 
-___
+***
 
-### tryRemoveFile
+### tryRemoveFile()
 
-▸ **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
+> **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and removes
 it.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be
+resolved from the root of _this_ project.
 
 #### Returns
 
@@ -1897,13 +1784,13 @@ the file was not found.
 
 #### Inherited from
 
-Node20SstApp.tryRemoveFile
+`Node20SstApp.tryRemoveFile`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -1923,65 +1810,61 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Node20SstApp.isConstruct
+`Node20SstApp.isConstruct`
 
-___
+***
 
-### isProject
+### isProject()
 
-▸ **isProject**(`x`): x is Project
+> `static` **isProject**(`x`): `x is Project`
 
 Test whether the given construct is a project.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Project
+`x is Project`
 
 #### Inherited from
 
-Node20SstApp.isProject
+`Node20SstApp.isProject`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`construct`): `Project`
+> `static` **of**(`construct`): `Project`
 
 Find the closest ancestor project for given construct.
 When given a project, this it the project itself.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `construct` | `IConstruct` |
+• **construct**: `IConstruct`
 
 #### Returns
 
 `Project`
 
-**`Throws`**
+#### Throws
 
 when no project is found in the path to the root
 
 #### Inherited from
 
-Node20SstApp.of
+`Node20SstApp.of`

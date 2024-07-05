@@ -1,44 +1,24 @@
-[projen-typedoc](../README.md) / [Exports](../modules.md) / TypedocMarkdown
+[**projen-typedoc**](../README.md) • **Docs**
+
+***
+
+[projen-typedoc](../globals.md) / TypedocMarkdown
 
 # Class: TypedocMarkdown
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`TypedocMarkdown`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](TypedocMarkdown.md#constructor)
-
-### Properties
-
-- [node](TypedocMarkdown.md#node)
-- [project](TypedocMarkdown.md#project)
-
-### Methods
-
-- [postSynthesize](TypedocMarkdown.md#postsynthesize)
-- [preSynthesize](TypedocMarkdown.md#presynthesize)
-- [synthesize](TypedocMarkdown.md#synthesize)
-- [toString](TypedocMarkdown.md#tostring)
-- [isComponent](TypedocMarkdown.md#iscomponent)
-- [isConstruct](TypedocMarkdown.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new TypedocMarkdown()
 
-• **new TypedocMarkdown**(`project`): [`TypedocMarkdown`](TypedocMarkdown.md)
+> **new TypedocMarkdown**(`project`): [`TypedocMarkdown`](TypedocMarkdown.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
+• **project**: `TypeScriptProject`
 
 #### Returns
 
@@ -46,35 +26,35 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `TypeScriptProject`
+> `readonly` **project**: `TypeScriptProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -84,13 +64,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -100,13 +80,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -116,13 +96,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -132,35 +112,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -180,16 +158,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

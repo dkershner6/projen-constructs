@@ -156,6 +156,13 @@
         "cwd": "packages/projen-nextjs"
       }
     },
+    "docgen:remove": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen docgen:remove",
+        "cwd": "packages/projen-nextjs"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

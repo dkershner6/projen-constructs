@@ -1,4 +1,6 @@
-projen-babel / [Exports](modules.md)
+**projen-babel** • [**Docs**](globals.md)
+
+***
 
 # projen-babel
 

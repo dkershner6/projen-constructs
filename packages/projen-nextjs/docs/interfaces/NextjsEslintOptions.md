@@ -1,3 +1,7 @@
-[projen-nextjs](../README.md) / [Exports](../modules.md) / NextjsEslintOptions
+[**projen-nextjs**](../README.md) • **Docs**
+
+***
+
+[projen-nextjs](../globals.md) / NextjsEslintOptions
 
 # Interface: NextjsEslintOptions

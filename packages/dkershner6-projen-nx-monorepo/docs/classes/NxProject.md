@@ -1,63 +1,30 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / NxProject
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / NxProject
 
 # Class: NxProject
 
+**`Experimental`**
+
 Component which manages the project specific NX Config and is added to all NXMonorepo subprojects.
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`NxProject`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](NxProject.md#constructor)
-
-### Properties
-
-- [file](NxProject.md#file)
-- [implicitDependencies](NxProject.md#implicitdependencies)
-- [includedScripts](NxProject.md#includedscripts)
-- [namedInputs](NxProject.md#namedinputs)
-- [node](NxProject.md#node)
-- [project](NxProject.md#project)
-- [tags](NxProject.md#tags)
-- [targets](NxProject.md#targets)
-
-### Methods
-
-- [addBuildTargetFiles](NxProject.md#addbuildtargetfiles)
-- [addImplicitDependency](NxProject.md#addimplicitdependency)
-- [addJavaDependency](NxProject.md#addjavadependency)
-- [addPythonPoetryDependency](NxProject.md#addpythonpoetrydependency)
-- [addTag](NxProject.md#addtag)
-- [inferTargets](NxProject.md#infertargets)
-- [merge](NxProject.md#merge)
-- [postSynthesize](NxProject.md#postsynthesize)
-- [preSynthesize](NxProject.md#presynthesize)
-- [setNamedInput](NxProject.md#setnamedinput)
-- [setTarget](NxProject.md#settarget)
-- [synthesize](NxProject.md#synthesize)
-- [toString](NxProject.md#tostring)
-- [ensure](NxProject.md#ensure)
-- [isComponent](NxProject.md#iscomponent)
-- [isConstruct](NxProject.md#isconstruct)
-- [of](NxProject.md#of)
-
 ## Constructors
 
-### constructor
+### new NxProject()
 
-• **new NxProject**(`project`): [`NxProject`](NxProject.md)
+> **new NxProject**(`project`): [`NxProject`](NxProject.md)
+
+**`Experimental`**
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `Project` |
+• **project**: `Project`
 
 #### Returns
 
@@ -65,13 +32,15 @@ Component which manages the project specific NX Config and is added to all NXMon
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### file
 
-• `Readonly` **file**: `JsonFile`
+> `readonly` **file**: `JsonFile`
+
+**`Experimental`**
 
 Raw json file
 
@@ -79,190 +48,217 @@ Raw json file
 in the properties and only included in final synthesized output,
 and likely to override native handling.
 
-**`Advanced`**
+#### Advanced
 
-___
+***
 
 ### implicitDependencies
 
-• **implicitDependencies**: `string`[] = `[]`
+> **implicitDependencies**: `string`[] = `[]`
+
+**`Experimental`**
 
 Implicit dependencies
 
-**`See`**
+#### See
 
 https://nx.dev/reference/project-configuration#implicitdependencies
 
-___
+***
 
 ### includedScripts
 
-• **includedScripts**: `string`[] = `[]`
+> **includedScripts**: `string`[] = `[]`
+
+**`Experimental`**
 
 Explicit list of scripts for Nx to include.
 
-**`See`**
+#### See
 
 https://nx.dev/reference/project-configuration#ignoring-package.json-scripts
 
-___
+***
 
 ### namedInputs
 
-• **namedInputs**: `Obj`\<`any`\> = `{}`
+> **namedInputs**: `Obj`\<`any`\> = `{}`
+
+**`Experimental`**
 
 Named inputs
 
-**`See`**
+#### See
 
 https://nx.dev/reference/nx-json#inputs-&-namedinputs
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
+
+**`Experimental`**
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
+
+**`Experimental`**
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### tags
 
-• **tags**: `string`[] = `[]`
+> **tags**: `string`[] = `[]`
+
+**`Experimental`**
 
 Project tag annotations
 
-**`See`**
+#### See
 
 https://nx.dev/reference/project-configuration#tags
 
-___
+***
 
 ### targets
 
-• **targets**: `Obj`\<`any`\> = `{}`
+> **targets**: `Obj`\<`any`\> = `{}`
+
+**`Experimental`**
 
 Targets configuration
 
-**`See`**
+#### See
 
 https://nx.dev/reference/project-configuration
 
 ## Methods
 
-### addBuildTargetFiles
+### addBuildTargetFiles()
 
-▸ **addBuildTargetFiles**(`inputs?`, `outputs?`): `void`
+> **addBuildTargetFiles**(`inputs`?, `outputs`?): `void`
+
+**`Experimental`**
 
 Add input and output files to build target
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `inputs?` | (`string` \| `IInput`)[] | Input files |
-| `outputs?` | `string`[] | Output files |
+• **inputs?**: (`string` \| `IInput`)[]
+
+Input files
+
+• **outputs?**: `string`[]
+
+Output files
 
 #### Returns
 
 `void`
 
-___
+***
 
-### addImplicitDependency
+### addImplicitDependency()
 
-▸ **addImplicitDependency**(`...dependee`): `void`
+> **addImplicitDependency**(...`dependee`): `void`
+
+**`Experimental`**
 
 Adds an implicit dependency between the dependant (this project) and dependee.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...dependee` | (`string` \| `Project`)[] | project to add the implicit dependency on. |
+• ...**dependee**: (`string` \| `Project`)[]
+
+project to add the implicit dependency on.
 
 #### Returns
 
 `void`
 
-___
+***
 
-### addJavaDependency
+### addJavaDependency()
 
-▸ **addJavaDependency**(`dependee`): `void`
+> **addJavaDependency**(`dependee`): `void`
+
+**`Experimental`**
 
 Adds a dependency between two Java Projects in the monorepo.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dependee` | `JavaProject` | project you wish to depend on |
+• **dependee**: `JavaProject`
+
+project you wish to depend on
 
 #### Returns
 
 `void`
 
-___
+***
 
-### addPythonPoetryDependency
+### addPythonPoetryDependency()
 
-▸ **addPythonPoetryDependency**(`dependee`): `void`
+> **addPythonPoetryDependency**(`dependee`): `void`
+
+**`Experimental`**
 
 Adds a dependency between two Python Projects in the monorepo. The dependent must have Poetry enabled.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `dependee` | `PythonProject` | project you wish to depend on |
+• **dependee**: `PythonProject`
+
+project you wish to depend on
 
 #### Returns
 
 `void`
 
-**`Throws`**
+#### Throws
 
 error if the dependent does not have Poetry enabled
 
-___
+***
 
-### addTag
+### addTag()
 
-▸ **addTag**(`...tags`): `void`
+> **addTag**(...`tags`): `void`
+
+**`Experimental`**
 
 Add tag
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...tags` | `string`[] |
+• ...**tags**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### inferTargets
+### inferTargets()
 
-▸ **inferTargets**(): `void`
+> **inferTargets**(): `void`
+
+**`Experimental`**
 
 Automatically infer targets based on project type.
 
@@ -270,29 +266,31 @@ Automatically infer targets based on project type.
 
 `void`
 
-___
+***
 
-### merge
+### merge()
 
-▸ **merge**(`config`): `void`
+> **merge**(`config`): `void`
+
+**`Experimental`**
 
 Merge configuration into existing config
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `config` | `ProjectConfig` |
+• **config**: `ProjectConfig`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
+
+**`Experimental`**
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -302,13 +300,15 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
+
+**`Experimental`**
 
 Called before synthesis.
 
@@ -318,52 +318,57 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### setNamedInput
+### setNamedInput()
 
-▸ **setNamedInput**(`name`, `inputs`): `void`
+> **setNamedInput**(`name`, `inputs`): `void`
+
+**`Experimental`**
 
 Set `namedInputs` helper
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `name` | `string` |
-| `inputs` | `string`[] |
+• **name**: `string`
+
+• **inputs**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### setTarget
+### setTarget()
 
-▸ **setTarget**(`name`, `target`, `includeDefaults?`): `void`
+> **setTarget**(`name`, `target`, `includeDefaults`): `void`
+
+**`Experimental`**
 
 Set `targets` helper
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `name` | `string` | `undefined` |
-| `target` | `IProjectTarget` | `undefined` |
-| `includeDefaults` | `string` \| `boolean` | `false` |
+• **name**: `string`
+
+• **target**: `IProjectTarget`
+
+• **includeDefaults**: `string` \| `boolean` = `false`
 
 #### Returns
 
 `void`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
+
+**`Interface`** **`Experimental`**
 
 #### Returns
 
@@ -371,13 +376,15 @@ ___
 
 #### Overrides
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
+
+**`Experimental`**
 
 Returns a string representation of this construct.
 
@@ -387,54 +394,58 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### ensure
+### ensure()
 
-▸ **ensure**(`project`): [`NxProject`](NxProject.md)
+> `static` **ensure**(`project`): [`NxProject`](NxProject.md)
+
+**`Experimental`**
 
 Retrieves an instance of NXProject if one is associated to the given project,
 otherwise created a NXProject instance for the project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `project` | `Project` | project instance. |
+• **project**: `Project`
+
+project instance.
 
 #### Returns
 
 [`NxProject`](NxProject.md)
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
+
+**`Experimental`**
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
+
+**`Experimental`**
 
 Checks if `x` is a construct.
 
@@ -454,33 +465,35 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`project`): `undefined` \| [`NxProject`](NxProject.md)
+> `static` **of**(`project`): `undefined` \| [`NxProject`](NxProject.md)
+
+**`Experimental`**
 
 Retrieves an instance of NXProject if one is associated to the given project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `project` | `Project` | project instance. |
+• **project**: `Project`
+
+project instance.
 
 #### Returns
 

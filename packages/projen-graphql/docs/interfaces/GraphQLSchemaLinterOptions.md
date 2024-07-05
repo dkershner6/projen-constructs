@@ -1,29 +1,26 @@
-[projen-graphql](../README.md) / [Exports](../modules.md) / GraphQLSchemaLinterOptions
+[**projen-graphql**](../README.md) • **Docs**
+
+***
+
+[projen-graphql](../globals.md) / GraphQLSchemaLinterOptions
 
 # Interface: GraphQLSchemaLinterOptions
 
-## Table of contents
-
-### Properties
-
-- [graphqlSchemaLintConfig](GraphQLSchemaLinterOptions.md#graphqlschemalintconfig)
-- [graphqlSchemaLintConfigFilename](GraphQLSchemaLinterOptions.md#graphqlschemalintconfigfilename)
-
 ## Properties
 
-### graphqlSchemaLintConfig
+### graphqlSchemaLintConfig?
 
-• `Optional` `Readonly` **graphqlSchemaLintConfig**: [`GraphQLSchemaLinterConfig`](GraphQLSchemaLinterConfig.md)
+> `readonly` `optional` **graphqlSchemaLintConfig**: [`GraphQLSchemaLinterConfig`](GraphQLSchemaLinterConfig.md)
 
-___
+***
 
-### graphqlSchemaLintConfigFilename
+### graphqlSchemaLintConfigFilename?
 
-• `Optional` `Readonly` **graphqlSchemaLintConfigFilename**: `string`
+> `readonly` `optional` **graphqlSchemaLintConfigFilename**: `string`
 
 The filename of the graphql-schema-lint configuration file.
 
-**`Default`**
+#### Default
 
 ```ts
 ".graphql-schema-linterrc"

@@ -1,57 +1,29 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / EsmLibrary
+[**projen-esm**](../README.md) • **Docs**
+
+***
+
+[projen-esm](../globals.md) / EsmLibrary
 
 # Class: EsmLibrary
 
 Adds ESM support and linting to a projen TypeScript project.
 Supports React as well.
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`EsmLibrary`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](EsmLibrary.md#constructor)
-
-### Properties
-
-- [babelConfigFile](EsmLibrary.md#babelconfigfile)
-- [babelTestConfigFile](EsmLibrary.md#babeltestconfigfile)
-- [node](EsmLibrary.md#node)
-- [options](EsmLibrary.md#options)
-- [project](EsmLibrary.md#project)
-- [DEFAULT\_BABEL\_PRESETS](EsmLibrary.md#default_babel_presets)
-- [DEFAULT\_BABEL\_PUBLISH\_IGNORES](EsmLibrary.md#default_babel_publish_ignores)
-- [DEFAULT\_BABEL\_TARGETS](EsmLibrary.md#default_babel_targets)
-
-### Methods
-
-- [buildBabelConfigTransformOptions](EsmLibrary.md#buildbabelconfigtransformoptions)
-- [postSynthesize](EsmLibrary.md#postsynthesize)
-- [preSynthesize](EsmLibrary.md#presynthesize)
-- [setupEslintToEnforceImportFileExtensions](EsmLibrary.md#setupeslinttoenforceimportfileextensions)
-- [synthesize](EsmLibrary.md#synthesize)
-- [toString](EsmLibrary.md#tostring)
-- [useBabelInsteadOfTsc](EsmLibrary.md#usebabelinsteadoftsc)
-- [isComponent](EsmLibrary.md#iscomponent)
-- [isConstruct](EsmLibrary.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new EsmLibrary()
 
-• **new EsmLibrary**(`project`, `options?`): [`EsmLibrary`](EsmLibrary.md)
+> **new EsmLibrary**(`project`, `options`): [`EsmLibrary`](EsmLibrary.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options` | [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) |
+• **project**: `TypeScriptProject`
+
+• **options**: [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) = `{}`
 
 #### Returns
 
@@ -59,93 +31,69 @@ Supports React as well.
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
-### babelConfigFile
+### babelConfigFile?
 
-• `Optional` **babelConfigFile**: `BabelConfigFile`
+> `optional` **babelConfigFile**: `BabelConfigFile`
 
-___
+***
 
-### babelTestConfigFile
+### babelTestConfigFile?
 
-• `Optional` **babelTestConfigFile**: `BabelConfigFile`
+> `optional` **babelTestConfigFile**: `BabelConfigFile`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`EsmLibraryOptions`](../interfaces/EsmLibraryOptions.md) = `{}`
-
-___
+***
 
 ### project
 
-• **project**: `TypeScriptProject`
+> **project**: `TypeScriptProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### DEFAULT\_BABEL\_PRESETS
 
-▪ `Static` **DEFAULT\_BABEL\_PRESETS**: `PluginItem`[]
+> `static` **DEFAULT\_BABEL\_PRESETS**: `PluginItem`[]
 
-___
+***
 
 ### DEFAULT\_BABEL\_PUBLISH\_IGNORES
 
-▪ `Static` **DEFAULT\_BABEL\_PUBLISH\_IGNORES**: `string`[]
+> `static` **DEFAULT\_BABEL\_PUBLISH\_IGNORES**: `string`[]
 
-___
+***
 
 ### DEFAULT\_BABEL\_TARGETS
 
-▪ `Static` **DEFAULT\_BABEL\_TARGETS**: `Object`
+> `static` **DEFAULT\_BABEL\_TARGETS**: `object`
 
-#### Type declaration
+#### node
 
-| Name | Type |
-| :------ | :------ |
-| `node` | `string` |
+> **node**: `string` = `"current"`
 
 ## Methods
 
-### buildBabelConfigTransformOptions
+### postSynthesize()
 
-▸ **buildBabelConfigTransformOptions**(`providedOptions`): `TransformOptions`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `providedOptions` | `TransformOptions` |
-
-#### Returns
-
-`TransformOptions`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -155,13 +103,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -171,23 +119,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### setupEslintToEnforceImportFileExtensions
+### synthesize()
 
-▸ **setupEslintToEnforceImportFileExtensions**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### synthesize
-
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -197,13 +135,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -213,45 +151,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### useBabelInsteadOfTsc
+### isComponent()
 
-▸ **useBabelInsteadOfTsc**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### isComponent
-
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -271,16 +197,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

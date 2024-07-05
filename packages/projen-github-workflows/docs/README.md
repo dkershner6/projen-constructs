@@ -1,4 +1,6 @@
-projen-github-workflows / [Exports](modules.md)
+**projen-github-workflows** • [**Docs**](globals.md)
+
+***
 
 # projen-github-workflows
 

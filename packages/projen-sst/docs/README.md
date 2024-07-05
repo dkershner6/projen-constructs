@@ -1,4 +1,6 @@
-projen-sst / [Exports](modules.md)
+**projen-sst** • [**Docs**](globals.md)
+
+***
 
 # projen-sst
 

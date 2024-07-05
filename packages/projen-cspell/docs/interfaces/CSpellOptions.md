@@ -1,39 +1,34 @@
-[projen-cspell](../README.md) / [Exports](../modules.md) / CSpellOptions
+[**projen-cspell**](../README.md) • **Docs**
+
+***
+
+[projen-cspell](../globals.md) / CSpellOptions
 
 # Interface: CSpellOptions
 
-## Hierarchy
+## Extends
 
 - [`CSpellConfigFileOptions`](CSpellConfigFileOptions.md)
 
-  ↳ **`CSpellOptions`**
-
-## Table of contents
-
-### Properties
-
-- [config](CSpellOptions.md#config)
-- [eslint](CSpellOptions.md#eslint)
-
 ## Properties
 
-### config
+### config?
 
-• `Optional` `Readonly` **config**: [`CSpellConfig`](CSpellConfig.md)
+> `readonly` `optional` **config**: [`CSpellConfig`](CSpellConfig.md)
 
 #### Inherited from
 
-[CSpellConfigFileOptions](CSpellConfigFileOptions.md).[config](CSpellConfigFileOptions.md#config)
+[`CSpellConfigFileOptions`](CSpellConfigFileOptions.md).[`config`](CSpellConfigFileOptions.md#config)
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `boolean`
+> `readonly` `optional` **eslint**: `boolean`
 
 Whether or not to enable cSpell in eslint.
 
-**`Default`**
+#### Default
 
 ```ts
 true

@@ -1,154 +1,24 @@
-[projen-sst](../README.md) / [Exports](../modules.md) / SstTypescriptApp
+[**projen-sst**](../README.md) • **Docs**
+
+***
+
+[projen-sst](../globals.md) / SstTypescriptApp
 
 # Class: SstTypescriptApp
 
-## Hierarchy
+## Extends
 
 - `AwsCdkTypeScriptApp`
 
-  ↳ **`SstTypescriptApp`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SstTypescriptApp.md#constructor)
-
-### Properties
-
-- [appEntrypoint](SstTypescriptApp.md#appentrypoint)
-- [artifactsDirectory](SstTypescriptApp.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](SstTypescriptApp.md#artifactsjavascriptdirectory)
-- [autoApprove](SstTypescriptApp.md#autoapprove)
-- [autoMerge](SstTypescriptApp.md#automerge)
-- [branchNameToSstStageMap](SstTypescriptApp.md#branchnametosststagemap)
-- [buildWorkflow](SstTypescriptApp.md#buildworkflow)
-- [bundler](SstTypescriptApp.md#bundler)
-- [cdkConfig](SstTypescriptApp.md#cdkconfig)
-- [cdkDeps](SstTypescriptApp.md#cdkdeps)
-- [cdkTasks](SstTypescriptApp.md#cdktasks)
-- [commitGenerated](SstTypescriptApp.md#commitgenerated)
-- [defaultTask](SstTypescriptApp.md#defaulttask)
-- [deps](SstTypescriptApp.md#deps)
-- [devContainer](SstTypescriptApp.md#devcontainer)
-- [docgen](SstTypescriptApp.md#docgen)
-- [docsDirectory](SstTypescriptApp.md#docsdirectory)
-- [eslint](SstTypescriptApp.md#eslint)
-- [gitattributes](SstTypescriptApp.md#gitattributes)
-- [github](SstTypescriptApp.md#github)
-- [gitignore](SstTypescriptApp.md#gitignore)
-- [gitpod](SstTypescriptApp.md#gitpod)
-- [initProject](SstTypescriptApp.md#initproject)
-- [jest](SstTypescriptApp.md#jest)
-- [libdir](SstTypescriptApp.md#libdir)
-- [logger](SstTypescriptApp.md#logger)
-- [name](SstTypescriptApp.md#name)
-- [node](SstTypescriptApp.md#node)
-- [nodeVersion](SstTypescriptApp.md#nodeversion)
-- [npmignore](SstTypescriptApp.md#npmignore)
-- [options](SstTypescriptApp.md#options)
-- [outdir](SstTypescriptApp.md#outdir)
-- [package](SstTypescriptApp.md#package)
-- [parent](SstTypescriptApp.md#parent)
-- [prettier](SstTypescriptApp.md#prettier)
-- [projectBuild](SstTypescriptApp.md#projectbuild)
-- [projectType](SstTypescriptApp.md#projecttype)
-- [publisher](SstTypescriptApp.md#publisher)
-- [release](SstTypescriptApp.md#release)
-- [runScriptCommand](SstTypescriptApp.md#runscriptcommand)
-- [srcdir](SstTypescriptApp.md#srcdir)
-- [sstConfig](SstTypescriptApp.md#sstconfig)
-- [sstVersion](SstTypescriptApp.md#sstversion)
-- [tasks](SstTypescriptApp.md#tasks)
-- [testdir](SstTypescriptApp.md#testdir)
-- [tsconfig](SstTypescriptApp.md#tsconfig)
-- [tsconfigDev](SstTypescriptApp.md#tsconfigdev)
-- [tsconfigEslint](SstTypescriptApp.md#tsconfigeslint)
-- [upgradeWorkflow](SstTypescriptApp.md#upgradeworkflow)
-- [vscode](SstTypescriptApp.md#vscode)
-- [watchTask](SstTypescriptApp.md#watchtask)
-- [workflowBootstrapSteps](SstTypescriptApp.md#workflowbootstrapsteps)
-- [workflowPackageCache](SstTypescriptApp.md#workflowpackagecache)
-- [DEFAULT\_TASK](SstTypescriptApp.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](SstTypescriptApp.md#default_ts_jest_tranform_pattern)
-
-### Accessors
-
-- [allowLibraryDependencies](SstTypescriptApp.md#allowlibrarydependencies)
-- [buildTask](SstTypescriptApp.md#buildtask)
-- [buildWorkflowJobId](SstTypescriptApp.md#buildworkflowjobid)
-- [cdkVersion](SstTypescriptApp.md#cdkversion)
-- [compileTask](SstTypescriptApp.md#compiletask)
-- [components](SstTypescriptApp.md#components)
-- [ejected](SstTypescriptApp.md#ejected)
-- [entrypoint](SstTypescriptApp.md#entrypoint)
-- [files](SstTypescriptApp.md#files)
-- [manifest](SstTypescriptApp.md#manifest)
-- [maxNodeVersion](SstTypescriptApp.md#maxnodeversion)
-- [minNodeVersion](SstTypescriptApp.md#minnodeversion)
-- [npmrc](SstTypescriptApp.md#npmrc)
-- [packageManager](SstTypescriptApp.md#packagemanager)
-- [packageTask](SstTypescriptApp.md#packagetask)
-- [postCompileTask](SstTypescriptApp.md#postcompiletask)
-- [preCompileTask](SstTypescriptApp.md#precompiletask)
-- [projenCommand](SstTypescriptApp.md#projencommand)
-- [root](SstTypescriptApp.md#root)
-- [subprojects](SstTypescriptApp.md#subprojects)
-- [testTask](SstTypescriptApp.md#testtask)
-
-### Methods
-
-- [addBins](SstTypescriptApp.md#addbins)
-- [addBundledDeps](SstTypescriptApp.md#addbundleddeps)
-- [addCdkDependency](SstTypescriptApp.md#addcdkdependency)
-- [addCompileCommand](SstTypescriptApp.md#addcompilecommand)
-- [addDeps](SstTypescriptApp.md#adddeps)
-- [addDevDeps](SstTypescriptApp.md#adddevdeps)
-- [addExcludeFromCleanup](SstTypescriptApp.md#addexcludefromcleanup)
-- [addFields](SstTypescriptApp.md#addfields)
-- [addGitIgnore](SstTypescriptApp.md#addgitignore)
-- [addIgnores](SstTypescriptApp.md#addignores)
-- [addKeywords](SstTypescriptApp.md#addkeywords)
-- [addPackageIgnore](SstTypescriptApp.md#addpackageignore)
-- [addPeerDeps](SstTypescriptApp.md#addpeerdeps)
-- [addScripts](SstTypescriptApp.md#addscripts)
-- [addTask](SstTypescriptApp.md#addtask)
-- [addTestCommand](SstTypescriptApp.md#addtestcommand)
-- [addTip](SstTypescriptApp.md#addtip)
-- [annotateGenerated](SstTypescriptApp.md#annotategenerated)
-- [createPersonalTasks](SstTypescriptApp.md#createpersonaltasks)
-- [createTasksForBranch](SstTypescriptApp.md#createtasksforbranch)
-- [hasScript](SstTypescriptApp.md#hasscript)
-- [overrideTasks](SstTypescriptApp.md#overridetasks)
-- [overrideTasksForDefaultStage](SstTypescriptApp.md#overridetasksfordefaultstage)
-- [postSynthesize](SstTypescriptApp.md#postsynthesize)
-- [preSynthesize](SstTypescriptApp.md#presynthesize)
-- [removeScript](SstTypescriptApp.md#removescript)
-- [removeTask](SstTypescriptApp.md#removetask)
-- [renderWorkflowSetup](SstTypescriptApp.md#renderworkflowsetup)
-- [runTaskCommand](SstTypescriptApp.md#runtaskcommand)
-- [setScript](SstTypescriptApp.md#setscript)
-- [synth](SstTypescriptApp.md#synth)
-- [toString](SstTypescriptApp.md#tostring)
-- [tryFindFile](SstTypescriptApp.md#tryfindfile)
-- [tryFindJsonFile](SstTypescriptApp.md#tryfindjsonfile)
-- [tryFindObjectFile](SstTypescriptApp.md#tryfindobjectfile)
-- [tryRemoveFile](SstTypescriptApp.md#tryremovefile)
-- [isConstruct](SstTypescriptApp.md#isconstruct)
-- [isProject](SstTypescriptApp.md#isproject)
-- [of](SstTypescriptApp.md#of)
-
 ## Constructors
 
-### constructor
+### new SstTypescriptApp()
 
-• **new SstTypescriptApp**(`options`): [`SstTypescriptApp`](SstTypescriptApp.md)
+> **new SstTypescriptApp**(`options`): [`SstTypescriptApp`](SstTypescriptApp.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`SstTypescriptAppOptions`](../interfaces/SstTypescriptAppOptions.md) |
+• **options**: [`SstTypescriptAppOptions`](../interfaces/SstTypescriptAppOptions.md)
 
 #### Returns
 
@@ -156,25 +26,25 @@
 
 #### Overrides
 
-awscdk.AwsCdkTypeScriptApp.constructor
+`awscdk.AwsCdkTypeScriptApp.constructor`
 
 ## Properties
 
 ### appEntrypoint
 
-• `Readonly` **appEntrypoint**: `string`
+> `readonly` **appEntrypoint**: `string`
 
 The CDK app entrypoint
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.appEntrypoint
+`awscdk.AwsCdkTypeScriptApp.appEntrypoint`
 
-___
+***
 
 ### artifactsDirectory
 
-• `Readonly` **artifactsDirectory**: `string`
+> `readonly` **artifactsDirectory**: `string`
 
 The build output directory. An npm tarball will be created under the `js`
 subdirectory. For example, if this is set to `dist` (the default), the npm
@@ -182,148 +52,148 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.artifactsDirectory
+`awscdk.AwsCdkTypeScriptApp.artifactsDirectory`
 
-___
+***
 
 ### artifactsJavascriptDirectory
 
-• `Readonly` **artifactsJavascriptDirectory**: `string`
+> `readonly` **artifactsJavascriptDirectory**: `string`
 
 The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.artifactsJavascriptDirectory
+`awscdk.AwsCdkTypeScriptApp.artifactsJavascriptDirectory`
 
-___
+***
 
-### autoApprove
+### autoApprove?
 
-• `Optional` `Readonly` **autoApprove**: `AutoApprove`
+> `readonly` `optional` **autoApprove**: `AutoApprove`
 
 Auto approve set up for this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.autoApprove
+`awscdk.AwsCdkTypeScriptApp.autoApprove`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `AutoMerge`
+> `readonly` `optional` **autoMerge**: `AutoMerge`
 
 Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.autoMerge
+`awscdk.AwsCdkTypeScriptApp.autoMerge`
 
-___
+***
 
-### branchNameToSstStageMap
+### branchNameToSstStageMap?
 
-• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `BuildWorkflow`
+> `readonly` `optional` **buildWorkflow**: `BuildWorkflow`
 
 The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.buildWorkflow
+`awscdk.AwsCdkTypeScriptApp.buildWorkflow`
 
-___
+***
 
 ### bundler
 
-• `Readonly` **bundler**: `Bundler`
+> `readonly` **bundler**: `Bundler`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.bundler
+`awscdk.AwsCdkTypeScriptApp.bundler`
 
-___
+***
 
 ### cdkConfig
 
-• `Readonly` **cdkConfig**: `CdkConfig`
+> `readonly` **cdkConfig**: `CdkConfig`
 
 cdk.json configuration.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.cdkConfig
+`awscdk.AwsCdkTypeScriptApp.cdkConfig`
 
-___
+***
 
 ### cdkDeps
 
-• `Readonly` **cdkDeps**: `AwsCdkDeps`
+> `readonly` **cdkDeps**: `AwsCdkDeps`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.cdkDeps
+`awscdk.AwsCdkTypeScriptApp.cdkDeps`
 
-___
+***
 
 ### cdkTasks
 
-• `Readonly` **cdkTasks**: `CdkTasks`
+> `readonly` **cdkTasks**: `CdkTasks`
 
 Common CDK tasks.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.cdkTasks
+`awscdk.AwsCdkTypeScriptApp.cdkTasks`
 
-___
+***
 
 ### commitGenerated
 
-• `Readonly` **commitGenerated**: `boolean`
+> `readonly` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.commitGenerated
+`awscdk.AwsCdkTypeScriptApp.commitGenerated`
 
-___
+***
 
-### defaultTask
+### defaultTask?
 
-• `Optional` `Readonly` **defaultTask**: `Task`
+> `readonly` `optional` **defaultTask**: `Task`
 
 This is the "default" task, the one that executes "projen". Undefined if
 the project is being ejected.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.defaultTask
+`awscdk.AwsCdkTypeScriptApp.defaultTask`
 
-___
+***
 
 ### deps
 
-• `Readonly` **deps**: `Dependencies`
+> `readonly` **deps**: `Dependencies`
 
 Project dependencies.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.deps
+`awscdk.AwsCdkTypeScriptApp.deps`
 
-___
+***
 
 ### devContainer
 
-• `Readonly` **devContainer**: `undefined` \| `DevContainer`
+> `readonly` **devContainer**: `undefined` \| `DevContainer`
 
 Access for .devcontainer.json (used for GitHub Codespaces)
 
@@ -331,55 +201,55 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.devContainer
+`awscdk.AwsCdkTypeScriptApp.devContainer`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.docgen
+`awscdk.AwsCdkTypeScriptApp.docgen`
 
-___
+***
 
 ### docsDirectory
 
-• `Readonly` **docsDirectory**: `string`
+> `readonly` **docsDirectory**: `string`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.docsDirectory
+`awscdk.AwsCdkTypeScriptApp.docsDirectory`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `Eslint`
+> `readonly` `optional` **eslint**: `Eslint`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.eslint
+`awscdk.AwsCdkTypeScriptApp.eslint`
 
-___
+***
 
 ### gitattributes
 
-• `Readonly` **gitattributes**: `GitAttributesFile`
+> `readonly` **gitattributes**: `GitAttributesFile`
 
 The .gitattributes file for this repository.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.gitattributes
+`awscdk.AwsCdkTypeScriptApp.gitattributes`
 
-___
+***
 
 ### github
 
-• `Readonly` **github**: `undefined` \| `GitHub`
+> `readonly` **github**: `undefined` \| `GitHub`
 
 Access all github components.
 
@@ -387,25 +257,25 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.github
+`awscdk.AwsCdkTypeScriptApp.github`
 
-___
+***
 
 ### gitignore
 
-• `Readonly` **gitignore**: `IgnoreFile`
+> `readonly` **gitignore**: `IgnoreFile`
 
 .gitignore
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.gitignore
+`awscdk.AwsCdkTypeScriptApp.gitignore`
 
-___
+***
 
 ### gitpod
 
-• `Readonly` **gitpod**: `undefined` \| `Gitpod`
+> `readonly` **gitpod**: `undefined` \| `Gitpod`
 
 Access for Gitpod
 
@@ -413,13 +283,13 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.gitpod
+`awscdk.AwsCdkTypeScriptApp.gitpod`
 
-___
+***
 
-### initProject
+### initProject?
 
-• `Optional` `Readonly` **initProject**: `InitProject`
+> `readonly` `optional` **initProject**: `InitProject`
 
 The options used when this project is bootstrapped via `projen new`. It
 includes the original set of options passed to the CLI and also the JSII
@@ -427,302 +297,296 @@ FQN of the project type.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.initProject
+`awscdk.AwsCdkTypeScriptApp.initProject`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `Jest`
+> `readonly` `optional` **jest**: `Jest`
 
 The Jest configuration (if enabled)
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.jest
+`awscdk.AwsCdkTypeScriptApp.jest`
 
-___
+***
 
 ### libdir
 
-• `Readonly` **libdir**: `string`
+> `readonly` **libdir**: `string`
 
 The directory in which compiled .js files reside.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.libdir
+`awscdk.AwsCdkTypeScriptApp.libdir`
 
-___
+***
 
 ### logger
 
-• `Readonly` **logger**: `Logger`
+> `readonly` **logger**: `Logger`
 
 Logging utilities.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.logger
+`awscdk.AwsCdkTypeScriptApp.logger`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 Project name.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.name
+`awscdk.AwsCdkTypeScriptApp.name`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.node
+`awscdk.AwsCdkTypeScriptApp.node`
 
-___
+***
 
-### nodeVersion
+### nodeVersion?
 
-• `Protected` `Optional` `Readonly` **nodeVersion**: `string`
+> `protected` `readonly` `optional` **nodeVersion**: `string`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.nodeVersion
+`awscdk.AwsCdkTypeScriptApp.nodeVersion`
 
-___
+***
 
-### npmignore
+### npmignore?
 
-• `Optional` `Readonly` **npmignore**: `IgnoreFile`
+> `readonly` `optional` **npmignore**: `IgnoreFile`
 
 The .npmignore file.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.npmignore
+`awscdk.AwsCdkTypeScriptApp.npmignore`
 
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`SstTypescriptAppOptions`](../interfaces/SstTypescriptAppOptions.md)
-
-___
+***
 
 ### outdir
 
-• `Readonly` **outdir**: `string`
+> `readonly` **outdir**: `string`
 
 Absolute output directory of this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.outdir
+`awscdk.AwsCdkTypeScriptApp.outdir`
 
-___
+***
 
 ### package
 
-• `Readonly` **package**: `NodePackage`
+> `readonly` **package**: `NodePackage`
 
 API for managing the node package.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.package
+`awscdk.AwsCdkTypeScriptApp.package`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.parent
+`awscdk.AwsCdkTypeScriptApp.parent`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `Prettier`
+> `readonly` `optional` **prettier**: `Prettier`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.prettier
+`awscdk.AwsCdkTypeScriptApp.prettier`
 
-___
+***
 
 ### projectBuild
 
-• `Readonly` **projectBuild**: `ProjectBuild`
+> `readonly` **projectBuild**: `ProjectBuild`
 
 Manages the build process of the project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.projectBuild
+`awscdk.AwsCdkTypeScriptApp.projectBuild`
 
-___
+***
 
 ### projectType
 
-• `Readonly` **projectType**: `ProjectType`
+> `readonly` **projectType**: `ProjectType`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.projectType
+`awscdk.AwsCdkTypeScriptApp.projectType`
 
-___
+***
 
-### publisher
+### ~~publisher?~~
 
-• `Optional` `Readonly` **publisher**: `Publisher`
+> `readonly` `optional` **publisher**: `Publisher`
 
 Package publisher. This will be `undefined` if the project does not have a
 release workflow.
 
-**`Deprecated`**
+#### Deprecated
 
 use `release.publisher`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.publisher
+`awscdk.AwsCdkTypeScriptApp.publisher`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `Release`
+> `readonly` `optional` **release**: `Release`
 
 Release management.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.release
+`awscdk.AwsCdkTypeScriptApp.release`
 
-___
+***
 
 ### runScriptCommand
 
-• `Readonly` **runScriptCommand**: `string`
+> `readonly` **runScriptCommand**: `string`
 
 The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.runScriptCommand
+`awscdk.AwsCdkTypeScriptApp.runScriptCommand`
 
-___
+***
 
 ### srcdir
 
-• `Readonly` **srcdir**: `string`
+> `readonly` **srcdir**: `string`
 
 The directory in which the .ts sources reside.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.srcdir
+`awscdk.AwsCdkTypeScriptApp.srcdir`
 
-___
+***
 
 ### sstConfig
 
-• `Readonly` **sstConfig**: [`SstConfiguration`](../interfaces/SstConfiguration.md)
+> `readonly` **sstConfig**: [`SstConfiguration`](../interfaces/SstConfiguration.md)
 
-___
+***
 
 ### sstVersion
 
-• `Readonly` **sstVersion**: `string`
+> `readonly` **sstVersion**: `string`
 
-___
+***
 
 ### tasks
 
-• `Readonly` **tasks**: `Tasks`
+> `readonly` **tasks**: `Tasks`
 
 Project tasks.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tasks
+`awscdk.AwsCdkTypeScriptApp.tasks`
 
-___
+***
 
 ### testdir
 
-• `Readonly` **testdir**: `string`
+> `readonly` **testdir**: `string`
 
 The directory in which tests reside.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.testdir
+`awscdk.AwsCdkTypeScriptApp.testdir`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfig`
+> `readonly` `optional` **tsconfig**: `TypescriptConfig`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tsconfig
+`awscdk.AwsCdkTypeScriptApp.tsconfig`
 
-___
+***
 
 ### tsconfigDev
 
-• `Readonly` **tsconfigDev**: `TypescriptConfig`
+> `readonly` **tsconfigDev**: `TypescriptConfig`
 
 A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tsconfigDev
+`awscdk.AwsCdkTypeScriptApp.tsconfigDev`
 
-___
+***
 
-### tsconfigEslint
+### tsconfigEslint?
 
-• `Optional` `Readonly` **tsconfigEslint**: `TypescriptConfig`
+> `readonly` `optional` **tsconfigEslint**: `TypescriptConfig`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tsconfigEslint
+`awscdk.AwsCdkTypeScriptApp.tsconfigEslint`
 
-___
+***
 
-### upgradeWorkflow
+### upgradeWorkflow?
 
-• `Optional` `Readonly` **upgradeWorkflow**: `UpgradeDependencies`
+> `readonly` `optional` **upgradeWorkflow**: `UpgradeDependencies`
 
 The upgrade workflow.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.upgradeWorkflow
+`awscdk.AwsCdkTypeScriptApp.upgradeWorkflow`
 
-___
+***
 
 ### vscode
 
-• `Readonly` **vscode**: `undefined` \| `VsCode`
+> `readonly` **vscode**: `undefined` \| `VsCode`
 
 Access all VSCode components.
 
@@ -730,86 +594,86 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.vscode
+`awscdk.AwsCdkTypeScriptApp.vscode`
 
-___
+***
 
 ### watchTask
 
-• `Readonly` **watchTask**: `Task`
+> `readonly` **watchTask**: `Task`
 
 The "watch" task.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.watchTask
+`awscdk.AwsCdkTypeScriptApp.watchTask`
 
-___
+***
 
 ### workflowBootstrapSteps
 
-• `Protected` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `protected` `readonly` **workflowBootstrapSteps**: `JobStep`[]
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.workflowBootstrapSteps
+`awscdk.AwsCdkTypeScriptApp.workflowBootstrapSteps`
 
-___
+***
 
 ### workflowPackageCache
 
-• `Protected` `Readonly` **workflowPackageCache**: `boolean`
+> `protected` `readonly` **workflowPackageCache**: `boolean`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.workflowPackageCache
+`awscdk.AwsCdkTypeScriptApp.workflowPackageCache`
 
-___
+***
 
 ### DEFAULT\_TASK
 
-▪ `Static` `Readonly` **DEFAULT\_TASK**: ``"default"``
+> `readonly` `static` **DEFAULT\_TASK**: `"default"` = `"default"`
 
 The name of the default task (the task executed when `projen` is run without arguments). Normally
 this task should synthesize the project files.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.DEFAULT\_TASK
+`awscdk.AwsCdkTypeScriptApp.DEFAULT_TASK`
 
-___
+***
 
 ### DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
-▪ `Static` `Readonly` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: ``"^.+\\.[t]sx?$"``
+> `readonly` `static` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: "^.+\\.\[t\]sx?$" = `"^.+\\.[t]sx?$"`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+`awscdk.AwsCdkTypeScriptApp.DEFAULT_TS_JEST_TRANFORM_PATTERN`
 
 ## Accessors
 
 ### allowLibraryDependencies
 
-• `get` **allowLibraryDependencies**(): `boolean`
+> `get` **allowLibraryDependencies**(): `boolean`
+
+#### Deprecated
+
+use `package.allowLibraryDependencies`
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
-
-use `package.allowLibraryDependencies`
-
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.allowLibraryDependencies
+`awscdk.AwsCdkTypeScriptApp.allowLibraryDependencies`
 
-___
+***
 
 ### buildTask
 
-• `get` **buildTask**(): `Task`
+> `get` **buildTask**(): `Task`
 
 #### Returns
 
@@ -817,13 +681,13 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.buildTask
+`awscdk.AwsCdkTypeScriptApp.buildTask`
 
-___
+***
 
 ### buildWorkflowJobId
 
-• `get` **buildWorkflowJobId**(): `undefined` \| `string`
+> `get` **buildWorkflowJobId**(): `undefined` \| `string`
 
 The job ID of the build workflow.
 
@@ -833,13 +697,13 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.buildWorkflowJobId
+`awscdk.AwsCdkTypeScriptApp.buildWorkflowJobId`
 
-___
+***
 
 ### cdkVersion
 
-• `get` **cdkVersion**(): `string`
+> `get` **cdkVersion**(): `string`
 
 The CDK version this app is using.
 
@@ -849,13 +713,13 @@ The CDK version this app is using.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.cdkVersion
+`awscdk.AwsCdkTypeScriptApp.cdkVersion`
 
-___
+***
 
 ### compileTask
 
-• `get` **compileTask**(): `Task`
+> `get` **compileTask**(): `Task`
 
 #### Returns
 
@@ -863,13 +727,13 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.compileTask
+`awscdk.AwsCdkTypeScriptApp.compileTask`
 
-___
+***
 
 ### components
 
-• `get` **components**(): `Component`[]
+> `get` **components**(): `Component`[]
 
 Returns all the components within this project.
 
@@ -879,13 +743,13 @@ Returns all the components within this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.components
+`awscdk.AwsCdkTypeScriptApp.components`
 
-___
+***
 
 ### ejected
 
-• `get` **ejected**(): `boolean`
+> `get` **ejected**(): `boolean`
 
 Whether or not the project is being ejected.
 
@@ -895,31 +759,31 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.ejected
+`awscdk.AwsCdkTypeScriptApp.ejected`
 
-___
+***
 
 ### entrypoint
 
-• `get` **entrypoint**(): `string`
+> `get` **entrypoint**(): `string`
+
+#### Deprecated
+
+use `package.entrypoint`
 
 #### Returns
 
 `string`
 
-**`Deprecated`**
-
-use `package.entrypoint`
-
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.entrypoint
+`awscdk.AwsCdkTypeScriptApp.entrypoint`
 
-___
+***
 
 ### files
 
-• `get` **files**(): `FileBase`[]
+> `get` **files**(): `FileBase`[]
 
 All files in this project.
 
@@ -929,31 +793,31 @@ All files in this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.files
+`awscdk.AwsCdkTypeScriptApp.files`
 
-___
+***
 
 ### manifest
 
-• `get` **manifest**(): `any`
+> `get` **manifest**(): `any`
+
+#### Deprecated
+
+use `package.addField(x, y)`
 
 #### Returns
 
 `any`
 
-**`Deprecated`**
-
-use `package.addField(x, y)`
-
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.manifest
+`awscdk.AwsCdkTypeScriptApp.manifest`
 
-___
+***
 
 ### maxNodeVersion
 
-• `get` **maxNodeVersion**(): `undefined` \| `string`
+> `get` **maxNodeVersion**(): `undefined` \| `string`
 
 Maximum node version required by this package.
 
@@ -963,13 +827,13 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.maxNodeVersion
+`awscdk.AwsCdkTypeScriptApp.maxNodeVersion`
 
-___
+***
 
 ### minNodeVersion
 
-• `get` **minNodeVersion**(): `undefined` \| `string`
+> `get` **minNodeVersion**(): `undefined` \| `string`
 
 Minimum node.js version required by this package.
 
@@ -979,13 +843,13 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.minNodeVersion
+`awscdk.AwsCdkTypeScriptApp.minNodeVersion`
 
-___
+***
 
 ### npmrc
 
-• `get` **npmrc**(): `NpmConfig`
+> `get` **npmrc**(): `NpmConfig`
 
 The .npmrc file
 
@@ -995,33 +859,33 @@ The .npmrc file
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.npmrc
+`awscdk.AwsCdkTypeScriptApp.npmrc`
 
-___
+***
 
 ### packageManager
 
-• `get` **packageManager**(): `NodePackageManager`
+> `get` **packageManager**(): `NodePackageManager`
 
 The package manager to use.
+
+#### Deprecated
+
+use `package.packageManager`
 
 #### Returns
 
 `NodePackageManager`
 
-**`Deprecated`**
-
-use `package.packageManager`
-
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.packageManager
+`awscdk.AwsCdkTypeScriptApp.packageManager`
 
-___
+***
 
 ### packageTask
 
-• `get` **packageTask**(): `Task`
+> `get` **packageTask**(): `Task`
 
 #### Returns
 
@@ -1029,13 +893,13 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.packageTask
+`awscdk.AwsCdkTypeScriptApp.packageTask`
 
-___
+***
 
 ### postCompileTask
 
-• `get` **postCompileTask**(): `Task`
+> `get` **postCompileTask**(): `Task`
 
 #### Returns
 
@@ -1043,13 +907,13 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.postCompileTask
+`awscdk.AwsCdkTypeScriptApp.postCompileTask`
 
-___
+***
 
 ### preCompileTask
 
-• `get` **preCompileTask**(): `Task`
+> `get` **preCompileTask**(): `Task`
 
 #### Returns
 
@@ -1057,13 +921,13 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.preCompileTask
+`awscdk.AwsCdkTypeScriptApp.preCompileTask`
 
-___
+***
 
 ### projenCommand
 
-• `get` **projenCommand**(): `string`
+> `get` **projenCommand**(): `string`
 
 The command to use in order to run the projen CLI.
 
@@ -1073,13 +937,13 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.projenCommand
+`awscdk.AwsCdkTypeScriptApp.projenCommand`
 
-___
+***
 
 ### root
 
-• `get` **root**(): `Project`
+> `get` **root**(): `Project`
 
 The root project.
 
@@ -1089,13 +953,13 @@ The root project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.root
+`awscdk.AwsCdkTypeScriptApp.root`
 
-___
+***
 
 ### subprojects
 
-• `get` **subprojects**(): `Project`[]
+> `get` **subprojects**(): `Project`[]
 
 Returns all the subprojects within this project.
 
@@ -1105,13 +969,13 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.subprojects
+`awscdk.AwsCdkTypeScriptApp.subprojects`
 
-___
+***
 
 ### testTask
 
-• `get` **testTask**(): `Task`
+> `get` **testTask**(): `Task`
 
 #### Returns
 
@@ -1119,19 +983,17 @@ ___
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.testTask
+`awscdk.AwsCdkTypeScriptApp.testTask`
 
 ## Methods
 
-### addBins
+### addBins()
 
-▸ **addBins**(`bins`): `void`
+> **addBins**(`bins`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bins` | `Record`\<`string`, `string`\> |
+• **bins**: `Record`\<`string`, `string`\>
 
 #### Returns
 
@@ -1139,13 +1001,13 @@ awscdk.AwsCdkTypeScriptApp.testTask
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addBins
+`awscdk.AwsCdkTypeScriptApp.addBins`
 
-___
+***
 
-### addBundledDeps
+### addBundledDeps()
 
-▸ **addBundledDeps**(`...deps`): `void`
+> **addBundledDeps**(...`deps`): `void`
 
 Defines bundled dependencies.
 
@@ -1154,9 +1016,13 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1164,21 +1030,21 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addBundledDeps
+`awscdk.AwsCdkTypeScriptApp.addBundledDeps`
 
-___
+***
 
-### addCdkDependency
+### addCdkDependency()
 
-▸ **addCdkDependency**(`...modules`): `void`
+> **addCdkDependency**(...`modules`): `void`
 
 Adds an AWS CDK module dependencies
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...modules` | `string`[] | The list of modules to depend on |
+• ...**modules**: `string`[]
+
+The list of modules to depend on
 
 #### Returns
 
@@ -1186,47 +1052,49 @@ Adds an AWS CDK module dependencies
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addCdkDependency
+`awscdk.AwsCdkTypeScriptApp.addCdkDependency`
 
-___
+***
 
-### addCompileCommand
+### ~~addCompileCommand()~~
 
-▸ **addCompileCommand**(`...commands`): `void`
+> **addCompileCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.compileTask.exec()`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addCompileCommand
+`awscdk.AwsCdkTypeScriptApp.addCompileCommand`
 
-___
+***
 
-### addDeps
+### addDeps()
 
-▸ **addDeps**(`...deps`): `void`
+> **addDeps**(...`deps`): `void`
 
 Defines normal dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1234,21 +1102,25 @@ Defines normal dependencies.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addDeps
+`awscdk.AwsCdkTypeScriptApp.addDeps`
 
-___
+***
 
-### addDevDeps
+### addDevDeps()
 
-▸ **addDevDeps**(`...deps`): `void`
+> **addDevDeps**(...`deps`): `void`
 
 Defines development/test dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1256,22 +1128,22 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addDevDeps
+`awscdk.AwsCdkTypeScriptApp.addDevDeps`
 
-___
+***
 
-### addExcludeFromCleanup
+### addExcludeFromCleanup()
 
-▸ **addExcludeFromCleanup**(`...globs`): `void`
+> **addExcludeFromCleanup**(...`globs`): `void`
 
 Exclude the matching files from pre-synth cleanup. Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...globs` | `string`[] | The glob patterns to match |
+• ...**globs**: `string`[]
+
+The glob patterns to match
 
 #### Returns
 
@@ -1279,21 +1151,21 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addExcludeFromCleanup
+`awscdk.AwsCdkTypeScriptApp.addExcludeFromCleanup`
 
-___
+***
 
-### addFields
+### addFields()
 
-▸ **addFields**(`fields`): `void`
+> **addFields**(`fields`): `void`
 
 Directly set fields in `package.json`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fields` | `Object` | The fields to set |
+• **fields**
+
+The fields to set
 
 #### Returns
 
@@ -1301,21 +1173,21 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addFields
+`awscdk.AwsCdkTypeScriptApp.addFields`
 
-___
+***
 
-### addGitIgnore
+### addGitIgnore()
 
-▸ **addGitIgnore**(`pattern`): `void`
+> **addGitIgnore**(`pattern`): `void`
 
 Adds a .gitignore pattern.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The glob pattern to ignore. |
+• **pattern**: `string`
+
+The glob pattern to ignore.
 
 #### Returns
 
@@ -1323,31 +1195,21 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addGitIgnore
+`awscdk.AwsCdkTypeScriptApp.addGitIgnore`
 
-___
+***
 
-### addIgnores
+### addKeywords()
 
-▸ **addIgnores**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### addKeywords
-
-▸ **addKeywords**(`...keywords`): `void`
+> **addKeywords**(...`keywords`): `void`
 
 Adds keywords to package.json (deduplicated)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...keywords` | `string`[] | The keywords to add |
+• ...**keywords**: `string`[]
+
+The keywords to add
 
 #### Returns
 
@@ -1355,39 +1217,39 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addKeywords
+`awscdk.AwsCdkTypeScriptApp.addKeywords`
 
-___
+***
 
-### addPackageIgnore
+### addPackageIgnore()
 
-▸ **addPackageIgnore**(`pattern`): `void`
+> **addPackageIgnore**(`pattern`): `void`
 
 Adds patterns to be ignored by npm.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The pattern to ignore. |
+• **pattern**: `string`
+
+The pattern to ignore.
 
 #### Returns
 
 `void`
 
-**`Remarks`**
+#### Remarks
 
 If you are having trouble getting an ignore to populate, try using your construct or component's preSynthesize method to properly delay calling this method.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addPackageIgnore
+`awscdk.AwsCdkTypeScriptApp.addPackageIgnore`
 
-___
+***
 
-### addPeerDeps
+### addPeerDeps()
 
-▸ **addPeerDeps**(`...deps`): `void`
+> **addPeerDeps**(...`deps`): `void`
 
 Defines peer dependencies.
 
@@ -1397,9 +1259,13 @@ your code against the minimum version required from your consumers.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1407,21 +1273,21 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addPeerDeps
+`awscdk.AwsCdkTypeScriptApp.addPeerDeps`
 
-___
+***
 
-### addScripts
+### addScripts()
 
-▸ **addScripts**(`scripts`): `void`
+> **addScripts**(`scripts`): `void`
 
 Replaces the contents of multiple npm package.json scripts.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scripts` | `Object` | The scripts to set |
+• **scripts**
+
+The scripts to set
 
 #### Returns
 
@@ -1429,23 +1295,26 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addScripts
+`awscdk.AwsCdkTypeScriptApp.addScripts`
 
-___
+***
 
-### addTask
+### addTask()
 
-▸ **addTask**(`name`, `props?`): `Task`
+> **addTask**(`name`, `props`?): `Task`
 
 Adds a new task to this project. This will fail if the project already has
 a task with this name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The task name to add |
-| `props?` | `TaskOptions` | Task properties |
+• **name**: `string`
+
+The task name to add
+
+• **props?**: `TaskOptions`
+
+Task properties
 
 #### Returns
 
@@ -1453,65 +1322,63 @@ a task with this name.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addTask
+`awscdk.AwsCdkTypeScriptApp.addTask`
 
-___
+***
 
-### addTestCommand
+### ~~addTestCommand()~~
 
-▸ **addTestCommand**(`...commands`): `void`
+> **addTestCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.testTask.exec()`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addTestCommand
+`awscdk.AwsCdkTypeScriptApp.addTestCommand`
 
-___
+***
 
-### addTip
+### ~~addTip()~~
 
-▸ **addTip**(`message`): `void`
+> **addTip**(`message`): `void`
 
 Prints a "tip" message during synthesis.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | The message |
+• **message**: `string`
+
+The message
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.logger.info(message)` to show messages during synthesis
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.addTip
+`awscdk.AwsCdkTypeScriptApp.addTip`
 
-___
+***
 
-### annotateGenerated
+### annotateGenerated()
 
-▸ **annotateGenerated**(`glob`): `void`
+> **annotateGenerated**(`glob`): `void`
 
 Marks the provided file(s) as being generated. This is achieved using the
 github-linguist attributes. Generated files do not count against the
@@ -1519,99 +1386,53 @@ repository statistics and language breakdown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `glob` | `string` | the glob pattern to match (could be a file path). |
+• **glob**: `string`
+
+the glob pattern to match (could be a file path).
 
 #### Returns
 
 `void`
 
-**`See`**
+#### See
 
 https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.annotateGenerated
+`awscdk.AwsCdkTypeScriptApp.annotateGenerated`
 
-___
+***
 
-### createPersonalTasks
+### ~~hasScript()~~
 
-▸ **createPersonalTasks**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### createTasksForBranch
-
-▸ **createTasksForBranch**(`branchName`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `branchName` | `string` |
-
-#### Returns
-
-`void`
-
-___
-
-### hasScript
-
-▸ **hasScript**(`name`): `boolean`
+> **hasScript**(`name`): `boolean`
 
 Indicates if a script by the name name is defined.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script |
+• **name**: `string`
+
+The name of the script
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
+#### Deprecated
 
 Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.hasScript
+`awscdk.AwsCdkTypeScriptApp.hasScript`
 
-___
+***
 
-### overrideTasks
+### postSynthesize()
 
-▸ **overrideTasks**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### overrideTasksForDefaultStage
-
-▸ **overrideTasksForDefaultStage**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after all components are synthesized. Order is *not* guaranteed.
 
@@ -1621,13 +1442,13 @@ Called after all components are synthesized. Order is *not* guaranteed.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.postSynthesize
+`awscdk.AwsCdkTypeScriptApp.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before all components are synthesized.
 
@@ -1637,21 +1458,21 @@ Called before all components are synthesized.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.preSynthesize
+`awscdk.AwsCdkTypeScriptApp.preSynthesize`
 
-___
+***
 
-### removeScript
+### removeScript()
 
-▸ **removeScript**(`name`): `void`
+> **removeScript**(`name`): `void`
 
 Removes the npm script (always successful).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script. |
+• **name**: `string`
+
+The name of the script.
 
 #### Returns
 
@@ -1659,21 +1480,21 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.removeScript
+`awscdk.AwsCdkTypeScriptApp.removeScript`
 
-___
+***
 
-### removeTask
+### removeTask()
 
-▸ **removeTask**(`name`): `undefined` \| `Task`
+> **removeTask**(`name`): `undefined` \| `Task`
 
 Removes a task from a project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the task to remove. |
+• **name**: `string`
+
+The name of the task to remove.
 
 #### Returns
 
@@ -1683,22 +1504,22 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.removeTask
+`awscdk.AwsCdkTypeScriptApp.removeTask`
 
-___
+***
 
-### renderWorkflowSetup
+### renderWorkflowSetup()
 
-▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
+> **renderWorkflowSetup**(`options`?): `JobStep`[]
 
 Returns the set of workflow steps which should be executed to bootstrap a
 workflow.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `RenderWorkflowSetupOptions` | Options. |
+• **options?**: `RenderWorkflowSetupOptions`
+
+Options.
 
 #### Returns
 
@@ -1708,22 +1529,22 @@ Job steps
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.renderWorkflowSetup
+`awscdk.AwsCdkTypeScriptApp.renderWorkflowSetup`
 
-___
+***
 
-### runTaskCommand
+### runTaskCommand()
 
-▸ **runTaskCommand**(`task`): `string`
+> **runTaskCommand**(`task`): `string`
 
 Returns the shell command to execute in order to run a task. This will
 typically be `npx projen TASK`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `task` | `Task` | The task for which the command is required |
+• **task**: `Task`
+
+The task for which the command is required
 
 #### Returns
 
@@ -1731,22 +1552,25 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.runTaskCommand
+`awscdk.AwsCdkTypeScriptApp.runTaskCommand`
 
-___
+***
 
-### setScript
+### setScript()
 
-▸ **setScript**(`name`, `command`): `void`
+> **setScript**(`name`, `command`): `void`
 
 Replaces the contents of an npm package.json script.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The script name |
-| `command` | `string` | The command to execute |
+• **name**: `string`
+
+The script name
+
+• **command**: `string`
+
+The command to execute
 
 #### Returns
 
@@ -1754,13 +1578,13 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.setScript
+`awscdk.AwsCdkTypeScriptApp.setScript`
 
-___
+***
 
-### synth
+### synth()
 
-▸ **synth**(): `void`
+> **synth**(): `void`
 
 Synthesize all project files into `outdir`.
 
@@ -1777,13 +1601,13 @@ Synthesize all project files into `outdir`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.synth
+`awscdk.AwsCdkTypeScriptApp.synth`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -1793,22 +1617,23 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.toString
+`awscdk.AwsCdkTypeScriptApp.toString`
 
-___
+***
 
-### tryFindFile
+### tryFindFile()
 
-▸ **tryFindFile**(`filePath`): `undefined` \| `FileBase`
+> **tryFindFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and all
 its subprojects.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be resolved
+from the root of _this_ project.
 
 #### Returns
 
@@ -1818,47 +1643,47 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tryFindFile
+`awscdk.AwsCdkTypeScriptApp.tryFindFile`
 
-___
+***
 
-### tryFindJsonFile
+### ~~tryFindJsonFile()~~
 
-▸ **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
+> **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
 
 Finds a json file by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
 `undefined` \| `JsonFile`
 
-**`Deprecated`**
+#### Deprecated
 
 use `tryFindObjectFile`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tryFindJsonFile
+`awscdk.AwsCdkTypeScriptApp.tryFindJsonFile`
 
-___
+***
 
-### tryFindObjectFile
+### tryFindObjectFile()
 
-▸ **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
+> **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
@@ -1866,22 +1691,23 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tryFindObjectFile
+`awscdk.AwsCdkTypeScriptApp.tryFindObjectFile`
 
-___
+***
 
-### tryRemoveFile
+### tryRemoveFile()
 
-▸ **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
+> **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and removes
 it.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be
+resolved from the root of _this_ project.
 
 #### Returns
 
@@ -1892,13 +1718,13 @@ the file was not found.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.tryRemoveFile
+`awscdk.AwsCdkTypeScriptApp.tryRemoveFile`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -1918,65 +1744,61 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.isConstruct
+`awscdk.AwsCdkTypeScriptApp.isConstruct`
 
-___
+***
 
-### isProject
+### isProject()
 
-▸ **isProject**(`x`): x is Project
+> `static` **isProject**(`x`): `x is Project`
 
 Test whether the given construct is a project.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Project
+`x is Project`
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.isProject
+`awscdk.AwsCdkTypeScriptApp.isProject`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`construct`): `Project`
+> `static` **of**(`construct`): `Project`
 
 Find the closest ancestor project for given construct.
 When given a project, this it the project itself.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `construct` | `IConstruct` |
+• **construct**: `IConstruct`
 
 #### Returns
 
 `Project`
 
-**`Throws`**
+#### Throws
 
 when no project is found in the path to the root
 
 #### Inherited from
 
-awscdk.AwsCdkTypeScriptApp.of
+`awscdk.AwsCdkTypeScriptApp.of`

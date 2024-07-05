@@ -1,4 +1,6 @@
-projen-cspell / [Exports](modules.md)
+**projen-cspell** • [**Docs**](globals.md)
+
+***
 
 # projen-cspell
 

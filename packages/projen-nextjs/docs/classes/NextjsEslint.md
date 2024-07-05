@@ -1,45 +1,26 @@
-[projen-nextjs](../README.md) / [Exports](../modules.md) / NextjsEslint
+[**projen-nextjs**](../README.md) • **Docs**
+
+***
+
+[projen-nextjs](../globals.md) / NextjsEslint
 
 # Class: NextjsEslint
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`NextjsEslint`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](NextjsEslint.md#constructor)
-
-### Properties
-
-- [node](NextjsEslint.md#node)
-- [project](NextjsEslint.md#project)
-
-### Methods
-
-- [postSynthesize](NextjsEslint.md#postsynthesize)
-- [preSynthesize](NextjsEslint.md#presynthesize)
-- [synthesize](NextjsEslint.md#synthesize)
-- [toString](NextjsEslint.md#tostring)
-- [isComponent](NextjsEslint.md#iscomponent)
-- [isConstruct](NextjsEslint.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new NextjsEslint()
 
-• **new NextjsEslint**(`project`, `_options?`): [`NextjsEslint`](NextjsEslint.md)
+> **new NextjsEslint**(`project`, `_options`): [`NextjsEslint`](NextjsEslint.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `_options` | [`NextjsEslintOptions`](../interfaces/NextjsEslintOptions.md) |
+• **project**: `TypeScriptProject`
+
+• **\_options**: [`NextjsEslintOptions`](../interfaces/NextjsEslintOptions.md) = `{}`
 
 #### Returns
 
@@ -47,35 +28,35 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -85,13 +66,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -101,13 +82,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -117,13 +98,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -133,35 +114,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -181,16 +160,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

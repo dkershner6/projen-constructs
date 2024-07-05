@@ -1,4 +1,6 @@
-dkershner6-projen-awscdk-construct-library / [Exports](modules.md)
+**dkershner6-projen-awscdk-construct-library** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-awscdk-construct-library
 

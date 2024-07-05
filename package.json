@@ -13,6 +13,7 @@
     "clobber": "pnpm exec projen clobber",
     "compile": "pnpm exec projen compile",
     "default": "pnpm exec projen default",
+    "docgen:remove": "pnpm exec projen docgen:remove",
     "eject": "pnpm exec projen eject",
     "eslint": "pnpm exec projen eslint",
     "eslint:monorepo": "pnpm exec projen eslint:monorepo",

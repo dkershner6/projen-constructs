@@ -1,4 +1,6 @@
-dkershner6-projen-awscdk-core / [Exports](modules.md)
+**dkershner6-projen-awscdk-core** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-awscdk-core
 

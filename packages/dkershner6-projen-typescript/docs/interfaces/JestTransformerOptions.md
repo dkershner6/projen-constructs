@@ -1,28 +1,24 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / JestTransformerOptions
+[**dkershner6-projen-typescript**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-typescript](../globals.md) / JestTransformerOptions
 
 # Interface: JestTransformerOptions
 
-## Hierarchy
+## Extended by
 
-- **`JestTransformerOptions`**
-
-  ↳ [`Node20TypeScriptProjectJestOptions`](Node20TypeScriptProjectJestOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [modulesToTransform](JestTransformerOptions.md#modulestotransform)
+- [`Node20TypeScriptProjectJestOptions`](Node20TypeScriptProjectJestOptions.md)
 
 ## Properties
 
-### modulesToTransform
+### modulesToTransform?
 
-• `Optional` `Readonly` **modulesToTransform**: `string`[]
+> `readonly` `optional` **modulesToTransform**: `string`[]
 
 Additional modules for jest to transform, typically ESM modules.
 
-**`Default`**
+#### Default
 
 ```ts
 - A list of known ESM modules commonly used in projects

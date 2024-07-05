@@ -1,84 +1,73 @@
-[projen-vscode-workspaces](../README.md) / [Exports](../modules.md) / VsCodeWorkspacesOptions
+[**projen-vscode-workspaces**](../README.md) • **Docs**
+
+***
+
+[projen-vscode-workspaces](../globals.md) / VsCodeWorkspacesOptions
 
 # Interface: VsCodeWorkspacesOptions
 
-## Table of contents
-
-### Properties
-
-- [additionalWorkspacesJsonSettings](VsCodeWorkspacesOptions.md#additionalworkspacesjsonsettings)
-- [disableMonoRepoExtensionRecommendations](VsCodeWorkspacesOptions.md#disablemonorepoextensionrecommendations)
-- [filename](VsCodeWorkspacesOptions.md#filename)
-- [path](VsCodeWorkspacesOptions.md#path)
-- [projectNamer](VsCodeWorkspacesOptions.md#projectnamer)
-
 ## Properties
 
-### additionalWorkspacesJsonSettings
+### additionalWorkspacesJsonSettings?
 
-• `Optional` **additionalWorkspacesJsonSettings**: `Omit`\<[`VsCodeWorkspacesJson`](../modules.md#vscodeworkspacesjson), ``"folders"``\>
+> `optional` **additionalWorkspacesJsonSettings**: `Omit`\<[`VsCodeWorkspacesJson`](../type-aliases/VsCodeWorkspacesJson.md), `"folders"`\>
 
-**`Default`**
+#### Default
 
 ```ts
 none
 ```
 
-___
+***
 
-### disableMonoRepoExtensionRecommendations
+### disableMonoRepoExtensionRecommendations?
 
-• `Optional` **disableMonoRepoExtensionRecommendations**: `boolean`
+> `optional` **disableMonoRepoExtensionRecommendations**: `boolean`
 
-**`Default`**
+#### Default
 
 ```ts
 false
 ```
 
-___
+***
 
 ### filename
 
-• **filename**: `string`
+> **filename**: `string`
 
 Should end with ".code-workspace"
 
-___
+***
 
-### path
+### path?
 
-• `Optional` **path**: `string`
+> `optional` **path**: `string`
 
-**`Default`**
+#### Default
 
 ```ts
 ".vscode"
 ```
 
-___
+***
 
-### projectNamer
+### projectNamer()?
 
-• `Optional` **projectNamer**: (`project`: `Project`, `rootProject`: `Project`) => `string`
+> `optional` **projectNamer**: (`project`, `rootProject`) => `string`
 
-**`Default`**
+#### Parameters
 
-```ts
-(project) => project.name
-```
+• **project**: `Project`
 
-#### Type declaration
+The project definition to use for naming
 
-▸ (`project`, `rootProject`): `string`
+• **rootProject**: `Project`
 
-##### Parameters
+The root project definition to use for naming
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `project` | `Project` | The project definition to use for naming |
-| `rootProject` | `Project` | The root project definition to use for naming |
-
-##### Returns
+#### Returns
 
 `string`
+
+The name of the project in the context of VSCode Workspaces

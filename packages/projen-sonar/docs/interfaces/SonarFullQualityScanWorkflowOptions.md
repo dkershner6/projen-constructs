@@ -1,48 +1,43 @@
-[projen-sonar](../README.md) / [Exports](../modules.md) / SonarFullQualityScanWorkflowOptions
+[**projen-sonar**](../README.md) • **Docs**
+
+***
+
+[projen-sonar](../globals.md) / SonarFullQualityScanWorkflowOptions
 
 # Interface: SonarFullQualityScanWorkflowOptions
 
-## Table of contents
-
-### Properties
-
-- [actionVersion](SonarFullQualityScanWorkflowOptions.md#actionversion)
-- [branches](SonarFullQualityScanWorkflowOptions.md#branches)
-- [jobConfig](SonarFullQualityScanWorkflowOptions.md#jobconfig)
-- [workflowOptions](SonarFullQualityScanWorkflowOptions.md#workflowoptions)
-
 ## Properties
 
-### actionVersion
+### actionVersion?
 
-• `Optional` `Readonly` **actionVersion**: `string`
+> `readonly` `optional` **actionVersion**: `string`
 
 The version of the Sonar Quality Scan action to use.
 
-___
+***
 
-### branches
+### branches?
 
-• `Optional` `Readonly` **branches**: `string`[]
+> `readonly` `optional` **branches**: `string`[]
 
 The branches to run the workflow on (push).
 
-___
+***
 
-### jobConfig
+### jobConfig?
 
-• `Optional` `Readonly` **jobConfig**: `Partial`\<`Job`\>
+> `readonly` `optional` **jobConfig**: `Partial`\<`Job`\>
 
 The job configuration for the Sonar Quality Scan job.
 
-**`Default`**
+#### Default
 
 ```ts
 Same as the build job
 ```
 
-___
+***
 
-### workflowOptions
+### workflowOptions?
 
-• `Optional` `Readonly` **workflowOptions**: `GithubWorkflowOptions`
+> `readonly` `optional` **workflowOptions**: `GithubWorkflowOptions`

@@ -1,32 +1,29 @@
-[projen-graphql](../README.md) / [Exports](../modules.md) / GraphQLEslintOptions
+[**projen-graphql**](../README.md) • **Docs**
+
+***
+
+[projen-graphql](../globals.md) / GraphQLEslintOptions
 
 # Interface: GraphQLEslintOptions
 
-## Table of contents
-
-### Properties
-
-- [operationsRules](GraphQLEslintOptions.md#operationsrules)
-- [tsEslintOverride](GraphQLEslintOptions.md#tseslintoverride)
-
 ## Properties
 
-### operationsRules
+### operationsRules?
 
-• `Optional` **operationsRules**: `boolean`
+> `optional` **operationsRules**: `boolean`
 
 Whether or not to enable graphql-eslint operations rules in eslint.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-___
+***
 
-### tsEslintOverride
+### tsEslintOverride?
 
-• `Optional` **tsEslintOverride**: `Partial`\<`EslintOverride`\>
+> `optional` **tsEslintOverride**: `Partial`\<`EslintOverride`\>
 
 Set the override settings for the TS Eslint Override.
