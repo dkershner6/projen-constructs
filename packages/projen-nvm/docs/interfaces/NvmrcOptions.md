@@ -1,20 +1,18 @@
-[projen-nvm](../README.md) / [Exports](../modules.md) / NvmrcOptions
+[**projen-nvm**](../README.md) • **Docs**
+
+***
+
+[projen-nvm](../globals.md) / NvmrcOptions
 
 # Interface: NvmrcOptions
 
-## Table of contents
-
-### Properties
-
-- [nodeVersion](NvmrcOptions.md#nodeversion)
-
 ## Properties
 
-### nodeVersion
+### nodeVersion?
 
-• `Optional` `Readonly` **nodeVersion**: `string`
+> `readonly` `optional` **nodeVersion**: `string`
 
-**`Default`**
+#### Default
 
 ```ts
 maxNodeVersion,  if none then minNodeVersion, if none then "lts/*"

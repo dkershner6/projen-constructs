@@ -1,54 +1,28 @@
-[projen-github-workflows](../README.md) / [Exports](../modules.md) / WorkflowJobMerger
+[**projen-github-workflows**](../README.md) • **Docs**
+
+***
+
+[projen-github-workflows](../globals.md) / WorkflowJobMerger
 
 # Class: WorkflowJobMerger
 
 Add steps or settings to every workflow job in a project.
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`WorkflowJobMerger`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](WorkflowJobMerger.md#constructor)
-
-### Properties
-
-- [jobsCompleted](WorkflowJobMerger.md#jobscompleted)
-- [node](WorkflowJobMerger.md#node)
-- [options](WorkflowJobMerger.md#options)
-- [project](WorkflowJobMerger.md#project)
-- [projectGithub](WorkflowJobMerger.md#projectgithub)
-
-### Methods
-
-- [determineShouldMergeJob](WorkflowJobMerger.md#determineshouldmergejob)
-- [mergeJob](WorkflowJobMerger.md#mergejob)
-- [mergeObjects](WorkflowJobMerger.md#mergeobjects)
-- [mergeWorkflowJobs](WorkflowJobMerger.md#mergeworkflowjobs)
-- [postSynthesize](WorkflowJobMerger.md#postsynthesize)
-- [preSynthesize](WorkflowJobMerger.md#presynthesize)
-- [synthesize](WorkflowJobMerger.md#synthesize)
-- [toString](WorkflowJobMerger.md#tostring)
-- [isComponent](WorkflowJobMerger.md#iscomponent)
-- [isConstruct](WorkflowJobMerger.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new WorkflowJobMerger()
 
-• **new WorkflowJobMerger**(`projectGithub`, `options`): [`WorkflowJobMerger`](WorkflowJobMerger.md)
+> **new WorkflowJobMerger**(`projectGithub`, `options`): [`WorkflowJobMerger`](WorkflowJobMerger.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `projectGithub` | `GitHub` |
-| `options` | [`WorkflowJobMergerOptions`](../interfaces/WorkflowJobMergerOptions.md) |
+• **projectGithub**: `GitHub`
+
+• **options**: [`WorkflowJobMergerOptions`](../interfaces/WorkflowJobMergerOptions.md)
 
 #### Returns
 
@@ -56,123 +30,35 @@ Add steps or settings to every workflow job in a project.
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
-### jobsCompleted
-
-• `Private` `Readonly` **jobsCompleted**: `Set`\<`string`\>
-
-___
-
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
-
-### options
-
-• `Private` `Readonly` **options**: [`WorkflowJobMergerOptions`](../interfaces/WorkflowJobMergerOptions.md)
-
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
-
-___
-
-### projectGithub
-
-• `Private` `Readonly` **projectGithub**: `GitHub`
+`Component.project`
 
 ## Methods
 
-### determineShouldMergeJob
+### postSynthesize()
 
-▸ **determineShouldMergeJob**(`workflow`, `jobName`, `merge`): `boolean`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `workflow` | `GithubWorkflow` |
-| `jobName` | `string` |
-| `merge` | [`WorkflowJobMerge`](../interfaces/WorkflowJobMerge.md) |
-
-#### Returns
-
-`boolean`
-
-___
-
-### mergeJob
-
-▸ **mergeJob**(`workflow`, `jobName`, `job`, `merge`): `Job`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `workflow` | `GithubWorkflow` |
-| `jobName` | `string` |
-| `job` | `Job` |
-| `merge` | [`WorkflowJobMerge`](../interfaces/WorkflowJobMerge.md) |
-
-#### Returns
-
-`Job`
-
-___
-
-### mergeObjects
-
-▸ **mergeObjects**\<`TObj`\>(`obj1`, `obj2`): `undefined` \| `TObj`
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `TObj` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `obj1` | `undefined` \| `TObj` |
-| `obj2` | `undefined` \| `TObj` |
-
-#### Returns
-
-`undefined` \| `TObj`
-
-___
-
-### mergeWorkflowJobs
-
-▸ **mergeWorkflowJobs**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -182,27 +68,15 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
-#### Returns
-
-`void`
-
-#### Overrides
-
-Component.preSynthesize
-
-___
-
-### synthesize
-
-▸ **synthesize**(): `void`
+Called before synthesis.
 
 #### Returns
 
@@ -210,13 +84,29 @@ ___
 
 #### Overrides
 
-Component.synthesize
+`Component.preSynthesize`
 
-___
+***
 
-### toString
+### synthesize()
 
-▸ **toString**(): `string`
+> **synthesize**(): `void`
+
+Synthesizes files to the project output directory.
+
+#### Returns
+
+`void`
+
+#### Overrides
+
+`Component.synthesize`
+
+***
+
+### toString()
+
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -226,35 +116,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -274,16 +162,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

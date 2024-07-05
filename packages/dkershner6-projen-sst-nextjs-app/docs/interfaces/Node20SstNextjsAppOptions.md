@@ -1,205 +1,26 @@
-[dkershner6-projen-sst-nextjs-app](../README.md) / [Exports](../modules.md) / Node20SstNextjsAppOptions
+[**dkershner6-projen-sst-nextjs-app**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-sst-nextjs-app](../globals.md) / Node20SstNextjsAppOptions
 
 # Interface: Node20SstNextjsAppOptions
 
-## Hierarchy
+## Extends
 
 - `Node20SstAppOptions`
 
-  ↳ **`Node20SstNextjsAppOptions`**
-
-## Table of contents
-
-### Properties
-
-- [allowLibraryDependencies](Node20SstNextjsAppOptions.md#allowlibrarydependencies)
-- [appEntrypoint](Node20SstNextjsAppOptions.md#appentrypoint)
-- [artifactsDirectory](Node20SstNextjsAppOptions.md#artifactsdirectory)
-- [authorEmail](Node20SstNextjsAppOptions.md#authoremail)
-- [authorName](Node20SstNextjsAppOptions.md#authorname)
-- [authorOrganization](Node20SstNextjsAppOptions.md#authororganization)
-- [authorUrl](Node20SstNextjsAppOptions.md#authorurl)
-- [autoApproveOptions](Node20SstNextjsAppOptions.md#autoapproveoptions)
-- [autoApproveUpgrades](Node20SstNextjsAppOptions.md#autoapproveupgrades)
-- [autoDetectBin](Node20SstNextjsAppOptions.md#autodetectbin)
-- [autoMerge](Node20SstNextjsAppOptions.md#automerge)
-- [autoMergeOptions](Node20SstNextjsAppOptions.md#automergeoptions)
-- [bin](Node20SstNextjsAppOptions.md#bin)
-- [branchNameToSstStageMap](Node20SstNextjsAppOptions.md#branchnametosststagemap)
-- [bugsEmail](Node20SstNextjsAppOptions.md#bugsemail)
-- [bugsUrl](Node20SstNextjsAppOptions.md#bugsurl)
-- [buildCommand](Node20SstNextjsAppOptions.md#buildcommand)
-- [buildWorkflow](Node20SstNextjsAppOptions.md#buildworkflow)
-- [buildWorkflowOptions](Node20SstNextjsAppOptions.md#buildworkflowoptions)
-- [buildWorkflowTriggers](Node20SstNextjsAppOptions.md#buildworkflowtriggers)
-- [bundledDeps](Node20SstNextjsAppOptions.md#bundleddeps)
-- [bundlerOptions](Node20SstNextjsAppOptions.md#bundleroptions)
-- [cdkAssert](Node20SstNextjsAppOptions.md#cdkassert)
-- [cdkAssertions](Node20SstNextjsAppOptions.md#cdkassertions)
-- [cdkDependencies](Node20SstNextjsAppOptions.md#cdkdependencies)
-- [cdkDependenciesAsDeps](Node20SstNextjsAppOptions.md#cdkdependenciesasdeps)
-- [cdkTestDependencies](Node20SstNextjsAppOptions.md#cdktestdependencies)
-- [cdkVersion](Node20SstNextjsAppOptions.md#cdkversion)
-- [cdkVersionPinning](Node20SstNextjsAppOptions.md#cdkversionpinning)
-- [cdkout](Node20SstNextjsAppOptions.md#cdkout)
-- [checkLicenses](Node20SstNextjsAppOptions.md#checklicenses)
-- [clobber](Node20SstNextjsAppOptions.md#clobber)
-- [codeArtifactOptions](Node20SstNextjsAppOptions.md#codeartifactoptions)
-- [codeCov](Node20SstNextjsAppOptions.md#codecov)
-- [codeCovTokenSecret](Node20SstNextjsAppOptions.md#codecovtokensecret)
-- [commitGenerated](Node20SstNextjsAppOptions.md#commitgenerated)
-- [constructsVersion](Node20SstNextjsAppOptions.md#constructsversion)
-- [constructsVersionPinning](Node20SstNextjsAppOptions.md#constructsversionpinning)
-- [context](Node20SstNextjsAppOptions.md#context)
-- [copyrightOwner](Node20SstNextjsAppOptions.md#copyrightowner)
-- [copyrightPeriod](Node20SstNextjsAppOptions.md#copyrightperiod)
-- [defaultReleaseBranch](Node20SstNextjsAppOptions.md#defaultreleasebranch)
-- [dependabot](Node20SstNextjsAppOptions.md#dependabot)
-- [dependabotOptions](Node20SstNextjsAppOptions.md#dependabotoptions)
-- [deps](Node20SstNextjsAppOptions.md#deps)
-- [depsUpgrade](Node20SstNextjsAppOptions.md#depsupgrade)
-- [depsUpgradeOptions](Node20SstNextjsAppOptions.md#depsupgradeoptions)
-- [description](Node20SstNextjsAppOptions.md#description)
-- [devContainer](Node20SstNextjsAppOptions.md#devcontainer)
-- [devDeps](Node20SstNextjsAppOptions.md#devdeps)
-- [disableTsconfig](Node20SstNextjsAppOptions.md#disabletsconfig)
-- [disableTsconfigDev](Node20SstNextjsAppOptions.md#disabletsconfigdev)
-- [docgen](Node20SstNextjsAppOptions.md#docgen)
-- [docsDirectory](Node20SstNextjsAppOptions.md#docsdirectory)
-- [edgeLambdaAutoDiscover](Node20SstNextjsAppOptions.md#edgelambdaautodiscover)
-- [entrypoint](Node20SstNextjsAppOptions.md#entrypoint)
-- [entrypointTypes](Node20SstNextjsAppOptions.md#entrypointtypes)
-- [eslint](Node20SstNextjsAppOptions.md#eslint)
-- [eslintOptions](Node20SstNextjsAppOptions.md#eslintoptions)
-- [experimentalIntegRunner](Node20SstNextjsAppOptions.md#experimentalintegrunner)
-- [featureFlags](Node20SstNextjsAppOptions.md#featureflags)
-- [gitIgnoreOptions](Node20SstNextjsAppOptions.md#gitignoreoptions)
-- [gitOptions](Node20SstNextjsAppOptions.md#gitoptions)
-- [github](Node20SstNextjsAppOptions.md#github)
-- [githubOptions](Node20SstNextjsAppOptions.md#githuboptions)
-- [gitignore](Node20SstNextjsAppOptions.md#gitignore)
-- [gitpod](Node20SstNextjsAppOptions.md#gitpod)
-- [homepage](Node20SstNextjsAppOptions.md#homepage)
-- [integrationTestAutoDiscover](Node20SstNextjsAppOptions.md#integrationtestautodiscover)
-- [jest](Node20SstNextjsAppOptions.md#jest)
-- [jestOptions](Node20SstNextjsAppOptions.md#jestoptions)
-- [jsiiReleaseVersion](Node20SstNextjsAppOptions.md#jsiireleaseversion)
-- [keywords](Node20SstNextjsAppOptions.md#keywords)
-- [lambdaAutoDiscover](Node20SstNextjsAppOptions.md#lambdaautodiscover)
-- [lambdaExtensionAutoDiscover](Node20SstNextjsAppOptions.md#lambdaextensionautodiscover)
-- [lambdaOptions](Node20SstNextjsAppOptions.md#lambdaoptions)
-- [libdir](Node20SstNextjsAppOptions.md#libdir)
-- [license](Node20SstNextjsAppOptions.md#license)
-- [licensed](Node20SstNextjsAppOptions.md#licensed)
-- [logging](Node20SstNextjsAppOptions.md#logging)
-- [majorVersion](Node20SstNextjsAppOptions.md#majorversion)
-- [maxNodeVersion](Node20SstNextjsAppOptions.md#maxnodeversion)
-- [mergify](Node20SstNextjsAppOptions.md#mergify)
-- [mergifyOptions](Node20SstNextjsAppOptions.md#mergifyoptions)
-- [minMajorVersion](Node20SstNextjsAppOptions.md#minmajorversion)
-- [minNodeVersion](Node20SstNextjsAppOptions.md#minnodeversion)
-- [mutableBuild](Node20SstNextjsAppOptions.md#mutablebuild)
-- [name](Node20SstNextjsAppOptions.md#name)
-- [nextjsJest](Node20SstNextjsAppOptions.md#nextjsjest)
-- [nextjsJestConfigFileOptions](Node20SstNextjsAppOptions.md#nextjsjestconfigfileoptions)
-- [nextjsTsconfig](Node20SstNextjsAppOptions.md#nextjstsconfig)
-- [npmAccess](Node20SstNextjsAppOptions.md#npmaccess)
-- [npmDistTag](Node20SstNextjsAppOptions.md#npmdisttag)
-- [npmIgnoreOptions](Node20SstNextjsAppOptions.md#npmignoreoptions)
-- [npmProvenance](Node20SstNextjsAppOptions.md#npmprovenance)
-- [npmRegistry](Node20SstNextjsAppOptions.md#npmregistry)
-- [npmRegistryUrl](Node20SstNextjsAppOptions.md#npmregistryurl)
-- [npmTokenSecret](Node20SstNextjsAppOptions.md#npmtokensecret)
-- [npmignore](Node20SstNextjsAppOptions.md#npmignore)
-- [npmignoreEnabled](Node20SstNextjsAppOptions.md#npmignoreenabled)
-- [outdir](Node20SstNextjsAppOptions.md#outdir)
-- [package](Node20SstNextjsAppOptions.md#package)
-- [packageManager](Node20SstNextjsAppOptions.md#packagemanager)
-- [packageName](Node20SstNextjsAppOptions.md#packagename)
-- [parent](Node20SstNextjsAppOptions.md#parent)
-- [peerDependencyOptions](Node20SstNextjsAppOptions.md#peerdependencyoptions)
-- [peerDeps](Node20SstNextjsAppOptions.md#peerdeps)
-- [pnpmVersion](Node20SstNextjsAppOptions.md#pnpmversion)
-- [postBuildSteps](Node20SstNextjsAppOptions.md#postbuildsteps)
-- [prerelease](Node20SstNextjsAppOptions.md#prerelease)
-- [prettier](Node20SstNextjsAppOptions.md#prettier)
-- [prettierOptions](Node20SstNextjsAppOptions.md#prettieroptions)
-- [projectType](Node20SstNextjsAppOptions.md#projecttype)
-- [projenCommand](Node20SstNextjsAppOptions.md#projencommand)
-- [projenCredentials](Node20SstNextjsAppOptions.md#projencredentials)
-- [projenDevDependency](Node20SstNextjsAppOptions.md#projendevdependency)
-- [projenTokenSecret](Node20SstNextjsAppOptions.md#projentokensecret)
-- [projenVersion](Node20SstNextjsAppOptions.md#projenversion)
-- [projenrcJs](Node20SstNextjsAppOptions.md#projenrcjs)
-- [projenrcJsOptions](Node20SstNextjsAppOptions.md#projenrcjsoptions)
-- [projenrcJson](Node20SstNextjsAppOptions.md#projenrcjson)
-- [projenrcJsonOptions](Node20SstNextjsAppOptions.md#projenrcjsonoptions)
-- [projenrcTs](Node20SstNextjsAppOptions.md#projenrcts)
-- [projenrcTsOptions](Node20SstNextjsAppOptions.md#projenrctsoptions)
-- [publishDryRun](Node20SstNextjsAppOptions.md#publishdryrun)
-- [publishTasks](Node20SstNextjsAppOptions.md#publishtasks)
-- [publishToAws](Node20SstNextjsAppOptions.md#publishtoaws)
-- [publishToAwsOptions](Node20SstNextjsAppOptions.md#publishtoawsoptions)
-- [pullRequestTemplate](Node20SstNextjsAppOptions.md#pullrequesttemplate)
-- [pullRequestTemplateContents](Node20SstNextjsAppOptions.md#pullrequesttemplatecontents)
-- [readme](Node20SstNextjsAppOptions.md#readme)
-- [releasableCommits](Node20SstNextjsAppOptions.md#releasablecommits)
-- [release](Node20SstNextjsAppOptions.md#release)
-- [releaseBranches](Node20SstNextjsAppOptions.md#releasebranches)
-- [releaseEveryCommit](Node20SstNextjsAppOptions.md#releaseeverycommit)
-- [releaseFailureIssue](Node20SstNextjsAppOptions.md#releasefailureissue)
-- [releaseFailureIssueLabel](Node20SstNextjsAppOptions.md#releasefailureissuelabel)
-- [releaseSchedule](Node20SstNextjsAppOptions.md#releaseschedule)
-- [releaseTagPrefix](Node20SstNextjsAppOptions.md#releasetagprefix)
-- [releaseToNpm](Node20SstNextjsAppOptions.md#releasetonpm)
-- [releaseTrigger](Node20SstNextjsAppOptions.md#releasetrigger)
-- [releaseWorkflow](Node20SstNextjsAppOptions.md#releaseworkflow)
-- [releaseWorkflowName](Node20SstNextjsAppOptions.md#releaseworkflowname)
-- [releaseWorkflowSetupSteps](Node20SstNextjsAppOptions.md#releaseworkflowsetupsteps)
-- [renovatebot](Node20SstNextjsAppOptions.md#renovatebot)
-- [renovatebotOptions](Node20SstNextjsAppOptions.md#renovatebotoptions)
-- [repository](Node20SstNextjsAppOptions.md#repository)
-- [repositoryDirectory](Node20SstNextjsAppOptions.md#repositorydirectory)
-- [requireApproval](Node20SstNextjsAppOptions.md#requireapproval)
-- [sampleCode](Node20SstNextjsAppOptions.md#samplecode)
-- [scopedPackagesOptions](Node20SstNextjsAppOptions.md#scopedpackagesoptions)
-- [scripts](Node20SstNextjsAppOptions.md#scripts)
-- [srcdir](Node20SstNextjsAppOptions.md#srcdir)
-- [sstOut](Node20SstNextjsAppOptions.md#sstout)
-- [sstVersion](Node20SstNextjsAppOptions.md#sstversion)
-- [stability](Node20SstNextjsAppOptions.md#stability)
-- [stale](Node20SstNextjsAppOptions.md#stale)
-- [staleOptions](Node20SstNextjsAppOptions.md#staleoptions)
-- [testdir](Node20SstNextjsAppOptions.md#testdir)
-- [tsJestOptions](Node20SstNextjsAppOptions.md#tsjestoptions)
-- [tsconfig](Node20SstNextjsAppOptions.md#tsconfig)
-- [tsconfigDev](Node20SstNextjsAppOptions.md#tsconfigdev)
-- [tsconfigDevFile](Node20SstNextjsAppOptions.md#tsconfigdevfile)
-- [typescriptVersion](Node20SstNextjsAppOptions.md#typescriptversion)
-- [versionrcOptions](Node20SstNextjsAppOptions.md#versionrcoptions)
-- [vscode](Node20SstNextjsAppOptions.md#vscode)
-- [watchExcludes](Node20SstNextjsAppOptions.md#watchexcludes)
-- [watchIncludes](Node20SstNextjsAppOptions.md#watchincludes)
-- [workflowBootstrapSteps](Node20SstNextjsAppOptions.md#workflowbootstrapsteps)
-- [workflowContainerImage](Node20SstNextjsAppOptions.md#workflowcontainerimage)
-- [workflowGitIdentity](Node20SstNextjsAppOptions.md#workflowgitidentity)
-- [workflowNodeVersion](Node20SstNextjsAppOptions.md#workflownodeversion)
-- [workflowPackageCache](Node20SstNextjsAppOptions.md#workflowpackagecache)
-- [workflowRunsOn](Node20SstNextjsAppOptions.md#workflowrunson)
-- [workflowRunsOnGroup](Node20SstNextjsAppOptions.md#workflowrunsongroup)
-- [yarnBerryOptions](Node20SstNextjsAppOptions.md#yarnberryoptions)
-
 ## Properties
 
-### allowLibraryDependencies
+### allowLibraryDependencies?
 
-• `Optional` `Readonly` **allowLibraryDependencies**: `boolean`
+> `readonly` `optional` **allowLibraryDependencies**: `boolean`
 
 Allow the project to include `peerDependencies` and `bundledDependencies`.
 This is normally only allowed for libraries. For apps, there's no meaning
 for specifying these.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -207,18 +28,18 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.allowLibraryDependencies
+`Node20SstAppOptions.allowLibraryDependencies`
 
-___
+***
 
-### appEntrypoint
+### appEntrypoint?
 
-• `Optional` `Readonly` **appEntrypoint**: `string`
+> `readonly` `optional` **appEntrypoint**: `string`
 
 The CDK app's entrypoint (relative to the source directory, which is
 "src" by default).
 
-**`Default`**
+#### Default
 
 ```ts
 "main.ts"
@@ -226,17 +47,17 @@ The CDK app's entrypoint (relative to the source directory, which is
 
 #### Inherited from
 
-Node20SstAppOptions.appEntrypoint
+`Node20SstAppOptions.appEntrypoint`
 
-___
+***
 
-### artifactsDirectory
+### artifactsDirectory?
 
-• `Optional` `Readonly` **artifactsDirectory**: `string`
+> `readonly` `optional` **artifactsDirectory**: `string`
 
 A directory which will contain build artifacts.
 
-**`Default`**
+#### Default
 
 ```ts
 "dist"
@@ -244,65 +65,65 @@ A directory which will contain build artifacts.
 
 #### Inherited from
 
-Node20SstAppOptions.artifactsDirectory
+`Node20SstAppOptions.artifactsDirectory`
 
-___
+***
 
-### authorEmail
+### authorEmail?
 
-• `Optional` `Readonly` **authorEmail**: `string`
+> `readonly` `optional` **authorEmail**: `string`
 
 Author's e-mail
 
 #### Inherited from
 
-Node20SstAppOptions.authorEmail
+`Node20SstAppOptions.authorEmail`
 
-___
+***
 
-### authorName
+### authorName?
 
-• `Optional` `Readonly` **authorName**: `string`
+> `readonly` `optional` **authorName**: `string`
 
 Author's name
 
 #### Inherited from
 
-Node20SstAppOptions.authorName
+`Node20SstAppOptions.authorName`
 
-___
+***
 
-### authorOrganization
+### authorOrganization?
 
-• `Optional` `Readonly` **authorOrganization**: `boolean`
+> `readonly` `optional` **authorOrganization**: `boolean`
 
 Is the author an organization
 
 #### Inherited from
 
-Node20SstAppOptions.authorOrganization
+`Node20SstAppOptions.authorOrganization`
 
-___
+***
 
-### authorUrl
+### authorUrl?
 
-• `Optional` `Readonly` **authorUrl**: `string`
+> `readonly` `optional` **authorUrl**: `string`
 
 Author's URL / Website
 
 #### Inherited from
 
-Node20SstAppOptions.authorUrl
+`Node20SstAppOptions.authorUrl`
 
-___
+***
 
-### autoApproveOptions
+### autoApproveOptions?
 
-• `Optional` `Readonly` **autoApproveOptions**: `AutoApproveOptions`
+> `readonly` `optional` **autoApproveOptions**: `AutoApproveOptions`
 
 Enable and configure the 'auto approve' workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 - auto approve is disabled
@@ -310,20 +131,20 @@ Enable and configure the 'auto approve' workflow.
 
 #### Inherited from
 
-Node20SstAppOptions.autoApproveOptions
+`Node20SstAppOptions.autoApproveOptions`
 
-___
+***
 
-### autoApproveUpgrades
+### autoApproveUpgrades?
 
-• `Optional` `Readonly` **autoApproveUpgrades**: `boolean`
+> `readonly` `optional` **autoApproveUpgrades**: `boolean`
 
 Automatically approve deps upgrade PRs, allowing them to be
 merged by mergify (if configued).
 
 Throw if set to true but `autoApproveOptions` are not defined.
 
-**`Default`**
+#### Default
 
 ```ts
 - true
@@ -331,18 +152,18 @@ Throw if set to true but `autoApproveOptions` are not defined.
 
 #### Inherited from
 
-Node20SstAppOptions.autoApproveUpgrades
+`Node20SstAppOptions.autoApproveUpgrades`
 
-___
+***
 
-### autoDetectBin
+### autoDetectBin?
 
-• `Optional` `Readonly` **autoDetectBin**: `boolean`
+> `readonly` `optional` **autoDetectBin**: `boolean`
 
 Automatically add all executables under the `bin` directory to your
 `package.json` file under the `bin` section.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -350,18 +171,18 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.autoDetectBin
+`Node20SstAppOptions.autoDetectBin`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `boolean`
+> `readonly` `optional` **autoMerge**: `boolean`
 
 Enable automatic merging on GitHub. Has no effect if `github.mergify`
 is set to false.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -369,30 +190,30 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.autoMerge
+`Node20SstAppOptions.autoMerge`
 
-___
+***
 
-### autoMergeOptions
+### autoMergeOptions?
 
-• `Optional` `Readonly` **autoMergeOptions**: `AutoMergeOptions`
+> `readonly` `optional` **autoMergeOptions**: `AutoMergeOptions`
 
 Configure options for automatic merging on GitHub. Has no effect if
 `github.mergify` or `autoMerge` is set to false.
 
-**`Default`**
+#### Default
 
 - see defaults in `AutoMergeOptions`
 
 #### Inherited from
 
-Node20SstAppOptions.autoMergeOptions
+`Node20SstAppOptions.autoMergeOptions`
 
-___
+***
 
-### bin
+### bin?
 
-• `Optional` `Readonly` **bin**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **bin**: `Record`\<`string`, `string`\>
 
 Binary programs vended with your module.
 
@@ -402,17 +223,17 @@ executable file under `bin` will automatically be added to this section.
 
 #### Inherited from
 
-Node20SstAppOptions.bin
+`Node20SstAppOptions.bin`
 
-___
+***
 
-### branchNameToSstStageMap
+### branchNameToSstStageMap?
 
-• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
 Maps branchNames to SST Stages.
 
-**`Default`**
+#### Default
 
 ```ts
 - The branchName will be used as the stage name.
@@ -420,43 +241,43 @@ Maps branchNames to SST Stages.
 
 #### Inherited from
 
-Node20SstAppOptions.branchNameToSstStageMap
+`Node20SstAppOptions.branchNameToSstStageMap`
 
-___
+***
 
-### bugsEmail
+### bugsEmail?
 
-• `Optional` `Readonly` **bugsEmail**: `string`
+> `readonly` `optional` **bugsEmail**: `string`
 
 The email address to which issues should be reported.
 
 #### Inherited from
 
-Node20SstAppOptions.bugsEmail
+`Node20SstAppOptions.bugsEmail`
 
-___
+***
 
-### bugsUrl
+### bugsUrl?
 
-• `Optional` `Readonly` **bugsUrl**: `string`
+> `readonly` `optional` **bugsUrl**: `string`
 
 The url to your project's issue tracker.
 
 #### Inherited from
 
-Node20SstAppOptions.bugsUrl
+`Node20SstAppOptions.bugsUrl`
 
-___
+***
 
-### buildCommand
+### buildCommand?
 
-• `Optional` `Readonly` **buildCommand**: `string`
+> `readonly` `optional` **buildCommand**: `string`
 
 A command to execute before synthesis. This command will be called when
 running `cdk synth` or when `cdk watch` identifies a change in your source
 code before redeployment.
 
-**`Default`**
+#### Default
 
 ```ts
 - no build command
@@ -464,17 +285,17 @@ code before redeployment.
 
 #### Inherited from
 
-Node20SstAppOptions.buildCommand
+`Node20SstAppOptions.buildCommand`
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `boolean`
+> `readonly` `optional` **buildWorkflow**: `boolean`
 
 Define a GitHub workflow for building PRs.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
@@ -482,47 +303,47 @@ Define a GitHub workflow for building PRs.
 
 #### Inherited from
 
-Node20SstAppOptions.buildWorkflow
+`Node20SstAppOptions.buildWorkflow`
 
-___
+***
 
-### buildWorkflowOptions
+### buildWorkflowOptions?
 
-• `Optional` `Readonly` **buildWorkflowOptions**: `BuildWorkflowOptions`
+> `readonly` `optional` **buildWorkflowOptions**: `BuildWorkflowOptions`
 
 Options for PR build workflow.
 
 #### Inherited from
 
-Node20SstAppOptions.buildWorkflowOptions
+`Node20SstAppOptions.buildWorkflowOptions`
 
-___
+***
 
-### buildWorkflowTriggers
+### ~~buildWorkflowTriggers?~~
 
-• `Optional` `Readonly` **buildWorkflowTriggers**: `Triggers`
+> `readonly` `optional` **buildWorkflowTriggers**: `Triggers`
 
 Build workflow triggers
 
-**`Default`**
+#### Default
 
 ```ts
 "{ pullRequest: {}, workflowDispatch: {} }"
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 - Use `buildWorkflowOptions.workflowTriggers`
 
 #### Inherited from
 
-Node20SstAppOptions.buildWorkflowTriggers
+`Node20SstAppOptions.buildWorkflowTriggers`
 
-___
+***
 
-### bundledDeps
+### bundledDeps?
 
-• `Optional` `Readonly` **bundledDeps**: `string`[]
+> `readonly` `optional` **bundledDeps**: `string`[]
 
 List of dependencies to bundle into this module. These modules will be
 added both to the `dependencies` section and `bundledDependencies` section of
@@ -537,56 +358,56 @@ this will be what you `package.json` will eventually include.
 
 #### Inherited from
 
-Node20SstAppOptions.bundledDeps
+`Node20SstAppOptions.bundledDeps`
 
-___
+***
 
-### bundlerOptions
+### bundlerOptions?
 
-• `Optional` `Readonly` **bundlerOptions**: `BundlerOptions`
+> `readonly` `optional` **bundlerOptions**: `BundlerOptions`
 
 Options for `Bundler`.
 
 #### Inherited from
 
-Node20SstAppOptions.bundlerOptions
+`Node20SstAppOptions.bundlerOptions`
 
-___
+***
 
-### cdkAssert
+### ~~cdkAssert?~~
 
-• `Optional` `Readonly` **cdkAssert**: `boolean`
+> `readonly` `optional` **cdkAssert**: `boolean`
 
 Warning: NodeJS only.
 Install the @aws-cdk/assert library?
 
-**`Default`**
+#### Default
 
 ```ts
 - will be included by default for AWS CDK >= 1.0.0 < 2.0.0
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 The @aws-cdk/assert library is deprecated in favor of
 @aws-cdk/assertions (in V1) and included in `aws-cdk-lib` for V2.
 
 #### Inherited from
 
-Node20SstAppOptions.cdkAssert
+`Node20SstAppOptions.cdkAssert`
 
-___
+***
 
-### cdkAssertions
+### cdkAssertions?
 
-• `Optional` `Readonly` **cdkAssertions**: `boolean`
+> `readonly` `optional` **cdkAssertions**: `boolean`
 
 Install the assertions library?
 
 Only needed for CDK 1.x. If using CDK 2.x then
 assertions is already included in 'aws-cdk-lib'
 
-**`Default`**
+#### Default
 
 ```ts
 - will be included by default for AWS CDK >= 1.111.0 < 2.0.0
@@ -594,29 +415,29 @@ assertions is already included in 'aws-cdk-lib'
 
 #### Inherited from
 
-Node20SstAppOptions.cdkAssertions
+`Node20SstAppOptions.cdkAssertions`
 
-___
+***
 
-### cdkDependencies
+### ~~cdkDependencies?~~
 
-• `Optional` `Readonly` **cdkDependencies**: `string`[]
+> `readonly` `optional` **cdkDependencies**: `string`[]
 
 Which AWS CDKv1 modules this project requires
 
-**`Deprecated`**
+#### Deprecated
 
 For CDK 2.x use "deps" instead. (or "peerDeps" if you're building a library)
 
 #### Inherited from
 
-Node20SstAppOptions.cdkDependencies
+`Node20SstAppOptions.cdkDependencies`
 
-___
+***
 
-### cdkDependenciesAsDeps
+### ~~cdkDependenciesAsDeps?~~
 
-• `Optional` `Readonly` **cdkDependenciesAsDeps**: `boolean`
+> `readonly` `optional` **cdkDependenciesAsDeps**: `boolean`
 
 If this is enabled (default), all modules declared in `cdkDependencies` will be also added as
 normal `dependencies` (as well as `peerDependencies`).
@@ -628,45 +449,45 @@ they are present during development.
 
 Note: this setting only applies to construct library projects
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 Not supported in CDK v2.
 
 #### Inherited from
 
-Node20SstAppOptions.cdkDependenciesAsDeps
+`Node20SstAppOptions.cdkDependenciesAsDeps`
 
-___
+***
 
-### cdkTestDependencies
+### ~~cdkTestDependencies?~~
 
-• `Optional` `Readonly` **cdkTestDependencies**: `string`[]
+> `readonly` `optional` **cdkTestDependencies**: `string`[]
 
 AWS CDK modules required for testing.
 
-**`Deprecated`**
+#### Deprecated
 
 For CDK 2.x use 'devDeps' (in node.js projects) or 'testDeps' (in java projects) instead
 
 #### Inherited from
 
-Node20SstAppOptions.cdkTestDependencies
+`Node20SstAppOptions.cdkTestDependencies`
 
-___
+***
 
 ### cdkVersion
 
-• `Readonly` **cdkVersion**: `string`
+> `readonly` **cdkVersion**: `string`
 
 Minimum version of the AWS CDK to depend on.
 
-**`Default`**
+#### Default
 
 ```ts
 "2.1.0"
@@ -674,13 +495,13 @@ Minimum version of the AWS CDK to depend on.
 
 #### Inherited from
 
-Node20SstAppOptions.cdkVersion
+`Node20SstAppOptions.cdkVersion`
 
-___
+***
 
-### cdkVersionPinning
+### cdkVersionPinning?
 
-• `Optional` `Readonly` **cdkVersionPinning**: `boolean`
+> `readonly` `optional` **cdkVersionPinning**: `boolean`
 
 Use pinned version instead of caret version for CDK.
 
@@ -689,17 +510,17 @@ If you use experimental features this will let you define the moment you include
 
 #### Inherited from
 
-Node20SstAppOptions.cdkVersionPinning
+`Node20SstAppOptions.cdkVersionPinning`
 
-___
+***
 
-### cdkout
+### cdkout?
 
-• `Optional` `Readonly` **cdkout**: `string`
+> `readonly` `optional` **cdkout**: `string`
 
 cdk.out directory.
 
-**`Default`**
+#### Default
 
 ```ts
 "cdk.out"
@@ -707,19 +528,19 @@ cdk.out directory.
 
 #### Inherited from
 
-Node20SstAppOptions.cdkout
+`Node20SstAppOptions.cdkout`
 
-___
+***
 
-### checkLicenses
+### checkLicenses?
 
-• `Optional` `Readonly` **checkLicenses**: `LicenseCheckerOptions`
+> `readonly` `optional` **checkLicenses**: `LicenseCheckerOptions`
 
 Configure which licenses should be deemed acceptable for use by dependencies
 
 This setting will cause the build to fail, if any prohibited or not allowed licenses ares encountered.
 
-**`Default`**
+#### Default
 
 ```ts
 - no license checks are run during the build and all licenses will be accepted
@@ -727,17 +548,17 @@ This setting will cause the build to fail, if any prohibited or not allowed lice
 
 #### Inherited from
 
-Node20SstAppOptions.checkLicenses
+`Node20SstAppOptions.checkLicenses`
 
-___
+***
 
-### clobber
+### clobber?
 
-• `Optional` `Readonly` **clobber**: `boolean`
+> `readonly` `optional` **clobber**: `boolean`
 
 Add a `clobber` task which resets the repo to origin.
 
-**`Default`**
+#### Default
 
 ```ts
 - true, but false for subprojects
@@ -745,18 +566,18 @@ Add a `clobber` task which resets the repo to origin.
 
 #### Inherited from
 
-Node20SstAppOptions.clobber
+`Node20SstAppOptions.clobber`
 
-___
+***
 
-### codeArtifactOptions
+### codeArtifactOptions?
 
-• `Optional` `Readonly` **codeArtifactOptions**: `CodeArtifactOptions`
+> `readonly` `optional` **codeArtifactOptions**: `CodeArtifactOptions`
 
 Options for npm packages using AWS CodeArtifact.
 This is required if publishing packages to, or installing scoped packages from AWS CodeArtifact
 
-**`Default`**
+#### Default
 
 ```ts
 - undefined
@@ -764,19 +585,19 @@ This is required if publishing packages to, or installing scoped packages from A
 
 #### Inherited from
 
-Node20SstAppOptions.codeArtifactOptions
+`Node20SstAppOptions.codeArtifactOptions`
 
-___
+***
 
-### codeCov
+### codeCov?
 
-• `Optional` `Readonly` **codeCov**: `boolean`
+> `readonly` `optional` **codeCov**: `boolean`
 
 Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/
 Uses codecov/codecov-action@v4
 A secret is required for private repos. Configured with `@codeCovTokenSecret`
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -784,18 +605,18 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.codeCov
+`Node20SstAppOptions.codeCov`
 
-___
+***
 
-### codeCovTokenSecret
+### codeCovTokenSecret?
 
-• `Optional` `Readonly` **codeCovTokenSecret**: `string`
+> `readonly` `optional` **codeCovTokenSecret**: `string`
 
 Define the secret name for a specified https://codecov.io/ token
 A secret is required to send coverage for private repositories
 
-**`Default`**
+#### Default
 
 ```ts
 - if this option is not specified, only public repositories are supported
@@ -803,17 +624,17 @@ A secret is required to send coverage for private repositories
 
 #### Inherited from
 
-Node20SstAppOptions.codeCovTokenSecret
+`Node20SstAppOptions.codeCovTokenSecret`
 
-___
+***
 
-### commitGenerated
+### commitGenerated?
 
-• `Optional` `Readonly` **commitGenerated**: `boolean`
+> `readonly` `optional` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -821,17 +642,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.commitGenerated
+`Node20SstAppOptions.commitGenerated`
 
-___
+***
 
-### constructsVersion
+### constructsVersion?
 
-• `Optional` `Readonly` **constructsVersion**: `string`
+> `readonly` `optional` **constructsVersion**: `string`
 
 Minimum version of the `constructs` library to depend on.
 
-**`Default`**
+#### Default
 
 ```ts
 - for CDK 1.x the default is "3.2.27", for CDK 2.x the default is
@@ -840,68 +661,68 @@ Minimum version of the `constructs` library to depend on.
 
 #### Inherited from
 
-Node20SstAppOptions.constructsVersion
+`Node20SstAppOptions.constructsVersion`
 
-___
+***
 
-### constructsVersionPinning
+### constructsVersionPinning?
 
-• `Optional` `Readonly` **constructsVersionPinning**: `boolean`
+> `readonly` `optional` **constructsVersionPinning**: `boolean`
 
 Whether or not to pin the version of constructs to the version specified in the
 `constructsVersion` property.
 
 #### Inherited from
 
-Node20SstAppOptions.constructsVersionPinning
+`Node20SstAppOptions.constructsVersionPinning`
 
-___
+***
 
-### context
+### context?
 
-• `Optional` `Readonly` **context**: `Object`
+> `readonly` `optional` **context**: `object`
 
 Additional context to include in `cdk.json`.
 
-**`Default`**
+#### Index Signature
+
+ \[`key`: `string`\]: `any`
+
+#### Default
 
 ```ts
 - no additional context
 ```
 
-#### Index signature
-
-▪ [key: `string`]: `any`
-
 #### Inherited from
 
-Node20SstAppOptions.context
+`Node20SstAppOptions.context`
 
-___
+***
 
-### copyrightOwner
+### copyrightOwner?
 
-• `Optional` `Readonly` **copyrightOwner**: `string`
+> `readonly` `optional` **copyrightOwner**: `string`
 
 License copyright owner.
 
-**`Default`**
+#### Default
 
 - defaults to the value of authorName or "" if `authorName` is undefined.
 
 #### Inherited from
 
-Node20SstAppOptions.copyrightOwner
+`Node20SstAppOptions.copyrightOwner`
 
-___
+***
 
-### copyrightPeriod
+### copyrightPeriod?
 
-• `Optional` `Readonly` **copyrightPeriod**: `string`
+> `readonly` `optional` **copyrightPeriod**: `string`
 
 The copyright years to put in the LICENSE file.
 
-**`Default`**
+#### Default
 
 ```ts
 - current year
@@ -909,17 +730,17 @@ The copyright years to put in the LICENSE file.
 
 #### Inherited from
 
-Node20SstAppOptions.copyrightPeriod
+`Node20SstAppOptions.copyrightPeriod`
 
-___
+***
 
 ### defaultReleaseBranch
 
-• `Readonly` **defaultReleaseBranch**: `string`
+> `readonly` **defaultReleaseBranch**: `string`
 
 The name of the main release branch.
 
-**`Default`**
+#### Default
 
 ```ts
 "main"
@@ -927,18 +748,18 @@ The name of the main release branch.
 
 #### Inherited from
 
-Node20SstAppOptions.defaultReleaseBranch
+`Node20SstAppOptions.defaultReleaseBranch`
 
-___
+***
 
-### dependabot
+### dependabot?
 
-• `Optional` `Readonly` **dependabot**: `boolean`
+> `readonly` `optional` **dependabot**: `boolean`
 
 Use dependabot to handle dependency upgrades.
 Cannot be used in conjunction with `depsUpgrade`.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -946,17 +767,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.dependabot
+`Node20SstAppOptions.dependabot`
 
-___
+***
 
-### dependabotOptions
+### dependabotOptions?
 
-• `Optional` `Readonly` **dependabotOptions**: `DependabotOptions`
+> `readonly` `optional` **dependabotOptions**: `DependabotOptions`
 
 Options for dependabot.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -964,13 +785,13 @@ Options for dependabot.
 
 #### Inherited from
 
-Node20SstAppOptions.dependabotOptions
+`Node20SstAppOptions.dependabotOptions`
 
-___
+***
 
-### deps
+### deps?
 
-• `Optional` `Readonly` **deps**: `string`[]
+> `readonly` `optional` **deps**: `string`[]
 
 Runtime dependencies of this module.
 
@@ -981,34 +802,34 @@ file with the latest version (`^`). You can specify semver requirements in
 the same syntax passed to `npm i` or `yarn add` (e.g. `express@^2`) and
 this will be what you `package.json` will eventually include.
 
-**`Example`**
+#### Example
 
 ```ts
 [ 'express', 'lodash', 'foo@^2' ]
 ```
 
-**`Default`**
+#### Default
 
 ```ts
 []
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-Node20SstAppOptions.deps
+`Node20SstAppOptions.deps`
 
-___
+***
 
-### depsUpgrade
+### depsUpgrade?
 
-• `Optional` `Readonly` **depsUpgrade**: `boolean`
+> `readonly` `optional` **depsUpgrade**: `boolean`
 
 Use tasks and github workflows to handle dependency upgrades.
 Cannot be used in conjunction with `dependabot`.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1016,17 +837,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.depsUpgrade
+`Node20SstAppOptions.depsUpgrade`
 
-___
+***
 
-### depsUpgradeOptions
+### depsUpgradeOptions?
 
-• `Optional` `Readonly` **depsUpgradeOptions**: `UpgradeDependenciesOptions`
+> `readonly` `optional` **depsUpgradeOptions**: `UpgradeDependenciesOptions`
 
 Options for `UpgradeDependencies`.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1034,33 +855,33 @@ Options for `UpgradeDependencies`.
 
 #### Inherited from
 
-Node20SstAppOptions.depsUpgradeOptions
+`Node20SstAppOptions.depsUpgradeOptions`
 
-___
+***
 
-### description
+### description?
 
-• `Optional` `Readonly` **description**: `string`
+> `readonly` `optional` **description**: `string`
 
 The description is just a string that helps people understand the purpose of the package.
 It can be used when searching for packages in a package manager as well.
 See https://classic.yarnpkg.com/en/docs/package-json/#toc-description
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-Node20SstAppOptions.description
+`Node20SstAppOptions.description`
 
-___
+***
 
-### devContainer
+### devContainer?
 
-• `Optional` `Readonly` **devContainer**: `boolean`
+> `readonly` `optional` **devContainer**: `boolean`
 
 Add a VSCode development environment (used for GitHub Codespaces)
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1068,13 +889,13 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.devContainer
+`Node20SstAppOptions.devContainer`
 
-___
+***
 
-### devDeps
+### devDeps?
 
-• `Optional` `Readonly` **devDeps**: `string`[]
+> `readonly` `optional` **devDeps**: `string`[]
 
 Build dependencies for this module. These dependencies will only be
 available in your build environment but will not be fetched when this
@@ -1087,34 +908,34 @@ file with the latest version (`^`). You can specify semver requirements in
 the same syntax passed to `npm i` or `yarn add` (e.g. `express@^2`) and
 this will be what you `package.json` will eventually include.
 
-**`Example`**
+#### Example
 
 ```ts
 [ 'typescript', '@types/express' ]
 ```
 
-**`Default`**
+#### Default
 
 ```ts
 []
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-Node20SstAppOptions.devDeps
+`Node20SstAppOptions.devDeps`
 
-___
+***
 
-### disableTsconfig
+### disableTsconfig?
 
-• `Optional` `Readonly` **disableTsconfig**: `boolean`
+> `readonly` `optional` **disableTsconfig**: `boolean`
 
 Do not generate a `tsconfig.json` file (used by jsii projects since
 tsconfig.json is generated by the jsii compiler).
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1122,17 +943,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.disableTsconfig
+`Node20SstAppOptions.disableTsconfig`
 
-___
+***
 
-### disableTsconfigDev
+### disableTsconfigDev?
 
-• `Optional` `Readonly` **disableTsconfigDev**: `boolean`
+> `readonly` `optional` **disableTsconfigDev**: `boolean`
 
 Do not generate a `tsconfig.dev.json` file.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1140,17 +961,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.disableTsconfigDev
+`Node20SstAppOptions.disableTsconfigDev`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 Docgen by Typedoc
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1158,17 +979,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.docgen
+`Node20SstAppOptions.docgen`
 
-___
+***
 
-### docsDirectory
+### docsDirectory?
 
-• `Optional` `Readonly` **docsDirectory**: `string`
+> `readonly` `optional` **docsDirectory**: `string`
 
 Docs directory
 
-**`Default`**
+#### Default
 
 ```ts
 "docs"
@@ -1176,19 +997,19 @@ Docs directory
 
 #### Inherited from
 
-Node20SstAppOptions.docsDirectory
+`Node20SstAppOptions.docsDirectory`
 
-___
+***
 
-### edgeLambdaAutoDiscover
+### edgeLambdaAutoDiscover?
 
-• `Optional` `Readonly` **edgeLambdaAutoDiscover**: `boolean`
+> `readonly` `optional` **edgeLambdaAutoDiscover**: `boolean`
 
 Automatically adds an `cloudfront.experimental.EdgeFunction` for each
 `.edge-lambda.ts` handler in your source tree. If this is disabled, you can
 manually add an `awscdk.AutoDiscover` component to your project.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1196,19 +1017,19 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.edgeLambdaAutoDiscover
+`Node20SstAppOptions.edgeLambdaAutoDiscover`
 
-___
+***
 
-### entrypoint
+### entrypoint?
 
-• `Optional` `Readonly` **entrypoint**: `string`
+> `readonly` `optional` **entrypoint**: `string`
 
 Module entrypoint (`main` in `package.json`)
 
 Set to an empty string to not include `main` in your package.json
 
-**`Default`**
+#### Default
 
 ```ts
 "lib/index.js"
@@ -1216,17 +1037,17 @@ Set to an empty string to not include `main` in your package.json
 
 #### Inherited from
 
-Node20SstAppOptions.entrypoint
+`Node20SstAppOptions.entrypoint`
 
-___
+***
 
-### entrypointTypes
+### entrypointTypes?
 
-• `Optional` `Readonly` **entrypointTypes**: `string`
+> `readonly` `optional` **entrypointTypes**: `string`
 
 The .d.ts file that includes the type declarations for this module.
 
-**`Default`**
+#### Default
 
 ```ts
 - .d.ts file derived from the project's entrypoint (usually lib/index.d.ts)
@@ -1234,17 +1055,17 @@ The .d.ts file that includes the type declarations for this module.
 
 #### Inherited from
 
-Node20SstAppOptions.entrypointTypes
+`Node20SstAppOptions.entrypointTypes`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `boolean`
+> `readonly` `optional` **eslint**: `boolean`
 
 Setup eslint.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1252,17 +1073,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.eslint
+`Node20SstAppOptions.eslint`
 
-___
+***
 
-### eslintOptions
+### eslintOptions?
 
-• `Optional` `Readonly` **eslintOptions**: `EslintOptions`
+> `readonly` `optional` **eslintOptions**: `EslintOptions`
 
 Eslint options
 
-**`Default`**
+#### Default
 
 ```ts
 - opinionated default options
@@ -1270,17 +1091,19 @@ Eslint options
 
 #### Inherited from
 
-Node20SstAppOptions.eslintOptions
+`Node20SstAppOptions.eslintOptions`
 
-___
+***
 
-### experimentalIntegRunner
+### experimentalIntegRunner?
 
-• `Optional` `Readonly` **experimentalIntegRunner**: `boolean`
+> `readonly` `optional` **experimentalIntegRunner**: `boolean`
+
+**`Experimental`**
 
 Enable experimental support for the AWS CDK integ-runner.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1289,17 +1112,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.experimentalIntegRunner
+`Node20SstAppOptions.experimentalIntegRunner`
 
-___
+***
 
-### featureFlags
+### featureFlags?
 
-• `Optional` `Readonly` **featureFlags**: `boolean`
+> `readonly` `optional` **featureFlags**: `boolean`
 
 Include all feature flags in cdk.json
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1307,43 +1130,43 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.featureFlags
+`Node20SstAppOptions.featureFlags`
 
-___
+***
 
-### gitIgnoreOptions
+### gitIgnoreOptions?
 
-• `Optional` `Readonly` **gitIgnoreOptions**: `IgnoreFileOptions`
+> `readonly` `optional` **gitIgnoreOptions**: `IgnoreFileOptions`
 
 Configuration options for .gitignore file
 
 #### Inherited from
 
-Node20SstAppOptions.gitIgnoreOptions
+`Node20SstAppOptions.gitIgnoreOptions`
 
-___
+***
 
-### gitOptions
+### gitOptions?
 
-• `Optional` `Readonly` **gitOptions**: `GitOptions`
+> `readonly` `optional` **gitOptions**: `GitOptions`
 
 Configuration options for git
 
 #### Inherited from
 
-Node20SstAppOptions.gitOptions
+`Node20SstAppOptions.gitOptions`
 
-___
+***
 
-### github
+### github?
 
-• `Optional` `Readonly` **github**: `boolean`
+> `readonly` `optional` **github**: `boolean`
 
 Enable GitHub integration.
 
 Enabled by default for root projects. Disabled for non-root projects.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1351,17 +1174,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.github
+`Node20SstAppOptions.github`
 
-___
+***
 
-### githubOptions
+### githubOptions?
 
-• `Optional` `Readonly` **githubOptions**: `GitHubOptions`
+> `readonly` `optional` **githubOptions**: `GitHubOptions`
 
 Options for GitHub integration
 
-**`Default`**
+#### Default
 
 ```ts
 - see GitHubOptions
@@ -1369,29 +1192,29 @@ Options for GitHub integration
 
 #### Inherited from
 
-Node20SstAppOptions.githubOptions
+`Node20SstAppOptions.githubOptions`
 
-___
+***
 
-### gitignore
+### gitignore?
 
-• `Optional` `Readonly` **gitignore**: `string`[]
+> `readonly` `optional` **gitignore**: `string`[]
 
 Additional entries to .gitignore
 
 #### Inherited from
 
-Node20SstAppOptions.gitignore
+`Node20SstAppOptions.gitignore`
 
-___
+***
 
-### gitpod
+### gitpod?
 
-• `Optional` `Readonly` **gitpod**: `boolean`
+> `readonly` `optional` **gitpod**: `boolean`
 
 Add a Gitpod development environment
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1399,30 +1222,30 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.gitpod
+`Node20SstAppOptions.gitpod`
 
-___
+***
 
-### homepage
+### homepage?
 
-• `Optional` `Readonly` **homepage**: `string`
+> `readonly` `optional` **homepage**: `string`
 
 Package's Homepage / Website
 
 #### Inherited from
 
-Node20SstAppOptions.homepage
+`Node20SstAppOptions.homepage`
 
-___
+***
 
-### integrationTestAutoDiscover
+### integrationTestAutoDiscover?
 
-• `Optional` `Readonly` **integrationTestAutoDiscover**: `boolean`
+> `readonly` `optional` **integrationTestAutoDiscover**: `boolean`
 
 Automatically discovers and creates integration tests for each `.integ.ts`
 file in under your test directory.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1430,17 +1253,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.integrationTestAutoDiscover
+`Node20SstAppOptions.integrationTestAutoDiscover`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `boolean`
+> `readonly` `optional` **jest**: `boolean`
 
 Setup jest unit tests
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1448,27 +1271,35 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.jest
+`Node20SstAppOptions.jest`
 
-___
+***
 
-### jestOptions
+### jestOptions?
 
-• `Optional` `Readonly` **jestOptions**: `Node20TypeScriptProjectJestOptions`
+> `readonly` `optional` **jestOptions**: `Node20TypeScriptProjectJestOptions`
+
+Jest options
+
+#### Default
+
+```ts
+- default options
+```
 
 #### Inherited from
 
-Node20SstAppOptions.jestOptions
+`Node20SstAppOptions.jestOptions`
 
-___
+***
 
-### jsiiReleaseVersion
+### jsiiReleaseVersion?
 
-• `Optional` `Readonly` **jsiiReleaseVersion**: `string`
+> `readonly` `optional` **jsiiReleaseVersion**: `string`
 
 Version requirement of `publib` which is used to publish modules to npm.
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -1476,31 +1307,31 @@ Version requirement of `publib` which is used to publish modules to npm.
 
 #### Inherited from
 
-Node20SstAppOptions.jsiiReleaseVersion
+`Node20SstAppOptions.jsiiReleaseVersion`
 
-___
+***
 
-### keywords
+### keywords?
 
-• `Optional` `Readonly` **keywords**: `string`[]
+> `readonly` `optional` **keywords**: `string`[]
 
 Keywords to include in `package.json`.
 
 #### Inherited from
 
-Node20SstAppOptions.keywords
+`Node20SstAppOptions.keywords`
 
-___
+***
 
-### lambdaAutoDiscover
+### lambdaAutoDiscover?
 
-• `Optional` `Readonly` **lambdaAutoDiscover**: `boolean`
+> `readonly` `optional` **lambdaAutoDiscover**: `boolean`
 
 Automatically adds an `awscdk.LambdaFunction` for each `.lambda.ts` handler
 in your source tree. If this is disabled, you can manually add an
 `awscdk.AutoDiscover` component to your project.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1508,19 +1339,19 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.lambdaAutoDiscover
+`Node20SstAppOptions.lambdaAutoDiscover`
 
-___
+***
 
-### lambdaExtensionAutoDiscover
+### lambdaExtensionAutoDiscover?
 
-• `Optional` `Readonly` **lambdaExtensionAutoDiscover**: `boolean`
+> `readonly` `optional` **lambdaExtensionAutoDiscover**: `boolean`
 
 Automatically adds an `awscdk.LambdaExtension` for each `.lambda-extension.ts`
 entrypoint in your source tree. If this is disabled, you can manually add an
 `awscdk.AutoDiscover` component to your project
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1528,17 +1359,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.lambdaExtensionAutoDiscover
+`Node20SstAppOptions.lambdaExtensionAutoDiscover`
 
-___
+***
 
-### lambdaOptions
+### lambdaOptions?
 
-• `Optional` `Readonly` **lambdaOptions**: `LambdaFunctionCommonOptions`
+> `readonly` `optional` **lambdaOptions**: `LambdaFunctionCommonOptions`
 
 Common options for all AWS Lambda functions.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1546,17 +1377,17 @@ Common options for all AWS Lambda functions.
 
 #### Inherited from
 
-Node20SstAppOptions.lambdaOptions
+`Node20SstAppOptions.lambdaOptions`
 
-___
+***
 
-### libdir
+### libdir?
 
-• `Optional` `Readonly` **libdir**: `string`
+> `readonly` `optional` **libdir**: `string`
 
 Typescript  artifacts output directory
 
-**`Default`**
+#### Default
 
 ```ts
 "lib"
@@ -1564,19 +1395,19 @@ Typescript  artifacts output directory
 
 #### Inherited from
 
-Node20SstAppOptions.libdir
+`Node20SstAppOptions.libdir`
 
-___
+***
 
-### license
+### license?
 
-• `Optional` `Readonly` **license**: `string`
+> `readonly` `optional` **license**: `string`
 
 License's SPDX identifier.
 See https://github.com/projen/projen/tree/main/license-text for a list of supported licenses.
 Use the `licensed` option if you want to no license to be specified.
 
-**`Default`**
+#### Default
 
 ```ts
 "Apache-2.0"
@@ -1584,17 +1415,17 @@ Use the `licensed` option if you want to no license to be specified.
 
 #### Inherited from
 
-Node20SstAppOptions.license
+`Node20SstAppOptions.license`
 
-___
+***
 
-### licensed
+### licensed?
 
-• `Optional` `Readonly` **licensed**: `boolean`
+> `readonly` `optional` **licensed**: `boolean`
 
 Indicates if a license should be added.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1602,17 +1433,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.licensed
+`Node20SstAppOptions.licensed`
 
-___
+***
 
-### logging
+### logging?
 
-• `Optional` `Readonly` **logging**: `LoggerOptions`
+> `readonly` `optional` **logging**: `LoggerOptions`
 
 Configure logging options such as verbosity.
 
-**`Default`**
+#### Default
 
 ```ts
 {}
@@ -1620,20 +1451,20 @@ Configure logging options such as verbosity.
 
 #### Inherited from
 
-Node20SstAppOptions.logging
+`Node20SstAppOptions.logging`
 
-___
+***
 
-### majorVersion
+### majorVersion?
 
-• `Optional` `Readonly` **majorVersion**: `number`
+> `readonly` `optional` **majorVersion**: `number`
 
 Major version to release from the default branch.
 
 If this is specified, we bump the latest version of this major version line.
 If not specified, we bump the global latest version.
 
-**`Default`**
+#### Default
 
 ```ts
 - Major version is not enforced.
@@ -1641,17 +1472,17 @@ If not specified, we bump the global latest version.
 
 #### Inherited from
 
-Node20SstAppOptions.majorVersion
+`Node20SstAppOptions.majorVersion`
 
-___
+***
 
-### maxNodeVersion
+### maxNodeVersion?
 
-• `Optional` `Readonly` **maxNodeVersion**: `string`
+> `readonly` `optional` **maxNodeVersion**: `string`
 
 Minimum node.js version to require via `engines` (inclusive).
 
-**`Default`**
+#### Default
 
 ```ts
 - no max
@@ -1659,57 +1490,57 @@ Minimum node.js version to require via `engines` (inclusive).
 
 #### Inherited from
 
-Node20SstAppOptions.maxNodeVersion
+`Node20SstAppOptions.maxNodeVersion`
 
-___
+***
 
-### mergify
+### ~~mergify?~~
 
-• `Optional` `Readonly` **mergify**: `boolean`
+> `readonly` `optional` **mergify**: `boolean`
 
 Whether mergify should be enabled on this repository or not.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `githubOptions.mergify` instead
 
 #### Inherited from
 
-Node20SstAppOptions.mergify
+`Node20SstAppOptions.mergify`
 
-___
+***
 
-### mergifyOptions
+### ~~mergifyOptions?~~
 
-• `Optional` `Readonly` **mergifyOptions**: `MergifyOptions`
+> `readonly` `optional` **mergifyOptions**: `MergifyOptions`
 
 Options for mergify
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `githubOptions.mergifyOptions` instead
 
 #### Inherited from
 
-Node20SstAppOptions.mergifyOptions
+`Node20SstAppOptions.mergifyOptions`
 
-___
+***
 
-### minMajorVersion
+### minMajorVersion?
 
-• `Optional` `Readonly` **minMajorVersion**: `number`
+> `readonly` `optional` **minMajorVersion**: `number`
 
 Minimal Major version to release
 
@@ -1718,7 +1549,7 @@ release are not incrementing the major version number.
 
 Can not be set together with `majorVersion`.
 
-**`Default`**
+#### Default
 
 ```ts
 - No minimum version is being enforced
@@ -1726,17 +1557,17 @@ Can not be set together with `majorVersion`.
 
 #### Inherited from
 
-Node20SstAppOptions.minMajorVersion
+`Node20SstAppOptions.minMajorVersion`
 
-___
+***
 
-### minNodeVersion
+### minNodeVersion?
 
-• `Optional` `Readonly` **minNodeVersion**: `string`
+> `readonly` `optional` **minNodeVersion**: `string`
 
 Minimum Node.js version to require via package.json `engines` (inclusive).
 
-**`Default`**
+#### Default
 
 ```ts
 - no "engines" specified
@@ -1744,13 +1575,13 @@ Minimum Node.js version to require via package.json `engines` (inclusive).
 
 #### Inherited from
 
-Node20SstAppOptions.minNodeVersion
+`Node20SstAppOptions.minNodeVersion`
 
-___
+***
 
-### mutableBuild
+### ~~mutableBuild?~~
 
-• `Optional` `Readonly` **mutableBuild**: `boolean`
+> `readonly` `optional` **mutableBuild**: `boolean`
 
 Automatically update files modified during builds to pull-request branches. This means
 that any files synthesized by projen or e.g. test snapshots will always be up-to-date
@@ -1758,83 +1589,83 @@ before a PR is merged.
 
 Implies that PR builds do not have anti-tamper checks.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 - Use `buildWorkflowOptions.mutableBuild`
 
 #### Inherited from
 
-Node20SstAppOptions.mutableBuild
+`Node20SstAppOptions.mutableBuild`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 This is the name of your project.
 
-**`Default`**
+#### Default
 
 ```ts
 $BASEDIR
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-Node20SstAppOptions.name
+`Node20SstAppOptions.name`
 
-___
+***
 
-### nextjsJest
+### nextjsJest?
 
-• `Optional` **nextjsJest**: `boolean`
+> `optional` **nextjsJest**: `boolean`
 
 Implement next/jest on the project's jestConfig.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-___
+***
 
-### nextjsJestConfigFileOptions
+### nextjsJestConfigFileOptions?
 
-• `Optional` **nextjsJestConfigFileOptions**: `NextjsJestConfigFileOptions`
+> `optional` **nextjsJestConfigFileOptions**: `NextjsJestConfigFileOptions`
 
-___
+***
 
-### nextjsTsconfig
+### nextjsTsconfig?
 
-• `Optional` **nextjsTsconfig**: `TypescriptConfigOptions`
+> `optional` **nextjsTsconfig**: `TypescriptConfigOptions`
 
 A custom tsconfig for nextjs development, separate from Projen's tsconfig.
 
-**`Default`**
+#### Default
 
 ```ts
 - Recommended tsconfig for Next.js development by Vercel.
 ```
 
-___
+***
 
-### npmAccess
+### npmAccess?
 
-• `Optional` `Readonly` **npmAccess**: `NpmAccess`
+> `readonly` `optional` **npmAccess**: `NpmAccess`
 
 Access level of the npm package.
 
-**`Default`**
+#### Default
 
 - for scoped packages (e.g. `foo@bar`), the default is
 `NpmAccess.RESTRICTED`, for non-scoped packages, the default is
@@ -1842,20 +1673,20 @@ Access level of the npm package.
 
 #### Inherited from
 
-Node20SstAppOptions.npmAccess
+`Node20SstAppOptions.npmAccess`
 
-___
+***
 
-### npmDistTag
+### npmDistTag?
 
-• `Optional` `Readonly` **npmDistTag**: `string`
+> `readonly` `optional` **npmDistTag**: `string`
 
 The npmDistTag to use when publishing from the default branch.
 
 To set the npm dist-tag for release branches, set the `npmDistTag` property
 for each branch.
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -1863,25 +1694,25 @@ for each branch.
 
 #### Inherited from
 
-Node20SstAppOptions.npmDistTag
+`Node20SstAppOptions.npmDistTag`
 
-___
+***
 
-### npmIgnoreOptions
+### npmIgnoreOptions?
 
-• `Optional` `Readonly` **npmIgnoreOptions**: `IgnoreFileOptions`
+> `readonly` `optional` **npmIgnoreOptions**: `IgnoreFileOptions`
 
 Configuration options for .npmignore file
 
 #### Inherited from
 
-Node20SstAppOptions.npmIgnoreOptions
+`Node20SstAppOptions.npmIgnoreOptions`
 
-___
+***
 
-### npmProvenance
+### npmProvenance?
 
-• `Optional` `Readonly` **npmProvenance**: `boolean`
+> `readonly` `optional` **npmProvenance**: `boolean`
 
 Should provenance statements be generated when the package is published.
 
@@ -1891,11 +1722,11 @@ you will need to use a supported CI/CD provider.
 Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
 which is using npm internally and supports provenance statements independently of the package manager used.
 
-**`See`**
+#### See
 
 https://docs.npmjs.com/generating-provenance-statements
 
-**`Default`**
+#### Default
 
 ```ts
 - true for public packages, false otherwise
@@ -1903,35 +1734,35 @@ https://docs.npmjs.com/generating-provenance-statements
 
 #### Inherited from
 
-Node20SstAppOptions.npmProvenance
+`Node20SstAppOptions.npmProvenance`
 
-___
+***
 
-### npmRegistry
+### ~~npmRegistry?~~
 
-• `Optional` `Readonly` **npmRegistry**: `string`
+> `readonly` `optional` **npmRegistry**: `string`
 
 The host name of the npm registry to publish to. Cannot be set together with `npmRegistryUrl`.
 
-**`Deprecated`**
+#### Deprecated
 
 use `npmRegistryUrl` instead
 
 #### Inherited from
 
-Node20SstAppOptions.npmRegistry
+`Node20SstAppOptions.npmRegistry`
 
-___
+***
 
-### npmRegistryUrl
+### npmRegistryUrl?
 
-• `Optional` `Readonly` **npmRegistryUrl**: `string`
+> `readonly` `optional` **npmRegistryUrl**: `string`
 
 The base URL of the npm package registry.
 
 Must be a URL (e.g. start with "https://" or "http://")
 
-**`Default`**
+#### Default
 
 ```ts
 "https://registry.npmjs.org"
@@ -1939,17 +1770,17 @@ Must be a URL (e.g. start with "https://" or "http://")
 
 #### Inherited from
 
-Node20SstAppOptions.npmRegistryUrl
+`Node20SstAppOptions.npmRegistryUrl`
 
-___
+***
 
-### npmTokenSecret
+### npmTokenSecret?
 
-• `Optional` `Readonly` **npmTokenSecret**: `string`
+> `readonly` `optional` **npmTokenSecret**: `string`
 
 GitHub secret which contains the NPM token to use when publishing packages.
 
-**`Default`**
+#### Default
 
 ```ts
 "NPM_TOKEN"
@@ -1957,34 +1788,34 @@ GitHub secret which contains the NPM token to use when publishing packages.
 
 #### Inherited from
 
-Node20SstAppOptions.npmTokenSecret
+`Node20SstAppOptions.npmTokenSecret`
 
-___
+***
 
-### npmignore
+### ~~npmignore?~~
 
-• `Optional` `Readonly` **npmignore**: `string`[]
+> `readonly` `optional` **npmignore**: `string`[]
 
 Additional entries to .npmignore.
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.addPackageIgnore`
 
 #### Inherited from
 
-Node20SstAppOptions.npmignore
+`Node20SstAppOptions.npmignore`
 
-___
+***
 
-### npmignoreEnabled
+### npmignoreEnabled?
 
-• `Optional` `Readonly` **npmignoreEnabled**: `boolean`
+> `readonly` `optional` **npmignoreEnabled**: `boolean`
 
 Defines an .npmignore file. Normally this is only needed for libraries that
 are packaged as tarballs.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1992,13 +1823,13 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.npmignoreEnabled
+`Node20SstAppOptions.npmignoreEnabled`
 
-___
+***
 
-### outdir
+### outdir?
 
-• `Optional` `Readonly` **outdir**: `string`
+> `readonly` `optional` **outdir**: `string`
 
 The root directory of the project.
 
@@ -2008,7 +1839,7 @@ If this project has a parent, this directory is relative to the parent
 directory and it cannot be the same as the parent or any of it's other
 subprojects.
 
-**`Default`**
+#### Default
 
 ```ts
 "."
@@ -2016,18 +1847,18 @@ subprojects.
 
 #### Inherited from
 
-Node20SstAppOptions.outdir
+`Node20SstAppOptions.outdir`
 
-___
+***
 
-### package
+### package?
 
-• `Optional` `Readonly` **package**: `boolean`
+> `readonly` `optional` **package**: `boolean`
 
 Defines a `package` task that will produce an npm tarball under the
 artifacts directory (e.g. `dist`).
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2035,17 +1866,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.package
+`Node20SstAppOptions.package`
 
-___
+***
 
-### packageManager
+### packageManager?
 
-• `Optional` `Readonly` **packageManager**: `NodePackageManager`
+> `readonly` `optional` **packageManager**: `NodePackageManager`
 
 The Node Package Manager used to execute scripts
 
-**`Default`**
+#### Default
 
 ```ts
 NodePackageManager.YARN_CLASSIC
@@ -2053,57 +1884,57 @@ NodePackageManager.YARN_CLASSIC
 
 #### Inherited from
 
-Node20SstAppOptions.packageManager
+`Node20SstAppOptions.packageManager`
 
-___
+***
 
-### packageName
+### packageName?
 
-• `Optional` `Readonly` **packageName**: `string`
+> `readonly` `optional` **packageName**: `string`
 
 The "name" in package.json
 
-**`Default`**
+#### Default
 
 ```ts
 - defaults to project name
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-Node20SstAppOptions.packageName
+`Node20SstAppOptions.packageName`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 The parent project, if this project is part of a bigger project.
 
 #### Inherited from
 
-Node20SstAppOptions.parent
+`Node20SstAppOptions.parent`
 
-___
+***
 
-### peerDependencyOptions
+### peerDependencyOptions?
 
-• `Optional` `Readonly` **peerDependencyOptions**: `PeerDependencyOptions`
+> `readonly` `optional` **peerDependencyOptions**: `PeerDependencyOptions`
 
 Options for `peerDeps`.
 
 #### Inherited from
 
-Node20SstAppOptions.peerDependencyOptions
+`Node20SstAppOptions.peerDependencyOptions`
 
-___
+***
 
-### peerDeps
+### peerDeps?
 
-• `Optional` `Readonly` **peerDeps**: `string`[]
+> `readonly` `optional` **peerDeps**: `string`[]
 
 Peer dependencies for this module. Dependencies listed here are required to
 be installed (and satisfied) by the _consumer_ of this library. Using peer
@@ -2119,7 +1950,7 @@ enabled by default), projen will automatically add a dev dependency with a
 pinned version for each peer dependency. This will ensure that you build &
 test your module against the lowest peer version required.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -2127,17 +1958,17 @@ test your module against the lowest peer version required.
 
 #### Inherited from
 
-Node20SstAppOptions.peerDeps
+`Node20SstAppOptions.peerDeps`
 
-___
+***
 
-### pnpmVersion
+### pnpmVersion?
 
-• `Optional` `Readonly` **pnpmVersion**: `string`
+> `readonly` `optional` **pnpmVersion**: `string`
 
 The version of PNPM to use if using PNPM as a package manager.
 
-**`Default`**
+#### Default
 
 ```ts
 "7"
@@ -2145,17 +1976,17 @@ The version of PNPM to use if using PNPM as a package manager.
 
 #### Inherited from
 
-Node20SstAppOptions.pnpmVersion
+`Node20SstAppOptions.pnpmVersion`
 
-___
+***
 
-### postBuildSteps
+### postBuildSteps?
 
-• `Optional` `Readonly` **postBuildSteps**: `JobStep`[]
+> `readonly` `optional` **postBuildSteps**: `JobStep`[]
 
 Steps to execute after build as part of the release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -2163,18 +1994,18 @@ Steps to execute after build as part of the release workflow.
 
 #### Inherited from
 
-Node20SstAppOptions.postBuildSteps
+`Node20SstAppOptions.postBuildSteps`
 
-___
+***
 
-### prerelease
+### prerelease?
 
-• `Optional` `Readonly` **prerelease**: `string`
+> `readonly` `optional` **prerelease**: `string`
 
 Bump versions from the default branch as pre-releases (e.g. "beta",
 "alpha", "pre").
 
-**`Default`**
+#### Default
 
 ```ts
 - normal semantic versions
@@ -2182,17 +2013,17 @@ Bump versions from the default branch as pre-releases (e.g. "beta",
 
 #### Inherited from
 
-Node20SstAppOptions.prerelease
+`Node20SstAppOptions.prerelease`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `boolean`
+> `readonly` `optional` **prettier**: `boolean`
 
 Setup prettier.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2200,17 +2031,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.prettier
+`Node20SstAppOptions.prettier`
 
-___
+***
 
-### prettierOptions
+### prettierOptions?
 
-• `Optional` `Readonly` **prettierOptions**: `PrettierOptions`
+> `readonly` `optional` **prettierOptions**: `PrettierOptions`
 
 Prettier options
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2218,41 +2049,41 @@ Prettier options
 
 #### Inherited from
 
-Node20SstAppOptions.prettierOptions
+`Node20SstAppOptions.prettierOptions`
 
-___
+***
 
-### projectType
+### ~~projectType?~~
 
-• `Optional` `Readonly` **projectType**: `ProjectType`
+> `readonly` `optional` **projectType**: `ProjectType`
 
 Which type of project this is (library/app).
 
-**`Default`**
+#### Default
 
 ```ts
 ProjectType.UNKNOWN
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 no longer supported at the base project level
 
 #### Inherited from
 
-Node20SstAppOptions.projectType
+`Node20SstAppOptions.projectType`
 
-___
+***
 
-### projenCommand
+### projenCommand?
 
-• `Optional` `Readonly` **projenCommand**: `string`
+> `readonly` `optional` **projenCommand**: `string`
 
 The shell command to use in order to run the projen CLI.
 
 Can be used to customize in special environments.
 
-**`Default`**
+#### Default
 
 ```ts
 "npx projen"
@@ -2260,17 +2091,17 @@ Can be used to customize in special environments.
 
 #### Inherited from
 
-Node20SstAppOptions.projenCommand
+`Node20SstAppOptions.projenCommand`
 
-___
+***
 
-### projenCredentials
+### projenCredentials?
 
-• `Optional` `Readonly` **projenCredentials**: `GithubCredentials`
+> `readonly` `optional` **projenCredentials**: `GithubCredentials`
 
 Choose a method of providing GitHub API access for projen workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - use a personal access token named PROJEN_GITHUB_TOKEN
@@ -2278,17 +2109,17 @@ Choose a method of providing GitHub API access for projen workflows.
 
 #### Inherited from
 
-Node20SstAppOptions.projenCredentials
+`Node20SstAppOptions.projenCredentials`
 
-___
+***
 
-### projenDevDependency
+### projenDevDependency?
 
-• `Optional` `Readonly` **projenDevDependency**: `boolean`
+> `readonly` `optional` **projenDevDependency**: `boolean`
 
 Indicates of "projen" should be installed as a devDependency.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
@@ -2296,41 +2127,41 @@ Indicates of "projen" should be installed as a devDependency.
 
 #### Inherited from
 
-Node20SstAppOptions.projenDevDependency
+`Node20SstAppOptions.projenDevDependency`
 
-___
+***
 
-### projenTokenSecret
+### ~~projenTokenSecret?~~
 
-• `Optional` `Readonly` **projenTokenSecret**: `string`
+> `readonly` `optional` **projenTokenSecret**: `string`
 
 The name of a secret which includes a GitHub Personal Access Token to be
 used by projen workflows. This token needs to have the `repo`, `workflows`
 and `packages` scope.
 
-**`Default`**
+#### Default
 
 ```ts
 "PROJEN_GITHUB_TOKEN"
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `projenCredentials`
 
 #### Inherited from
 
-Node20SstAppOptions.projenTokenSecret
+`Node20SstAppOptions.projenTokenSecret`
 
-___
+***
 
-### projenVersion
+### projenVersion?
 
-• `Optional` `Readonly` **projenVersion**: `string`
+> `readonly` `optional` **projenVersion**: `string`
 
 Version of projen to install.
 
-**`Default`**
+#### Default
 
 ```ts
 - Defaults to the latest version.
@@ -2338,18 +2169,18 @@ Version of projen to install.
 
 #### Inherited from
 
-Node20SstAppOptions.projenVersion
+`Node20SstAppOptions.projenVersion`
 
-___
+***
 
-### projenrcJs
+### projenrcJs?
 
-• `Optional` `Readonly` **projenrcJs**: `boolean`
+> `readonly` `optional` **projenrcJs**: `boolean`
 
 Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 .projenrc.js generation.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if projenrcJson is false
@@ -2357,17 +2188,17 @@ Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcJs
+`Node20SstAppOptions.projenrcJs`
 
-___
+***
 
-### projenrcJsOptions
+### projenrcJsOptions?
 
-• `Optional` `Readonly` **projenrcJsOptions**: `ProjenrcOptions`
+> `readonly` `optional` **projenrcJsOptions**: `ProjenrcOptions`
 
 Options for .projenrc.js
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2375,18 +2206,18 @@ Options for .projenrc.js
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcJsOptions
+`Node20SstAppOptions.projenrcJsOptions`
 
-___
+***
 
-### projenrcJson
+### projenrcJson?
 
-• `Optional` `Readonly` **projenrcJson**: `boolean`
+> `readonly` `optional` **projenrcJson**: `boolean`
 
 Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable
 .projenrc.json generation.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2394,17 +2225,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcJson
+`Node20SstAppOptions.projenrcJson`
 
-___
+***
 
-### projenrcJsonOptions
+### projenrcJsonOptions?
 
-• `Optional` `Readonly` **projenrcJsonOptions**: `ProjenrcJsonOptions`
+> `readonly` `optional` **projenrcJsonOptions**: `ProjenrcJsonOptions`
 
 Options for .projenrc.json
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2412,51 +2243,51 @@ Options for .projenrc.json
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcJsonOptions
+`Node20SstAppOptions.projenrcJsonOptions`
 
-___
+***
 
-### projenrcTs
+### projenrcTs?
 
-• `Optional` `Readonly` **projenrcTs**: `boolean`
+> `readonly` `optional` **projenrcTs**: `boolean`
 
 Use TypeScript for your projenrc file (`.projenrc.ts`).
 
-**`Default`**
+#### Default
 
 ```ts
 false
 ```
 
-**`Pjnew`**
+#### Pjnew
 
 true
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcTs
+`Node20SstAppOptions.projenrcTs`
 
-___
+***
 
-### projenrcTsOptions
+### projenrcTsOptions?
 
-• `Optional` `Readonly` **projenrcTsOptions**: `ProjenrcOptions`
+> `readonly` `optional` **projenrcTsOptions**: `ProjenrcOptions`
 
 Options for .projenrc.ts
 
 #### Inherited from
 
-Node20SstAppOptions.projenrcTsOptions
+`Node20SstAppOptions.projenrcTsOptions`
 
-___
+***
 
-### publishDryRun
+### publishDryRun?
 
-• `Optional` `Readonly` **publishDryRun**: `boolean`
+> `readonly` `optional` **publishDryRun**: `boolean`
 
 Instead of actually publishing to package managers, just print the publishing command.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2464,20 +2295,20 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.publishDryRun
+`Node20SstAppOptions.publishDryRun`
 
-___
+***
 
-### publishTasks
+### publishTasks?
 
-• `Optional` `Readonly` **publishTasks**: `boolean`
+> `readonly` `optional` **publishTasks**: `boolean`
 
 Define publishing tasks that can be executed manually as well as workflows.
 
 Normally, publishing only happens within automated workflows. Enable this
 in order to create a publishing task for each publishing activity.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2485,41 +2316,41 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.publishTasks
+`Node20SstAppOptions.publishTasks`
 
-___
+***
 
-### publishToAws
+### publishToAws?
 
-• `Optional` `Readonly` **publishToAws**: `boolean`
+> `readonly` `optional` **publishToAws**: `boolean`
 
 Whether to publish this App to AWS.
 
 #### Inherited from
 
-Node20SstAppOptions.publishToAws
+`Node20SstAppOptions.publishToAws`
 
-___
+***
 
-### publishToAwsOptions
+### publishToAwsOptions?
 
-• `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
+> `readonly` `optional` **publishToAwsOptions**: `PublishToAwsOptions`
 
 Populate in order to add a deploy to AWS job to the release workflow.
 
 #### Inherited from
 
-Node20SstAppOptions.publishToAwsOptions
+`Node20SstAppOptions.publishToAwsOptions`
 
-___
+***
 
-### pullRequestTemplate
+### pullRequestTemplate?
 
-• `Optional` `Readonly` **pullRequestTemplate**: `boolean`
+> `readonly` `optional` **pullRequestTemplate**: `boolean`
 
 Include a GitHub pull request template.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2527,17 +2358,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.pullRequestTemplate
+`Node20SstAppOptions.pullRequestTemplate`
 
-___
+***
 
-### pullRequestTemplateContents
+### pullRequestTemplateContents?
 
-• `Optional` `Readonly` **pullRequestTemplateContents**: `string`[]
+> `readonly` `optional` **pullRequestTemplateContents**: `string`[]
 
 The contents of the pull request template.
 
-**`Default`**
+#### Default
 
 ```ts
 - default content
@@ -2545,23 +2376,23 @@ The contents of the pull request template.
 
 #### Inherited from
 
-Node20SstAppOptions.pullRequestTemplateContents
+`Node20SstAppOptions.pullRequestTemplateContents`
 
-___
+***
 
-### readme
+### readme?
 
-• `Optional` `Readonly` **readme**: `SampleReadmeProps`
+> `readonly` `optional` **readme**: `SampleReadmeProps`
 
 The README setup.
 
-**`Default`**
+#### Default
 
 ```ts
 - { filename: 'README.md', contents: '# replace this' }
 ```
 
-**`Example`**
+#### Example
 
 ```ts
 "{ filename: 'readme.md', contents: '# title' }"
@@ -2569,18 +2400,18 @@ The README setup.
 
 #### Inherited from
 
-Node20SstAppOptions.readme
+`Node20SstAppOptions.readme`
 
-___
+***
 
-### releasableCommits
+### releasableCommits?
 
-• `Optional` `Readonly` **releasableCommits**: `ReleasableCommits`
+> `readonly` `optional` **releasableCommits**: `ReleasableCommits`
 
 Find commits that should be considered releasable
 Used to decide if a release is required.
 
-**`Default`**
+#### Default
 
 ```ts
 ReleasableCommits.everyCommit()
@@ -2588,17 +2419,17 @@ ReleasableCommits.everyCommit()
 
 #### Inherited from
 
-Node20SstAppOptions.releasableCommits
+`Node20SstAppOptions.releasableCommits`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `boolean`
+> `readonly` `optional` **release**: `boolean`
 
 Add release management to this project.
 
-**`Default`**
+#### Default
 
 ```ts
 - true (false for subprojects)
@@ -2606,13 +2437,13 @@ Add release management to this project.
 
 #### Inherited from
 
-Node20SstAppOptions.release
+`Node20SstAppOptions.release`
 
-___
+***
 
-### releaseBranches
+### releaseBranches?
 
-• `Optional` `Readonly` **releaseBranches**: `Object`
+> `readonly` `optional` **releaseBranches**: `object`
 
 Defines additional release branches. A workflow will be created for each
 release branch which will publish releases from commits in this branch.
@@ -2621,50 +2452,50 @@ to enforce that versions published from that branch always use that major
 version. If multiple branches are used, the `majorVersion` field must also
 be provided for the default branch.
 
-**`Default`**
+#### Index Signature
+
+ \[`name`: `string`\]: `BranchOptions`
+
+#### Default
 
 - no additional branches are used for release. you can use
 `addBranch()` to add additional branches.
 
-#### Index signature
-
-▪ [name: `string`]: `BranchOptions`
-
 #### Inherited from
 
-Node20SstAppOptions.releaseBranches
+`Node20SstAppOptions.releaseBranches`
 
-___
+***
 
-### releaseEveryCommit
+### ~~releaseEveryCommit?~~
 
-• `Optional` `Readonly` **releaseEveryCommit**: `boolean`
+> `readonly` `optional` **releaseEveryCommit**: `boolean`
 
 Automatically release new versions every commit to one of branches in `releaseBranches`.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 Use `releaseTrigger: ReleaseTrigger.continuous()` instead
 
 #### Inherited from
 
-Node20SstAppOptions.releaseEveryCommit
+`Node20SstAppOptions.releaseEveryCommit`
 
-___
+***
 
-### releaseFailureIssue
+### releaseFailureIssue?
 
-• `Optional` `Readonly` **releaseFailureIssue**: `boolean`
+> `readonly` `optional` **releaseFailureIssue**: `boolean`
 
 Create a github issue on every failed publishing task.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2672,18 +2503,18 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.releaseFailureIssue
+`Node20SstAppOptions.releaseFailureIssue`
 
-___
+***
 
-### releaseFailureIssueLabel
+### releaseFailureIssueLabel?
 
-• `Optional` `Readonly` **releaseFailureIssueLabel**: `string`
+> `readonly` `optional` **releaseFailureIssueLabel**: `string`
 
 The label to apply to issues indicating publish failures.
 Only applies if `releaseFailureIssue` is true.
 
-**`Default`**
+#### Default
 
 ```ts
 "failed-release"
@@ -2691,35 +2522,35 @@ Only applies if `releaseFailureIssue` is true.
 
 #### Inherited from
 
-Node20SstAppOptions.releaseFailureIssueLabel
+`Node20SstAppOptions.releaseFailureIssueLabel`
 
-___
+***
 
-### releaseSchedule
+### ~~releaseSchedule?~~
 
-• `Optional` `Readonly` **releaseSchedule**: `string`
+> `readonly` `optional` **releaseSchedule**: `string`
 
 CRON schedule to trigger new releases.
 
-**`Default`**
+#### Default
 
 ```ts
 - no scheduled releases
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 Use `releaseTrigger: ReleaseTrigger.scheduled()` instead
 
 #### Inherited from
 
-Node20SstAppOptions.releaseSchedule
+`Node20SstAppOptions.releaseSchedule`
 
-___
+***
 
-### releaseTagPrefix
+### releaseTagPrefix?
 
-• `Optional` `Readonly` **releaseTagPrefix**: `string`
+> `readonly` `optional` **releaseTagPrefix**: `string`
 
 Automatically add the given prefix to release tags.
 Useful if you are releasing on multiple branches with overlapping
@@ -2730,7 +2561,7 @@ when bumping, so if you change this on a project with an existing version
 history, you may need to manually tag your latest release
 with the new prefix.
 
-**`Default`**
+#### Default
 
 ```ts
 "v"
@@ -2738,17 +2569,17 @@ with the new prefix.
 
 #### Inherited from
 
-Node20SstAppOptions.releaseTagPrefix
+`Node20SstAppOptions.releaseTagPrefix`
 
-___
+***
 
-### releaseToNpm
+### releaseToNpm?
 
-• `Optional` `Readonly` **releaseToNpm**: `boolean`
+> `readonly` `optional` **releaseToNpm**: `boolean`
 
 Automatically release to npm when new versions are introduced.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2756,55 +2587,55 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.releaseToNpm
+`Node20SstAppOptions.releaseToNpm`
 
-___
+***
 
-### releaseTrigger
+### releaseTrigger?
 
-• `Optional` `Readonly` **releaseTrigger**: `ReleaseTrigger`
+> `readonly` `optional` **releaseTrigger**: `ReleaseTrigger`
 
 The release trigger to use.
 
-**`Default`**
+#### Default
 
 - Continuous releases (`ReleaseTrigger.continuous()`)
 
 #### Inherited from
 
-Node20SstAppOptions.releaseTrigger
+`Node20SstAppOptions.releaseTrigger`
 
-___
+***
 
-### releaseWorkflow
+### ~~releaseWorkflow?~~
 
-• `Optional` `Readonly` **releaseWorkflow**: `boolean`
+> `readonly` `optional` **releaseWorkflow**: `boolean`
 
 DEPRECATED: renamed to `release`.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 see `release`.
 
 #### Inherited from
 
-Node20SstAppOptions.releaseWorkflow
+`Node20SstAppOptions.releaseWorkflow`
 
-___
+***
 
-### releaseWorkflowName
+### releaseWorkflowName?
 
-• `Optional` `Readonly` **releaseWorkflowName**: `string`
+> `readonly` `optional` **releaseWorkflowName**: `string`
 
 The name of the default release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 "release"
@@ -2812,30 +2643,30 @@ The name of the default release workflow.
 
 #### Inherited from
 
-Node20SstAppOptions.releaseWorkflowName
+`Node20SstAppOptions.releaseWorkflowName`
 
-___
+***
 
-### releaseWorkflowSetupSteps
+### releaseWorkflowSetupSteps?
 
-• `Optional` `Readonly` **releaseWorkflowSetupSteps**: `JobStep`[]
+> `readonly` `optional` **releaseWorkflowSetupSteps**: `JobStep`[]
 
 A set of workflow steps to execute in order to setup the workflow
 container.
 
 #### Inherited from
 
-Node20SstAppOptions.releaseWorkflowSetupSteps
+`Node20SstAppOptions.releaseWorkflowSetupSteps`
 
-___
+***
 
-### renovatebot
+### renovatebot?
 
-• `Optional` `Readonly` **renovatebot**: `boolean`
+> `readonly` `optional` **renovatebot**: `boolean`
 
 Use renovatebot to handle dependency upgrades.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2843,17 +2674,17 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.renovatebot
+`Node20SstAppOptions.renovatebot`
 
-___
+***
 
-### renovatebotOptions
+### renovatebotOptions?
 
-• `Optional` `Readonly` **renovatebotOptions**: `RenovatebotOptions`
+> `readonly` `optional` **renovatebotOptions**: `RenovatebotOptions`
 
 Options for renovatebot.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2861,44 +2692,44 @@ Options for renovatebot.
 
 #### Inherited from
 
-Node20SstAppOptions.renovatebotOptions
+`Node20SstAppOptions.renovatebotOptions`
 
-___
+***
 
-### repository
+### repository?
 
-• `Optional` `Readonly` **repository**: `string`
+> `readonly` `optional` **repository**: `string`
 
 The repository is the location where the actual code for your package lives.
 See https://classic.yarnpkg.com/en/docs/package-json/#toc-repository
 
 #### Inherited from
 
-Node20SstAppOptions.repository
+`Node20SstAppOptions.repository`
 
-___
+***
 
-### repositoryDirectory
+### repositoryDirectory?
 
-• `Optional` `Readonly` **repositoryDirectory**: `string`
+> `readonly` `optional` **repositoryDirectory**: `string`
 
 If the package.json for your package is not in the root directory (for example if it is part of a monorepo),
 you can specify the directory in which it lives.
 
 #### Inherited from
 
-Node20SstAppOptions.repositoryDirectory
+`Node20SstAppOptions.repositoryDirectory`
 
-___
+***
 
-### requireApproval
+### requireApproval?
 
-• `Optional` `Readonly` **requireApproval**: `ApprovalLevel`
+> `readonly` `optional` **requireApproval**: `ApprovalLevel`
 
 To protect you against unintended changes that affect your security posture,
 the AWS CDK Toolkit prompts you to approve security-related changes before deploying them.
 
-**`Default`**
+#### Default
 
 ```ts
 ApprovalLevel.BROADENING
@@ -2906,17 +2737,17 @@ ApprovalLevel.BROADENING
 
 #### Inherited from
 
-Node20SstAppOptions.requireApproval
+`Node20SstAppOptions.requireApproval`
 
-___
+***
 
-### sampleCode
+### sampleCode?
 
-• `Optional` `Readonly` **sampleCode**: `boolean`
+> `readonly` `optional` **sampleCode**: `boolean`
 
 Generate one-time sample in `src/` and `test/` if there are no files there.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2924,17 +2755,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.sampleCode
+`Node20SstAppOptions.sampleCode`
 
-___
+***
 
-### scopedPackagesOptions
+### scopedPackagesOptions?
 
-• `Optional` `Readonly` **scopedPackagesOptions**: `ScopedPackagesOptions`[]
+> `readonly` `optional` **scopedPackagesOptions**: `ScopedPackagesOptions`[]
 
 Options for privately hosted scoped packages
 
-**`Default`**
+#### Default
 
 ```ts
 - fetch all scoped packages from the public npm registry
@@ -2942,45 +2773,45 @@ Options for privately hosted scoped packages
 
 #### Inherited from
 
-Node20SstAppOptions.scopedPackagesOptions
+`Node20SstAppOptions.scopedPackagesOptions`
 
-___
+***
 
-### scripts
+### ~~scripts?~~
 
-• `Optional` `Readonly` **scripts**: `Object`
+> `readonly` `optional` **scripts**: `object`
 
 npm scripts to include. If a script has the same name as a standard script,
 the standard script will be overwritten.
 Also adds the script as a task.
 
-**`Default`**
+#### Index Signature
+
+ \[`name`: `string`\]: `string`
+
+#### Default
 
 ```ts
 {}
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.addTask()` or `package.setScript()`
 
-#### Index signature
-
-▪ [name: `string`]: `string`
-
 #### Inherited from
 
-Node20SstAppOptions.scripts
+`Node20SstAppOptions.scripts`
 
-___
+***
 
-### srcdir
+### srcdir?
 
-• `Optional` `Readonly` **srcdir**: `string`
+> `readonly` `optional` **srcdir**: `string`
 
 Typescript sources directory.
 
-**`Default`**
+#### Default
 
 ```ts
 "src"
@@ -2988,17 +2819,17 @@ Typescript sources directory.
 
 #### Inherited from
 
-Node20SstAppOptions.srcdir
+`Node20SstAppOptions.srcdir`
 
-___
+***
 
-### sstOut
+### sstOut?
 
-• `Optional` **sstOut**: `string`
+> `optional` **sstOut**: `string`
 
 Where to build .sst code to.
 
-**`Default`**
+#### Default
 
 ```ts
 ".sst/dist/"
@@ -3006,17 +2837,17 @@ Where to build .sst code to.
 
 #### Inherited from
 
-Node20SstAppOptions.sstOut
+`Node20SstAppOptions.sstOut`
 
-___
+***
 
-### sstVersion
+### sstVersion?
 
-• `Optional` **sstVersion**: `string`
+> `optional` **sstVersion**: `string`
 
 The version of SST to use.
 
-**`Default`**
+#### Default
 
 ```ts
 "2.39.2"
@@ -3024,29 +2855,29 @@ The version of SST to use.
 
 #### Inherited from
 
-Node20SstAppOptions.sstVersion
+`Node20SstAppOptions.sstVersion`
 
-___
+***
 
-### stability
+### stability?
 
-• `Optional` `Readonly` **stability**: `string`
+> `readonly` `optional` **stability**: `string`
 
 Package's Stability
 
 #### Inherited from
 
-Node20SstAppOptions.stability
+`Node20SstAppOptions.stability`
 
-___
+***
 
-### stale
+### stale?
 
-• `Optional` `Readonly` **stale**: `boolean`
+> `readonly` `optional` **stale**: `boolean`
 
 Auto-close of stale issues and pull request. See `staleOptions` for options.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -3054,29 +2885,29 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.stale
+`Node20SstAppOptions.stale`
 
-___
+***
 
-### staleOptions
+### staleOptions?
 
-• `Optional` `Readonly` **staleOptions**: `StaleOptions`
+> `readonly` `optional` **staleOptions**: `StaleOptions`
 
 Auto-close stale issues and pull requests. To disable set `stale` to `false`.
 
-**`Default`**
+#### Default
 
 - see defaults in `StaleOptions`
 
 #### Inherited from
 
-Node20SstAppOptions.staleOptions
+`Node20SstAppOptions.staleOptions`
 
-___
+***
 
-### testdir
+### testdir?
 
-• `Optional` `Readonly` **testdir**: `string`
+> `readonly` `optional` **testdir**: `string`
 
 Jest tests directory. Tests files should be named `xxx.test.ts`.
 
@@ -3085,7 +2916,7 @@ then tests are going to be compiled into `lib/` and executed as javascript.
 If the test directory is outside of `src`, then we configure jest to
 compile the code in-memory.
 
-**`Default`**
+#### Default
 
 ```ts
 "test"
@@ -3093,29 +2924,29 @@ compile the code in-memory.
 
 #### Inherited from
 
-Node20SstAppOptions.testdir
+`Node20SstAppOptions.testdir`
 
-___
+***
 
-### tsJestOptions
+### tsJestOptions?
 
-• `Optional` `Readonly` **tsJestOptions**: `TsJestOptions`
+> `readonly` `optional` **tsJestOptions**: `TsJestOptions`
 
 Options for ts-jest
 
 #### Inherited from
 
-Node20SstAppOptions.tsJestOptions
+`Node20SstAppOptions.tsJestOptions`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfigOptions`
+> `readonly` `optional` **tsconfig**: `TypescriptConfigOptions`
 
 Custom TSConfig
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -3123,17 +2954,17 @@ Custom TSConfig
 
 #### Inherited from
 
-Node20SstAppOptions.tsconfig
+`Node20SstAppOptions.tsconfig`
 
-___
+***
 
-### tsconfigDev
+### tsconfigDev?
 
-• `Optional` `Readonly` **tsconfigDev**: `TypescriptConfigOptions`
+> `readonly` `optional` **tsconfigDev**: `TypescriptConfigOptions`
 
 Custom tsconfig options for the development tsconfig.json file (used for testing).
 
-**`Default`**
+#### Default
 
 ```ts
 - use the production tsconfig options
@@ -3141,17 +2972,17 @@ Custom tsconfig options for the development tsconfig.json file (used for testing
 
 #### Inherited from
 
-Node20SstAppOptions.tsconfigDev
+`Node20SstAppOptions.tsconfigDev`
 
-___
+***
 
-### tsconfigDevFile
+### tsconfigDevFile?
 
-• `Optional` `Readonly` **tsconfigDevFile**: `string`
+> `readonly` `optional` **tsconfigDevFile**: `string`
 
 The name of the development tsconfig.json file.
 
-**`Default`**
+#### Default
 
 ```ts
 "tsconfig.dev.json"
@@ -3159,20 +2990,20 @@ The name of the development tsconfig.json file.
 
 #### Inherited from
 
-Node20SstAppOptions.tsconfigDevFile
+`Node20SstAppOptions.tsconfigDevFile`
 
-___
+***
 
-### typescriptVersion
+### typescriptVersion?
 
-• `Optional` `Readonly` **typescriptVersion**: `string`
+> `readonly` `optional` **typescriptVersion**: `string`
 
 TypeScript version to use.
 
 NOTE: Typescript is not semantically versioned and should remain on the
 same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -3180,18 +3011,18 @@ same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
 #### Inherited from
 
-Node20SstAppOptions.typescriptVersion
+`Node20SstAppOptions.typescriptVersion`
 
-___
+***
 
-### versionrcOptions
+### versionrcOptions?
 
-• `Optional` `Readonly` **versionrcOptions**: `Record`\<`string`, `any`\>
+> `readonly` `optional` **versionrcOptions**: `Record`\<`string`, `any`\>
 
 Custom configuration used when creating changelog with standard-version package.
 Given values either append to default configuration or overwrite values in it.
 
-**`Default`**
+#### Default
 
 ```ts
 - standard configuration applicable for GitHub repositories
@@ -3199,19 +3030,19 @@ Given values either append to default configuration or overwrite values in it.
 
 #### Inherited from
 
-Node20SstAppOptions.versionrcOptions
+`Node20SstAppOptions.versionrcOptions`
 
-___
+***
 
-### vscode
+### vscode?
 
-• `Optional` `Readonly` **vscode**: `boolean`
+> `readonly` `optional` **vscode**: `boolean`
 
 Enable VSCode integration.
 
 Enabled by default for root projects. Disabled for non-root projects.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -3219,17 +3050,17 @@ true
 
 #### Inherited from
 
-Node20SstAppOptions.vscode
+`Node20SstAppOptions.vscode`
 
-___
+***
 
-### watchExcludes
+### watchExcludes?
 
-• `Optional` `Readonly` **watchExcludes**: `string`[]
+> `readonly` `optional` **watchExcludes**: `string`[]
 
 Glob patterns to exclude from `cdk watch`.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -3237,17 +3068,17 @@ Glob patterns to exclude from `cdk watch`.
 
 #### Inherited from
 
-Node20SstAppOptions.watchExcludes
+`Node20SstAppOptions.watchExcludes`
 
-___
+***
 
-### watchIncludes
+### watchIncludes?
 
-• `Optional` `Readonly` **watchIncludes**: `string`[]
+> `readonly` `optional` **watchIncludes**: `string`[]
 
 Glob patterns to include in `cdk watch`.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -3255,17 +3086,17 @@ Glob patterns to include in `cdk watch`.
 
 #### Inherited from
 
-Node20SstAppOptions.watchIncludes
+`Node20SstAppOptions.watchIncludes`
 
-___
+***
 
-### workflowBootstrapSteps
+### workflowBootstrapSteps?
 
-• `Optional` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `readonly` `optional` **workflowBootstrapSteps**: `JobStep`[]
 
 Workflow steps to use in order to bootstrap this repo.
 
-**`Default`**
+#### Default
 
 ```ts
 "yarn install --frozen-lockfile && yarn projen"
@@ -3273,17 +3104,17 @@ Workflow steps to use in order to bootstrap this repo.
 
 #### Inherited from
 
-Node20SstAppOptions.workflowBootstrapSteps
+`Node20SstAppOptions.workflowBootstrapSteps`
 
-___
+***
 
-### workflowContainerImage
+### workflowContainerImage?
 
-• `Optional` `Readonly` **workflowContainerImage**: `string`
+> `readonly` `optional` **workflowContainerImage**: `string`
 
 Container image to use for GitHub workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - default image
@@ -3291,17 +3122,17 @@ Container image to use for GitHub workflows.
 
 #### Inherited from
 
-Node20SstAppOptions.workflowContainerImage
+`Node20SstAppOptions.workflowContainerImage`
 
-___
+***
 
-### workflowGitIdentity
+### workflowGitIdentity?
 
-• `Optional` `Readonly` **workflowGitIdentity**: `GitIdentity`
+> `readonly` `optional` **workflowGitIdentity**: `GitIdentity`
 
 The git identity to use in workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - GitHub Actions
@@ -3309,33 +3140,33 @@ The git identity to use in workflows.
 
 #### Inherited from
 
-Node20SstAppOptions.workflowGitIdentity
+`Node20SstAppOptions.workflowGitIdentity`
 
-___
+***
 
-### workflowNodeVersion
+### workflowNodeVersion?
 
-• `Optional` `Readonly` **workflowNodeVersion**: `string`
+> `readonly` `optional` **workflowNodeVersion**: `string`
 
 The node version to use in GitHub workflows.
 
-**`Default`**
+#### Default
 
 - same as `minNodeVersion`
 
 #### Inherited from
 
-Node20SstAppOptions.workflowNodeVersion
+`Node20SstAppOptions.workflowNodeVersion`
 
-___
+***
 
-### workflowPackageCache
+### workflowPackageCache?
 
-• `Optional` `Readonly` **workflowPackageCache**: `boolean`
+> `readonly` `optional` **workflowPackageCache**: `boolean`
 
 Enable Node.js package cache in GitHub workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -3343,63 +3174,63 @@ false
 
 #### Inherited from
 
-Node20SstAppOptions.workflowPackageCache
+`Node20SstAppOptions.workflowPackageCache`
 
-___
+***
 
-### workflowRunsOn
+### workflowRunsOn?
 
-• `Optional` `Readonly` **workflowRunsOn**: `string`[]
+> `readonly` `optional` **workflowRunsOn**: `string`[]
 
 Github Runner selection labels
 
-**`Default`**
+#### Default
 
 ```ts
 ["ubuntu-latest"]
 ```
 
-**`Description`**
+#### Description
 
 Defines a target Runner by labels
 
-**`Throws`**
+#### Throws
 
 if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-Node20SstAppOptions.workflowRunsOn
+`Node20SstAppOptions.workflowRunsOn`
 
-___
+***
 
-### workflowRunsOnGroup
+### workflowRunsOnGroup?
 
-• `Optional` `Readonly` **workflowRunsOnGroup**: `GroupRunnerOptions`
+> `readonly` `optional` **workflowRunsOnGroup**: `GroupRunnerOptions`
 
 Github Runner Group selection options
 
-**`Description`**
+#### Description
 
 Defines a target Runner Group by name and/or labels
 
-**`Throws`**
+#### Throws
 
 if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-Node20SstAppOptions.workflowRunsOnGroup
+`Node20SstAppOptions.workflowRunsOnGroup`
 
-___
+***
 
-### yarnBerryOptions
+### yarnBerryOptions?
 
-• `Optional` `Readonly` **yarnBerryOptions**: `YarnBerryOptions`
+> `readonly` `optional` **yarnBerryOptions**: `YarnBerryOptions`
 
 Options for Yarn Berry
 
-**`Default`**
+#### Default
 
 ```ts
 - Yarn Berry v4 with all default options
@@ -3407,4 +3238,4 @@ Options for Yarn Berry
 
 #### Inherited from
 
-Node20SstAppOptions.yarnBerryOptions
+`Node20SstAppOptions.yarnBerryOptions`

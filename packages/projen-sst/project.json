@@ -156,6 +156,13 @@
         "cwd": "packages/projen-sst"
       }
     },
+    "docgen:remove": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen docgen:remove",
+        "cwd": "packages/projen-sst"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

@@ -1,4 +1,6 @@
-dkershner6-projen-nx-monorepo / [Exports](modules.md)
+**dkershner6-projen-nx-monorepo** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-nx-monorepo
 

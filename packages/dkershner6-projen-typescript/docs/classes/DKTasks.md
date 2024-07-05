@@ -1,47 +1,24 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / DKTasks
+[**dkershner6-projen-typescript**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-typescript](../globals.md) / DKTasks
 
 # Class: DKTasks
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`DKTasks`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](DKTasks.md#constructor)
-
-### Properties
-
-- [node](DKTasks.md#node)
-- [project](DKTasks.md#project)
-- [IS\_NOT\_RELEASE\_CONDITION](DKTasks.md#is_not_release_condition)
-- [UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION](DKTasks.md#upgrade_scope_env_not_blank_condition)
-
-### Methods
-
-- [alterUpgradeScopeTask](DKTasks.md#alterupgradescopetask)
-- [postSynthesize](DKTasks.md#postsynthesize)
-- [preSynthesize](DKTasks.md#presynthesize)
-- [synthesize](DKTasks.md#synthesize)
-- [toString](DKTasks.md#tostring)
-- [isComponent](DKTasks.md#iscomponent)
-- [isConstruct](DKTasks.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new DKTasks()
 
-• **new DKTasks**(`project`): [`DKTasks`](DKTasks.md)
+> **new DKTasks**(`project`): [`DKTasks`](DKTasks.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
+• **project**: `TypeScriptProject`
 
 #### Returns
 
@@ -49,57 +26,47 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• **project**: `TypeScriptProject`
+> **project**: `TypeScriptProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### IS\_NOT\_RELEASE\_CONDITION
 
-▪ `Static` `Readonly` **IS\_NOT\_RELEASE\_CONDITION**: ``"if [ \"$RELEASE\" = \"true\" ] ; then exit 1 ; fi"``
+> `readonly` `static` **IS\_NOT\_RELEASE\_CONDITION**: "if \[ \"$RELEASE\" = \"true\" \] ; then exit 1 ; fi"
 
-___
+***
 
 ### UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION
 
-▪ `Static` `Readonly` **UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION**: ``"if [ -z \"$UPGRADE_SCOPE\" ] ; then echo 'UPGRADE_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi"``
+> `readonly` `static` **UPGRADE\_SCOPE\_ENV\_NOT\_BLANK\_CONDITION**: "if \[ -z \"$UPGRADE\_SCOPE\" \] ; then echo 'UPGRADE\_SCOPE env variable must be populated with exactly one scope' && exit 1 ; fi"
 
 ## Methods
 
-### alterUpgradeScopeTask
+### postSynthesize()
 
-▸ **alterUpgradeScopeTask**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -109,13 +76,15 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
+
+Called before synthesis.
 
 #### Returns
 
@@ -123,13 +92,13 @@ ___
 
 #### Overrides
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -139,13 +108,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -155,35 +124,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -203,16 +170,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

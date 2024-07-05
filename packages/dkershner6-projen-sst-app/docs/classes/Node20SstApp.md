@@ -1,153 +1,24 @@
-[dkershner6-projen-sst-app](../README.md) / [Exports](../modules.md) / Node20SstApp
+[**dkershner6-projen-sst-app**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-sst-app](../globals.md) / Node20SstApp
 
 # Class: Node20SstApp
 
-## Hierarchy
+## Extends
 
 - `SstTypescriptApp`
 
-  ↳ **`Node20SstApp`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Node20SstApp.md#constructor)
-
-### Properties
-
-- [appEntrypoint](Node20SstApp.md#appentrypoint)
-- [artifactsDirectory](Node20SstApp.md#artifactsdirectory)
-- [artifactsJavascriptDirectory](Node20SstApp.md#artifactsjavascriptdirectory)
-- [autoApprove](Node20SstApp.md#autoapprove)
-- [autoMerge](Node20SstApp.md#automerge)
-- [branchNameToSstStageMap](Node20SstApp.md#branchnametosststagemap)
-- [buildWorkflow](Node20SstApp.md#buildworkflow)
-- [bundler](Node20SstApp.md#bundler)
-- [cdkConfig](Node20SstApp.md#cdkconfig)
-- [cdkDeps](Node20SstApp.md#cdkdeps)
-- [cdkTasks](Node20SstApp.md#cdktasks)
-- [commitGenerated](Node20SstApp.md#commitgenerated)
-- [defaultTask](Node20SstApp.md#defaulttask)
-- [deps](Node20SstApp.md#deps)
-- [devContainer](Node20SstApp.md#devcontainer)
-- [docgen](Node20SstApp.md#docgen)
-- [docsDirectory](Node20SstApp.md#docsdirectory)
-- [eslint](Node20SstApp.md#eslint)
-- [gitattributes](Node20SstApp.md#gitattributes)
-- [github](Node20SstApp.md#github)
-- [gitignore](Node20SstApp.md#gitignore)
-- [gitpod](Node20SstApp.md#gitpod)
-- [initProject](Node20SstApp.md#initproject)
-- [jest](Node20SstApp.md#jest)
-- [jestTransformer](Node20SstApp.md#jesttransformer)
-- [libdir](Node20SstApp.md#libdir)
-- [logger](Node20SstApp.md#logger)
-- [name](Node20SstApp.md#name)
-- [node](Node20SstApp.md#node)
-- [nodeVersion](Node20SstApp.md#nodeversion)
-- [npmignore](Node20SstApp.md#npmignore)
-- [outdir](Node20SstApp.md#outdir)
-- [package](Node20SstApp.md#package)
-- [parent](Node20SstApp.md#parent)
-- [prettier](Node20SstApp.md#prettier)
-- [projectBuild](Node20SstApp.md#projectbuild)
-- [projectType](Node20SstApp.md#projecttype)
-- [publishToAwsOptions](Node20SstApp.md#publishtoawsoptions)
-- [publisher](Node20SstApp.md#publisher)
-- [release](Node20SstApp.md#release)
-- [runScriptCommand](Node20SstApp.md#runscriptcommand)
-- [srcdir](Node20SstApp.md#srcdir)
-- [sstConfig](Node20SstApp.md#sstconfig)
-- [sstVersion](Node20SstApp.md#sstversion)
-- [tasks](Node20SstApp.md#tasks)
-- [testdir](Node20SstApp.md#testdir)
-- [tsconfig](Node20SstApp.md#tsconfig)
-- [tsconfigDev](Node20SstApp.md#tsconfigdev)
-- [tsconfigEslint](Node20SstApp.md#tsconfigeslint)
-- [upgradeWorkflow](Node20SstApp.md#upgradeworkflow)
-- [vscode](Node20SstApp.md#vscode)
-- [watchTask](Node20SstApp.md#watchtask)
-- [workflowBootstrapSteps](Node20SstApp.md#workflowbootstrapsteps)
-- [workflowPackageCache](Node20SstApp.md#workflowpackagecache)
-- [DEFAULT\_TASK](Node20SstApp.md#default_task)
-- [DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN](Node20SstApp.md#default_ts_jest_tranform_pattern)
-
-### Accessors
-
-- [allowLibraryDependencies](Node20SstApp.md#allowlibrarydependencies)
-- [buildTask](Node20SstApp.md#buildtask)
-- [buildWorkflowJobId](Node20SstApp.md#buildworkflowjobid)
-- [cdkVersion](Node20SstApp.md#cdkversion)
-- [compileTask](Node20SstApp.md#compiletask)
-- [components](Node20SstApp.md#components)
-- [ejected](Node20SstApp.md#ejected)
-- [entrypoint](Node20SstApp.md#entrypoint)
-- [files](Node20SstApp.md#files)
-- [manifest](Node20SstApp.md#manifest)
-- [maxNodeVersion](Node20SstApp.md#maxnodeversion)
-- [minNodeVersion](Node20SstApp.md#minnodeversion)
-- [npmrc](Node20SstApp.md#npmrc)
-- [packageManager](Node20SstApp.md#packagemanager)
-- [packageTask](Node20SstApp.md#packagetask)
-- [postCompileTask](Node20SstApp.md#postcompiletask)
-- [preCompileTask](Node20SstApp.md#precompiletask)
-- [projenCommand](Node20SstApp.md#projencommand)
-- [root](Node20SstApp.md#root)
-- [subprojects](Node20SstApp.md#subprojects)
-- [testTask](Node20SstApp.md#testtask)
-
-### Methods
-
-- [addBins](Node20SstApp.md#addbins)
-- [addBundledDeps](Node20SstApp.md#addbundleddeps)
-- [addCdkDependency](Node20SstApp.md#addcdkdependency)
-- [addCompileCommand](Node20SstApp.md#addcompilecommand)
-- [addDeps](Node20SstApp.md#adddeps)
-- [addDevDeps](Node20SstApp.md#adddevdeps)
-- [addExcludeFromCleanup](Node20SstApp.md#addexcludefromcleanup)
-- [addFields](Node20SstApp.md#addfields)
-- [addGitIgnore](Node20SstApp.md#addgitignore)
-- [addKeywords](Node20SstApp.md#addkeywords)
-- [addPackageIgnore](Node20SstApp.md#addpackageignore)
-- [addPeerDeps](Node20SstApp.md#addpeerdeps)
-- [addScripts](Node20SstApp.md#addscripts)
-- [addTask](Node20SstApp.md#addtask)
-- [addTestCommand](Node20SstApp.md#addtestcommand)
-- [addTip](Node20SstApp.md#addtip)
-- [annotateGenerated](Node20SstApp.md#annotategenerated)
-- [buildDeployToAwsJobStep](Node20SstApp.md#builddeploytoawsjobstep)
-- [buildPublishToAwsJob](Node20SstApp.md#buildpublishtoawsjob)
-- [determineDeployTaskToUseForAwsJobStep](Node20SstApp.md#determinedeploytasktouseforawsjobstep)
-- [hasScript](Node20SstApp.md#hasscript)
-- [postSynthesize](Node20SstApp.md#postsynthesize)
-- [preSynthesize](Node20SstApp.md#presynthesize)
-- [removeScript](Node20SstApp.md#removescript)
-- [removeTask](Node20SstApp.md#removetask)
-- [renderWorkflowSetup](Node20SstApp.md#renderworkflowsetup)
-- [runTaskCommand](Node20SstApp.md#runtaskcommand)
-- [setScript](Node20SstApp.md#setscript)
-- [synth](Node20SstApp.md#synth)
-- [toString](Node20SstApp.md#tostring)
-- [tryFindFile](Node20SstApp.md#tryfindfile)
-- [tryFindJsonFile](Node20SstApp.md#tryfindjsonfile)
-- [tryFindObjectFile](Node20SstApp.md#tryfindobjectfile)
-- [tryRemoveFile](Node20SstApp.md#tryremovefile)
-- [isConstruct](Node20SstApp.md#isconstruct)
-- [isProject](Node20SstApp.md#isproject)
-- [of](Node20SstApp.md#of)
-
 ## Constructors
 
-### constructor
+### new Node20SstApp()
 
-• **new Node20SstApp**(`options`): [`Node20SstApp`](Node20SstApp.md)
+> **new Node20SstApp**(`options`): [`Node20SstApp`](Node20SstApp.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`Node20SstAppOptions`](../interfaces/Node20SstAppOptions.md) |
+• **options**: [`Node20SstAppOptions`](../interfaces/Node20SstAppOptions.md)
 
 #### Returns
 
@@ -155,25 +26,25 @@
 
 #### Overrides
 
-SstTypescriptApp.constructor
+`SstTypescriptApp.constructor`
 
 ## Properties
 
 ### appEntrypoint
 
-• `Readonly` **appEntrypoint**: `string`
+> `readonly` **appEntrypoint**: `string`
 
 The CDK app entrypoint
 
 #### Inherited from
 
-SstTypescriptApp.appEntrypoint
+`SstTypescriptApp.appEntrypoint`
 
-___
+***
 
 ### artifactsDirectory
 
-• `Readonly` **artifactsDirectory**: `string`
+> `readonly` **artifactsDirectory**: `string`
 
 The build output directory. An npm tarball will be created under the `js`
 subdirectory. For example, if this is set to `dist` (the default), the npm
@@ -181,152 +52,152 @@ tarball will be placed under `dist/js/boom-boom-1.2.3.tg`.
 
 #### Inherited from
 
-SstTypescriptApp.artifactsDirectory
+`SstTypescriptApp.artifactsDirectory`
 
-___
+***
 
 ### artifactsJavascriptDirectory
 
-• `Readonly` **artifactsJavascriptDirectory**: `string`
+> `readonly` **artifactsJavascriptDirectory**: `string`
 
 The location of the npm tarball after build (`${artifactsDirectory}/js`).
 
 #### Inherited from
 
-SstTypescriptApp.artifactsJavascriptDirectory
+`SstTypescriptApp.artifactsJavascriptDirectory`
 
-___
+***
 
-### autoApprove
+### autoApprove?
 
-• `Optional` `Readonly` **autoApprove**: `AutoApprove`
+> `readonly` `optional` **autoApprove**: `AutoApprove`
 
 Auto approve set up for this project.
 
 #### Inherited from
 
-SstTypescriptApp.autoApprove
+`SstTypescriptApp.autoApprove`
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `AutoMerge`
+> `readonly` `optional` **autoMerge**: `AutoMerge`
 
 Component that sets up mergify for merging approved pull requests.
 
 #### Inherited from
 
-SstTypescriptApp.autoMerge
+`SstTypescriptApp.autoMerge`
 
-___
+***
 
-### branchNameToSstStageMap
+### branchNameToSstStageMap?
 
-• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
 #### Inherited from
 
-SstTypescriptApp.branchNameToSstStageMap
+`SstTypescriptApp.branchNameToSstStageMap`
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `BuildWorkflow`
+> `readonly` `optional` **buildWorkflow**: `BuildWorkflow`
 
 The PR build GitHub workflow. `undefined` if `buildWorkflow` is disabled.
 
 #### Inherited from
 
-SstTypescriptApp.buildWorkflow
+`SstTypescriptApp.buildWorkflow`
 
-___
+***
 
 ### bundler
 
-• `Readonly` **bundler**: `Bundler`
+> `readonly` **bundler**: `Bundler`
 
 #### Inherited from
 
-SstTypescriptApp.bundler
+`SstTypescriptApp.bundler`
 
-___
+***
 
 ### cdkConfig
 
-• `Readonly` **cdkConfig**: `CdkConfig`
+> `readonly` **cdkConfig**: `CdkConfig`
 
 cdk.json configuration.
 
 #### Inherited from
 
-SstTypescriptApp.cdkConfig
+`SstTypescriptApp.cdkConfig`
 
-___
+***
 
 ### cdkDeps
 
-• `Readonly` **cdkDeps**: `AwsCdkDeps`
+> `readonly` **cdkDeps**: `AwsCdkDeps`
 
 #### Inherited from
 
-SstTypescriptApp.cdkDeps
+`SstTypescriptApp.cdkDeps`
 
-___
+***
 
 ### cdkTasks
 
-• `Readonly` **cdkTasks**: `CdkTasks`
+> `readonly` **cdkTasks**: `CdkTasks`
 
 Common CDK tasks.
 
 #### Inherited from
 
-SstTypescriptApp.cdkTasks
+`SstTypescriptApp.cdkTasks`
 
-___
+***
 
 ### commitGenerated
 
-• `Readonly` **commitGenerated**: `boolean`
+> `readonly` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
 #### Inherited from
 
-SstTypescriptApp.commitGenerated
+`SstTypescriptApp.commitGenerated`
 
-___
+***
 
-### defaultTask
+### defaultTask?
 
-• `Optional` `Readonly` **defaultTask**: `Task`
+> `readonly` `optional` **defaultTask**: `Task`
 
 This is the "default" task, the one that executes "projen". Undefined if
 the project is being ejected.
 
 #### Inherited from
 
-SstTypescriptApp.defaultTask
+`SstTypescriptApp.defaultTask`
 
-___
+***
 
 ### deps
 
-• `Readonly` **deps**: `Dependencies`
+> `readonly` **deps**: `Dependencies`
 
 Project dependencies.
 
 #### Inherited from
 
-SstTypescriptApp.deps
+`SstTypescriptApp.deps`
 
-___
+***
 
 ### devContainer
 
-• `Readonly` **devContainer**: `undefined` \| `DevContainer`
+> `readonly` **devContainer**: `undefined` \| `DevContainer`
 
 Access for .devcontainer.json (used for GitHub Codespaces)
 
@@ -334,55 +205,55 @@ This will be `undefined` if devContainer boolean is false
 
 #### Inherited from
 
-SstTypescriptApp.devContainer
+`SstTypescriptApp.devContainer`
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 #### Inherited from
 
-SstTypescriptApp.docgen
+`SstTypescriptApp.docgen`
 
-___
+***
 
 ### docsDirectory
 
-• `Readonly` **docsDirectory**: `string`
+> `readonly` **docsDirectory**: `string`
 
 #### Inherited from
 
-SstTypescriptApp.docsDirectory
+`SstTypescriptApp.docsDirectory`
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `Eslint`
+> `readonly` `optional` **eslint**: `Eslint`
 
 #### Inherited from
 
-SstTypescriptApp.eslint
+`SstTypescriptApp.eslint`
 
-___
+***
 
 ### gitattributes
 
-• `Readonly` **gitattributes**: `GitAttributesFile`
+> `readonly` **gitattributes**: `GitAttributesFile`
 
 The .gitattributes file for this repository.
 
 #### Inherited from
 
-SstTypescriptApp.gitattributes
+`SstTypescriptApp.gitattributes`
 
-___
+***
 
 ### github
 
-• `Readonly` **github**: `undefined` \| `GitHub`
+> `readonly` **github**: `undefined` \| `GitHub`
 
 Access all github components.
 
@@ -390,25 +261,25 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-SstTypescriptApp.github
+`SstTypescriptApp.github`
 
-___
+***
 
 ### gitignore
 
-• `Readonly` **gitignore**: `IgnoreFile`
+> `readonly` **gitignore**: `IgnoreFile`
 
 .gitignore
 
 #### Inherited from
 
-SstTypescriptApp.gitignore
+`SstTypescriptApp.gitignore`
 
-___
+***
 
 ### gitpod
 
-• `Readonly` **gitpod**: `undefined` \| `Gitpod`
+> `readonly` **gitpod**: `undefined` \| `Gitpod`
 
 Access for Gitpod
 
@@ -416,13 +287,13 @@ This will be `undefined` if gitpod boolean is false
 
 #### Inherited from
 
-SstTypescriptApp.gitpod
+`SstTypescriptApp.gitpod`
 
-___
+***
 
-### initProject
+### initProject?
 
-• `Optional` `Readonly` **initProject**: `InitProject`
+> `readonly` `optional` **initProject**: `InitProject`
 
 The options used when this project is bootstrapped via `projen new`. It
 includes the original set of options passed to the CLI and also the JSII
@@ -430,316 +301,310 @@ FQN of the project type.
 
 #### Inherited from
 
-SstTypescriptApp.initProject
+`SstTypescriptApp.initProject`
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `Jest`
+> `readonly` `optional` **jest**: `Jest`
 
 The Jest configuration (if enabled)
 
 #### Inherited from
 
-SstTypescriptApp.jest
+`SstTypescriptApp.jest`
 
-___
+***
 
 ### jestTransformer
 
-• `Readonly` **jestTransformer**: `JestTransformer`
+> `readonly` **jestTransformer**: `JestTransformer`
 
-___
+***
 
 ### libdir
 
-• `Readonly` **libdir**: `string`
+> `readonly` **libdir**: `string`
 
 The directory in which compiled .js files reside.
 
 #### Inherited from
 
-SstTypescriptApp.libdir
+`SstTypescriptApp.libdir`
 
-___
+***
 
 ### logger
 
-• `Readonly` **logger**: `Logger`
+> `readonly` **logger**: `Logger`
 
 Logging utilities.
 
 #### Inherited from
 
-SstTypescriptApp.logger
+`SstTypescriptApp.logger`
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 Project name.
 
 #### Inherited from
 
-SstTypescriptApp.name
+`SstTypescriptApp.name`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-SstTypescriptApp.node
+`SstTypescriptApp.node`
 
-___
+***
 
-### nodeVersion
+### nodeVersion?
 
-• `Protected` `Optional` `Readonly` **nodeVersion**: `string`
+> `protected` `readonly` `optional` **nodeVersion**: `string`
 
 #### Inherited from
 
-SstTypescriptApp.nodeVersion
+`SstTypescriptApp.nodeVersion`
 
-___
+***
 
-### npmignore
+### npmignore?
 
-• `Optional` `Readonly` **npmignore**: `IgnoreFile`
+> `readonly` `optional` **npmignore**: `IgnoreFile`
 
 The .npmignore file.
 
 #### Inherited from
 
-SstTypescriptApp.npmignore
+`SstTypescriptApp.npmignore`
 
-___
+***
 
 ### outdir
 
-• `Readonly` **outdir**: `string`
+> `readonly` **outdir**: `string`
 
 Absolute output directory of this project.
 
 #### Inherited from
 
-SstTypescriptApp.outdir
+`SstTypescriptApp.outdir`
 
-___
+***
 
 ### package
 
-• `Readonly` **package**: `NodePackage`
+> `readonly` **package**: `NodePackage`
 
 API for managing the node package.
 
 #### Inherited from
 
-SstTypescriptApp.package
+`SstTypescriptApp.package`
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 A parent project. If undefined, this is the root project.
 
 #### Inherited from
 
-SstTypescriptApp.parent
+`SstTypescriptApp.parent`
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `Prettier`
+> `readonly` `optional` **prettier**: `Prettier`
 
 #### Inherited from
 
-SstTypescriptApp.prettier
+`SstTypescriptApp.prettier`
 
-___
+***
 
 ### projectBuild
 
-• `Readonly` **projectBuild**: `ProjectBuild`
+> `readonly` **projectBuild**: `ProjectBuild`
 
 Manages the build process of the project.
 
 #### Inherited from
 
-SstTypescriptApp.projectBuild
+`SstTypescriptApp.projectBuild`
 
-___
+***
 
 ### projectType
 
-• `Readonly` **projectType**: `ProjectType`
+> `readonly` **projectType**: `ProjectType`
 
 #### Inherited from
 
-SstTypescriptApp.projectType
+`SstTypescriptApp.projectType`
 
-___
+***
 
-### publishToAwsOptions
+### ~~publisher?~~
 
-• `Private` `Optional` `Readonly` **publishToAwsOptions**: `PublishToAwsOptions`
-
-___
-
-### publisher
-
-• `Optional` `Readonly` **publisher**: `Publisher`
+> `readonly` `optional` **publisher**: `Publisher`
 
 Package publisher. This will be `undefined` if the project does not have a
 release workflow.
 
-**`Deprecated`**
+#### Deprecated
 
 use `release.publisher`.
 
 #### Inherited from
 
-SstTypescriptApp.publisher
+`SstTypescriptApp.publisher`
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `Release`
+> `readonly` `optional` **release**: `Release`
 
 Release management.
 
 #### Inherited from
 
-SstTypescriptApp.release
+`SstTypescriptApp.release`
 
-___
+***
 
 ### runScriptCommand
 
-• `Readonly` **runScriptCommand**: `string`
+> `readonly` **runScriptCommand**: `string`
 
 The command to use to run scripts (e.g. `yarn run` or `npm run` depends on the package manager).
 
 #### Inherited from
 
-SstTypescriptApp.runScriptCommand
+`SstTypescriptApp.runScriptCommand`
 
-___
+***
 
 ### srcdir
 
-• `Readonly` **srcdir**: `string`
+> `readonly` **srcdir**: `string`
 
 The directory in which the .ts sources reside.
 
 #### Inherited from
 
-SstTypescriptApp.srcdir
+`SstTypescriptApp.srcdir`
 
-___
+***
 
 ### sstConfig
 
-• `Readonly` **sstConfig**: `SstConfiguration`
+> `readonly` **sstConfig**: `SstConfiguration`
 
 #### Inherited from
 
-SstTypescriptApp.sstConfig
+`SstTypescriptApp.sstConfig`
 
-___
+***
 
 ### sstVersion
 
-• `Readonly` **sstVersion**: `string`
+> `readonly` **sstVersion**: `string`
 
 #### Inherited from
 
-SstTypescriptApp.sstVersion
+`SstTypescriptApp.sstVersion`
 
-___
+***
 
 ### tasks
 
-• `Readonly` **tasks**: `Tasks`
+> `readonly` **tasks**: `Tasks`
 
 Project tasks.
 
 #### Inherited from
 
-SstTypescriptApp.tasks
+`SstTypescriptApp.tasks`
 
-___
+***
 
 ### testdir
 
-• `Readonly` **testdir**: `string`
+> `readonly` **testdir**: `string`
 
 The directory in which tests reside.
 
 #### Inherited from
 
-SstTypescriptApp.testdir
+`SstTypescriptApp.testdir`
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfig`
+> `readonly` `optional` **tsconfig**: `TypescriptConfig`
 
 #### Inherited from
 
-SstTypescriptApp.tsconfig
+`SstTypescriptApp.tsconfig`
 
-___
+***
 
 ### tsconfigDev
 
-• `Readonly` **tsconfigDev**: `TypescriptConfig`
+> `readonly` **tsconfigDev**: `TypescriptConfig`
 
 A typescript configuration file which covers all files (sources, tests, projen).
 
 #### Inherited from
 
-SstTypescriptApp.tsconfigDev
+`SstTypescriptApp.tsconfigDev`
 
-___
+***
 
-### tsconfigEslint
+### tsconfigEslint?
 
-• `Optional` `Readonly` **tsconfigEslint**: `TypescriptConfig`
+> `readonly` `optional` **tsconfigEslint**: `TypescriptConfig`
 
 #### Inherited from
 
-SstTypescriptApp.tsconfigEslint
+`SstTypescriptApp.tsconfigEslint`
 
-___
+***
 
-### upgradeWorkflow
+### upgradeWorkflow?
 
-• `Optional` `Readonly` **upgradeWorkflow**: `UpgradeDependencies`
+> `readonly` `optional` **upgradeWorkflow**: `UpgradeDependencies`
 
 The upgrade workflow.
 
 #### Inherited from
 
-SstTypescriptApp.upgradeWorkflow
+`SstTypescriptApp.upgradeWorkflow`
 
-___
+***
 
 ### vscode
 
-• `Readonly` **vscode**: `undefined` \| `VsCode`
+> `readonly` **vscode**: `undefined` \| `VsCode`
 
 Access all VSCode components.
 
@@ -747,86 +612,86 @@ This will be `undefined` for subprojects.
 
 #### Inherited from
 
-SstTypescriptApp.vscode
+`SstTypescriptApp.vscode`
 
-___
+***
 
 ### watchTask
 
-• `Readonly` **watchTask**: `Task`
+> `readonly` **watchTask**: `Task`
 
 The "watch" task.
 
 #### Inherited from
 
-SstTypescriptApp.watchTask
+`SstTypescriptApp.watchTask`
 
-___
+***
 
 ### workflowBootstrapSteps
 
-• `Protected` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `protected` `readonly` **workflowBootstrapSteps**: `JobStep`[]
 
 #### Inherited from
 
-SstTypescriptApp.workflowBootstrapSteps
+`SstTypescriptApp.workflowBootstrapSteps`
 
-___
+***
 
 ### workflowPackageCache
 
-• `Protected` `Readonly` **workflowPackageCache**: `boolean`
+> `protected` `readonly` **workflowPackageCache**: `boolean`
 
 #### Inherited from
 
-SstTypescriptApp.workflowPackageCache
+`SstTypescriptApp.workflowPackageCache`
 
-___
+***
 
 ### DEFAULT\_TASK
 
-▪ `Static` `Readonly` **DEFAULT\_TASK**: ``"default"``
+> `readonly` `static` **DEFAULT\_TASK**: `"default"` = `"default"`
 
 The name of the default task (the task executed when `projen` is run without arguments). Normally
 this task should synthesize the project files.
 
 #### Inherited from
 
-SstTypescriptApp.DEFAULT\_TASK
+`SstTypescriptApp.DEFAULT_TASK`
 
-___
+***
 
 ### DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
 
-▪ `Static` `Readonly` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: ``"^.+\\.[t]sx?$"``
+> `readonly` `static` **DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN**: "^.+\\.\[t\]sx?$" = `"^.+\\.[t]sx?$"`
 
 #### Inherited from
 
-SstTypescriptApp.DEFAULT\_TS\_JEST\_TRANFORM\_PATTERN
+`SstTypescriptApp.DEFAULT_TS_JEST_TRANFORM_PATTERN`
 
 ## Accessors
 
 ### allowLibraryDependencies
 
-• `get` **allowLibraryDependencies**(): `boolean`
+> `get` **allowLibraryDependencies**(): `boolean`
+
+#### Deprecated
+
+use `package.allowLibraryDependencies`
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
-
-use `package.allowLibraryDependencies`
-
 #### Inherited from
 
-SstTypescriptApp.allowLibraryDependencies
+`SstTypescriptApp.allowLibraryDependencies`
 
-___
+***
 
 ### buildTask
 
-• `get` **buildTask**(): `Task`
+> `get` **buildTask**(): `Task`
 
 #### Returns
 
@@ -834,13 +699,13 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.buildTask
+`SstTypescriptApp.buildTask`
 
-___
+***
 
 ### buildWorkflowJobId
 
-• `get` **buildWorkflowJobId**(): `undefined` \| `string`
+> `get` **buildWorkflowJobId**(): `undefined` \| `string`
 
 The job ID of the build workflow.
 
@@ -850,13 +715,13 @@ The job ID of the build workflow.
 
 #### Inherited from
 
-SstTypescriptApp.buildWorkflowJobId
+`SstTypescriptApp.buildWorkflowJobId`
 
-___
+***
 
 ### cdkVersion
 
-• `get` **cdkVersion**(): `string`
+> `get` **cdkVersion**(): `string`
 
 The CDK version this app is using.
 
@@ -866,13 +731,13 @@ The CDK version this app is using.
 
 #### Inherited from
 
-SstTypescriptApp.cdkVersion
+`SstTypescriptApp.cdkVersion`
 
-___
+***
 
 ### compileTask
 
-• `get` **compileTask**(): `Task`
+> `get` **compileTask**(): `Task`
 
 #### Returns
 
@@ -880,13 +745,13 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.compileTask
+`SstTypescriptApp.compileTask`
 
-___
+***
 
 ### components
 
-• `get` **components**(): `Component`[]
+> `get` **components**(): `Component`[]
 
 Returns all the components within this project.
 
@@ -896,13 +761,13 @@ Returns all the components within this project.
 
 #### Inherited from
 
-SstTypescriptApp.components
+`SstTypescriptApp.components`
 
-___
+***
 
 ### ejected
 
-• `get` **ejected**(): `boolean`
+> `get` **ejected**(): `boolean`
 
 Whether or not the project is being ejected.
 
@@ -912,31 +777,31 @@ Whether or not the project is being ejected.
 
 #### Inherited from
 
-SstTypescriptApp.ejected
+`SstTypescriptApp.ejected`
 
-___
+***
 
 ### entrypoint
 
-• `get` **entrypoint**(): `string`
+> `get` **entrypoint**(): `string`
+
+#### Deprecated
+
+use `package.entrypoint`
 
 #### Returns
 
 `string`
 
-**`Deprecated`**
-
-use `package.entrypoint`
-
 #### Inherited from
 
-SstTypescriptApp.entrypoint
+`SstTypescriptApp.entrypoint`
 
-___
+***
 
 ### files
 
-• `get` **files**(): `FileBase`[]
+> `get` **files**(): `FileBase`[]
 
 All files in this project.
 
@@ -946,31 +811,31 @@ All files in this project.
 
 #### Inherited from
 
-SstTypescriptApp.files
+`SstTypescriptApp.files`
 
-___
+***
 
 ### manifest
 
-• `get` **manifest**(): `any`
+> `get` **manifest**(): `any`
+
+#### Deprecated
+
+use `package.addField(x, y)`
 
 #### Returns
 
 `any`
 
-**`Deprecated`**
-
-use `package.addField(x, y)`
-
 #### Inherited from
 
-SstTypescriptApp.manifest
+`SstTypescriptApp.manifest`
 
-___
+***
 
 ### maxNodeVersion
 
-• `get` **maxNodeVersion**(): `undefined` \| `string`
+> `get` **maxNodeVersion**(): `undefined` \| `string`
 
 Maximum node version required by this package.
 
@@ -980,13 +845,13 @@ Maximum node version required by this package.
 
 #### Inherited from
 
-SstTypescriptApp.maxNodeVersion
+`SstTypescriptApp.maxNodeVersion`
 
-___
+***
 
 ### minNodeVersion
 
-• `get` **minNodeVersion**(): `undefined` \| `string`
+> `get` **minNodeVersion**(): `undefined` \| `string`
 
 Minimum node.js version required by this package.
 
@@ -996,13 +861,13 @@ Minimum node.js version required by this package.
 
 #### Inherited from
 
-SstTypescriptApp.minNodeVersion
+`SstTypescriptApp.minNodeVersion`
 
-___
+***
 
 ### npmrc
 
-• `get` **npmrc**(): `NpmConfig`
+> `get` **npmrc**(): `NpmConfig`
 
 The .npmrc file
 
@@ -1012,33 +877,33 @@ The .npmrc file
 
 #### Inherited from
 
-SstTypescriptApp.npmrc
+`SstTypescriptApp.npmrc`
 
-___
+***
 
 ### packageManager
 
-• `get` **packageManager**(): `NodePackageManager`
+> `get` **packageManager**(): `NodePackageManager`
 
 The package manager to use.
+
+#### Deprecated
+
+use `package.packageManager`
 
 #### Returns
 
 `NodePackageManager`
 
-**`Deprecated`**
-
-use `package.packageManager`
-
 #### Inherited from
 
-SstTypescriptApp.packageManager
+`SstTypescriptApp.packageManager`
 
-___
+***
 
 ### packageTask
 
-• `get` **packageTask**(): `Task`
+> `get` **packageTask**(): `Task`
 
 #### Returns
 
@@ -1046,13 +911,13 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.packageTask
+`SstTypescriptApp.packageTask`
 
-___
+***
 
 ### postCompileTask
 
-• `get` **postCompileTask**(): `Task`
+> `get` **postCompileTask**(): `Task`
 
 #### Returns
 
@@ -1060,13 +925,13 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.postCompileTask
+`SstTypescriptApp.postCompileTask`
 
-___
+***
 
 ### preCompileTask
 
-• `get` **preCompileTask**(): `Task`
+> `get` **preCompileTask**(): `Task`
 
 #### Returns
 
@@ -1074,13 +939,13 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.preCompileTask
+`SstTypescriptApp.preCompileTask`
 
-___
+***
 
 ### projenCommand
 
-• `get` **projenCommand**(): `string`
+> `get` **projenCommand**(): `string`
 
 The command to use in order to run the projen CLI.
 
@@ -1090,13 +955,13 @@ The command to use in order to run the projen CLI.
 
 #### Inherited from
 
-SstTypescriptApp.projenCommand
+`SstTypescriptApp.projenCommand`
 
-___
+***
 
 ### root
 
-• `get` **root**(): `Project`
+> `get` **root**(): `Project`
 
 The root project.
 
@@ -1106,13 +971,13 @@ The root project.
 
 #### Inherited from
 
-SstTypescriptApp.root
+`SstTypescriptApp.root`
 
-___
+***
 
 ### subprojects
 
-• `get` **subprojects**(): `Project`[]
+> `get` **subprojects**(): `Project`[]
 
 Returns all the subprojects within this project.
 
@@ -1122,13 +987,13 @@ Returns all the subprojects within this project.
 
 #### Inherited from
 
-SstTypescriptApp.subprojects
+`SstTypescriptApp.subprojects`
 
-___
+***
 
 ### testTask
 
-• `get` **testTask**(): `Task`
+> `get` **testTask**(): `Task`
 
 #### Returns
 
@@ -1136,19 +1001,17 @@ ___
 
 #### Inherited from
 
-SstTypescriptApp.testTask
+`SstTypescriptApp.testTask`
 
 ## Methods
 
-### addBins
+### addBins()
 
-▸ **addBins**(`bins`): `void`
+> **addBins**(`bins`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `bins` | `Record`\<`string`, `string`\> |
+• **bins**: `Record`\<`string`, `string`\>
 
 #### Returns
 
@@ -1156,13 +1019,13 @@ SstTypescriptApp.testTask
 
 #### Inherited from
 
-SstTypescriptApp.addBins
+`SstTypescriptApp.addBins`
 
-___
+***
 
-### addBundledDeps
+### addBundledDeps()
 
-▸ **addBundledDeps**(`...deps`): `void`
+> **addBundledDeps**(...`deps`): `void`
 
 Defines bundled dependencies.
 
@@ -1171,9 +1034,13 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1181,21 +1048,21 @@ Bundled dependencies will be added as normal dependencies as well as to the
 
 #### Inherited from
 
-SstTypescriptApp.addBundledDeps
+`SstTypescriptApp.addBundledDeps`
 
-___
+***
 
-### addCdkDependency
+### addCdkDependency()
 
-▸ **addCdkDependency**(`...modules`): `void`
+> **addCdkDependency**(...`modules`): `void`
 
 Adds an AWS CDK module dependencies
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...modules` | `string`[] | The list of modules to depend on |
+• ...**modules**: `string`[]
+
+The list of modules to depend on
 
 #### Returns
 
@@ -1203,47 +1070,49 @@ Adds an AWS CDK module dependencies
 
 #### Inherited from
 
-SstTypescriptApp.addCdkDependency
+`SstTypescriptApp.addCdkDependency`
 
-___
+***
 
-### addCompileCommand
+### ~~addCompileCommand()~~
 
-▸ **addCompileCommand**(`...commands`): `void`
+> **addCompileCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.compileTask.exec()`
 
 #### Inherited from
 
-SstTypescriptApp.addCompileCommand
+`SstTypescriptApp.addCompileCommand`
 
-___
+***
 
-### addDeps
+### addDeps()
 
-▸ **addDeps**(`...deps`): `void`
+> **addDeps**(...`deps`): `void`
 
 Defines normal dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1251,21 +1120,25 @@ Defines normal dependencies.
 
 #### Inherited from
 
-SstTypescriptApp.addDeps
+`SstTypescriptApp.addDeps`
 
-___
+***
 
-### addDevDeps
+### addDevDeps()
 
-▸ **addDevDeps**(`...deps`): `void`
+> **addDevDeps**(...`deps`): `void`
 
 Defines development/test dependencies.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1273,22 +1146,22 @@ Defines development/test dependencies.
 
 #### Inherited from
 
-SstTypescriptApp.addDevDeps
+`SstTypescriptApp.addDevDeps`
 
-___
+***
 
-### addExcludeFromCleanup
+### addExcludeFromCleanup()
 
-▸ **addExcludeFromCleanup**(`...globs`): `void`
+> **addExcludeFromCleanup**(...`globs`): `void`
 
 Exclude the matching files from pre-synth cleanup. Can be used when, for example, some
 source files include the projen marker and we don't want them to be erased during synth.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...globs` | `string`[] | The glob patterns to match |
+• ...**globs**: `string`[]
+
+The glob patterns to match
 
 #### Returns
 
@@ -1296,21 +1169,21 @@ source files include the projen marker and we don't want them to be erased durin
 
 #### Inherited from
 
-SstTypescriptApp.addExcludeFromCleanup
+`SstTypescriptApp.addExcludeFromCleanup`
 
-___
+***
 
-### addFields
+### addFields()
 
-▸ **addFields**(`fields`): `void`
+> **addFields**(`fields`): `void`
 
 Directly set fields in `package.json`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `fields` | `Object` | The fields to set |
+• **fields**
+
+The fields to set
 
 #### Returns
 
@@ -1318,21 +1191,21 @@ Directly set fields in `package.json`.
 
 #### Inherited from
 
-SstTypescriptApp.addFields
+`SstTypescriptApp.addFields`
 
-___
+***
 
-### addGitIgnore
+### addGitIgnore()
 
-▸ **addGitIgnore**(`pattern`): `void`
+> **addGitIgnore**(`pattern`): `void`
 
 Adds a .gitignore pattern.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The glob pattern to ignore. |
+• **pattern**: `string`
+
+The glob pattern to ignore.
 
 #### Returns
 
@@ -1340,21 +1213,21 @@ Adds a .gitignore pattern.
 
 #### Inherited from
 
-SstTypescriptApp.addGitIgnore
+`SstTypescriptApp.addGitIgnore`
 
-___
+***
 
-### addKeywords
+### addKeywords()
 
-▸ **addKeywords**(`...keywords`): `void`
+> **addKeywords**(...`keywords`): `void`
 
 Adds keywords to package.json (deduplicated)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...keywords` | `string`[] | The keywords to add |
+• ...**keywords**: `string`[]
+
+The keywords to add
 
 #### Returns
 
@@ -1362,39 +1235,39 @@ Adds keywords to package.json (deduplicated)
 
 #### Inherited from
 
-SstTypescriptApp.addKeywords
+`SstTypescriptApp.addKeywords`
 
-___
+***
 
-### addPackageIgnore
+### addPackageIgnore()
 
-▸ **addPackageIgnore**(`pattern`): `void`
+> **addPackageIgnore**(`pattern`): `void`
 
 Adds patterns to be ignored by npm.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `pattern` | `string` | The pattern to ignore. |
+• **pattern**: `string`
+
+The pattern to ignore.
 
 #### Returns
 
 `void`
 
-**`Remarks`**
+#### Remarks
 
 If you are having trouble getting an ignore to populate, try using your construct or component's preSynthesize method to properly delay calling this method.
 
 #### Inherited from
 
-SstTypescriptApp.addPackageIgnore
+`SstTypescriptApp.addPackageIgnore`
 
-___
+***
 
-### addPeerDeps
+### addPeerDeps()
 
-▸ **addPeerDeps**(`...deps`): `void`
+> **addPeerDeps**(...`deps`): `void`
 
 Defines peer dependencies.
 
@@ -1404,9 +1277,13 @@ your code against the minimum version required from your consumers.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...deps` | `string`[] | Names modules to install. By default, the the dependency will be installed in the next `npx projen` run and the version will be recorded in your `package.json` file. You can upgrade manually or using `yarn add/upgrade`. If you wish to specify a version range use this syntax: `module@^7`. |
+• ...**deps**: `string`[]
+
+Names modules to install. By default, the the dependency will
+be installed in the next `npx projen` run and the version will be recorded
+in your `package.json` file. You can upgrade manually or using `yarn
+add/upgrade`. If you wish to specify a version range use this syntax:
+`module@^7`.
 
 #### Returns
 
@@ -1414,21 +1291,21 @@ your code against the minimum version required from your consumers.
 
 #### Inherited from
 
-SstTypescriptApp.addPeerDeps
+`SstTypescriptApp.addPeerDeps`
 
-___
+***
 
-### addScripts
+### addScripts()
 
-▸ **addScripts**(`scripts`): `void`
+> **addScripts**(`scripts`): `void`
 
 Replaces the contents of multiple npm package.json scripts.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `scripts` | `Object` | The scripts to set |
+• **scripts**
+
+The scripts to set
 
 #### Returns
 
@@ -1436,23 +1313,26 @@ Replaces the contents of multiple npm package.json scripts.
 
 #### Inherited from
 
-SstTypescriptApp.addScripts
+`SstTypescriptApp.addScripts`
 
-___
+***
 
-### addTask
+### addTask()
 
-▸ **addTask**(`name`, `props?`): `Task`
+> **addTask**(`name`, `props`?): `Task`
 
 Adds a new task to this project. This will fail if the project already has
 a task with this name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The task name to add |
-| `props?` | `TaskOptions` | Task properties |
+• **name**: `string`
+
+The task name to add
+
+• **props?**: `TaskOptions`
+
+Task properties
 
 #### Returns
 
@@ -1460,65 +1340,63 @@ a task with this name.
 
 #### Inherited from
 
-SstTypescriptApp.addTask
+`SstTypescriptApp.addTask`
 
-___
+***
 
-### addTestCommand
+### ~~addTestCommand()~~
 
-▸ **addTestCommand**(`...commands`): `void`
+> **addTestCommand**(...`commands`): `void`
 
 DEPRECATED
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...commands` | `string`[] |
+• ...**commands**: `string`[]
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.testTask.exec()`
 
 #### Inherited from
 
-SstTypescriptApp.addTestCommand
+`SstTypescriptApp.addTestCommand`
 
-___
+***
 
-### addTip
+### ~~addTip()~~
 
-▸ **addTip**(`message`): `void`
+> **addTip**(`message`): `void`
 
 Prints a "tip" message during synthesis.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `message` | `string` | The message |
+• **message**: `string`
+
+The message
 
 #### Returns
 
 `void`
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.logger.info(message)` to show messages during synthesis
 
 #### Inherited from
 
-SstTypescriptApp.addTip
+`SstTypescriptApp.addTip`
 
-___
+***
 
-### annotateGenerated
+### annotateGenerated()
 
-▸ **annotateGenerated**(`glob`): `void`
+> **annotateGenerated**(`glob`): `void`
 
 Marks the provided file(s) as being generated. This is achieved using the
 github-linguist attributes. Generated files do not count against the
@@ -1526,102 +1404,83 @@ repository statistics and language breakdown.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `glob` | `string` | the glob pattern to match (could be a file path). |
+• **glob**: `string`
+
+the glob pattern to match (could be a file path).
 
 #### Returns
 
 `void`
 
-**`See`**
+#### See
 
 https://github.com/github/linguist/blob/master/docs/overrides.md
 
 #### Inherited from
 
-SstTypescriptApp.annotateGenerated
+`SstTypescriptApp.annotateGenerated`
 
-___
+***
 
-### buildDeployToAwsJobStep
+### buildDeployToAwsJobStep()
 
-▸ **buildDeployToAwsJobStep**(`«destructured»`): `JobStep`
+> **buildDeployToAwsJobStep**(`__namedParameters`): `JobStep`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `DeployJobStepBuilderParams` |
+• **\_\_namedParameters**: `DeployJobStepBuilderParams`
 
 #### Returns
 
 `JobStep`
 
-___
+***
 
-### buildPublishToAwsJob
+### buildPublishToAwsJob()
 
-▸ **buildPublishToAwsJob**(`«destructured»`, `options`): `Job`
+> **buildPublishToAwsJob**(`__namedParameters`, `options`): `Job`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `DeployJobStepBuilderParams` |
-| `options` | `AwsAppPublisherOptions` |
+• **\_\_namedParameters**: `DeployJobStepBuilderParams`
+
+• **options**: `AwsAppPublisherOptions`
 
 #### Returns
 
 `Job`
 
-___
+***
 
-### determineDeployTaskToUseForAwsJobStep
+### ~~hasScript()~~
 
-▸ **determineDeployTaskToUseForAwsJobStep**(`«destructured»`): `Task`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `«destructured»` | `DeployJobStepBuilderParams` |
-
-#### Returns
-
-`Task`
-
-___
-
-### hasScript
-
-▸ **hasScript**(`name`): `boolean`
+> **hasScript**(`name`): `boolean`
 
 Indicates if a script by the name name is defined.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script |
+• **name**: `string`
+
+The name of the script
 
 #### Returns
 
 `boolean`
 
-**`Deprecated`**
+#### Deprecated
 
 Use `project.tasks.tryFind(name)`
 
 #### Inherited from
 
-SstTypescriptApp.hasScript
+`SstTypescriptApp.hasScript`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after all components are synthesized. Order is *not* guaranteed.
 
@@ -1631,13 +1490,13 @@ Called after all components are synthesized. Order is *not* guaranteed.
 
 #### Inherited from
 
-SstTypescriptApp.postSynthesize
+`SstTypescriptApp.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before all components are synthesized.
 
@@ -1647,21 +1506,21 @@ Called before all components are synthesized.
 
 #### Inherited from
 
-SstTypescriptApp.preSynthesize
+`SstTypescriptApp.preSynthesize`
 
-___
+***
 
-### removeScript
+### removeScript()
 
-▸ **removeScript**(`name`): `void`
+> **removeScript**(`name`): `void`
 
 Removes the npm script (always successful).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the script. |
+• **name**: `string`
+
+The name of the script.
 
 #### Returns
 
@@ -1669,21 +1528,21 @@ Removes the npm script (always successful).
 
 #### Inherited from
 
-SstTypescriptApp.removeScript
+`SstTypescriptApp.removeScript`
 
-___
+***
 
-### removeTask
+### removeTask()
 
-▸ **removeTask**(`name`): `undefined` \| `Task`
+> **removeTask**(`name`): `undefined` \| `Task`
 
 Removes a task from a project.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The name of the task to remove. |
+• **name**: `string`
+
+The name of the task to remove.
 
 #### Returns
 
@@ -1693,22 +1552,22 @@ The `Task` that was removed, otherwise `undefined`.
 
 #### Inherited from
 
-SstTypescriptApp.removeTask
+`SstTypescriptApp.removeTask`
 
-___
+***
 
-### renderWorkflowSetup
+### renderWorkflowSetup()
 
-▸ **renderWorkflowSetup**(`options?`): `JobStep`[]
+> **renderWorkflowSetup**(`options`?): `JobStep`[]
 
 Returns the set of workflow steps which should be executed to bootstrap a
 workflow.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options?` | `RenderWorkflowSetupOptions` | Options. |
+• **options?**: `RenderWorkflowSetupOptions`
+
+Options.
 
 #### Returns
 
@@ -1718,22 +1577,22 @@ Job steps
 
 #### Inherited from
 
-SstTypescriptApp.renderWorkflowSetup
+`SstTypescriptApp.renderWorkflowSetup`
 
-___
+***
 
-### runTaskCommand
+### runTaskCommand()
 
-▸ **runTaskCommand**(`task`): `string`
+> **runTaskCommand**(`task`): `string`
 
 Returns the shell command to execute in order to run a task. This will
 typically be `npx projen TASK`.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `task` | `Task` | The task for which the command is required |
+• **task**: `Task`
+
+The task for which the command is required
 
 #### Returns
 
@@ -1741,22 +1600,25 @@ typically be `npx projen TASK`.
 
 #### Inherited from
 
-SstTypescriptApp.runTaskCommand
+`SstTypescriptApp.runTaskCommand`
 
-___
+***
 
-### setScript
+### setScript()
 
-▸ **setScript**(`name`, `command`): `void`
+> **setScript**(`name`, `command`): `void`
 
 Replaces the contents of an npm package.json script.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | The script name |
-| `command` | `string` | The command to execute |
+• **name**: `string`
+
+The script name
+
+• **command**: `string`
+
+The command to execute
 
 #### Returns
 
@@ -1764,13 +1626,13 @@ Replaces the contents of an npm package.json script.
 
 #### Inherited from
 
-SstTypescriptApp.setScript
+`SstTypescriptApp.setScript`
 
-___
+***
 
-### synth
+### synth()
 
-▸ **synth**(): `void`
+> **synth**(): `void`
 
 Synthesize all project files into `outdir`.
 
@@ -1787,13 +1649,13 @@ Synthesize all project files into `outdir`.
 
 #### Inherited from
 
-SstTypescriptApp.synth
+`SstTypescriptApp.synth`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -1803,22 +1665,23 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-SstTypescriptApp.toString
+`SstTypescriptApp.toString`
 
-___
+***
 
-### tryFindFile
+### tryFindFile()
 
-▸ **tryFindFile**(`filePath`): `undefined` \| `FileBase`
+> **tryFindFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and all
 its subprojects.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be resolved
+from the root of _this_ project.
 
 #### Returns
 
@@ -1828,47 +1691,47 @@ a `FileBase` or undefined if there is no file in that path
 
 #### Inherited from
 
-SstTypescriptApp.tryFindFile
+`SstTypescriptApp.tryFindFile`
 
-___
+***
 
-### tryFindJsonFile
+### ~~tryFindJsonFile()~~
 
-▸ **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
+> **tryFindJsonFile**(`filePath`): `undefined` \| `JsonFile`
 
 Finds a json file by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
 `undefined` \| `JsonFile`
 
-**`Deprecated`**
+#### Deprecated
 
 use `tryFindObjectFile`
 
 #### Inherited from
 
-SstTypescriptApp.tryFindJsonFile
+`SstTypescriptApp.tryFindJsonFile`
 
-___
+***
 
-### tryFindObjectFile
+### tryFindObjectFile()
 
-▸ **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
+> **tryFindObjectFile**(`filePath`): `undefined` \| `ObjectFile`
 
 Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. |
+• **filePath**: `string`
+
+The file path.
 
 #### Returns
 
@@ -1876,22 +1739,23 @@ Finds an object file (like JsonFile, YamlFile, etc.) by name.
 
 #### Inherited from
 
-SstTypescriptApp.tryFindObjectFile
+`SstTypescriptApp.tryFindObjectFile`
 
-___
+***
 
-### tryRemoveFile
+### tryRemoveFile()
 
-▸ **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
+> **tryRemoveFile**(`filePath`): `undefined` \| `FileBase`
 
 Finds a file at the specified relative path within this project and removes
 it.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `filePath` | `string` | The file path. If this path is relative, it will be resolved from the root of _this_ project. |
+• **filePath**: `string`
+
+The file path. If this path is relative, it will be
+resolved from the root of _this_ project.
 
 #### Returns
 
@@ -1902,13 +1766,13 @@ the file was not found.
 
 #### Inherited from
 
-SstTypescriptApp.tryRemoveFile
+`SstTypescriptApp.tryRemoveFile`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -1928,65 +1792,61 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-SstTypescriptApp.isConstruct
+`SstTypescriptApp.isConstruct`
 
-___
+***
 
-### isProject
+### isProject()
 
-▸ **isProject**(`x`): x is Project
+> `static` **isProject**(`x`): `x is Project`
 
 Test whether the given construct is a project.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Project
+`x is Project`
 
 #### Inherited from
 
-SstTypescriptApp.isProject
+`SstTypescriptApp.isProject`
 
-___
+***
 
-### of
+### of()
 
-▸ **of**(`construct`): `Project`
+> `static` **of**(`construct`): `Project`
 
 Find the closest ancestor project for given construct.
 When given a project, this it the project itself.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `construct` | `IConstruct` |
+• **construct**: `IConstruct`
 
 #### Returns
 
 `Project`
 
-**`Throws`**
+#### Throws
 
 when no project is found in the path to the root
 
 #### Inherited from
 
-SstTypescriptApp.of
+`SstTypescriptApp.of`

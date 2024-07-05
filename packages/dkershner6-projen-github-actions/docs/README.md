@@ -1,4 +1,6 @@
-dkershner6-projen-github-actions / [Exports](modules.md)
+**dkershner6-projen-github-actions** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-github-actions
 

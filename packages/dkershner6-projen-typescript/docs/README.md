@@ -1,4 +1,6 @@
-dkershner6-projen-typescript / [Exports](modules.md)
+**dkershner6-projen-typescript** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-typescript
 

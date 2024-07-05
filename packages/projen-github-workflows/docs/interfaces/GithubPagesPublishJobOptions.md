@@ -1,36 +1,31 @@
-[projen-github-workflows](../README.md) / [Exports](../modules.md) / GithubPagesPublishJobOptions
+[**projen-github-workflows**](../README.md) • **Docs**
+
+***
+
+[projen-github-workflows](../globals.md) / GithubPagesPublishJobOptions
 
 # Interface: GithubPagesPublishJobOptions
 
-## Table of contents
-
-### Properties
-
-- [branchToPublishTo](GithubPagesPublishJobOptions.md#branchtopublishto)
-- [checkoutOptions](GithubPagesPublishJobOptions.md#checkoutoptions)
-- [folderToPublish](GithubPagesPublishJobOptions.md#foldertopublish)
-- [tokenSecret](GithubPagesPublishJobOptions.md#tokensecret)
-
 ## Properties
 
-### branchToPublishTo
+### branchToPublishTo?
 
-• `Optional` `Readonly` **branchToPublishTo**: `string`
+> `readonly` `optional` **branchToPublishTo**: `string`
 
-___
+***
 
-### checkoutOptions
+### checkoutOptions?
 
-• `Optional` **checkoutOptions**: `CheckoutOptions`
+> `optional` **checkoutOptions**: `CheckoutOptions`
 
-___
+***
 
-### folderToPublish
+### folderToPublish?
 
-• `Optional` `Readonly` **folderToPublish**: `string`
+> `readonly` `optional` **folderToPublish**: `string`
 
-___
+***
 
-### tokenSecret
+### tokenSecret?
 
-• `Optional` `Readonly` **tokenSecret**: `string`
+> `readonly` `optional` **tokenSecret**: `string`

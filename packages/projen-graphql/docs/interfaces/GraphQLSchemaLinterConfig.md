@@ -1,43 +1,37 @@
-[projen-graphql](../README.md) / [Exports](../modules.md) / GraphQLSchemaLinterConfig
+[**projen-graphql**](../README.md) • **Docs**
+
+***
+
+[projen-graphql](../globals.md) / GraphQLSchemaLinterConfig
 
 # Interface: GraphQLSchemaLinterConfig
 
-## Table of contents
-
-### Properties
-
-- [customRulePaths](GraphQLSchemaLinterConfig.md#customrulepaths)
-- [ignore](GraphQLSchemaLinterConfig.md#ignore)
-- [ruleOptions](GraphQLSchemaLinterConfig.md#ruleoptions)
-- [rules](GraphQLSchemaLinterConfig.md#rules)
-- [schemaPaths](GraphQLSchemaLinterConfig.md#schemapaths)
-
 ## Properties
 
-### customRulePaths
+### customRulePaths?
 
-• `Optional` **customRulePaths**: `string`[]
+> `optional` **customRulePaths**: `string`[]
 
-___
+***
 
-### ignore
+### ignore?
 
-• `Optional` **ignore**: `Record`\<`string`, `string`[]\>
+> `optional` **ignore**: `Record`\<`string`, `string`[]\>
 
-___
+***
 
-### ruleOptions
+### ruleOptions?
 
-• `Optional` **ruleOptions**: `Record`\<`string`, `any`\>
+> `optional` **ruleOptions**: `Record`\<`string`, `any`\>
 
-___
+***
 
-### rules
+### rules?
 
-• `Optional` **rules**: `string`[]
+> `optional` **rules**: `string`[]
 
-___
+***
 
-### schemaPaths
+### schemaPaths?
 
-• `Optional` **schemaPaths**: `string`[]
+> `optional` **schemaPaths**: `string`[]

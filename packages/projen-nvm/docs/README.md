@@ -1,4 +1,6 @@
-projen-nvm / [Exports](modules.md)
+**projen-nvm** • [**Docs**](globals.md)
+
+***
 
 # projen-nvm
 

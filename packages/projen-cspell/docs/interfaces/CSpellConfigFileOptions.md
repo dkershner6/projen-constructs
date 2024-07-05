@@ -1,21 +1,17 @@
-[projen-cspell](../README.md) / [Exports](../modules.md) / CSpellConfigFileOptions
+[**projen-cspell**](../README.md) • **Docs**
+
+***
+
+[projen-cspell](../globals.md) / CSpellConfigFileOptions
 
 # Interface: CSpellConfigFileOptions
 
-## Hierarchy
+## Extended by
 
-- **`CSpellConfigFileOptions`**
-
-  ↳ [`CSpellOptions`](CSpellOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [config](CSpellConfigFileOptions.md#config)
+- [`CSpellOptions`](CSpellOptions.md)
 
 ## Properties
 
-### config
+### config?
 
-• `Optional` `Readonly` **config**: [`CSpellConfig`](CSpellConfig.md)
+> `readonly` `optional` **config**: [`CSpellConfig`](CSpellConfig.md)

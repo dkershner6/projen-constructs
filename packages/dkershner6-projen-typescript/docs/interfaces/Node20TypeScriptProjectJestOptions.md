@@ -1,40 +1,24 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / Node20TypeScriptProjectJestOptions
+[**dkershner6-projen-typescript**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-typescript](../globals.md) / Node20TypeScriptProjectJestOptions
 
 # Interface: Node20TypeScriptProjectJestOptions
 
-## Hierarchy
+## Extends
 
-- `JestOptions`
-
-- [`JestTransformerOptions`](JestTransformerOptions.md)
-
-  ↳ **`Node20TypeScriptProjectJestOptions`**
-
-## Table of contents
-
-### Properties
-
-- [configFilePath](Node20TypeScriptProjectJestOptions.md#configfilepath)
-- [coverage](Node20TypeScriptProjectJestOptions.md#coverage)
-- [coverageText](Node20TypeScriptProjectJestOptions.md#coveragetext)
-- [extraCliOptions](Node20TypeScriptProjectJestOptions.md#extraclioptions)
-- [ignorePatterns](Node20TypeScriptProjectJestOptions.md#ignorepatterns)
-- [jestConfig](Node20TypeScriptProjectJestOptions.md#jestconfig)
-- [jestVersion](Node20TypeScriptProjectJestOptions.md#jestversion)
-- [junitReporting](Node20TypeScriptProjectJestOptions.md#junitreporting)
-- [modulesToTransform](Node20TypeScriptProjectJestOptions.md#modulestotransform)
-- [preserveDefaultReporters](Node20TypeScriptProjectJestOptions.md#preservedefaultreporters)
-- [updateSnapshot](Node20TypeScriptProjectJestOptions.md#updatesnapshot)
+- `JestOptions`.[`JestTransformerOptions`](JestTransformerOptions.md)
 
 ## Properties
 
-### configFilePath
+### configFilePath?
 
-• `Optional` `Readonly` **configFilePath**: `string`
+> `readonly` `optional` **configFilePath**: `string`
 
 Path to JSON config file for Jest
 
-**`Default`**
+#### Default
 
 ```ts
 - No separate config file, jest settings are stored in package.json
@@ -42,40 +26,40 @@ Path to JSON config file for Jest
 
 #### Inherited from
 
-JestOptions.configFilePath
+`JestOptions.configFilePath`
 
-___
+***
 
-### coverage
+### ~~coverage?~~
 
-• `Optional` `Readonly` **coverage**: `boolean`
+> `readonly` `optional` **coverage**: `boolean`
 
 Collect coverage. Deprecated
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use jestConfig.collectCoverage
 
 #### Inherited from
 
-JestOptions.coverage
+`JestOptions.coverage`
 
-___
+***
 
-### coverageText
+### coverageText?
 
-• `Optional` `Readonly` **coverageText**: `boolean`
+> `readonly` `optional` **coverageText**: `boolean`
 
 Include the `text` coverage reporter, which means that coverage summary is printed
 at the end of the jest execution.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -83,17 +67,17 @@ true
 
 #### Inherited from
 
-JestOptions.coverageText
+`JestOptions.coverageText`
 
-___
+***
 
-### extraCliOptions
+### extraCliOptions?
 
-• `Optional` `Readonly` **extraCliOptions**: `string`[]
+> `readonly` `optional` **extraCliOptions**: `string`[]
 
 Additional options to pass to the Jest CLI invocation
 
-**`Default`**
+#### Default
 
 ```ts
 - no extra options
@@ -101,39 +85,39 @@ Additional options to pass to the Jest CLI invocation
 
 #### Inherited from
 
-JestOptions.extraCliOptions
+`JestOptions.extraCliOptions`
 
-___
+***
 
-### ignorePatterns
+### ~~ignorePatterns?~~
 
-• `Optional` `Readonly` **ignorePatterns**: `string`[]
+> `readonly` `optional` **ignorePatterns**: `string`[]
 
 Defines `testPathIgnorePatterns` and `coveragePathIgnorePatterns`
 
-**`Default`**
+#### Default
 
 ```ts
 ["/node_modules/"]
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use jestConfig.coveragePathIgnorePatterns or jestConfig.testPathIgnorePatterns respectively
 
 #### Inherited from
 
-JestOptions.ignorePatterns
+`JestOptions.ignorePatterns`
 
-___
+***
 
-### jestConfig
+### jestConfig?
 
-• `Optional` `Readonly` **jestConfig**: `JestConfigOptions`
+> `readonly` `optional` **jestConfig**: `JestConfigOptions`
 
 Jest configuration.
 
-**`Default`**
+#### Default
 
 ```ts
 - default jest configuration
@@ -141,19 +125,19 @@ Jest configuration.
 
 #### Inherited from
 
-JestOptions.jestConfig
+`JestOptions.jestConfig`
 
-___
+***
 
-### jestVersion
+### jestVersion?
 
-• `Optional` `Readonly` **jestVersion**: `string`
+> `readonly` `optional` **jestVersion**: `string`
 
 The version of jest to use.
 
 Note that same version is used as version of `@types/jest` and `ts-jest` (if Typescript in use), so given version should work also for those.
 
-**`Default`**
+#### Default
 
 ```ts
 - installs the latest jest version
@@ -161,19 +145,19 @@ Note that same version is used as version of `@types/jest` and `ts-jest` (if Typ
 
 #### Inherited from
 
-JestOptions.jestVersion
+`JestOptions.jestVersion`
 
-___
+***
 
-### junitReporting
+### junitReporting?
 
-• `Optional` `Readonly` **junitReporting**: `boolean`
+> `readonly` `optional` **junitReporting**: `boolean`
 
 Result processing with jest-junit.
 
 Output directory is `test-reports/`.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -181,17 +165,17 @@ true
 
 #### Inherited from
 
-JestOptions.junitReporting
+`JestOptions.junitReporting`
 
-___
+***
 
-### modulesToTransform
+### modulesToTransform?
 
-• `Optional` `Readonly` **modulesToTransform**: `string`[]
+> `readonly` `optional` **modulesToTransform**: `string`[]
 
 Additional modules for jest to transform, typically ESM modules.
 
-**`Default`**
+#### Default
 
 ```ts
 - A list of known ESM modules commonly used in projects
@@ -199,17 +183,17 @@ Additional modules for jest to transform, typically ESM modules.
 
 #### Inherited from
 
-[JestTransformerOptions](JestTransformerOptions.md).[modulesToTransform](JestTransformerOptions.md#modulestotransform)
+[`JestTransformerOptions`](JestTransformerOptions.md).[`modulesToTransform`](JestTransformerOptions.md#modulestotransform)
 
-___
+***
 
-### preserveDefaultReporters
+### preserveDefaultReporters?
 
-• `Optional` `Readonly` **preserveDefaultReporters**: `boolean`
+> `readonly` `optional` **preserveDefaultReporters**: `boolean`
 
 Preserve the default Jest reporter when additional reporters are added.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -217,18 +201,18 @@ true
 
 #### Inherited from
 
-JestOptions.preserveDefaultReporters
+`JestOptions.preserveDefaultReporters`
 
-___
+***
 
-### updateSnapshot
+### updateSnapshot?
 
-• `Optional` `Readonly` **updateSnapshot**: `UpdateSnapshot`
+> `readonly` `optional` **updateSnapshot**: `UpdateSnapshot`
 
 Whether to update snapshots in task "test" (which is executed in task "build" and build workflows),
 or create a separate task "test:update" for updating snapshots.
 
-**`Default`**
+#### Default
 
 ```ts
 - ALWAYS
@@ -236,4 +220,4 @@ or create a separate task "test:update" for updating snapshots.
 
 #### Inherited from
 
-JestOptions.updateSnapshot
+`JestOptions.updateSnapshot`

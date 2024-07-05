@@ -1,36 +1,24 @@
-[projen-graphql](../README.md) / [Exports](../modules.md) / GraphQLConfigOptions
+[**projen-graphql**](../README.md) • **Docs**
+
+***
+
+[projen-graphql](../globals.md) / GraphQLConfigOptions
 
 # Interface: GraphQLConfigOptions
 
-## Hierarchy
+## Extends
 
-- `Omit`\<`JsonFileOptions`, ``"obj"``\>
-
-  ↳ **`GraphQLConfigOptions`**
-
-## Table of contents
-
-### Properties
-
-- [allowComments](GraphQLConfigOptions.md#allowcomments)
-- [committed](GraphQLConfigOptions.md#committed)
-- [config](GraphQLConfigOptions.md#config)
-- [editGitignore](GraphQLConfigOptions.md#editgitignore)
-- [executable](GraphQLConfigOptions.md#executable)
-- [marker](GraphQLConfigOptions.md#marker)
-- [newline](GraphQLConfigOptions.md#newline)
-- [omitEmpty](GraphQLConfigOptions.md#omitempty)
-- [readonly](GraphQLConfigOptions.md#readonly)
+- `Omit`\<`JsonFileOptions`, `"obj"`\>
 
 ## Properties
 
-### allowComments
+### allowComments?
 
-• `Optional` `Readonly` **allowComments**: `boolean`
+> `readonly` `optional` **allowComments**: `boolean`
 
 Allow the use of comments in this file.
 
-**`Default`**
+#### Default
 
 ```ts
 - false for .json files, true for .json5 and .jsonc files
@@ -38,19 +26,19 @@ Allow the use of comments in this file.
 
 #### Inherited from
 
-Omit.allowComments
+`Omit.allowComments`
 
-___
+***
 
-### committed
+### committed?
 
-• `Optional` `Readonly` **committed**: `boolean`
+> `readonly` `optional` **committed**: `boolean`
 
 Indicates whether this file should be committed to git or ignored. By
 default, all generated files are committed and anti-tamper is used to
 protect against manual modifications.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -58,23 +46,23 @@ true
 
 #### Inherited from
 
-Omit.committed
+`Omit.committed`
 
-___
+***
 
 ### config
 
-• `Readonly` **config**: `IGraphQLConfig`
+> `readonly` **config**: `IGraphQLConfig`
 
-___
+***
 
-### editGitignore
+### editGitignore?
 
-• `Optional` `Readonly` **editGitignore**: `boolean`
+> `readonly` `optional` **editGitignore**: `boolean`
 
 Update the project's .gitignore file
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -82,17 +70,17 @@ true
 
 #### Inherited from
 
-Omit.editGitignore
+`Omit.editGitignore`
 
-___
+***
 
-### executable
+### executable?
 
-• `Optional` `Readonly` **executable**: `boolean`
+> `readonly` `optional` **executable**: `boolean`
 
 Whether the generated file should be marked as executable.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -100,17 +88,17 @@ false
 
 #### Inherited from
 
-Omit.executable
+`Omit.executable`
 
-___
+***
 
-### marker
+### marker?
 
-• `Optional` `Readonly` **marker**: `boolean`
+> `readonly` `optional` **marker**: `boolean`
 
 Adds the projen marker to the file.
 
-**`Default`**
+#### Default
 
 ```ts
 - marker will be included as long as the project is not ejected
@@ -118,17 +106,17 @@ Adds the projen marker to the file.
 
 #### Inherited from
 
-Omit.marker
+`Omit.marker`
 
-___
+***
 
-### newline
+### newline?
 
-• `Optional` `Readonly` **newline**: `boolean`
+> `readonly` `optional` **newline**: `boolean`
 
 Adds a newline at the end of the file.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -136,17 +124,17 @@ true
 
 #### Inherited from
 
-Omit.newline
+`Omit.newline`
 
-___
+***
 
-### omitEmpty
+### omitEmpty?
 
-• `Optional` `Readonly` **omitEmpty**: `boolean`
+> `readonly` `optional` **omitEmpty**: `boolean`
 
 Omits empty objects and arrays.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -154,17 +142,17 @@ false
 
 #### Inherited from
 
-Omit.omitEmpty
+`Omit.omitEmpty`
 
-___
+***
 
-### readonly
+### readonly?
 
-• `Optional` `Readonly` **readonly**: `boolean`
+> `readonly` `optional` **readonly**: `boolean`
 
 Whether the generated file should be readonly.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -172,4 +160,4 @@ true
 
 #### Inherited from
 
-Omit.readonly
+`Omit.readonly`

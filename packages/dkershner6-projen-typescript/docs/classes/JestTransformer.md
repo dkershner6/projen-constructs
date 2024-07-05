@@ -1,54 +1,26 @@
-[dkershner6-projen-typescript](../README.md) / [Exports](../modules.md) / JestTransformer
+[**dkershner6-projen-typescript**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-typescript](../globals.md) / JestTransformer
 
 # Class: JestTransformer
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`JestTransformer`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](JestTransformer.md#constructor)
-
-### Properties
-
-- [\_modulesToTransform](JestTransformer.md#_modulestotransform)
-- [node](JestTransformer.md#node)
-- [project](JestTransformer.md#project)
-- [ESM\_MODULES\_TO\_TRANSFORM](JestTransformer.md#esm_modules_to_transform)
-
-### Accessors
-
-- [modulesToTransform](JestTransformer.md#modulestotransform)
-
-### Methods
-
-- [addModulesToTransform](JestTransformer.md#addmodulestotransform)
-- [buildTransformIgnorePatterns](JestTransformer.md#buildtransformignorepatterns)
-- [postSynthesize](JestTransformer.md#postsynthesize)
-- [preSynthesize](JestTransformer.md#presynthesize)
-- [removeModulesToTransform](JestTransformer.md#removemodulestotransform)
-- [synthesize](JestTransformer.md#synthesize)
-- [toString](JestTransformer.md#tostring)
-- [isComponent](JestTransformer.md#iscomponent)
-- [isConstruct](JestTransformer.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new JestTransformer()
 
-• **new JestTransformer**(`project`, `options?`): [`JestTransformer`](JestTransformer.md)
+> **new JestTransformer**(`project`, `options`?): [`JestTransformer`](JestTransformer.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options?` | [`Node20TypeScriptProjectJestOptions`](../interfaces/Node20TypeScriptProjectJestOptions.md) |
+• **project**: `TypeScriptProject`
+
+• **options?**: [`Node20TypeScriptProjectJestOptions`](../interfaces/Node20TypeScriptProjectJestOptions.md)
 
 #### Returns
 
@@ -56,47 +28,41 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
-### \_modulesToTransform
-
-• `Private` `Readonly` **\_modulesToTransform**: `Set`\<`string`\>
-
-___
-
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### ESM\_MODULES\_TO\_TRANSFORM
 
-▪ `Static` **ESM\_MODULES\_TO\_TRANSFORM**: `string`[]
+> `static` **ESM\_MODULES\_TO\_TRANSFORM**: `string`[]
 
 ## Accessors
 
 ### modulesToTransform
 
-• `get` **modulesToTransform**(): `Set`\<`string`\>
+> `get` **modulesToTransform**(): `Set`\<`string`\>
 
 #### Returns
 
@@ -104,41 +70,23 @@ ___
 
 ## Methods
 
-### addModulesToTransform
+### addModulesToTransform()
 
-▸ **addModulesToTransform**(`...modules`): `void`
+> **addModulesToTransform**(...`modules`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...modules` | `string`[] |
+• ...**modules**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### buildTransformIgnorePatterns
+### postSynthesize()
 
-▸ **buildTransformIgnorePatterns**(`nodeModulesToTransform?`): `string`[]
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `nodeModulesToTransform?` | `string`[] |
-
-#### Returns
-
-`string`[]
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -148,13 +96,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -164,29 +112,27 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### removeModulesToTransform
+### removeModulesToTransform()
 
-▸ **removeModulesToTransform**(`...modules`): `void`
+> **removeModulesToTransform**(...`modules`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...modules` | `string`[] |
+• ...**modules**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -196,13 +142,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -212,35 +158,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -260,16 +204,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

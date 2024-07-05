@@ -156,6 +156,13 @@
         "cwd": "packages/dkershner6-projen-sst-app"
       }
     },
+    "docgen:remove": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen docgen:remove",
+        "cwd": "packages/dkershner6-projen-sst-app"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

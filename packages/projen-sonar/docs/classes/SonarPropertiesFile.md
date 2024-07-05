@@ -1,55 +1,26 @@
-[projen-sonar](../README.md) / [Exports](../modules.md) / SonarPropertiesFile
+[**projen-sonar**](../README.md) • **Docs**
+
+***
+
+[projen-sonar](../globals.md) / SonarPropertiesFile
 
 # Class: SonarPropertiesFile
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`SonarPropertiesFile`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SonarPropertiesFile.md#constructor)
-
-### Properties
-
-- [node](SonarPropertiesFile.md#node)
-- [obj](SonarPropertiesFile.md#obj)
-- [project](SonarPropertiesFile.md#project)
-- [JAVASCRIPT\_LCOV\_REPORT\_PATHS\_FIELD\_NAME](SonarPropertiesFile.md#javascript_lcov_report_paths_field_name)
-- [PROJECT\_KEY\_FIELD\_NAME](SonarPropertiesFile.md#project_key_field_name)
-
-### Accessors
-
-- [javascriptLcovReportPaths](SonarPropertiesFile.md#javascriptlcovreportpaths)
-- [projectKey](SonarPropertiesFile.md#projectkey)
-
-### Methods
-
-- [addJavascriptLcovReportPaths](SonarPropertiesFile.md#addjavascriptlcovreportpaths)
-- [postSynthesize](SonarPropertiesFile.md#postsynthesize)
-- [preSynthesize](SonarPropertiesFile.md#presynthesize)
-- [removeJavascriptLcovReportPaths](SonarPropertiesFile.md#removejavascriptlcovreportpaths)
-- [synthesize](SonarPropertiesFile.md#synthesize)
-- [toString](SonarPropertiesFile.md#tostring)
-- [isComponent](SonarPropertiesFile.md#iscomponent)
-- [isConstruct](SonarPropertiesFile.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new SonarPropertiesFile()
 
-• **new SonarPropertiesFile**(`project`, `options`): [`SonarPropertiesFile`](SonarPropertiesFile.md)
+> **new SonarPropertiesFile**(`project`, `options`): [`SonarPropertiesFile`](SonarPropertiesFile.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `Project` |
-| `options` | `IniFileOptions` |
+• **project**: `Project`
+
+• **options**: `IniFileOptions`
 
 #### Returns
 
@@ -57,67 +28,77 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### obj
 
-• `Readonly` **obj**: `Record`\<`string`, `string`\>
+> `readonly` **obj**: `Record`\<`string`, `string`\>
 
 Escape Hatch
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
-___
+***
 
 ### JAVASCRIPT\_LCOV\_REPORT\_PATHS\_FIELD\_NAME
 
-▪ `Static` `Readonly` **JAVASCRIPT\_LCOV\_REPORT\_PATHS\_FIELD\_NAME**: ``"sonar.javascript.lcov.reportPaths"``
+> `readonly` `static` **JAVASCRIPT\_LCOV\_REPORT\_PATHS\_FIELD\_NAME**: `"sonar.javascript.lcov.reportPaths"` = `"sonar.javascript.lcov.reportPaths"`
 
-___
+***
 
 ### PROJECT\_KEY\_FIELD\_NAME
 
-▪ `Static` `Readonly` **PROJECT\_KEY\_FIELD\_NAME**: ``"sonar.projectKey"``
+> `readonly` `static` **PROJECT\_KEY\_FIELD\_NAME**: `"sonar.projectKey"` = `"sonar.projectKey"`
 
 ## Accessors
 
 ### javascriptLcovReportPaths
 
-• `get` **javascriptLcovReportPaths**(): `string`[]
+> `get` **javascriptLcovReportPaths**(): `string`[]
 
 #### Returns
 
 `string`[]
 
-___
+***
 
 ### projectKey
 
-• `get` **projectKey**(): `string`
+> `get` **projectKey**(): `string`
 
 Get projectKey for your Sonar project.
+
+> `set` **projectKey**(`projectKey`): `void`
+
+Set projectKey for your Sonar project.
+
+#### Parameters
+
+• **projectKey**: `string`
+
+The project key to add to the sonar-project.properties file.
 
 #### Returns
 
@@ -125,41 +106,25 @@ Get projectKey for your Sonar project.
 
 The project key from the sonar-project.properties file.
 
-• `set` **projectKey**(`projectKey`): `void`
-
-Set projectKey for your Sonar project.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `projectKey` | `string` | The project key to add to the sonar-project.properties file. |
-
-#### Returns
-
-`void`
-
 ## Methods
 
-### addJavascriptLcovReportPaths
+### addJavascriptLcovReportPaths()
 
-▸ **addJavascriptLcovReportPaths**(`...paths`): `void`
+> **addJavascriptLcovReportPaths**(...`paths`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...paths` | `string`[] |
+• ...**paths**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -169,13 +134,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -185,29 +150,27 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### removeJavascriptLcovReportPaths
+### removeJavascriptLcovReportPaths()
 
-▸ **removeJavascriptLcovReportPaths**(`...paths`): `void`
+> **removeJavascriptLcovReportPaths**(...`paths`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...paths` | `string`[] |
+• ...**paths**: `string`[]
 
 #### Returns
 
 `void`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -217,13 +180,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -233,35 +196,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -281,16 +242,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

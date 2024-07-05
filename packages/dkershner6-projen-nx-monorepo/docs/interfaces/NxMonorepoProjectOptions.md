@@ -1,178 +1,28 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / NxMonorepoProjectOptions
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / NxMonorepoProjectOptions
 
 # Interface: NxMonorepoProjectOptions
 
 Configuration options for the MonorepoTsProject.
 
-## Hierarchy
+## Extends
 
 - [`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md)
 
-  ↳ **`NxMonorepoProjectOptions`**
-
-## Table of contents
-
-### Properties
-
-- [allowLibraryDependencies](NxMonorepoProjectOptions.md#allowlibrarydependencies)
-- [artifactsDirectory](NxMonorepoProjectOptions.md#artifactsdirectory)
-- [authorEmail](NxMonorepoProjectOptions.md#authoremail)
-- [authorName](NxMonorepoProjectOptions.md#authorname)
-- [authorOrganization](NxMonorepoProjectOptions.md#authororganization)
-- [authorUrl](NxMonorepoProjectOptions.md#authorurl)
-- [autoApproveOptions](NxMonorepoProjectOptions.md#autoapproveoptions)
-- [autoApproveUpgrades](NxMonorepoProjectOptions.md#autoapproveupgrades)
-- [autoDetectBin](NxMonorepoProjectOptions.md#autodetectbin)
-- [autoMerge](NxMonorepoProjectOptions.md#automerge)
-- [autoMergeOptions](NxMonorepoProjectOptions.md#automergeoptions)
-- [bin](NxMonorepoProjectOptions.md#bin)
-- [bugsEmail](NxMonorepoProjectOptions.md#bugsemail)
-- [bugsUrl](NxMonorepoProjectOptions.md#bugsurl)
-- [buildWorkflow](NxMonorepoProjectOptions.md#buildworkflow)
-- [buildWorkflowOptions](NxMonorepoProjectOptions.md#buildworkflowoptions)
-- [buildWorkflowTriggers](NxMonorepoProjectOptions.md#buildworkflowtriggers)
-- [bundledDeps](NxMonorepoProjectOptions.md#bundleddeps)
-- [bundlerOptions](NxMonorepoProjectOptions.md#bundleroptions)
-- [checkLicenses](NxMonorepoProjectOptions.md#checklicenses)
-- [clobber](NxMonorepoProjectOptions.md#clobber)
-- [codeArtifactOptions](NxMonorepoProjectOptions.md#codeartifactoptions)
-- [codeCov](NxMonorepoProjectOptions.md#codecov)
-- [codeCovTokenSecret](NxMonorepoProjectOptions.md#codecovtokensecret)
-- [commitGenerated](NxMonorepoProjectOptions.md#commitgenerated)
-- [copyrightOwner](NxMonorepoProjectOptions.md#copyrightowner)
-- [copyrightPeriod](NxMonorepoProjectOptions.md#copyrightperiod)
-- [defaultReleaseBranch](NxMonorepoProjectOptions.md#defaultreleasebranch)
-- [dependabot](NxMonorepoProjectOptions.md#dependabot)
-- [dependabotOptions](NxMonorepoProjectOptions.md#dependabotoptions)
-- [deps](NxMonorepoProjectOptions.md#deps)
-- [depsUpgrade](NxMonorepoProjectOptions.md#depsupgrade)
-- [depsUpgradeOptions](NxMonorepoProjectOptions.md#depsupgradeoptions)
-- [description](NxMonorepoProjectOptions.md#description)
-- [devContainer](NxMonorepoProjectOptions.md#devcontainer)
-- [devDeps](NxMonorepoProjectOptions.md#devdeps)
-- [disableNodeWarnings](NxMonorepoProjectOptions.md#disablenodewarnings)
-- [disableTsconfig](NxMonorepoProjectOptions.md#disabletsconfig)
-- [disableTsconfigDev](NxMonorepoProjectOptions.md#disabletsconfigdev)
-- [docgen](NxMonorepoProjectOptions.md#docgen)
-- [docsDirectory](NxMonorepoProjectOptions.md#docsdirectory)
-- [entrypoint](NxMonorepoProjectOptions.md#entrypoint)
-- [entrypointTypes](NxMonorepoProjectOptions.md#entrypointtypes)
-- [eslint](NxMonorepoProjectOptions.md#eslint)
-- [eslintOptions](NxMonorepoProjectOptions.md#eslintoptions)
-- [gitIgnoreOptions](NxMonorepoProjectOptions.md#gitignoreoptions)
-- [gitOptions](NxMonorepoProjectOptions.md#gitoptions)
-- [github](NxMonorepoProjectOptions.md#github)
-- [githubOptions](NxMonorepoProjectOptions.md#githuboptions)
-- [gitignore](NxMonorepoProjectOptions.md#gitignore)
-- [gitpod](NxMonorepoProjectOptions.md#gitpod)
-- [homepage](NxMonorepoProjectOptions.md#homepage)
-- [jest](NxMonorepoProjectOptions.md#jest)
-- [jestOptions](NxMonorepoProjectOptions.md#jestoptions)
-- [jsiiReleaseVersion](NxMonorepoProjectOptions.md#jsiireleaseversion)
-- [keywords](NxMonorepoProjectOptions.md#keywords)
-- [libdir](NxMonorepoProjectOptions.md#libdir)
-- [license](NxMonorepoProjectOptions.md#license)
-- [licensed](NxMonorepoProjectOptions.md#licensed)
-- [logging](NxMonorepoProjectOptions.md#logging)
-- [majorVersion](NxMonorepoProjectOptions.md#majorversion)
-- [maxNodeVersion](NxMonorepoProjectOptions.md#maxnodeversion)
-- [mergify](NxMonorepoProjectOptions.md#mergify)
-- [mergifyOptions](NxMonorepoProjectOptions.md#mergifyoptions)
-- [minMajorVersion](NxMonorepoProjectOptions.md#minmajorversion)
-- [minNodeVersion](NxMonorepoProjectOptions.md#minnodeversion)
-- [mutableBuild](NxMonorepoProjectOptions.md#mutablebuild)
-- [name](NxMonorepoProjectOptions.md#name)
-- [npmAccess](NxMonorepoProjectOptions.md#npmaccess)
-- [npmDistTag](NxMonorepoProjectOptions.md#npmdisttag)
-- [npmIgnoreOptions](NxMonorepoProjectOptions.md#npmignoreoptions)
-- [npmProvenance](NxMonorepoProjectOptions.md#npmprovenance)
-- [npmRegistry](NxMonorepoProjectOptions.md#npmregistry)
-- [npmRegistryUrl](NxMonorepoProjectOptions.md#npmregistryurl)
-- [npmTokenSecret](NxMonorepoProjectOptions.md#npmtokensecret)
-- [npmignore](NxMonorepoProjectOptions.md#npmignore)
-- [npmignoreEnabled](NxMonorepoProjectOptions.md#npmignoreenabled)
-- [outdir](NxMonorepoProjectOptions.md#outdir)
-- [package](NxMonorepoProjectOptions.md#package)
-- [packageManager](NxMonorepoProjectOptions.md#packagemanager)
-- [packageName](NxMonorepoProjectOptions.md#packagename)
-- [parent](NxMonorepoProjectOptions.md#parent)
-- [peerDependencyOptions](NxMonorepoProjectOptions.md#peerdependencyoptions)
-- [peerDeps](NxMonorepoProjectOptions.md#peerdeps)
-- [pnpmVersion](NxMonorepoProjectOptions.md#pnpmversion)
-- [postBuildSteps](NxMonorepoProjectOptions.md#postbuildsteps)
-- [prerelease](NxMonorepoProjectOptions.md#prerelease)
-- [prettier](NxMonorepoProjectOptions.md#prettier)
-- [prettierOptions](NxMonorepoProjectOptions.md#prettieroptions)
-- [projectType](NxMonorepoProjectOptions.md#projecttype)
-- [projenCommand](NxMonorepoProjectOptions.md#projencommand)
-- [projenCredentials](NxMonorepoProjectOptions.md#projencredentials)
-- [projenDevDependency](NxMonorepoProjectOptions.md#projendevdependency)
-- [projenTokenSecret](NxMonorepoProjectOptions.md#projentokensecret)
-- [projenVersion](NxMonorepoProjectOptions.md#projenversion)
-- [projenrcJs](NxMonorepoProjectOptions.md#projenrcjs)
-- [projenrcJsOptions](NxMonorepoProjectOptions.md#projenrcjsoptions)
-- [projenrcJson](NxMonorepoProjectOptions.md#projenrcjson)
-- [projenrcJsonOptions](NxMonorepoProjectOptions.md#projenrcjsonoptions)
-- [projenrcTs](NxMonorepoProjectOptions.md#projenrcts)
-- [projenrcTsOptions](NxMonorepoProjectOptions.md#projenrctsoptions)
-- [publishDryRun](NxMonorepoProjectOptions.md#publishdryrun)
-- [publishTasks](NxMonorepoProjectOptions.md#publishtasks)
-- [pullRequestTemplate](NxMonorepoProjectOptions.md#pullrequesttemplate)
-- [pullRequestTemplateContents](NxMonorepoProjectOptions.md#pullrequesttemplatecontents)
-- [readme](NxMonorepoProjectOptions.md#readme)
-- [releasableCommits](NxMonorepoProjectOptions.md#releasablecommits)
-- [release](NxMonorepoProjectOptions.md#release)
-- [releaseBranches](NxMonorepoProjectOptions.md#releasebranches)
-- [releaseEveryCommit](NxMonorepoProjectOptions.md#releaseeverycommit)
-- [releaseFailureIssue](NxMonorepoProjectOptions.md#releasefailureissue)
-- [releaseFailureIssueLabel](NxMonorepoProjectOptions.md#releasefailureissuelabel)
-- [releaseSchedule](NxMonorepoProjectOptions.md#releaseschedule)
-- [releaseTagPrefix](NxMonorepoProjectOptions.md#releasetagprefix)
-- [releaseToNpm](NxMonorepoProjectOptions.md#releasetonpm)
-- [releaseTrigger](NxMonorepoProjectOptions.md#releasetrigger)
-- [releaseWorkflow](NxMonorepoProjectOptions.md#releaseworkflow)
-- [releaseWorkflowName](NxMonorepoProjectOptions.md#releaseworkflowname)
-- [releaseWorkflowSetupSteps](NxMonorepoProjectOptions.md#releaseworkflowsetupsteps)
-- [renovatebot](NxMonorepoProjectOptions.md#renovatebot)
-- [renovatebotOptions](NxMonorepoProjectOptions.md#renovatebotoptions)
-- [repository](NxMonorepoProjectOptions.md#repository)
-- [repositoryDirectory](NxMonorepoProjectOptions.md#repositorydirectory)
-- [sampleCode](NxMonorepoProjectOptions.md#samplecode)
-- [scopedPackagesOptions](NxMonorepoProjectOptions.md#scopedpackagesoptions)
-- [scripts](NxMonorepoProjectOptions.md#scripts)
-- [srcdir](NxMonorepoProjectOptions.md#srcdir)
-- [stability](NxMonorepoProjectOptions.md#stability)
-- [stale](NxMonorepoProjectOptions.md#stale)
-- [staleOptions](NxMonorepoProjectOptions.md#staleoptions)
-- [testdir](NxMonorepoProjectOptions.md#testdir)
-- [tsJestOptions](NxMonorepoProjectOptions.md#tsjestoptions)
-- [tsconfig](NxMonorepoProjectOptions.md#tsconfig)
-- [tsconfigDev](NxMonorepoProjectOptions.md#tsconfigdev)
-- [tsconfigDevFile](NxMonorepoProjectOptions.md#tsconfigdevfile)
-- [typescriptVersion](NxMonorepoProjectOptions.md#typescriptversion)
-- [versionrcOptions](NxMonorepoProjectOptions.md#versionrcoptions)
-- [vscode](NxMonorepoProjectOptions.md#vscode)
-- [workflowBootstrapSteps](NxMonorepoProjectOptions.md#workflowbootstrapsteps)
-- [workflowContainerImage](NxMonorepoProjectOptions.md#workflowcontainerimage)
-- [workflowGitIdentity](NxMonorepoProjectOptions.md#workflowgitidentity)
-- [workflowNodeVersion](NxMonorepoProjectOptions.md#workflownodeversion)
-- [workflowPackageCache](NxMonorepoProjectOptions.md#workflowpackagecache)
-- [workflowRunsOn](NxMonorepoProjectOptions.md#workflowrunson)
-- [workflowRunsOnGroup](NxMonorepoProjectOptions.md#workflowrunsongroup)
-- [workspaceConfig](NxMonorepoProjectOptions.md#workspaceconfig)
-- [yarnBerryOptions](NxMonorepoProjectOptions.md#yarnberryoptions)
-
 ## Properties
 
-### allowLibraryDependencies
+### allowLibraryDependencies?
 
-• `Optional` `Readonly` **allowLibraryDependencies**: `boolean`
+> `readonly` `optional` **allowLibraryDependencies**: `boolean`
 
 Allow the project to include `peerDependencies` and `bundledDependencies`.
 This is normally only allowed for libraries. For apps, there's no meaning
 for specifying these.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -180,17 +30,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[allowLibraryDependencies](MonorepoTsProjectOptions.md#allowlibrarydependencies)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`allowLibraryDependencies`](MonorepoTsProjectOptions.md#allowlibrarydependencies)
 
-___
+***
 
-### artifactsDirectory
+### artifactsDirectory?
 
-• `Optional` `Readonly` **artifactsDirectory**: `string`
+> `readonly` `optional` **artifactsDirectory**: `string`
 
 A directory which will contain build artifacts.
 
-**`Default`**
+#### Default
 
 ```ts
 "dist"
@@ -198,65 +48,65 @@ A directory which will contain build artifacts.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[artifactsDirectory](MonorepoTsProjectOptions.md#artifactsdirectory)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`artifactsDirectory`](MonorepoTsProjectOptions.md#artifactsdirectory)
 
-___
+***
 
-### authorEmail
+### authorEmail?
 
-• `Optional` `Readonly` **authorEmail**: `string`
+> `readonly` `optional` **authorEmail**: `string`
 
 Author's e-mail
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[authorEmail](MonorepoTsProjectOptions.md#authoremail)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`authorEmail`](MonorepoTsProjectOptions.md#authoremail)
 
-___
+***
 
-### authorName
+### authorName?
 
-• `Optional` `Readonly` **authorName**: `string`
+> `readonly` `optional` **authorName**: `string`
 
 Author's name
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[authorName](MonorepoTsProjectOptions.md#authorname)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`authorName`](MonorepoTsProjectOptions.md#authorname)
 
-___
+***
 
-### authorOrganization
+### authorOrganization?
 
-• `Optional` `Readonly` **authorOrganization**: `boolean`
+> `readonly` `optional` **authorOrganization**: `boolean`
 
 Is the author an organization
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[authorOrganization](MonorepoTsProjectOptions.md#authororganization)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`authorOrganization`](MonorepoTsProjectOptions.md#authororganization)
 
-___
+***
 
-### authorUrl
+### authorUrl?
 
-• `Optional` `Readonly` **authorUrl**: `string`
+> `readonly` `optional` **authorUrl**: `string`
 
 Author's URL / Website
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[authorUrl](MonorepoTsProjectOptions.md#authorurl)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`authorUrl`](MonorepoTsProjectOptions.md#authorurl)
 
-___
+***
 
-### autoApproveOptions
+### autoApproveOptions?
 
-• `Optional` `Readonly` **autoApproveOptions**: `AutoApproveOptions`
+> `readonly` `optional` **autoApproveOptions**: `AutoApproveOptions`
 
 Enable and configure the 'auto approve' workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 - auto approve is disabled
@@ -264,20 +114,20 @@ Enable and configure the 'auto approve' workflow.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[autoApproveOptions](MonorepoTsProjectOptions.md#autoapproveoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`autoApproveOptions`](MonorepoTsProjectOptions.md#autoapproveoptions)
 
-___
+***
 
-### autoApproveUpgrades
+### autoApproveUpgrades?
 
-• `Optional` `Readonly` **autoApproveUpgrades**: `boolean`
+> `readonly` `optional` **autoApproveUpgrades**: `boolean`
 
 Automatically approve deps upgrade PRs, allowing them to be
 merged by mergify (if configued).
 
 Throw if set to true but `autoApproveOptions` are not defined.
 
-**`Default`**
+#### Default
 
 ```ts
 - true
@@ -285,18 +135,18 @@ Throw if set to true but `autoApproveOptions` are not defined.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[autoApproveUpgrades](MonorepoTsProjectOptions.md#autoapproveupgrades)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`autoApproveUpgrades`](MonorepoTsProjectOptions.md#autoapproveupgrades)
 
-___
+***
 
-### autoDetectBin
+### autoDetectBin?
 
-• `Optional` `Readonly` **autoDetectBin**: `boolean`
+> `readonly` `optional` **autoDetectBin**: `boolean`
 
 Automatically add all executables under the `bin` directory to your
 `package.json` file under the `bin` section.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -304,18 +154,18 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[autoDetectBin](MonorepoTsProjectOptions.md#autodetectbin)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`autoDetectBin`](MonorepoTsProjectOptions.md#autodetectbin)
 
-___
+***
 
-### autoMerge
+### autoMerge?
 
-• `Optional` `Readonly` **autoMerge**: `boolean`
+> `readonly` `optional` **autoMerge**: `boolean`
 
 Enable automatic merging on GitHub. Has no effect if `github.mergify`
 is set to false.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -323,30 +173,30 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[autoMerge](MonorepoTsProjectOptions.md#automerge)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`autoMerge`](MonorepoTsProjectOptions.md#automerge)
 
-___
+***
 
-### autoMergeOptions
+### autoMergeOptions?
 
-• `Optional` `Readonly` **autoMergeOptions**: `AutoMergeOptions`
+> `readonly` `optional` **autoMergeOptions**: `AutoMergeOptions`
 
 Configure options for automatic merging on GitHub. Has no effect if
 `github.mergify` or `autoMerge` is set to false.
 
-**`Default`**
+#### Default
 
 - see defaults in `AutoMergeOptions`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[autoMergeOptions](MonorepoTsProjectOptions.md#automergeoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`autoMergeOptions`](MonorepoTsProjectOptions.md#automergeoptions)
 
-___
+***
 
-### bin
+### bin?
 
-• `Optional` `Readonly` **bin**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **bin**: `Record`\<`string`, `string`\>
 
 Binary programs vended with your module.
 
@@ -356,41 +206,41 @@ executable file under `bin` will automatically be added to this section.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[bin](MonorepoTsProjectOptions.md#bin)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`bin`](MonorepoTsProjectOptions.md#bin)
 
-___
+***
 
-### bugsEmail
+### bugsEmail?
 
-• `Optional` `Readonly` **bugsEmail**: `string`
+> `readonly` `optional` **bugsEmail**: `string`
 
 The email address to which issues should be reported.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[bugsEmail](MonorepoTsProjectOptions.md#bugsemail)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`bugsEmail`](MonorepoTsProjectOptions.md#bugsemail)
 
-___
+***
 
-### bugsUrl
+### bugsUrl?
 
-• `Optional` `Readonly` **bugsUrl**: `string`
+> `readonly` `optional` **bugsUrl**: `string`
 
 The url to your project's issue tracker.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[bugsUrl](MonorepoTsProjectOptions.md#bugsurl)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`bugsUrl`](MonorepoTsProjectOptions.md#bugsurl)
 
-___
+***
 
-### buildWorkflow
+### buildWorkflow?
 
-• `Optional` `Readonly` **buildWorkflow**: `boolean`
+> `readonly` `optional` **buildWorkflow**: `boolean`
 
 Define a GitHub workflow for building PRs.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
@@ -398,47 +248,47 @@ Define a GitHub workflow for building PRs.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[buildWorkflow](MonorepoTsProjectOptions.md#buildworkflow)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`buildWorkflow`](MonorepoTsProjectOptions.md#buildworkflow)
 
-___
+***
 
-### buildWorkflowOptions
+### buildWorkflowOptions?
 
-• `Optional` `Readonly` **buildWorkflowOptions**: `BuildWorkflowOptions`
+> `readonly` `optional` **buildWorkflowOptions**: `BuildWorkflowOptions`
 
 Options for PR build workflow.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[buildWorkflowOptions](MonorepoTsProjectOptions.md#buildworkflowoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`buildWorkflowOptions`](MonorepoTsProjectOptions.md#buildworkflowoptions)
 
-___
+***
 
-### buildWorkflowTriggers
+### ~~buildWorkflowTriggers?~~
 
-• `Optional` `Readonly` **buildWorkflowTriggers**: `Triggers`
+> `readonly` `optional` **buildWorkflowTriggers**: `Triggers`
 
 Build workflow triggers
 
-**`Default`**
+#### Default
 
 ```ts
 "{ pullRequest: {}, workflowDispatch: {} }"
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 - Use `buildWorkflowOptions.workflowTriggers`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[buildWorkflowTriggers](MonorepoTsProjectOptions.md#buildworkflowtriggers)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`buildWorkflowTriggers`](MonorepoTsProjectOptions.md#buildworkflowtriggers)
 
-___
+***
 
-### bundledDeps
+### bundledDeps?
 
-• `Optional` `Readonly` **bundledDeps**: `string`[]
+> `readonly` `optional` **bundledDeps**: `string`[]
 
 List of dependencies to bundle into this module. These modules will be
 added both to the `dependencies` section and `bundledDependencies` section of
@@ -453,31 +303,31 @@ this will be what you `package.json` will eventually include.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[bundledDeps](MonorepoTsProjectOptions.md#bundleddeps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`bundledDeps`](MonorepoTsProjectOptions.md#bundleddeps)
 
-___
+***
 
-### bundlerOptions
+### bundlerOptions?
 
-• `Optional` `Readonly` **bundlerOptions**: `BundlerOptions`
+> `readonly` `optional` **bundlerOptions**: `BundlerOptions`
 
 Options for `Bundler`.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[bundlerOptions](MonorepoTsProjectOptions.md#bundleroptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`bundlerOptions`](MonorepoTsProjectOptions.md#bundleroptions)
 
-___
+***
 
-### checkLicenses
+### checkLicenses?
 
-• `Optional` `Readonly` **checkLicenses**: `LicenseCheckerOptions`
+> `readonly` `optional` **checkLicenses**: `LicenseCheckerOptions`
 
 Configure which licenses should be deemed acceptable for use by dependencies
 
 This setting will cause the build to fail, if any prohibited or not allowed licenses ares encountered.
 
-**`Default`**
+#### Default
 
 ```ts
 - no license checks are run during the build and all licenses will be accepted
@@ -485,17 +335,17 @@ This setting will cause the build to fail, if any prohibited or not allowed lice
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[checkLicenses](MonorepoTsProjectOptions.md#checklicenses)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`checkLicenses`](MonorepoTsProjectOptions.md#checklicenses)
 
-___
+***
 
-### clobber
+### clobber?
 
-• `Optional` `Readonly` **clobber**: `boolean`
+> `readonly` `optional` **clobber**: `boolean`
 
 Add a `clobber` task which resets the repo to origin.
 
-**`Default`**
+#### Default
 
 ```ts
 - true, but false for subprojects
@@ -503,18 +353,18 @@ Add a `clobber` task which resets the repo to origin.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[clobber](MonorepoTsProjectOptions.md#clobber)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`clobber`](MonorepoTsProjectOptions.md#clobber)
 
-___
+***
 
-### codeArtifactOptions
+### codeArtifactOptions?
 
-• `Optional` `Readonly` **codeArtifactOptions**: `CodeArtifactOptions`
+> `readonly` `optional` **codeArtifactOptions**: `CodeArtifactOptions`
 
 Options for npm packages using AWS CodeArtifact.
 This is required if publishing packages to, or installing scoped packages from AWS CodeArtifact
 
-**`Default`**
+#### Default
 
 ```ts
 - undefined
@@ -522,19 +372,19 @@ This is required if publishing packages to, or installing scoped packages from A
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[codeArtifactOptions](MonorepoTsProjectOptions.md#codeartifactoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`codeArtifactOptions`](MonorepoTsProjectOptions.md#codeartifactoptions)
 
-___
+***
 
-### codeCov
+### codeCov?
 
-• `Optional` `Readonly` **codeCov**: `boolean`
+> `readonly` `optional` **codeCov**: `boolean`
 
 Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/
 Uses codecov/codecov-action@v4
 A secret is required for private repos. Configured with `@codeCovTokenSecret`
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -542,18 +392,18 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[codeCov](MonorepoTsProjectOptions.md#codecov)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`codeCov`](MonorepoTsProjectOptions.md#codecov)
 
-___
+***
 
-### codeCovTokenSecret
+### codeCovTokenSecret?
 
-• `Optional` `Readonly` **codeCovTokenSecret**: `string`
+> `readonly` `optional` **codeCovTokenSecret**: `string`
 
 Define the secret name for a specified https://codecov.io/ token
 A secret is required to send coverage for private repositories
 
-**`Default`**
+#### Default
 
 ```ts
 - if this option is not specified, only public repositories are supported
@@ -561,17 +411,17 @@ A secret is required to send coverage for private repositories
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[codeCovTokenSecret](MonorepoTsProjectOptions.md#codecovtokensecret)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`codeCovTokenSecret`](MonorepoTsProjectOptions.md#codecovtokensecret)
 
-___
+***
 
-### commitGenerated
+### commitGenerated?
 
-• `Optional` `Readonly` **commitGenerated**: `boolean`
+> `readonly` `optional` **commitGenerated**: `boolean`
 
 Whether to commit the managed files by default.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -579,33 +429,33 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[commitGenerated](MonorepoTsProjectOptions.md#commitgenerated)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`commitGenerated`](MonorepoTsProjectOptions.md#commitgenerated)
 
-___
+***
 
-### copyrightOwner
+### copyrightOwner?
 
-• `Optional` `Readonly` **copyrightOwner**: `string`
+> `readonly` `optional` **copyrightOwner**: `string`
 
 License copyright owner.
 
-**`Default`**
+#### Default
 
 - defaults to the value of authorName or "" if `authorName` is undefined.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[copyrightOwner](MonorepoTsProjectOptions.md#copyrightowner)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`copyrightOwner`](MonorepoTsProjectOptions.md#copyrightowner)
 
-___
+***
 
-### copyrightPeriod
+### copyrightPeriod?
 
-• `Optional` `Readonly` **copyrightPeriod**: `string`
+> `readonly` `optional` **copyrightPeriod**: `string`
 
 The copyright years to put in the LICENSE file.
 
-**`Default`**
+#### Default
 
 ```ts
 - current year
@@ -613,17 +463,17 @@ The copyright years to put in the LICENSE file.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[copyrightPeriod](MonorepoTsProjectOptions.md#copyrightperiod)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`copyrightPeriod`](MonorepoTsProjectOptions.md#copyrightperiod)
 
-___
+***
 
 ### defaultReleaseBranch
 
-• `Readonly` **defaultReleaseBranch**: `string`
+> `readonly` **defaultReleaseBranch**: `string`
 
 The name of the main release branch.
 
-**`Default`**
+#### Default
 
 ```ts
 "main"
@@ -631,18 +481,18 @@ The name of the main release branch.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[defaultReleaseBranch](MonorepoTsProjectOptions.md#defaultreleasebranch)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`defaultReleaseBranch`](MonorepoTsProjectOptions.md#defaultreleasebranch)
 
-___
+***
 
-### dependabot
+### dependabot?
 
-• `Optional` `Readonly` **dependabot**: `boolean`
+> `readonly` `optional` **dependabot**: `boolean`
 
 Use dependabot to handle dependency upgrades.
 Cannot be used in conjunction with `depsUpgrade`.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -650,17 +500,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[dependabot](MonorepoTsProjectOptions.md#dependabot)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`dependabot`](MonorepoTsProjectOptions.md#dependabot)
 
-___
+***
 
-### dependabotOptions
+### dependabotOptions?
 
-• `Optional` `Readonly` **dependabotOptions**: `DependabotOptions`
+> `readonly` `optional` **dependabotOptions**: `DependabotOptions`
 
 Options for dependabot.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -668,13 +518,13 @@ Options for dependabot.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[dependabotOptions](MonorepoTsProjectOptions.md#dependabotoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`dependabotOptions`](MonorepoTsProjectOptions.md#dependabotoptions)
 
-___
+***
 
-### deps
+### deps?
 
-• `Optional` `Readonly` **deps**: `string`[]
+> `readonly` `optional` **deps**: `string`[]
 
 Runtime dependencies of this module.
 
@@ -685,34 +535,34 @@ file with the latest version (`^`). You can specify semver requirements in
 the same syntax passed to `npm i` or `yarn add` (e.g. `express@^2`) and
 this will be what you `package.json` will eventually include.
 
-**`Example`**
+#### Example
 
 ```ts
 [ 'express', 'lodash', 'foo@^2' ]
 ```
 
-**`Default`**
+#### Default
 
 ```ts
 []
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[deps](MonorepoTsProjectOptions.md#deps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`deps`](MonorepoTsProjectOptions.md#deps)
 
-___
+***
 
-### depsUpgrade
+### depsUpgrade?
 
-• `Optional` `Readonly` **depsUpgrade**: `boolean`
+> `readonly` `optional` **depsUpgrade**: `boolean`
 
 Use tasks and github workflows to handle dependency upgrades.
 Cannot be used in conjunction with `dependabot`.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -720,17 +570,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[depsUpgrade](MonorepoTsProjectOptions.md#depsupgrade)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`depsUpgrade`](MonorepoTsProjectOptions.md#depsupgrade)
 
-___
+***
 
-### depsUpgradeOptions
+### depsUpgradeOptions?
 
-• `Optional` `Readonly` **depsUpgradeOptions**: [`UpgradeDependenciesOptions`](UpgradeDependenciesOptions.md)
+> `readonly` `optional` **depsUpgradeOptions**: [`UpgradeDependenciesOptions`](UpgradeDependenciesOptions.md)
 
 Options for `UpgradeDependencies`.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -738,33 +588,33 @@ Options for `UpgradeDependencies`.
 
 #### Overrides
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[depsUpgradeOptions](MonorepoTsProjectOptions.md#depsupgradeoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`depsUpgradeOptions`](MonorepoTsProjectOptions.md#depsupgradeoptions)
 
-___
+***
 
-### description
+### description?
 
-• `Optional` `Readonly` **description**: `string`
+> `readonly` `optional` **description**: `string`
 
 The description is just a string that helps people understand the purpose of the package.
 It can be used when searching for packages in a package manager as well.
 See https://classic.yarnpkg.com/en/docs/package-json/#toc-description
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[description](MonorepoTsProjectOptions.md#description)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`description`](MonorepoTsProjectOptions.md#description)
 
-___
+***
 
-### devContainer
+### devContainer?
 
-• `Optional` `Readonly` **devContainer**: `boolean`
+> `readonly` `optional` **devContainer**: `boolean`
 
 Add a VSCode development environment (used for GitHub Codespaces)
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -772,13 +622,13 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[devContainer](MonorepoTsProjectOptions.md#devcontainer)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`devContainer`](MonorepoTsProjectOptions.md#devcontainer)
 
-___
+***
 
-### devDeps
+### devDeps?
 
-• `Optional` `Readonly` **devDeps**: `string`[]
+> `readonly` `optional` **devDeps**: `string`[]
 
 Build dependencies for this module. These dependencies will only be
 available in your build environment but will not be fetched when this
@@ -791,33 +641,33 @@ file with the latest version (`^`). You can specify semver requirements in
 the same syntax passed to `npm i` or `yarn add` (e.g. `express@^2`) and
 this will be what you `package.json` will eventually include.
 
-**`Example`**
+#### Example
 
 ```ts
 [ 'typescript', '@types/express' ]
 ```
 
-**`Default`**
+#### Default
 
 ```ts
 []
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[devDeps](MonorepoTsProjectOptions.md#devdeps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`devDeps`](MonorepoTsProjectOptions.md#devdeps)
 
-___
+***
 
-### disableNodeWarnings
+### disableNodeWarnings?
 
-• `Optional` `Readonly` **disableNodeWarnings**: `boolean`
+> `readonly` `optional` **disableNodeWarnings**: `boolean`
 
 Disable node warnings from being emitted during build tasks
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -825,18 +675,18 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[disableNodeWarnings](MonorepoTsProjectOptions.md#disablenodewarnings)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`disableNodeWarnings`](MonorepoTsProjectOptions.md#disablenodewarnings)
 
-___
+***
 
-### disableTsconfig
+### disableTsconfig?
 
-• `Optional` `Readonly` **disableTsconfig**: `boolean`
+> `readonly` `optional` **disableTsconfig**: `boolean`
 
 Do not generate a `tsconfig.json` file (used by jsii projects since
 tsconfig.json is generated by the jsii compiler).
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -844,17 +694,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[disableTsconfig](MonorepoTsProjectOptions.md#disabletsconfig)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`disableTsconfig`](MonorepoTsProjectOptions.md#disabletsconfig)
 
-___
+***
 
-### disableTsconfigDev
+### disableTsconfigDev?
 
-• `Optional` `Readonly` **disableTsconfigDev**: `boolean`
+> `readonly` `optional` **disableTsconfigDev**: `boolean`
 
 Do not generate a `tsconfig.dev.json` file.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -862,17 +712,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[disableTsconfigDev](MonorepoTsProjectOptions.md#disabletsconfigdev)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`disableTsconfigDev`](MonorepoTsProjectOptions.md#disabletsconfigdev)
 
-___
+***
 
-### docgen
+### docgen?
 
-• `Optional` `Readonly` **docgen**: `boolean`
+> `readonly` `optional` **docgen**: `boolean`
 
 Docgen by Typedoc
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -880,17 +730,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[docgen](MonorepoTsProjectOptions.md#docgen)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`docgen`](MonorepoTsProjectOptions.md#docgen)
 
-___
+***
 
-### docsDirectory
+### docsDirectory?
 
-• `Optional` `Readonly` **docsDirectory**: `string`
+> `readonly` `optional` **docsDirectory**: `string`
 
 Docs directory
 
-**`Default`**
+#### Default
 
 ```ts
 "docs"
@@ -898,19 +748,19 @@ Docs directory
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[docsDirectory](MonorepoTsProjectOptions.md#docsdirectory)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`docsDirectory`](MonorepoTsProjectOptions.md#docsdirectory)
 
-___
+***
 
-### entrypoint
+### entrypoint?
 
-• `Optional` `Readonly` **entrypoint**: `string`
+> `readonly` `optional` **entrypoint**: `string`
 
 Module entrypoint (`main` in `package.json`)
 
 Set to an empty string to not include `main` in your package.json
 
-**`Default`**
+#### Default
 
 ```ts
 "lib/index.js"
@@ -918,17 +768,17 @@ Set to an empty string to not include `main` in your package.json
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[entrypoint](MonorepoTsProjectOptions.md#entrypoint)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`entrypoint`](MonorepoTsProjectOptions.md#entrypoint)
 
-___
+***
 
-### entrypointTypes
+### entrypointTypes?
 
-• `Optional` `Readonly` **entrypointTypes**: `string`
+> `readonly` `optional` **entrypointTypes**: `string`
 
 The .d.ts file that includes the type declarations for this module.
 
-**`Default`**
+#### Default
 
 ```ts
 - .d.ts file derived from the project's entrypoint (usually lib/index.d.ts)
@@ -936,17 +786,17 @@ The .d.ts file that includes the type declarations for this module.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[entrypointTypes](MonorepoTsProjectOptions.md#entrypointtypes)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`entrypointTypes`](MonorepoTsProjectOptions.md#entrypointtypes)
 
-___
+***
 
-### eslint
+### eslint?
 
-• `Optional` `Readonly` **eslint**: `boolean`
+> `readonly` `optional` **eslint**: `boolean`
 
 Setup eslint.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -954,17 +804,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[eslint](MonorepoTsProjectOptions.md#eslint)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`eslint`](MonorepoTsProjectOptions.md#eslint)
 
-___
+***
 
-### eslintOptions
+### eslintOptions?
 
-• `Optional` `Readonly` **eslintOptions**: `EslintOptions`
+> `readonly` `optional` **eslintOptions**: `EslintOptions`
 
 Eslint options
 
-**`Default`**
+#### Default
 
 ```ts
 - opinionated default options
@@ -972,43 +822,43 @@ Eslint options
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[eslintOptions](MonorepoTsProjectOptions.md#eslintoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`eslintOptions`](MonorepoTsProjectOptions.md#eslintoptions)
 
-___
+***
 
-### gitIgnoreOptions
+### gitIgnoreOptions?
 
-• `Optional` `Readonly` **gitIgnoreOptions**: `IgnoreFileOptions`
+> `readonly` `optional` **gitIgnoreOptions**: `IgnoreFileOptions`
 
 Configuration options for .gitignore file
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[gitIgnoreOptions](MonorepoTsProjectOptions.md#gitignoreoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`gitIgnoreOptions`](MonorepoTsProjectOptions.md#gitignoreoptions)
 
-___
+***
 
-### gitOptions
+### gitOptions?
 
-• `Optional` `Readonly` **gitOptions**: `GitOptions`
+> `readonly` `optional` **gitOptions**: `GitOptions`
 
 Configuration options for git
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[gitOptions](MonorepoTsProjectOptions.md#gitoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`gitOptions`](MonorepoTsProjectOptions.md#gitoptions)
 
-___
+***
 
-### github
+### github?
 
-• `Optional` `Readonly` **github**: `boolean`
+> `readonly` `optional` **github**: `boolean`
 
 Enable GitHub integration.
 
 Enabled by default for root projects. Disabled for non-root projects.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1016,17 +866,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[github](MonorepoTsProjectOptions.md#github)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`github`](MonorepoTsProjectOptions.md#github)
 
-___
+***
 
-### githubOptions
+### githubOptions?
 
-• `Optional` `Readonly` **githubOptions**: `GitHubOptions`
+> `readonly` `optional` **githubOptions**: `GitHubOptions`
 
 Options for GitHub integration
 
-**`Default`**
+#### Default
 
 ```ts
 - see GitHubOptions
@@ -1034,29 +884,29 @@ Options for GitHub integration
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[githubOptions](MonorepoTsProjectOptions.md#githuboptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`githubOptions`](MonorepoTsProjectOptions.md#githuboptions)
 
-___
+***
 
-### gitignore
+### gitignore?
 
-• `Optional` `Readonly` **gitignore**: `string`[]
+> `readonly` `optional` **gitignore**: `string`[]
 
 Additional entries to .gitignore
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[gitignore](MonorepoTsProjectOptions.md#gitignore)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`gitignore`](MonorepoTsProjectOptions.md#gitignore)
 
-___
+***
 
-### gitpod
+### gitpod?
 
-• `Optional` `Readonly` **gitpod**: `boolean`
+> `readonly` `optional` **gitpod**: `boolean`
 
 Add a Gitpod development environment
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1064,29 +914,29 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[gitpod](MonorepoTsProjectOptions.md#gitpod)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`gitpod`](MonorepoTsProjectOptions.md#gitpod)
 
-___
+***
 
-### homepage
+### homepage?
 
-• `Optional` `Readonly` **homepage**: `string`
+> `readonly` `optional` **homepage**: `string`
 
 Package's Homepage / Website
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[homepage](MonorepoTsProjectOptions.md#homepage)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`homepage`](MonorepoTsProjectOptions.md#homepage)
 
-___
+***
 
-### jest
+### jest?
 
-• `Optional` `Readonly` **jest**: `boolean`
+> `readonly` `optional` **jest**: `boolean`
 
 Setup jest unit tests
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1094,17 +944,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[jest](MonorepoTsProjectOptions.md#jest)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`jest`](MonorepoTsProjectOptions.md#jest)
 
-___
+***
 
-### jestOptions
+### jestOptions?
 
-• `Optional` `Readonly` **jestOptions**: `JestOptions`
+> `readonly` `optional` **jestOptions**: `JestOptions`
 
 Jest options
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1112,17 +962,17 @@ Jest options
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[jestOptions](MonorepoTsProjectOptions.md#jestoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`jestOptions`](MonorepoTsProjectOptions.md#jestoptions)
 
-___
+***
 
-### jsiiReleaseVersion
+### jsiiReleaseVersion?
 
-• `Optional` `Readonly` **jsiiReleaseVersion**: `string`
+> `readonly` `optional` **jsiiReleaseVersion**: `string`
 
 Version requirement of `publib` which is used to publish modules to npm.
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -1130,29 +980,29 @@ Version requirement of `publib` which is used to publish modules to npm.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[jsiiReleaseVersion](MonorepoTsProjectOptions.md#jsiireleaseversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`jsiiReleaseVersion`](MonorepoTsProjectOptions.md#jsiireleaseversion)
 
-___
+***
 
-### keywords
+### keywords?
 
-• `Optional` `Readonly` **keywords**: `string`[]
+> `readonly` `optional` **keywords**: `string`[]
 
 Keywords to include in `package.json`.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[keywords](MonorepoTsProjectOptions.md#keywords)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`keywords`](MonorepoTsProjectOptions.md#keywords)
 
-___
+***
 
-### libdir
+### libdir?
 
-• `Optional` `Readonly` **libdir**: `string`
+> `readonly` `optional` **libdir**: `string`
 
 Typescript  artifacts output directory
 
-**`Default`**
+#### Default
 
 ```ts
 "lib"
@@ -1160,19 +1010,19 @@ Typescript  artifacts output directory
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[libdir](MonorepoTsProjectOptions.md#libdir)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`libdir`](MonorepoTsProjectOptions.md#libdir)
 
-___
+***
 
-### license
+### license?
 
-• `Optional` `Readonly` **license**: `string`
+> `readonly` `optional` **license**: `string`
 
 License's SPDX identifier.
 See https://github.com/projen/projen/tree/main/license-text for a list of supported licenses.
 Use the `licensed` option if you want to no license to be specified.
 
-**`Default`**
+#### Default
 
 ```ts
 "Apache-2.0"
@@ -1180,17 +1030,17 @@ Use the `licensed` option if you want to no license to be specified.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[license](MonorepoTsProjectOptions.md#license)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`license`](MonorepoTsProjectOptions.md#license)
 
-___
+***
 
-### licensed
+### licensed?
 
-• `Optional` `Readonly` **licensed**: `boolean`
+> `readonly` `optional` **licensed**: `boolean`
 
 Indicates if a license should be added.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1198,17 +1048,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[licensed](MonorepoTsProjectOptions.md#licensed)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`licensed`](MonorepoTsProjectOptions.md#licensed)
 
-___
+***
 
-### logging
+### logging?
 
-• `Optional` `Readonly` **logging**: `LoggerOptions`
+> `readonly` `optional` **logging**: `LoggerOptions`
 
 Configure logging options such as verbosity.
 
-**`Default`**
+#### Default
 
 ```ts
 {}
@@ -1216,20 +1066,20 @@ Configure logging options such as verbosity.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[logging](MonorepoTsProjectOptions.md#logging)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`logging`](MonorepoTsProjectOptions.md#logging)
 
-___
+***
 
-### majorVersion
+### majorVersion?
 
-• `Optional` `Readonly` **majorVersion**: `number`
+> `readonly` `optional` **majorVersion**: `number`
 
 Major version to release from the default branch.
 
 If this is specified, we bump the latest version of this major version line.
 If not specified, we bump the global latest version.
 
-**`Default`**
+#### Default
 
 ```ts
 - Major version is not enforced.
@@ -1237,17 +1087,17 @@ If not specified, we bump the global latest version.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[majorVersion](MonorepoTsProjectOptions.md#majorversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`majorVersion`](MonorepoTsProjectOptions.md#majorversion)
 
-___
+***
 
-### maxNodeVersion
+### maxNodeVersion?
 
-• `Optional` `Readonly` **maxNodeVersion**: `string`
+> `readonly` `optional` **maxNodeVersion**: `string`
 
 Minimum node.js version to require via `engines` (inclusive).
 
-**`Default`**
+#### Default
 
 ```ts
 - no max
@@ -1255,57 +1105,57 @@ Minimum node.js version to require via `engines` (inclusive).
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[maxNodeVersion](MonorepoTsProjectOptions.md#maxnodeversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`maxNodeVersion`](MonorepoTsProjectOptions.md#maxnodeversion)
 
-___
+***
 
-### mergify
+### ~~mergify?~~
 
-• `Optional` `Readonly` **mergify**: `boolean`
+> `readonly` `optional` **mergify**: `boolean`
 
 Whether mergify should be enabled on this repository or not.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `githubOptions.mergify` instead
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[mergify](MonorepoTsProjectOptions.md#mergify)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`mergify`](MonorepoTsProjectOptions.md#mergify)
 
-___
+***
 
-### mergifyOptions
+### ~~mergifyOptions?~~
 
-• `Optional` `Readonly` **mergifyOptions**: `MergifyOptions`
+> `readonly` `optional` **mergifyOptions**: `MergifyOptions`
 
 Options for mergify
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `githubOptions.mergifyOptions` instead
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[mergifyOptions](MonorepoTsProjectOptions.md#mergifyoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`mergifyOptions`](MonorepoTsProjectOptions.md#mergifyoptions)
 
-___
+***
 
-### minMajorVersion
+### minMajorVersion?
 
-• `Optional` `Readonly` **minMajorVersion**: `number`
+> `readonly` `optional` **minMajorVersion**: `number`
 
 Minimal Major version to release
 
@@ -1314,7 +1164,7 @@ release are not incrementing the major version number.
 
 Can not be set together with `majorVersion`.
 
-**`Default`**
+#### Default
 
 ```ts
 - No minimum version is being enforced
@@ -1322,17 +1172,17 @@ Can not be set together with `majorVersion`.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[minMajorVersion](MonorepoTsProjectOptions.md#minmajorversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`minMajorVersion`](MonorepoTsProjectOptions.md#minmajorversion)
 
-___
+***
 
-### minNodeVersion
+### minNodeVersion?
 
-• `Optional` `Readonly` **minNodeVersion**: `string`
+> `readonly` `optional` **minNodeVersion**: `string`
 
 Minimum Node.js version to require via package.json `engines` (inclusive).
 
-**`Default`**
+#### Default
 
 ```ts
 - no "engines" specified
@@ -1340,13 +1190,13 @@ Minimum Node.js version to require via package.json `engines` (inclusive).
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[minNodeVersion](MonorepoTsProjectOptions.md#minnodeversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`minNodeVersion`](MonorepoTsProjectOptions.md#minnodeversion)
 
-___
+***
 
-### mutableBuild
+### ~~mutableBuild?~~
 
-• `Optional` `Readonly` **mutableBuild**: `boolean`
+> `readonly` `optional` **mutableBuild**: `boolean`
 
 Automatically update files modified during builds to pull-request branches. This means
 that any files synthesized by projen or e.g. test snapshots will always be up-to-date
@@ -1354,49 +1204,49 @@ before a PR is merged.
 
 Implies that PR builds do not have anti-tamper checks.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 - Use `buildWorkflowOptions.mutableBuild`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[mutableBuild](MonorepoTsProjectOptions.md#mutablebuild)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`mutableBuild`](MonorepoTsProjectOptions.md#mutablebuild)
 
-___
+***
 
 ### name
 
-• `Readonly` **name**: `string`
+> `readonly` **name**: `string`
 
 This is the name of your project.
 
-**`Default`**
+#### Default
 
 ```ts
 $BASEDIR
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[name](MonorepoTsProjectOptions.md#name)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`name`](MonorepoTsProjectOptions.md#name)
 
-___
+***
 
-### npmAccess
+### npmAccess?
 
-• `Optional` `Readonly` **npmAccess**: `NpmAccess`
+> `readonly` `optional` **npmAccess**: `NpmAccess`
 
 Access level of the npm package.
 
-**`Default`**
+#### Default
 
 - for scoped packages (e.g. `foo@bar`), the default is
 `NpmAccess.RESTRICTED`, for non-scoped packages, the default is
@@ -1404,20 +1254,20 @@ Access level of the npm package.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmAccess](MonorepoTsProjectOptions.md#npmaccess)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmAccess`](MonorepoTsProjectOptions.md#npmaccess)
 
-___
+***
 
-### npmDistTag
+### npmDistTag?
 
-• `Optional` `Readonly` **npmDistTag**: `string`
+> `readonly` `optional` **npmDistTag**: `string`
 
 The npmDistTag to use when publishing from the default branch.
 
 To set the npm dist-tag for release branches, set the `npmDistTag` property
 for each branch.
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -1425,25 +1275,25 @@ for each branch.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmDistTag](MonorepoTsProjectOptions.md#npmdisttag)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmDistTag`](MonorepoTsProjectOptions.md#npmdisttag)
 
-___
+***
 
-### npmIgnoreOptions
+### npmIgnoreOptions?
 
-• `Optional` `Readonly` **npmIgnoreOptions**: `IgnoreFileOptions`
+> `readonly` `optional` **npmIgnoreOptions**: `IgnoreFileOptions`
 
 Configuration options for .npmignore file
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmIgnoreOptions](MonorepoTsProjectOptions.md#npmignoreoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmIgnoreOptions`](MonorepoTsProjectOptions.md#npmignoreoptions)
 
-___
+***
 
-### npmProvenance
+### npmProvenance?
 
-• `Optional` `Readonly` **npmProvenance**: `boolean`
+> `readonly` `optional` **npmProvenance**: `boolean`
 
 Should provenance statements be generated when the package is published.
 
@@ -1453,11 +1303,11 @@ you will need to use a supported CI/CD provider.
 Note that the projen `Release` and `Publisher` components are using `publib` to publish packages,
 which is using npm internally and supports provenance statements independently of the package manager used.
 
-**`See`**
+#### See
 
 https://docs.npmjs.com/generating-provenance-statements
 
-**`Default`**
+#### Default
 
 ```ts
 - true for public packages, false otherwise
@@ -1465,35 +1315,35 @@ https://docs.npmjs.com/generating-provenance-statements
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmProvenance](MonorepoTsProjectOptions.md#npmprovenance)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmProvenance`](MonorepoTsProjectOptions.md#npmprovenance)
 
-___
+***
 
-### npmRegistry
+### ~~npmRegistry?~~
 
-• `Optional` `Readonly` **npmRegistry**: `string`
+> `readonly` `optional` **npmRegistry**: `string`
 
 The host name of the npm registry to publish to. Cannot be set together with `npmRegistryUrl`.
 
-**`Deprecated`**
+#### Deprecated
 
 use `npmRegistryUrl` instead
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmRegistry](MonorepoTsProjectOptions.md#npmregistry)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmRegistry`](MonorepoTsProjectOptions.md#npmregistry)
 
-___
+***
 
-### npmRegistryUrl
+### npmRegistryUrl?
 
-• `Optional` `Readonly` **npmRegistryUrl**: `string`
+> `readonly` `optional` **npmRegistryUrl**: `string`
 
 The base URL of the npm package registry.
 
 Must be a URL (e.g. start with "https://" or "http://")
 
-**`Default`**
+#### Default
 
 ```ts
 "https://registry.npmjs.org"
@@ -1501,17 +1351,17 @@ Must be a URL (e.g. start with "https://" or "http://")
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmRegistryUrl](MonorepoTsProjectOptions.md#npmregistryurl)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmRegistryUrl`](MonorepoTsProjectOptions.md#npmregistryurl)
 
-___
+***
 
-### npmTokenSecret
+### npmTokenSecret?
 
-• `Optional` `Readonly` **npmTokenSecret**: `string`
+> `readonly` `optional` **npmTokenSecret**: `string`
 
 GitHub secret which contains the NPM token to use when publishing packages.
 
-**`Default`**
+#### Default
 
 ```ts
 "NPM_TOKEN"
@@ -1519,34 +1369,34 @@ GitHub secret which contains the NPM token to use when publishing packages.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmTokenSecret](MonorepoTsProjectOptions.md#npmtokensecret)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmTokenSecret`](MonorepoTsProjectOptions.md#npmtokensecret)
 
-___
+***
 
-### npmignore
+### ~~npmignore?~~
 
-• `Optional` `Readonly` **npmignore**: `string`[]
+> `readonly` `optional` **npmignore**: `string`[]
 
 Additional entries to .npmignore.
 
-**`Deprecated`**
+#### Deprecated
 
 - use `project.addPackageIgnore`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmignore](MonorepoTsProjectOptions.md#npmignore)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmignore`](MonorepoTsProjectOptions.md#npmignore)
 
-___
+***
 
-### npmignoreEnabled
+### npmignoreEnabled?
 
-• `Optional` `Readonly` **npmignoreEnabled**: `boolean`
+> `readonly` `optional` **npmignoreEnabled**: `boolean`
 
 Defines an .npmignore file. Normally this is only needed for libraries that
 are packaged as tarballs.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1554,13 +1404,13 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[npmignoreEnabled](MonorepoTsProjectOptions.md#npmignoreenabled)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`npmignoreEnabled`](MonorepoTsProjectOptions.md#npmignoreenabled)
 
-___
+***
 
-### outdir
+### outdir?
 
-• `Optional` `Readonly` **outdir**: `string`
+> `readonly` `optional` **outdir**: `string`
 
 The root directory of the project.
 
@@ -1570,7 +1420,7 @@ If this project has a parent, this directory is relative to the parent
 directory and it cannot be the same as the parent or any of it's other
 subprojects.
 
-**`Default`**
+#### Default
 
 ```ts
 "."
@@ -1578,18 +1428,18 @@ subprojects.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[outdir](MonorepoTsProjectOptions.md#outdir)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`outdir`](MonorepoTsProjectOptions.md#outdir)
 
-___
+***
 
-### package
+### package?
 
-• `Optional` `Readonly` **package**: `boolean`
+> `readonly` `optional` **package**: `boolean`
 
 Defines a `package` task that will produce an npm tarball under the
 artifacts directory (e.g. `dist`).
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -1597,17 +1447,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[package](MonorepoTsProjectOptions.md#package)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`package`](MonorepoTsProjectOptions.md#package)
 
-___
+***
 
-### packageManager
+### packageManager?
 
-• `Optional` `Readonly` **packageManager**: `NodePackageManager`
+> `readonly` `optional` **packageManager**: `NodePackageManager`
 
 The Node Package Manager used to execute scripts
 
-**`Default`**
+#### Default
 
 ```ts
 NodePackageManager.YARN_CLASSIC
@@ -1615,57 +1465,57 @@ NodePackageManager.YARN_CLASSIC
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[packageManager](MonorepoTsProjectOptions.md#packagemanager)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`packageManager`](MonorepoTsProjectOptions.md#packagemanager)
 
-___
+***
 
-### packageName
+### packageName?
 
-• `Optional` `Readonly` **packageName**: `string`
+> `readonly` `optional` **packageName**: `string`
 
 The "name" in package.json
 
-**`Default`**
+#### Default
 
 ```ts
 - defaults to project name
 ```
 
-**`Featured`**
+#### Featured
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[packageName](MonorepoTsProjectOptions.md#packagename)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`packageName`](MonorepoTsProjectOptions.md#packagename)
 
-___
+***
 
-### parent
+### parent?
 
-• `Optional` `Readonly` **parent**: `Project`
+> `readonly` `optional` **parent**: `Project`
 
 The parent project, if this project is part of a bigger project.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[parent](MonorepoTsProjectOptions.md#parent)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`parent`](MonorepoTsProjectOptions.md#parent)
 
-___
+***
 
-### peerDependencyOptions
+### peerDependencyOptions?
 
-• `Optional` `Readonly` **peerDependencyOptions**: `PeerDependencyOptions`
+> `readonly` `optional` **peerDependencyOptions**: `PeerDependencyOptions`
 
 Options for `peerDeps`.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[peerDependencyOptions](MonorepoTsProjectOptions.md#peerdependencyoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`peerDependencyOptions`](MonorepoTsProjectOptions.md#peerdependencyoptions)
 
-___
+***
 
-### peerDeps
+### peerDeps?
 
-• `Optional` `Readonly` **peerDeps**: `string`[]
+> `readonly` `optional` **peerDeps**: `string`[]
 
 Peer dependencies for this module. Dependencies listed here are required to
 be installed (and satisfied) by the _consumer_ of this library. Using peer
@@ -1681,7 +1531,7 @@ enabled by default), projen will automatically add a dev dependency with a
 pinned version for each peer dependency. This will ensure that you build &
 test your module against the lowest peer version required.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -1689,17 +1539,17 @@ test your module against the lowest peer version required.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[peerDeps](MonorepoTsProjectOptions.md#peerdeps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`peerDeps`](MonorepoTsProjectOptions.md#peerdeps)
 
-___
+***
 
-### pnpmVersion
+### pnpmVersion?
 
-• `Optional` `Readonly` **pnpmVersion**: `string`
+> `readonly` `optional` **pnpmVersion**: `string`
 
 The version of PNPM to use if using PNPM as a package manager.
 
-**`Default`**
+#### Default
 
 ```ts
 "7"
@@ -1707,17 +1557,17 @@ The version of PNPM to use if using PNPM as a package manager.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[pnpmVersion](MonorepoTsProjectOptions.md#pnpmversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`pnpmVersion`](MonorepoTsProjectOptions.md#pnpmversion)
 
-___
+***
 
-### postBuildSteps
+### postBuildSteps?
 
-• `Optional` `Readonly` **postBuildSteps**: `JobStep`[]
+> `readonly` `optional` **postBuildSteps**: `JobStep`[]
 
 Steps to execute after build as part of the release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 []
@@ -1725,18 +1575,18 @@ Steps to execute after build as part of the release workflow.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[postBuildSteps](MonorepoTsProjectOptions.md#postbuildsteps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`postBuildSteps`](MonorepoTsProjectOptions.md#postbuildsteps)
 
-___
+***
 
-### prerelease
+### prerelease?
 
-• `Optional` `Readonly` **prerelease**: `string`
+> `readonly` `optional` **prerelease**: `string`
 
 Bump versions from the default branch as pre-releases (e.g. "beta",
 "alpha", "pre").
 
-**`Default`**
+#### Default
 
 ```ts
 - normal semantic versions
@@ -1744,17 +1594,17 @@ Bump versions from the default branch as pre-releases (e.g. "beta",
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[prerelease](MonorepoTsProjectOptions.md#prerelease)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`prerelease`](MonorepoTsProjectOptions.md#prerelease)
 
-___
+***
 
-### prettier
+### prettier?
 
-• `Optional` `Readonly` **prettier**: `boolean`
+> `readonly` `optional` **prettier**: `boolean`
 
 Setup prettier.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1762,17 +1612,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[prettier](MonorepoTsProjectOptions.md#prettier)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`prettier`](MonorepoTsProjectOptions.md#prettier)
 
-___
+***
 
-### prettierOptions
+### prettierOptions?
 
-• `Optional` `Readonly` **prettierOptions**: `PrettierOptions`
+> `readonly` `optional` **prettierOptions**: `PrettierOptions`
 
 Prettier options
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1780,41 +1630,41 @@ Prettier options
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[prettierOptions](MonorepoTsProjectOptions.md#prettieroptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`prettierOptions`](MonorepoTsProjectOptions.md#prettieroptions)
 
-___
+***
 
-### projectType
+### ~~projectType?~~
 
-• `Optional` `Readonly` **projectType**: `ProjectType`
+> `readonly` `optional` **projectType**: `ProjectType`
 
 Which type of project this is (library/app).
 
-**`Default`**
+#### Default
 
 ```ts
 ProjectType.UNKNOWN
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 no longer supported at the base project level
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projectType](MonorepoTsProjectOptions.md#projecttype)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projectType`](MonorepoTsProjectOptions.md#projecttype)
 
-___
+***
 
-### projenCommand
+### projenCommand?
 
-• `Optional` `Readonly` **projenCommand**: `string`
+> `readonly` `optional` **projenCommand**: `string`
 
 The shell command to use in order to run the projen CLI.
 
 Can be used to customize in special environments.
 
-**`Default`**
+#### Default
 
 ```ts
 "npx projen"
@@ -1822,17 +1672,17 @@ Can be used to customize in special environments.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenCommand](MonorepoTsProjectOptions.md#projencommand)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenCommand`](MonorepoTsProjectOptions.md#projencommand)
 
-___
+***
 
-### projenCredentials
+### projenCredentials?
 
-• `Optional` `Readonly` **projenCredentials**: `GithubCredentials`
+> `readonly` `optional` **projenCredentials**: `GithubCredentials`
 
 Choose a method of providing GitHub API access for projen workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - use a personal access token named PROJEN_GITHUB_TOKEN
@@ -1840,17 +1690,17 @@ Choose a method of providing GitHub API access for projen workflows.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenCredentials](MonorepoTsProjectOptions.md#projencredentials)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenCredentials`](MonorepoTsProjectOptions.md#projencredentials)
 
-___
+***
 
-### projenDevDependency
+### projenDevDependency?
 
-• `Optional` `Readonly` **projenDevDependency**: `boolean`
+> `readonly` `optional` **projenDevDependency**: `boolean`
 
 Indicates of "projen" should be installed as a devDependency.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
@@ -1858,41 +1708,41 @@ Indicates of "projen" should be installed as a devDependency.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenDevDependency](MonorepoTsProjectOptions.md#projendevdependency)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenDevDependency`](MonorepoTsProjectOptions.md#projendevdependency)
 
-___
+***
 
-### projenTokenSecret
+### ~~projenTokenSecret?~~
 
-• `Optional` `Readonly` **projenTokenSecret**: `string`
+> `readonly` `optional` **projenTokenSecret**: `string`
 
 The name of a secret which includes a GitHub Personal Access Token to be
 used by projen workflows. This token needs to have the `repo`, `workflows`
 and `packages` scope.
 
-**`Default`**
+#### Default
 
 ```ts
 "PROJEN_GITHUB_TOKEN"
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `projenCredentials`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenTokenSecret](MonorepoTsProjectOptions.md#projentokensecret)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenTokenSecret`](MonorepoTsProjectOptions.md#projentokensecret)
 
-___
+***
 
-### projenVersion
+### projenVersion?
 
-• `Optional` `Readonly` **projenVersion**: `string`
+> `readonly` `optional` **projenVersion**: `string`
 
 Version of projen to install.
 
-**`Default`**
+#### Default
 
 ```ts
 - Defaults to the latest version.
@@ -1900,18 +1750,18 @@ Version of projen to install.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenVersion](MonorepoTsProjectOptions.md#projenversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenVersion`](MonorepoTsProjectOptions.md#projenversion)
 
-___
+***
 
-### projenrcJs
+### projenrcJs?
 
-• `Optional` `Readonly` **projenrcJs**: `boolean`
+> `readonly` `optional` **projenrcJs**: `boolean`
 
 Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 .projenrc.js generation.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if projenrcJson is false
@@ -1919,17 +1769,17 @@ Generate (once) .projenrc.js (in JavaScript). Set to `false` in order to disable
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcJs](MonorepoTsProjectOptions.md#projenrcjs)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcJs`](MonorepoTsProjectOptions.md#projenrcjs)
 
-___
+***
 
-### projenrcJsOptions
+### projenrcJsOptions?
 
-• `Optional` `Readonly` **projenrcJsOptions**: `ProjenrcOptions`
+> `readonly` `optional` **projenrcJsOptions**: `ProjenrcOptions`
 
 Options for .projenrc.js
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1937,18 +1787,18 @@ Options for .projenrc.js
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcJsOptions](MonorepoTsProjectOptions.md#projenrcjsoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcJsOptions`](MonorepoTsProjectOptions.md#projenrcjsoptions)
 
-___
+***
 
-### projenrcJson
+### projenrcJson?
 
-• `Optional` `Readonly` **projenrcJson**: `boolean`
+> `readonly` `optional` **projenrcJson**: `boolean`
 
 Generate (once) .projenrc.json (in JSON). Set to `false` in order to disable
 .projenrc.json generation.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -1956,17 +1806,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcJson](MonorepoTsProjectOptions.md#projenrcjson)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcJson`](MonorepoTsProjectOptions.md#projenrcjson)
 
-___
+***
 
-### projenrcJsonOptions
+### projenrcJsonOptions?
 
-• `Optional` `Readonly` **projenrcJsonOptions**: `ProjenrcJsonOptions`
+> `readonly` `optional` **projenrcJsonOptions**: `ProjenrcJsonOptions`
 
 Options for .projenrc.json
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -1974,51 +1824,51 @@ Options for .projenrc.json
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcJsonOptions](MonorepoTsProjectOptions.md#projenrcjsonoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcJsonOptions`](MonorepoTsProjectOptions.md#projenrcjsonoptions)
 
-___
+***
 
-### projenrcTs
+### projenrcTs?
 
-• `Optional` `Readonly` **projenrcTs**: `boolean`
+> `readonly` `optional` **projenrcTs**: `boolean`
 
 Use TypeScript for your projenrc file (`.projenrc.ts`).
 
-**`Default`**
+#### Default
 
 ```ts
 false
 ```
 
-**`Pjnew`**
+#### Pjnew
 
 true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcTs](MonorepoTsProjectOptions.md#projenrcts)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcTs`](MonorepoTsProjectOptions.md#projenrcts)
 
-___
+***
 
-### projenrcTsOptions
+### projenrcTsOptions?
 
-• `Optional` `Readonly` **projenrcTsOptions**: `ProjenrcOptions`
+> `readonly` `optional` **projenrcTsOptions**: `ProjenrcOptions`
 
 Options for .projenrc.ts
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[projenrcTsOptions](MonorepoTsProjectOptions.md#projenrctsoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`projenrcTsOptions`](MonorepoTsProjectOptions.md#projenrctsoptions)
 
-___
+***
 
-### publishDryRun
+### publishDryRun?
 
-• `Optional` `Readonly` **publishDryRun**: `boolean`
+> `readonly` `optional` **publishDryRun**: `boolean`
 
 Instead of actually publishing to package managers, just print the publishing command.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2026,20 +1876,20 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[publishDryRun](MonorepoTsProjectOptions.md#publishdryrun)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`publishDryRun`](MonorepoTsProjectOptions.md#publishdryrun)
 
-___
+***
 
-### publishTasks
+### publishTasks?
 
-• `Optional` `Readonly` **publishTasks**: `boolean`
+> `readonly` `optional` **publishTasks**: `boolean`
 
 Define publishing tasks that can be executed manually as well as workflows.
 
 Normally, publishing only happens within automated workflows. Enable this
 in order to create a publishing task for each publishing activity.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2047,17 +1897,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[publishTasks](MonorepoTsProjectOptions.md#publishtasks)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`publishTasks`](MonorepoTsProjectOptions.md#publishtasks)
 
-___
+***
 
-### pullRequestTemplate
+### pullRequestTemplate?
 
-• `Optional` `Readonly` **pullRequestTemplate**: `boolean`
+> `readonly` `optional` **pullRequestTemplate**: `boolean`
 
 Include a GitHub pull request template.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2065,17 +1915,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[pullRequestTemplate](MonorepoTsProjectOptions.md#pullrequesttemplate)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`pullRequestTemplate`](MonorepoTsProjectOptions.md#pullrequesttemplate)
 
-___
+***
 
-### pullRequestTemplateContents
+### pullRequestTemplateContents?
 
-• `Optional` `Readonly` **pullRequestTemplateContents**: `string`[]
+> `readonly` `optional` **pullRequestTemplateContents**: `string`[]
 
 The contents of the pull request template.
 
-**`Default`**
+#### Default
 
 ```ts
 - default content
@@ -2083,23 +1933,23 @@ The contents of the pull request template.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[pullRequestTemplateContents](MonorepoTsProjectOptions.md#pullrequesttemplatecontents)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`pullRequestTemplateContents`](MonorepoTsProjectOptions.md#pullrequesttemplatecontents)
 
-___
+***
 
-### readme
+### readme?
 
-• `Optional` `Readonly` **readme**: `SampleReadmeProps`
+> `readonly` `optional` **readme**: `SampleReadmeProps`
 
 The README setup.
 
-**`Default`**
+#### Default
 
 ```ts
 - { filename: 'README.md', contents: '# replace this' }
 ```
 
-**`Example`**
+#### Example
 
 ```ts
 "{ filename: 'readme.md', contents: '# title' }"
@@ -2107,18 +1957,18 @@ The README setup.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[readme](MonorepoTsProjectOptions.md#readme)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`readme`](MonorepoTsProjectOptions.md#readme)
 
-___
+***
 
-### releasableCommits
+### releasableCommits?
 
-• `Optional` `Readonly` **releasableCommits**: `ReleasableCommits`
+> `readonly` `optional` **releasableCommits**: `ReleasableCommits`
 
 Find commits that should be considered releasable
 Used to decide if a release is required.
 
-**`Default`**
+#### Default
 
 ```ts
 ReleasableCommits.everyCommit()
@@ -2126,17 +1976,17 @@ ReleasableCommits.everyCommit()
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releasableCommits](MonorepoTsProjectOptions.md#releasablecommits)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releasableCommits`](MonorepoTsProjectOptions.md#releasablecommits)
 
-___
+***
 
-### release
+### release?
 
-• `Optional` `Readonly` **release**: `boolean`
+> `readonly` `optional` **release**: `boolean`
 
 Add release management to this project.
 
-**`Default`**
+#### Default
 
 ```ts
 - true (false for subprojects)
@@ -2144,13 +1994,13 @@ Add release management to this project.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[release](MonorepoTsProjectOptions.md#release)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`release`](MonorepoTsProjectOptions.md#release)
 
-___
+***
 
-### releaseBranches
+### releaseBranches?
 
-• `Optional` `Readonly` **releaseBranches**: `Object`
+> `readonly` `optional` **releaseBranches**: `object`
 
 Defines additional release branches. A workflow will be created for each
 release branch which will publish releases from commits in this branch.
@@ -2159,50 +2009,50 @@ to enforce that versions published from that branch always use that major
 version. If multiple branches are used, the `majorVersion` field must also
 be provided for the default branch.
 
-**`Default`**
+#### Index Signature
+
+ \[`name`: `string`\]: `BranchOptions`
+
+#### Default
 
 - no additional branches are used for release. you can use
 `addBranch()` to add additional branches.
 
-#### Index signature
-
-▪ [name: `string`]: `BranchOptions`
-
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseBranches](MonorepoTsProjectOptions.md#releasebranches)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseBranches`](MonorepoTsProjectOptions.md#releasebranches)
 
-___
+***
 
-### releaseEveryCommit
+### ~~releaseEveryCommit?~~
 
-• `Optional` `Readonly` **releaseEveryCommit**: `boolean`
+> `readonly` `optional` **releaseEveryCommit**: `boolean`
 
 Automatically release new versions every commit to one of branches in `releaseBranches`.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 Use `releaseTrigger: ReleaseTrigger.continuous()` instead
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseEveryCommit](MonorepoTsProjectOptions.md#releaseeverycommit)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseEveryCommit`](MonorepoTsProjectOptions.md#releaseeverycommit)
 
-___
+***
 
-### releaseFailureIssue
+### releaseFailureIssue?
 
-• `Optional` `Readonly` **releaseFailureIssue**: `boolean`
+> `readonly` `optional` **releaseFailureIssue**: `boolean`
 
 Create a github issue on every failed publishing task.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2210,18 +2060,18 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseFailureIssue](MonorepoTsProjectOptions.md#releasefailureissue)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseFailureIssue`](MonorepoTsProjectOptions.md#releasefailureissue)
 
-___
+***
 
-### releaseFailureIssueLabel
+### releaseFailureIssueLabel?
 
-• `Optional` `Readonly` **releaseFailureIssueLabel**: `string`
+> `readonly` `optional` **releaseFailureIssueLabel**: `string`
 
 The label to apply to issues indicating publish failures.
 Only applies if `releaseFailureIssue` is true.
 
-**`Default`**
+#### Default
 
 ```ts
 "failed-release"
@@ -2229,35 +2079,35 @@ Only applies if `releaseFailureIssue` is true.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseFailureIssueLabel](MonorepoTsProjectOptions.md#releasefailureissuelabel)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseFailureIssueLabel`](MonorepoTsProjectOptions.md#releasefailureissuelabel)
 
-___
+***
 
-### releaseSchedule
+### ~~releaseSchedule?~~
 
-• `Optional` `Readonly` **releaseSchedule**: `string`
+> `readonly` `optional` **releaseSchedule**: `string`
 
 CRON schedule to trigger new releases.
 
-**`Default`**
+#### Default
 
 ```ts
 - no scheduled releases
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 Use `releaseTrigger: ReleaseTrigger.scheduled()` instead
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseSchedule](MonorepoTsProjectOptions.md#releaseschedule)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseSchedule`](MonorepoTsProjectOptions.md#releaseschedule)
 
-___
+***
 
-### releaseTagPrefix
+### releaseTagPrefix?
 
-• `Optional` `Readonly` **releaseTagPrefix**: `string`
+> `readonly` `optional` **releaseTagPrefix**: `string`
 
 Automatically add the given prefix to release tags.
 Useful if you are releasing on multiple branches with overlapping
@@ -2268,7 +2118,7 @@ when bumping, so if you change this on a project with an existing version
 history, you may need to manually tag your latest release
 with the new prefix.
 
-**`Default`**
+#### Default
 
 ```ts
 "v"
@@ -2276,17 +2126,17 @@ with the new prefix.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseTagPrefix](MonorepoTsProjectOptions.md#releasetagprefix)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseTagPrefix`](MonorepoTsProjectOptions.md#releasetagprefix)
 
-___
+***
 
-### releaseToNpm
+### releaseToNpm?
 
-• `Optional` `Readonly` **releaseToNpm**: `boolean`
+> `readonly` `optional` **releaseToNpm**: `boolean`
 
 Automatically release to npm when new versions are introduced.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2294,55 +2144,55 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseToNpm](MonorepoTsProjectOptions.md#releasetonpm)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseToNpm`](MonorepoTsProjectOptions.md#releasetonpm)
 
-___
+***
 
-### releaseTrigger
+### releaseTrigger?
 
-• `Optional` `Readonly` **releaseTrigger**: `ReleaseTrigger`
+> `readonly` `optional` **releaseTrigger**: `ReleaseTrigger`
 
 The release trigger to use.
 
-**`Default`**
+#### Default
 
 - Continuous releases (`ReleaseTrigger.continuous()`)
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseTrigger](MonorepoTsProjectOptions.md#releasetrigger)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseTrigger`](MonorepoTsProjectOptions.md#releasetrigger)
 
-___
+***
 
-### releaseWorkflow
+### ~~releaseWorkflow?~~
 
-• `Optional` `Readonly` **releaseWorkflow**: `boolean`
+> `readonly` `optional` **releaseWorkflow**: `boolean`
 
 DEPRECATED: renamed to `release`.
 
-**`Default`**
+#### Default
 
 ```ts
 - true if not a subproject
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 see `release`.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseWorkflow](MonorepoTsProjectOptions.md#releaseworkflow)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseWorkflow`](MonorepoTsProjectOptions.md#releaseworkflow)
 
-___
+***
 
-### releaseWorkflowName
+### releaseWorkflowName?
 
-• `Optional` `Readonly` **releaseWorkflowName**: `string`
+> `readonly` `optional` **releaseWorkflowName**: `string`
 
 The name of the default release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 "release"
@@ -2350,30 +2200,30 @@ The name of the default release workflow.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseWorkflowName](MonorepoTsProjectOptions.md#releaseworkflowname)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseWorkflowName`](MonorepoTsProjectOptions.md#releaseworkflowname)
 
-___
+***
 
-### releaseWorkflowSetupSteps
+### releaseWorkflowSetupSteps?
 
-• `Optional` `Readonly` **releaseWorkflowSetupSteps**: `JobStep`[]
+> `readonly` `optional` **releaseWorkflowSetupSteps**: `JobStep`[]
 
 A set of workflow steps to execute in order to setup the workflow
 container.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[releaseWorkflowSetupSteps](MonorepoTsProjectOptions.md#releaseworkflowsetupsteps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`releaseWorkflowSetupSteps`](MonorepoTsProjectOptions.md#releaseworkflowsetupsteps)
 
-___
+***
 
-### renovatebot
+### renovatebot?
 
-• `Optional` `Readonly` **renovatebot**: `boolean`
+> `readonly` `optional` **renovatebot**: `boolean`
 
 Use renovatebot to handle dependency upgrades.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2381,17 +2231,17 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[renovatebot](MonorepoTsProjectOptions.md#renovatebot)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`renovatebot`](MonorepoTsProjectOptions.md#renovatebot)
 
-___
+***
 
-### renovatebotOptions
+### renovatebotOptions?
 
-• `Optional` `Readonly` **renovatebotOptions**: `RenovatebotOptions`
+> `readonly` `optional` **renovatebotOptions**: `RenovatebotOptions`
 
 Options for renovatebot.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2399,43 +2249,43 @@ Options for renovatebot.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[renovatebotOptions](MonorepoTsProjectOptions.md#renovatebotoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`renovatebotOptions`](MonorepoTsProjectOptions.md#renovatebotoptions)
 
-___
+***
 
-### repository
+### repository?
 
-• `Optional` `Readonly` **repository**: `string`
+> `readonly` `optional` **repository**: `string`
 
 The repository is the location where the actual code for your package lives.
 See https://classic.yarnpkg.com/en/docs/package-json/#toc-repository
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[repository](MonorepoTsProjectOptions.md#repository)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`repository`](MonorepoTsProjectOptions.md#repository)
 
-___
+***
 
-### repositoryDirectory
+### repositoryDirectory?
 
-• `Optional` `Readonly` **repositoryDirectory**: `string`
+> `readonly` `optional` **repositoryDirectory**: `string`
 
 If the package.json for your package is not in the root directory (for example if it is part of a monorepo),
 you can specify the directory in which it lives.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[repositoryDirectory](MonorepoTsProjectOptions.md#repositorydirectory)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`repositoryDirectory`](MonorepoTsProjectOptions.md#repositorydirectory)
 
-___
+***
 
-### sampleCode
+### sampleCode?
 
-• `Optional` `Readonly` **sampleCode**: `boolean`
+> `readonly` `optional` **sampleCode**: `boolean`
 
 Generate one-time sample in `src/` and `test/` if there are no files there.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2443,17 +2293,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[sampleCode](MonorepoTsProjectOptions.md#samplecode)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`sampleCode`](MonorepoTsProjectOptions.md#samplecode)
 
-___
+***
 
-### scopedPackagesOptions
+### scopedPackagesOptions?
 
-• `Optional` `Readonly` **scopedPackagesOptions**: `ScopedPackagesOptions`[]
+> `readonly` `optional` **scopedPackagesOptions**: `ScopedPackagesOptions`[]
 
 Options for privately hosted scoped packages
 
-**`Default`**
+#### Default
 
 ```ts
 - fetch all scoped packages from the public npm registry
@@ -2461,45 +2311,45 @@ Options for privately hosted scoped packages
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[scopedPackagesOptions](MonorepoTsProjectOptions.md#scopedpackagesoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`scopedPackagesOptions`](MonorepoTsProjectOptions.md#scopedpackagesoptions)
 
-___
+***
 
-### scripts
+### ~~scripts?~~
 
-• `Optional` `Readonly` **scripts**: `Object`
+> `readonly` `optional` **scripts**: `object`
 
 npm scripts to include. If a script has the same name as a standard script,
 the standard script will be overwritten.
 Also adds the script as a task.
 
-**`Default`**
+#### Index Signature
+
+ \[`name`: `string`\]: `string`
+
+#### Default
 
 ```ts
 {}
 ```
 
-**`Deprecated`**
+#### Deprecated
 
 use `project.addTask()` or `package.setScript()`
 
-#### Index signature
-
-▪ [name: `string`]: `string`
-
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[scripts](MonorepoTsProjectOptions.md#scripts)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`scripts`](MonorepoTsProjectOptions.md#scripts)
 
-___
+***
 
-### srcdir
+### srcdir?
 
-• `Optional` `Readonly` **srcdir**: `string`
+> `readonly` `optional` **srcdir**: `string`
 
 Typescript sources directory.
 
-**`Default`**
+#### Default
 
 ```ts
 "src"
@@ -2507,29 +2357,29 @@ Typescript sources directory.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[srcdir](MonorepoTsProjectOptions.md#srcdir)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`srcdir`](MonorepoTsProjectOptions.md#srcdir)
 
-___
+***
 
-### stability
+### stability?
 
-• `Optional` `Readonly` **stability**: `string`
+> `readonly` `optional` **stability**: `string`
 
 Package's Stability
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[stability](MonorepoTsProjectOptions.md#stability)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`stability`](MonorepoTsProjectOptions.md#stability)
 
-___
+***
 
-### stale
+### stale?
 
-• `Optional` `Readonly` **stale**: `boolean`
+> `readonly` `optional` **stale**: `boolean`
 
 Auto-close of stale issues and pull request. See `staleOptions` for options.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2537,29 +2387,29 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[stale](MonorepoTsProjectOptions.md#stale)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`stale`](MonorepoTsProjectOptions.md#stale)
 
-___
+***
 
-### staleOptions
+### staleOptions?
 
-• `Optional` `Readonly` **staleOptions**: `StaleOptions`
+> `readonly` `optional` **staleOptions**: `StaleOptions`
 
 Auto-close stale issues and pull requests. To disable set `stale` to `false`.
 
-**`Default`**
+#### Default
 
 - see defaults in `StaleOptions`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[staleOptions](MonorepoTsProjectOptions.md#staleoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`staleOptions`](MonorepoTsProjectOptions.md#staleoptions)
 
-___
+***
 
-### testdir
+### testdir?
 
-• `Optional` `Readonly` **testdir**: `string`
+> `readonly` `optional` **testdir**: `string`
 
 Jest tests directory. Tests files should be named `xxx.test.ts`.
 
@@ -2568,7 +2418,7 @@ then tests are going to be compiled into `lib/` and executed as javascript.
 If the test directory is outside of `src`, then we configure jest to
 compile the code in-memory.
 
-**`Default`**
+#### Default
 
 ```ts
 "test"
@@ -2576,29 +2426,29 @@ compile the code in-memory.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[testdir](MonorepoTsProjectOptions.md#testdir)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`testdir`](MonorepoTsProjectOptions.md#testdir)
 
-___
+***
 
-### tsJestOptions
+### tsJestOptions?
 
-• `Optional` `Readonly` **tsJestOptions**: `TsJestOptions`
+> `readonly` `optional` **tsJestOptions**: `TsJestOptions`
 
 Options for ts-jest
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[tsJestOptions](MonorepoTsProjectOptions.md#tsjestoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`tsJestOptions`](MonorepoTsProjectOptions.md#tsjestoptions)
 
-___
+***
 
-### tsconfig
+### tsconfig?
 
-• `Optional` `Readonly` **tsconfig**: `TypescriptConfigOptions`
+> `readonly` `optional` **tsconfig**: `TypescriptConfigOptions`
 
 Custom TSConfig
 
-**`Default`**
+#### Default
 
 ```ts
 - default options
@@ -2606,17 +2456,17 @@ Custom TSConfig
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[tsconfig](MonorepoTsProjectOptions.md#tsconfig)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`tsconfig`](MonorepoTsProjectOptions.md#tsconfig)
 
-___
+***
 
-### tsconfigDev
+### tsconfigDev?
 
-• `Optional` `Readonly` **tsconfigDev**: `TypescriptConfigOptions`
+> `readonly` `optional` **tsconfigDev**: `TypescriptConfigOptions`
 
 Custom tsconfig options for the development tsconfig.json file (used for testing).
 
-**`Default`**
+#### Default
 
 ```ts
 - use the production tsconfig options
@@ -2624,17 +2474,17 @@ Custom tsconfig options for the development tsconfig.json file (used for testing
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[tsconfigDev](MonorepoTsProjectOptions.md#tsconfigdev)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`tsconfigDev`](MonorepoTsProjectOptions.md#tsconfigdev)
 
-___
+***
 
-### tsconfigDevFile
+### tsconfigDevFile?
 
-• `Optional` `Readonly` **tsconfigDevFile**: `string`
+> `readonly` `optional` **tsconfigDevFile**: `string`
 
 The name of the development tsconfig.json file.
 
-**`Default`**
+#### Default
 
 ```ts
 "tsconfig.dev.json"
@@ -2642,20 +2492,20 @@ The name of the development tsconfig.json file.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[tsconfigDevFile](MonorepoTsProjectOptions.md#tsconfigdevfile)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`tsconfigDevFile`](MonorepoTsProjectOptions.md#tsconfigdevfile)
 
-___
+***
 
-### typescriptVersion
+### typescriptVersion?
 
-• `Optional` `Readonly` **typescriptVersion**: `string`
+> `readonly` `optional` **typescriptVersion**: `string`
 
 TypeScript version to use.
 
 NOTE: Typescript is not semantically versioned and should remain on the
 same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
-**`Default`**
+#### Default
 
 ```ts
 "latest"
@@ -2663,18 +2513,18 @@ same minor, so we recommend using a `~` dependency (e.g. `~1.2.3`).
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[typescriptVersion](MonorepoTsProjectOptions.md#typescriptversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`typescriptVersion`](MonorepoTsProjectOptions.md#typescriptversion)
 
-___
+***
 
-### versionrcOptions
+### versionrcOptions?
 
-• `Optional` `Readonly` **versionrcOptions**: `Record`\<`string`, `any`\>
+> `readonly` `optional` **versionrcOptions**: `Record`\<`string`, `any`\>
 
 Custom configuration used when creating changelog with standard-version package.
 Given values either append to default configuration or overwrite values in it.
 
-**`Default`**
+#### Default
 
 ```ts
 - standard configuration applicable for GitHub repositories
@@ -2682,19 +2532,19 @@ Given values either append to default configuration or overwrite values in it.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[versionrcOptions](MonorepoTsProjectOptions.md#versionrcoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`versionrcOptions`](MonorepoTsProjectOptions.md#versionrcoptions)
 
-___
+***
 
-### vscode
+### vscode?
 
-• `Optional` `Readonly` **vscode**: `boolean`
+> `readonly` `optional` **vscode**: `boolean`
 
 Enable VSCode integration.
 
 Enabled by default for root projects. Disabled for non-root projects.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -2702,17 +2552,17 @@ true
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[vscode](MonorepoTsProjectOptions.md#vscode)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`vscode`](MonorepoTsProjectOptions.md#vscode)
 
-___
+***
 
-### workflowBootstrapSteps
+### workflowBootstrapSteps?
 
-• `Optional` `Readonly` **workflowBootstrapSteps**: `JobStep`[]
+> `readonly` `optional` **workflowBootstrapSteps**: `JobStep`[]
 
 Workflow steps to use in order to bootstrap this repo.
 
-**`Default`**
+#### Default
 
 ```ts
 "yarn install --frozen-lockfile && yarn projen"
@@ -2720,17 +2570,17 @@ Workflow steps to use in order to bootstrap this repo.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowBootstrapSteps](MonorepoTsProjectOptions.md#workflowbootstrapsteps)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowBootstrapSteps`](MonorepoTsProjectOptions.md#workflowbootstrapsteps)
 
-___
+***
 
-### workflowContainerImage
+### workflowContainerImage?
 
-• `Optional` `Readonly` **workflowContainerImage**: `string`
+> `readonly` `optional` **workflowContainerImage**: `string`
 
 Container image to use for GitHub workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - default image
@@ -2738,17 +2588,17 @@ Container image to use for GitHub workflows.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowContainerImage](MonorepoTsProjectOptions.md#workflowcontainerimage)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowContainerImage`](MonorepoTsProjectOptions.md#workflowcontainerimage)
 
-___
+***
 
-### workflowGitIdentity
+### workflowGitIdentity?
 
-• `Optional` `Readonly` **workflowGitIdentity**: `GitIdentity`
+> `readonly` `optional` **workflowGitIdentity**: `GitIdentity`
 
 The git identity to use in workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 - GitHub Actions
@@ -2756,33 +2606,33 @@ The git identity to use in workflows.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowGitIdentity](MonorepoTsProjectOptions.md#workflowgitidentity)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowGitIdentity`](MonorepoTsProjectOptions.md#workflowgitidentity)
 
-___
+***
 
-### workflowNodeVersion
+### workflowNodeVersion?
 
-• `Optional` `Readonly` **workflowNodeVersion**: `string`
+> `readonly` `optional` **workflowNodeVersion**: `string`
 
 The node version to use in GitHub workflows.
 
-**`Default`**
+#### Default
 
 - same as `minNodeVersion`
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowNodeVersion](MonorepoTsProjectOptions.md#workflownodeversion)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowNodeVersion`](MonorepoTsProjectOptions.md#workflownodeversion)
 
-___
+***
 
-### workflowPackageCache
+### workflowPackageCache?
 
-• `Optional` `Readonly` **workflowPackageCache**: `boolean`
+> `readonly` `optional` **workflowPackageCache**: `boolean`
 
 Enable Node.js package cache in GitHub workflows.
 
-**`Default`**
+#### Default
 
 ```ts
 false
@@ -2790,75 +2640,75 @@ false
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowPackageCache](MonorepoTsProjectOptions.md#workflowpackagecache)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowPackageCache`](MonorepoTsProjectOptions.md#workflowpackagecache)
 
-___
+***
 
-### workflowRunsOn
+### workflowRunsOn?
 
-• `Optional` `Readonly` **workflowRunsOn**: `string`[]
+> `readonly` `optional` **workflowRunsOn**: `string`[]
 
 Github Runner selection labels
 
-**`Default`**
+#### Default
 
 ```ts
 ["ubuntu-latest"]
 ```
 
-**`Description`**
+#### Description
 
 Defines a target Runner by labels
 
-**`Throws`**
+#### Throws
 
 if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowRunsOn](MonorepoTsProjectOptions.md#workflowrunson)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowRunsOn`](MonorepoTsProjectOptions.md#workflowrunson)
 
-___
+***
 
-### workflowRunsOnGroup
+### workflowRunsOnGroup?
 
-• `Optional` `Readonly` **workflowRunsOnGroup**: `GroupRunnerOptions`
+> `readonly` `optional` **workflowRunsOnGroup**: `GroupRunnerOptions`
 
 Github Runner Group selection options
 
-**`Description`**
+#### Description
 
 Defines a target Runner Group by name and/or labels
 
-**`Throws`**
+#### Throws
 
 if both `runsOn` and `runsOnGroup` are specified
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workflowRunsOnGroup](MonorepoTsProjectOptions.md#workflowrunsongroup)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workflowRunsOnGroup`](MonorepoTsProjectOptions.md#workflowrunsongroup)
 
-___
+***
 
-### workspaceConfig
+### workspaceConfig?
 
-• `Optional` `Readonly` **workspaceConfig**: [`WorkspaceConfig`](WorkspaceConfig.md)
+> `readonly` `optional` **workspaceConfig**: [`WorkspaceConfig`](WorkspaceConfig.md)
 
 Configuration for workspace.
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[workspaceConfig](MonorepoTsProjectOptions.md#workspaceconfig)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`workspaceConfig`](MonorepoTsProjectOptions.md#workspaceconfig)
 
-___
+***
 
-### yarnBerryOptions
+### yarnBerryOptions?
 
-• `Optional` `Readonly` **yarnBerryOptions**: `YarnBerryOptions`
+> `readonly` `optional` **yarnBerryOptions**: `YarnBerryOptions`
 
 Options for Yarn Berry
 
-**`Default`**
+#### Default
 
 ```ts
 - Yarn Berry v4 with all default options
@@ -2866,4 +2716,4 @@ Options for Yarn Berry
 
 #### Inherited from
 
-[MonorepoTsProjectOptions](MonorepoTsProjectOptions.md).[yarnBerryOptions](MonorepoTsProjectOptions.md#yarnberryoptions)
+[`MonorepoTsProjectOptions`](MonorepoTsProjectOptions.md).[`yarnBerryOptions`](MonorepoTsProjectOptions.md#yarnberryoptions)

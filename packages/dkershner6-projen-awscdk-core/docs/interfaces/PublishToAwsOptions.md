@@ -1,67 +1,59 @@
-[dkershner6-projen-awscdk-core](../README.md) / [Exports](../modules.md) / PublishToAwsOptions
+[**dkershner6-projen-awscdk-core**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-awscdk-core](../globals.md) / PublishToAwsOptions
 
 # Interface: PublishToAwsOptions
 
-## Hierarchy
+## Extended by
 
-- **`PublishToAwsOptions`**
-
-  ↳ [`AwsAppPublisherOptions`](AwsAppPublisherOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [autoAddJob](PublishToAwsOptions.md#autoaddjob)
-- [configureAwsCredentialsJobSteps](PublishToAwsOptions.md#configureawscredentialsjobsteps)
-- [deployJobStepConfiguration](PublishToAwsOptions.md#deployjobstepconfiguration)
-- [jobConfiguration](PublishToAwsOptions.md#jobconfiguration)
-- [postPublishJobSteps](PublishToAwsOptions.md#postpublishjobsteps)
+- [`AwsAppPublisherOptions`](AwsAppPublisherOptions.md)
 
 ## Properties
 
-### autoAddJob
+### autoAddJob?
 
-• `Optional` `Readonly` **autoAddJob**: `boolean`
+> `readonly` `optional` **autoAddJob**: `boolean`
 
 Whether or not to automatically add the job to the release workflow.
 
-**`Default`**
+#### Default
 
 ```ts
 true
 ```
 
-___
+***
 
-### configureAwsCredentialsJobSteps
+### configureAwsCredentialsJobSteps?
 
-• `Optional` `Readonly` **configureAwsCredentialsJobSteps**: `JobStep`[]
+> `readonly` `optional` **configureAwsCredentialsJobSteps**: `JobStep`[]
 
 Typically a single step involved in configuring AWS credentials.
 AKA aws-actions/configure-aws-credentials
 
-___
+***
 
-### deployJobStepConfiguration
+### deployJobStepConfiguration?
 
-• `Optional` `Readonly` **deployJobStepConfiguration**: `JobStepConfiguration`
+> `readonly` `optional` **deployJobStepConfiguration**: `JobStepConfiguration`
 
 Additional configuration for the deploy job step.
 
-___
+***
 
-### jobConfiguration
+### jobConfiguration?
 
-• `Optional` `Readonly` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, ``"steps"``\>\>
+> `readonly` `optional` **jobConfiguration**: `Partial`\<`Omit`\<`Job`, `"steps"`\>\>
 
 The configuration for the deploy job. This is useful for when you want to
 change the timeoutMinutes, env, or other job-level configuration.
 
-___
+***
 
-### postPublishJobSteps
+### postPublishJobSteps?
 
-• `Optional` `Readonly` **postPublishJobSteps**: `JobStep`[]
+> `readonly` `optional` **postPublishJobSteps**: `JobStep`[]
 
 Job steps to run after the deploy step.

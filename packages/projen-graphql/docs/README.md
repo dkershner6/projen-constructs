@@ -1,4 +1,6 @@
-projen-graphql / [Exports](modules.md)
+**projen-graphql** • [**Docs**](globals.md)
+
+***
 
 # projen-graphql
 

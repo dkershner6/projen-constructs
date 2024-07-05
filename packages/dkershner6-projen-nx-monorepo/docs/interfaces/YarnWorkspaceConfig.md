@@ -1,38 +1,35 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / YarnWorkspaceConfig
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / YarnWorkspaceConfig
 
 # Interface: YarnWorkspaceConfig
 
 Yarn related workspace config
 
-## Table of contents
-
-### Properties
-
-- [disableNoHoistBundled](YarnWorkspaceConfig.md#disablenohoistbundled)
-- [noHoist](YarnWorkspaceConfig.md#nohoist)
-
 ## Properties
 
-### disableNoHoistBundled
+### disableNoHoistBundled?
 
-• `Optional` `Readonly` **disableNoHoistBundled**: `boolean`
+> `readonly` `optional` **disableNoHoistBundled**: `boolean`
 
 Disable automatically applying `noHoist` logic for all sub-project "bundledDependencies".
 
-**`Default`**
+#### Default
 
 ```ts
 false
 ```
 
-___
+***
 
-### noHoist
+### noHoist?
 
-• `Optional` `Readonly` **noHoist**: `string`[]
+> `readonly` `optional` **noHoist**: `string`[]
 
 List of package globs to exclude from hoisting in the workspace.
 
-**`See`**
+#### See
 
 https://classic.yarnpkg.com/blog/2018/02/15/nohoist/

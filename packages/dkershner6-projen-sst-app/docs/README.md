@@ -1,4 +1,6 @@
-dkershner6-projen-sst-app / [Exports](modules.md)
+**dkershner6-projen-sst-app** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-sst-app
 

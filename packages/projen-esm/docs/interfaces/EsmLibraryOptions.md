@@ -1,61 +1,56 @@
-[projen-esm](../README.md) / [Exports](../modules.md) / EsmLibraryOptions
+[**projen-esm**](../README.md) • **Docs**
+
+***
+
+[projen-esm](../globals.md) / EsmLibraryOptions
 
 # Interface: EsmLibraryOptions
 
-## Table of contents
-
-### Properties
-
-- [babel](EsmLibraryOptions.md#babel)
-- [babelConfigFileOptions](EsmLibraryOptions.md#babelconfigfileoptions)
-- [babelTestConfigFileOptions](EsmLibraryOptions.md#babeltestconfigfileoptions)
-- [setupEslintToEnforceImportFileExtensions](EsmLibraryOptions.md#setupeslinttoenforceimportfileextensions)
-
 ## Properties
 
-### babel
+### babel?
 
-• `Optional` `Readonly` **babel**: `boolean`
+> `readonly` `optional` **babel**: `boolean`
 
 Use babel instead of tsc to compile.
 
-___
+***
 
-### babelConfigFileOptions
+### babelConfigFileOptions?
 
-• `Optional` `Readonly` **babelConfigFileOptions**: `BabelConfigFileOptions`
+> `readonly` `optional` **babelConfigFileOptions**: `BabelConfigFileOptions`
 
 Options for the babel config file.
 
-**`Default`**
+#### Default
 
 ```ts
 - Typical options for an ESM library.
 ```
 
-___
+***
 
-### babelTestConfigFileOptions
+### babelTestConfigFileOptions?
 
-• `Optional` `Readonly` **babelTestConfigFileOptions**: `BabelConfigFileOptions`
+> `readonly` `optional` **babelTestConfigFileOptions**: `BabelConfigFileOptions`
 
 Options for the babel test config file.
 
-**`Default`**
+#### Default
 
 ```ts
 - Typical options for an ESM library.
 ```
 
-___
+***
 
-### setupEslintToEnforceImportFileExtensions
+### setupEslintToEnforceImportFileExtensions?
 
-• `Optional` `Readonly` **setupEslintToEnforceImportFileExtensions**: `boolean`
+> `readonly` `optional` **setupEslintToEnforceImportFileExtensions**: `boolean`
 
 Whether or not to setup eslint to enforce import file extensions.
 
-**`Example`**
+#### Example
 
 ```ts
 import { MyComponent } from "./MyComponent.js";

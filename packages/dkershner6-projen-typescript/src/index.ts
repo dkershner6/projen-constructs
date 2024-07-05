@@ -293,6 +293,7 @@ export class DKEslintConfig extends Component {
 export enum DKTaskName {
     CLEAN_COMPILE = "clean-compile",
     CI = "ci",
+    DOCGEN_REMOVE = "docgen:remove",
     I = "i",
     LINT = "lint",
     TEST_UNIT = "test-unit",
@@ -362,6 +363,12 @@ export class DKTasks extends Component {
         if (docgenTask) {
             docgenTask.addCondition(DKTasks.IS_NOT_RELEASE_CONDITION);
         }
+
+        project
+            .addTask(DKTaskName.DOCGEN_REMOVE, {
+                description: "Remove the docgen directory",
+            })
+            .exec(`rm -rf ${project.docsDirectory}`);
 
         // Create task here so that others can use it in spawns
         // new javascript.UpgradeDependencies(this.project, {

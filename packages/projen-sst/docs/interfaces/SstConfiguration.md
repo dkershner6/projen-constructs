@@ -1,22 +1,20 @@
-[projen-sst](../README.md) / [Exports](../modules.md) / SstConfiguration
+[**projen-sst**](../README.md) • **Docs**
+
+***
+
+[projen-sst](../globals.md) / SstConfiguration
 
 # Interface: SstConfiguration
-
-## Table of contents
-
-### Properties
-
-- [sstOut](SstConfiguration.md#sstout)
 
 ## Properties
 
 ### sstOut
 
-• **sstOut**: `string`
+> **sstOut**: `string`
 
 Where to build .sst code to.
 
-**`Default`**
+#### Default
 
 ```ts
 ".sst/dist/"

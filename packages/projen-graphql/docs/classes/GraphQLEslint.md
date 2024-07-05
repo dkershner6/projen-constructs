@@ -1,4 +1,8 @@
-[projen-graphql](../README.md) / [Exports](../modules.md) / GraphQLEslint
+[**projen-graphql**](../README.md) • **Docs**
+
+***
+
+[projen-graphql](../globals.md) / GraphQLEslint
 
 # Class: GraphQLEslint
 
@@ -6,45 +10,21 @@ Add graphql-eslint to your project.
 
 Currently only supports this as a separate config file and command, as there are issues with typescript-eslint and graphql-eslint.
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`GraphQLEslint`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](GraphQLEslint.md#constructor)
-
-### Properties
-
-- [node](GraphQLEslint.md#node)
-- [project](GraphQLEslint.md#project)
-
-### Methods
-
-- [moveProjectNeedingRulesToOverride](GraphQLEslint.md#moveprojectneedingrulestooverride)
-- [postSynthesize](GraphQLEslint.md#postsynthesize)
-- [preSynthesize](GraphQLEslint.md#presynthesize)
-- [synthesize](GraphQLEslint.md#synthesize)
-- [toString](GraphQLEslint.md#tostring)
-- [isComponent](GraphQLEslint.md#iscomponent)
-- [isConstruct](GraphQLEslint.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new GraphQLEslint()
 
-• **new GraphQLEslint**(`project`, `options?`): [`GraphQLEslint`](GraphQLEslint.md)
+> **new GraphQLEslint**(`project`, `options`?): [`GraphQLEslint`](GraphQLEslint.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `TypeScriptProject` |
-| `options?` | [`GraphQLEslintOptions`](../interfaces/GraphQLEslintOptions.md) |
+• **project**: `TypeScriptProject`
+
+• **options?**: [`GraphQLEslintOptions`](../interfaces/GraphQLEslintOptions.md)
 
 #### Returns
 
@@ -52,48 +32,35 @@ Currently only supports this as a separate config file and command, as there are
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• **project**: `TypeScriptProject`
+> **project**: `TypeScriptProject`
 
 #### Overrides
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### moveProjectNeedingRulesToOverride
+### postSynthesize()
 
-▸ **moveProjectNeedingRulesToOverride**(): `void`
-
-Certain TS parser eslint rules require the project setting for the TS parser.
-This moves those rules to an override to make the TS parser ignore .graphql files.
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -103,13 +70,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -119,13 +86,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -135,13 +102,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -151,35 +118,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -199,16 +164,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

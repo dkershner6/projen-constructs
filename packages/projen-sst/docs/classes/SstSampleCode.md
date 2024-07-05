@@ -1,46 +1,24 @@
-[projen-sst](../README.md) / [Exports](../modules.md) / SstSampleCode
+[**projen-sst**](../README.md) • **Docs**
+
+***
+
+[projen-sst](../globals.md) / SstSampleCode
 
 # Class: SstSampleCode
 
-## Hierarchy
+## Extends
 
 - `Component`
 
-  ↳ **`SstSampleCode`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](SstSampleCode.md#constructor)
-
-### Properties
-
-- [node](SstSampleCode.md#node)
-- [project](SstSampleCode.md#project)
-
-### Methods
-
-- [createSstConfigFile](SstSampleCode.md#createsstconfigfile)
-- [createStackFile](SstSampleCode.md#createstackfile)
-- [postSynthesize](SstSampleCode.md#postsynthesize)
-- [preSynthesize](SstSampleCode.md#presynthesize)
-- [synthesize](SstSampleCode.md#synthesize)
-- [toString](SstSampleCode.md#tostring)
-- [isComponent](SstSampleCode.md#iscomponent)
-- [isConstruct](SstSampleCode.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new SstSampleCode()
 
-• **new SstSampleCode**(`project`): [`SstSampleCode`](SstSampleCode.md)
+> **new SstSampleCode**(`project`): [`SstSampleCode`](SstSampleCode.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | [`SstTypescriptApp`](SstTypescriptApp.md) |
+• **project**: [`SstTypescriptApp`](SstTypescriptApp.md)
 
 #### Returns
 
@@ -48,55 +26,35 @@
 
 #### Overrides
 
-Component.constructor
+`Component.constructor`
 
 ## Properties
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-Component.node
+`Component.node`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-Component.project
+`Component.project`
 
 ## Methods
 
-### createSstConfigFile
+### postSynthesize()
 
-▸ **createSstConfigFile**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### createStackFile
-
-▸ **createStackFile**(): `void`
-
-#### Returns
-
-`void`
-
-___
-
-### postSynthesize
-
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -106,13 +64,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-Component.postSynthesize
+`Component.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -122,13 +80,13 @@ Called before synthesis.
 
 #### Inherited from
 
-Component.preSynthesize
+`Component.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Synthesizes files to the project output directory.
 
@@ -138,13 +96,13 @@ Synthesizes files to the project output directory.
 
 #### Inherited from
 
-Component.synthesize
+`Component.synthesize`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -154,35 +112,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-Component.toString
+`Component.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-Component.isComponent
+`Component.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -202,16 +158,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-Component.isConstruct
+`Component.isConstruct`

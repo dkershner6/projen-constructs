@@ -1,38 +1,24 @@
-[dkershner6-projen-nx-monorepo](../README.md) / [Exports](../modules.md) / UpgradeDependenciesOptions
+[**dkershner6-projen-nx-monorepo**](../README.md) • **Docs**
+
+***
+
+[dkershner6-projen-nx-monorepo](../globals.md) / UpgradeDependenciesOptions
 
 # Interface: UpgradeDependenciesOptions
 
-## Hierarchy
+## Extends
 
 - `UpgradeDependenciesOptions`
 
-  ↳ **`UpgradeDependenciesOptions`**
-
-## Table of contents
-
-### Properties
-
-- [exclude](UpgradeDependenciesOptions.md#exclude)
-- [include](UpgradeDependenciesOptions.md#include)
-- [pullRequestTitle](UpgradeDependenciesOptions.md#pullrequesttitle)
-- [satisfyPeerDependencies](UpgradeDependenciesOptions.md#satisfypeerdependencies)
-- [semanticCommit](UpgradeDependenciesOptions.md#semanticcommit)
-- [signoff](UpgradeDependenciesOptions.md#signoff)
-- [target](UpgradeDependenciesOptions.md#target)
-- [taskName](UpgradeDependenciesOptions.md#taskname)
-- [types](UpgradeDependenciesOptions.md#types)
-- [workflow](UpgradeDependenciesOptions.md#workflow)
-- [workflowOptions](UpgradeDependenciesOptions.md#workflowoptions)
-
 ## Properties
 
-### exclude
+### exclude?
 
-• `Optional` `Readonly` **exclude**: `string`[]
+> `readonly` `optional` **exclude**: `string`[]
 
 List of package names to exclude during the upgrade.
 
-**`Default`**
+#### Default
 
 ```ts
 - Nothing is excluded.
@@ -40,17 +26,17 @@ List of package names to exclude during the upgrade.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.exclude
+`javascript.UpgradeDependenciesOptions.exclude`
 
-___
+***
 
-### include
+### include?
 
-• `Optional` `Readonly` **include**: `string`[]
+> `readonly` `optional` **include**: `string`[]
 
 List of package names to include during the upgrade.
 
-**`Default`**
+#### Default
 
 ```ts
 - Everything is included.
@@ -58,17 +44,17 @@ List of package names to include during the upgrade.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.include
+`javascript.UpgradeDependenciesOptions.include`
 
-___
+***
 
-### pullRequestTitle
+### pullRequestTitle?
 
-• `Optional` `Readonly` **pullRequestTitle**: `string`
+> `readonly` `optional` **pullRequestTitle**: `string`
 
 Title of the pull request to use (should be all lower-case).
 
-**`Default`**
+#### Default
 
 ```ts
 "upgrade dependencies"
@@ -76,24 +62,24 @@ Title of the pull request to use (should be all lower-case).
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.pullRequestTitle
+`javascript.UpgradeDependenciesOptions.pullRequestTitle`
 
-___
+***
 
-### satisfyPeerDependencies
+### satisfyPeerDependencies?
 
-• `Optional` `Readonly` **satisfyPeerDependencies**: `boolean`
+> `readonly` `optional` **satisfyPeerDependencies**: `boolean`
 
 Check peer dependencies of installed packages and filter updates to compatible versions.
 
 By default, the upgrade workflow will adhere to version constraints from peer dependencies.
 Sometimes this is not desirable and can be disabled.
 
-**`See`**
+#### See
 
 https://github.com/raineorshine/npm-check-updates#peer
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -101,17 +87,17 @@ true
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.satisfyPeerDependencies
+`javascript.UpgradeDependenciesOptions.satisfyPeerDependencies`
 
-___
+***
 
-### semanticCommit
+### semanticCommit?
 
-• `Optional` `Readonly` **semanticCommit**: `string`
+> `readonly` `optional` **semanticCommit**: `string`
 
 The semantic commit type.
 
-**`Default`**
+#### Default
 
 ```ts
 'chore'
@@ -119,17 +105,17 @@ The semantic commit type.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.semanticCommit
+`javascript.UpgradeDependenciesOptions.semanticCommit`
 
-___
+***
 
-### signoff
+### signoff?
 
-• `Optional` `Readonly` **signoff**: `boolean`
+> `readonly` `optional` **signoff**: `boolean`
 
 Add Signed-off-by line by the committer at the end of the commit log message.
 
-**`Default`**
+#### Default
 
 ```ts
 true
@@ -137,21 +123,21 @@ true
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.signoff
+`javascript.UpgradeDependenciesOptions.signoff`
 
-___
+***
 
-### target
+### target?
 
-• `Optional` `Readonly` **target**: `string`
+> `readonly` `optional` **target**: `string`
 
 Determines the target version to upgrade dependencies to.
 
-**`See`**
+#### See
 
 https://github.com/raineorshine/npm-check-updates#target
 
-**`Default`**
+#### Default
 
 ```ts
 "minor"
@@ -159,18 +145,18 @@ https://github.com/raineorshine/npm-check-updates#target
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.target
+`javascript.UpgradeDependenciesOptions.target`
 
-___
+***
 
-### taskName
+### taskName?
 
-• `Optional` `Readonly` **taskName**: `string`
+> `readonly` `optional` **taskName**: `string`
 
 The name of the task that will be created.
 This will also be the workflow name.
 
-**`Default`**
+#### Default
 
 ```ts
 "upgrade".
@@ -178,17 +164,17 @@ This will also be the workflow name.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.taskName
+`javascript.UpgradeDependenciesOptions.taskName`
 
-___
+***
 
-### types
+### types?
 
-• `Optional` `Readonly` **types**: `DependencyType`[]
+> `readonly` `optional` **types**: `DependencyType`[]
 
 Specify which dependency types the upgrade should operate on.
 
-**`Default`**
+#### Default
 
 ```ts
 - All dependency types.
@@ -196,13 +182,13 @@ Specify which dependency types the upgrade should operate on.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.types
+`javascript.UpgradeDependenciesOptions.types`
 
-___
+***
 
-### workflow
+### workflow?
 
-• `Optional` `Readonly` **workflow**: `boolean`
+> `readonly` `optional` **workflow**: `boolean`
 
 Include a github workflow for creating PR's that upgrades the
 required dependencies, either by manual dispatch, or by a schedule.
@@ -210,7 +196,7 @@ required dependencies, either by manual dispatch, or by a schedule.
 If this is `false`, only a local projen task is created, which can be executed manually to
 upgrade the dependencies.
 
-**`Default`**
+#### Default
 
 ```ts
 - true for root projects, false for subprojects.
@@ -218,17 +204,17 @@ upgrade the dependencies.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.workflow
+`javascript.UpgradeDependenciesOptions.workflow`
 
-___
+***
 
-### workflowOptions
+### workflowOptions?
 
-• `Optional` `Readonly` **workflowOptions**: `UpgradeDependenciesWorkflowOptions`
+> `readonly` `optional` **workflowOptions**: `UpgradeDependenciesWorkflowOptions`
 
 Options for the github workflow. Only applies if `workflow` is true.
 
-**`Default`**
+#### Default
 
 ```ts
 - default options.
@@ -236,4 +222,4 @@ Options for the github workflow. Only applies if `workflow` is true.
 
 #### Inherited from
 
-javascript.UpgradeDependenciesOptions.workflowOptions
+`javascript.UpgradeDependenciesOptions.workflowOptions`

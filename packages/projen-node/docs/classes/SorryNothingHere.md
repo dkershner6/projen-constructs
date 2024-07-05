@@ -1,24 +1,18 @@
-[projen-node](../README.md) / [Exports](../modules.md) / SorryNothingHere
+[**projen-node**](../README.md) • **Docs**
+
+***
+
+[projen-node](../globals.md) / SorryNothingHere
 
 # Class: SorryNothingHere
 
 A previous construct is now outdated, and this is a placeholder. Apologies.
 
-## Table of contents
-
-### Constructors
-
-- [constructor](SorryNothingHere.md#constructor)
-
-### Properties
-
-- [name](SorryNothingHere.md#name)
-
 ## Constructors
 
-### constructor
+### new SorryNothingHere()
 
-• **new SorryNothingHere**(): [`SorryNothingHere`](SorryNothingHere.md)
+> **new SorryNothingHere**(): [`SorryNothingHere`](SorryNothingHere.md)
 
 #### Returns
 
@@ -28,4 +22,4 @@ A previous construct is now outdated, and this is a placeholder. Apologies.
 
 ### name
 
-• `Readonly` **name**: ``"nothing-here"``
+> `readonly` **name**: `"nothing-here"` = `"nothing-here"`

@@ -1,4 +1,6 @@
-dkershner6-projen-sst-nextjs-app / [Exports](modules.md)
+**dkershner6-projen-sst-nextjs-app** • [**Docs**](globals.md)
+
+***
 
 # dkershner6-projen-sst-nextjs-app
 

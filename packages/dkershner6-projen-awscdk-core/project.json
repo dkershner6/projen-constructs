@@ -156,6 +156,13 @@
         "cwd": "packages/dkershner6-projen-awscdk-core"
       }
     },
+    "docgen:remove": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec projen docgen:remove",
+        "cwd": "packages/dkershner6-projen-awscdk-core"
+      }
+    },
     "publish:github": {
       "executor": "nx:run-commands",
       "options": {

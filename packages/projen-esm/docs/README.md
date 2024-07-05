@@ -1,4 +1,6 @@
-projen-esm / [Exports](modules.md)
+**projen-esm** • [**Docs**](globals.md)
+
+***
 
 # projen-esm
 

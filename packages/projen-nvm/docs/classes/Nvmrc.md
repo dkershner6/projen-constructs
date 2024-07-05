@@ -1,56 +1,26 @@
-[projen-nvm](../README.md) / [Exports](../modules.md) / Nvmrc
+[**projen-nvm**](../README.md) • **Docs**
+
+***
+
+[projen-nvm](../globals.md) / Nvmrc
 
 # Class: Nvmrc
 
-## Hierarchy
+## Extends
 
 - `TextFile`
 
-  ↳ **`Nvmrc`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](Nvmrc.md#constructor)
-
-### Properties
-
-- [absolutePath](Nvmrc.md#absolutepath)
-- [executable](Nvmrc.md#executable)
-- [node](Nvmrc.md#node)
-- [path](Nvmrc.md#path)
-- [project](Nvmrc.md#project)
-- [readonly](Nvmrc.md#readonly)
-
-### Accessors
-
-- [changed](Nvmrc.md#changed)
-- [marker](Nvmrc.md#marker)
-
-### Methods
-
-- [addLine](Nvmrc.md#addline)
-- [postSynthesize](Nvmrc.md#postsynthesize)
-- [preSynthesize](Nvmrc.md#presynthesize)
-- [synthesize](Nvmrc.md#synthesize)
-- [synthesizeContent](Nvmrc.md#synthesizecontent)
-- [toString](Nvmrc.md#tostring)
-- [isComponent](Nvmrc.md#iscomponent)
-- [isConstruct](Nvmrc.md#isconstruct)
-
 ## Constructors
 
-### constructor
+### new Nvmrc()
 
-• **new Nvmrc**(`project`, `options?`): [`Nvmrc`](Nvmrc.md)
+> **new Nvmrc**(`project`, `options`): [`Nvmrc`](Nvmrc.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `project` | `NodeProject` |
-| `options` | [`NvmrcOptions`](../interfaces/NvmrcOptions.md) |
+• **project**: `NodeProject`
+
+• **options**: [`NvmrcOptions`](../interfaces/NvmrcOptions.md) = `{}`
 
 #### Returns
 
@@ -58,83 +28,83 @@
 
 #### Overrides
 
-TextFile.constructor
+`TextFile.constructor`
 
 ## Properties
 
 ### absolutePath
 
-• `Readonly` **absolutePath**: `string`
+> `readonly` **absolutePath**: `string`
 
 The absolute path of this file.
 
 #### Inherited from
 
-TextFile.absolutePath
+`TextFile.absolutePath`
 
-___
+***
 
 ### executable
 
-• **executable**: `boolean`
+> **executable**: `boolean`
 
 Indicates if the file should be marked as executable
 
 #### Inherited from
 
-TextFile.executable
+`TextFile.executable`
 
-___
+***
 
 ### node
 
-• `Readonly` **node**: `Node`
+> `readonly` **node**: `Node`
 
 The tree node.
 
 #### Inherited from
 
-TextFile.node
+`TextFile.node`
 
-___
+***
 
 ### path
 
-• `Readonly` **path**: `string`
+> `readonly` **path**: `string`
 
 The file path, relative to the project's outdir.
 
 #### Inherited from
 
-TextFile.path
+`TextFile.path`
 
-___
+***
 
 ### project
 
-• `Readonly` **project**: `Project`
+> `readonly` **project**: `Project`
 
 #### Inherited from
 
-TextFile.project
+`TextFile.project`
 
-___
+***
 
 ### readonly
 
-• **readonly**: `boolean`
+> **readonly**: `boolean`
 
 Indicates if the file should be read-only or read-write.
 
 #### Inherited from
 
-TextFile.readonly
+`TextFile.readonly`
 
 ## Accessors
 
 ### changed
 
-• `get` **changed**(): `undefined` \| `boolean`
+> `get` **changed**(): `undefined` \| `boolean`
 
 Indicates if the file has been changed during synthesis. This property is
 only available in `postSynthesize()` hooks. If this is `undefined`, the
@@ -146,13 +116,13 @@ file has not been synthesized yet.
 
 #### Inherited from
 
-TextFile.changed
+`TextFile.changed`
 
-___
+***
 
 ### marker
 
-• `get` **marker**(): `undefined` \| `string`
+> `get` **marker**(): `undefined` \| `string`
 
 The projen marker, used to identify files as projen-generated.
 
@@ -164,21 +134,21 @@ Value is undefined if the project is being ejected.
 
 #### Inherited from
 
-TextFile.marker
+`TextFile.marker`
 
 ## Methods
 
-### addLine
+### addLine()
 
-▸ **addLine**(`line`): `void`
+> **addLine**(`line`): `void`
 
 Adds a line to the text file.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `line` | `string` | the line to add (can use tokens) |
+• **line**: `string`
+
+the line to add (can use tokens)
 
 #### Returns
 
@@ -186,13 +156,13 @@ Adds a line to the text file.
 
 #### Inherited from
 
-TextFile.addLine
+`TextFile.addLine`
 
-___
+***
 
-### postSynthesize
+### postSynthesize()
 
-▸ **postSynthesize**(): `void`
+> **postSynthesize**(): `void`
 
 Called after synthesis. Order is *not* guaranteed.
 
@@ -202,13 +172,13 @@ Called after synthesis. Order is *not* guaranteed.
 
 #### Inherited from
 
-TextFile.postSynthesize
+`TextFile.postSynthesize`
 
-___
+***
 
-### preSynthesize
+### preSynthesize()
 
-▸ **preSynthesize**(): `void`
+> **preSynthesize**(): `void`
 
 Called before synthesis.
 
@@ -218,13 +188,13 @@ Called before synthesis.
 
 #### Inherited from
 
-TextFile.preSynthesize
+`TextFile.preSynthesize`
 
-___
+***
 
-### synthesize
+### synthesize()
 
-▸ **synthesize**(): `void`
+> **synthesize**(): `void`
 
 Writes the file to the project's output directory
 
@@ -234,33 +204,36 @@ Writes the file to the project's output directory
 
 #### Inherited from
 
-TextFile.synthesize
+`TextFile.synthesize`
 
-___
+***
 
-### synthesizeContent
+### synthesizeContent()
 
-▸ **synthesizeContent**(`_`): `undefined` \| `string`
+> `protected` **synthesizeContent**(`_`): `undefined` \| `string`
+
+Implemented by derived classes and returns the contents of the file to
+emit.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_` | `IResolver` |
+• **\_**: `IResolver`
 
 #### Returns
 
 `undefined` \| `string`
 
+the content to synthesize or undefined to skip the file
+
 #### Inherited from
 
-TextFile.synthesizeContent
+`TextFile.synthesizeContent`
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Returns a string representation of this construct.
 
@@ -270,35 +243,33 @@ Returns a string representation of this construct.
 
 #### Inherited from
 
-TextFile.toString
+`TextFile.toString`
 
-___
+***
 
-### isComponent
+### isComponent()
 
-▸ **isComponent**(`x`): x is Component
+> `static` **isComponent**(`x`): `x is Component`
 
 Test whether the given construct is a component.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `any` |
+• **x**: `any`
 
 #### Returns
 
-x is Component
+`x is Component`
 
 #### Inherited from
 
-TextFile.isComponent
+`TextFile.isComponent`
 
-___
+***
 
-### isConstruct
+### isConstruct()
 
-▸ **isConstruct**(`x`): x is Construct
+> `static` **isConstruct**(`x`): `x is Construct`
 
 Checks if `x` is a construct.
 
@@ -318,16 +289,16 @@ this type-testing method instead.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `x` | `any` | Any object |
+• **x**: `any`
+
+Any object
 
 #### Returns
 
-x is Construct
+`x is Construct`
 
 true if `x` is an object created from a class which extends `Construct`.
 
 #### Inherited from
 
-TextFile.isConstruct
+`TextFile.isConstruct`

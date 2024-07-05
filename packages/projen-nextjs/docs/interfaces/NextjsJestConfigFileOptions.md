@@ -1,37 +1,34 @@
-[projen-nextjs](../README.md) / [Exports](../modules.md) / NextjsJestConfigFileOptions
+[**projen-nextjs**](../README.md) • **Docs**
+
+***
+
+[projen-nextjs](../globals.md) / NextjsJestConfigFileOptions
 
 # Interface: NextjsJestConfigFileOptions
 
-## Table of contents
-
-### Properties
-
-- [dir](NextjsJestConfigFileOptions.md#dir)
-- [filename](NextjsJestConfigFileOptions.md#filename)
-
 ## Properties
 
-### dir
+### dir?
 
-• `Optional` **dir**: `string`
+> `optional` **dir**: `string`
 
 The relative directory where next.config.js is located in relation to the jest config file.
 
-**`Default`**
+#### Default
 
 ```ts
 "./"
 ```
 
-___
+***
 
-### filename
+### filename?
 
-• `Optional` **filename**: `string`
+> `optional` **filename**: `string`
 
 The filename of the jest config file being created as a shim for next/jest.
 
-**`Default`**
+#### Default
 
 ```ts
 "jest.config.cjs"

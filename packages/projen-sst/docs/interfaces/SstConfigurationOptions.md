@@ -1,58 +1,52 @@
-[projen-sst](../README.md) / [Exports](../modules.md) / SstConfigurationOptions
+[**projen-sst**](../README.md) • **Docs**
+
+***
+
+[projen-sst](../globals.md) / SstConfigurationOptions
 
 # Interface: SstConfigurationOptions
 
-## Hierarchy
+## Extended by
 
-- **`SstConfigurationOptions`**
-
-  ↳ [`SstTypescriptAppOptions`](SstTypescriptAppOptions.md)
-
-## Table of contents
-
-### Properties
-
-- [branchNameToSstStageMap](SstConfigurationOptions.md#branchnametosststagemap)
-- [sstOut](SstConfigurationOptions.md#sstout)
-- [sstVersion](SstConfigurationOptions.md#sstversion)
+- [`SstTypescriptAppOptions`](SstTypescriptAppOptions.md)
 
 ## Properties
 
-### branchNameToSstStageMap
+### branchNameToSstStageMap?
 
-• `Optional` `Readonly` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
+> `readonly` `optional` **branchNameToSstStageMap**: `Record`\<`string`, `string`\>
 
 Maps branchNames to SST Stages.
 
-**`Default`**
+#### Default
 
 ```ts
 - The branchName will be used as the stage name.
 ```
 
-___
+***
 
-### sstOut
+### sstOut?
 
-• `Optional` **sstOut**: `string`
+> `optional` **sstOut**: `string`
 
 Where to build .sst code to.
 
-**`Default`**
+#### Default
 
 ```ts
 ".sst/dist/"
 ```
 
-___
+***
 
-### sstVersion
+### sstVersion?
 
-• `Optional` **sstVersion**: `string`
+> `optional` **sstVersion**: `string`
 
 The version of SST to use.
 
-**`Default`**
+#### Default
 
 ```ts
 "2.39.2"

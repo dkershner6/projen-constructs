@@ -1,4 +1,8 @@
-[projen-github-workflows](../README.md) / [Exports](../modules.md) / GithubPagesPublishJob
+[**projen-github-workflows**](../README.md) • **Docs**
+
+***
+
+[projen-github-workflows](../globals.md) / GithubPagesPublishJob
 
 # Class: GithubPagesPublishJob
 
@@ -6,45 +10,17 @@
 
 - `Job`
 
-## Table of contents
-
-### Constructors
-
-- [constructor](GithubPagesPublishJob.md#constructor)
-
-### Properties
-
-- [concurrency](GithubPagesPublishJob.md#concurrency)
-- [container](GithubPagesPublishJob.md#container)
-- [continueOnError](GithubPagesPublishJob.md#continueonerror)
-- [defaults](GithubPagesPublishJob.md#defaults)
-- [env](GithubPagesPublishJob.md#env)
-- [environment](GithubPagesPublishJob.md#environment)
-- [if](GithubPagesPublishJob.md#if)
-- [name](GithubPagesPublishJob.md#name)
-- [needs](GithubPagesPublishJob.md#needs)
-- [outputs](GithubPagesPublishJob.md#outputs)
-- [permissions](GithubPagesPublishJob.md#permissions)
-- [runsOn](GithubPagesPublishJob.md#runson)
-- [runsOnGroup](GithubPagesPublishJob.md#runsongroup)
-- [services](GithubPagesPublishJob.md#services)
-- [steps](GithubPagesPublishJob.md#steps)
-- [strategy](GithubPagesPublishJob.md#strategy)
-- [timeoutMinutes](GithubPagesPublishJob.md#timeoutminutes)
-- [tools](GithubPagesPublishJob.md#tools)
-
 ## Constructors
 
-### constructor
+### new GithubPagesPublishJob()
 
-• **new GithubPagesPublishJob**(`options?`, `jobOptions?`): [`GithubPagesPublishJob`](GithubPagesPublishJob.md)
+> **new GithubPagesPublishJob**(`options`?, `jobOptions`?): [`GithubPagesPublishJob`](GithubPagesPublishJob.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | [`GithubPagesPublishJobOptions`](../interfaces/GithubPagesPublishJobOptions.md) |
-| `jobOptions?` | `Job` |
+• **options?**: [`GithubPagesPublishJobOptions`](../interfaces/GithubPagesPublishJobOptions.md)
+
+• **jobOptions?**: `Job`
 
 #### Returns
 
@@ -52,180 +28,285 @@
 
 ## Properties
 
-### concurrency
+### concurrency?
 
-• `Optional` **concurrency**: `unknown`
+> `optional` **concurrency**: `unknown`
 
-#### Implementation of
+**`Experimental`**
 
-Job.concurrency
-
-___
-
-### container
-
-• `Optional` **container**: `ContainerOptions`
+Concurrency ensures that only a single job or workflow using the same
+concurrency group will run at a time. A concurrency group can be any
+string or expression. The expression can use any context except for the
+secrets context.
 
 #### Implementation of
 
-Job.container
+`Job.concurrency`
 
-___
+***
 
-### continueOnError
+### container?
 
-• `Optional` **continueOnError**: `boolean`
+> `optional` **container**: `ContainerOptions`
 
-#### Implementation of
-
-Job.continueOnError
-
-___
-
-### defaults
-
-• `Optional` **defaults**: `JobDefaults`
+A container to run any steps in a job that don't already specify a
+container. If you have steps that use both script and container actions,
+the container actions will run as sibling containers on the same network
+with the same volume mounts.
 
 #### Implementation of
 
-Job.defaults
+`Job.container`
 
-___
+***
 
-### env
+### continueOnError?
 
-• `Optional` **env**: `Record`\<`string`, `string`\>
+> `optional` **continueOnError**: `boolean`
 
-#### Implementation of
-
-Job.env
-
-___
-
-### environment
-
-• `Optional` **environment**: `unknown`
+Prevents a workflow run from failing when a job fails. Set to true to
+allow a workflow run to pass when this job fails.
 
 #### Implementation of
 
-Job.environment
+`Job.continueOnError`
 
-___
+***
 
-### if
+### defaults?
 
-• `Optional` **if**: `string`
+> `optional` **defaults**: `JobDefaults`
 
-#### Implementation of
-
-Job.if
-
-___
-
-### name
-
-• `Optional` **name**: `string`
+A map of default settings that will apply to all steps in the job. You
+can also set default settings for the entire workflow.
 
 #### Implementation of
 
-Job.name
+`Job.defaults`
 
-___
+***
 
-### needs
+### env?
 
-• `Optional` **needs**: `string`[]
+> `optional` **env**: `Record`\<`string`, `string`\>
 
-#### Implementation of
-
-Job.needs
-
-___
-
-### outputs
-
-• `Optional` **outputs**: `Record`\<`string`, `JobStepOutput`\>
+A map of environment variables that are available to all steps in the
+job. You can also set environment variables for the entire workflow or an
+individual step.
 
 #### Implementation of
 
-Job.outputs
+`Job.env`
 
-___
+***
+
+### environment?
+
+> `optional` **environment**: `unknown`
+
+The environment that the job references. All environment protection rules
+must pass before a job referencing the environment is sent to a runner.
+
+#### See
+
+https://docs.github.com/en/actions/reference/environments
+
+#### Implementation of
+
+`Job.environment`
+
+***
+
+### if?
+
+> `optional` **if**: `string`
+
+You can use the if conditional to prevent a job from running unless a
+condition is met. You can use any supported context and expression to
+create a conditional.
+
+#### Implementation of
+
+`Job.if`
+
+***
+
+### name?
+
+> `optional` **name**: `string`
+
+The name of the job displayed on GitHub.
+
+#### Implementation of
+
+`Job.name`
+
+***
+
+### needs?
+
+> `optional` **needs**: `string`[]
+
+Identifies any jobs that must complete successfully before this job will
+run. It can be a string or array of strings. If a job fails, all jobs
+that need it are skipped unless the jobs use a conditional expression
+that causes the job to continue.
+
+#### Implementation of
+
+`Job.needs`
+
+***
+
+### outputs?
+
+> `optional` **outputs**: `Record`\<`string`, `JobStepOutput`\>
+
+A map of outputs for a job. Job outputs are available to all downstream
+jobs that depend on this job.
+
+#### Implementation of
+
+`Job.outputs`
+
+***
 
 ### permissions
 
-• **permissions**: `JobPermissions`
+> **permissions**: `JobPermissions`
+
+You can modify the default permissions granted to the GITHUB_TOKEN, adding
+or removing access as required, so that you only allow the minimum required
+access.
+
+Use `{ contents: READ }` if your job only needs to clone code.
+
+This is intentionally a required field since it is required in order to
+allow workflows to run in GitHub repositories with restricted default
+access.
+
+#### See
+
+https://docs.github.com/en/actions/reference/authentication-in-a-workflow#permissions-for-the-github_token
 
 #### Implementation of
 
-Job.permissions
+`Job.permissions`
 
-___
+***
 
-### runsOn
+### runsOn?
 
-• `Optional` **runsOn**: `string`[]
+> `optional` **runsOn**: `string`[]
 
-#### Implementation of
+The type of machine to run the job on. The machine can be either a
+GitHub-hosted runner or a self-hosted runner.
 
-Job.runsOn
+#### Example
 
-___
-
-### runsOnGroup
-
-• `Optional` **runsOnGroup**: `GroupRunnerOptions`
-
-#### Implementation of
-
-Job.runsOnGroup
-
-___
-
-### services
-
-• `Optional` **services**: `Record`\<`string`, `ContainerOptions`\>
+```ts
+["ubuntu-latest"]
+```
 
 #### Implementation of
 
-Job.services
+`Job.runsOn`
 
-___
+***
+
+### runsOnGroup?
+
+> `optional` **runsOnGroup**: `GroupRunnerOptions`
+
+Github Runner Group selection options
+
+#### Description
+
+Defines a target Runner Group by name and/or labels
+
+#### Throws
+
+if both `runsOn` and `runsOnGroup` are specified
+
+#### Implementation of
+
+`Job.runsOnGroup`
+
+***
+
+### services?
+
+> `optional` **services**: `Record`\<`string`, `ContainerOptions`\>
+
+Used to host service containers for a job in a workflow. Service
+containers are useful for creating databases or cache services like Redis.
+The runner automatically creates a Docker network and manages the life
+cycle of the service containers.
+
+#### Implementation of
+
+`Job.services`
+
+***
 
 ### steps
 
-• **steps**: `JobStep`[]
+> **steps**: `JobStep`[]
+
+A job contains a sequence of tasks called steps. Steps can run commands,
+run setup tasks, or run an action in your repository, a public repository,
+or an action published in a Docker registry. Not all steps run actions,
+but all actions run as a step. Each step runs in its own process in the
+runner environment and has access to the workspace and filesystem.
+Because steps run in their own process, changes to environment variables
+are not preserved between steps. GitHub provides built-in steps to set up
+and complete a job.
 
 #### Implementation of
 
-Job.steps
+`Job.steps`
 
-___
+***
 
-### strategy
+### strategy?
 
-• `Optional` **strategy**: `JobStrategy`
+> `optional` **strategy**: `JobStrategy`
 
-#### Implementation of
-
-Job.strategy
-
-___
-
-### timeoutMinutes
-
-• `Optional` **timeoutMinutes**: `number`
+A strategy creates a build matrix for your jobs. You can define different
+variations to run each job in.
 
 #### Implementation of
 
-Job.timeoutMinutes
+`Job.strategy`
 
-___
+***
 
-### tools
+### timeoutMinutes?
 
-• `Optional` **tools**: `Tools`
+> `optional` **timeoutMinutes**: `number`
+
+The maximum number of minutes to let a job run before GitHub
+automatically cancels it.
+
+#### Default
+
+```ts
+360
+```
 
 #### Implementation of
 
-Job.tools
+`Job.timeoutMinutes`
+
+***
+
+### tools?
+
+> `optional` **tools**: `Tools`
+
+Tools required for this job. Translates into `actions/setup-xxx` steps at
+the beginning of the job.
+
+#### Implementation of
+
+`Job.tools`

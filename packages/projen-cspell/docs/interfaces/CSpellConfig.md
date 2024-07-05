@@ -1,58 +1,49 @@
-[projen-cspell](../README.md) / [Exports](../modules.md) / CSpellConfig
+[**projen-cspell**](../README.md) • **Docs**
+
+***
+
+[projen-cspell](../globals.md) / CSpellConfig
 
 # Interface: CSpellConfig
 
-## Table of contents
-
-### Properties
-
-- [dictionaries](CSpellConfig.md#dictionaries)
-- [dictionaryDefinitions](CSpellConfig.md#dictionarydefinitions)
-- [flagWords](CSpellConfig.md#flagwords)
-- [ignorePaths](CSpellConfig.md#ignorepaths)
-- [ignoreRegExpList](CSpellConfig.md#ignoreregexplist)
-- [language](CSpellConfig.md#language)
-- [version](CSpellConfig.md#version)
-- [words](CSpellConfig.md#words)
-
 ## Properties
 
-### dictionaries
+### dictionaries?
 
-• `Optional` `Readonly` **dictionaries**: `string`[]
+> `readonly` `optional` **dictionaries**: `string`[]
 
 Custom dictionaries to use.
 
-___
+***
 
-### dictionaryDefinitions
+### dictionaryDefinitions?
 
-• `Optional` `Readonly` **dictionaryDefinitions**: [`CSpellDictionaryDefinition`](CSpellDictionaryDefinition.md)[]
+> `readonly` `optional` **dictionaryDefinitions**: [`CSpellDictionaryDefinition`](CSpellDictionaryDefinition.md)[]
 
 Define custom dictionaries.
 
-___
+***
 
-### flagWords
+### flagWords?
 
-• `Optional` `Readonly` **flagWords**: `string`[]
+> `readonly` `optional` **flagWords**: `string`[]
 
 flagWords - list of words to be always considered incorrect
 This is useful for offensive words and common spelling errors. (e.g. "hte" and "thier")
 
-___
+***
 
-### ignorePaths
+### ignorePaths?
 
-• `Optional` `Readonly` **ignorePaths**: `string`[]
+> `readonly` `optional` **ignorePaths**: `string`[]
 
 Globs of files to ignore.
 
-___
+***
 
-### ignoreRegExpList
+### ignoreRegExpList?
 
-• `Optional` `Readonly` **ignoreRegExpList**: `string`[]
+> `readonly` `optional` **ignoreRegExpList**: `string`[]
 
 List of regular expression patterns or pattern names to exclude from spell checking.
 
@@ -80,11 +71,11 @@ By default, several patterns are excluded. See
 While you can create your own patterns, you can also leverage several patterns that are
 [built-in to CSpell](https://cspell.org/types/cspell-types/types/PredefinedPatterns.html).
 
-___
+***
 
-### language
+### language?
 
-• `Optional` `Readonly` **language**: `string`
+> `readonly` `optional` **language**: `string`
 
 Current active spelling language. This specifies the language locale to use in choosing the
 general dictionary.
@@ -94,32 +85,32 @@ For example:
 - "en-GB" for British English.
 - "en,nl" to enable both English and Dutch.
 
-**`Default`**
+#### Default
 
 ```ts
 "en"
 ```
 
-___
+***
 
-### version
+### version?
 
-• `Optional` `Readonly` **version**: ``"0.2"`` \| ``"0.1"``
+> `readonly` `optional` **version**: `"0.2"` \| `"0.1"`
 
 Configuration format version of the settings file.
 
 This controls how the settings in the configuration file behave.
 
-**`Default`**
+#### Default
 
 ```ts
 "0.2"
 ```
 
-___
+***
 
-### words
+### words?
 
-• `Optional` `Readonly` **words**: `string`[]
+> `readonly` `optional` **words**: `string`[]
 
 words - list of words to be always considered correct
