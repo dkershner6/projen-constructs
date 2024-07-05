@@ -7,7 +7,7 @@ export class TypedocMarkdown extends Component {
     constructor(project: TypeScriptProject) {
         super(project);
 
-        this.project.addDevDeps("typedoc-plugin-markdown");
+        this.project.addDevDeps("typedoc-plugin-markdown@^4");
 
         const docgenTask = this.project.tasks.tryFind("docgen");
         if (docgenTask) {

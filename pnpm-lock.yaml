@@ -170,7 +170,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -251,7 +251,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -329,7 +329,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -425,7 +425,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -509,7 +509,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -590,7 +590,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -671,7 +671,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -758,7 +758,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -857,7 +857,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -935,7 +935,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1019,7 +1019,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1097,7 +1097,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1184,7 +1184,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1262,7 +1262,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1343,7 +1343,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1424,7 +1424,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1502,7 +1502,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1580,7 +1580,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1658,7 +1658,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1736,7 +1736,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1814,7 +1814,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1892,7 +1892,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3
@@ -1970,7 +1970,7 @@ importers:
         specifier: ^0.26.3
         version: 0.26.3(typescript@5.5.3)
       typedoc-plugin-markdown:
-        specifier: ^4.1.2
+        specifier: ^4
         version: 4.1.2(typedoc@0.26.3)
       typescript:
         specifier: ^5.5.3

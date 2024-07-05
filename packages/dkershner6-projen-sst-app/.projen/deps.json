@@ -97,6 +97,7 @@
     },
     {
       "name": "typedoc-plugin-markdown",
+      "version": "^4",
       "type": "build"
     },
     {
