@@ -60,7 +60,7 @@
     "jest-junit": "^15",
     "jest-mock": "^29.7.0",
     "prettier": "^3.3.2",
-    "projen": "0.82.5",
+    "projen": "0.84.1",
     "projen-babel": "0.0.0",
     "standard-version": "^9",
     "ts-jest": "^29.1.5",
@@ -70,7 +70,7 @@
   },
   "peerDependencies": {
     "constructs": "10.3.0",
-    "projen": "0.82.5",
+    "projen": "0.84.1",
     "projen-babel": "^0.x"
   },
   "keywords": [
@@ -91,8 +91,8 @@
     "testEnvironment": "node",
     "testTimeout": 15000,
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
+      "<rootDir>/@(src|test)/**/?(*.)+(spec|test).ts?(x)",
+      "<rootDir>/@(src|test)/**/__tests__/**/*.ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,
