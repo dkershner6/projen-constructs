@@ -236,6 +236,23 @@ export class Node20SstApp extends SstTypescriptApp {
             steps: [
                 ...(options.workflowBootstrapSteps ?? []),
                 WorkflowSteps.checkout(),
+                // For version.txt
+                {
+                    name: "Download build artifacts",
+                    uses: "actions/download-artifact@v4",
+                    with: {
+                        name: "build-artifact",
+                        path: this.artifactsDirectory,
+                    },
+                },
+                {
+                    name: "Restore build artifact permissions",
+                    continueOnError: true,
+                    run: [
+                        `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
+                    ].join("\n"),
+                },
+
                 ...this.renderWorkflowSetup({
                     installStepConfiguration: {
                         workingDirectory: ".",
