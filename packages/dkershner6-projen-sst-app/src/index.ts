@@ -242,7 +242,7 @@ export class Node20SstApp extends SstTypescriptApp {
                     uses: "actions/download-artifact@v4",
                     with: {
                         name: "build-artifact",
-                        path: this.artifactsDirectory,
+                        path: `${workingDirectory}/${this.artifactsDirectory}`,
                     },
                 },
                 {
