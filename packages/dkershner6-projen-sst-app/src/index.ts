@@ -263,12 +263,15 @@ export class Node20SstApp extends SstTypescriptApp {
             branchName,
         });
 
+        // pj is installed
+        const runCommand = `npx projen ${deployTaskToUse.name}`;
+
         return {
             ...(this.publishToAwsOptions?.deployJobStepConfiguration ?? {}),
             name:
                 this.publishToAwsOptions?.deployJobStepConfiguration?.name ??
                 "Deploy to AWS",
-            run: `npx projen ${deployTaskToUse.name}`, // pj is installed
+            run: `${runCommand} || ${runCommand}`, // Trying twice.  Sometimes the first time fails, but the second seems to pick up where the first left off.
         };
     }
 
