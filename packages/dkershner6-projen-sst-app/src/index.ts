@@ -103,10 +103,8 @@ export class Node20SstApp extends SstTypescriptApp {
                                         ?.configureAwsCredentialsJobSteps ??
                                         []),
                                     {
-                                        ...this.buildDeployToAwsJobStep({
-                                            deployTask: synthSilentTask,
-                                        }),
                                         name: "Synth",
+                                        run: `npx projen ${synthSilentTask.name}`,
                                     },
                                 ],
                                 deployJobStepBuilder: (builderParams) =>
@@ -166,14 +164,8 @@ export class Node20SstApp extends SstTypescriptApp {
                                                     ?.configureAwsCredentialsJobSteps ??
                                                     []),
                                                 {
-                                                    ...this.buildDeployToAwsJobStep(
-                                                        {
-                                                            deployTask:
-                                                                synthSilentTaskForBranch,
-                                                            branchName: branch,
-                                                        },
-                                                    ),
                                                     name: "Synth",
+                                                    run: `npx projen ${synthSilentTaskForBranch.name}`,
                                                 },
                                             ],
                                             deployJobStepBuilder: (
@@ -244,21 +236,6 @@ export class Node20SstApp extends SstTypescriptApp {
             steps: [
                 ...(options.workflowBootstrapSteps ?? []),
                 WorkflowSteps.checkout(),
-                // {
-                //     name: "Download build artifacts",
-                //     uses: "actions/download-artifact@v4",
-                //     with: {
-                //         name: "build-artifact",
-                //         path: `${workingDirectory}/${this.artifactsDirectory}`,
-                //     },
-                // },
-                // {
-                //     name: "Restore build artifact permissions",
-                //     continueOnError: true,
-                //     run: [
-                //         `cd ${this.artifactsDirectory} && setfacl --restore=permissions-backup.acl`,
-                //     ].join("\n"),
-                // },
                 ...this.renderWorkflowSetup({
                     installStepConfiguration: {
                         workingDirectory: ".",
