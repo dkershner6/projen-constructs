@@ -103,6 +103,8 @@ export class Node20SstApp extends SstTypescriptApp {
                                         ?.configureAwsCredentialsJobSteps ??
                                         []),
                                     {
+                                        ...(options?.publishToAwsOptions
+                                            ?.deployJobStepConfiguration ?? {}),
                                         name: "Synth",
                                         run: `npx projen ${synthSilentTask.name}`,
                                     },
@@ -164,6 +166,10 @@ export class Node20SstApp extends SstTypescriptApp {
                                                     ?.configureAwsCredentialsJobSteps ??
                                                     []),
                                                 {
+                                                    ...(options
+                                                        ?.publishToAwsOptions
+                                                        ?.deployJobStepConfiguration ??
+                                                        {}),
                                                     name: "Synth",
                                                     run: `npx projen ${synthSilentTaskForBranch.name}`,
                                                 },
