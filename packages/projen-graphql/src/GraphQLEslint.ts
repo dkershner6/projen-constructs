@@ -41,6 +41,19 @@ const GRAPHQL_ESLINT_OPERATIONS_RULES = {
     "@graphql-eslint/value-literals-of-correct-type": "error",
     "@graphql-eslint/variables-are-input-types": "error",
     "@graphql-eslint/variables-in-allowed-position": "error",
+    // Operations
+    "@graphql-eslint/known-fragment-names": "error",
+    "@graphql-eslint/no-deprecated": "error",
+    "@graphql-eslint/no-undefined-variables": "error",
+    "@graphql-eslint/no-unused-fragments": "error",
+    "@graphql-eslint/selection-set-depth": [
+        "error",
+        {
+            maxDepth: 7,
+        },
+    ],
+    "@graphql-eslint/unique-fragment-name": "error",
+    "@graphql-eslint/unique-operation-name": "error",
 };
 
 export const GRAPHQL_ESLINT_TS_OVERRIDE: EslintOverride = {
