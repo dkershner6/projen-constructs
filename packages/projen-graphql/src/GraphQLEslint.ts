@@ -46,12 +46,6 @@ const GRAPHQL_ESLINT_OPERATIONS_RULES = {
     "@graphql-eslint/no-deprecated": "error",
     "@graphql-eslint/no-undefined-variables": "error",
     "@graphql-eslint/no-unused-fragments": "error",
-    "@graphql-eslint/selection-set-depth": [
-        "error",
-        {
-            maxDepth: 7,
-        },
-    ],
     "@graphql-eslint/unique-fragment-name": "error",
     "@graphql-eslint/unique-operation-name": "error",
 };
