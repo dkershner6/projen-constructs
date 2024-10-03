@@ -231,8 +231,8 @@ export class Node20SstApp extends SstTypescriptApp {
                 packages: github.workflows.JobPermission.WRITE,
             },
             defaults:
-                options?.jobConfiguration?.defaults ??
-                projectPathRelativeToRoot.length > 0 // is subproject
+                (options?.jobConfiguration?.defaults ??
+                projectPathRelativeToRoot.length > 0) // is subproject
                     ? {
                           run: {
                               workingDirectory,
