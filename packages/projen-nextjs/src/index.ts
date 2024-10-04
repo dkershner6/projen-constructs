@@ -25,7 +25,7 @@ export const NEXTJS_TSCONFIG_OPTIONS: TypescriptConfigOptions = {
         noEmit: true,
         lib: ["dom", "dom.iterable", "esnext"],
         strict: true,
-        target: "es5",
+        target: "es2017",
         incremental: true,
         // @ts-expect-error - it exists
         plugins: [
