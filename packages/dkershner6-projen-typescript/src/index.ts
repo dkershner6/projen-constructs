@@ -391,8 +391,7 @@ export interface JestTransformerOptions {
 }
 
 export interface Node20TypeScriptProjectJestOptions
-    extends JestOptions,
-        JestTransformerOptions {}
+    extends JestOptions, JestTransformerOptions {}
 
 export class JestTransformer extends Component {
     public static ESM_MODULES_TO_TRANSFORM = [
@@ -472,8 +471,7 @@ export class JestTransformer extends Component {
                 this.buildTransformIgnorePatterns([
                     ...(
                         (project.jest.config.transformIgnorePatterns as
-                            | string[]
-                            | undefined) ?? new Array<string>()
+                            string[] | undefined) ?? new Array<string>()
                     ).filter((pattern) => !pattern.includes("node_modules")),
                     ...JestTransformer.ESM_MODULES_TO_TRANSFORM,
                     ...Array.from(this._modulesToTransform),
@@ -512,8 +510,7 @@ export class JestTransformer extends Component {
     }
 }
 
-export interface Node20TypeScriptProjectOptions
-    extends TypeScriptProjectOptions {
+export interface Node20TypeScriptProjectOptions extends TypeScriptProjectOptions {
     jestOptions?: Node20TypeScriptProjectJestOptions;
 }
 
