@@ -29,8 +29,7 @@ export const RECOMMENDED_NODE_20_JSII_PROJECT_OPTIONS: Omit<
     RECOMMENDED_PRETTIER_CONFIG,
 ]);
 
-export interface Node20AwsCdkConstructLibraryOptions
-    extends AwsCdkConstructLibraryOptions {
+export interface Node20AwsCdkConstructLibraryOptions extends AwsCdkConstructLibraryOptions {
     jestOptions?: Node20TypeScriptProjectJestOptions;
 }
 
