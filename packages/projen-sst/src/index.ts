@@ -33,8 +33,7 @@ export interface SstConfiguration {
 }
 
 export interface SstTypescriptAppOptions
-    extends awscdk.AwsCdkTypeScriptAppOptions,
-        SstConfigurationOptions {}
+    extends awscdk.AwsCdkTypeScriptAppOptions, SstConfigurationOptions {}
 
 const SST_CONFIG_FILE_NAME = "sst.config.ts";
 
