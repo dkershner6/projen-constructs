@@ -288,10 +288,7 @@ export namespace Nx {
          * @default "stream"
          */
         readonly outputStyle?:
-            | "dynamic"
-            | "static"
-            | "stream"
-            | "stream-without-prefixes";
+            "dynamic" | "static" | "stream" | "stream-without-prefixes";
         /**
          * Max number of parallel processes
          * @default 3
