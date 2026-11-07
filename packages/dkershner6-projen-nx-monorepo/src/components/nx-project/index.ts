@@ -284,10 +284,10 @@ export class NxProject extends Component {
             if (this.targets[name]) {
                 _default = this.targets[name];
             } else {
-                (_default = this._getTargetDefaults(
+                ((_default = this._getTargetDefaults(
                     includeDefaults === true ? name : includeDefaults,
                 )),
-                    this.targets[name] || {};
+                    this.targets[name] || {});
             }
         }
         const mergedTarget: Nx.IProjectTarget = deepMerge([_default, target], {
